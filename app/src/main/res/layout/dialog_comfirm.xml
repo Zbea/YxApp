@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:id="@+id/ll_dialog">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_300"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_138">
+
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/iv_top_bg"
+                    android:src="@drawable/tchtybj"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_138" />
+
+                <TextView
+                    android:id="@+id/tv_dialog_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/sp_18"
+                    android:text="请选择采购门店"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textColor="#333333"
+                android:text="是否确认？"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_50"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_35">
+
+                <TextView
+                    android:id="@+id/tv_cancle"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:gravity="center"
+                    android:background="@drawable/tctyhdan"
+                    android:textColor="#FFFFFF"
+                    android:text="取消"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:gravity="center"
+                    android:background="@drawable/tctyjdan"
+                    android:textColor="#FFFFFF"
+                    android:text="确认"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

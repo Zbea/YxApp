@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/white_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/iv_category"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_presale"
+            android:src="@drawable/ysbjicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/ll_category_name"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_zhekou"-->
+            <!--android:textSize="@dimen/sp_14"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:text="8.5折"-->
+            <!--android:background="@drawable/zkbjbq"-->
+            <!--android:layout_width="@dimen/dp_43"-->
+            <!--android:layout_height="20dp" />-->
+
+            <TextView
+                android:id="@+id/tv_drug_name"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:text="B族维生素片"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_company"
+            android:textSize="@dimen/sp_12"
+            android:layout_below="@id/ll_category_name"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_909090"
+            android:text="白云山药业公司"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_below="@id/tv_company"
+            android:id="@+id/ll_category_price"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_price"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:gravity="center"
+                android:textColor="@color/color_670F6A"
+                android:text="320.00"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_oldprice"
+                android:textSize="@dimen/sp_11"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/color_909090"
+                android:text="329.00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:textSize="@dimen/sp_11"
+            android:layout_below="@id/ll_category_price"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_909090"
+            android:text="盒/100片"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/tv_unit"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:id="@+id/tv_has_sale"
+            android:textSize="@dimen/sp_12"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_909090"
+            android:text="已售554"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_28" />
+
+        <ImageView
+            android:layout_below="@id/tv_unit"
+            android:id="@+id/iv_item_car"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/jrgwciaon"
+            android:layout_width="@dimen/dp_29"
+            android:layout_height="@dimen/dp_29" />
+
+        <TextView
+            android:layout_below="@id/tv_unit"
+            android:visibility="gone"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/color_741177"
+            android:background="@drawable/shape_frame_quehuo"
+            android:text="到货提醒"
+            android:id="@+id/tv_product_state"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

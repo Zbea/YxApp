@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnDecrease"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/text_mian"
+        android:background="@drawable/btn_amount"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="-"/>
+
+    <EditText
+        android:singleLine="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/etAmount"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/dp_60"
+        android:textSize="@dimen/sp_13"
+        android:layout_weight="2"
+        android:textColor="@color/text_normal"
+        android:background="@drawable/shape_amount_edit"
+        android:inputType="number"
+        android:gravity="center"
+        android:text="1"/>
+
+    <Button
+        android:id="@+id/btnIncrease"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/btn_right_amount"
+        android:textColor="@drawable/tv_right_amount"
+        android:text="+"/>
+</LinearLayout>

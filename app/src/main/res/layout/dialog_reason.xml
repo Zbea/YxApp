@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_dialog_photo"
+    android:orientation="vertical"
+    android:background="@color/transparent_background">
+
+    <LinearLayout
+        android:id="@+id/rl_cancle"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_white_bg">
+
+
+        <ListView
+            android:id="@+id/lv_reason"
+            android:divider="@color/divider"
+            android:dividerHeight="@dimen/dp_0_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_posun"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/corner_color"-->
+        <!--android:textSize="@dimen/sp_16"-->
+        <!--android:text="商品破损"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_50" />-->
+
+        <!--<View-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="#d4d4d4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_0_5"/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/tv_other"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/corner_color"-->
+        <!--android:textSize="@dimen/sp_16"-->
+        <!--android:text="其他"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_50" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_white_bg">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:gravity="center"
+            android:textColor="@color/corner_color"
+            android:textSize="@dimen/sp_16"
+            android:text="取消"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

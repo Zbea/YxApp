@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp_100"
+        android:src="@drawable/zwtjmdwk"
+        android:id="@+id/empty_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:text="哎哟.暂时没有数据~"
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:textColor="@color/base_text_color_light"
+        />
+
+
+    <TextView
+        android:drawablePadding="@dimen/dp_6"
+        android:background="@drawable/msqan"
+        android:text="重新加载"
+        android:id="@+id/error_reload_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_40"
+        android:paddingRight="@dimen/dp_40"
+        android:paddingTop="@dimen/dp_10"
+        android:textColor="@color/white"
+        />
+
+
+</LinearLayout>

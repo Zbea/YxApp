@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@drawable/shape_back_white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include layout="@layout/include_title" android:id="@+id/include_title"/>
+
+    <com.yx.Pharmacy.widget.LoadingLayout
+        android:layout_below="@id/include_title"
+        android:id="@+id/loadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.apache.cordova.engine.SystemWebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.yx.Pharmacy.widget.LoadingLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/rl_h5_back"
+            android:padding="@dimen/dp_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/xqyfhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_h5_title"
+            android:text="标题"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+
+</RelativeLayout>

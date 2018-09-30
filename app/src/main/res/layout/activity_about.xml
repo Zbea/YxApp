@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_170">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_about_bg"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150" />
+        <ImageView
+            android:layout_marginTop="@dimen/dp_20"
+            android:src="@drawable/img_about_us"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:background="@drawable/white_bg"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="10dp"
+        android:text="       源鑫是一家专注基层诊所、单体药店的医疗软件和服务平台的服务运营公司，为基层医疗机构提供医疗药品、医疗配送、金融服务、医疗行业解决方案等业务。致力于改善基层诊所医疗环境，增强基层诊所专业管理能力，提升基层百姓的就医体验，构建线上线下结合的“医树”基层医疗服务生态平台。源鑫将以“呈送吉祥、护佑安康”的经营宗旨；“诚信为本、稳步拓展”的经营理念；“以人为本、以信取人、以德兴业、以实扬名”的企业精神，拓步发展，创立品牌。我们致力为客户提供最专业、最优质、最快捷的“一站式”服务。我们秉承互利互惠、共同合作的原则，共谋发展，共创辉煌。"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_14"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        android:background="@drawable/gradient_zi_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="地 址："
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+            <TextView
+                android:paddingRight="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_54"
+                android:text="深圳市龙华新区观澜街道大布巷社区观光路1301-23号6楼A8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="电 话："
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+            <TextView
+                android:paddingRight="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_54"
+                android:text="0755-290134870"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="联系人："
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+            <TextView
+                android:paddingRight="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_54"
+                android:text="陈生 15602201480"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

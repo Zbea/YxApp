@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@drawable/white_bg"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="@dimen/dp_15"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_iv_bg"
+            android:background="@drawable/shape_miaosha_iv_bg"
+            android:layout_width="@dimen/dp_91"
+            android:layout_height="@dimen/dp_91">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_product"
+                android:scaleType="fitCenter"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"/>
+
+            <LinearLayout
+                android:id="@+id/ll_time_bg"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:background="@drawable/selector_miaosha_time_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_time_state"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:visibility="gone"
+                        android:id="@+id/cv_countdownView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:suffixHourLeftMargin="1dp"
+                        app:suffixHourRightMargin="1dp"
+                        app:suffixMinuteLeftMargin="1dp"
+                        app:suffixMinuteRightMargin="1dp"
+                        app:suffixSecondLeftMargin="1dp"
+                        app:suffixSecondRightMargin="1dp"
+                        app:suffixHour=":"
+                        app:suffixMinute=":"
+                        app:isShowDay="false"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isShowTimeBgDivisionLine="false"
+                        app:suffixGravity="center"
+                        app:suffixTextColor="#FFFFFF"
+                        app:suffixTextSize="@dimen/sp_11"
+                        app:timeTextColor="#FFFFFF"
+                        app:timeTextSize="@dimen/sp_11"/>
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/cv_countdownView_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:suffixDayLeftMargin="0dp"
+                        app:suffixDayRightMargin="0dp"
+                        app:isShowDay="true"
+                        app:suffixDay="天"
+                        app:isShowHour="false"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="false"
+                        app:isShowSecond="false"
+                        app:isShowTimeBgDivisionLine="false"
+                        app:suffixGravity="center"
+                        app:suffixTextColor="#FFFFFF"
+                        app:suffixTextSize="@dimen/sp_11"
+                        app:timeTextColor="#FFFFFF"
+                        app:timeTextSize="@dimen/sp_11"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_15"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tv_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_scqy"
+                android:textColor="@color/color_909090"
+                android:textSize="@dimen/sp_12"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/tv_price"
+                            android:textColor="@color/color_670F6A"
+                            android:textSize="@dimen/sp_18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:id="@+id/tv_oldprice"
+                            android:textColor="@color/color_909090"
+                            android:textSize="@dimen/sp_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_gg"
+                        android:textColor="@color/color_909090"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_now"
+                        android:background="@drawable/selector_miaosha_buy_bg"
+                        android:text="马上抢"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_30"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_gravity="end"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_10">
+
+                        <ProgressBar
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/progressbar"
+                            android:progress="20"
+                            android:max="100"
+                            android:progressDrawable="@drawable/home_progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="match_parent"/>
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_progress"
+                            android:text="0%"
+                            android:textSize="@dimen/sp_8"
+                            android:textColor="@color/white"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f6f6f6">
+
+    <View
+        android:background="@color/color_741177"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_f6f6f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150">
+            <ImageView
+                android:background="@mipmap/img_my_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/include_title_nobg"/>
+                <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/white"
+                    android:text="积分余额(分)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_intergral"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_20"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_liwu"
+            android:background="@drawable/shape_white_bg"
+            android:layout_marginTop="@dimen/dp_135"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100">
+
+            <ImageView
+                android:id="@+id/iv_liwu"
+                android:src="@drawable/dliwhz"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_use"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:textSize="@dimen/sp_16"
+                android:layout_toRightOf="@id/iv_liwu"
+                android:textColor="@color/color_741177"
+                android:text="使用积分"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@id/tv_use"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:textSize="@dimen/sp_14"
+                android:layout_toRightOf="@id/iv_liwu"
+                android:textColor="@color/color_606060"
+                android:text="有可兑换的优惠劵等着你哦!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/arrrightgray"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mingxi"
+            android:background="@drawable/white_bg"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@id/rl_liwu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_16"
+                android:textSize="@dimen/sp_14"
+                android:layout_centerVertical="true"
+                android:text="近一个月积分明细"
+                android:textColor="@color/color_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/zjmxxznyicon"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"/>
+        </RelativeLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/mingxi"
+            android:background="@drawable/white_bg"
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:gravity="center"
+        android:textColor="@color/corner_color"
+        android:textSize="@dimen/sp_16"
+        android:text="商品破损"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+</LinearLayout>

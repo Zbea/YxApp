@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/include_title"/>
+
+    <com.yx.Pharmacy.widget.LoadingLayout
+        android:id="@+id/loadinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:id="@+id/tv_notice"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_ff8f00"
+                android:background="@color/color_ffefda"
+                android:drawablePadding="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_14"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:drawableStart="@drawable/icon_shopcar_notify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_shop_cart"
+                    android:background="@color/color_f6f6f6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </android.support.v4.widget.NestedScrollView>
+
+            <View
+                android:background="@color/color_eaeaea"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_05"/>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_checkall"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/cb_checkall"
+                        android:background="@drawable/selector_cb_shopcart"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"/>
+
+                    <TextView
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:text="全选"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:textColor="@color/black"
+                    android:text="应付金额"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_price"
+                    android:textColor="@color/color_741177"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:text="去结算"
+                    android:background="@drawable/selector_cart_buy_state"
+                    android:textSize="@dimen/sp_15"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="@dimen/dp_125"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.yx.Pharmacy.widget.LoadingLayout>
+
+</LinearLayout>

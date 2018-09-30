@@ -1,0 +1,1198 @@
+-- Merging decision tree log ---
+provider#com.yx.Pharmacy.widget.BuglyFileProvider
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:65:9-75:20
+	android:grantUriPermissions
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:69:13-47
+	android:authorities
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:67:13-64
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:68:13-37
+	tools:replace
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:70:13-74
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:66:13-53
+manifest
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\14f9482f959e965eec1987fc57f1449d\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:2:1-17:12
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:2:1-133:12
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:2:1-14:12
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:2:1-139:12
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:2:1-46:12
+MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:2:1-9:12
+MERGED from [:CordovaLib] D:\androidSpace\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:20:1-27:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:2:1-11:12
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-72:12
+MERGED from [:ucrop] D:\androidSpace\android\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\40c6b75c77e36a0ad56407753eeac2db\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\058ad2997644dca4927d9021c9c5b435\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\4b3a162a87690c1c9fddc76f3539e9a0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\3df24bb9f9f9ef6d01ddb7fa6335c3b7\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\5ffd115fdb534c368b217661ba46eb1b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\3249fdf8c9a590c4b105dcd29d9dbbef\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\b2f2a5e4e29db1bd087162ff6d172a67\AndroidManifest.xml:2:1-7:12
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\1c6cb3a49229169909ae7d598d515e20\AndroidManifest.xml:2:1-11:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\a895acd984e46bfe1d67388301fee2ea\AndroidManifest.xml:15:1-21:12
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\00c2015fa888fe46f906376ccb6dd905\AndroidManifest.xml:2:1-14:12
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\a07489ff6b6f4575d5c89d0173f8964a\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\b7504a1b5cf19eb3a13e3ae257bcc203\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\0ff98c3a0bc1a5d4764551b6ddd82449\AndroidManifest.xml:2:1-12:12
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\a229dcc6b1a10082a3a21855180ac277\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\db9978fa827b3e0001a480b9a93a8f22\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\945564edb3612a6ac7d75110dd5e12aa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\a2e60006cbf9ce2cc8ed4d3ac3462928\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\e06346511862aa95cb0dae18dfa9972a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\7dbda237e9c715852bf667537f81b08a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7b9bd5859adef54f85448ff7419ab07d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\26bf223baced6e600e1da1d0e3243a62\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\b604485d89fbe540675ea3b154971751\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3e534733363ca190489f7544b60163b5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\3bb0835eba82bea25b3479fd637fed3e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\9c77abbb196ab0cb9d0e48eaf2832119\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\c0e68bc12a6a46a54b8ba1e14e955fe4\AndroidManifest.xml:15:1-21:12
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\22698590380108d00f837cf3e910509d\AndroidManifest.xml:2:1-10:12
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\95cff4f193324dbf0c10f7a3a9057ad2\AndroidManifest.xml:2:1-12:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b331239129c457566108056fa42a4552\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\274acfb1b72572473edd82a35c584728\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\65f0620d35d0fd0056b08147ab2af494\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\79fe90f0736320c41a56e24d73ff08c2\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+	package
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:7:5-32
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:3:5-51
+	android:hardwareAccelerated
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:5:5-39
+	xmlns:android
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:6:5-28
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:9:5-47
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:9:5-47
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\14f9482f959e965eec1987fc57f1449d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\14f9482f959e965eec1987fc57f1449d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:5:5-7:41
+MERGED from [:CordovaLib] D:\androidSpace\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] D:\androidSpace\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:5:5-7:41
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [:ucrop] D:\androidSpace\android\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [:ucrop] D:\androidSpace\android\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\40c6b75c77e36a0ad56407753eeac2db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\40c6b75c77e36a0ad56407753eeac2db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\058ad2997644dca4927d9021c9c5b435\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\058ad2997644dca4927d9021c9c5b435\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\4b3a162a87690c1c9fddc76f3539e9a0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\4b3a162a87690c1c9fddc76f3539e9a0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\3df24bb9f9f9ef6d01ddb7fa6335c3b7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\3df24bb9f9f9ef6d01ddb7fa6335c3b7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\5ffd115fdb534c368b217661ba46eb1b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\5ffd115fdb534c368b217661ba46eb1b\AndroidManifest.xml:20:5-44
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\3249fdf8c9a590c4b105dcd29d9dbbef\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\3249fdf8c9a590c4b105dcd29d9dbbef\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\b2f2a5e4e29db1bd087162ff6d172a67\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\b2f2a5e4e29db1bd087162ff6d172a67\AndroidManifest.xml:5:5-43
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\1c6cb3a49229169909ae7d598d515e20\AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\1c6cb3a49229169909ae7d598d515e20\AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\a895acd984e46bfe1d67388301fee2ea\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\a895acd984e46bfe1d67388301fee2ea\AndroidManifest.xml:19:5-43
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\00c2015fa888fe46f906376ccb6dd905\AndroidManifest.xml:5:5-7:41
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\00c2015fa888fe46f906376ccb6dd905\AndroidManifest.xml:5:5-7:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\a07489ff6b6f4575d5c89d0173f8964a\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\a07489ff6b6f4575d5c89d0173f8964a\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\b7504a1b5cf19eb3a13e3ae257bcc203\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\b7504a1b5cf19eb3a13e3ae257bcc203\AndroidManifest.xml:20:5-44
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\0ff98c3a0bc1a5d4764551b6ddd82449\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\0ff98c3a0bc1a5d4764551b6ddd82449\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\a229dcc6b1a10082a3a21855180ac277\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\a229dcc6b1a10082a3a21855180ac277\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\db9978fa827b3e0001a480b9a93a8f22\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\db9978fa827b3e0001a480b9a93a8f22\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\945564edb3612a6ac7d75110dd5e12aa\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\945564edb3612a6ac7d75110dd5e12aa\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\a2e60006cbf9ce2cc8ed4d3ac3462928\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\a2e60006cbf9ce2cc8ed4d3ac3462928\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\e06346511862aa95cb0dae18dfa9972a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\e06346511862aa95cb0dae18dfa9972a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\7dbda237e9c715852bf667537f81b08a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\7dbda237e9c715852bf667537f81b08a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7b9bd5859adef54f85448ff7419ab07d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7b9bd5859adef54f85448ff7419ab07d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\26bf223baced6e600e1da1d0e3243a62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\26bf223baced6e600e1da1d0e3243a62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\b604485d89fbe540675ea3b154971751\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\b604485d89fbe540675ea3b154971751\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3e534733363ca190489f7544b60163b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3e534733363ca190489f7544b60163b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\3bb0835eba82bea25b3479fd637fed3e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\3bb0835eba82bea25b3479fd637fed3e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\9c77abbb196ab0cb9d0e48eaf2832119\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\9c77abbb196ab0cb9d0e48eaf2832119\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\c0e68bc12a6a46a54b8ba1e14e955fe4\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\c0e68bc12a6a46a54b8ba1e14e955fe4\AndroidManifest.xml:19:5-43
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\22698590380108d00f837cf3e910509d\AndroidManifest.xml:6:5-43
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\22698590380108d00f837cf3e910509d\AndroidManifest.xml:6:5-43
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\95cff4f193324dbf0c10f7a3a9057ad2\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\95cff4f193324dbf0c10f7a3a9057ad2\AndroidManifest.xml:8:5-10:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b331239129c457566108056fa42a4552\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b331239129c457566108056fa42a4552\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\274acfb1b72572473edd82a35c584728\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\274acfb1b72572473edd82a35c584728\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\65f0620d35d0fd0056b08147ab2af494\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\65f0620d35d0fd0056b08147ab2af494\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\79fe90f0736320c41a56e24d73ff08c2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\79fe90f0736320c41a56e24d73ff08c2\AndroidManifest.xml:20:5-44
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:9:5-47
+	android:targetSdkVersion
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:9:15-44
+	android:minSdkVersion
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:9:5-47
+		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
+supports-screens
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:11:5-17:40
+	android:largeScreens
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:13:9-36
+	android:smallScreens
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:16:9-36
+	android:normalScreens
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:14:9-37
+	android:xlargeScreens
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:17:9-37
+	android:resizeable
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:15:9-34
+	android:anyDensity
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:12:9-34
+uses-permission#android.permission.INTERNET
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:19:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:18:5-67
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:12:5-67
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:12:5-67
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:15:5-67
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:19:22-64
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:20:5-83
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:32:5-83
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:32:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:17:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:17:5-83
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:20:22-80
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:21:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:26:5-79
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:13:5-79
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:13:5-79
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:21:5-79
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:21:5-79
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:21:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:22:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:27:5-76
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:14:5-76
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:14:5-76
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:17:5-76
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:17:5-76
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:22:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:23:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:20:5-75
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:17:5-75
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:17:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:11:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:11:5-75
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:23:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:24:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:21:5-81
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:25:5-81
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:25:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:16:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:16:5-81
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:12:5-81
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:24:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:33:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:33:5-79
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:26:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:28:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:28:22-78
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:30:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:32:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:32:5-76
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:30:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:35:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:32:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:33:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:22:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:24:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:24:5-80
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:11:5-80
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:33:22-77
+uses-permission#android.permission.CAMERA
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:34:5-65
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:28:5-65
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:28:5-65
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:13:5-65
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:34:22-62
+uses-permission#android.permission.GET_TASKS
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:35:5-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:35:22-65
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:36:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:21:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:21:5-80
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:36:22-77
+uses-permission#android.permission.READ_LOGS
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:37:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:15:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:15:5-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:37:22-65
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:38:5-71
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:29:5-71
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:29:5-71
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:22:5-71
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:22:5-71
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:38:22-68
+uses-permission#android.permission.VIBRATE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:39:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:24:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:24:5-66
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:18:5-66
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:18:5-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:39:22-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:40:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:19:5-68
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:19:5-68
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:40:22-65
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:41:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:25:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:25:5-84
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:14:5-84
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:14:5-84
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:41:22-81
+uses-permission#android.permission.CALL_PHONE
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:42:5-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:42:22-66
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:43:5-78
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:30:5-78
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:30:5-78
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:43:22-75
+uses-permission#android.permission.SYSTEM_OVERLAY_WINDOW
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:44:5-80
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:44:22-77
+application
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:46:5-202:19
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:11:5-15:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:11:5-12:19
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:41:5-137:19
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:41:5-137:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:20:5-44:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:20:5-44:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:9:5-20
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:24:5-70:19
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:24:5-70:19
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\00c2015fa888fe46f906376ccb6dd905\AndroidManifest.xml:9:5-12:19
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\00c2015fa888fe46f906376ccb6dd905\AndroidManifest.xml:9:5-12:19
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\22698590380108d00f837cf3e910509d\AndroidManifest.xml:8:5-20
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\22698590380108d00f837cf3e910509d\AndroidManifest.xml:8:5-20
+	android:supportsRtl
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:51:9-35
+	android:label
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:50:9-41
+	android:hardwareAccelerated
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:48:9-43
+	android:allowBackup
+		ADDED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:49:9-38
+	android:theme
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:52:9-40
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:47:9-35
+provider#com.yx.Pharmacy.widget.PictureProvider
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:53:9-63:20
+	android:grantUriPermissions
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:57:13-47
+	android:authorities
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:55:13-59
+	xmlns:tools
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:53:19-65
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:56:13-37
+	tools:replace
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:58:13-48
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:54:13-51
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:59:13-62:52
+	android:resource
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:61:17-54
+	tools:replace
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:62:17-49
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:60:17-67
+activity#com.yx.Pharmacy.activity.SplashActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:77:9-87:20
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:80:13-64
+	android:configChanges
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:79:13-90
+	android:theme
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:81:13-45
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:78:13-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:82:13-86:29
+	android:label
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:82:28-60
+action#android.intent.action.MAIN
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:83:17-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:83:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:85:27-74
+activity#com.yx.Pharmacy.MainActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:88:9-93:66
+	android:screenOrientation
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:90:13-49
+	android:launchMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:92:13-44
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:93:13-64
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:89:13-36
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:91:13-41
+activity#com.yx.Pharmacy.activity.RegisterActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:94:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:94:19-60
+activity#com.yx.Pharmacy.activity.LoginActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:95:9-97:55
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:97:13-52
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:96:13-51
+activity#com.tencent.bugly.beta.ui.BetaActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:99:9-102:64
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:23:9-27:56
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:23:9-27:56
+	android:configChanges
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:101:13-81
+	android:theme
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:102:13-61
+	tools:replace
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:27:13-53
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:100:13-66
+activity#com.yx.Pharmacy.activity.SettingActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:104:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:104:19-59
+activity#com.yx.Pharmacy.activity.UserInfoActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:105:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:105:19-60
+activity#com.yx.Pharmacy.activity.FeedBackActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:106:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:106:19-60
+activity#com.yx.Pharmacy.activity.CategoryDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:107:9-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:107:19-66
+activity#com.yx.Pharmacy.activity.ProductDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:108:9-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:108:19-65
+activity#com.yx.Pharmacy.activity.OrderDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:109:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:109:19-63
+activity#com.yx.Pharmacy.activity.SearchActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:9-61
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:19-58
+activity#com.yx.Pharmacy.activity.MyShopActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:9-61
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:19-58
+activity#com.yx.Pharmacy.activity.AddShopActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:19-59
+activity#com.yx.Pharmacy.activity.MyCollectActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:19-61
+activity#com.yx.Pharmacy.activity.ChargeMoneyActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:19-63
+activity#com.yx.Pharmacy.activity.MyIntegralActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:19-62
+activity#com.yx.Pharmacy.activity.MyWalletActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:19-60
+activity#com.yx.Pharmacy.activity.OftenBuyActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:19-60
+activity#com.yx.Pharmacy.activity.MyCouponActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:19-60
+activity#com.yx.Pharmacy.activity.CaptureActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:19-59
+activity#com.yx.Pharmacy.activity.MyOrderListActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:19-63
+activity#com.yx.Pharmacy.activity.OrderActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:9-60
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:19-57
+activity#com.yx.Pharmacy.activity.AfterSaleActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:19-61
+activity#com.yx.Pharmacy.activity.PayActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:9-58
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:19-55
+activity#com.yx.Pharmacy.activity.CommendProductActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:9-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:19-66
+activity#com.yx.Pharmacy.activity.PdfActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:125:9-58
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:125:19-55
+receiver#com.yx.Pharmacy.receiver.YxJPushReceiver
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:127:9-141:20
+	android:enabled
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:129:13-35
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:130:13-37
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:128:13-53
+intent-filter#action:name:cn.jpush.android.intent.CONNECTION+action:name:cn.jpush.android.intent.MESSAGE_RECEIVED+action:name:cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION+action:name:cn.jpush.android.intent.NOTIFICATION_OPENED+action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED+action:name:cn.jpush.android.intent.REGISTRATION+category:name:com.yx.Pharmacy
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:131:13-140:29
+action#cn.jpush.android.intent.REGISTRATION
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:17-79
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:25-76
+action#cn.jpush.android.intent.MESSAGE_RECEIVED
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:133:17-83
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:133:25-80
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:134:17-88
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:134:25-85
+action#cn.jpush.android.intent.NOTIFICATION_OPENED
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:135:17-86
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:135:25-83
+action#cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:136:17-92
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:136:25-89
+action#cn.jpush.android.intent.CONNECTION
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:137:17-77
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:137:25-74
+category#com.yx.Pharmacy
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:17-60
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:27-57
+service#cn.jpush.android.service.PushService
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:9-145:50
+REJECTED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:60:9-71:19
+	tools:node
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:145:18-38
+	android:process
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:144:18-49
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:18-69
+activity#com.yx.Pharmacy.activity.AskForAfterSaleActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:147:9-70
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:147:19-67
+activity#com.yx.Pharmacy.activity.AfterOrderDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:148:9-71
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:148:19-68
+activity#com.yx.Pharmacy.activity.WalletDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:9-67
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:19-64
+activity#com.yx.Pharmacy.activity.IntegralDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:9-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:19-66
+activity#com.yx.Pharmacy.activity.CreateOrderActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:151:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:151:19-63
+activity#com.yx.Pharmacy.activity.AddBankCardActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:152:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:152:19-63
+activity#com.yx.Pharmacy.activity.AboutActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:153:9-60
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:153:19-57
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:156:9-161:70
+	android:screenOrientation
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:160:13-47
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:161:13-67
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:159:13-37
+	android:configChanges
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:158:13-85
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:157:13-60
+activity#com.alipay.sdk.app.H5AuthActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:162:9-167:70
+	android:screenOrientation
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:166:13-47
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:167:13-67
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:165:13-37
+	android:configChanges
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:164:13-74
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:163:13-61
+activity#com.yx.Pharmacy.wxapi.WXPayEntryActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:171:9-174:46
+	android:launchMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:174:13-43
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:173:13-36
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:172:13-53
+activity#com.yx.Pharmacy.wxapi.WXEntryActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:175:9-178:75
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:177:13-36
+	android:theme
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:178:13-72
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:176:13-50
+activity#com.yx.Pharmacy.activity.AccountSecurityActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:180:9-70
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:180:19-67
+activity#com.yx.Pharmacy.activity.ChangePhoneActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:181:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:181:19-63
+activity#com.yx.Pharmacy.activity.ChangePasswordActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:182:9-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:182:19-66
+activity#com.yx.Pharmacy.activity.HaveNeedActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:183:9-185:55
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:185:13-52
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:184:13-54
+activity#com.yx.Pharmacy.base.HHActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:186:9-53
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:186:19-50
+activity#com.yx.Pharmacy.activity.MessageDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:9-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:19-65
+activity#com.yx.Pharmacy.activity.TestBannerActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:19-62
+activity#com.yx.Pharmacy.activity.ComendMsActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:19-60
+activity#com.yx.Pharmacy.activity.CommendTjActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:190:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:190:19-61
+activity#com.yx.Pharmacy.activity.TokeOutActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:191:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:191:19-59
+activity#com.yx.Pharmacy.activity.BankActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:192:9-59
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:192:19-56
+activity#com.yx.Pharmacy.activity.MyBankActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:9-61
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:19-58
+activity#com.yx.Pharmacy.activity.WithdrawalActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:19-62
+activity#com.yx.Pharmacy.activity.SaleRecordActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:195:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:195:19-62
+activity#com.yx.Pharmacy.activity.MyQrCodeActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:19-60
+activity#com.yx.Pharmacy.activity.WuliuActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:9-60
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:19-57
+activity#com.yx.Pharmacy.activity.ChangeBankCardActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:9-68
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:19-66
+activity#com.yx.Pharmacy.activity.ProductCartActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:19-63
+activity#com.yx.Pharmacy.activity.ProductCouponActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:9-67
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:19-65
+activity#com.yx.Pharmacy.activity.QiyeZizhiActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:19-61
+permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:12:9-65
+permission#com.yx.Pharmacy.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:12:9-65
+uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:16:22-78
+uses-permission#com.yx.Pharmacy.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:23:5-73
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:16:5-73
+MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:16:5-73
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:23:22-70
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:34:5-89
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:34:22-86
+activity#cn.jpush.android.ui.PopWinActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:40:9-43:52
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:42:13-37
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:41:13-62
+activity#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:46:9-57:20
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:49:13-37
+	android:configChanges
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:48:13-63
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:50:13-60
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:47:13-60
+intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:${JPUSH_PKGNAME}+category:name:android.intent.category.DEFAULT
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:51:13-56:29
+intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:android.intent.category.DEFAULT+category:name:com.yx.Pharmacy
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:51:13-56:29
+action#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:52:17-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:52:25-72
+category#android.intent.category.DEFAULT
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:54:17-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:54:27-73
+category#${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:55:17-61
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:55:27-58
+service#cn.jpush.android.service.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:75:9-84:19
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:77:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:78:13-36
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:76:13-66
+intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:79:13-83:29
+intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:com.yx.Pharmacy
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:79:13-83:29
+action#cn.jpush.android.intent.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:80:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:80:25-77
+receiver#cn.jpush.android.service.PushReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:87:9-106:20
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:89:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:90:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:88:13-65
+intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:91:13-94:29
+	android:priority
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:91:28-51
+intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:com.yx.Pharmacy
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:91:13-94:29
+	android:priority
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:91:28-51
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:92:17-94
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:92:25-91
+intent-filter#action:name:android.intent.action.USER_PRESENT+action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:95:13-98:29
+action#android.intent.action.USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:96:17-77
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:96:25-74
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:97:17-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:97:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:100:13-105:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:101:17-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:101:25-75
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:102:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:102:25-77
+data
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:104:17-50
+	android:scheme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:104:23-47
+receiver#cn.jpush.android.service.AlarmReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:109:9-111:40
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:111:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:110:13-66
+provider#cn.jpush.android.service.DataProvider
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:113:9-116:40
+	android:authorities
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:115:13-64
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:116:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:114:13-65
+provider#cn.jpush.android.service.DownloadProvider
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:118:9-121:39
+	android:authorities
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:120:13-68
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:121:13-36
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:119:13-69
+meta-data#JPUSH_CHANNEL
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:124:9-126:48
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:126:13-45
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:125:13-41
+meta-data#JPUSH_APPKEY
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:127:9-129:47
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:129:13-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:128:13-40
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:20:22-76
+uses-feature#android.hardware.microphone
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:34:5-36:36
+	android:required
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:36:9-33
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:35:9-51
+uses-feature#android.hardware.camera
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:37:5-39:36
+	android:required
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:39:9-33
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:38:9-47
+service#com.qiyukf.nimlib.service.NimService
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:44:9-46:39
+	android:process
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:45:13-64
+service#com.qiyukf.nimlib.service.NimService$Aux
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:47:9-49:39
+	android:process
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:49:13-36
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:48:13-68
+service#com.qiyukf.unicorn.analytics.AnalyticsService
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:50:9-52:39
+	android:process
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:51:13-73
+receiver#com.qiyukf.nimlib.service.NimReceiver
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:55:9-63:20
+	android:process
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:58:13-36
+	android:exported
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:57:13-37
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:56:13-65
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:59:13-62:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:60:17-79
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:60:25-76
+service#com.qiyukf.nimlib.service.WakeupService
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:66:9-75
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:66:18-72
+provider#com.qiyukf.nim.uikit.provider.UnicornProvider
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:69:9-77:20
+	android:grantUriPermissions
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:73:13-47
+	android:authorities
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:71:13-72
+	android:exported
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:72:13-37
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:70:13-73
+activity#com.qiyukf.unicorn.ui.activity.ServiceMessageActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:79:9-85:70
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:83:13-49
+	android:windowSoftInputMode
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:85:13-67
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:81:13-74
+	android:icon
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:82:13-69
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:84:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:80:13-81
+activity#com.qiyukf.nim.uikit.session.activity.WatchMessagePictureActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:86:9-91:70
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:89:13-49
+	android:windowSoftInputMode
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:91:13-67
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:88:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:90:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:87:13-93
+activity#com.qiyukf.nim.uikit.session.activity.PickImageActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:92:9-97:70
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:95:13-49
+	android:windowSoftInputMode
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:97:13-67
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:94:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:96:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:93:13-83
+activity#com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:98:9-102:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:101:13-49
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:100:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:102:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:99:13-97
+activity#com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:103:9-107:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:106:13-49
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:105:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:107:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:104:13-104
+activity#com.qiyukf.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:108:9-114:70
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:112:13-49
+	android:label
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:111:13-57
+	android:windowSoftInputMode
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:114:13-67
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:110:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:113:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:109:13-108
+activity#com.qiyukf.unicorn.ui.activity.FileDownloadActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:115:9-120:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:119:13-49
+	android:label
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:118:13-63
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:117:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:120:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:116:13-79
+activity#com.qiyukf.unicorn.ui.activity.UrlImagePreviewActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:121:9-125:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:124:13-49
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:123:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:125:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:122:13-82
+activity#com.qiyukf.unicorn.ui.activity.CardPopupActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:126:9-130:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:129:13-49
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:128:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:130:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:127:13-76
+activity#com.qiyukf.unicorn.ui.activity.LeaveMessageDetailActivity
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:131:9-136:55
+	android:screenOrientation
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:135:13-49
+	android:label
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:134:13-70
+	android:configChanges
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:133:13-74
+	android:theme
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:136:13-52
+	android:name
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:132:13-85
+provider#com.tencent.bugly.beta.utils.BuglyFileProvider
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:29:9-39:20
+	android:grantUriPermissions
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:33:13-47
+	android:authorities
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:31:13-64
+	android:exported
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:32:13-37
+	tools:replace
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:34:13-74
+	android:name
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:30:13-74
+service#com.tencent.bugly.beta.tinker.TinkerResultService
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:41:9-43:40
+	android:exported
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:43:13-37
+	android:name
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:42:13-77
+permission#android.permission.WRITE_MEDIA_STORAGE
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:19:5-73
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:19:17-70
+provider#com.luck.picture.lib.PictureFileProvider
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:27:9-35:20
+	android:grantUriPermissions
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:31:13-47
+	android:authorities
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:29:13-60
+	android:exported
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:28:13-68
+activity#com.luck.picture.lib.PictureSelectorActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:37:9-41:55
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:39:13-49
+	android:windowSoftInputMode
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:41:13-52
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:40:13-50
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:38:13-72
+activity#com.luck.picture.lib.PictureBaseActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:42:9-44:52
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:44:13-49
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:43:13-68
+activity#com.luck.picture.lib.PicturePreviewActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:45:9-48:53
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:47:13-49
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:48:13-50
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:46:13-71
+activity#com.luck.picture.lib.PictureVideoPlayActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:49:9-53:53
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:52:13-47
+	android:configChanges
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:51:13-74
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:53:13-50
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:50:13-73
+activity#com.luck.picture.lib.PictureExternalPreviewActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:54:9-57:53
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:56:13-49
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:57:13-50
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:55:13-79
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:58:9-61:72
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:60:13-49
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:61:13-69
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:59:13-60
+activity#com.yalantis.ucrop.PictureMultiCuttingActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:62:9-65:72
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:64:13-49
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:65:13-69
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:63:13-74
+activity#com.luck.picture.lib.PicturePlayAudioActivity
+ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:66:9-69:72
+	android:screenOrientation
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:68:13-49
+	android:theme
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:69:13-69
+	android:name
+		ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:67:13-73

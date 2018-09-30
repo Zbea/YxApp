@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_f6f6f6">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/white_bg"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:text="产品名称"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edit_product_name"
+                android:paddingRight="@dimen/dp_15"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColorHint="#c8c8c8"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:hint="输入产品名称"
+                android:layout_marginLeft="@dimen/dp_108"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:background="@color/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"/>
+
+        <RelativeLayout
+            android:background="@drawable/white_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:text="需求数量"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:inputType="number"
+                android:id="@+id/edit_need_num"
+                android:paddingRight="@dimen/dp_15"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColorHint="#c8c8c8"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:hint="输入需求数量"
+                android:layout_marginLeft="@dimen/dp_108"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:background="@color/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"/>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/rl_select_product_type"
+            android:background="@drawable/white_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:text="产品类型"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/edit_product_type"
+                android:paddingRight="@dimen/dp_20"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColorHint="#c8c8c8"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:hint="选择产品类型"
+                android:layout_marginLeft="@dimen/dp_108"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrrightgray"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_15"
+            android:orientation="vertical"
+            android:background="@drawable/white_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                android:text="需求备注"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:orientation="vertical"
+                android:background="@color/color_f6f6f6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100">
+
+
+                <EditText
+                    android:gravity="top"
+                    android:id="@+id/edit_need_note"
+                    android:padding="@dimen/dp_8"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColorHint="#c8c8c8"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/color_333333"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:textSize="@dimen/sp_16"
+        android:background="@drawable/gradient_zi_bg"
+        android:gravity="center"
+        android:text="提交需求"/>
+
+
+
+</LinearLayout>

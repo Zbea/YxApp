@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="pink">#ff5981</color>
+    <!-- 分割线颜色 -->
+    <color name="divider">#f6f6f6</color>
+    <color name="text_mian">#333333</color>
+    <color name="text_normal">#666666</color>
+    <color name="text_light">#999999</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#303F9F</color>
+    <color name="red">#FF0000</color>
+    <color name="color_ce8bd0">#ce8bd0</color>
+    <color name="color_741177">#741177</color>
+    <color name="color_end">#9f16a3</color>
+    <color name="color_606060">#606060</color>
+    <color name="color_670F6A">#670F6A</color>
+    <color name="color_909090">#909090</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="color_e7d5d5">#e7d5d5</color>
+    <color name="color_97169b">#97169b</color>
+    <color name="color_f9f3fa">#f9f3fa</color>
+    <color name="color_ffefda">#ffefda</color>
+    <color name="color_ff8f00">#ff8f00</color>
+    <color name="color_eaeaea">#eaeaea</color>
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="color_ececec">#ececec</color>
+
+    <color name="color_check">#670f6a</color>
+    <color name="color_uncheck">#ababab</color>
+    <color name="transparent_background">#00000000</color>
+
+    <color name="color_333333">#333333</color>
+    <color name="color_ababab">#ababab</color>
+
+    <color name="color_79c3f7">#79c3f7</color>
+    <color name="color_ef31be">#ef31be</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+    <color name="color_ac0af7">#AC0AF7</color>
+
+    <color name="bottom_line">#d9d9d9</color>
+    <color name="me_black">#1e1d1d</color>
+
+
+    <color name="base_load_btn">#dfe0e5</color>
+    <color name="base_text_color_light">#666666</color>
+    <!-- 扫描start -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#7fffffff</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#1adbf1</color>
+    <color name="corner_color">#2693ff</color>
+
+    <color name="blue_7f">#B32693ff</color>
+
+    <color name="green">#25ae5f</color>
+    <!-- 扫描end  -->
+</resources>

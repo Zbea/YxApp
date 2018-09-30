@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/color_f6f6f6"
+              android:fitsSystemWindows="true"
+              android:clipToPadding="true"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include layout="@layout/include_title"/>
+
+    <com.yx.Pharmacy.widget.PagerSlidingTabStrip
+        android:id="@+id/topic_viewpager_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="top"
+        android:background="@drawable/white_bg"
+        app:pstsDefTextColor="@color/color_606060"
+        app:pstsDividerColor="#00000000"
+        app:pstsDividerPadding="0dp"
+        app:pstsDividerWidth="0dp"
+        app:pstsIndicatorColor="@color/color_741177"
+        app:pstsIndicatorPaddingLeftRight="@dimen/dp_60"
+        app:pstsIndicatorHeight="@dimen/dp_2"
+        app:pstsSelTextColor="@color/color_741177"
+        app:pstsShouldExpand="true"
+        app:pstsTabTextSize="@dimen/sp_14"
+        app:pstsUnderlineColor="@color/divider"
+        app:pstsUnderlineHeight="0.5dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

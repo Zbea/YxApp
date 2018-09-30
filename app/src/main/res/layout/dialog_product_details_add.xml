@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_photo_top">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="45dp"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:src="@drawable/icon_product_dialog_close"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/divider"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_150">
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="565"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/color_97169b"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买数量"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_mian"/>
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="每人限购"
+            android:textColor="@color/text_light"/>
+
+        <com.yx.Pharmacy.widget.AmountView
+            android:layout_centerVertical="true"
+            android:id="@+id/amount_view"
+            android:layout_alignParentEnd="true"
+            app:btnTextSize="14sp"
+            app:btnWidth="35dp"
+            app:tvWidth="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:text="确定"
+        android:background="@drawable/icon_product_details_add_dialog_btn"/>
+
+</LinearLayout>

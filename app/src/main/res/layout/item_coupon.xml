@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_100"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:src="@drawable/kyyhqbj"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/color_741177"
+            android:background="@drawable/shape_man_theme"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="立即使用"
+            android:id="@+id/tv_coupon_use_rightnow"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_23" />
+
+        <LinearLayout
+            android:paddingRight="@dimen/dp_110"
+            android:background="@color/transparent_background"
+            android:id="@+id/ll_price"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_coupon_price"
+                android:textColor="@color/color_741177"
+                android:textSize="@dimen/sp_20"
+                android:text="¥100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="right"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:id="@+id/tv_coupon_use_range"
+                android:textColor="@color/color_741177"
+                android:textSize="@dimen/sp_16"
+                android:text="满300用50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/ll_price"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_coupon_use_type"
+                android:textColor="@color/color_741177"
+                android:textSize="@dimen/sp_12"
+                android:text="[单品劵]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:id="@+id/tv_coupon_couponscene"
+                android:textColor="@color/color_606060"
+                android:textSize="@dimen/sp_12"
+                android:text="999感冒灵"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_coupon_time_limit"
+            android:textColor="@color/color_606060"
+            android:textSize="@dimen/sp_12"
+            android:text="2018/12/04-2019/12/05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_isnew"
+            android:src="@drawable/yhqsdbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

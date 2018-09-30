@@ -1,0 +1,4 @@
+// GENERATED FILE - DO NOT EDIT
+include ":", ':picture_library', ':ucrop'
+include ":CordovaLib"
+include ":app"

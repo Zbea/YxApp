@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_dialog_photo"
+    android:orientation="vertical"
+    android:background="@drawable/shape_photo_top">
+
+    <RelativeLayout
+        android:id="@+id/rl_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/shape_photo_top">
+        <TextView
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_16"
+            android:text="取消"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="#d4d4d4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_below="@id/rl_cancle"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_157"
+        android:gravity="center">
+
+        <TextView
+            android:layout_marginRight="@dimen/dp_40"
+            android:id="@+id/tv_takephtoto"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableTop="@drawable/xgtxxzpz"
+            android:text="拍摄照片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/dp_40"
+            android:id="@+id/tv_pickphtoto"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableTop="@drawable/ghtxxzxc"
+            android:text="相册照片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

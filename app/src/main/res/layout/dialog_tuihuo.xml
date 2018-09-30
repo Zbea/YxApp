@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_f6f6f6">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_333333"
+            android:text="退货运单"
+            android:textSize="@dimen/sp_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ysf_ic_dialog_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"/>
+
+    <RelativeLayout
+        android:background="@drawable/white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_333333"
+            android:text="快递公司"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_edit_cursor_color"
+            android:gravity="center_vertical"
+            android:id="@+id/edit_name"
+            android:hint="快递公司名称"
+            android:textColorHint="#999999"
+            android:textColor="@color/color_333333"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:layout_marginRight="40dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<ImageView-->
+            <!--android:layout_marginRight="@dimen/dp_12"-->
+            <!--android:src="@drawable/arrrightgray"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+
+    </RelativeLayout>
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"/>
+    <RelativeLayout
+        android:background="@drawable/white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_333333"
+            android:text="快递单号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textCursorDrawable="@drawable/shape_edit_cursor_color"
+            android:textColor="@color/color_333333"
+            android:gravity="center_vertical"
+            android:id="@+id/edit_orderid"
+            android:hint="请输入正确的快递单号"
+            android:textColorHint="#999999"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:layout_marginRight="40dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_150"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="@dimen/dp_12"
+            android:text="退货时请确保不出现（少货/损坏）等问题，否则可能会造成审核不通过！"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_commit"
+        android:background="@drawable/gradient_zi_bg"
+        android:gravity="center"
+        android:text="确定提交"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48" />
+
+</LinearLayout>

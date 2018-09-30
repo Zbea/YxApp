@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+              android:id="@+id/ll_item"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.yx.Pharmacy.widget.EasySwipeMenuLayout
+        android:id="@+id/easy_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_checkall"
+                    android:gravity="center"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/cb_select"
+                        android:background="@drawable/selector_cb_shopcart"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/shape_cart_line_gray"
+                    android:layout_width="@dimen/dp_95"
+                    android:layout_height="@dimen/dp_95">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/iv_product"
+                        android:scaleType="fitCenter"
+                        android:layout_width="@dimen/dp_94"
+                        android:layout_height="@dimen/dp_94"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_state"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_shopcar_lose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_product"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:gravity="start"
+                        android:id="@+id/tv_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        android:maxLines="2"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:layout_gravity="center_vertical"
+                        android:gravity="start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.yx.Pharmacy.widget.AmountView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/amount_view"
+                            android:layout_alignParentEnd="true"
+                            app:btnTextSize="14sp"
+                            app:btnWidth="30dp"
+                            app:tvWidth="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_25"/>
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/amount_view"
+                            android:id="@+id/tv_scqy"
+                            android:textColor="@color/color_909090"
+                            android:textSize="@dimen/sp_11"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:paddingEnd="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:gravity="end"
+                        android:id="@+id/tv_limit_count"
+                        android:textColor="@color/color_670F6A"
+                        android:textSize="@dimen/sp_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:textColor="@color/color_670F6A"
+                            android:textSize="@dimen/sp_17"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tv_gg"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:textColor="@color/color_909090"
+                            android:textSize="@dimen/sp_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <com.yx.Pharmacy.widget.MarqueeView
+                android:id="@+id/marqueeView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                app:mvDirection="bottom_to_top"
+                app:mvAnimDuration="1000"
+                app:mvInterval="3000"
+                app:mvTextSize="@dimen/dp_13"
+                app:mvTextColor="@color/black"
+                app:mvSingleLine="true"/>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:id="@+id/ll_single_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:background="@color/color_f6f6f6"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_05"/>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30">
+                    <ImageView
+                        android:src="@drawable/icon_shopcar_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_single_coupon"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:textColor="@color/color_741177"
+                        android:textSize="@dimen/sp_13"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:src="@drawable/xsqgckgdicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:id="@+id/right"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:text="删除" />
+    </com.yx.Pharmacy.widget.EasySwipeMenuLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/ll_gift"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginStart="@dimen/dp_44"
+            android:background="@drawable/shape_cart_line_gray"
+            android:layout_width="@dimen/dp_51"
+            android:layout_height="@dimen/dp_51">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_gift_product"
+                android:scaleType="fitCenter"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_gift_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_13"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_gift_gg"
+                    android:textColor="@color/color_670F6A"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_gift_number"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textColor="@color/color_909090"
+                    android:textSize="@dimen/sp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
