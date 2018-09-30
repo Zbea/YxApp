@@ -922,13 +922,28 @@ public class ProductCartActivity
 
     @Override
     public void showSaveResult(String couponid) {
+        Double price = 0.00;//选中商品的价格
+        for (ShopCartModel.ShopCartListBean datum : mAdapter.getData()) {
+            if (TextUtils.equals(mCouponList.get(0).couponscene, datum.activityname)) {
+                for (ShopCartModel.GoodsBean good : datum.goods) {
+                    if (good.isSelect) {
+                        price = price+DensityUtils.parseDouble(good.usefulprice);
+                    }
+                }
+            }
+        }
+
         for (ShopCartModel.CouponListBean listBean : mCouponList) {
             if (TextUtils.equals(couponid, listBean.couponid)) {
                 listBean.couponstate = "1";
             }
-            if (mCouponListAdapter!=null) {
-                mCouponListAdapter.notifyDataSetChanged();
+            if (price!=0&&price>= DensityUtils.parseDouble(listBean.couponlimit)) {
+                listBean.couponEnable = true;
             }
+        }
+
+        if (mCouponListAdapter!=null) {
+            mCouponListAdapter.notifyDataSetChanged();
         }
 
         try {
@@ -938,17 +953,6 @@ public class ProductCartActivity
             SPUtil.putString(this, Constants.KEY_CREDIT,String.valueOf(i));
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void updateResult() {
-        for (ShopCartModel.ShopCartListBean datum : mResultBean.shopCartList) {
-            for (ShopCartModel.GoodsBean good : datum.goods) {
-                if (TextUtils.equals(good.goodsid, mGoodsid)) {
-                    ProductMaxManage.newInstance().refresh((int) Math.abs(mAmountEdit-Double.parseDouble(good.cartcount)));
-                }
-            }
         }
     }
 
@@ -1029,6 +1033,17 @@ public class ProductCartActivity
             }
         }
 
+    }
+
+    @Override
+    public void updateResult() {
+        for (ShopCartModel.ShopCartListBean datum : mResultBean.shopCartList) {
+            for (ShopCartModel.GoodsBean good : datum.goods) {
+                if (TextUtils.equals(good.goodsid, mGoodsid)) {
+                    ProductMaxManage.newInstance().refresh((int) Math.abs(mAmountEdit-Double.parseDouble(good.cartcount)));
+                }
+            }
+        }
     }
 
 

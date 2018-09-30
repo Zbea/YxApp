@@ -54,6 +54,7 @@ public class OrderModel implements Serializable {
     public int itemid;
     public String discount;
     public String amount;
+    public String disprice;
     public String buyer_name;
     public String buyer_address;
     public String buyer_mobile;
