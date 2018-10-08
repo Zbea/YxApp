@@ -19,7 +19,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131297135;
+  private View view2131297136;
 
   private View view2131296834;
 
@@ -48,7 +48,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_to_chongzhi, "method 'click'");
-    view2131297135 = view;
+    view2131297136 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -87,8 +87,8 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
 
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131297135.setOnClickListener(null);
-    view2131297135 = null;
+    view2131297136.setOnClickListener(null);
+    view2131297136 = null;
     view2131296834.setOnClickListener(null);
     view2131296834 = null;
     view2131296788.setOnClickListener(null);

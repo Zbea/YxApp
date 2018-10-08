@@ -158,7 +158,7 @@ public class AskForAfterSaleActivity extends BaseActivity implements IAskAfterSa
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 String str=s.toString();
-                tvCanWriteNum.setText("您还可以输入"+(100-str.length())+"字");
+                tvCanWriteNum.setText("您还可以输入"+(100-str.length()-1)+"字");
             }
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {

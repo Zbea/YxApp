@@ -68,7 +68,7 @@ public final class R {
         public static final int parent = 0x7f0901ca;
         public static final int spread = 0x7f09027a;
         public static final int spread_inside = 0x7f09027b;
-        public static final int wrap = 0x7f0903b2;
+        public static final int wrap = 0x7f0903b6;
     }
     public static final class styleable {
         private styleable() {}

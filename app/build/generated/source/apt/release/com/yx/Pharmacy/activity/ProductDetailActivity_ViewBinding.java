@@ -32,15 +32,15 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296622;
 
-  private View view2131296487;
+  private View view2131296488;
 
-  private View view2131296476;
+  private View view2131296477;
 
   private View view2131296941;
 
   private View view2131297036;
 
-  private View view2131296525;
+  private View view2131296526;
 
   @UiThread
   public ProductDetailActivity_ViewBinding(ProductDetailActivity target) {
@@ -105,7 +105,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mWebview = Utils.findRequiredViewAsType(source, R.id.webview, "field 'mWebview'", SystemWebView.class);
     view = Utils.findRequiredView(source, R.id.iv_home, "field 'mIvHome' and method 'onClick'");
     target.mIvHome = Utils.castView(view, R.id.iv_home, "field 'mIvHome'", ImageView.class);
-    view2131296487 = view;
+    view2131296488 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -114,7 +114,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.iv_cart, "field 'mIvCart' and method 'onClick'");
     target.mIvCart = Utils.castView(view, R.id.iv_cart, "field 'mIvCart'", ImageView.class);
-    view2131296476 = view;
+    view2131296477 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -167,7 +167,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.tv_product_progress = Utils.findRequiredViewAsType(source, R.id.tv_product_progress, "field 'tv_product_progress'", TextView.class);
     target.progress_bar = Utils.findRequiredViewAsType(source, R.id.progress_bar, "field 'progress_bar'", ProgressBar.class);
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'onClick'");
-    view2131296525 = view;
+    view2131296526 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -242,15 +242,15 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     view2131296811 = null;
     view2131296622.setOnClickListener(null);
     view2131296622 = null;
-    view2131296487.setOnClickListener(null);
-    view2131296487 = null;
-    view2131296476.setOnClickListener(null);
-    view2131296476 = null;
+    view2131296488.setOnClickListener(null);
+    view2131296488 = null;
+    view2131296477.setOnClickListener(null);
+    view2131296477 = null;
     view2131296941.setOnClickListener(null);
     view2131296941 = null;
     view2131297036.setOnClickListener(null);
     view2131297036 = null;
-    view2131296525.setOnClickListener(null);
-    view2131296525 = null;
+    view2131296526.setOnClickListener(null);
+    view2131296526 = null;
   }
 }

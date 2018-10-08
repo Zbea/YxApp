@@ -250,7 +250,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
             tv_note.setText(!TextUtils.isEmpty(model.note) ? model.note : "");
             tv_price.setText("￥" + model.price);
             tv_discount.setText("￥" + model.disprice);
-            tv_dikou.setText("抵扣￥" + model.discount);
+            tv_dikou.setText("抵扣率" + model.discount);
             tv_amount.setText("￥" + model.amount);
             tv_price_payed.setText("￥" + model.price);//实付金额
             invoiceUrl=model.invoice_url;

@@ -1750,6 +1750,7 @@ drawable icon_product_details_add_dialog_btn
 drawable icon_product_dialog_close
 drawable icon_qiye_store_ren
 drawable icon_qrcode_close
+drawable icon_sale_afer_details_bg_error
 drawable icon_sale_after_jtk_nor
 drawable icon_sale_after_jtk_select
 drawable icon_sale_after_thtk_nor
@@ -2378,6 +2379,7 @@ id error_img
 id error_reload_btn
 id error_text
 id etAmount
+id et_logistics_name
 id et_logistics_number
 id exitUntilCollapsed
 id expand_activities_button
@@ -2563,7 +2565,6 @@ id ll_have_need
 id ll_home_page
 id ll_item
 id ll_levelnote
-id ll_logistics
 id ll_main_container
 id ll_manjian
 id ll_many_products
@@ -3035,6 +3036,8 @@ id tv_order_company
 id tv_order_id
 id tv_order_item_num
 id tv_order_num
+id tv_order_old_number
+id tv_order_old_price
 id tv_order_price
 id tv_order_state
 id tv_order_state_desc
@@ -3051,6 +3054,7 @@ id tv_overall_coupon
 id tv_pay_price
 id tv_pay_time
 id tv_paytype
+id tv_ph
 id tv_phone_num
 id tv_pickphtoto
 id tv_pizhun
@@ -3108,6 +3112,7 @@ id tv_tongyong
 id tv_top_old_price
 id tv_top_price
 id tv_top_unit
+id tv_total_number
 id tv_type
 id tv_unit
 id tv_upgrade_cancel
@@ -3521,6 +3526,7 @@ layout item_home_product_minus
 layout item_home_product_special
 layout item_home_web
 layout item_message
+layout item_my_after_order
 layout item_my_collect
 layout item_my_integral
 layout item_my_order

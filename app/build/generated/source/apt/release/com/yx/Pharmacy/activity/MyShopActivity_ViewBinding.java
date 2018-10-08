@@ -24,7 +24,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
 
   private View view2131296822;
 
-  private View view2131296562;
+  private View view2131296563;
 
   @UiThread
   public MyShopActivity_ViewBinding(MyShopActivity target) {
@@ -59,7 +59,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mRvShop = Utils.findRequiredViewAsType(source, R.id.rv_shop, "field 'mRvShop'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_add_shop, "field 'mLlAddShop' and method 'onClick'");
     target.mLlAddShop = Utils.castView(view, R.id.ll_add_shop, "field 'mLlAddShop'", LinearLayout.class);
-    view2131296562 = view;
+    view2131296563 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -88,7 +88,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     view2131296791 = null;
     view2131296822.setOnClickListener(null);
     view2131296822 = null;
-    view2131296562.setOnClickListener(null);
-    view2131296562 = null;
+    view2131296563.setOnClickListener(null);
+    view2131296563 = null;
   }
 }

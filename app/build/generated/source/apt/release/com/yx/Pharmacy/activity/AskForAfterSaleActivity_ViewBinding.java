@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import butterknife.Unbinder;
@@ -22,7 +21,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131296566;
+  private View view2131296567;
 
   private View view2131296977;
 
@@ -47,8 +46,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tv_reason = Utils.findRequiredViewAsType(source, R.id.tv_reason, "field 'tv_reason'", TextView.class);
     target.rgSaleAfterType = Utils.findRequiredViewAsType(source, R.id.rg_sale_after_type, "field 'rgSaleAfterType'", RadioGroup.class);
     target.tvCanWriteNum = Utils.findRequiredViewAsType(source, R.id.tv_can_write_num, "field 'tvCanWriteNum'", TextView.class);
-    target.tvLogistics = Utils.findRequiredViewAsType(source, R.id.tv_logistics, "field 'tvLogistics'", TextView.class);
-    target.llLogistics = Utils.findRequiredViewAsType(source, R.id.ll_logistics, "field 'llLogistics'", LinearLayout.class);
+    target.etLogisticsName = Utils.findRequiredViewAsType(source, R.id.et_logistics_name, "field 'etLogisticsName'", EditText.class);
     target.etLogisticsNumber = Utils.findRequiredViewAsType(source, R.id.et_logistics_number, "field 'etLogisticsNumber'", EditText.class);
     target.tvDiscount = Utils.findRequiredViewAsType(source, R.id.tv_discount, "field 'tvDiscount'", TextView.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recyclerView, "field 'recyclerView'", RecyclerView.class);
@@ -61,7 +59,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_all_select, "method 'click'");
-    view2131296566 = view;
+    view2131296567 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -102,16 +100,15 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tv_reason = null;
     target.rgSaleAfterType = null;
     target.tvCanWriteNum = null;
-    target.tvLogistics = null;
-    target.llLogistics = null;
+    target.etLogisticsName = null;
     target.etLogisticsNumber = null;
     target.tvDiscount = null;
     target.recyclerView = null;
 
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131296566.setOnClickListener(null);
-    view2131296566 = null;
+    view2131296567.setOnClickListener(null);
+    view2131296567 = null;
     view2131296977.setOnClickListener(null);
     view2131296977 = null;
     view2131296618.setOnClickListener(null);

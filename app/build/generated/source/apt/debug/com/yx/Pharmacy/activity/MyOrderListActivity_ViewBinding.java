@@ -22,7 +22,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131297102;
+  private View view2131297103;
 
   @UiThread
   public MyOrderListActivity_ViewBinding(MyOrderListActivity target) {
@@ -57,7 +57,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297102 = view;
+    view2131297103 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,7 +84,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
     view2131297042 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131297102.setOnClickListener(null);
-    view2131297102 = null;
+    view2131297103.setOnClickListener(null);
+    view2131297103 = null;
   }
 }

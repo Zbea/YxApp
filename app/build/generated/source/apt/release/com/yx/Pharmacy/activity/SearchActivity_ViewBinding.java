@@ -22,7 +22,7 @@ import java.lang.Override;
 public class SearchActivity_ViewBinding implements Unbinder {
   private SearchActivity target;
 
-  private View view2131296526;
+  private View view2131296527;
 
   private View view2131296644;
 
@@ -30,7 +30,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
 
   private View view2131296641;
 
-  private View view2131296573;
+  private View view2131296574;
 
   private View view2131296975;
 
@@ -64,7 +64,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.rl_amin_window = Utils.findRequiredViewAsType(source, R.id.rl_amin_window, "field 'rl_amin_window'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.iv_shopping_car, "field 'iv_shopping_car' and method 'click'");
     target.iv_shopping_car = Utils.castView(view, R.id.iv_shopping_car, "field 'iv_shopping_car'", ImageView.class);
-    view2131296526 = view;
+    view2131296527 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -97,7 +97,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_change_layout, "method 'click'");
-    view2131296573 = view;
+    view2131296574 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -148,16 +148,16 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.iv_shopping_car = null;
     target.tv_num = null;
 
-    view2131296526.setOnClickListener(null);
-    view2131296526 = null;
+    view2131296527.setOnClickListener(null);
+    view2131296527 = null;
     view2131296644.setOnClickListener(null);
     view2131296644 = null;
     view2131296615.setOnClickListener(null);
     view2131296615 = null;
     view2131296641.setOnClickListener(null);
     view2131296641 = null;
-    view2131296573.setOnClickListener(null);
-    view2131296573 = null;
+    view2131296574.setOnClickListener(null);
+    view2131296574 = null;
     view2131296975.setOnClickListener(null);
     view2131296975 = null;
     view2131296967.setOnClickListener(null);

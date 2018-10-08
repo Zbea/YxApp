@@ -56,7 +56,7 @@ public final class R {
         public static final int numIndicator = 0x7f0901c6;
         public static final int numIndicatorInside = 0x7f0901c7;
         public static final int titleView = 0x7f090299;
-        public static final int viewpager = 0x7f0903ad;
+        public static final int viewpager = 0x7f0903ae;
     }
     public static final class layout {
         private layout() {}

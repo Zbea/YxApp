@@ -16,7 +16,7 @@ import java.lang.Override;
 public class MyFragment_ViewBinding implements Unbinder {
   private MyFragment target;
 
-  private View view2131297152;
+  private View view2131297153;
 
   private View view2131296832;
 
@@ -68,7 +68,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_collect_num = Utils.findRequiredViewAsType(source, R.id.tv_collect_num, "field 'tv_collect_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_user_name, "field 'tv_user_name' and method 'onclick'");
     target.tv_user_name = Utils.castView(view, R.id.tv_user_name, "field 'tv_user_name'", TextView.class);
-    view2131297152 = view;
+    view2131297153 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -259,8 +259,8 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_my_integral = null;
     target.rl_user_head = null;
 
-    view2131297152.setOnClickListener(null);
-    view2131297152 = null;
+    view2131297153.setOnClickListener(null);
+    view2131297153 = null;
     view2131296832.setOnClickListener(null);
     view2131296832 = null;
     view2131296825.setOnClickListener(null);

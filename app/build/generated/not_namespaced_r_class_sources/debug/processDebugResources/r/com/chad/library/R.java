@@ -39,7 +39,7 @@ public final class R {
         public static final int load_more_loading_view = 0x7f090187;
         public static final int loading_progress = 0x7f09018b;
         public static final int loading_text = 0x7f09018c;
-        public static final int tv_prompt = 0x7f090349;
+        public static final int tv_prompt = 0x7f09034a;
     }
     public static final class layout {
         private layout() {}

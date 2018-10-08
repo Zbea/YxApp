@@ -25,13 +25,13 @@ public class AddShopActivity_ViewBinding implements Unbinder {
 
   private View view2131296626;
 
-  private View view2131296564;
+  private View view2131296565;
 
-  private View view2131296473;
+  private View view2131296474;
 
-  private View view2131296570;
+  private View view2131296571;
 
-  private View view2131296511;
+  private View view2131296512;
 
   private View view2131296613;
 
@@ -39,11 +39,11 @@ public class AddShopActivity_ViewBinding implements Unbinder {
 
   private View view2131296942;
 
-  private View view2131296486;
+  private View view2131296487;
 
-  private View view2131296589;
+  private View view2131296590;
 
-  private View view2131296504;
+  private View view2131296505;
 
   private View view2131296598;
 
@@ -95,7 +95,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     target.mTvAddress = Utils.findRequiredViewAsType(source, R.id.tv_address, "field 'mTvAddress'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_address, "field 'mLlAddress' and method 'onViewClicked'");
     target.mLlAddress = Utils.castView(view, R.id.ll_address, "field 'mLlAddress'", LinearLayout.class);
-    view2131296564 = view;
+    view2131296565 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -106,7 +106,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     target.mTvBusinessState = Utils.findRequiredViewAsType(source, R.id.tv_business_state, "field 'mTvBusinessState'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_business_state, "field 'mIvBusinessState' and method 'onViewClicked'");
     target.mIvBusinessState = Utils.castView(view, R.id.iv_business_state, "field 'mIvBusinessState'", ImageView.class);
-    view2131296473 = view;
+    view2131296474 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +115,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_business, "field 'mLlBusiness' and method 'onViewClicked'");
     target.mLlBusiness = Utils.castView(view, R.id.ll_business, "field 'mLlBusiness'", LinearLayout.class);
-    view2131296570 = view;
+    view2131296571 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -127,7 +127,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     target.mTvOrganState = Utils.findRequiredViewAsType(source, R.id.tv_organ_state, "field 'mTvOrganState'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_organ_state, "field 'mIvOrganState' and method 'onViewClicked'");
     target.mIvOrganState = Utils.castView(view, R.id.iv_organ_state, "field 'mIvOrganState'", ImageView.class);
-    view2131296511 = view;
+    view2131296512 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -167,7 +167,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     target.mTvGspState = Utils.findRequiredViewAsType(source, R.id.tv_gsp_state, "field 'mTvGspState'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_gsp_state, "field 'mIvGspState' and method 'onViewClicked'");
     target.mIvGspState = Utils.castView(view, R.id.iv_gsp_state, "field 'mIvGspState'", ImageView.class);
-    view2131296486 = view;
+    view2131296487 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -176,7 +176,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_gsp, "field 'mLlGsp' and method 'onViewClicked'");
     target.mLlGsp = Utils.castView(view, R.id.ll_gsp, "field 'mLlGsp'", LinearLayout.class);
-    view2131296589 = view;
+    view2131296590 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -187,7 +187,7 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     target.tv_gsp_x = Utils.findRequiredViewAsType(source, R.id.tv_gsp_x, "field 'tv_gsp_x'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_mentou_state, "field 'mIvMentouState' and method 'onViewClicked'");
     target.mIvMentouState = Utils.castView(view, R.id.iv_mentou_state, "field 'mIvMentouState'", ImageView.class);
-    view2131296504 = view;
+    view2131296505 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -253,26 +253,26 @@ public class AddShopActivity_ViewBinding implements Unbinder {
     view2131296822 = null;
     view2131296626.setOnClickListener(null);
     view2131296626 = null;
-    view2131296564.setOnClickListener(null);
-    view2131296564 = null;
-    view2131296473.setOnClickListener(null);
-    view2131296473 = null;
-    view2131296570.setOnClickListener(null);
-    view2131296570 = null;
-    view2131296511.setOnClickListener(null);
-    view2131296511 = null;
+    view2131296565.setOnClickListener(null);
+    view2131296565 = null;
+    view2131296474.setOnClickListener(null);
+    view2131296474 = null;
+    view2131296571.setOnClickListener(null);
+    view2131296571 = null;
+    view2131296512.setOnClickListener(null);
+    view2131296512 = null;
     view2131296613.setOnClickListener(null);
     view2131296613 = null;
     view2131296614.setOnClickListener(null);
     view2131296614 = null;
     view2131296942.setOnClickListener(null);
     view2131296942 = null;
-    view2131296486.setOnClickListener(null);
-    view2131296486 = null;
-    view2131296589.setOnClickListener(null);
-    view2131296589 = null;
-    view2131296504.setOnClickListener(null);
-    view2131296504 = null;
+    view2131296487.setOnClickListener(null);
+    view2131296487 = null;
+    view2131296590.setOnClickListener(null);
+    view2131296590 = null;
+    view2131296505.setOnClickListener(null);
+    view2131296505 = null;
     view2131296598.setOnClickListener(null);
     view2131296598 = null;
   }

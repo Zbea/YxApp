@@ -36,7 +36,7 @@ public final class R {
 
         public static final int black_background = 0x7f080068;
         public static final int gray_radius = 0x7f08009d;
-        public static final int white_radius = 0x7f0801bb;
+        public static final int white_radius = 0x7f0801bc;
     }
     public static final class id {
         private id() {}
@@ -46,17 +46,17 @@ public final class R {
         public static final int center = 0x7f090046;
         public static final int center_crop = 0x7f090047;
         public static final int center_inside = 0x7f090049;
-        public static final int fit_center = 0x7f0900a1;
-        public static final int fit_end = 0x7f0900a2;
-        public static final int fit_start = 0x7f0900a3;
-        public static final int fit_xy = 0x7f0900a4;
-        public static final int indicator = 0x7f0900ca;
-        public static final int indicatorInside = 0x7f0900cb;
+        public static final int fit_center = 0x7f0900a2;
+        public static final int fit_end = 0x7f0900a3;
+        public static final int fit_start = 0x7f0900a4;
+        public static final int fit_xy = 0x7f0900a5;
+        public static final int indicator = 0x7f0900cb;
+        public static final int indicatorInside = 0x7f0900cc;
         public static final int matrix = 0x7f090195;
         public static final int numIndicator = 0x7f0901c6;
         public static final int numIndicatorInside = 0x7f0901c7;
         public static final int titleView = 0x7f090299;
-        public static final int viewpager = 0x7f0903aa;
+        public static final int viewpager = 0x7f0903ae;
     }
     public static final class layout {
         private layout() {}

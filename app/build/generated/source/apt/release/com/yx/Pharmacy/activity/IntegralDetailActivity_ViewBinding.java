@@ -20,7 +20,7 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131297100;
+  private View view2131297103;
 
   @UiThread
   public IntegralDetailActivity_ViewBinding(IntegralDetailActivity target) {
@@ -46,7 +46,7 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297100 = view;
+    view2131297103 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
 
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131297100.setOnClickListener(null);
-    view2131297100 = null;
+    view2131297103.setOnClickListener(null);
+    view2131297103 = null;
   }
 }

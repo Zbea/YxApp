@@ -50,10 +50,13 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
             if(item.status==0||item.status==1){//去支付
                 helper.getView(R.id.ll_bottom).setVisibility(View.VISIBLE);
                 helper.setText(R.id.tv_order_state,"审核中");
-                if(TextUtils.isEmpty(item.send_no)){
+                if (item.type!=1)
+                {
                     helper.setText(R.id.tv_cancle_order,"退货");
                     helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
-                }else {
+                }
+                else
+                {
                     helper.getView(R.id.tv_cancle_order).setVisibility(View.GONE);
                 }
             }else if(item.status==6){//待发货
@@ -86,6 +89,7 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
             helper.setText(R.id.tv_order_title,item.goodsList.get(0).title);
             helper.setText(R.id.tv_order_company,item.goodsList.get(0).scqy);
             helper.setText(R.id.tv_price,"折后价："+item.goodsList.get(0).price);
+            helper.setText(R.id.tv_ph,"批号"+item.goodsList.get(0).ph1);
             TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
 //            tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线
             tv_oldprice.setText("原价："+item.goodsList.get(0).oprice);

@@ -25,7 +25,7 @@ public class CreateOrderActivity_ViewBinding implements Unbinder {
 
   private View view2131296611;
 
-  private View view2131296577;
+  private View view2131296578;
 
   private View view2131296991;
 
@@ -79,7 +79,7 @@ public class CreateOrderActivity_ViewBinding implements Unbinder {
     target.view_gift_line = Utils.findRequiredView(source, R.id.view_gift_line, "field 'view_gift_line'");
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'mLlClose' and method 'onClick'");
     target.mLlClose = Utils.castView(view, R.id.ll_close, "field 'mLlClose'", LinearLayout.class);
-    view2131296577 = view;
+    view2131296578 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -137,8 +137,8 @@ public class CreateOrderActivity_ViewBinding implements Unbinder {
     view2131296791 = null;
     view2131296611.setOnClickListener(null);
     view2131296611 = null;
-    view2131296577.setOnClickListener(null);
-    view2131296577 = null;
+    view2131296578.setOnClickListener(null);
+    view2131296578 = null;
     view2131296991.setOnClickListener(null);
     view2131296991 = null;
   }

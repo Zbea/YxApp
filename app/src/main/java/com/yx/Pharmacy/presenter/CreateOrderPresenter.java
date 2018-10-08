@@ -18,6 +18,7 @@ import com.yx.Pharmacy.model.CreateOrderModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -38,7 +39,7 @@ public class CreateOrderPresenter {
 
     public void createOrder(BaseActivity activity, String orderdata) {
         orderdata=orderdata.replace("\\","");
-        LogUtils.e(orderdata);
+        L.i(orderdata);
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("orderdata",NetUtil.isStringNull(orderdata));
         HomeNet.getHomeApi().createOrder(urlMap).subscribeOn(Schedulers.io())

@@ -230,7 +230,7 @@ public class AfterOrderDetailActivity extends BaseActivity implements IBackOrder
                 tvState.setText("不同意");
                 tvState.setTextColor(getResources().getColor(R.color.red));
                 tv_order_state_desc.setText("非常抱歉您的退款申请不通过");
-                ivBg.setBackgroundResource(R.drawable.icon_sale_afer_details_bg_error);
+                ivBg.setImageResource(R.drawable.icon_sale_afer_details_bg_error);
             } else if (model.status == 9) {
                 tv_order_state.setText("已完成");
                 tvState.setText("已完成");
@@ -240,7 +240,7 @@ public class AfterOrderDetailActivity extends BaseActivity implements IBackOrder
             tv_order_id.setText(model.orderid);
             tv_backorderid.setText(model.orderbackid);
             tv_applyfor_time.setText(DateUtil.formatyyyyMMddHHmmss(Long.valueOf(model.addtime + "000")));
-            tv_refund_amount.setText("￥" + model.price);
+            tv_refund_amount.setText(model.price);
             tv_order_num.setText("数量" + model.count);
             tvDiscount.setText("整单折扣率"+model.discount);
             tvReason.setText(model.reason);

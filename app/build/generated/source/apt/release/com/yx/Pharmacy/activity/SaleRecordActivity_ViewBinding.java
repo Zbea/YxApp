@@ -24,9 +24,9 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131296487;
+  private View view2131296488;
 
-  private View view2131296476;
+  private View view2131296477;
 
   @UiThread
   public SaleRecordActivity_ViewBinding(SaleRecordActivity target) {
@@ -62,7 +62,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_home, "method 'onClick'");
-    view2131296487 = view;
+    view2131296488 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_cart, "method 'onClick'");
-    view2131296476 = view;
+    view2131296477 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -98,9 +98,9 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     view2131296812 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131296487.setOnClickListener(null);
-    view2131296487 = null;
-    view2131296476.setOnClickListener(null);
-    view2131296476 = null;
+    view2131296488.setOnClickListener(null);
+    view2131296488 = null;
+    view2131296477.setOnClickListener(null);
+    view2131296477 = null;
   }
 }

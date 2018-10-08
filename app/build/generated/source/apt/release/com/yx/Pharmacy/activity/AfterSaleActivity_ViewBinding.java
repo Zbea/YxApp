@@ -19,7 +19,7 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
 
   private View view2131296791;
 
-  private View view2131296525;
+  private View view2131296526;
 
   @UiThread
   public AfterSaleActivity_ViewBinding(AfterSaleActivity target) {
@@ -43,7 +43,7 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'click'");
-    view2131296525 = view;
+    view2131296526 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -65,7 +65,7 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
 
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131296525.setOnClickListener(null);
-    view2131296525 = null;
+    view2131296526.setOnClickListener(null);
+    view2131296526 = null;
   }
 }

@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -84,7 +85,8 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
         }else {
             title.setText(item.title);
         }
-
+        TextView tv_ph=helper.getView(R.id.tv_ph);
+        tv_ph.setVisibility(isAfter?View.VISIBLE:View.GONE);
         if(!isAfter){
             helper.setText(R.id.tv_price,item.price);
             TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
@@ -95,6 +97,7 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
             TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
             tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线
             tv_oldprice.setText(!TextUtils.isEmpty(item.oprice)?item.oprice:"");
+            tv_ph.setText("批号"+item.ph1);
         }
 
 

@@ -805,23 +805,23 @@ public final class R {
         public static final int tv_musicTime = 0x7f090314;
         public static final int tv_musicTotal = 0x7f090315;
         public static final int tv_ok = 0x7f090323;
-        public static final int tv_sign = 0x7f09035b;
-        public static final int tv_title = 0x7f09036a;
-        public static final int tv_title_camera = 0x7f09036d;
-        public static final int ucrop = 0x7f09039d;
-        public static final int ucrop_frame = 0x7f09039e;
-        public static final int ucrop_mulit_photobox = 0x7f09039f;
-        public static final int ucrop_photobox = 0x7f0903a0;
-        public static final int up = 0x7f0903a2;
-        public static final int useLogo = 0x7f0903a3;
-        public static final int video_view = 0x7f0903a4;
-        public static final int view_overlay = 0x7f0903a8;
-        public static final int withText = 0x7f0903b4;
-        public static final int wrap_content = 0x7f0903b6;
-        public static final int wrapper_controls = 0x7f0903b7;
-        public static final int wrapper_reset_rotate = 0x7f0903b8;
-        public static final int wrapper_rotate_by_angle = 0x7f0903b9;
-        public static final int wrapper_states = 0x7f0903ba;
+        public static final int tv_sign = 0x7f09035c;
+        public static final int tv_title = 0x7f09036b;
+        public static final int tv_title_camera = 0x7f09036e;
+        public static final int ucrop = 0x7f09039e;
+        public static final int ucrop_frame = 0x7f09039f;
+        public static final int ucrop_mulit_photobox = 0x7f0903a0;
+        public static final int ucrop_photobox = 0x7f0903a1;
+        public static final int up = 0x7f0903a3;
+        public static final int useLogo = 0x7f0903a4;
+        public static final int video_view = 0x7f0903a5;
+        public static final int view_overlay = 0x7f0903a9;
+        public static final int withText = 0x7f0903b5;
+        public static final int wrap_content = 0x7f0903b7;
+        public static final int wrapper_controls = 0x7f0903b8;
+        public static final int wrapper_reset_rotate = 0x7f0903b9;
+        public static final int wrapper_rotate_by_angle = 0x7f0903ba;
+        public static final int wrapper_states = 0x7f0903bb;
     }
     public static final class integer {
         private integer() {}

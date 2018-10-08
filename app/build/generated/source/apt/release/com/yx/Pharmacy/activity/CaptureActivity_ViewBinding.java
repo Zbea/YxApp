@@ -16,7 +16,7 @@ public class CaptureActivity_ViewBinding implements Unbinder {
 
   private View view2131297042;
 
-  private View view2131296501;
+  private View view2131296502;
 
   private View view2131296791;
 
@@ -39,7 +39,7 @@ public class CaptureActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_light, "method 'onClick'");
-    view2131296501 = view;
+    view2131296502 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -65,8 +65,8 @@ public class CaptureActivity_ViewBinding implements Unbinder {
 
     view2131297042.setOnClickListener(null);
     view2131297042 = null;
-    view2131296501.setOnClickListener(null);
-    view2131296501 = null;
+    view2131296502.setOnClickListener(null);
+    view2131296502 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
   }

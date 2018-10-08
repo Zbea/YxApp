@@ -88,6 +88,7 @@ public class OrderModel implements Serializable {
         public String saleprice;
         public String gg;
         public String scqy;
+        public String ph1;
         public int goodstype;
         //详情
         public int cartcount;

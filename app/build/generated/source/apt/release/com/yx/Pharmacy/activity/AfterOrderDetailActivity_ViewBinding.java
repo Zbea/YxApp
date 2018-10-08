@@ -5,6 +5,8 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,11 +22,13 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296611;
 
-  private View view2131296577;
+  private View view2131296578;
+
+  private View view2131296316;
 
   private View view2131296791;
 
-  private View view2131296525;
+  private View view2131296526;
 
   @UiThread
   public AfterOrderDetailActivity_ViewBinding(AfterOrderDetailActivity target) {
@@ -59,7 +63,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'll_close' and method 'click'");
     target.ll_close = Utils.castView(view, R.id.ll_close, "field 'll_close'", LinearLayout.class);
-    view2131296577 = view;
+    view2131296578 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -68,6 +72,24 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     });
     target.rl_wuliu_info = Utils.findRequiredViewAsType(source, R.id.rl_wuliu_info, "field 'rl_wuliu_info'", RelativeLayout.class);
     target.tv_wuliu_info = Utils.findRequiredViewAsType(source, R.id.tv_wuliu_info, "field 'tv_wuliu_info'", TextView.class);
+    target.ivBg = Utils.findRequiredViewAsType(source, R.id.iv_bg, "field 'ivBg'", ImageView.class);
+    target.tvAuditInfo = Utils.findRequiredViewAsType(source, R.id.tv_audit_info, "field 'tvAuditInfo'", TextView.class);
+    target.llAuditInfo = Utils.findRequiredViewAsType(source, R.id.ll_audit_info, "field 'llAuditInfo'", LinearLayout.class);
+    target.tvReceiveInfo = Utils.findRequiredViewAsType(source, R.id.tv_receive_info, "field 'tvReceiveInfo'", TextView.class);
+    target.llReceiveInfo = Utils.findRequiredViewAsType(source, R.id.ll_receive_info, "field 'llReceiveInfo'", LinearLayout.class);
+    target.tvType = Utils.findRequiredViewAsType(source, R.id.tv_type, "field 'tvType'", TextView.class);
+    target.tvReason = Utils.findRequiredViewAsType(source, R.id.tv_reason, "field 'tvReason'", TextView.class);
+    target.tvState = Utils.findRequiredViewAsType(source, R.id.tv_state, "field 'tvState'", TextView.class);
+    target.tvDiscount = Utils.findRequiredViewAsType(source, R.id.tv_discount, "field 'tvDiscount'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.btn_ok, "field 'btnOk' and method 'click'");
+    target.btnOk = Utils.castView(view, R.id.btn_ok, "field 'btnOk'", Button.class);
+    view2131296316 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
     view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
@@ -77,7 +99,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'click'");
-    view2131296525 = view;
+    view2131296526 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -109,14 +131,26 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     target.ll_close = null;
     target.rl_wuliu_info = null;
     target.tv_wuliu_info = null;
+    target.ivBg = null;
+    target.tvAuditInfo = null;
+    target.llAuditInfo = null;
+    target.tvReceiveInfo = null;
+    target.llReceiveInfo = null;
+    target.tvType = null;
+    target.tvReason = null;
+    target.tvState = null;
+    target.tvDiscount = null;
+    target.btnOk = null;
 
     view2131296611.setOnClickListener(null);
     view2131296611 = null;
-    view2131296577.setOnClickListener(null);
-    view2131296577 = null;
+    view2131296578.setOnClickListener(null);
+    view2131296578 = null;
+    view2131296316.setOnClickListener(null);
+    view2131296316 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131296525.setOnClickListener(null);
-    view2131296525 = null;
+    view2131296526.setOnClickListener(null);
+    view2131296526 = null;
   }
 }

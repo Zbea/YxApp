@@ -25,11 +25,11 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296611;
 
-  private View view2131296577;
+  private View view2131296578;
 
   private View view2131296791;
 
-  private View view2131297100;
+  private View view2131297103;
 
   @UiThread
   public OrderDetailActivity_ViewBinding(OrderDetailActivity target) {
@@ -94,7 +94,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'll_close' and method 'click'");
     target.ll_close = Utils.castView(view, R.id.ll_close, "field 'll_close'", LinearLayout.class);
-    view2131296577 = view;
+    view2131296578 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -112,7 +112,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297100 = view;
+    view2131297103 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -165,11 +165,11 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     view2131296807 = null;
     view2131296611.setOnClickListener(null);
     view2131296611 = null;
-    view2131296577.setOnClickListener(null);
-    view2131296577 = null;
+    view2131296578.setOnClickListener(null);
+    view2131296578 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
-    view2131297100.setOnClickListener(null);
-    view2131297100 = null;
+    view2131297103.setOnClickListener(null);
+    view2131297103 = null;
   }
 }

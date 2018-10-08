@@ -20,7 +20,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
 
   private View view2131297008;
 
-  private View view2131297099;
+  private View view2131297102;
 
   private View view2131296791;
 
@@ -59,7 +59,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditTuijianma = Utils.findRequiredViewAsType(source, R.id.edit_tuijianma, "field 'mEditTuijianma'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_register, "field 'mTvRegister' and method 'onClick'");
     target.mTvRegister = Utils.castView(view, R.id.tv_register, "field 'mTvRegister'", TextView.class);
-    view2131297099 = view;
+    view2131297102 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -96,8 +96,8 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     view2131297042 = null;
     view2131297008.setOnClickListener(null);
     view2131297008 = null;
-    view2131297099.setOnClickListener(null);
-    view2131297099 = null;
+    view2131297102.setOnClickListener(null);
+    view2131297102 = null;
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
   }

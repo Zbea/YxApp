@@ -650,19 +650,19 @@ public final class R {
         public static final int toolbar = 0x7f09029b;
         public static final int toolbar_title = 0x7f09029c;
         public static final int topPanel = 0x7f09029e;
-        public static final int ucrop = 0x7f09039d;
-        public static final int ucrop_frame = 0x7f09039e;
-        public static final int ucrop_mulit_photobox = 0x7f09039f;
-        public static final int ucrop_photobox = 0x7f0903a0;
-        public static final int up = 0x7f0903a2;
-        public static final int useLogo = 0x7f0903a3;
-        public static final int view_overlay = 0x7f0903a8;
-        public static final int withText = 0x7f0903b4;
-        public static final int wrap_content = 0x7f0903b6;
-        public static final int wrapper_controls = 0x7f0903b7;
-        public static final int wrapper_reset_rotate = 0x7f0903b8;
-        public static final int wrapper_rotate_by_angle = 0x7f0903b9;
-        public static final int wrapper_states = 0x7f0903ba;
+        public static final int ucrop = 0x7f09039e;
+        public static final int ucrop_frame = 0x7f09039f;
+        public static final int ucrop_mulit_photobox = 0x7f0903a0;
+        public static final int ucrop_photobox = 0x7f0903a1;
+        public static final int up = 0x7f0903a3;
+        public static final int useLogo = 0x7f0903a4;
+        public static final int view_overlay = 0x7f0903a9;
+        public static final int withText = 0x7f0903b5;
+        public static final int wrap_content = 0x7f0903b7;
+        public static final int wrapper_controls = 0x7f0903b8;
+        public static final int wrapper_reset_rotate = 0x7f0903b9;
+        public static final int wrapper_rotate_by_angle = 0x7f0903ba;
+        public static final int wrapper_states = 0x7f0903bb;
     }
     public static final class integer {
         private integer() {}
