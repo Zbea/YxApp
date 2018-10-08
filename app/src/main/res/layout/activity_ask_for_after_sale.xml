@@ -196,12 +196,11 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="@dimen/dp_10"
                         android:background="@color/transparent"
-                        android:hint="快递公司名称（选题）"
+                        android:hint="快递公司名称（选填）"
                         android:textColorHint="@color/text_light"
-                        android:textColor="@color/text_light"
+                        android:textColor="@color/text_normal"
                         android:textSize="@dimen/sp_14" />
                     <TextView
-                        android:id="@+id/tv_logistics"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -250,7 +249,7 @@
                         android:background="@color/transparent"
                         android:hint="请输入正确快递单号（选填）"
                         android:textColorHint="@color/text_light"
-                        android:textColor="@color/text_light"
+                        android:textColor="@color/text_normal"
                         android:textSize="@dimen/sp_14" />
 
 

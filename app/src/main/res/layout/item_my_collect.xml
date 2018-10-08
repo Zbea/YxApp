@@ -37,7 +37,6 @@
 
             <TextView
                 android:visibility="gone"
-                android:id="@+id/tv_youhui"
                 android:layout_marginTop="@dimen/dp_2"
                 android:text="10送3/30送1"
                 android:textColor="@color/pink"

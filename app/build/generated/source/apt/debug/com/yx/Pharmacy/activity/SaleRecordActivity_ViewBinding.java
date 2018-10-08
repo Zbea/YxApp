@@ -20,13 +20,13 @@ import java.lang.Override;
 public class SaleRecordActivity_ViewBinding implements Unbinder {
   private SaleRecordActivity target;
 
-  private View view2131296812;
+  private View view2131296784;
 
-  private View view2131296791;
+  private View view2131296764;
 
-  private View view2131296488;
+  private View view2131296473;
 
-  private View view2131296477;
+  private View view2131296463;
 
   @UiThread
   public SaleRecordActivity_ViewBinding(SaleRecordActivity target) {
@@ -41,7 +41,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_more, "field 'rl_more' and method 'onClick'");
     target.rl_more = Utils.castView(view, R.id.rl_more, "field 'rl_more'", RelativeLayout.class);
-    view2131296812 = view;
+    view2131296784 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.mTvNum = Utils.findRequiredViewAsType(source, R.id.tv_num, "field 'mTvNum'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onClick'");
-    view2131296791 = view;
+    view2131296764 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_home, "method 'onClick'");
-    view2131296488 = view;
+    view2131296473 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_cart, "method 'onClick'");
-    view2131296477 = view;
+    view2131296463 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -94,13 +94,13 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.mTvNum = null;
 
-    view2131296812.setOnClickListener(null);
-    view2131296812 = null;
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
-    view2131296488.setOnClickListener(null);
-    view2131296488 = null;
-    view2131296477.setOnClickListener(null);
-    view2131296477 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296764.setOnClickListener(null);
+    view2131296764 = null;
+    view2131296473.setOnClickListener(null);
+    view2131296473 = null;
+    view2131296463.setOnClickListener(null);
+    view2131296463 = null;
   }
 }

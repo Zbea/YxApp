@@ -16,11 +16,11 @@ import java.lang.Override;
 public class ChangePhoneActivity_ViewBinding implements Unbinder {
   private ChangePhoneActivity target;
 
-  private View view2131297008;
+  private View view2131296972;
 
-  private View view2131296791;
+  private View view2131296764;
 
-  private View view2131296977;
+  private View view2131296941;
 
   @UiThread
   public ChangePhoneActivity_ViewBinding(ChangePhoneActivity target) {
@@ -38,7 +38,7 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.editNewPhoneNum = Utils.findRequiredViewAsType(source, R.id.edit_new_phone_num, "field 'editNewPhoneNum'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tvGetCode' and method 'click'");
     target.tvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'tvGetCode'", TextView.class);
-    view2131297008 = view;
+    view2131296972 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     });
     target.editCode = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'editCode'", EditText.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296791 = view;
+    view2131296764 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296977 = view;
+    view2131296941 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +78,11 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.tvGetCode = null;
     target.editCode = null;
 
-    view2131297008.setOnClickListener(null);
-    view2131297008 = null;
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
-    view2131296977.setOnClickListener(null);
-    view2131296977 = null;
+    view2131296972.setOnClickListener(null);
+    view2131296972 = null;
+    view2131296764.setOnClickListener(null);
+    view2131296764 = null;
+    view2131296941.setOnClickListener(null);
+    view2131296941 = null;
   }
 }

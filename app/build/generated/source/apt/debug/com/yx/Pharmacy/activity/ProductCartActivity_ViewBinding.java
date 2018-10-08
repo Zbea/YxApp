@@ -19,13 +19,13 @@ import java.lang.Override;
 public class ProductCartActivity_ViewBinding implements Unbinder {
   private ProductCartActivity target;
 
-  private View view2131297042;
+  private View view2131297004;
 
-  private View view2131296577;
+  private View view2131296557;
 
-  private View view2131296964;
+  private View view2131296928;
 
-  private View view2131296791;
+  private View view2131296764;
 
   @UiThread
   public ProductCartActivity_ViewBinding(ProductCartActivity target) {
@@ -41,7 +41,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mTvNotice = Utils.findRequiredViewAsType(source, R.id.tv_notice, "field 'mTvNotice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onViewClicked'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297042 = view;
+    view2131297004 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_checkall, "field 'mLlCheckall' and method 'onViewClicked'");
     target.mLlCheckall = Utils.castView(view, R.id.ll_checkall, "field 'mLlCheckall'", LinearLayout.class);
-    view2131296577 = view;
+    view2131296557 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,7 +60,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mCbCheckall = Utils.findRequiredViewAsType(source, R.id.cb_checkall, "field 'mCbCheckall'", CheckBox.class);
     view = Utils.findRequiredView(source, R.id.tv_buy, "field 'mTvBuy' and method 'onViewClicked'");
     target.mTvBuy = Utils.castView(view, R.id.tv_buy, "field 'mTvBuy'", TextView.class);
-    view2131296964 = view;
+    view2131296928 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,7 +71,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mRvShopCart = Utils.findRequiredViewAsType(source, R.id.rv_shop_cart, "field 'mRvShopCart'", RecyclerView.class);
     target.mLoadingLayout = Utils.findRequiredViewAsType(source, R.id.loadinglayout, "field 'mLoadingLayout'", LoadingLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onViewClicked'");
-    view2131296791 = view;
+    view2131296764 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -97,13 +97,13 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mRvShopCart = null;
     target.mLoadingLayout = null;
 
-    view2131297042.setOnClickListener(null);
-    view2131297042 = null;
-    view2131296577.setOnClickListener(null);
-    view2131296577 = null;
-    view2131296964.setOnClickListener(null);
-    view2131296964 = null;
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
+    view2131297004.setOnClickListener(null);
+    view2131297004 = null;
+    view2131296557.setOnClickListener(null);
+    view2131296557 = null;
+    view2131296928.setOnClickListener(null);
+    view2131296928 = null;
+    view2131296764.setOnClickListener(null);
+    view2131296764 = null;
   }
 }

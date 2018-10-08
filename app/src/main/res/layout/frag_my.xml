@@ -159,7 +159,6 @@
                     android:gravity="center">
                     <ImageView
                         android:src="@drawable/yhqicon"
-                        android:id="@+id/iv_my_coupons"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/dp_20" />
                     <TextView
@@ -180,7 +179,6 @@
                     android:gravity="center">
                     <ImageView
                         android:src="@drawable/wdqbicon"
-                        android:id="@+id/iv_my_wallet"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/dp_20" />
                     <TextView

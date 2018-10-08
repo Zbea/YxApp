@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Sep 30 11:04:48 CST 2018
+#Mon Oct 08 16:17:55 CST 2018
 210.set=NATIVE_RESOURCE
 2.path=www/cordova-js-src/android/nativeapiprovider.js
 14.set=ASSET

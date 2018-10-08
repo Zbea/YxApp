@@ -13,7 +13,6 @@
     <com.yx.Pharmacy.widget.GifView
         android:layout_marginTop="@dimen/dp_150"
         app:gif="@drawable/loading"
-        android:id="@+id/loadingImageView"
         android:layout_width="@dimen/dp_40"
         android:layout_height="@dimen/dp_40"
         android:layout_gravity="center"

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Sep 29 21:15:34 CST 2018
+#Mon Oct 08 16:17:44 CST 2018
 2.path=www/plugins/cordova-plugin-custom/www/customPlugin.js
 14.set=ASSET
 107.baseType=DIRECTORY

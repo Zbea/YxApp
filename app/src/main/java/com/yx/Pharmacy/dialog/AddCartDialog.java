@@ -31,10 +31,12 @@ public class AddCartDialog {
     private Context context;
     private ProductDetailModel data;
     private Dialog alertDialog;
+    private int type=0;//0为原价购买
 
-    public AddCartDialog(Context context,ProductDetailModel data) {
+    public AddCartDialog(Context context,ProductDetailModel data,int type) {
         this.context = context;
         this.data=data;
+        this.type=type;
     }
     public AddCartDialog builder() {
         alertDialog = new Dialog(context, R.style.mycustom_dialog);
@@ -66,13 +68,21 @@ public class AddCartDialog {
         TextView tvPrice=win.findViewById(R.id.tv_price);
         tvPrice.setText("￥"+data.price);
         TextView tvInfo=win.findViewById(R.id.tv_info);
-        tvInfo.setText("每人限购"+data.max);
-
         AmountView amountView=win.findViewById(R.id.amount_view);
         amountView.setMinNum(DensityUtils.parseInt(data.minimum));
         amountView.setAddNum(DensityUtils.parseInt(data.addmum));
-        amountView.setGoods_storage(data.max);
-        amountView.setAmount((int)Double.parseDouble(data.minimum));
+        if (TextUtils.equals(data.type,"1")&&type==1)
+        {
+            tvInfo.setText("（每人限购"+data.flashmax+"件）");
+            amountView.setGoods_storage(data.flashmax);
+        }
+        else
+        {
+            tvInfo.setText("（每人限购"+data.max+"件）");
+            amountView.setAmount((int)Double.parseDouble(data.minimum));
+            amountView.setGoods_storage(data.max);
+
+        }
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override
             public void onAmountChange(View view, int amount, boolean isEdit) {

@@ -9,7 +9,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <com.yx.Pharmacy.widget.EasySwipeMenuLayout
-        android:id="@+id/easy_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentView="@+id/content"
@@ -67,7 +66,6 @@
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/ll_product"
                     android:layout_marginStart="@dimen/dp_10"
                     android:orientation="vertical"
                     android:layout_width="match_parent"

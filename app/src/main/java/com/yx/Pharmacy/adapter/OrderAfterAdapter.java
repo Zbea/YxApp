@@ -52,7 +52,7 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
                 helper.setText(R.id.tv_order_state,"审核中");
                 if (item.type!=1)
                 {
-                    helper.setText(R.id.tv_cancle_order,"退货");
+                    helper.setText(R.id.tv_cancle_order,"物流");
                     helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
                 }
                 else

@@ -34,29 +34,29 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int black_background = 0x7f080068;
-        public static final int gray_radius = 0x7f08009d;
-        public static final int white_radius = 0x7f0801bc;
+        public static final int black_background = 0x7f080063;
+        public static final int gray_radius = 0x7f080093;
+        public static final int white_radius = 0x7f080186;
     }
     public static final class id {
         private id() {}
 
-        public static final int bannerFrame = 0x7f09002e;
-        public static final int bannerTitle = 0x7f09002f;
-        public static final int center = 0x7f090046;
-        public static final int center_crop = 0x7f090047;
-        public static final int center_inside = 0x7f090049;
-        public static final int fit_center = 0x7f0900a2;
-        public static final int fit_end = 0x7f0900a3;
-        public static final int fit_start = 0x7f0900a4;
-        public static final int fit_xy = 0x7f0900a5;
-        public static final int indicator = 0x7f0900cb;
-        public static final int indicatorInside = 0x7f0900cc;
-        public static final int matrix = 0x7f090195;
-        public static final int numIndicator = 0x7f0901c6;
-        public static final int numIndicatorInside = 0x7f0901c7;
-        public static final int titleView = 0x7f090299;
-        public static final int viewpager = 0x7f0903ae;
+        public static final int bannerFrame = 0x7f09002d;
+        public static final int bannerTitle = 0x7f09002e;
+        public static final int center = 0x7f090045;
+        public static final int center_crop = 0x7f090046;
+        public static final int center_inside = 0x7f090048;
+        public static final int fit_center = 0x7f09009b;
+        public static final int fit_end = 0x7f09009c;
+        public static final int fit_start = 0x7f09009d;
+        public static final int fit_xy = 0x7f09009e;
+        public static final int indicator = 0x7f0900be;
+        public static final int indicatorInside = 0x7f0900bf;
+        public static final int matrix = 0x7f09017d;
+        public static final int numIndicator = 0x7f0901ae;
+        public static final int numIndicatorInside = 0x7f0901af;
+        public static final int titleView = 0x7f090276;
+        public static final int viewpager = 0x7f09037e;
     }
     public static final class layout {
         private layout() {}

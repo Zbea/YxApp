@@ -70,6 +70,7 @@ public class ProductDetailModel {
     public List<String> pic;
     public boolean issave;
     public int max;
+    public int flashmax;
     public String addmum;
     public String minimum;
     /**

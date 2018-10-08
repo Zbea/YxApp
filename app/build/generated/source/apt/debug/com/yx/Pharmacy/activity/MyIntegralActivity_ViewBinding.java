@@ -16,11 +16,11 @@ import java.lang.Override;
 public class MyIntegralActivity_ViewBinding implements Unbinder {
   private MyIntegralActivity target;
 
-  private View view2131297042;
+  private View view2131297004;
 
-  private View view2131296791;
+  private View view2131296764;
 
-  private View view2131296810;
+  private View view2131296782;
 
   @UiThread
   public MyIntegralActivity_ViewBinding(MyIntegralActivity target) {
@@ -35,7 +35,7 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'tv_more' and method 'click'");
     target.tv_more = Utils.castView(view, R.id.tv_more, "field 'tv_more'", TextView.class);
-    view2131297042 = view;
+    view2131297004 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +45,7 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_intergral = Utils.findRequiredViewAsType(source, R.id.tv_intergral, "field 'tv_intergral'", TextView.class);
     target.recyclerview = Utils.findRequiredViewAsType(source, R.id.recyclerview, "field 'recyclerview'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296791 = view;
+    view2131296764 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_liwu, "method 'click'");
-    view2131296810 = view;
+    view2131296782 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -74,11 +74,11 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_intergral = null;
     target.recyclerview = null;
 
-    view2131297042.setOnClickListener(null);
-    view2131297042 = null;
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
-    view2131296810.setOnClickListener(null);
-    view2131296810 = null;
+    view2131297004.setOnClickListener(null);
+    view2131297004 = null;
+    view2131296764.setOnClickListener(null);
+    view2131296764 = null;
+    view2131296782.setOnClickListener(null);
+    view2131296782 = null;
   }
 }

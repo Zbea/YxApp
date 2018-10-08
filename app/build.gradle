@@ -177,6 +177,10 @@ android {
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId "com.yx.Pharmacy"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.0.1"
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
@@ -193,7 +197,7 @@ android {
                 JPUSH_APPKEY : "bd3d1e1711a937d1ca196628", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
-       minSdkVersion = 17
+
     }
 
     lintOptions {
@@ -254,27 +258,27 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    if (cdvReleaseSigningPropertiesFile) {
-        signingConfigs {
-            release {
-                // These must be set or Gradle will complain (even if they are overridden).
-                keyAlias = ""
-                keyPassword = "__unset"
-                // And these must be set to non-empty in order to have the signing step added to the task graph.
-                storeFile = null
-                storePassword = "__unset"
-            }
-        }
-        buildTypes {
-            release {
-                signingConfig signingConfigs.release
-            }
-        }
-        addSigningProps(cdvReleaseSigningPropertiesFile, signingConfigs.release)
-    }
-    if (cdvDebugSigningPropertiesFile) {
-        addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
-    }
+//    if (cdvReleaseSigningPropertiesFile) {
+//        signingConfigs {
+//            release {
+//                // These must be set or Gradle will complain (even if they are overridden).
+//                keyAlias = ""
+//                keyPassword = "__unset"
+//                // And these must be set to non-empty in order to have the signing step added to the task graph.
+//                storeFile = null
+//                storePassword = "__unset"
+//            }
+//        }
+//        buildTypes {
+//            release {
+//                signingConfig signingConfigs.release
+//            }
+//        }
+//        addSigningProps(cdvReleaseSigningPropertiesFile, signingConfigs.release)
+//    }
+//    if (cdvDebugSigningPropertiesFile) {
+//        addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
+//    }
     buildTypes {
         debug {
             signingConfig signingConfigs.release
@@ -283,6 +287,7 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
 }
 
 

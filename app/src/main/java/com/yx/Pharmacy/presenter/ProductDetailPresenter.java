@@ -1,7 +1,7 @@
 package com.yx.Pharmacy.presenter;
 
 /*
- *  @项目名：  android 
+ *  @项目名：  android
  *  @包名：    com.yx.Pharmacy.presenter
  *  @文件名:   ProductDetailPresenter
  *  @创建者:   CC
@@ -35,24 +35,27 @@ import io.reactivex.schedulers.Schedulers;
 public class ProductDetailPresenter {
     private IProductDetailView mView;
 
-    public ProductDetailPresenter(IProductDetailView view) {this.mView = view;}
+    public ProductDetailPresenter(IProductDetailView view) {
+        this.mView = view;
+    }
 
     /**
      * 获取商品详情
+     *
      * @param activity
      * @param itemId
      */
     public void loadProductDetail(BaseActivity activity, String itemId) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",itemId);
+        urlMap.put("pid", itemId);
         HomeNet.getHomeApi().getProductDetail(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressNoCode<BasisBean<ProductDetailModel>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<ProductDetailModel> response) {
-                        if (response.getData()!=null) {
+                        if (response.getData() != null) {
                             mView.showProductDetail(response.getData());
-                        }else {
+                        } else {
                             mView.errorView();
                         }
                     }
@@ -64,20 +67,22 @@ public class ProductDetailPresenter {
                     }
                 });
     }
+
     /**
      * 收藏商品
+     *
      * @param activity
      * @param itemId
      */
     public void collectProduct(final BaseActivity activity, String itemId) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",itemId);
+        urlMap.put("pid", itemId);
         HomeNet.getHomeApi().collectProductDetail(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<Boolean> response) {
-                        if(response.getData()!=null){
+                        if (response.getData() != null) {
                             mView.showCollect();
                             SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, response.getExtention());
                         }
@@ -90,15 +95,16 @@ public class ProductDetailPresenter {
                     }
                 });
     }
+
     public void cancleCollect(final BaseActivity activity, String pid) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid", pid);
         HomeNet.getHomeApi().cancelcollect(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<Boolean> response) {
-                        if(response.getData()!=null){
+                        if (response.getData() != null) {
                             mView.showDisCollect();
                             SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, response.getExtention());
                         }
@@ -107,30 +113,29 @@ public class ProductDetailPresenter {
 
                     @Override
                     public void onError(Throwable e) {
-                        LogUtils.e("error========="+e.toString());
+                        LogUtils.e("error=========" + e.toString());
                         super.onError(e);
                     }
                 });
     }
 
 
-
     /**
      * 添加商品到购物车
      */
-    public void addCartProduct(BaseActivity activity, String pid,int amount) {
+    public void addCartProduct(BaseActivity activity, String pid, int amount) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
-        urlMap.put("count",String.valueOf(amount));
+        urlMap.put("pid", pid);
+        urlMap.put("count", String.valueOf(amount));
         HomeNet.getHomeApi().addShopcart(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<AddShopCartModel> response) {
-                        if (response.getData()!=null) {
+                        if (response.getData() != null) {
                             activity.getShortToastByString("添加成功");
                             mView.showAddResult(response.getData());
-                        }else {
+                        } else {
                             activity.getShortToastByString(response.getAlertmsg());
                         }
                     }
@@ -141,12 +146,13 @@ public class ProductDetailPresenter {
                     }
                 });
     }
+
     /**
      * 添加商品到购物车
      */
     public void productArrive(BaseActivity activity, String pid) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid", pid);
         HomeNet.getHomeApi().productArrive(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, false) {
@@ -161,6 +167,7 @@ public class ProductDetailPresenter {
                     }
                 });
     }
+
     /**
      * 获取购物车数量
      */
@@ -171,10 +178,11 @@ public class ProductDetailPresenter {
                 .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<AddShopCartModel> response) {
-                        if (response.getData()!=null) {
+                        if (response.getData() != null) {
 //                            activity.getShortToastByString("添加成功");
-                            if(!TextUtils.isEmpty(response.getData().count)) mView.getShopCarNum(response.getData().count);
-                        }else {
+                            if (!TextUtils.isEmpty(response.getData().count))
+                                mView.getShopCarNum(response.getData().count);
+                        } else {
                             activity.getShortToastByString(response.getAlertmsg());
                         }
                     }
@@ -187,85 +195,93 @@ public class ProductDetailPresenter {
     }
 
 
-
     /**
      * 秒杀专区商品秒杀价购买
      * confirm：是否覆盖购物车内的的秒杀活动商品 0 不覆盖  1覆盖
      */
-    public void miaoshaBuy(BaseActivity activity, String pid,String confirm) {
+    public void miaoshaBuy(BaseActivity activity, String pid, String confirm) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
-        urlMap.put("confirm",confirm);
+        urlMap.put("pid", pid);
+        urlMap.put("confirm", confirm);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
-                   @Override
-                   public void onSuccess(BasisBean<Object> response) {
-                       //                        if (TextUtils.equals(response.getCode(), "200")) {
-                       ////                            activity.getShortToastByString(response.getAlertmsg());
-                       //                        }else {
-                       //                            mView.ifFuGai();
-                       //                        }
-                       if(!TextUtils.isEmpty(response.getAlertmsg()))activity.getShortToastByString(response.getAlertmsg());
-                   }
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<Object> response) {
+                        if (TextUtils.equals(response.getCode(), "200")) {
+                            mView.compelete();
+                        }
+                        else
+                        {
+                            if (!TextUtils.isEmpty(response.getAlertmsg()))
+                                activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
 
-                   @Override
-                   public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       super.onError(e);
-                   }
-               });
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        super.onError(e);
+                    }
+                });
     }
+
     /**
      * 秒杀专区商品秒杀价购买
      */
-    public void miaoshaBuy(BaseActivity activity, String pid) {
+    public void miaoshaBuy(BaseActivity activity, String pid, int count) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid", pid);
+        urlMap.put("count", "" + count);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
-                   @Override
-                   public void onSuccess(BasisBean<Object> response) {
-                       if (TextUtils.equals(response.getCode(), "201")) {
-                           mView.ifFuGai();
-                       }else {
-                           if(!TextUtils.isEmpty(response.getAlertmsg()))activity.getShortToastByString(response.getAlertmsg());
-                           mView.compelete();
-                       }
-                   }
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<Object> response) {
+                        if (TextUtils.equals(response.getCode(), "201")) {
+                            mView.ifFuGai();
+                        } else {
+                            if (!TextUtils.isEmpty(response.getAlertmsg()))
+                            {
+                                activity.getShortToastByString(response.getAlertmsg());
+                            }
+                            else
+                            {
+                                mView.compelete();
+                            }
+                        }
+                    }
 
-                   @Override
-                   public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       super.onError(e);
-                   }
-               });
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        super.onError(e);
+                    }
+                });
     }
 
 
-
-    public void loadMyShop(BaseActivity activity,boolean isShow) {
+    public void loadMyShop(BaseActivity activity, boolean isShow) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("doplace","home");
+        urlMap.put("doplace", "home");
         HomeNet.getHomeApi().getMyShop(urlMap).subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
-                   @Override
-                   public void onSuccess(BasisBean<List<MyShopModel>> response) {
-                       if (response.getData()!=null) {
-                           mView.showShopData(response.getData());
-                       }else {
-                           mView.hideFlash();
-                       }
-                   }
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
+                    @Override
+                    public void onSuccess(BasisBean<List<MyShopModel>> response) {
+                        if (response.getData() != null) {
+                            mView.showShopData(response.getData());
+                        } else {
+                            mView.hideFlash();
+                        }
+                    }
 
-                   @Override
-                   public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       mView.hideFlash();
-                       super.onError(e);
-                   }
-               });
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        mView.hideFlash();
+                        super.onError(e);
+                    }
+                });
     }
 }
