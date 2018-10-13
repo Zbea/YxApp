@@ -52,7 +52,7 @@ public class SortAdapter  extends RecyclerView.Adapter<SortAdapter.MyViewHolder>
             holder.tvName.setTextColor(Color.parseColor("#670F6A"));
         } else {
             holder.mView.setBackgroundColor(Color.parseColor("#f6f6f6"));
-            holder.tvName.setTextColor(Color.parseColor("#909090"));
+            holder.tvName.setTextColor(Color.parseColor("#333333"));
         }
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -23,6 +23,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.AddressModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -124,7 +125,7 @@ public class MyShopActivity
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT,myShopModel.carcount);
+                        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT,myShopModel.collectcount);
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
                         SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);

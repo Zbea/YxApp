@@ -9,6 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="购买数量"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_mian"/>
         <ImageView
             android:id="@+id/iv_close"
             android:layout_width="45dp"
@@ -24,17 +35,42 @@
         android:layout_height="@dimen/dp_0_5"
         android:background="@color/divider"/>
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp_150">
         <com.youth.banner.Banner
             android:id="@+id/banner"
-            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/dp_150"
             android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_specification"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="规格"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:background="#66888888"/>
     </RelativeLayout>
     <View
         android:background="@color/divider"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0_5"/>
+    <TextView
+        android:id="@+id/tv_factory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:ellipsize="end"
+        android:text="厂家"
+        android:gravity="center"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_light"/>
+
 
     <TextView
         android:id="@+id/tv_price"
@@ -43,7 +79,6 @@
         android:text="565"
         android:gravity="center"
         android:textSize="20sp"
-        android:layout_marginTop="15dp"
         android:textColor="@color/color_97169b"/>
 
     <LinearLayout
@@ -67,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="每人限购"
+            android:textSize="@dimen/sp_13"
             android:textColor="@color/text_light"/>
 
         <com.yx.Pharmacy.widget.AmountView

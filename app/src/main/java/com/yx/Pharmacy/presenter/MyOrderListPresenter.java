@@ -12,17 +12,24 @@ package com.yx.Pharmacy.presenter;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.OrderModel;
+import com.yx.Pharmacy.model.UploadModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
+import com.yx.Pharmacy.util.L;
+import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.view.IMyOrderListView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 
 public class MyOrderListPresenter {
     private IMyOrderListView mView;
@@ -65,6 +72,69 @@ public class MyOrderListPresenter {
                     }
                 });
     }
+    public void upFile(BaseActivity activity,String path,String orderid) {
+        File file        = new File(path);
+        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file.getAbsoluteFile());
+        MultipartBody.Part part        = MultipartBody.Part.createFormData("File", file.getName(), requestFile);
+        HomeNet.getHomeApi().uploadFile(part).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<UploadModel>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<UploadModel> response) {
+                        if (response!=null)
+                        {
+                            if (response.getCode().equals("200"))
+                            {
+                                uploadFile(activity,response.getData().filepath,orderid);
+                            }
+                            else
+                            {
+                                activity.getShortToastByString(response.getAlertmsg());
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error========="+e.toString());
+                        super.onError(e);
+                    }
+                });
+    }
+
+    public void uploadFile(BaseActivity activity,String path,String orderid) {
+
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("payUrl",path);
+        urlMap.put("orderid",orderid);
+
+        HomeNet.getHomeApi().uploadFileTansfer(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<String> response) {
+                        if (response!=null)
+                        {
+                            if (response.getCode().equals("200"))
+                            {
+                                mView.upDateResult(path);
+                                activity.getShortToastByString("上传转账截图成功");
+                            }
+                            else
+                            {
+                                activity.getShortToastByString(response.getAlertmsg());
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error========="+e.toString());
+                        super.onError(e);
+                    }
+                });
+    }
+
     /**
      * 再次购买
      * @param activity

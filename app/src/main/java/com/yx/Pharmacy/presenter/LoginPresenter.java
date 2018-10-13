@@ -14,6 +14,7 @@ import android.text.TextUtils;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.LoginModel;
+import com.yx.Pharmacy.net.CustomEncryptHelper;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;

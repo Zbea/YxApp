@@ -149,7 +149,7 @@ public class AddShopActivity
     private String         mBusinessUrl;
     private String         mOrganUrl;
     private String         mGspUrl;
-    private String         mMentouUrl;
+    private String         mMentouUrl="";
     private String         mOrganTime;
     private String         itemid;
     private Dialog         mPhotoDialog;

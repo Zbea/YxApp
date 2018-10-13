@@ -145,7 +145,10 @@ public class MyShopPresenter {
                    public void onSuccess(BasisBean<Object> response) {
                        if (TextUtils.equals(response.getCode(),"200")){
                            activity.getShortToastByString(response.getAlertmsg());
-                           EventBus.getDefault().post("addShop");
+                           if (response.getData()!=null)
+                           {
+                               EventBus.getDefault().post("addShop");
+                           }
                            activity.finish();
                        }else {
                            activity.getShortToastByString(response.getAlertmsg());

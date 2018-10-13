@@ -252,14 +252,14 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
         if(page==curPage)return;
         iv_message.setImageResource(page==1?R.drawable.cyw:R.drawable.cyd);
         iv_type.setImageResource(page==2?R.drawable.wdfhd:R.drawable.wdfhw);
-        iv_home_page.setImageResource(page==3?R.drawable.dblogo:R.drawable.dblogow);
+        iv_home_page.setImageResource(page==3?R.drawable.fhd:R.drawable.fhw);
         iv_shopping_car.setImageResource(page==4?R.drawable.ydd:R.drawable.ydw);
         iv_my.setImageResource(page==5?R.drawable.wdd:R.drawable.wdw);
-        tv_message.setTextColor(page==1?getResources().getColor(R.color.color_check):getResources().getColor(R.color.color_uncheck));
-        tv_type.setTextColor(page==2?getResources().getColor(R.color.color_check):getResources().getColor(R.color.color_uncheck));
-        tv_home_page.setTextColor(page==3?getResources().getColor(R.color.color_check):getResources().getColor(R.color.color_uncheck));
-        tv_shopping_car.setTextColor(page==4?getResources().getColor(R.color.color_check):getResources().getColor(R.color.color_uncheck));
-        tv_my.setTextColor(page==5?getResources().getColor(R.color.color_check):getResources().getColor(R.color.color_uncheck));
+        tv_message.setTextColor(page==1?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_type.setTextColor(page==2?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_home_page.setTextColor(page==3?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_shopping_car.setTextColor(page==4?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_my.setTextColor(page==5?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
         curPage=page;
     }
 

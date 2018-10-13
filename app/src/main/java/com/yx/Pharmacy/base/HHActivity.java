@@ -17,6 +17,7 @@ import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.BackHhBean;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.SelectStoreHhBean;
@@ -241,7 +242,7 @@ public class HHActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, myShopModel.carcount);
+                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
@@ -270,7 +271,7 @@ public class HHActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, myShopModel.carcount);
+                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);

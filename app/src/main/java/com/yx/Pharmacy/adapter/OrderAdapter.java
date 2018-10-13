@@ -31,6 +31,7 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
     public interface  ClickListener{
         void checkWuliu(String orderid);
         void cancleOrder(String orderid, int position);
+        void checkTansfer(String orderid, int position);
         void goPay(String price, String orderid);
         void bugAgain(String orderid);
         void notifySendOrder(String orderid);
@@ -58,14 +59,19 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                 helper.setText(R.id.tv_order_todo,"去支付");
                 helper.setText(R.id.tv_cancle_order,"取消订单");
                 helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
-                helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
+                helper.setText(R.id.tv_check_wuliu,"转账截图");
+                helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
             }else if(item.status==2){//待发货
                 helper.setText(R.id.tv_order_state,"待发货");
                 helper.setText(R.id.tv_order_todo,"提醒发货");
                 helper.setText(R.id.tv_cancle_order,"取消订单");
                 helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
-                helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
-                helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
+                helper.setText(R.id.tv_check_wuliu,"申请售后");
+                if(item.order_back){
+                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
+                }else {
+                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
+                }
             } else if(item.status==9){//已完成
                 helper.setText(R.id.tv_order_state,"已完成");
                 helper.setText(R.id.tv_order_todo,"再次采购");
@@ -97,36 +103,7 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
             helper.setText(R.id.tv_order_total_num,"共"+item.number+"件商品 合计:");
             helper.getView(R.id.ll_bottom).setVisibility(View.VISIBLE);
 
-        }else {//售后    //status：售后订单的状态  0已申请、1审核中，6.已撤销 7通过处理中，8不通过，9已完成
-            helper.getView(R.id.tv_cancle_order).setVisibility(View.GONE);
-            helper.setText(R.id.tv_order_todo,"撤销申请");
-            if(item.status==0||item.status==1){//去支付
-                helper.getView(R.id.ll_bottom).setVisibility(View.VISIBLE);
-                helper.setText(R.id.tv_order_state,"审核中");
-                if(TextUtils.isEmpty(item.send_no)){
-                    helper.setText(R.id.tv_cancle_order,"退货");
-                    helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
-                }else {
-                    helper.getView(R.id.tv_cancle_order).setVisibility(View.GONE);
-                }
-            }else if(item.status==6){//待发货
-                helper.getView(R.id.ll_bottom).setVisibility(View.GONE);
-                helper.setText(R.id.tv_order_state,"已撤销");
-            }else if(item.status==7){//已完成
-                helper.getView(R.id.ll_bottom).setVisibility(View.GONE);
-                helper.setText(R.id.tv_order_state,"处理中");
-            }else if(item.status==8){
-                helper.getView(R.id.ll_bottom).setVisibility(View.GONE);
-                helper.setText(R.id.tv_order_state,"审核失败");
-            } else {
-                helper.getView(R.id.ll_bottom).setVisibility(View.GONE);
-                helper.setText(R.id.tv_order_state,"已完成");
-            }
-            helper.setText(R.id.tv_order_total_num,"共"+item.count+"件商品 合计:");
         }
-
-
-
 
         helper.setText(R.id.tv_order_total_price,"¥"+item.price);
 
@@ -167,8 +144,6 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                     }else {//取消订单
                         if(listener!=null)listener.cancleOrder(item.orderid,helper.getLayoutPosition());
                     }
-                }else{//售后（退货）
-                    if(listener!=null)listener.tuihuo(item.orderbackid,helper.getLayoutPosition());
                 }
             }
         });
@@ -185,17 +160,23 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                     }else if(item.status==7){//确认收货
                         if(listener!=null)listener.comfirmOrder(item.orderid,helper.getLayoutPosition());
                     }
-                }else {//售后（撤销申请）
-                    if(listener!=null)listener.cancelOrderBack(item.orderbackid,helper.getLayoutPosition());
                 }
-
             }
         });
         //新添加的查看物流按钮，之前status=7的时候也有查看物流，但是用的是tv_cancle_order，原本只有2个按钮，需求变动加了第三个
         helper.getView(R.id.tv_check_wuliu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(listener!=null)listener.checkWuliu(item.orderid);
+                if(listener==null)
+                    return;
+                if (item.status==1)
+                {
+                    listener.checkTansfer(item.orderid,helper.getLayoutPosition());
+                }
+                else
+                {
+                    listener.checkWuliu(item.orderid);
+                }
             }
         });
     }

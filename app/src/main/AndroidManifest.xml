@@ -147,7 +147,7 @@
         <activity android:name=".activity.AfterOrderDetailActivity" />
         <activity android:name=".activity.WalletDetailActivity" />
         <activity android:name=".activity.IntegralDetailActivity" />
-        <activity android:name=".activity.CreateOrderActivity" />
+        <activity android:name=".activity.OrderCreateActivity" />
         <activity android:name=".activity.AddBankCardActivity" />
         <activity android:name=".activity.AboutActivity" />
 

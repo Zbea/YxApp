@@ -65,24 +65,31 @@ public class AddCartDialog {
             mBanner.setImages(data.pic);
             mBanner.start();
         }
+        TextView tvTitle=win.findViewById(R.id.tv_title);
+        tvTitle.setText(data.title);
+        TextView tvSpecification=win.findViewById(R.id.tv_specification);
+        tvSpecification.setText(data.gg);
+        TextView tvFactory=win.findViewById(R.id.tv_factory);
+        tvFactory.setText(data.scqy);
         TextView tvPrice=win.findViewById(R.id.tv_price);
-        tvPrice.setText("￥"+data.price);
         TextView tvInfo=win.findViewById(R.id.tv_info);
         AmountView amountView=win.findViewById(R.id.amount_view);
         amountView.setMinNum(DensityUtils.parseInt(data.minimum));
         amountView.setAddNum(DensityUtils.parseInt(data.addmum));
         if (TextUtils.equals(data.type,"1")&&type==1)
         {
+            tvPrice.setText("￥"+data.price);
             tvInfo.setText("（每人限购"+data.flashmax+"件）");
-            amountView.setGoods_storage(data.flashmax);
+            amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
         }
         else
         {
+            tvPrice.setText("￥"+data.oldprice);
             tvInfo.setText("（每人限购"+data.max+"件）");
-            amountView.setAmount((int)Double.parseDouble(data.minimum));
             amountView.setGoods_storage(data.max);
 
         }
+        amountView.setAmount((int)Double.parseDouble(data.minimum));
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override
             public void onAmountChange(View view, int amount, boolean isEdit) {

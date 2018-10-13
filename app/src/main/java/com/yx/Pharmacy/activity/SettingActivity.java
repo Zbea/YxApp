@@ -13,6 +13,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ComDialog;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.util.DataCleanManager;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -119,7 +120,7 @@ public class SettingActivity extends BaseActivity {
         SPUtil.delete(this, Constants.KEY_AVATAR);
         SPUtil.delete(this, Constants.KEY_TRUENAME);
         SPUtil.delete(this, Constants.KEY_MOBILE);
-        SPUtil.delete(this, Constants.KEY_CARCOUNT);
+        CartCountManage.newInstance().setCount(0);
 
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_TOKEN);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_MOBILE);

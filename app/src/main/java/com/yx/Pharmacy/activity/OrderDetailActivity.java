@@ -119,7 +119,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
 
     private OrderDetailPresenter mPresenter;
     private String orderid;
-    private int type = 0;
+    private int type = 0;//0未支付1支付成功后查看是否有首单活动
     private String invoiceUrl;
     private OrderModel model;
     private GoodsListAdapter goodsListAdapter;

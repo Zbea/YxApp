@@ -612,7 +612,7 @@ public class ShopCartFragment
     @Override
     public void showCheckResult(BasisBean<String> response) {
         if (TextUtils.equals(response.getCode(), "200")) {
-//            CreateOrderActivity.startActivity(mContext, mOrderGoods, new CreateOrderIntentModel(mProducts,NetUtil.isStringNull(mCouponId), DensityUtils.doubleToString(mYingOrderPrice),String.valueOf(mCount),NetUtil.isStringNull(mDiscount)),
+//            OrderCreateActivity.startActivity(mContext, mOrderGoods, new CreateOrderIntentModel(mProducts,NetUtil.isStringNull(mCouponId), DensityUtils.doubleToString(mYingOrderPrice),String.valueOf(mCount),NetUtil.isStringNull(mDiscount)),
 //                                              mAllPrice,mAllCouponPrice);
         }
     }

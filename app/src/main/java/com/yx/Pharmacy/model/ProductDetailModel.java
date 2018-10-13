@@ -59,6 +59,7 @@ public class ProductDetailModel {
     public String       thumb2;
     public String          catid;
     public String          oldprice;
+    public String          oprice;
     public String       content;
     public String          type;
     public String          starttime;
@@ -70,9 +71,11 @@ public class ProductDetailModel {
     public List<String> pic;
     public boolean issave;
     public int max;
-    public int flashmax;
+    public String flashmax;
     public String addmum;
     public String minimum;
+    public boolean productLimit;
+    public boolean flashLimit ;
     /**
      * title : 汇仁 肾宝片 126片 男女肾虚亏阴阳虚 温阳补肾药品
      * price : 322.00

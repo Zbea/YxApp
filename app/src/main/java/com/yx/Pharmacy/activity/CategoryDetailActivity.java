@@ -25,6 +25,7 @@ import com.yx.Pharmacy.adapter.CategoryGridAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.net.NetUtil;
@@ -111,6 +112,12 @@ public class CategoryDetailActivity extends BaseActivity implements CategoryGrid
 
     @Override
     protected void init() {
+        CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
+            @Override
+            public void onRefresh(int max) {
+                getShopCarNum(""+max);
+            }
+        });
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         mPresenter = new CategoryDetailPresenter(this);
         initView();
@@ -265,6 +272,7 @@ public class CategoryDetailActivity extends BaseActivity implements CategoryGrid
 
     @Override
     public void getShopCarNum(String carnum) {//获取购物车数量
+        CartCountManage.newInstance().setCount(Integer.parseInt(carnum));
         tv_num.setVisibility(Integer.valueOf(carnum)==0?View.GONE:View.VISIBLE);
         tv_num.setText(Integer.valueOf(carnum)>99?"99+":carnum+"");
     }

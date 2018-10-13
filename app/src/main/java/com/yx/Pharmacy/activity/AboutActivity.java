@@ -33,7 +33,7 @@ public class AboutActivity extends BaseActivity {
 
     private void initView() {
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
-        tv_title.setText("关于源鑫");
+        tv_title.setText("关于点药");
     }
 
     @OnClick({R.id.rl_back})

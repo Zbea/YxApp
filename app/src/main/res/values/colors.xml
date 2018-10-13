@@ -26,7 +26,9 @@
     <color name="color_ececec">#ececec</color>
 
     <color name="color_check">#670f6a</color>
+    <color name="color_check1">#e72e55</color>
     <color name="color_uncheck">#ababab</color>
+    <color name="color_uncheck1">#f4baba</color>
     <color name="transparent_background">#00000000</color>
 
     <color name="color_333333">#333333</color>

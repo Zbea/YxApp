@@ -39,6 +39,7 @@ import com.yx.Pharmacy.dialog.AddCartDialog;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.loader.GlideImageLoader;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.manage.ProductMaxManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -197,6 +198,13 @@ public class ProductDetailActivity
         mPresenter.getShopcarNum(this);
         loadinglayout.setStatus(LoadingLayout.Loading);
 
+        CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
+            @Override
+            public void onRefresh(int max) {
+                setCartNum(max);
+            }
+        });
+
 //        ProductMaxManage.newInstance().setProductMaxManageListener(new ProductMaxManage.ProductMaxManageListener() {
 //            @Override
 //            public void onRefresh(int max) {
@@ -337,14 +345,13 @@ public class ProductDetailActivity
                             return;
                         }
                     }
-
                     if (mQuehuo) {
                         mPresenter.productArrive(this, mItemId);
                     } else {
                         if(mResultBean!=null&&TextUtils.equals(mResultBean.type,"1")){ //特价商品特殊处理
                             showComfirmDialog1();
                         }else {
-                            if (mResultBean.max>0)
+                            if (!mResultBean.productLimit)
                             {
                                 showAddDialog(0);
                             }
@@ -405,7 +412,7 @@ public class ProductDetailActivity
             @Override
             public void ok() {
 
-                if(mResultBean!=null&&TextUtils.equals(mResultBean.type,"1")) { //特价商品特殊处理
+                if(mResultBean!=null&&TextUtils.equals(mResultBean.type,"1")&&type==1) { //特价商品特殊处理
                     mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,cartCount);
                 }
                 else
@@ -442,9 +449,6 @@ public class ProductDetailActivity
             mRlCollect.setVisibility(View.VISIBLE);
         }
         if (mResultBean != null) {
-            String count = SPUtil.getString(UiUtil.getContext(), Constants.KEY_CARCOUNT);
-            mTvNum.setText(DensityUtils.parseInt(count) > 99 ? "99+" : count);
-            mTvNum.setVisibility(DensityUtils.parseInt(count) == 0 ? View.GONE : View.VISIBLE);
             if (data.pic != null) {
                 mBanner.setImages(data.pic);
                 mBanner.start();
@@ -513,7 +517,7 @@ public class ProductDetailActivity
                 mTvAddCart.setText("到货通知");
                 mTvAddCart.setSelected(true);
             } else {
-                if (mResultBean.max>0)
+                if (!mResultBean.productLimit)
                 {
                     mTvAddCart.setText("加入购物车");
                     mTvAddCart.setSelected(false);
@@ -571,7 +575,7 @@ public class ProductDetailActivity
                         mTvAddCart.setText("到货通知");
                         mTvAddCart.setSelected(true);
                     } else {
-                        if (mResultBean.max>0)
+                        if (!mResultBean.productLimit)
                         {
                             mTvAddCart.setEnabled(true);
                         }
@@ -657,13 +661,21 @@ public class ProductDetailActivity
         }
     }
 
+    /**
+     * 设置购物车数量显示
+     * @param count
+     */
+    public void setCartNum(int count)
+    {
+        // 添加成功
+        CartCountManage.newInstance().setCount(count);
+        mTvNum.setText(count> 99 ? "99+" : ""+count);
+        mTvNum.setVisibility(count== 0 ? View.GONE : View.VISIBLE);
+    }
+
     @Override
     public void showAddResult(AddShopCartModel data) {
-        // 添加成功
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT,data.count);
-        mTvNum.setText(DensityUtils.parseInt(data.count) > 99 ? "99+" : data.count);
-        mTvNum.setVisibility(DensityUtils.parseInt(data.count) == 0 ? View.GONE : View.VISIBLE);
-
+        setCartNum(Integer.parseInt(data.count));
         mResultBean.max=mResultBean.max-cartCount;
         if (mResultBean.max==0)
         {
@@ -673,9 +685,7 @@ public class ProductDetailActivity
 
     @Override
     public void getShopCarNum(String count) {
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT,count);
-        mTvNum.setText(DensityUtils.parseInt(count) > 99 ? "99+" : count);
-        mTvNum.setVisibility(DensityUtils.parseInt(count) == 0 ? View.GONE : View.VISIBLE);
+        setCartNum(Integer.parseInt(count));
     }
 
     @Override
@@ -699,7 +709,7 @@ public class ProductDetailActivity
     @Override
     public void compelete() {
         mPresenter.getShopcarNum(this);
-        mResultBean.flashmax=mResultBean.flashmax-cartCount;
+        mResultBean.flashmax=String.valueOf(Double.parseDouble(mResultBean.flashmax)-cartCount);
     }
 
     @Override
@@ -728,7 +738,6 @@ public class ProductDetailActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, myShopModel.carcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
@@ -760,7 +769,6 @@ public class ProductDetailActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, myShopModel.carcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
@@ -778,17 +786,25 @@ public class ProductDetailActivity
             @Override
             public void ok() {//第一次特价购买，不需要传是否覆盖
                 confirmDialog.cancle();
-                if (mResultBean.flashmax>0)
+                if (!mResultBean.flashLimit)
                 {
                     showAddDialog(1);
+                }
+                else
+                {
+                    getShortToastByString("购买已达上限");
                 }
             }
             @Override
             public void cancle() {//原价购买(加入购物车)
                 confirmDialog.cancle();
-                if (mResultBean.max>0)
+                if (!mResultBean.productLimit)
                 {
                     showAddDialog(0);
+                }
+                else
+                {
+                    getShortToastByString("购买已达上限");
                 }
             }
         });
@@ -821,12 +837,5 @@ public class ProductDetailActivity
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-        String count = SPUtil.getString(UiUtil.getContext(), Constants.KEY_CARCOUNT);
-        mTvNum.setText(DensityUtils.parseInt(count) > 99 ? "99+" : count);
-        mTvNum.setVisibility(DensityUtils.parseInt(count) == 0 ? View.GONE : View.VISIBLE);
-    }
 }

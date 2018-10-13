@@ -17,7 +17,9 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.LoginModel;
 import com.yx.Pharmacy.presenter.LoginPresenter;
+import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.ToolUtils;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.ILoginView;
 
@@ -185,11 +187,10 @@ public class LoginActivity
      */
     private void sendCheckCode() {
         mPhoneNum = mEditPhoneNum.getText().toString().trim();
-        if (TextUtils.isEmpty(mPhoneNum)|| mPhoneNum.length()<11) {
+        if (!ToolUtils.isPhoneOk(mPhoneNum)) {
             getShortToastByString("请输入正确的手机号");
             return;
         }
-
         mPresenter.sendCheckCode(this, mPhoneNum, "login");
         timer.start();
     }

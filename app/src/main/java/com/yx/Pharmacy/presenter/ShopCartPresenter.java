@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.manage.ProductMaxManage;
 import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.net.HomeNet;
@@ -64,12 +65,12 @@ public class ShopCartPresenter {
         urlMap.put("count",String.valueOf(amount));
         HomeNet.getHomeApi().updateShopcart(urlMap).subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, false) {
+               .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
                    @Override
                    public void onSuccess(BasisBean<String> response) {
                        if (TextUtils.equals(response.getCode(), "200")) {
                            mView.updateResult();
-                           SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, response.getExtention());
+                           CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
                        }
                    }
 
@@ -88,12 +89,12 @@ public class ShopCartPresenter {
         urlMap.put("pids", json);
         HomeNet.getHomeApi().deleteShopcart(urlMap).subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, false) {
+               .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
                    @Override
                    public void onSuccess(BasisBean<String> response) {
                        activity.getShortToastByString(response.getAlertmsg());
                        if (TextUtils.equals(response.getCode(), "200")) {
-                           SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, response.getExtention());
+                           CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
                            mView.deleteSuccess();
                        }
                    }

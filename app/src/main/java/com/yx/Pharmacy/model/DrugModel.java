@@ -28,6 +28,8 @@ public class DrugModel {
     private boolean quehuo;
     private String     presale; // 预售 0:不是预售  1 预售
     private String     presalenote;// 预售说明
+    public int activityCount ;
+    public int salesCount;
 
     public String getLevelnote() {
         return levelnote;
@@ -204,4 +206,6 @@ public class DrugModel {
     public void setType(int type) {
         this.type = type;
     }
+
+
 }

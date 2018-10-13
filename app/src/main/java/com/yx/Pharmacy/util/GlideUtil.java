@@ -41,6 +41,19 @@ public class GlideUtil {
 
     }
 
+    public static void loadLongImg(Context context, String url, ImageView imageView){
+        RequestOptions options = new RequestOptions()
+                .centerCrop().error(R.drawable.icon_logo)
+                .diskCacheStrategy(DiskCacheStrategy.ALL);
+
+        Glide.with(context)
+                .load(url)
+                .apply(options)
+                .into(imageView);
+
+    }
+
+
     public static void loadRadiusImg(Context context, String url, ImageView imageView,int resource,int width,int height){
         RequestOptions options = new RequestOptions()
                 .centerCrop()
@@ -60,6 +73,7 @@ public class GlideUtil {
                 .centerCrop()
                 .override(width,height)
                 .placeholder(resource)
+                .placeholder(R.drawable.icon_image_loading)
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
 
         Glide.with(context)

@@ -20,4 +20,5 @@ public interface IMyOrderListView {
     void cancelBack(int position);
     void comfirmBack(int position);
     void onErrorPage();
+    void upDateResult(String url);
 }

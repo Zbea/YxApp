@@ -50,7 +50,6 @@ public class CreateOrderPresenter {
                        activity.getShortToastByString(response.getAlertmsg());
                        if (TextUtils.equals(response.getCode(),"200")) {
                            mView.showCreateResult(response.getData());
-                           SPUtil.putString(UiUtil.getContext(), Constants.KEY_CARCOUNT, response.getExtention());
                        }
                    }
 

@@ -14,6 +14,7 @@ import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
 import com.yx.Pharmacy.model.LoginModel;
 import com.yx.Pharmacy.model.MessageData;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.OrderModel;
 import com.yx.Pharmacy.model.PayOrderModel;
@@ -34,6 +35,8 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.http.Body;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
@@ -154,6 +157,11 @@ public interface HomeApi {
     @POST(Constants.STORE_DETAIL)
     Observable<BasisBean<StoreDetailModel>> storeDetail(@FieldMap HashMap<String, String> map);
     /**
+     *  获取各种订单状态中订单的总数量
+     */
+    @POST(Constants.ORDER_NUM)
+    Observable<BasisBean<MyOrderNumModel>> getOrderNum();
+    /**
      *  个人中心优惠劵列表
      */
     @FormUrlEncoded
@@ -231,6 +239,12 @@ public interface HomeApi {
     @FormUrlEncoded
     @POST(Constants.BUY_AGAIN)
     Observable<BasisBean<String>> buyAgain(@FieldMap HashMap<String, String> map);
+    /**
+     *  上传文件
+     */
+    @FormUrlEncoded
+    @POST(Constants.UPLOAD_TRANSFER)
+    Observable<BasisBean<String>> uploadFileTansfer(@FieldMap HashMap<String, String> map);
     /**
      * 提醒发货
      */

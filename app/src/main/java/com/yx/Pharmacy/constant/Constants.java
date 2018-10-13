@@ -9,6 +9,7 @@ package com.yx.Pharmacy.constant;
 public class Constants {
 //     测试
     public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
+//    public static final String BASE_URL            = "http://120.79.62.56:8806/index.php/;
     // H5连接
     public static final String H5_URL              = "h5_url";
 
@@ -76,6 +77,8 @@ public class Constants {
     public static final String ORDER_DETAIL      = "order/detail";
     //售后订单列表
     public static final String AFTER_ORDER_LIST      = "order/back_list";
+    // 图片上传
+    public static final String UPLOAD_TRANSFER     = "order/updatePayPic";
     //再次购买
     public static final String BUY_AGAIN      = "order/buyagain";
     //提醒发货
@@ -104,6 +107,8 @@ public class Constants {
     public static final String CREDIT_LIST      = "credit/list";
     //提交订单售后申请
     public static final String ORDER_BACK    = "order/back";
+    //获取各种订单状态中订单的总数量
+    public static final String ORDER_NUM    = "order/orderCounts";
     //取消商品收藏
     public static final String PRODUCT_DIASCOLLECT    = "product/disCollect";
     //修改的登录密码
@@ -170,7 +175,7 @@ public class Constants {
     public static final String KEY_AVATAR = "key_avatar";// 门头照-头像
     public static final String KEY_TRUENAME = "key_truename";// 门店对应姓名
     public static final String KEY_MOBILE = "key_mobile";// 门店对应手机号
-    public static final String KEY_CARCOUNT = "key_carcount";// 门店对应购物车数量
+//    public static final String KEY_CARCOUNT = "key_carcount";// 门店对应购物车数量
     public static final String KEY_COMPANY = "key_company"; // 公司名
     public static final String KEY_CREDIT = "key_credit"; // 积分
     public static final String KEY_MONEY = "key_money"; // 余额

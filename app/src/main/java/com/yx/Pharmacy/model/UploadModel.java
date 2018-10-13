@@ -11,4 +11,5 @@ package com.yx.Pharmacy.model;
 
 public class UploadModel {
     public String filepath;
+    public String payUrl;
 }

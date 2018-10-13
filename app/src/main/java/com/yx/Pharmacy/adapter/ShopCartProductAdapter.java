@@ -103,8 +103,8 @@ public class ShopCartProductAdapter
             ImageView    gift_product    = helper.getView(R.id.iv_gift_product);
             GlideUtil.loadImg(UiUtil.getContext(), item.giftInfo.goodsthumb, gift_product);
             helper.setText(R.id.tv_gift_title,item.giftInfo.goodsname)
-                  .setText(R.id.tv_gift_gg,item.giftInfo.goodsgg);
-
+                  .setText(R.id.tv_gift_gg,item.giftInfo.goodsgg)
+           .setText(R.id.tv_gift_price,"0.01");
             if (item.giftList!=null) {
                 for (ShopCartModel.GoodsBean.GiftListBean giftListBean : item.giftList) {
                     int carcount     = DensityUtils.parseInt(item.cartcount);
@@ -124,6 +124,10 @@ public class ShopCartProductAdapter
                     }
                 }
             }
+        }
+        else
+        {
+            ll_gift.setVisibility(View.GONE);
         }
 
         int addnum = DensityUtils.parseInt(item.addmum);

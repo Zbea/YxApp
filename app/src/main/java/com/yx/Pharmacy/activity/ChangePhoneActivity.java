@@ -13,6 +13,7 @@ import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.presenter.ChangePhonePresenter;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.view.IChangePwdView;
@@ -159,8 +160,6 @@ public class ChangePhoneActivity extends BaseActivity implements IChangePwdView 
         SPUtil.delete(this, Constants.KEY_AVATAR);
         SPUtil.delete(this, Constants.KEY_TRUENAME);
         SPUtil.delete(this, Constants.KEY_MOBILE);
-        SPUtil.delete(this, Constants.KEY_CARCOUNT);
-
         SPUtil.delete(this, Constants.KEY_TOKEN);
         SPUtil.delete(this, Constants.KEY_MOBILE);
         SPUtil.delete(this, Constants.KEY_COMPANY);
@@ -173,5 +172,6 @@ public class ChangePhoneActivity extends BaseActivity implements IChangePwdView 
         SPUtil.delete(this, Constants.KEY_TRUENAME);
         SPUtil.delete(this, Constants.KEY_HAVEBANK);
         SPUtil.delete(this, Constants.KEY_STORE_CERTIFY);
+        CartCountManage.newInstance().setCount(0);
     }
 }

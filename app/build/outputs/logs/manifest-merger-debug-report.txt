@@ -528,7 +528,7 @@ activity#com.yx.Pharmacy.activity.IntegralDetailActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:9-69
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:19-66
-activity#com.yx.Pharmacy.activity.CreateOrderActivity
+activity#com.yx.Pharmacy.activity.OrderCreateActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:9-66
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:19-63

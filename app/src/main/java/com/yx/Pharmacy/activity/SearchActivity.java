@@ -30,6 +30,8 @@ import com.yx.Pharmacy.adapter.DrugTagAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.ProductMaxManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.TagModel;
@@ -127,6 +129,14 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
 
     @Override
     protected void init() {
+
+        CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
+            @Override
+            public void onRefresh(int max) {
+                getShopCarNum(""+max);
+            }
+        });
+
         ImmersionBarUtil.setBarColor(R.color.color_741177,this,false);
         keyword=getIntent().getStringExtra("keyword");
         mPresenter = new SearchPresenter(this);
@@ -303,6 +313,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
 
     @Override
     public void getShopCarNum(String carnum) {
+        CartCountManage.newInstance().setCount(Integer.parseInt(carnum));
         tv_num.setVisibility(Integer.valueOf(carnum)==0?View.GONE:View.VISIBLE);
         tv_num.setText(Integer.valueOf(carnum)>99?"99+":carnum+"");
     }

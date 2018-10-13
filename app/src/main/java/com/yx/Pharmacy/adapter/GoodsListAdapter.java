@@ -47,7 +47,15 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
         helper.setText(R.id.tv_scqy,item.scqy)
                .setText(R.id.tv_gg,item.gg)
                .setText(R.id.tv_count,"x"+item.count);
-        int type=item.type;
+        int type;
+        if (!isAfter)
+        {
+            type=item.type;
+        }
+        else
+        {
+            type=item.leveltype;
+        }
         if(type==1){
             Bitmap   b = null;
             b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
@@ -96,7 +104,7 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
             helper.setText(R.id.tv_price,item.disprice);
             TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
             tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线
-            tv_oldprice.setText(!TextUtils.isEmpty(item.oprice)?item.oprice:"");
+            tv_oldprice.setText(!TextUtils.isEmpty(item.saleprice)?item.saleprice:"");
             tv_ph.setText("批号"+item.ph1);
         }
 

@@ -47,7 +47,7 @@ public class OrderModel implements Serializable {
     public String orderid;
     public int status;
     public String price;
-    public int number;
+    public String number;
     public List<Goods> goodsList;
     public List<Goods> gift;
     //详情
@@ -77,6 +77,7 @@ public class OrderModel implements Serializable {
     public int type;
     public String recordnote;
     public String checknote;
+    public String pay_url;
 
     public static class Goods  implements Serializable {
         public String mallid;
@@ -86,6 +87,7 @@ public class OrderModel implements Serializable {
         public String price;
         public String oprice;
         public String saleprice;
+        public int leveltype;
         public String gg;
         public String scqy;
         public String ph1;
