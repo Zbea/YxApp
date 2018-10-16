@@ -19,14 +19,14 @@
         android:id="@+id/rl_phone"
         android:background="@drawable/white_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50">
+        android:layout_height="@dimen/dp_45">
 
         <TextView
             android:layout_marginLeft="@dimen/dp_16"
             android:layout_centerVertical="true"
             android:text="手机号码"
-            android:textSize="@dimen/sp_16"
-            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_mian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -45,13 +45,12 @@
             android:layout_centerVertical="true"
             android:text="183****65655"
             android:textSize="@dimen/sp_14"
-            android:textColor="@color/color_909090"
+            android:textColor="@color/text_light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <View
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/dp_16"
-            android:background="@color/bottom_line"
+            android:background="@color/line_color"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dp_0_5"/>
 
@@ -61,14 +60,14 @@
         android:id="@+id/rl_password"
         android:background="@drawable/white_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50">
+        android:layout_height="@dimen/dp_45">
 
         <TextView
             android:layout_marginLeft="@dimen/dp_16"
             android:layout_centerVertical="true"
             android:text="登录密码"
-            android:textSize="@dimen/sp_16"
-            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_mian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

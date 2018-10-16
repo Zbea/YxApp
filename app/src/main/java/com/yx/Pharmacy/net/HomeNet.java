@@ -43,71 +43,35 @@ public class HomeNet {
                                  Request request=chain.request();
 
                                  Request.Builder builder = chain.request().newBuilder();
+//                                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
                                  builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
                                  builder.addHeader("version", "v1");
                                  builder.addHeader("platform","android");
-                                 builder.addHeader("storeid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
+                                 builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
                                  builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));
 
-//                                 RequestBody requestBody = request.body();
-//                                 if (requestBody != null) {
-//                                     okio.Buffer buffer = new okio.Buffer();
-//                                     requestBody.writeTo(buffer);
-//                                     Charset charset = Charset.forName("UTF-8");
-//                                     MediaType contentType = requestBody.contentType();
-//                                     if (contentType != null) {
-//                                         charset = contentType.charset(charset);
-//                                     }
-//                                     String string = buffer.readString(charset);
-//                                     String encryptStr =  CustomEncryptHelper.Encrypt(string);
-//                                     RequestBody body = MultipartBody.create(contentType, encryptStr);
-//                                     builder.post(body);
-//
-//                                 }
+//                                 builder.addHeader("token", NetUtil.isStringNull(NetUtil.getToken().trim()));
+//                                 builder.addHeader("version", "v1");
+//                                 builder.addHeader("platform","android");
+//                                 builder.addHeader("storeid",NetUtil.isStringNull(NetUtil.getStoreid().trim()));
+//                                 builder.addHeader("itemid",NetUtil.isStringNull(NetUtil.getItemId().trim()));
+//                                 L.i("token:"+CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
+//                                 L.i("token:"+CustomEncryptHelper.Decrypt(CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken()))));
 
-
-//                                 //拼接timestamp
-//                                 String url = request.url().toString();
-//                                 //获取参数列表
-//                                 String[] parts = url.split("\\?");
-//                                 //TreeMap里面的数据会按照key值自动升序排列
-//                                 TreeMap<String, String> param_map = new TreeMap<String, String>();
-//                                 //获取参数对
-//                                 String[] param_pairs = parts[1].split("&");
-//                                 for (String pair : param_pairs) {
-//                                     String[] param = pair.split("=");
-//                                     if (param.length != 2) {
-//                                         //没有value的参数不进行处理
-//                                         continue;
+//                                 if (request.body()!=null)
+//                                 {
+//                                     if(request.body() instanceof FormBody){
+//                                         FormBody.Builder newFormBody = new FormBody.Builder();
+//                                         FormBody oidFormBody = (FormBody) request.body();
+//                                         for (int i = 0;i<oidFormBody.size();i++){
+////                                             L.i("key:"+oidFormBody.encodedName(i));
+////                                             L.i("value:"+oidFormBody.encodedValue(i));
+//                                             newFormBody.addEncoded(oidFormBody.encodedName(i),CustomEncryptHelper.Encrypt(oidFormBody.encodedValue(i)));
+//                                         }
+////                                     builder.method(request.method(),newFormBody.build());
+//                                         builder.post(newFormBody.build());
 //                                     }
-//                                     param_map.put(param[0], param[1]);
 //                                 }
-//                                 StringBuilder sign = new StringBuilder();
-//                                 Iterator it = param_map.keySet().iterator();
-//                                 //拼接参数
-//                                 while (it.hasNext()) {
-//                                     String key = it.next().toString();
-//                                     String value = param_map.get(key).toString();
-//                                     sign.append(key + value);
-//                                 }
-//
-//                                 String sing_s=CustomEncryptHelper.Decrypt(sign.toString());
-//                                 RequestBody body = MultipartBody.create(request.body().contentType(), sing_s);
-//                                 builder.post(body);
-                                 if (request.body()!=null)
-                                 {
-                                     if(request.body() instanceof FormBody){
-                                         FormBody.Builder newFormBody = new FormBody.Builder();
-                                         FormBody oidFormBody = (FormBody) request.body();
-                                         for (int i = 0;i<oidFormBody.size();i++){
-                                             L.i("key:"+oidFormBody.encodedName(i));
-                                             L.i("value:"+oidFormBody.encodedValue(i));
-                                             newFormBody.addEncoded(oidFormBody.encodedName(i),CustomEncryptHelper.Encrypt(oidFormBody.encodedValue(i)));
-                                         }
-//                                     builder.method(request.method(),newFormBody.build());
-                                         builder.post(newFormBody.build());
-                                     }
-                                 }
 
 
                                  Response response;
@@ -132,6 +96,9 @@ public class HomeNet {
                          }).connectTimeout(30, TimeUnit.SECONDS)
                          .readTimeout(30, TimeUnit.SECONDS)
                          .build();
+
+
+
 
     public static HomeApi getHomeApi() {
         LogUtils.e(NetUtil.getToken()+"  itemid = " +NetUtil.getItemId()+"  storeid = " +NetUtil.getStoreid());

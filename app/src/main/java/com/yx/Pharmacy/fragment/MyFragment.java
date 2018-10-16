@@ -315,7 +315,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
     public void initView() {
         presenter=new MyPresenter(this);
-        presenter.getOrderNum((BaseActivity) mContext);
+        if (!TextUtils.isEmpty(NetUtil.getToken())&!TextUtils.isEmpty(NetUtil.getStoreid()))
+            presenter.getOrderNum((BaseActivity) mContext);
 
         String collect = SPUtil.getString(UiUtil.getContext(), Constants.KEY_COLLECT);
         tv_collect_num.setText(TextUtils.isEmpty(collect) ? "0" : collect);

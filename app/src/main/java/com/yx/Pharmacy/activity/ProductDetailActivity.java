@@ -610,7 +610,7 @@ public class ProductDetailActivity
                 });
 
                 int         max           = DensityUtils.parseInt(data.salesacti);
-                int         progress             = DensityUtils.parseInt(data.sales);
+                int         progress             = DensityUtils.parseInt(data.sale);
                 progress_bar.setMax(max);
                 progress_bar.setProgress(progress);
 

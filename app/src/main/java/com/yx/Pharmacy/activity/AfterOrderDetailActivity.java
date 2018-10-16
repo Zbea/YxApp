@@ -244,7 +244,7 @@ public class AfterOrderDetailActivity extends BaseActivity implements IBackOrder
             tv_order_num.setText("数量" + model.count);
             tvDiscount.setText("整单折扣率"+model.discount);
             tvReason.setText(model.reason);
-            tvType.setText(model.type==1?"退货退款":"仅退款");
+            tvType.setText(model.type==1?"仅退款":"退货退款");
             if (!TextUtils.isEmpty(model.recordnote))
             {
                 tvAuditInfo.setText(model.recordnote);

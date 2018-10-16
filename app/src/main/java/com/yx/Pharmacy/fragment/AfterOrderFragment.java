@@ -17,6 +17,7 @@ import com.yx.Pharmacy.dialog.TuihuoDialog;
 import com.yx.Pharmacy.model.OrderModel;
 import com.yx.Pharmacy.presenter.AfterOrderListPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.view.IAfterOrderListView;
 import com.yx.Pharmacy.widget.SpacesItemDecoration;
 
@@ -47,6 +48,19 @@ public class AfterOrderFragment extends BaseFragment  implements IAfterOrderList
 
     private OrderAfterAdapter orderAdapter;
     private List<OrderModel> orderModels=new ArrayList<>();
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (!isVisibleToUser)
+        {
+            if (mPresenter!=null)
+            {
+                page=1;
+                mPresenter.getAfterOrderListData((BaseActivity)mContext,status,page,true);
+            }
+        }
+    }
 
     private static final String STATUS="status";
     private int status;
@@ -123,6 +137,7 @@ public class AfterOrderFragment extends BaseFragment  implements IAfterOrderList
     }
     @Override
     public void refreshOrderList(List<OrderModel> data) {
+        L.i("status:"+status+":"+data.size());
         orderAdapter.setNewData(data);
         if(swipeRefreshLayout!=null)swipeRefreshLayout.setRefreshing(false);
         if(data.size()<4){//当数据不满一屏时，会出bug，所以加入此部操作

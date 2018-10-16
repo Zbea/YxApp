@@ -70,6 +70,7 @@
                     android:layout_marginLeft="42dp"
                     android:text="小明.广东   1542****342"
                     android:textColor="#333333"
+                    android:textSize="@dimen/sp_15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -79,6 +80,7 @@
                     android:layout_alignLeft="@id/tv_user_info"
                     android:id="@+id/tv_user_address"
                     android:layout_marginTop="@dimen/dp_5"
+                    android:textSize="@dimen/sp_14"
                     android:text="广东省深圳市罗湖区海南大道103948号交界处天堂国际会所"
                     android:textColor="#909090"
                     android:paddingRight="@dimen/dp_12"
@@ -124,7 +126,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="原总金额"
                     android:layout_centerVertical="true"
@@ -140,7 +142,7 @@
                     android:text="￥454613"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -152,7 +154,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="优惠总金额"
                     android:layout_centerVertical="true"
@@ -168,7 +170,7 @@
                     android:text="-￥454"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -181,7 +183,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="折扣率"
                     android:layout_centerVertical="true"
@@ -197,7 +199,7 @@
                     android:text="抵扣-￥2"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -209,7 +211,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="合计"
                     android:layout_centerVertical="true"
@@ -225,7 +227,7 @@
                     android:text="￥23333"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -237,7 +239,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48"
+                android:layout_height="@dimen/dp_45"
                 android:background="@drawable/white_bg">
 
                 <TextView
@@ -257,7 +259,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_16"
                     android:text="￥23333"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:textSize="@dimen/sp_14" />
 
                 <View
@@ -276,7 +278,7 @@
                 android:background="@drawable/white_bg"
                 android:id="@+id/rl_paytype"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="支付方式"
                     android:layout_centerVertical="true"
@@ -292,7 +294,7 @@
                     android:text=""
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -305,7 +307,7 @@
                 android:id="@+id/rl_invoice"
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="开具发票"
                     android:layout_centerVertical="true"
@@ -342,7 +344,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="下单时间"
                     android:layout_centerVertical="true"
@@ -358,7 +360,7 @@
                     android:text="2018/11/22 12:04:38"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/base_text_color_light"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -371,7 +373,7 @@
                 android:background="@drawable/white_bg"
                 android:id="@+id/rl_pay_time"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="付款时间"
                     android:layout_centerVertical="true"
@@ -387,7 +389,7 @@
                     android:text="2018/11/22 12:04:38"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/base_text_color_light"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
@@ -399,7 +401,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="订单编号"
                     android:layout_centerVertical="true"
@@ -415,7 +417,7 @@
                     android:text="134875464354165741"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/base_text_color_light"
+                    android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <!--<View-->
@@ -432,7 +434,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="商品清单"
                     android:layout_centerVertical="true"
@@ -463,7 +465,7 @@
                 android:id="@+id/ll_open"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:drawablePadding="@dimen/dp_3"
                     android:drawableRight="@drawable/wzkjt"
@@ -505,7 +507,7 @@
                 android:id="@+id/ll_close"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:drawablePadding="@dimen/dp_3"
                     android:drawableRight="@drawable/yzkjt"
@@ -524,12 +526,12 @@
 
     <TextView
         android:id="@+id/tv_detail_todo"
-        android:background="@drawable/gradient_zi_bg"
+        android:background="@color/color_check"
         android:gravity="center"
         android:text="去付款"
         android:textColor="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_48" />
+        android:layout_height="@dimen/dp_45" />
 
 
     <include layout="@layout/include_error_net"/>

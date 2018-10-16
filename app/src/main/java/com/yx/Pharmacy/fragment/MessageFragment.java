@@ -377,16 +377,18 @@ public class MessageFragment
 
         @Override
         public void readMessage(String itemid, int position) {//已读
-            mAdapter.getData().get(position).isread=1;
-            mAdapter.notifyDataSetChanged();
-            mPresenter.sendReadMessage((BaseActivity) mContext,itemid);
+            if (mAdapter.getData().size()>0)
+            {
+                mAdapter.getData().get(position-1).isread=1;
+                mAdapter.notifyDataSetChanged();
+                mPresenter.sendReadMessage((BaseActivity) mContext,itemid);
+            }
         }
     };
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(int t)
     {
-        L.i("ddddddddddddddddddddddddddd");
         onRefresh();
     }
 

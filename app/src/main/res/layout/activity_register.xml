@@ -13,8 +13,8 @@
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_30"
         android:background="@drawable/shape_register_edit"
-        android:layout_marginLeft="@dimen/dp_32"
-        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_43">
 
@@ -30,8 +30,8 @@
             android:id="@+id/edit_phone_num"
             android:singleLine="true"
             android:textColor="@color/color_333333"
-            android:textColorHint="#909090"
-            android:textSize="@dimen/sp_16"
+            android:textColorHint="@color/text_light"
+            android:textSize="@dimen/sp_14"
             android:background="@null"
             android:hint="请输入手机号码"
             android:layout_marginLeft="@dimen/dp_34"
@@ -43,8 +43,8 @@
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/shape_register_edit"
-        android:layout_marginLeft="@dimen/dp_32"
-        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_43">
 
@@ -61,8 +61,8 @@
             android:id="@+id/edit_password"
             android:singleLine="true"
             android:textColor="@color/color_333333"
-            android:textColorHint="#909090"
-            android:textSize="@dimen/sp_16"
+            android:textColorHint="@color/text_light"
+            android:textSize="@dimen/sp_14"
             android:background="@null"
             android:hint="设置登陆密码"
             android:layout_marginLeft="@dimen/dp_34"
@@ -74,8 +74,8 @@
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/shape_register_edit"
-        android:layout_marginLeft="@dimen/dp_32"
-        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_43">
 
@@ -101,8 +101,8 @@
             android:id="@+id/edit_code"
             android:singleLine="true"
             android:textColor="@color/color_333333"
-            android:textColorHint="#909090"
-            android:textSize="@dimen/sp_16"
+            android:textColorHint="@color/text_light"
+            android:textSize="@dimen/sp_14"
             android:background="@null"
             android:hint="验证码"
             android:layout_marginLeft="@dimen/dp_34"
@@ -114,8 +114,8 @@
     <RelativeLayout
         android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/shape_register_edit"
-        android:layout_marginLeft="@dimen/dp_32"
-        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_43">
 
@@ -130,8 +130,8 @@
             android:id="@+id/edit_tuijianma"
             android:singleLine="true"
             android:textColor="@color/color_333333"
-            android:textColorHint="#909090"
-            android:textSize="@dimen/sp_16"
+            android:textColorHint="@color/text_light"
+            android:textSize="@dimen/sp_14"
             android:background="@null"
             android:hint="推荐码（选填）"
             android:layout_marginLeft="@dimen/dp_34"
@@ -148,8 +148,8 @@
         android:background="@drawable/select_register_btn"
         android:textColor="@color/white"
         android:text="立即注册"
-        android:layout_marginLeft="@dimen/dp_32"
-        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45" />
 

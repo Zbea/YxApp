@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/rl_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_48"
+        android:layout_height="@dimen/dp_45"
         android:orientation="vertical"
         android:background="@drawable/white_bg">
 
@@ -156,7 +156,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="原单号"
                     android:layout_centerVertical="true"
@@ -187,7 +187,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退货单号"
                     android:layout_centerVertical="true"
@@ -213,7 +213,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="申请时间"
                     android:layout_centerVertical="true"
@@ -239,7 +239,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退款方式"
                     android:layout_centerVertical="true"
@@ -265,7 +265,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退款原因"
                     android:layout_centerVertical="true"
@@ -291,7 +291,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退款金额"
                     android:layout_centerVertical="true"
@@ -323,7 +323,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="审核状态"
                     android:layout_centerVertical="true"
@@ -350,7 +350,7 @@
                 android:layout_width="match_parent"
                 android:visibility="gone"
                 android:layout_marginTop="@dimen/dp_0_5"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退货物流"
                     android:layout_centerVertical="true"
@@ -384,7 +384,7 @@
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
                 android:gravity="center_vertical"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="退货商品清单"
                     android:layout_centerVertical="true"
@@ -425,7 +425,7 @@
                 android:id="@+id/ll_open"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:drawablePadding="@dimen/dp_3"
                     android:drawableRight="@drawable/wzkjt"
@@ -466,7 +466,7 @@
                 android:id="@+id/ll_close"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:drawablePadding="@dimen/dp_3"
                     android:drawableRight="@drawable/yzkjt"
@@ -491,7 +491,7 @@
     <Button
         android:id="@+id/btn_ok"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
+        android:layout_height="@dimen/dp_45"
         android:background="@color/color_check"
         android:gravity="center"
         android:textColor="@color/white"

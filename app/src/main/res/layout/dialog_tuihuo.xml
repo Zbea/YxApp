@@ -12,9 +12,9 @@
 
         <TextView
             android:layout_centerInParent="true"
-            android:textColor="@color/color_333333"
+            android:textColor="@color/black"
             android:text="退货运单"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -48,7 +48,7 @@
         <TextView
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_16"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_15"
             android:textColor="@color/color_333333"
             android:text="快递公司"
             android:layout_width="wrap_content"
@@ -59,12 +59,13 @@
             android:gravity="center_vertical"
             android:id="@+id/edit_name"
             android:hint="快递公司名称"
-            android:textColorHint="#999999"
-            android:textColor="@color/color_333333"
+            android:textColorHint="@color/text_light"
+            android:textColor="@color/text_normal"
             android:background="@null"
             android:layout_marginLeft="@dimen/dp_100"
             android:layout_marginRight="40dp"
             android:singleLine="true"
+            android:textSize="@dimen/sp_14"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -90,7 +91,7 @@
         <TextView
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_16"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_15"
             android:textColor="@color/color_333333"
             android:text="快递单号"
             android:layout_width="wrap_content"
@@ -98,14 +99,15 @@
 
         <EditText
             android:textCursorDrawable="@drawable/shape_edit_cursor_color"
-            android:textColor="@color/color_333333"
+            android:textColor="@color/text_normal"
             android:gravity="center_vertical"
             android:id="@+id/edit_orderid"
             android:hint="请输入正确的快递单号"
-            android:textColorHint="#999999"
+            android:textColorHint="@color/text_light"
             android:background="@null"
             android:layout_marginLeft="@dimen/dp_100"
             android:layout_marginRight="40dp"
+            android:textSize="14sp"
             android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -120,6 +122,7 @@
         <TextView
             android:layout_margin="@dimen/dp_12"
             android:text="退货时请确保不出现（少货/损坏）等问题，否则可能会造成审核不通过！"
+            android:textColor="@color/text_light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

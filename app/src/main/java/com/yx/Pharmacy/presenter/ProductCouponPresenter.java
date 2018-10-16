@@ -12,6 +12,7 @@ package com.yx.Pharmacy.presenter;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.CouponModel;
+import com.yx.Pharmacy.model.SavaCouponModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
@@ -58,10 +59,10 @@ public class ProductCouponPresenter {
         urlMap.put("couponid",NetUtil.isStringNull(couponid));
         HomeNet.getHomeApi().saveCoupon(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, true) {
+                .subscribe(new ProgressSubscriber<BasisBean<SavaCouponModel>>(activity, true) {
                     @Override
-                    public void onSuccess(BasisBean<Boolean> response) {
-                        if (response.getData()) {
+                    public void onSuccess(BasisBean<SavaCouponModel> response) {
+                        if (response.getData()!=null) {
 //                            mView.showSaveResult(couponid);
                             activity.getShortToastByString("领取成功");
                         }else {

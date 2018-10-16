@@ -21,7 +21,7 @@
 
     <LinearLayout
         android:id="@+id/ll_add_shop"
-        android:background="@drawable/gradient_zi_bg"
+        android:background="@color/color_check"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50">

@@ -8,6 +8,7 @@ import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.manage.ProductMaxManage;
+import com.yx.Pharmacy.model.SavaCouponModel;
 import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
@@ -77,6 +78,7 @@ public class ShopCartPresenter {
                    @Override
                    public void onError(Throwable e) {
                        LogUtils.e("error========="+e.toString());
+                       activity.getShortToastByString("修改失败");
                        super.onError(e);
                    }
                });
@@ -133,10 +135,10 @@ public class ShopCartPresenter {
         urlMap.put("couponid",NetUtil.isStringNull(couponid));
         HomeNet.getHomeApi().saveCoupon(urlMap).subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, true) {
+               .subscribe(new ProgressSubscriber<BasisBean<SavaCouponModel>>(activity, true) {
                    @Override
-                   public void onSuccess(BasisBean<Boolean> response) {
-                       if (response.getData()) {
+                   public void onSuccess(BasisBean<SavaCouponModel> response) {
+                       if (response.getData()!=null) {
                            mView.showSaveResult(couponid);
                        }
                        activity.getShortToastByString(response.getAlertmsg());

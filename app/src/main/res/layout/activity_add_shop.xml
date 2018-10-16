@@ -29,7 +29,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -51,7 +51,7 @@
                 <TextView
                     android:id="@+id/tv_shop_type"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="选择门店类型"
                     android:layout_width="0dp"
@@ -75,7 +75,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -101,7 +101,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入门店名称"
                     android:layout_width="0dp"
@@ -120,7 +120,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -145,7 +145,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入主要负责人"
                     android:layout_width="0dp"
@@ -164,7 +164,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -191,7 +191,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入联系电话"
                     android:layout_width="0dp"
@@ -211,7 +211,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -236,7 +236,7 @@
                     <TextView
                         android:id="@+id/tv_address"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="选择所在省市"
                         android:layout_width="0dp"
@@ -261,7 +261,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -286,7 +286,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入门店地址"
                     android:layout_width="0dp"
@@ -305,7 +305,7 @@
                 android:paddingStart="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -331,7 +331,7 @@
                     <TextView
                         android:id="@+id/tv_business_state"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="选择营业执照"
                         android:layout_width="0dp"
@@ -359,7 +359,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -384,7 +384,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入营业执照编号"
                     android:layout_width="0dp"
@@ -403,7 +403,7 @@
                 android:paddingStart="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -430,7 +430,7 @@
                     <TextView
                         android:id="@+id/tv_organ_state"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="上传医疗机构许可证"
                         android:layout_width="0dp"
@@ -457,7 +457,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -482,7 +482,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入许可证编号"
                     android:layout_width="0dp"
@@ -502,7 +502,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -528,7 +528,7 @@
                     <TextView
                         android:id="@+id/tv_organ_time"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="选择日期"
                         android:layout_width="0dp"
@@ -553,7 +553,7 @@
                 android:paddingStart="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -580,7 +580,7 @@
                     <TextView
                         android:id="@+id/tv_gsp_state"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="上传GSP证书"
                         android:layout_width="0dp"
@@ -610,7 +610,7 @@
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:visibility="gone"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -637,7 +637,7 @@
                     <TextView
                         android:id="@+id/tv_mentou_state"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_normal"
                         android:textColorHint="@color/color_909090"
                         android:hint="上传店面门头照"
                         android:layout_width="0dp"
@@ -665,7 +665,7 @@
                 android:paddingEnd="@dimen/dp_15"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_50">
+                android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="业务员手机号"
                     android:textSize="@dimen/sp_14"
@@ -682,7 +682,7 @@
                     android:background="@null"
                     android:lines="1"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_normal"
                     android:textColorHint="@color/color_909090"
                     android:hint="输入业务员手机号码"
                     android:layout_width="0dp"
@@ -701,13 +701,13 @@
 
 
     <TextView
-        android:background="@drawable/gradient_zi_bg"
+        android:background="@color/color_check"
         android:id="@+id/tv_add_shop"
         android:gravity="center"
         android:textSize="@dimen/sp_15"
         android:textColor="@color/white"
         android:text="提交审核"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"/>
+        android:layout_height="@dimen/dp_45"/>
 
 </LinearLayout>

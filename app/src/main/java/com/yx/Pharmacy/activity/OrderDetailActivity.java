@@ -46,6 +46,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
     @BindView(R.id.rl_invoice)
     RelativeLayout rlInvoice;
 
+    private HomeAdDialog homeAdDialog;
     private void showError() {
         nestedScrollView.setVisibility(View.GONE);
         tv_detail_todo.setVisibility(View.GONE);
@@ -157,12 +158,13 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
         Log.e("kid", "orderid====" + orderid);
         initView();
         mPresenter = new OrderDetailPresenter(this);
+        mPresenter.getOrderDetailData(this, orderid);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mPresenter.getOrderDetailData(this, orderid);
+//        mPresenter.getOrderDetailData(this, orderid);
     }
 
     private void initView() {
@@ -329,51 +331,54 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
      * @param alert
      */
     private void showAdDiaog(HomeAdvanceModel.GoldBean alert) {
-        HomeAdDialog homeAdDialog = new HomeAdDialog(this, alert);
-        homeAdDialog.builder().show();
-        homeAdDialog.setDialogClickListener(new HomeAdDialog.DialogClickListener() {
-            @Override
-            public void clickAd() {
-                switch (alert.pushtype) {
-                    case 1://app跳转活动模块，参数weburl
-                        HHActivity.startActivity(OrderDetailActivity.this, alert.weburl);
-                        break;
-                    case 2://app跳转商品详情，参数goodsid
-                        ProductDetailActivity.startActivity(mContext, alert.goodsid);
-                        break;
-                    case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
-                        if (TextUtils.isEmpty(NetUtil.getToken())) {
-                            LoginActivity.startActivity(mContext);
-                        } else {
-                            if (SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)) {
-                                MyShopActivity.startActivity(mContext);
+        if (homeAdDialog==null)
+        {
+            homeAdDialog = new HomeAdDialog(this, alert).builder();
+            homeAdDialog.setDialogClickListener(new HomeAdDialog.DialogClickListener() {
+                @Override
+                public void clickAd() {
+                    homeAdDialog.cancle();
+                    switch (alert.pushtype) {
+                        case 1://app跳转活动模块，参数weburl
+                            HHActivity.startActivity(OrderDetailActivity.this, alert.weburl);
+                            break;
+                        case 2://app跳转商品详情，参数goodsid
+                            ProductDetailActivity.startActivity(mContext, alert.goodsid);
+                            break;
+                        case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
+                            if (TextUtils.isEmpty(NetUtil.getToken())) {
+                                LoginActivity.startActivity(mContext);
                             } else {
-                                AddShopActivity.startActivity(mContext);
+                                if (SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)) {
+                                    MyShopActivity.startActivity(mContext);
+                                } else {
+                                    AddShopActivity.startActivity(mContext);
+                                }
                             }
-                        }
-                        break;
-                    case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
-                        SearchActivity.startActivity(mContext, alert.keyword);
-                        break;
-                    case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
-                        String type = alert.type;
-                        if (TextUtils.equals(type, "1")) {
-                            // 秒杀
-                            ComendMsActivity.startActivity(mContext, alert.levelid);
-                        } else if (TextUtils.equals(type, "2")) {
-                            // 特价
-                            CommendTjActivity.startActivity(mContext, type, alert.levelid);
-                        } else if (TextUtils.equals(type, "3")) {
-                            // 满减
-                            CommendProductActivity.startActivity(mContext, type, alert.levelid);
-                        } else if (TextUtils.equals(type, "9")) {
-                            // 控销
-                            CommendProductActivity.startActivity(mContext, type, alert.levelid);
-                        }
-                        break;
+                            break;
+                        case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
+                            SearchActivity.startActivity(mContext, alert.keyword);
+                            break;
+                        case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
+                            String type = alert.type;
+                            if (TextUtils.equals(type, "1")) {
+                                // 秒杀
+                                ComendMsActivity.startActivity(mContext, alert.levelid);
+                            } else if (TextUtils.equals(type, "2")) {
+                                // 特价
+                                CommendTjActivity.startActivity(mContext, type, alert.levelid);
+                            } else if (TextUtils.equals(type, "3")) {
+                                // 满减
+                                CommendProductActivity.startActivity(mContext, type, alert.levelid);
+                            } else if (TextUtils.equals(type, "9")) {
+                                // 控销
+                                CommendProductActivity.startActivity(mContext, type, alert.levelid);
+                            }
+                            break;
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
 

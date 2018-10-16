@@ -19,14 +19,14 @@
         android:id="@+id/rl_clean_cache"
         android:background="@drawable/white_bg"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="45dp">
 
         <TextView
             android:layout_marginLeft="16dp"
             android:layout_centerVertical="true"
             android:text="清除缓存"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textColor="@color/text_mian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -50,8 +50,7 @@
             android:layout_height="wrap_content" />
         <View
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="16dp"
-            android:background="@color/bottom_line"
+            android:background="@color/line_color"
             android:layout_width="wrap_content"
             android:layout_height="0.5dp"/>
 
@@ -61,14 +60,14 @@
         android:id="@+id/rl_evaluation"
         android:background="@drawable/white_bg"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="45dp">
 
         <TextView
             android:layout_marginLeft="16dp"
             android:layout_centerVertical="true"
             android:text="联系我们"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textColor="@color/text_mian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -81,8 +80,7 @@
             android:layout_height="wrap_content" />
         <View
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="16dp"
-            android:background="@color/bottom_line"
+            android:background="@color/line_color"
             android:layout_width="wrap_content"
             android:layout_height="0.5dp"/>
 
@@ -92,14 +90,14 @@
         android:id="@+id/rl_about"
         android:background="@drawable/white_bg"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="45dp">
 
         <TextView
             android:layout_marginLeft="16dp"
             android:layout_centerVertical="true"
             android:text="关于我们"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textColor="@color/text_mian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -110,12 +108,7 @@
             android:src="@drawable/arrrightgray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <View
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="16dp"
-            android:background="@color/bottom_line"
-            android:layout_width="wrap_content"
-            android:layout_height="0.5dp"/>
+
 
     </RelativeLayout>
 
@@ -143,7 +136,7 @@
     <!--android:id="@+id/rl_user_info"-->
     <!--android:background="@drawable/white_bg"-->
     <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="50dp">-->
+    <!--android:layout_height="45dp">-->
 
     <!--<TextView-->
     <!--android:layout_marginLeft="16dp"-->

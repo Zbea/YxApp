@@ -87,7 +87,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
             if (mPresenter!=null)
             {
                 page=1;
-                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true);
+                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,false);
             }
         }
     }

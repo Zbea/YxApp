@@ -52,6 +52,7 @@ public class ProductDetailModel {
     public String       gg;
     public String       pzwh;
     public String          sales;
+    public String          sale;
     public String          salesacti;
     public String          orders;
     public String       thumb;

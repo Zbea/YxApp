@@ -2,7 +2,12 @@ package com.yx.Pharmacy.net;
 
 import android.text.TextUtils;
 
+import com.yx.Pharmacy.util.L;
+
 import java.util.Random;
+
+import okio.ByteString;
+import okio.Okio;
 
 /**
  * Created by Administrator on 2017/8/4.
@@ -50,8 +55,29 @@ public class CustomEncryptHelper {
             rand1 = 1;
         ls_code = String.valueOf(((char) (rand1 * 10 + li_head + 40))) + ls_code;
 
+        if (Integer.toHexString((int)ls_code.charAt(0)).equals("81")|Integer.toHexString((int)ls_code.charAt(0)).equals("80"))
+        {
+            ls_code=Encrypt(sSource);
+
+        }
         return ls_code;
+//        return encodeHeadInfo(ls_code);
+//        return ByteString.encodeUtf8(ls_code).base64();
     }
+
+    private static String encodeHeadInfo( String headInfo ) {
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i = 0, length = headInfo.length(); i < length; i++) {
+            char c = headInfo.charAt(i);
+            if (c <= '\u001f' || c >= '\u007f') {
+                stringBuffer.append( String.format ("\\u%04x", (int)c) );
+            } else {
+                stringBuffer.append(c);
+            }
+        }
+        return stringBuffer.toString();
+    }
+
 
     public static String Decrypt(String sSource) {
         if (sSource == null)

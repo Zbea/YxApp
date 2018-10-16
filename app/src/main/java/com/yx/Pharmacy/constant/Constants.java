@@ -9,11 +9,12 @@ package com.yx.Pharmacy.constant;
 public class Constants {
 //     测试
     public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
-//    public static final String BASE_URL            = "http://120.79.62.56:8806/index.php/;
+//    public static final String BASE_URL            = "http://120.79.62.56:8808/index.php/";
     // H5连接
     public static final String H5_URL              = "h5_url";
 
-
+    //签到页面地址
+    public static final String TEST      = "test";
     //签到页面地址
     public static final String WEB_SIGN       = "https://o2o.yuanxinyy.com:8801/index.php/web/sign";
     //兑换优惠券地址

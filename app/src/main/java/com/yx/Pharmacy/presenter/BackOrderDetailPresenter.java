@@ -39,7 +39,7 @@ public class BackOrderDetailPresenter {
         urlMap.put("orderbackid",orderbackid);
         HomeNet.getHomeApi().getBackOrderDetail(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<OrderModel>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<OrderModel>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<OrderModel> response) {
                         if (response.getData()!=null) {
@@ -66,7 +66,7 @@ public class BackOrderDetailPresenter {
         urlMap.put("orderbackid",orderbackid);
         HomeNet.getHomeApi().cancelBackOrderAsk(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<String> response) {
                         mView.cancelOrderBack();

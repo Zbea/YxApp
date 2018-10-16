@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
               android:background="@drawable/shape_white_bg"
               android:layout_marginTop="@dimen/dp_10"
               android:layout_width="match_parent"
@@ -8,10 +9,7 @@
 
     <LinearLayout
         android:gravity="center_vertical"
-        android:paddingTop="@dimen/dp_16"
-        android:paddingBottom="@dimen/dp_16"
-        android:paddingStart="@dimen/dp_15"
-        android:paddingEnd="@dimen/dp_15"
+        android:padding="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -22,8 +20,8 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_mian"
+            android:textSize="@dimen/sp_16"
             android:layout_marginStart="@dimen/dp_4"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -53,15 +51,15 @@
 
             <TextView
                 android:text="营业执照编号:"
-                android:textSize="@dimen/sp_15"
-                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/tv_business"
-                android:textSize="@dimen/sp_15"
-                android:textColor="@color/color_909090"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_normal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -70,8 +68,8 @@
         <TextView
             android:id="@+id/tv_address"
             android:layout_marginTop="@dimen/dp_10"
-            android:textSize="@dimen/sp_15"
-            android:textColor="@color/color_909090"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -84,18 +82,22 @@
         android:layout_height="@dimen/dp_05"/>
 
     <LinearLayout
-
-        android:paddingStart="@dimen/dp_15"
-        android:paddingEnd="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="5dp"
+        android:paddingBottom="@dimen/dp_5"
         android:gravity="center_vertical|end"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_cut"
-            android:padding="@dimen/dp_7"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="5dp"
+            android:paddingBottom="@dimen/dp_5"
             android:background="@drawable/shape_radiu_store_bg"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_13"
             android:textColor="@color/white"
             android:text="切换门店"
             android:layout_width="wrap_content"
@@ -105,9 +107,12 @@
         <TextView
             android:layout_marginStart="@dimen/dp_10"
             android:id="@+id/tv_modifi"
-            android:padding="@dimen/dp_7"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="5dp"
+            android:paddingBottom="@dimen/dp_5"
             android:background="@drawable/shape_radiu_white_line_bg"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_13"
             android:textColor="@color/color_909090"
             android:text="查看信息"
             android:layout_width="wrap_content"

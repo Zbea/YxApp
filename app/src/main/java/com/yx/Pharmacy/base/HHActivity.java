@@ -122,6 +122,8 @@ public class HHActivity
                 tv_title.setText("关于源鑫");
             }
         }
+        loadlayout.setStatus(LoadingLayout.Success);
+        tv_h5_title.setVisibility(View.GONE);
         Log.d(TAG, "onCreate: " + url);
         //        ConfigXmlParser parser = new ConfigXmlParser();
         //        parser.parse(this);//这里会解析res/xml/config.xml配置文件
@@ -135,27 +137,27 @@ public class HHActivity
                 NetUtil.getItemId()));
         //        mWebview.loadUrl(launchUrl);
 
-        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                loadlayout.setStatus(LoadingLayout.Success);
-                String title = view.getTitle();
-                if(!TextUtils.isEmpty(title)&&!title.contains("http")){
-                    tv_h5_title.setText(title);
-                    tv_h5_title.setVisibility(View.VISIBLE);
-                }else {
-                    tv_h5_title.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-                loadlayout.setStatus(LoadingLayout.Loading);
-            }
-
-        });
+//        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
+//            @Override
+//            public void onPageFinished(WebView view, String url) {
+//                super.onPageFinished(view, url);
+//                loadlayout.setStatus(LoadingLayout.Success);
+//                String title = view.getTitle();
+//                if(!TextUtils.isEmpty(title)&&!title.contains("http")){
+//                    tv_h5_title.setText(title);
+//                    tv_h5_title.setVisibility(View.VISIBLE);
+//                }else {
+//                    tv_h5_title.setVisibility(View.GONE);
+//                }
+//            }
+//
+//            @Override
+//            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+//                super.onPageStarted(view, url, favicon);
+//                loadlayout.setStatus(LoadingLayout.Loading);
+//            }
+//
+//        });
 
     }
 

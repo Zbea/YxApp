@@ -20,6 +20,7 @@ import com.yx.Pharmacy.model.OrderModel;
 import com.yx.Pharmacy.model.PayOrderModel;
 import com.yx.Pharmacy.model.ProductDetailModel;
 import com.yx.Pharmacy.model.SaleRecordModel;
+import com.yx.Pharmacy.model.SavaCouponModel;
 import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.model.StoreDetailModel;
@@ -161,6 +162,9 @@ public interface HomeApi {
      */
     @POST(Constants.ORDER_NUM)
     Observable<BasisBean<MyOrderNumModel>> getOrderNum();
+
+    @POST(Constants.TEST)
+    Observable<BasisBean<String>> getTest();
     /**
      *  个人中心优惠劵列表
      */
@@ -395,7 +399,7 @@ public interface HomeApi {
      */
     @FormUrlEncoded
     @POST(Constants.COUPON_SAVE)
-    Observable<BasisBean<Boolean>> saveCoupon(@FieldMap HashMap<String, String> map);
+    Observable<BasisBean<SavaCouponModel>> saveCoupon(@FieldMap HashMap<String, String> map);
     /**
      * 申请提现
      */
