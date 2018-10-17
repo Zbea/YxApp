@@ -123,7 +123,7 @@ public class AfterOrderFragment extends BaseFragment  implements IAfterOrderList
     }
     //加载下一页
     private void initNestPage() {
-        mPresenter.getAfterOrderListData((BaseActivity)mContext,status,page+1,true);
+        mPresenter.getAfterOrderListData((BaseActivity)mContext,status,page+1,false);
     }
     @Override
     public void getOrderList(List<OrderModel> data) {//获取下一页数据成功,page+1

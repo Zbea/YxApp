@@ -19,7 +19,7 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 public class GlideUtil {
 
     public static void loadImgNoStyle(Context context, String url, ImageView imageView){
-        RequestOptions options = new RequestOptions().error(R.drawable.icon_logo)
+        RequestOptions options = new RequestOptions().error(R.drawable.icon_image_loading)
 //                .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
         Glide.with(context)
@@ -31,7 +31,7 @@ public class GlideUtil {
 
     public static void loadImg(Context context, String url, ImageView imageView){
         RequestOptions options = new RequestOptions()
-                .centerCrop().error(R.drawable.icon_logo)
+                .centerCrop().error(R.drawable.icon_image_loading)
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
 
         Glide.with(context)
@@ -43,7 +43,7 @@ public class GlideUtil {
 
     public static void loadLongImg(Context context, String url, ImageView imageView){
         RequestOptions options = new RequestOptions()
-                .centerCrop().error(R.drawable.icon_logo)
+                .centerCrop().error(R.drawable.icon_image_loading)
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
 
         Glide.with(context)

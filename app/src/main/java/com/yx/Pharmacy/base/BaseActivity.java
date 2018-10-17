@@ -15,6 +15,15 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.qiyukf.unicorn.api.ConsultSource;
+import com.qiyukf.unicorn.api.Unicorn;
+import com.qiyukf.unicorn.api.YSFUserInfo;
+import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.net.NetUtil;
+import com.yx.Pharmacy.util.DensityUtils;
+import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.UiUtil;
+
 import butterknife.ButterKnife;
 
 
@@ -77,6 +86,28 @@ public abstract class BaseActivity
 
     public View getView(int viewId) {
         return LayoutInflater.from(this).inflate(viewId, new RelativeLayout(this));
+    }
+
+
+    public void contactService()
+    {
+        YSFUserInfo userInfo = new YSFUserInfo();
+        String title = "";
+        if (TextUtils.isEmpty(NetUtil.getToken())){
+            title = "游客"+ DensityUtils.getRandomString(16);
+            userInfo.userId = title;
+        }else {
+            if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
+                title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_MOBILE);
+            }else {
+                title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
+            }
+            userInfo.userId = NetUtil.getToken();
+        }
+        userInfo.data = "[{\"key\":\"real_name\", \"value\":"+title+"}]";
+        Unicorn.setUserInfo(userInfo);
+        ConsultSource source = new ConsultSource("我的门店", title, "custom information string");
+        Unicorn.openServiceActivity(mContext, "点药呗", source);
     }
 
 }

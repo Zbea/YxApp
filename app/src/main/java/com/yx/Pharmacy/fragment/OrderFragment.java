@@ -87,7 +87,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
             if (mPresenter!=null)
             {
                 page=1;
-                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,false);
+                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true);
             }
         }
     }
@@ -145,7 +145,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     }
     //加载下一页
     private void initNestPage() {
-        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page+1,true);
+        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page+1,false);
     }
     @Override
     public void getOrderList(List<OrderModel> data) {//获取下一页数据成功,page+1

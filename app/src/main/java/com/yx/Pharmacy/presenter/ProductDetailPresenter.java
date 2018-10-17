@@ -199,10 +199,11 @@ public class ProductDetailPresenter {
      * 秒杀专区商品秒杀价购买
      * confirm：是否覆盖购物车内的的秒杀活动商品 0 不覆盖  1覆盖
      */
-    public void miaoshaBuy(BaseActivity activity, String pid, String confirm) {
+    public void miaoshaBuy(BaseActivity activity, String pid, String confirm,String count) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("pid", pid);
         urlMap.put("confirm", confirm);
+        urlMap.put("count", count);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {

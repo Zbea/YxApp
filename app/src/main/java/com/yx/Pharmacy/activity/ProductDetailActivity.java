@@ -817,12 +817,12 @@ public class ProductDetailActivity
             @Override
             public void ok() {//覆盖
                 confirmDialog.cancle();
-                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"1");
+                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"1",String.valueOf(cartCount));
             }
             @Override
             public void cancle() {//不覆盖
                 confirmDialog.cancle();
-                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"0");
+//                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"0",cartCount);
             }
         });
     }

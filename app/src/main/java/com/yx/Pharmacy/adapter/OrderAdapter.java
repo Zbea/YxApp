@@ -12,10 +12,19 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.qiyukf.unicorn.api.ConsultSource;
+import com.qiyukf.unicorn.api.Unicorn;
+import com.qiyukf.unicorn.api.YSFUserInfo;
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.base.BaseActivity;
+import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.fragment.OrderFragment;
 import com.yx.Pharmacy.model.OrderModel;
+import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
+import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.widget.OrderItemView;
 
 import java.util.List;
@@ -64,14 +73,14 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
             }else if(item.status==2){//待发货
                 helper.setText(R.id.tv_order_state,"待发货");
                 helper.setText(R.id.tv_order_todo,"提醒发货");
-                helper.setText(R.id.tv_cancle_order,"取消订单");
-                helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
+                helper.setText(R.id.tv_cancle_order,"申请售后");
                 helper.setText(R.id.tv_check_wuliu,"申请售后");
-                if(item.order_back){
-                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
-                }else {
-                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
-                }
+                helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
+//                if(item.order_back){
+//                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
+//                }else {
+//                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
+//                }
             } else if(item.status==9){//已完成
                 helper.setText(R.id.tv_order_state,"已完成");
                 helper.setText(R.id.tv_order_todo,"再次采购");
@@ -139,7 +148,11 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                 if(!isAfterSale){//非售后
                     if(item.status==9){//申请售后
                         if(listener!=null)listener.askForAfterSale(item.orderid);
-                    }else if(item.status==7){
+                    }else if(item.status==2)
+                    {
+                        ((BaseActivity)context).contactService();
+                    }
+                    else if(item.status==7){
                         if(listener!=null)listener.checkWuliu(item.orderid);
                     }else {//取消订单
                         if(listener!=null)listener.cancleOrder(item.orderid,helper.getLayoutPosition());
