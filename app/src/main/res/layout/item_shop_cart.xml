@@ -34,7 +34,7 @@
             android:drawableEnd="@drawable/xsqgckgdicon"
             android:text="去领券"
             android:layout_marginStart="@dimen/dp_8"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/sp_15"
             android:gravity="end"
             android:layout_width="0dp"

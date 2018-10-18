@@ -112,7 +112,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_14"
                     android:text="审核说明："/>
 
@@ -139,7 +139,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_14"
                     android:text="验证说明："/>
 
@@ -306,10 +306,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_16"
                     android:text="￥2245"
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_14" />
                 <View
                     android:layout_alignParentBottom="true"
@@ -398,7 +397,7 @@
                     android:text="折扣率"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -492,7 +491,7 @@
         android:id="@+id/btn_ok"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
-        android:background="@color/color_check"
+        android:background="@drawable/shape_btn_main"
         android:gravity="center"
         android:textColor="@color/white"
         android:text="撤销申请"

@@ -157,18 +157,18 @@ public class CommendTjActivity
                 if(curType!=TYPE_zonghe){//切换类型
                     curType=TYPE_zonghe;
                     isUp=false;
-                    mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                     mIvZonghe.setImageResource(R.drawable.pxxjtdj);
                     priceDown();
                     xiaoLiangDown();
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                         mIvZonghe.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                         mIvZonghe.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
@@ -178,18 +178,18 @@ public class CommendTjActivity
                 if(curType!=TYPE_jiage){//切换类型
                     curType=TYPE_jiage;
                     isUp=false;
-                    mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                     mIvPrice.setImageResource(R.drawable.pxxjtdj);
                     zhongheDown();
                     xiaoLiangDown();
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                         mIvPrice.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                         mIvPrice.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
@@ -199,18 +199,18 @@ public class CommendTjActivity
                 if(curType!=TYPE_xiaoliang){//切换类型
                     curType=TYPE_xiaoliang;
                     isUp=false;
-                    mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                     mIvXiaoliang.setImageResource(R.drawable.pxxjtdj);
                     zhongheDown();
                     priceDown();
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         mIvXiaoliang.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         mIvXiaoliang.setImageResource(R.drawable.pxxjtdj);
                     }
                 }

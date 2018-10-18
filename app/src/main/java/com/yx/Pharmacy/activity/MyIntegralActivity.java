@@ -59,9 +59,7 @@ public class MyIntegralActivity extends BaseActivity implements IMyIntegralView 
 
     @Override
     protected void init() {
-//        ImmersionBarUtil.setBarColor(R.color.white, this, true);
-        ImmersionBar mImmersionBar = ImmersionBar.with(this);
-        mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
+
 
         initView();
 

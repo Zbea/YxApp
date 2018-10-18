@@ -697,16 +697,12 @@ color color_333333
 color color_4d
 color color_53
 color color_606060
-color color_670F6A
 color color_69
-color color_741177
 color color_79c3f7
 color color_909090
-color color_97169b
 color color_ababab
 color color_ac0af7
 color color_ce8bd0
-color color_check
 color color_check1
 color color_e8e8e8
 color color_eaeaea
@@ -718,7 +714,9 @@ color color_f9f3fa
 color color_fa
 color color_ff8f00
 color color_ffefda
+color color_main
 color color_orange
+color color_page_bg
 color color_uncheck
 color color_uncheck1
 color corner_color
@@ -1327,8 +1325,6 @@ drawable cnxhicon
 drawable cyd
 drawable cyw
 drawable dblbj
-drawable dblogo
-drawable dblogow
 drawable dblsyicon
 drawable def
 drawable default_scroll_handle_bottom
@@ -1432,7 +1428,6 @@ drawable icon_shopcar_lose
 drawable icon_shopcar_n
 drawable icon_shopcar_notify
 drawable icon_shopcar_s
-drawable icon_store_yaodian_ren
 drawable icon_wallet_allow_right_white
 drawable icon_wallet_czicon
 drawable icon_wallet_ljczan
@@ -1441,8 +1436,8 @@ drawable img_about_bg
 drawable img_about_us
 drawable img_bankcard_logo
 drawable img_my_bg
+drawable img_my_score
 drawable img_mybank_bg
-drawable img_splash
 drawable img_wallet_empty
 drawable indicator_normal
 drawable indicator_selected
@@ -1522,6 +1517,8 @@ drawable selector_sale_after_jtk
 drawable selector_sale_after_thtk
 drawable shape_amount_edit
 drawable shape_back_white
+drawable shape_btn_main
+drawable shape_btn_main_bg_radiu
 drawable shape_cart_line_gray
 drawable shape_edit_cursor_color
 drawable shape_frame_quehuo
@@ -1535,13 +1532,11 @@ drawable shape_man_theme
 drawable shape_miaosha_iv_bg
 drawable shape_miaosha_iv_bg_n
 drawable shape_order_num
-drawable shape_order_todo
 drawable shape_photo_top
 drawable shape_point_orange
 drawable shape_point_zise
 drawable shape_product_info_bg
 drawable shape_product_info_bg_fs
-drawable shape_radiu_store_bg
 drawable shape_radiu_white_bg
 drawable shape_radiu_white_line_bg
 drawable shape_register_edit
@@ -3283,7 +3278,6 @@ mipmap banner3
 mipmap banner4
 mipmap banner5
 mipmap dialog_loading_img
-mipmap img_my_score
 mipmap img_my_wlbg
 raw beep
 raw music

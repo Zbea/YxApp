@@ -108,7 +108,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:text="元"
             android:textSize="16sp"
             android:layout_width="wrap_content"
@@ -169,7 +169,7 @@
             android:padding="@dimen/dp_12"
             android:text="全部提现"
             android:textSize="@dimen/sp_14"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

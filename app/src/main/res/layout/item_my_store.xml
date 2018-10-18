@@ -29,7 +29,7 @@
 
         <ImageView
             android:id="@+id/iv_state"
-            android:src="@drawable/icon_store_yaodian_ren"
+            android:src="@drawable/icon_my_store_certify_y"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -96,7 +96,7 @@
             android:paddingRight="@dimen/dp_10"
             android:paddingTop="5dp"
             android:paddingBottom="@dimen/dp_5"
-            android:background="@drawable/shape_radiu_store_bg"
+            android:background="@drawable/shape_btn_main_bg_radiu"
             android:textSize="@dimen/sp_13"
             android:textColor="@color/white"
             android:text="切换门店"

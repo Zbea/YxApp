@@ -5,12 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/color_f6f6f6">
+    android:background="@color/color_page_bg">
 
-    <View
-        android:background="@color/color_741177"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_20"/>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_150">
             <ImageView
-                android:background="@mipmap/img_my_score"
+                android:background="@drawable/img_my_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <LinearLayout
@@ -76,7 +72,7 @@
                 android:layout_marginLeft="@dimen/dp_12"
                 android:textSize="@dimen/sp_16"
                 android:layout_toRightOf="@id/iv_liwu"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:text="使用积分"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

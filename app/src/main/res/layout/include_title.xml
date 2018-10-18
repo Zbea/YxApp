@@ -42,7 +42,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/sp_16" />
         <RelativeLayout
             android:visibility="gone"

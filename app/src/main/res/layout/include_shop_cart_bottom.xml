@@ -114,7 +114,7 @@
         <TextView
             android:text="无可用优惠券"
             android:id="@+id/tv_coupon_size"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/sp_15"
             android:drawableRight="@drawable/xsqgckgdicon"
             android:drawablePadding="@dimen/dp_8"

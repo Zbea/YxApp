@@ -2,7 +2,6 @@ package com.yx.Pharmacy.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -33,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class OrderDetailActivity extends BaseActivity implements IOrderDetailView {
@@ -352,7 +350,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
                                 if (SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)) {
                                     MyShopActivity.startActivity(mContext);
                                 } else {
-                                    AddShopActivity.startActivity(mContext);
+                                    MyShopAddActivity.startActivity(mContext);
                                 }
                             }
                             break;

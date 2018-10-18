@@ -23,7 +23,7 @@
 
         <TextView
             android:gravity="center"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:background="@drawable/shape_man_theme"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_coupon_price"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/sp_20"
                 android:text="¥100"
                 android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                 android:singleLine="true"
                 android:layout_marginLeft="@dimen/dp_3"
                 android:id="@+id/tv_coupon_use_range"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/sp_16"
                 android:text="满300用50"
                 android:layout_width="match_parent"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_coupon_use_type"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/sp_12"
                 android:text="[单品劵]"
                 android:layout_width="wrap_content"

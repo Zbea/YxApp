@@ -144,22 +144,16 @@
         android:id="@+id/tv_login"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
-        android:layout_marginEnd="@dimen/dp_28"
-        android:layout_marginStart="@dimen/dp_28"
-        android:layout_marginTop="@dimen/dp_30"
-        android:background="@drawable/select_register_btn"
+        android:background="@drawable/shape_btn_main_bg_radiu"
         android:gravity="center"
         android:text="登录"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_16"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rl_code"
-        app:layout_constraintVertical_bias="0.00999999"/>
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="364dp" />
 
     <TextView
-        android:textColor="#741177"
+        android:textColor="@color/color_main"
         android:id="@+id/tv_cut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -174,7 +168,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:textColor="#741177"
+        android:textColor="@color/color_main"
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -171,17 +171,17 @@ public class CommendProductActivity
                     curType=TYPE_zonghe;
                     isUp=false;
                     xiaoLiangDown();
-                    mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                     mIvZonghe.setImageResource(R.drawable.pxxjtdj);
                     priceDown();
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                         mIvZonghe.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvZonghe.setTextColor(getResources().getColor(R.color.color_main));
                         mIvZonghe.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
@@ -193,16 +193,16 @@ public class CommendProductActivity
                     isUp=false;
                     xiaoLiangDown();
                     zhongheDown();
-                    mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                     mIvPrice.setImageResource(R.drawable.pxxjtdj);
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                         mIvPrice.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvPrice.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvPrice.setTextColor(getResources().getColor(R.color.color_main));
                         mIvPrice.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
@@ -212,18 +212,18 @@ public class CommendProductActivity
                 if(curType!=TYPE_xiaoliang){//切换类型
                     curType=TYPE_xiaoliang;
                     isUp=false;
-                    mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                    mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                     mIvXiaoliang.setImageResource(R.drawable.pxxjtdj);
                     zhongheDown();
                     priceDown();
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         mIvXiaoliang.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        mTvXiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         mIvXiaoliang.setImageResource(R.drawable.pxxjtdj);
                     }
                 }

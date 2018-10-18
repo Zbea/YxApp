@@ -104,7 +104,7 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
         initView();
     }
     private void initView() {
-        ImmersionBarUtil.setBarColor(R.color.color_741177, this, true);
+        ImmersionBarUtil.setBarColor(R.color.color_main, this, true);
 
         CameraManager.init(getApplication());
         viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_content);

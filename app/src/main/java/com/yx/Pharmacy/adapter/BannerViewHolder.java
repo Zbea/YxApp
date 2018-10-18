@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.AddShopActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyShopActivity;
@@ -70,7 +70,7 @@ public class BannerViewHolder implements MZViewHolder<HomeAdvanceModel.GoldBean>
                     if(SPUtil.getBoolean(activity, Constants.KEY_STORE_CERTIFY)){
                         MyShopActivity.startActivity(activity);
                     }else {
-                        AddShopActivity.startActivity(activity);
+                        MyShopAddActivity.startActivity(activity);
                     }
                 }
                 break;

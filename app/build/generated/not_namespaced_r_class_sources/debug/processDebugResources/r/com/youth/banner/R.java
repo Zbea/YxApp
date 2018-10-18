@@ -35,8 +35,8 @@ public final class R {
         private drawable() {}
 
         public static final int black_background = 0x7f080063;
-        public static final int gray_radius = 0x7f080094;
-        public static final int white_radius = 0x7f080189;
+        public static final int gray_radius = 0x7f080092;
+        public static final int white_radius = 0x7f080186;
     }
     public static final class id {
         private id() {}

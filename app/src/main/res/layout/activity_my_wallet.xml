@@ -203,7 +203,7 @@
                 android:paddingLeft="@dimen/dp_12"
                 android:paddingRight="@dimen/dp_12"
                 android:text="月份"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/sp_14" />
 
             <View

@@ -107,7 +107,7 @@
                                 android:layout_height="wrap_content">
                                 <TextView
                                     android:id="@+id/tv_time_state"
-                                    android:textColor="@color/color_670F6A"
+                                    android:textColor="@color/color_main"
                                     android:textSize="@dimen/sp_12"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
@@ -137,9 +137,9 @@
                                         app:isShowSecond="true"
                                         app:isShowTimeBgDivisionLine="false"
                                         app:suffixGravity="center"
-                                        app:suffixTextColor="@color/color_670F6A"
+                                        app:suffixTextColor="@color/color_main"
                                         app:suffixTextSize="@dimen/sp_12"
-                                        app:timeTextColor="@color/color_670F6A"
+                                        app:timeTextColor="@color/color_main"
                                         app:timeTextSize="@dimen/sp_12"/>
 
                                     <cn.iwgang.countdownview.CountdownView
@@ -157,9 +157,9 @@
                                         app:isShowSecond="false"
                                         app:isShowTimeBgDivisionLine="false"
                                         app:suffixGravity="center"
-                                        app:suffixTextColor="@color/color_670F6A"
+                                        app:suffixTextColor="@color/color_main"
                                         app:suffixTextSize="@dimen/sp_12"
-                                        app:timeTextColor="@color/color_670F6A"
+                                        app:timeTextColor="@color/color_main"
                                         app:timeTextSize="@dimen/sp_12"/>
                                 </RelativeLayout>
                             </LinearLayout>
@@ -267,7 +267,7 @@
                         android:textSize="@dimen/sp_16"
                         android:layout_marginLeft="@dimen/dp_12"
                         android:gravity="center"
-                        android:textColor="@color/color_741177"
+                        android:textColor="@color/color_main"
                         android:text="320.00"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

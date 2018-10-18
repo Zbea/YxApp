@@ -179,7 +179,7 @@ android {
         applicationId "com.yx.Pharmacy"
         minSdkVersion 17
         targetSdkVersion 26
-        versionCode 20181017
+        versionCode 20181015
         versionName "1.0.1"
 
         if (cdvMinSdkVersion != null) {

@@ -134,7 +134,7 @@ public class MyShopActivity
                         finish();
                         break;
                     case R.id.tv_modifi:
-                        AddShopActivity.startActivity(MyShopActivity.this,myShopModel.itemid);
+                        MyShopAddActivity.startActivity(MyShopActivity.this,myShopModel.itemid);
                         break;
                 }
             }
@@ -159,7 +159,7 @@ public class MyShopActivity
                 finish();
                 break;
             case R.id.ll_add_shop:
-                AddShopActivity.startActivity(this);
+                MyShopAddActivity.startActivity(this);
                 break;
             case R.id.rl_scan:
                 YSFUserInfo userInfo = new YSFUserInfo();
@@ -245,7 +245,7 @@ public class MyShopActivity
                             if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
                                 MyShopActivity.startActivity(mContext);
                             }else {
-                                AddShopActivity.startActivity(MyShopActivity.this);
+                                MyShopAddActivity.startActivity(MyShopActivity.this);
                             }
                         }
                         break;

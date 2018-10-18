@@ -209,7 +209,7 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
 
         @Override
         public void goMenDianInfo(String itemid) {//跳转门店信息
-            AddShopActivity.startActivity(MessageDetailActivity.this,itemid);
+            MyShopAddActivity.startActivity(MessageDetailActivity.this,itemid);
         }
 
         @Override

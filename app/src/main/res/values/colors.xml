@@ -3,6 +3,9 @@
 
     <color name="pink">#ff5981</color>
     <!-- 分割线颜色 -->
+    <color name="color_main">#e72e55</color>
+    <color name="color_end">#bbe72e55</color>
+    <color name="color_page_bg">#f6f6f6</color>
     <color name="divider">#f6f6f6</color>
     <color name="text_mian">#333333</color>
     <color name="text_normal">#666666</color>
@@ -12,22 +15,17 @@
     <color name="blue">#303F9F</color>
     <color name="red">#FF0000</color>
     <color name="color_ce8bd0">#ce8bd0</color>
-    <color name="color_741177">#741177</color>
-    <color name="color_end">#9f16a3</color>
     <color name="color_606060">#606060</color>
-    <color name="color_670F6A">#670F6A</color>
     <color name="color_909090">#909090</color>
     <color name="color_f6f6f6">#f6f6f6</color>
-    <color name="color_97169b">#97169b</color>
     <color name="color_f9f3fa">#f9f3fa</color>
     <color name="color_ffefda">#ffefda</color>
     <color name="color_ff8f00">#ff8f00</color>
     <color name="color_eaeaea">#eaeaea</color>
     <color name="color_ececec">#ececec</color>
 
-    <color name="color_check">#670f6a</color>
     <color name="color_check1">#e72e55</color>
-    <color name="color_uncheck">#ababab</color>
+    <color name="color_uncheck">#666666</color>
     <color name="color_uncheck1">#f4baba</color>
     <color name="transparent_background">#00000000</color>
 

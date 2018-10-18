@@ -36,7 +36,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_20"
                 android:layout_alignParentRight="true"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:text="元"
                 android:textSize="@dimen/sp_14"
                 android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
         android:textColor="@color/white"
         android:layout_marginLeft="@dimen/dp_16"
         android:layout_marginRight="@dimen/dp_16"
-        android:background="@drawable/shape_zi_bg"
+        android:background="@drawable/shape_btn_main_bg_radiu"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40" />

@@ -49,7 +49,7 @@ public class SortAdapter  extends RecyclerView.Adapter<SortAdapter.MyViewHolder>
         holder.tvName.setText(model);
         if (position == checkedPosition) {
             holder.mView.setBackgroundColor(Color.parseColor("#ffffff"));
-            holder.tvName.setTextColor(Color.parseColor("#670F6A"));
+            holder.tvName.setTextColor(Color.parseColor("#e72e55"));
         } else {
             holder.mView.setBackgroundColor(Color.parseColor("#f6f6f6"));
             holder.tvName.setTextColor(Color.parseColor("#333333"));

@@ -278,7 +278,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="整单折扣率"
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_14" />
 
                 <TextView
@@ -358,7 +358,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:text="0.00"
-                android:textColor="@color/color_741177"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/sp_16" />
 
         </LinearLayout>

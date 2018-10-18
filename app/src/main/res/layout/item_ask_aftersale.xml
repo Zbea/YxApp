@@ -53,7 +53,7 @@
             android:id="@+id/tv_price"
             android:textSize="@dimen/sp_16"
             android:gravity="center"
-            android:textColor="@color/color_670F6A"
+            android:textColor="@color/color_main"
             android:text="320.00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

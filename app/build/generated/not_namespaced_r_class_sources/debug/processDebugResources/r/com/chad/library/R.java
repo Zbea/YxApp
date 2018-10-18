@@ -24,8 +24,8 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int sample_footer_loading = 0x7f080120;
-        public static final int sample_footer_loading_progress = 0x7f080121;
+        public static final int sample_footer_loading = 0x7f08011d;
+        public static final int sample_footer_loading_progress = 0x7f08011e;
     }
     public static final class id {
         private id() {}

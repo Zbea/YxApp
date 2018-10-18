@@ -117,7 +117,7 @@
                         android:layout_marginTop="@dimen/dp_2"
                         android:gravity="end"
                         android:id="@+id/tv_limit_count"
-                        android:textColor="@color/color_670F6A"
+                        android:textColor="@color/color_main"
                         android:textSize="@dimen/sp_11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -131,7 +131,7 @@
 
                         <TextView
                             android:id="@+id/tv_price"
-                            android:textColor="@color/color_670F6A"
+                            android:textColor="@color/color_main"
                             android:textSize="@dimen/sp_17"
                             android:layout_width="0dp"
                             android:layout_weight="1"
@@ -190,7 +190,7 @@
                     <TextView
                         android:id="@+id/tv_single_coupon"
                         android:layout_marginStart="@dimen/dp_8"
-                        android:textColor="@color/color_741177"
+                        android:textColor="@color/color_main"
                         android:textSize="@dimen/sp_13"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -253,7 +253,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:textColor="@color/color_check"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_13"
                     android:text="【满赠】"
                     android:layout_width="wrap_content"
@@ -283,7 +283,7 @@
 
                 <TextView
                     android:id="@+id/tv_gift_price"
-                    android:textColor="@color/color_670F6A"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>

@@ -30,7 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.yx.Pharmacy.activity.AddShopActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
@@ -50,7 +50,6 @@ import com.yx.Pharmacy.fragment.ShopCartFragment;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.presenter.MainPresenter;
 import com.yx.Pharmacy.receiver.ReceiverDialogManage;
-import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IMainView;
@@ -255,11 +254,11 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
         iv_home_page.setImageResource(page==3?R.drawable.fhd:R.drawable.fhw);
         iv_shopping_car.setImageResource(page==4?R.drawable.ydd:R.drawable.ydw);
         iv_my.setImageResource(page==5?R.drawable.wdd:R.drawable.wdw);
-        tv_message.setTextColor(page==1?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
-        tv_type.setTextColor(page==2?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_message.setTextColor(page==1?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
+        tv_type.setTextColor(page==2?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
         tv_home_page.setTextColor(page==3?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
-        tv_shopping_car.setTextColor(page==4?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
-        tv_my.setTextColor(page==5?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
+        tv_shopping_car.setTextColor(page==4?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
+        tv_my.setTextColor(page==5?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
         curPage=page;
     }
 
@@ -324,7 +323,7 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
                 } else if (TextUtils.equals(pushtype, "3")) {
                     //app跳转门店认证页
                     String storeid = jsonObject.optString("storeid");
-                    i = new Intent(MainActivity.this, AddShopActivity.class);
+                    i = new Intent(MainActivity.this, MyShopAddActivity.class);
                     i.putExtra("itemid", storeid);
                 } else if (TextUtils.equals(pushtype, "4")) {
                     //app携带关键字跳转至搜索页

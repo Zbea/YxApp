@@ -21,10 +21,10 @@
 
     <LinearLayout
         android:id="@+id/ll_add_shop"
-        android:background="@color/color_check"
+        android:background="@drawable/shape_btn_main"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50">
+        android:layout_height="@dimen/dp_45">
 
         <TextView
             android:textSize="@dimen/sp_16"

@@ -115,7 +115,7 @@ public class SplashActivity extends BaseActivity {
                 tv_downcount.setText(curTime+"跳过");
                 mHandler.sendEmptyMessageDelayed(MESSAGE_1s_LATER,one_s_Later);
             }else {
-                iv_splash.setImageResource(R.drawable.img_splash);
+                iv_splash.setImageResource(R.drawable.splash_icon);
                 iv_splash.setVisibility(View.VISIBLE);
                 iv_splash.postDelayed(new Runnable() {
                     @Override

@@ -18,12 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.qiyukf.unicorn.api.ConsultSource;
-import com.qiyukf.unicorn.api.Unicorn;
-import com.qiyukf.unicorn.api.YSFUserInfo;
 import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.AddShopActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.CaptureActivity;
 import com.yx.Pharmacy.activity.ComendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
@@ -53,7 +50,6 @@ import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.HomeDataPresenter;
 import com.yx.Pharmacy.util.ComMethodsUtil;
-import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -208,7 +204,7 @@ public class HomePageFragment
                             if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
                                 MyShopActivity.startActivity(mContext);
                             }else {
-                                AddShopActivity.startActivity(mContext);
+                                MyShopAddActivity.startActivity(mContext);
                             }
                         }
                         break;
@@ -380,7 +376,7 @@ public class HomePageFragment
                             if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
                                 MyShopActivity.startActivity(mContext);
                             }else {
-                                AddShopActivity.startActivity(mContext);
+                                MyShopAddActivity.startActivity(mContext);
                             }
                         }
                         break;
@@ -544,7 +540,7 @@ public class HomePageFragment
                                 if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
                                     MyShopActivity.startActivity(mContext);
                                 }else {
-                                    AddShopActivity.startActivity(mContext);
+                                    MyShopAddActivity.startActivity(mContext);
                                 }
                             }
                             break;

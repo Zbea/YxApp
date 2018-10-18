@@ -701,7 +701,7 @@
 
 
     <TextView
-        android:background="@color/color_check"
+        android:background="@drawable/shape_btn_main"
         android:id="@+id/tv_add_shop"
         android:gravity="center"
         android:textSize="@dimen/sp_15"

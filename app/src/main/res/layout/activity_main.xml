@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/tv_message"
                 android:textSize="@dimen/sp_10"
-                android:textColor="@color/color_ababab"
+                android:textColor="@color/color_uncheck"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="消息"
                 android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             <TextView
                 android:id="@+id/tv_type"
                 android:textSize="@dimen/sp_10"
-                android:textColor="@color/color_ababab"
+                android:textColor="@color/color_uncheck"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="分类"
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             <TextView
                 android:id="@+id/tv_shopping_car"
                 android:textSize="@dimen/sp_10"
-                android:textColor="@color/color_ababab"
+                android:textColor="@color/color_uncheck"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="购物车"
                 android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
             <TextView
                 android:id="@+id/tv_my"
                 android:textSize="@dimen/sp_10"
-                android:textColor="@color/color_ababab"
+                android:textColor="@color/color_uncheck"
                 android:layout_marginTop="@dimen/dp_5"
                 android:text="我的"
                 android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
         <TextView
             android:id="@+id/tv_home_page"
             android:textSize="@dimen/sp_10"
-            android:textColor="@color/color_ababab"
+            android:textColor="@color/color_uncheck1"
             android:layout_marginTop="@dimen/dp_2"
             android:text="首页"
             android:layout_width="wrap_content"

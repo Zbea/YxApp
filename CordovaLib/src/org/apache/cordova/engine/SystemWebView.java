@@ -79,9 +79,12 @@ public class SystemWebView extends WebView implements CordovaWebViewEngine.Engin
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-        Boolean ret = parentEngine.client.onDispatchKeyEvent(event);
-        if (ret != null) {
-            return ret.booleanValue();
+        if (parentEngine.client!=null)
+        {
+            Boolean ret = parentEngine.client.onDispatchKeyEvent(event);
+            if (ret != null) {
+                return ret.booleanValue();
+            }
         }
         return super.dispatchKeyEvent(event);
     }

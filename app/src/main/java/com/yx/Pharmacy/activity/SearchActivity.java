@@ -137,7 +137,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
             }
         });
 
-        ImmersionBarUtil.setBarColor(R.color.color_741177,this,false);
+        ImmersionBarUtil.setBarColor(R.color.color_main,this,false);
         keyword=getIntent().getStringExtra("keyword");
         mPresenter = new SearchPresenter(this);
         initView();
@@ -404,7 +404,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                 if(curType!=TYPE_zonghe){//切换类型
                     curType=TYPE_zonghe;
                     isUp=false;
-                    tv_zonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                    tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
                     iv_zonghe.setImageResource(R.drawable.zi_down);
                     tv_price.setTextColor(getResources().getColor(R.color.color_606060));
                     iv_price.setImageResource(R.drawable.gray_down);
@@ -413,11 +413,11 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
                         iv_zonghe.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
                         iv_zonghe.setImageResource(R.drawable.zi_up);
                     }
                 }
@@ -430,18 +430,18 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                     isUp=false;
                     tv_zonghe.setTextColor(getResources().getColor(R.color.color_606060));
                     iv_zonghe.setImageResource(R.drawable.gray_down);
-                    tv_price.setTextColor(getResources().getColor(R.color.color_741177));
+                    tv_price.setTextColor(getResources().getColor(R.color.color_main));
                     iv_price.setImageResource(R.drawable.zi_down);
                     tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_606060));
                     iv_xiaoliang.setImageResource(R.drawable.gray_down);
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        tv_price.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_price.setTextColor(getResources().getColor(R.color.color_main));
                         iv_price.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        tv_price.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_price.setTextColor(getResources().getColor(R.color.color_main));
                         iv_price.setImageResource(R.drawable.zi_up);
                     }
                 }
@@ -456,16 +456,16 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                     iv_zonghe.setImageResource(R.drawable.gray_down);
                     tv_price.setTextColor(getResources().getColor(R.color.color_606060));
                     iv_price.setImageResource(R.drawable.gray_down);
-                    tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                    tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                     iv_xiaoliang.setImageResource(R.drawable.zi_down);//
                 }else {//非切换类型,要判断当前是升序还是降序
                     if(isUp){
                         isUp=false;
-                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         iv_xiaoliang.setImageResource(R.drawable.zi_down);
                     }else {
                         isUp=true;
-                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_741177));
+                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
                         iv_xiaoliang.setImageResource(R.drawable.zi_up);
                     }
                 }

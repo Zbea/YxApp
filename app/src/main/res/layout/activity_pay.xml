@@ -164,7 +164,7 @@
         android:text="去付款"
         android:textSize="@dimen/sp_16"
         android:textColor="@color/white"
-        android:background="@drawable/shape_order_todo"
+        android:background="@drawable/shape_btn_main"
         android:layout_marginLeft="@dimen/dp_32"
         android:layout_marginRight="@dimen/dp_32"
         android:layout_width="match_parent"

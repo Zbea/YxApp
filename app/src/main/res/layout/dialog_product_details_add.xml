@@ -79,7 +79,7 @@
         android:text="565"
         android:gravity="center"
         android:textSize="20sp"
-        android:textColor="@color/color_97169b"/>
+        android:textColor="@color/color_main"/>
 
     <LinearLayout
         android:layout_width="match_parent"

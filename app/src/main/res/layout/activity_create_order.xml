@@ -170,7 +170,7 @@
                     android:layout_marginStart="@dimen/dp_5"
                     android:text="-￥0.00"
                     android:id="@+id/tv_yue_price"
-                    android:textColor="@color/color_741177"
+                    android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -181,7 +181,7 @@
                     android:id="@+id/sb_button_yue"
                     app:sb_enable_effect="true"
                     app:sb_checked="false"
-                    app:sb_checked_color="@color/color_741177"
+                    app:sb_checked_color="@color/color_main"
                     app:sb_show_indicator="false"
                     app:sb_border_width="@dimen/dp_1"
                     android:layout_width="wrap_content"
@@ -248,7 +248,7 @@
                     android:id="@+id/sb_button_company"
                     app:sb_enable_effect="true"
                     app:sb_checked="true"
-                    app:sb_checked_color="@color/color_741177"
+                    app:sb_checked_color="@color/color_main"
                     app:sb_show_indicator="false"
                     app:sb_border_width="@dimen/dp_1"
                     android:layout_width="wrap_content"
@@ -368,14 +368,14 @@
             android:id="@+id/tv_pay_price"
             android:textStyle="bold"
             android:layout_marginStart="@dimen/dp_3"
-            android:textColor="@color/color_741177"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/sp_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <TextView
-        android:background="@drawable/gradient_zi_bg"
+        android:background="@drawable/shape_btn_main"
         android:id="@+id/tv_create_order"
         android:gravity="center"
         android:textSize="@dimen/sp_16"

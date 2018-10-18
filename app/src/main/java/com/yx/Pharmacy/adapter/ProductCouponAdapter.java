@@ -60,9 +60,9 @@ public class ProductCouponAdapter extends BaseQuickAdapter<CouponModel,BaseViewH
         }else {
             helper.getView(R.id.tv_coupon_use_rightnow).setVisibility(View.VISIBLE);
             iv_bg.setImageResource(R.drawable.kyyhqbj);
-            tv_coupon_price.setTextColor(mContext.getResources().getColor(R.color.color_741177));
-            tv_coupon_use_range.setTextColor(mContext.getResources().getColor(R.color.color_741177));
-            tv_coupon_use_type.setTextColor(mContext.getResources().getColor(R.color.color_741177));
+            tv_coupon_price.setTextColor(mContext.getResources().getColor(R.color.color_main));
+            tv_coupon_use_range.setTextColor(mContext.getResources().getColor(R.color.color_main));
+            tv_coupon_use_type.setTextColor(mContext.getResources().getColor(R.color.color_main));
         }
         helper.setText(R.id.tv_coupon_use_rightnow,"领取");
         helper.getView(R.id.tv_coupon_use_rightnow).setOnClickListener(new View.OnClickListener() {

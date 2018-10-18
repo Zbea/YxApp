@@ -118,8 +118,6 @@ public class HHActivity
             rl_title.setVisibility(View.GONE);
             if (type == 1) {
                 tv_title.setText("退换政策");
-            } else if (type == 2) {
-                tv_title.setText("关于源鑫");
             }
         }
         loadlayout.setStatus(LoadingLayout.Success);

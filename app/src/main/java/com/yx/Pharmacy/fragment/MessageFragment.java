@@ -1,6 +1,5 @@
 package com.yx.Pharmacy.fragment;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.AddShopActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
 import com.yx.Pharmacy.activity.ComendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
@@ -350,7 +349,7 @@ public class MessageFragment
 
         @Override
         public void goMenDianInfo(String itemid) {//跳转门店信息
-            AddShopActivity.startActivity(mContext,itemid);
+            MyShopAddActivity.startActivity(mContext,itemid);
         }
 
         @Override

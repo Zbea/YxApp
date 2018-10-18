@@ -108,7 +108,7 @@
         <activity android:name=".activity.OrderDetailActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.MyShopActivity" />
-        <activity android:name=".activity.AddShopActivity" />
+        <activity android:name=".activity.MyShopAddActivity" />
         <activity android:name=".activity.MyCollectActivity" />
         <activity android:name=".activity.ChargeMoneyActivity" />
         <activity android:name=".activity.MyIntegralActivity" />

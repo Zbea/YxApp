@@ -22,7 +22,7 @@ MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.grad
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:2:1-133:12
 MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:2:1-14:12
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:2:1-139:12
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:2:1-46:12
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:2:1-46:12
 MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\945564edb3612a6ac7d75110dd5e12aa\AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] D:\androidSpace\android\CordovaLib\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:1-27:12
@@ -101,8 +101,8 @@ MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:18:5-67
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:12:5-67
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:12:5-67
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:12:5-67
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:12:5-67
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:5-67
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:5-67
 	android:name
@@ -111,8 +111,8 @@ uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:19:5-83
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:32:5-83
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:32:5-83
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:17:5-83
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:17:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:17:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:17:5-83
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:19:22-80
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -121,8 +121,8 @@ MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:26:5-79
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:13:5-79
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:13:5-79
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:13:5-79
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:13:5-79
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:21:5-79
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:21:5-79
 	android:name
@@ -133,8 +133,8 @@ MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:27:5-76
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:14:5-76
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:14:5-76
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:14:5-76
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:14:5-76
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:5-76
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:5-76
 	android:name
@@ -145,8 +145,8 @@ MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:20:5-75
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:17:5-75
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:17:5-75
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:11:5-75
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:11:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:11:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:11:5-75
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:22:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -155,8 +155,8 @@ MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1362aa47546107f7c8053e269dabf0ad\AndroidManifest.xml:21:5-81
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:25:5-81
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:25:5-81
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:16:5-81
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:16:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:16:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:16:5-81
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:5-81
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:5-81
 	android:name
@@ -215,8 +215,8 @@ MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\tra
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:35:22-77
 uses-permission#android.permission.READ_LOGS
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:36:5-68
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:15:5-68
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:15:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:15:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:15:5-68
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:36:22-65
 uses-permission#android.permission.RECORD_AUDIO
@@ -275,8 +275,8 @@ MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:11:5-12:19
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:41:5-137:19
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:41:5-137:19
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:20:5-44:19
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:20:5-44:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:20:5-44:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:20:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\ce3546fab9f5b9001d5618d7027ce7e5\AndroidManifest.xml:9:5-20
 MERGED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:24:5-70:19
@@ -367,14 +367,14 @@ ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:94:9-96:55
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:95:13-51
 activity#com.tencent.bugly.beta.ui.BetaActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:98:9-101:64
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:23:9-27:56
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:23:9-27:56
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:23:9-27:56
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:23:9-27:56
 	android:configChanges
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:100:13-81
 	android:theme
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:101:13-61
 	tools:replace
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:27:13-53
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:27:13-53
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:99:13-66
 activity#com.yx.Pharmacy.activity.SettingActivity
@@ -409,10 +409,10 @@ activity#com.yx.Pharmacy.activity.MyShopActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:9-61
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:19-58
-activity#com.yx.Pharmacy.activity.AddShopActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:9-62
+activity#com.yx.Pharmacy.activity.MyShopAddActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:9-64
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:19-59
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:19-61
 activity#com.yx.Pharmacy.activity.MyCollectActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:9-64
 	android:name
@@ -676,8 +676,8 @@ MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transform
 MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\d66d3835dedefebe48bb84f2b56416bb\AndroidManifest.xml:7:5-9:41
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:7:5-9:41
 MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:7:5-9:41
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:6:5-8:41
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:6:5-8:41
 MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:5:5-7:41
 MERGED from [com.tencent.bugly:nativecrashreport:3.3.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.3.1.aar\ffe80ddefe31fb2368906535cb30a31a\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\945564edb3612a6ac7d75110dd5e12aa\AndroidManifest.xml:20:5-43
@@ -1103,23 +1103,23 @@ ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\tran
 	android:name
 		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\604289c35ac437190dcdf340791b34ce\AndroidManifest.xml:132:13-85
 provider#com.tencent.bugly.beta.utils.BuglyFileProvider
-ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:29:9-39:20
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:29:9-39:20
 	android:grantUriPermissions
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:33:13-47
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:33:13-47
 	android:authorities
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:31:13-64
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:31:13-64
 	android:exported
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:32:13-37
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:32:13-37
 	tools:replace
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:34:13-74
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:34:13-74
 	android:name
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:30:13-74
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:30:13-74
 service#com.tencent.bugly.beta.tinker.TinkerResultService
-ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:41:9-43:40
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:41:9-43:40
 	android:exported
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:43:13-37
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.5.aar\2e581152c104a8d007e8f7451292cb05\AndroidManifest.xml:42:13-77
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\5593361facda798d4c74b9671a95b6bd\AndroidManifest.xml:42:13-77
 permission#android.permission.WRITE_MEDIA_STORAGE
 ADDED from [:picture_library] D:\androidSpace\android\picture_library\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:5-73
 	android:name

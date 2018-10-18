@@ -135,7 +135,7 @@ public class MyWalletActivity extends BaseActivity implements IMyWalletView {
             mDataPicker.setContentPadding(0, 10);
             mDataPicker.setTopPadding(20);
             mDataPicker.setLabel(null, null, null);
-            mDataPicker.setTextColor(getResources().getColor(R.color.color_741177));
+            mDataPicker.setTextColor(getResources().getColor(R.color.color_main));
             mDataPicker.setTextSize(18);
             mDataPicker.setContentPadding(0, 10);
             mDataPicker.setTopPadding(20);

@@ -1,17 +1,14 @@
 package com.yx.Pharmacy.receiver;
 
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.yx.Pharmacy.MainActivity;
-import com.yx.Pharmacy.activity.AddShopActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
@@ -19,7 +16,6 @@ import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
-import com.yx.Pharmacy.dialog.ComDialog;
 import com.yx.Pharmacy.manage.MessageIsReadNumManage;
 import com.yx.Pharmacy.util.L;
 
@@ -91,7 +87,7 @@ public class YxJPushReceiver
 //                            } else if (TextUtils.equals(pushtype, "3")) {
 //                                //app跳转门店认证页
 //                                String storeid = finalJsonObject.optString("storeid");
-//                                i = new Intent(context, AddShopActivity.class);
+//                                i = new Intent(context, MyShopAddActivity.class);
 //                                i.putExtra("itemid", storeid);
 //                            } else if (TextUtils.equals(pushtype, "4")) {
 //                                //app携带关键字跳转至搜索页
@@ -159,7 +155,7 @@ public class YxJPushReceiver
                     } else if (TextUtils.equals(pushtype, "3")) {
                         //app跳转门店认证页
                         String storeid = jsonObject.optString("storeid");
-                        i = new Intent(context, AddShopActivity.class);
+                        i = new Intent(context, MyShopAddActivity.class);
                         i.putExtra("itemid", storeid);
                     } else if (TextUtils.equals(pushtype, "4")) {
                         //app携带关键字跳转至搜索页

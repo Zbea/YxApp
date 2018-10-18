@@ -104,7 +104,7 @@
                     <TextView
                         android:id="@+id/tv_wuliu_state"
                         android:text="已发货"
-                        android:textColor="@color/color_741177"
+                        android:textColor="@color/color_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
