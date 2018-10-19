@@ -151,8 +151,8 @@
         android:textSize="@dimen/sp_16"
         android:layout_marginEnd="@dimen/dp_28"
         android:layout_marginStart="@dimen/dp_28"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="364dp" />
+        android:layout_marginTop="@dimen/dp_30"
+        app:layout_constraintTop_toBottomOf="@id/rl_code"/>
 
     <TextView
         android:textColor="@color/color_main"

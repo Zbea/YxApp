@@ -1517,6 +1517,7 @@ drawable shape_amount_edit
 drawable shape_back_white
 drawable shape_btn_main
 drawable shape_btn_main_bg_radiu
+drawable shape_btn_main_line_radiu
 drawable shape_cart_line_gray
 drawable shape_class_yinying
 drawable shape_edit_cursor_color

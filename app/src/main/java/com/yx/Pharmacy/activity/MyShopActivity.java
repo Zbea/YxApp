@@ -162,23 +162,7 @@ public class MyShopActivity
                 MyShopAddActivity.startActivity(this);
                 break;
             case R.id.rl_scan:
-                YSFUserInfo userInfo = new YSFUserInfo();
-                String title = "";
-                if (TextUtils.isEmpty(NetUtil.getToken())){
-                    title = "游客"+ DensityUtils.getRandomString(16);
-                    userInfo.userId = title;
-                }else {
-                    if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                        title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_MOBILE);
-                    }else {
-                        title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-                    }
-                    userInfo.userId = NetUtil.getToken();
-                }
-                userInfo.data = "[{\"key\":\"real_name\", \"value\":"+title+"}]";
-                Unicorn.setUserInfo(userInfo);
-                ConsultSource source = new ConsultSource("我的门店", title, "custom information string");
-                Unicorn.openServiceActivity(this, "源鑫药业", source);
+               contactService();
                 break;
         }
     }

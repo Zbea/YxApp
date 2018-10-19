@@ -96,9 +96,9 @@
             android:paddingRight="@dimen/dp_10"
             android:paddingTop="5dp"
             android:paddingBottom="@dimen/dp_5"
-            android:background="@drawable/shape_btn_main_bg_radiu"
+            android:background="@drawable/shape_btn_main_line_radiu"
             android:textSize="@dimen/sp_13"
-            android:textColor="@color/white"
+            android:textColor="@color/color_main"
             android:text="切换门店"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

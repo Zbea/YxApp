@@ -36,7 +36,7 @@ public final class R {
 
         public static final int black_background = 0x7f080062;
         public static final int gray_radius = 0x7f080090;
-        public static final int white_radius = 0x7f080183;
+        public static final int white_radius = 0x7f080184;
     }
     public static final class id {
         private id() {}

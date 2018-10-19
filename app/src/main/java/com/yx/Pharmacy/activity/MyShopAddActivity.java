@@ -653,7 +653,7 @@ public class MyShopAddActivity
                        .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
                        .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
                        .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效
-                       .setOutputCameraPath("/data/data/com.huzhang.dunge.game")// 自定义拍照保存路径,可不填
+                       .setOutputCameraPath("/data/data/com.yx.Pharmacy/shop")// 自定义拍照保存路径,可不填
                        .enableCrop(true)// 是否裁剪 true or false
                        .compress(true)// 是否压缩 true or false
                        .hideBottomControls(true)// 是否显示uCrop工具栏，默认不显示 true or false
