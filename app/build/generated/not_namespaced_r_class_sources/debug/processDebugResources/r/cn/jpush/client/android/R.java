@@ -12,10 +12,10 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800e9;
-        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800ea;
-        public static final int jpush_richpush_btn_selector = 0x7f0800eb;
-        public static final int jpush_richpush_progressbar = 0x7f0800ec;
+        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800e7;
+        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800e8;
+        public static final int jpush_richpush_btn_selector = 0x7f0800e9;
+        public static final int jpush_richpush_progressbar = 0x7f0800ea;
     }
     public static final class id {
         private id() {}

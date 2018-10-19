@@ -114,7 +114,7 @@ public class ChangePasswordActivity extends BaseActivity implements IChangePwdVi
         @Override
         public void onFinish() {
             tvGetCode.setClickable(true);
-            tvGetCode.setBackgroundResource(R.drawable.shape_zi_bg);
+            tvGetCode.setBackgroundResource(R.drawable.shape_btn_main_bg_radiu);
             tvGetCode.setText("重新发送");
         }
     };

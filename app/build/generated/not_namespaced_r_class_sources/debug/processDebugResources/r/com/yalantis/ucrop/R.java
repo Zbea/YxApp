@@ -519,19 +519,19 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f080055;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f080056;
         public static final int abc_textfield_search_material = 0x7f080057;
-        public static final int notification_template_icon_bg = 0x7f080104;
-        public static final int ucrop_ic_angle = 0x7f080167;
-        public static final int ucrop_ic_crop = 0x7f080168;
-        public static final int ucrop_ic_cross = 0x7f080169;
-        public static final int ucrop_ic_delete_photo = 0x7f08016a;
-        public static final int ucrop_ic_done = 0x7f08016b;
-        public static final int ucrop_ic_reset = 0x7f08016c;
-        public static final int ucrop_ic_rotate = 0x7f08016d;
-        public static final int ucrop_ic_scale = 0x7f08016e;
-        public static final int ucrop_oval_true = 0x7f08016f;
-        public static final int ucrop_shadow_upside = 0x7f080170;
-        public static final int ucrop_vector_loader = 0x7f080171;
-        public static final int ucrop_vector_loader_animated = 0x7f080172;
+        public static final int notification_template_icon_bg = 0x7f080102;
+        public static final int ucrop_ic_angle = 0x7f080164;
+        public static final int ucrop_ic_crop = 0x7f080165;
+        public static final int ucrop_ic_cross = 0x7f080166;
+        public static final int ucrop_ic_delete_photo = 0x7f080167;
+        public static final int ucrop_ic_done = 0x7f080168;
+        public static final int ucrop_ic_reset = 0x7f080169;
+        public static final int ucrop_ic_rotate = 0x7f08016a;
+        public static final int ucrop_ic_scale = 0x7f08016b;
+        public static final int ucrop_oval_true = 0x7f08016c;
+        public static final int ucrop_shadow_upside = 0x7f08016d;
+        public static final int ucrop_vector_loader = 0x7f08016e;
+        public static final int ucrop_vector_loader_animated = 0x7f08016f;
     }
     public static final class id {
         private id() {}

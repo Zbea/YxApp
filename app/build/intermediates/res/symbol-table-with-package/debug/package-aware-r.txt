@@ -1306,7 +1306,6 @@ drawable arrrightgray
 drawable audio_placeholder
 drawable avd_hide_password
 drawable avd_show_password
-drawable background_tab
 drawable bg_ysf_message_text_left_pressed
 drawable bg_ysf_text_message_left_bg
 drawable bkyyhqbj
@@ -1355,7 +1354,6 @@ drawable fhw
 drawable frame_white_bg
 drawable ghtxxzxc
 drawable gif_tag
-drawable gradient_zi_bg
 drawable gray_down
 drawable gray_radius
 drawable gwcsltybj
@@ -1520,6 +1518,7 @@ drawable shape_back_white
 drawable shape_btn_main
 drawable shape_btn_main_bg_radiu
 drawable shape_cart_line_gray
+drawable shape_class_yinying
 drawable shape_edit_cursor_color
 drawable shape_frame_quehuo
 drawable shape_gay_bg
@@ -1544,8 +1543,6 @@ drawable shape_stoken_gay
 drawable shape_upgrade_bg
 drawable shape_white_bg
 drawable shape_white_edit
-drawable shape_yinying
-drawable shape_zi_bg
 drawable shthwuicon
 drawable sjhmicon
 drawable splash1

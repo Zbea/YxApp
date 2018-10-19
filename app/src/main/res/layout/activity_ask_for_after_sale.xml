@@ -371,7 +371,7 @@
         android:id="@+id/tv_commit"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
-        android:background="@drawable/gradient_zi_bg"
+        android:background="@drawable/shape_btn_main"
         android:gravity="center"
         android:text="提交申请"
         android:textColor="#FFFFFF" />

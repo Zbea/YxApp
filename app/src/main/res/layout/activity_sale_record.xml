@@ -97,7 +97,7 @@
         <TextView
             android:layout_alignParentEnd="true"
             android:id="@+id/tv_add_cart"
-            android:background="@drawable/gradient_zi_bg"
+            android:background="@drawable/shape_btn_main"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_16"
             android:text="加入购物车"
