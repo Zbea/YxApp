@@ -224,7 +224,7 @@
             android:id="@+id/tv_order_todo"
             android:textColor="@color/white"
             android:gravity="center"
-            android:background="@drawable/shape_btn_main"
+            android:background="@drawable/shape_btn_main_bg_radiu"
             android:text="提醒发货"
             android:layout_width="@dimen/dp_72"
             android:layout_height="@dimen/dp_29" />

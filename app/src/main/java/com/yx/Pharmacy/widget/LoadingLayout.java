@@ -646,7 +646,7 @@ public class LoadingLayout
         int    emptyImgId      = R.drawable.zwtjmdwk;
         int    errorImgId      = R.drawable.zwtjmdwk;
         int    networkImgId    = R.drawable.zwtjmdwk;
-        int    reloadBtnId     = R.drawable.msqan;
+        int    reloadBtnId     = R.drawable.shape_btn_main_bg_radiu;
         int    tipTextSize     = 14;
         int    buttonTextSize  = 14;
         int    tipTextColor    = R.color.base_text_color_light;

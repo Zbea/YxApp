@@ -97,7 +97,6 @@ public class AskForAfterSaleActivity extends BaseActivity implements IAskAfterSa
     protected void init() {
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         orderid = getIntent().getStringExtra("orderid");
-        Log.e("kid", "申请orderid====" + orderid);
         initView();
         mPresenter = new AskAfterSalePresenter(this);
         mPresenter.getAskAfterSaleData(this, orderid);
@@ -157,14 +156,14 @@ public class AskForAfterSaleActivity extends BaseActivity implements IAskAfterSa
         edittext.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                String str=s.toString();
-                tvCanWriteNum.setText("您还可以输入"+(100-str.length()-1)+"字");
             }
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
             @Override
             public void afterTextChanged(Editable s) {
+                String str=s.toString();
+                tvCanWriteNum.setText("您还可以输入"+(100-str.length())+"字");
             }
         });
 

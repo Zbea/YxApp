@@ -39,7 +39,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:padding="@dimen/dp_5"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/msqan"
+            android:background="@drawable/shape_btn_main_bg_radiu"
             android:orientation="horizontal"
             android:layout_below="@id/iv_qrcode"
             android:layout_width="wrap_content"

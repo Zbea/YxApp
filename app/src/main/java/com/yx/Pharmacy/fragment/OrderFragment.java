@@ -199,6 +199,11 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     public void comfirmBack(int position) {//确认收货成功后修改item数据
         orderAdapter.getData().get(position).status=7;
         orderAdapter.remove(position);
+        if(orderAdapter.getData().size()==0)
+        {
+            showNoData();
+        }
+
     }
     @Override
     public void upDateResult(String url) {
@@ -275,7 +280,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
         }
 
         @Override
-        public void comfirmOrder(String orderid,int position) {//确认收货,暂时没有处理确认后的ui变化
+        public void comfirmOrder(String orderid,int position) {//确认收货
             mPresenter.comfirmReceiveOrder((BaseActivity) mContext,orderid,position);
 
         }

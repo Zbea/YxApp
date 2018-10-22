@@ -22,7 +22,7 @@
         <TextView
             android:text="0.00"
             android:id="@+id/tv_price"
-            android:textColor="@color/black"
+            android:textColor="@color/text_normal"
             android:textSize="@dimen/sp_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -52,7 +52,7 @@
         <TextView
             android:text="-0.00"
             android:id="@+id/tv_coupon_price"
-            android:textColor="@color/black"
+            android:textColor="@color/text_normal"
             android:textSize="@dimen/sp_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -82,7 +82,7 @@
         <TextView
             android:text="0.00"
             android:id="@+id/tv_order_price"
-            android:textColor="@color/black"
+            android:textColor="@color/text_normal"
             android:textSize="@dimen/sp_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -146,7 +146,7 @@
         <TextView
             android:text="0.00"
             android:id="@+id/tv_money"
-            android:textColor="@color/black"
+            android:textColor="@color/text_normal"
             android:textSize="@dimen/sp_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -165,7 +165,7 @@
         <TextView
             android:id="@+id/tv_overall_coupon"
             android:text="订单金额低于全场优惠价最低金额"
-            android:textColor="@color/black"
+            android:textColor="@color/text_light"
             android:textSize="@dimen/sp_15"
             android:layout_width="0dp"
             android:layout_weight="1"
