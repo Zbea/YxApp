@@ -81,10 +81,6 @@ public class AddCartDialog {
             tvPrice.setText("￥"+data.price);
             tvInfo.setText("（每人限购"+data.flashmax+"件）");
             amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
-            if (Double.parseDouble(data.minimum)< Double.parseDouble(data.flashmax))
-            {
-                amountView.setAmount((int)Double.parseDouble(data.minimum));
-            }
         }
         else
         {
@@ -98,13 +94,8 @@ public class AddCartDialog {
             }
             tvInfo.setText("（每人限购"+data.max+"件）");
             amountView.setGoods_storage(data.max);
-            if (Double.parseDouble(data.minimum)<data.max)
-            {
-                amountView.setAmount((int)Double.parseDouble(data.minimum));
-            }
         }
-
-
+        amountView.setAmount((int)Double.parseDouble(data.minimum));
 
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override

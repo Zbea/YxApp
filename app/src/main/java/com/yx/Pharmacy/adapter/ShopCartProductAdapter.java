@@ -146,6 +146,10 @@ public class ShopCartProductAdapter
         }else {
             int i = DensityUtils.parseInt(item.max);
             if (i==0){
+                if (DensityUtils.parseInt(item.cartcount)<minnum)
+                {
+                    amountView.setMinNum(DensityUtils.parseInt(item.cartcount));
+                }
                 amountView.setGoods_storage(DensityUtils.parseInt(item.cartcount));
             }else {
                 amountView.setGoods_storage(i);

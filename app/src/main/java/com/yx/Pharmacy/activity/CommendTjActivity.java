@@ -83,12 +83,20 @@ public class CommendTjActivity
     public static final String TYPE  = "type";
     public static final String LEVELID  = "levelid";
     private String mLevelid;
-
+    private String title;
 
     public static void startActivity(Activity activity,String type,String levelid) {
         Intent intent = new Intent(activity, CommendTjActivity.class);
         intent.putExtra(TYPE, type);
         intent.putExtra(LEVELID, levelid);
+        activity.startActivity(intent);
+    }
+
+    public static void startActivity(Activity activity,String type,String levelid,String titleStr) {
+        Intent intent = new Intent(activity, CommendTjActivity.class);
+        intent.putExtra(TYPE, type);
+        intent.putExtra(LEVELID, levelid);
+        intent.putExtra("title", titleStr);
         activity.startActivity(intent);
     }
 
@@ -103,9 +111,17 @@ public class CommendTjActivity
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         mType = getIntent().getStringExtra(TYPE);
         mLevelid = getIntent().getStringExtra(LEVELID);
+        title= getIntent().getStringExtra("title");
         mPresenter = new CommendProductPresenter(this);
+        if (TextUtils.isEmpty(title))
+        {
+            mTvTitle.setText("特价专区");
+        }
+        else
+        {
+            mTvTitle.setText(title);
+        }
 
-        mTvTitle.setText("特价专区");
         initRecycler();
         initData();
     }
@@ -239,7 +255,7 @@ public class CommendTjActivity
 
         if (!TextUtils.isEmpty(extention)) {
             mIvBanner.setVisibility(View.VISIBLE);
-            GlideUtil.loadImg(this,extention,mIvBanner);
+            GlideUtil.loadImgNoStyle(this,extention,mIvBanner);
         }else {
             mIvBanner.setVisibility(View.GONE);
         }

@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -45,10 +46,17 @@ public class ComendMsActivity extends BaseActivity {
 
     private int curpage;
     private String levelId;
-
+    private String title;
     public static void startActivity(Activity activity, String levelid) {
         Intent intent = new Intent(activity, ComendMsActivity.class);
         intent.putExtra("levelId", levelid);
+        activity.startActivity(intent);
+    }
+
+    public static void startActivity(Activity activity, String levelid,String titleStr) {
+        Intent intent = new Intent(activity, ComendMsActivity.class);
+        intent.putExtra("levelId", levelid);
+        intent.putExtra("title", titleStr);
         activity.startActivity(intent);
     }
 
@@ -61,11 +69,20 @@ public class ComendMsActivity extends BaseActivity {
     protected void init() {
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         levelId = getIntent().getStringExtra("levelId");
+        title = getIntent().getStringExtra("title");
         initView();
     }
 
     private void initView() {
-        tv_title.setText("秒杀专区");
+        if (TextUtils.isEmpty(title))
+        {
+            tv_title.setText("秒杀专区");
+        }
+        else
+        {
+            tv_title.setText(title);
+        }
+
         titles.add("正在抢购");
         titles.add("等待开抢");
         Fragment fragment1= MiaoShaFragment.newInstance(1,levelId);

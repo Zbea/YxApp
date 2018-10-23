@@ -66,10 +66,14 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/xczsan"
+                    android:background="@drawable/shape_btn_gary_line_radiu"
                     android:gravity="center"
                     android:tag="beta_cancel_button"
                     android:text="下次再说"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:textColor="@color/color_909090"
                     android:textSize="14sp" />
 
@@ -80,10 +84,14 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/qwclan"
+                    android:background="@drawable/shape_btn_main_bg_radiu"
                     android:gravity="center"
                     android:tag="beta_confirm_button"
                     android:text="更新"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
             </LinearLayout>

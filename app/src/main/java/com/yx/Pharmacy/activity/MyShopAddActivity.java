@@ -4,11 +4,15 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -31,6 +35,7 @@ import com.yx.Pharmacy.model.UploadModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.MyShopPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.TimeUtils;
 import com.yx.Pharmacy.view.IMyShopView;
 
@@ -39,6 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.qqtheme.framework.entity.City;
 import cn.qqtheme.framework.entity.County;
@@ -51,7 +57,7 @@ import cn.qqtheme.framework.util.ConvertUtils;
 
 
 /*
- *  @项目名：  android 
+ *  @项目名：  android
  *  @包名：    com.yx.Pharmacy.activity
  *  @文件名:   MyShopAddActivity
  *  @创建者:   CC
@@ -61,101 +67,126 @@ import cn.qqtheme.framework.util.ConvertUtils;
 
 public class MyShopAddActivity
         extends BaseActivity
-        implements IMyShopView, PhotoDialog.DialogClickListener
-{
+        implements IMyShopView, PhotoDialog.DialogClickListener {
     @BindView(R.id.iv_back)
-    ImageView      mIvBack;
+    ImageView mIvBack;
     @BindView(R.id.rl_back)
     RelativeLayout mRlBack;
     @BindView(R.id.tv_title)
-    TextView       mTvTitle;
+    TextView mTvTitle;
     @BindView(R.id.rl_scan)
     RelativeLayout mRlScan;
     @BindView(R.id.tv_title1)
-    TextView       mTvTitle1;
+    TextView mTvTitle1;
     @BindView(R.id.tv_shop_type)
-    TextView       mTvShopType;
+    TextView mTvShopType;
     @BindView(R.id.ll_shop_type)
-    LinearLayout   mLlShopType;
+    LinearLayout mLlShopType;
     @BindView(R.id.tv_title2)
-    TextView       mTvTitle2;
+    TextView mTvTitle2;
     @BindView(R.id.edit_shop_name)
-    EditText       mEditShopName;
+    EditText mEditShopName;
     @BindView(R.id.edit_shop_user)
-    EditText       mEditShopUser;
+    EditText mEditShopUser;
     @BindView(R.id.edit_shop_user_phone)
-    EditText       mEditShopUserPhone;
+    EditText mEditShopUserPhone;
     @BindView(R.id.tv_address)
-    TextView       mTvAddress;
+    TextView mTvAddress;
     @BindView(R.id.ll_address)
-    LinearLayout   mLlAddress;
+    LinearLayout mLlAddress;
     @BindView(R.id.edit_shop_address)
-    EditText       mEditShopAddress;
+    EditText mEditShopAddress;
     @BindView(R.id.tv_business_state)
-    TextView       mTvBusinessState;
+    TextView mTvBusinessState;
     @BindView(R.id.iv_business_state)
-    ImageView      mIvBusinessState;
+    ImageView mIvBusinessState;
     @BindView(R.id.ll_business)
-    LinearLayout   mLlBusiness;
+    LinearLayout mLlBusiness;
     @BindView(R.id.edit_business)
-    EditText       mEditBusiness;
+    EditText mEditBusiness;
     @BindView(R.id.tv_organ)
-    TextView       mTvOrgan;
+    TextView mTvOrgan;
     @BindView(R.id.tv_organ_state)
-    TextView       mTvOrganState;
+    TextView mTvOrganState;
     @BindView(R.id.iv_organ_state)
-    ImageView      mIvOrganState;
+    ImageView mIvOrganState;
     @BindView(R.id.ll_organ)
-    LinearLayout   mLlOrgan;
+    LinearLayout mLlOrgan;
     @BindView(R.id.edit_organ)
-    EditText       mEditOrgan;
+    EditText mEditOrgan;
     @BindView(R.id.tv_organ_time)
-    TextView       mTvOrganTime;
+    TextView mTvOrganTime;
     @BindView(R.id.ll_organ_time)
-    LinearLayout   mLlOrganTime;
+    LinearLayout mLlOrganTime;
     @BindView(R.id.edit_buyer_mobile)
-    EditText       mEditBuyerMobile;
+    EditText mEditBuyerMobile;
     @BindView(R.id.tv_add_shop)
-    TextView       mTvAddShop;
+    TextView mTvAddShop;
     @BindView(R.id.tv_gsp_state)
-    TextView       mTvGspState;
+    TextView mTvGspState;
     @BindView(R.id.iv_gsp_state)
-    ImageView      mIvGspState;
+    ImageView mIvGspState;
     @BindView(R.id.ll_gsp)
-    LinearLayout   mLlGsp;
+    LinearLayout mLlGsp;
     @BindView(R.id.tv_mentou_state)
-    TextView       mTvMentouState;
+    TextView mTvMentouState;
     @BindView(R.id.tv_gsp_x)
-    TextView       tv_gsp_x;
+    TextView tv_gsp_x;
     @BindView(R.id.iv_mentou_state)
-    ImageView      mIvMentouState;
+    ImageView mIvMentouState;
     @BindView(R.id.ll_mentou)
-    LinearLayout   mLlMentou;
-    private MyShopPresenter      mPresenter;
-    private List<AddressModel>   mAddressModel;
+    LinearLayout mLlMentou;
+    @BindView(R.id.rb_general)
+    RadioButton rbGeneral;
+    @BindView(R.id.rb_special)
+    RadioButton rbSpecial;
+    @BindView(R.id.rg_invoice)
+    RadioGroup rgInvoice;
+    @BindView(R.id.iv_invoice_state)
+    ImageView ivInvoiceState;
+    @BindView(R.id.ll_invoice_content)
+    LinearLayout llInvoiceContent;
+    @BindView(R.id.ll_invoice_info)
+    LinearLayout llInvoiceInfo;
+    @BindView(R.id.iv_biao_state)
+    ImageView ivBiaoState;
+    @BindView(R.id.ll_biao)
+    LinearLayout llBiao;
+    @BindView(R.id.ll_invoice)
+    LinearLayout llInvoice;
+    @BindView(R.id.cb_checkall)
+    CheckBox cbCheckall;
+    @BindView(R.id.ll_checkall)
+    LinearLayout llCheckall;
+    private MyShopPresenter mPresenter;
+    private List<AddressModel> mAddressModel;
     private List<StoreTypeModel> mStoreType;
-    private OptionPicker         mTypePicker;
-    private int                  mSelectStoreType;// 门店类型
-    private AddressPicker        mAddressPicker;
-    private DatePicker           mDataPicker;
-    private List<LocalMedia>     selectList;
-    private String         mSelectStoreItem;
-    private int            mPhotoType; // 0-营业执照  1-许可证  2-GSP 3-门头照
-    private String         mBusinessPath;
-    private String         mOrganPath;
-    private String         mGspPath;
-    private String         mMentouPath;
-    private String         mAddressId;
-    private String         mBusinessUrl;
-    private String         mOrganUrl;
-    private String         mGspUrl;
-    private String         mMentouUrl="";
-    private String         mOrganTime;
-    private String         itemid;
-    private Dialog         mPhotoDialog;
+    private OptionPicker mTypePicker;
+    private int mSelectStoreType;// 门店类型
+    private AddressPicker mAddressPicker;
+    private DatePicker mDataPicker;
+    private List<LocalMedia> selectList;
+    private String mSelectStoreItem;
+    private int mPhotoType; // 0-营业执照  1-许可证  2-GSP 3-门头照
+    private String mBusinessPath;
+    private String mOrganPath;
+    private String mGspPath;
+    private String mMentouPath;
+    private String mAddressId;
+    private String mBusinessUrl;
+    private String mOrganUrl;
+    private String mGspUrl;
+    private String mMentouUrl = "";
+
+    private String mGeneralUrl;
+    private String mSpecialUrl;
+    private String mOrganTime;
+    private String itemid;
+    private Dialog mPhotoDialog;
     private ViewPagerFixed mViewpager;
-    private TextView           mTvPosition;
-    private BigPicAdapter  mBigPicAdapter;
+    private TextView mTvPosition;
+    private BigPicAdapter mBigPicAdapter;
+    private int type=1;
 
     public static void startActivity(Activity activity) {
         Intent intent = new Intent(activity, MyShopAddActivity.class);
@@ -163,9 +194,9 @@ public class MyShopAddActivity
     }
 
 
-    public static void startActivity(Activity activity,String itemid) {
+    public static void startActivity(Activity activity, String itemid) {
         Intent intent = new Intent(activity, MyShopAddActivity.class);
-        intent.putExtra("itemid",itemid);
+        intent.putExtra("itemid", itemid);
         activity.startActivity(intent);
     }
 
@@ -181,6 +212,22 @@ public class MyShopAddActivity
 
         itemid = getIntent().getStringExtra("itemid");
 
+        rgInvoice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId==R.id.rb_general)
+                {
+                    type=1;
+                    llInvoice.setVisibility(View.GONE);
+                }
+                if (checkedId==R.id.rb_special)
+                {
+                    type=2;
+                    llInvoice.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         mPresenter = new MyShopPresenter(this);
         initData();
     }
@@ -190,24 +237,27 @@ public class MyShopAddActivity
         mPresenter.getStoreType(this);
 
         if (!TextUtils.isEmpty(itemid)) {
-            mPresenter.getStoreDetail(this,itemid);
+            mPresenter.getStoreDetail(this, itemid);
+            llInvoiceContent.setVisibility(View.GONE);
         }
     }
 
     @OnClick({R.id.rl_back,
-              R.id.rl_scan,
-              R.id.ll_shop_type,
-              R.id.ll_address,
-              R.id.ll_business,
-              R.id.ll_organ,
-              R.id.ll_organ_time,
-              R.id.ll_gsp,
-              R.id.ll_mentou,
-              R.id.iv_business_state,
-              R.id.iv_gsp_state,
-              R.id.iv_mentou_state,
-              R.id.iv_organ_state,
-              R.id.tv_add_shop})
+            R.id.rl_scan,
+            R.id.ll_shop_type,
+            R.id.ll_address,
+            R.id.ll_business,
+            R.id.ll_organ,
+            R.id.ll_organ_time,
+            R.id.ll_gsp,
+            R.id.ll_mentou,
+            R.id.iv_business_state,
+            R.id.iv_gsp_state,
+            R.id.iv_mentou_state,
+            R.id.iv_organ_state,
+            R.id.ll_invoice_info,
+            R.id.ll_biao,
+            R.id.tv_add_shop})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_back:
@@ -243,7 +293,7 @@ public class MyShopAddActivity
             case R.id.iv_business_state:
                 if (!TextUtils.isEmpty(mBusinessUrl)) {
                     showBigPhotoDialog(mBusinessUrl);
-                }else {
+                } else {
                     mPhotoType = 0;
                     showPhotoDialog();
                 }
@@ -251,7 +301,7 @@ public class MyShopAddActivity
             case R.id.iv_organ_state:
                 if (!TextUtils.isEmpty(mOrganUrl)) {
                     showBigPhotoDialog(mOrganUrl);
-                }else {
+                } else {
                     mPhotoType = 1;
                     showPhotoDialog();
                 }
@@ -259,7 +309,7 @@ public class MyShopAddActivity
             case R.id.iv_gsp_state:
                 if (!TextUtils.isEmpty(mGspUrl)) {
                     showBigPhotoDialog(mGspUrl);
-                }else {
+                } else {
                     mPhotoType = 2;
                     showPhotoDialog();
                 }
@@ -267,8 +317,24 @@ public class MyShopAddActivity
             case R.id.iv_mentou_state:
                 if (!TextUtils.isEmpty(mMentouUrl)) {
                     showBigPhotoDialog(mMentouUrl);
-                }else {
+                } else {
                     mPhotoType = 3;
+                    showPhotoDialog();
+                }
+                break;
+            case R.id.ll_invoice_info:
+                if (!TextUtils.isEmpty(mGeneralUrl)) {
+                    showBigPhotoDialog(mGeneralUrl);
+                } else {
+                    mPhotoType = 4;
+                    showPhotoDialog();
+                }
+                break;
+            case R.id.ll_biao:
+                if (!TextUtils.isEmpty(mSpecialUrl)) {
+                    showBigPhotoDialog(mSpecialUrl);
+                } else {
+                    mPhotoType =5;
                     showPhotoDialog();
                 }
                 break;
@@ -342,34 +408,57 @@ public class MyShopAddActivity
 //            getShortToastByString("上传门头照");
 //            return;
 //        }
-        if (TextUtils.equals(mSelectStoreItem, "药店")&&TextUtils.isEmpty(mGspUrl)) {
+        if (TextUtils.equals(mSelectStoreItem, "药店") && TextUtils.isEmpty(mGspUrl)) {
             getShortToastByString("请上传GSP证照片");
             return;
         }
 
         String mobile = mEditBuyerMobile.getText().toString().trim();
 
+        if (type==2)
+        {
+            if (TextUtils.isEmpty(mGeneralUrl))
+            {
+                getShortToastByString("请上传开票资料");
+                return;
+            }
+            if (TextUtils.isEmpty(mSpecialUrl))
+            {
+                getShortToastByString("请上传纳税人资格认证表");
+                return;
+            }
+        }
 
         //添加门店
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("storecatid",String.valueOf(mSelectStoreType));//门店类型id
-        urlMap.put("storename",name);//门店名称
-        urlMap.put("storenumber",business);//门店营业执照编号-
-        urlMap.put("truename",shopUser);//负责人姓名
-        urlMap.put("mobile",shopUserPhone);//负责人电话
-        urlMap.put("areaid",mAddressId);//地址id
-        urlMap.put("address",shopAddress);//门店地址
-        urlMap.put("overtime",mOrganTime);//许可证有效期
-        urlMap.put("storelicense",organ);//许可证有效期
-        urlMap.put("saleyw",NetUtil.isStringNull(mobile));//业务员电话
-        urlMap.put("thumb",mBusinessUrl);//营业执照图片url
-        urlMap.put("thumb1",mOrganUrl);//许可证图片url
-        urlMap.put("thumb2",NetUtil.isStringNull(mGspUrl));//GSP证url
-        urlMap.put("thumb3",mMentouUrl);//门店形象图片url
-        if (!TextUtils.isEmpty(itemid)) {
-            urlMap.put("itemid",itemid);//门店id（特别注意：修改门店信息时需要上传 添加门店无此参数）
+        urlMap.put("storecatid", String.valueOf(mSelectStoreType));//门店类型id
+        urlMap.put("storename", name);//门店名称
+        urlMap.put("storenumber", business);//门店营业执照编号-
+        urlMap.put("truename", shopUser);//负责人姓名
+        urlMap.put("mobile", shopUserPhone);//负责人电话
+        urlMap.put("areaid", mAddressId);//地址id
+        urlMap.put("address", shopAddress);//门店地址
+        urlMap.put("overtime", mOrganTime);//许可证有效期
+        urlMap.put("storelicense", organ);//许可证有效期
+        urlMap.put("saleyw", NetUtil.isStringNull(mobile));//业务员电话
+        urlMap.put("thumb", mBusinessUrl);//营业执照图片url
+        urlMap.put("thumb1", mOrganUrl);//许可证图片url
+        urlMap.put("thumb2", NetUtil.isStringNull(mGspUrl));//GSP证url
+        urlMap.put("thumb3", mMentouUrl);//门店形象图片url
+        urlMap.put("invoicetype", type+"");//发票类型
+        urlMap.put("einvoice", ""+(cbCheckall.isChecked()?1:0));//是否电子发票
+        if (type==2)
+        {
+            urlMap.put("invoiceimg1",mGeneralUrl);//门店形象图片url
+            urlMap.put("invoiceimg2", mSpecialUrl);//门店形象图片url
         }
-        mPresenter.addStore(this,urlMap);
+        if (!TextUtils.isEmpty(itemid)) {
+            urlMap.put("itemid", itemid);//门店id（特别注意：修改门店信息时需要上传 添加门店无此参数）
+        }
+
+        L.i(urlMap.toString());
+
+        mPresenter.addStore(this, urlMap);
     }
 
     private void showPhotoDialog() {
@@ -395,18 +484,24 @@ public class MyShopAddActivity
 
     @Override
     public void showUploadResult(UploadModel data) {
-        if (mPhotoType==0){
+        if (mPhotoType == 0) {
             mBusinessUrl = data.filepath;
             mTvBusinessState.setText("已选择");
-        }else if (mPhotoType==1){
-            mOrganUrl= data.filepath;
+        } else if (mPhotoType == 1) {
+            mOrganUrl = data.filepath;
             mTvOrganState.setText("已选择");
-        }else if (mPhotoType==2){
+        } else if (mPhotoType == 2) {
             mGspUrl = data.filepath;
             mTvGspState.setText("已选择");
-        }else if (mPhotoType==3){
-            mMentouUrl= data.filepath;
+        } else if (mPhotoType == 3) {
+            mMentouUrl = data.filepath;
             mTvMentouState.setText("已选择");
+        }
+        else if (mPhotoType == 4) {
+            mGeneralUrl = data.filepath;
+        }
+        else if (mPhotoType == 5) {
+            mSpecialUrl = data.filepath;
         }
     }
 
@@ -434,23 +529,23 @@ public class MyShopAddActivity
 
         if (TextUtils.equals(mSelectStoreItem, "药店")) {
             tv_gsp_x.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             tv_gsp_x.setVisibility(View.GONE);
         }
 
-        if (!TextUtils.isEmpty(mBusinessUrl)){
+        if (!TextUtils.isEmpty(mBusinessUrl)) {
             mIvBusinessState.setImageResource(R.drawable.icon_add_look);
             mTvBusinessState.setText("已选择");
         }
-        if (!TextUtils.isEmpty(mOrganUrl)){
+        if (!TextUtils.isEmpty(mOrganUrl)) {
             mIvOrganState.setImageResource(R.drawable.icon_add_look);
             mTvOrganState.setText("已选择");
         }
-        if (!TextUtils.isEmpty(mGspUrl)){
+        if (!TextUtils.isEmpty(mGspUrl)) {
             mIvGspState.setImageResource(R.drawable.icon_add_look);
             mTvGspState.setText("已选择");
         }
-        if (!TextUtils.isEmpty(mMentouUrl)){
+        if (!TextUtils.isEmpty(mMentouUrl)) {
             mIvMentouState.setImageResource(R.drawable.icon_add_look);
             mTvMentouState.setText("已选择");
         }
@@ -460,14 +555,14 @@ public class MyShopAddActivity
             mTvAddShop.setEnabled(false);
             mTvAddShop.setBackgroundColor(Color.parseColor("#cccccc"));
             mTvAddShop.setText("审核中");
-        }else if (TextUtils.equals(data.status, "1")) {
+        } else if (TextUtils.equals(data.status, "1")) {
             mTvAddShop.setEnabled(false);
             mTvAddShop.setBackgroundColor(Color.parseColor("#cccccc"));
             mTvAddShop.setText("门店已关闭");
-        }else if (TextUtils.equals(data.status, "8")) {
+        } else if (TextUtils.equals(data.status, "8")) {
             mTvAddShop.setEnabled(true);
             mTvAddShop.setText("重新提交");
-        }else if (TextUtils.equals(data.status, "9")) {
+        } else if (TextUtils.equals(data.status, "9")) {
             mTvAddShop.setEnabled(false);
             mTvAddShop.setBackgroundColor(Color.parseColor("#cccccc"));
             mTvAddShop.setText("已通过");
@@ -528,7 +623,7 @@ public class MyShopAddActivity
                 @Override
                 public void onAddressPicked(Province province, City city, County county) {
                     mAddressId = county.getAreaId();
-                    mTvAddress.setText(province.getAreaName()+" "+city.getAreaName()+" "+county.getAreaName());
+                    mTvAddress.setText(province.getAreaName() + " " + city.getAreaName() + " " + county.getAreaName());
                 }
             });
             mAddressPicker.show();
@@ -572,16 +667,16 @@ public class MyShopAddActivity
                     mSelectStoreItem = item;
                     mTvShopType.setText(item);
 
-                    if (TextUtils.equals(item, "药店")||TextUtils.equals(item, "商业")) {
+                    if (TextUtils.equals(item, "药店") || TextUtils.equals(item, "商业")) {
                         mTvOrgan.setText("药品经营许可");
                         mTvOrganState.setHint("上传药品经营许可证");
-                    }else {
+                    } else {
                         mTvOrgan.setText("医疗机构许可");
                         mTvOrganState.setHint("上传医疗机构许可证");
                     }
                     if (TextUtils.equals(item, "药店")) {
                         tv_gsp_x.setVisibility(View.VISIBLE);
-                    }else {
+                    } else {
                         tv_gsp_x.setVisibility(View.GONE);
                     }
                 }
@@ -600,7 +695,7 @@ public class MyShopAddActivity
         if (mDataPicker == null) {
 
             long l = System.currentTimeMillis();
-            long ofter = l+311040000000L;
+            long ofter = l + 311040000000L;
             mDataPicker = new DatePicker(this);
             mDataPicker.setCanceledOnTouchOutside(true);
             mDataPicker.setUseWeight(true);
@@ -619,7 +714,7 @@ public class MyShopAddActivity
             mDataPicker.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
                 @Override
                 public void onDatePicked(String year, String month, String day) {
-                    mOrganTime = year+"-"+month+"-"+day;
+                    mOrganTime = year + "-" + month + "-" + day;
                     mTvOrganTime.setText(mOrganTime);
                 }
             });
@@ -633,35 +728,35 @@ public class MyShopAddActivity
     @Override
     public void takePhoto() {
         PictureSelector.create(this)
-                       .openCamera(PictureMimeType.ofImage())
-                       .forResult(PictureConfig.CHOOSE_REQUEST);
+                .openCamera(PictureMimeType.ofImage())
+                .forResult(PictureConfig.CHOOSE_REQUEST);
     }
 
     @Override
     public void pickPhoto() {
         PictureSelector.create(this)
-                       .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
-                       //                .theme()//主题样式(不设置为默认样式) 也可参考demo values/styles下 例如：R.style.picture.white.style
-                       .maxSelectNum(1)// 最大图片选择数量 int
-                       .minSelectNum(0)// 最小选择数量 int
-                       .imageSpanCount(3)// 每行显示个数 int
-                       .selectionMode(PictureConfig.SINGLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
-                       .previewImage(false)// 是否可预览图片 true or false
-                       .previewVideo(false)// 是否可预览视频 true or false
-                       .enablePreviewAudio(false) // 是否可播放音频 true or false
-                       .isCamera(false)// 是否显示拍照按钮 true or false
-                       .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
-                       .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
-                       .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效
-                       .setOutputCameraPath("/data/data/com.yx.Pharmacy/shop")// 自定义拍照保存路径,可不填
-                       .enableCrop(true)// 是否裁剪 true or false
-                       .compress(true)// 是否压缩 true or false
-                       .hideBottomControls(true)// 是否显示uCrop工具栏，默认不显示 true or false
-                       .isGif(false)// 是否显示gif图片 true or false
-                       .selectionMedia(null)// 是否传入已选图片 List<LocalMedia> list
-                       .minimumCompressSize(100)// 小于100kb的图片不压缩
-                       .synOrAsy(true)//同步true或异步false 压缩 默认同步
-                       .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
+                .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
+                //                .theme()//主题样式(不设置为默认样式) 也可参考demo values/styles下 例如：R.style.picture.white.style
+                .maxSelectNum(1)// 最大图片选择数量 int
+                .minSelectNum(0)// 最小选择数量 int
+                .imageSpanCount(3)// 每行显示个数 int
+                .selectionMode(PictureConfig.SINGLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
+                .previewImage(false)// 是否可预览图片 true or false
+                .previewVideo(false)// 是否可预览视频 true or false
+                .enablePreviewAudio(false) // 是否可播放音频 true or false
+                .isCamera(false)// 是否显示拍照按钮 true or false
+                .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
+                .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
+                .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效
+                .setOutputCameraPath("/data/data/com.yx.Pharmacy/shop")// 自定义拍照保存路径,可不填
+                .enableCrop(true)// 是否裁剪 true or false
+                .compress(true)// 是否压缩 true or false
+                .hideBottomControls(true)// 是否显示uCrop工具栏，默认不显示 true or false
+                .isGif(false)// 是否显示gif图片 true or false
+                .selectionMedia(null)// 是否传入已选图片 List<LocalMedia> list
+                .minimumCompressSize(100)// 小于100kb的图片不压缩
+                .synOrAsy(true)//同步true或异步false 压缩 默认同步
+                .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
     }
 
     @Override
@@ -670,23 +765,31 @@ public class MyShopAddActivity
         if (requestCode == PictureConfig.CHOOSE_REQUEST) {  //图片选择返回
             // 图片选择结果回调
             selectList = PictureSelector.obtainMultipleResult(data);
-            if (selectList!=null&&selectList.size()>0) {
+            if (selectList != null && selectList.size() > 0) {
                 String path = selectList.get(0).getPath();
-                if (mPhotoType==0){
+                if (mPhotoType == 0) {
                     mBusinessPath = path;
                     mIvBusinessState.setImageResource(R.drawable.icon_add_look);
-                }else if (mPhotoType==1){
+                } else if (mPhotoType == 1) {
                     mOrganPath = path;
                     mIvOrganState.setImageResource(R.drawable.icon_add_look);
-                }else if (mPhotoType==2){
+                } else if (mPhotoType == 2) {
                     mGspPath = path;
                     mIvGspState.setImageResource(R.drawable.icon_add_look);
-                }else if (mPhotoType==3){
+                } else if (mPhotoType == 3) {
                     mMentouPath = path;
                     mIvMentouState.setImageResource(R.drawable.icon_add_look);
                 }
+                else if (mPhotoType == 4) {
+                    mMentouPath = path;
+                    ivInvoiceState.setImageResource(R.drawable.icon_add_look);
+                }
+                else if (mPhotoType == 5) {
+                    mMentouPath = path;
+                    ivBiaoState.setImageResource(R.drawable.icon_add_look);
+                }
 
-                mPresenter.uploadFile(this,path);
+                mPresenter.uploadFile(this, path);
             }
         }
     }
@@ -696,14 +799,14 @@ public class MyShopAddActivity
      */
     private void showBigPhotoDialog(String fileName) {
         ArrayList<String> files = new ArrayList<>();
-        if(TextUtils.isEmpty(fileName)){
+        if (TextUtils.isEmpty(fileName)) {
             return;
-        }else {
+        } else {
             files.add(fileName);
         }
-        if(mPhotoDialog==null){
+        if (mPhotoDialog == null) {
             mPhotoDialog = new Dialog(this, R.style.Dialog_Fullscreen);
-            View view  = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
+            View view = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
             mViewpager = view.findViewById(R.id.viewpager);
             mBigPicAdapter = new BigPicAdapter(files);
 
@@ -717,10 +820,11 @@ public class MyShopAddActivity
             mViewpager.setAdapter(mBigPicAdapter);
             mPhotoDialog.setContentView(view);
             mPhotoDialog.show();
-        }else {
+        } else {
             mBigPicAdapter.setData(files);
             mPhotoDialog.show();
         }
     }
+
 
 }

@@ -176,7 +176,7 @@ public class ProductDetailActivity
     private String mGiftId;
     private boolean mIsStart = true;
     private ChooseStoreDialog mChooseStoreDialog;
-    private int cartCount=1;
+    private int cartCount=0;
 
     public static void startActivity(Context context, String itemid) {
         Intent intent = new Intent(context, ProductDetailActivity.class);
@@ -394,7 +394,11 @@ public class ProductDetailActivity
         addCartDialog.setDialogClickListener(new AddCartDialog.DialogClickListener() {
             @Override
             public void ok() {
-
+                if (cartCount<=0)
+                {
+                    getShortToastByString("起购量必须大于0");
+                    return;
+                }
                 if(mResultBean!=null&&TextUtils.equals(mResultBean.type,"1")&&type==1) { //特价商品特殊处理
                     mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,cartCount);
                 }

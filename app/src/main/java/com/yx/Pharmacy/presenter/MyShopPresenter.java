@@ -126,7 +126,18 @@ public class MyShopPresenter {
                .subscribe(new ProgressSubscriber<BasisBean<UploadModel>>(activity, true) {
                    @Override
                    public void onSuccess(BasisBean<UploadModel> response) {
-                       mView.showUploadResult(response.getData());
+                       if (response!=null)
+                       {
+                           if (response.getData()!=null)
+                           {
+                               mView.showUploadResult(response.getData());
+                           }
+                           else
+                           {
+                               activity.getShortToastByString(response.getAlertmsg());
+                           }
+                       }
+
                    }
 
                    @Override

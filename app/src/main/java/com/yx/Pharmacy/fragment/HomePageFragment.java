@@ -51,6 +51,7 @@ import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.HomeDataPresenter;
 import com.yx.Pharmacy.util.ComMethodsUtil;
 import com.yx.Pharmacy.util.GlideUtil;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IHomeView;
@@ -215,16 +216,16 @@ public class HomePageFragment
                         String type = goldBean.type;
                         if (TextUtils.equals(type, "1")) {
                             // 秒杀
-                            ComendMsActivity.startActivity(mContext,goldBean.levelid);
+                            ComendMsActivity.startActivity(mContext,goldBean.levelid,goldBean.title);
                         } else if (TextUtils.equals(type, "2")) {
                             // 特价
-                            CommendTjActivity.startActivity(mContext, type, goldBean.levelid);
+                            CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
                         } else if (TextUtils.equals(type, "3")) {
                             // 满减
-                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid);
+                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
                         } else if (TextUtils.equals(type, "9")) {
                             // 控销
-                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid);
+                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
                         }
                         break;
                 }
@@ -328,6 +329,7 @@ public class HomePageFragment
     @Override
     public void showAdvanceData(HomeAdvanceModel data) {
         if (data.guid != null && data.guid.size() > 0) {
+            L.i(data.guid.toString());
             mWebAdapter.setNewData(data.guid);
         }
 

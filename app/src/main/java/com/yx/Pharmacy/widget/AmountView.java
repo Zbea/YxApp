@@ -3,6 +3,7 @@ package com.yx.Pharmacy.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -46,7 +47,6 @@ public class AmountView extends LinearLayout
 
     public AmountView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         LayoutInflater.from(context).inflate(R.layout.view_amount, this);
         etAmount = (EditText) findViewById(R.id.etAmount);
         btnDecrease = (Button) findViewById(R.id.btnDecrease);
@@ -134,7 +134,11 @@ public class AmountView extends LinearLayout
         amount = Integer.valueOf(s.toString());
         amount = Math.abs(amount);
         goods_storage = Math.abs(goods_storage);
-        if (amount > goods_storage) {
+        if (amount==0)
+        {
+            return;
+        }
+        if (amount >goods_storage) {
             etAmount.setText(goods_storage + "");
             etAmount.setSelection(etAmount.getText().length());
             return;
@@ -159,6 +163,7 @@ public class AmountView extends LinearLayout
             }
             mClickBtn = false;
         }
+
     }
 
     public void setMinNum(int minNum) {

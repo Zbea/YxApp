@@ -49,7 +49,7 @@ public class SplashActivity extends BaseActivity {
 
     private boolean canClick=false;
     private static  final int CODE_WEB_BACK=1002;
-    private int curTime=5;
+    private int curTime=3;
     private Handler mHandler=new Handler(){
         @Override
         public void handleMessage(Message msg) {

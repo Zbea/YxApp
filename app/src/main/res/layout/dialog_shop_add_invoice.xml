@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择发票类型："
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_mian"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_main"/>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="45dp"
+            android:padding="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:src="@drawable/icon_product_dialog_close"/>
+    </LinearLayout>
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:id="@+id/tv_notice"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/color_ff8f00"
+        android:background="@color/color_ffefda"
+        android:drawablePadding="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:drawableStart="@drawable/icon_shopcar_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RadioGroup>
+
+</LinearLayout>

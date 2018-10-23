@@ -122,6 +122,14 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         intent.putExtra("keyword",keyword);
         activity.startActivity(intent);
     }
+
+    public static void startActivity(Activity activity,String keyword,String s) {
+        Intent intent = new Intent(activity, SearchActivity.class);
+        intent.putExtra("keyword",keyword);
+        intent.putExtra("title",s);
+        activity.startActivity(intent);
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_search;
