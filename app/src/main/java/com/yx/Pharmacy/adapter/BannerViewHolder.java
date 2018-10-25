@@ -14,6 +14,7 @@ import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyShopActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
+import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
@@ -56,30 +57,6 @@ public class BannerViewHolder implements MZViewHolder<HomeAdvanceModel.GoldBean>
     private void doClick(HomeAdvanceModel.GoldBean data) {
         //获取当前的activity
         Activity activity=AppStatusTracker.getInstance().getOnResumActivity();
-        switch (data.pushtype){
-            case 1://app跳转活动模块，参数weburl
-                HHActivity.startActivity(activity,data.weburl);
-                break;
-            case 2://app跳转商品详情，参数goodsid
-                ProductDetailActivity.startActivity(activity,data.goodsid);
-                break;
-            case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
-                if (TextUtils.isEmpty(NetUtil.getToken())) {
-                    LoginActivity.startActivity(activity);
-                }else {
-                    if(SPUtil.getBoolean(activity, Constants.KEY_STORE_CERTIFY)){
-                        MyShopActivity.startActivity(activity);
-                    }else {
-                        MyShopAddActivity.startActivity(activity);
-                    }
-                }
-                break;
-            case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
-                SearchActivity.startActivity(activity,data.keyword);
-                break;
-            case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
-                CommendProductActivity.startActivity(activity,data.type,data.levelid);
-                break;
-        }
+        ((BaseActivity)activity).gotoClick(data);
     }
 }

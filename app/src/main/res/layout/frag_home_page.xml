@@ -22,7 +22,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10">
                     <!--<com.yx.Pharmacy.widget.BannerView-->
                     <!--android:id="@+id/bannerView"-->
                     <!--android:layout_width="match_parent"-->
@@ -61,7 +62,8 @@
                     android:background="@color/white"
                     android:id="@+id/rv_webview"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    />
 
                 <ImageView
                     android:id="@+id/iv_advence"
@@ -120,12 +122,13 @@
 
 
     <LinearLayout
-        android:paddingTop="@dimen/dp_26"
         android:paddingBottom="@dimen/dp_6"
         android:id="@+id/ll_toolbar"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/dp_70"
+        android:paddingTop="@dimen/dp_26"
+        android:background="@color/color_main">
 
         <ImageView
             android:id="@+id/iv_qrcode"

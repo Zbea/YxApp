@@ -21,6 +21,8 @@ package com.yx.Pharmacy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
@@ -50,6 +52,7 @@ import com.yx.Pharmacy.fragment.ShopCartFragment;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.presenter.MainPresenter;
 import com.yx.Pharmacy.receiver.ReceiverDialogManage;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IMainView;
@@ -62,7 +65,7 @@ import org.json.JSONObject;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity implements IMainView ,ReceiverDialogManage.ReceiverDialogManageListener {
+public class MainActivity extends BaseActivity implements IMainView, ReceiverDialogManage.ReceiverDialogManageListener {
     @BindView(R.id.ll_main_container)
     LinearLayout ll_main_container;
     @BindView(R.id.iv_message)
@@ -86,7 +89,7 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
     @BindView(R.id.tv_my)
     TextView tv_my;
     //当前选中的页面
-    private int curPage=3;
+    private int curPage = 3;
 
     private MainPresenter mPresenter;
 
@@ -103,9 +106,9 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
         context.startActivity(intent);
     }
 
-    public static void startActivity(Context context,int startin) {
+    public static void startActivity(Context context, int startin) {
         Intent intent = new Intent(context, MainActivity.class);
-        intent.putExtra("start_in",startin);
+        intent.putExtra("start_in", startin);
         context.startActivity(intent);
     }
 
@@ -113,9 +116,12 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
     protected int getLayoutId() {
         return R.layout.activity_main;
     }
+
     private ImmersionBar mImmersionBar;
+
     @Override
     protected void init() {
+
         EventBus.getDefault().register(this);
         ReceiverDialogManage.newInstance().setReceiverDialogManageListener(this);
         //在BaseActivity里初始化
@@ -124,23 +130,29 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
 //        ImmersionBar.with(this).transparentStatusBar().statusBarDarkFont(true, 0.2f).init();
 
         fragmentManager = getSupportFragmentManager();
+        if (fragmentManager.getFragments().size() > 0) {
+            fragment1 = (MessageFragment) fragmentManager.findFragmentByTag(MessageFragment.class.getName().toString());
+            fragment2 = (CategoryFragment) fragmentManager.findFragmentByTag(CategoryFragment.class.getName().toString());
+            fragment3 = (HomePageFragment) fragmentManager.findFragmentByTag(HomePageFragment.class.getName().toString());
+            fragment5 = (MyFragment) fragmentManager.findFragmentByTag(MyFragment.class.getName().toString());
+        }
         showFragment(3);
-        mPresenter=new MainPresenter(this);
+        mPresenter = new MainPresenter(this);
         mPresenter.getSplashAdData(this);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEvent(String type)
-    {
-        if (type.equals("gotohome"))
-        {
+    public void onEvent(String type) {
+        if (type.equals("gotohome")) {
             showFragment(3);
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        getFragmentManager().getFragments().clear();
         EventBus.getDefault().unregister(this);
     }
 
@@ -148,16 +160,16 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         int start_in = intent.getIntExtra("start_in", 0);
-        if (start_in==1){
+        if (start_in == 1) {
             showFragment(3);
-        }else if (start_in==2){
+        } else if (start_in == 2) {
             getMyShop();
         }
     }
 
     @OnClick({R.id.ll_message, R.id.ll_type, R.id.ll_home_page, R.id.ll_shopping_car, R.id.ll_my})
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.ll_message://消息
                 showFragment(1);
                 break;
@@ -178,6 +190,7 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
         }
 
     }
+
     public void showFragment(int page) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
 
@@ -186,12 +199,13 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
         switch (page) {
             case 1:
                 // 如果fragment1已经存在则将其显示出来
-                if (fragment1 != null)
+                if (fragment1 != null) {
                     ft.show(fragment1);
-                    // 否则添加fragment1，注意添加后是会显示出来的，replace方法也是先remove后add
+                }
+                // 否则添加fragment1，注意添加后是会显示出来的，replace方法也是先remove后add
                 else {
                     fragment1 = new MessageFragment();
-                    ft.add(R.id.ll_main_container, fragment1);
+                    ft.add(R.id.ll_main_container, fragment1, MessageFragment.class.getName().toString());
                 }
                 break;
             case 2:
@@ -199,40 +213,38 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
                     ft.show(fragment2);
                 else {
                     fragment2 = new CategoryFragment();
-                    ft.add(R.id.ll_main_container, fragment2);
+                    ft.add(R.id.ll_main_container, fragment2, CategoryFragment.class.getName().toString());
                 }
                 break;
             case 3:
                 if (fragment3 != null) {
                     ft.show(fragment3);
-                }
-                else {
+                } else {
                     fragment3 = new HomePageFragment();
-                    ft.add(R.id.ll_main_container, fragment3);
+                    ft.add(R.id.ll_main_container, fragment3, HomePageFragment.class.getName().toString());
                 }
                 break;
             case 4:
-                if (fragment4 != null){
+                if (fragment4 != null) {
                     ft.show(fragment4);
-                }
-                else {
+                } else {
                     fragment4 = new ShopCartFragment();
                     ft.add(R.id.ll_main_container, fragment4);
                 }
                 break;
             case 5:
-                if (fragment5 != null){
+                if (fragment5 != null) {
                     ft.show(fragment5);
-                }
-                else {
+                } else {
                     fragment5 = new MyFragment();
-                    ft.add(R.id.ll_main_container, fragment5);
+                    ft.add(R.id.ll_main_container, fragment5, MyFragment.class.getName().toString());
                 }
                 break;
         }
         ft.commit();
         setSelectPage(page);
     }
+
     // 当fragment已被实例化，相当于发生过切换，就隐藏起来
     public void hideFragments(FragmentTransaction ft) {
         if (fragment1 != null)
@@ -247,19 +259,19 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
             ft.hide(fragment5);
     }
 
-    public void setSelectPage(int page){
-        if(page==curPage)return;
-        iv_message.setImageResource(page==1?R.drawable.cyw:R.drawable.cyd);
-        iv_type.setImageResource(page==2?R.drawable.wdfhd:R.drawable.wdfhw);
-        iv_home_page.setImageResource(page==3?R.drawable.fhd:R.drawable.fhw);
-        iv_shopping_car.setImageResource(page==4?R.drawable.ydd:R.drawable.ydw);
-        iv_my.setImageResource(page==5?R.drawable.wdd:R.drawable.wdw);
-        tv_message.setTextColor(page==1?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
-        tv_type.setTextColor(page==2?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
-        tv_home_page.setTextColor(page==3?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck1));
-        tv_shopping_car.setTextColor(page==4?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
-        tv_my.setTextColor(page==5?getResources().getColor(R.color.color_check1):getResources().getColor(R.color.color_uncheck));
-        curPage=page;
+    public void setSelectPage(int page) {
+        if (page == curPage) return;
+        iv_message.setImageResource(page == 1 ? R.drawable.cyw : R.drawable.cyd);
+        iv_type.setImageResource(page == 2 ? R.drawable.wdfhd : R.drawable.wdfhw);
+        iv_home_page.setImageResource(page == 3 ? R.drawable.fhd : R.drawable.fhw);
+        iv_shopping_car.setImageResource(page == 4 ? R.drawable.ydd : R.drawable.ydw);
+        iv_my.setImageResource(page == 5 ? R.drawable.wdd : R.drawable.wdw);
+        tv_message.setTextColor(page == 1 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
+        tv_type.setTextColor(page == 2 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
+        tv_home_page.setTextColor(page == 3 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck1));
+        tv_shopping_car.setTextColor(page == 4 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
+        tv_my.setTextColor(page == 5 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
+        curPage = page;
     }
 
     public void setSelectTab(int selectTab) {
@@ -268,12 +280,12 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
 
     @Override
     public void getSplashAd(SplashData.SplashModel data) {
-        if(data!=null){
-            Gson gson=new Gson();
-            String json=gson.toJson(data);
-            SPUtil.putString(this, Constants.KEY_AD,json);
-        }else {
-            SPUtil.putString(this,Constants.KEY_AD,"");
+        if (data != null) {
+            Gson gson = new Gson();
+            String json = gson.toJson(data);
+            SPUtil.putString(this, Constants.KEY_AD, json);
+        } else {
+            SPUtil.putString(this, Constants.KEY_AD, "");
         }
     }
 
@@ -290,7 +302,7 @@ public class MainActivity extends BaseActivity implements IMainView ,ReceiverDia
             fragment5.initView();
     }
 
-    public void getMyShop(){
+    public void getMyShop() {
         if (fragment3 != null)
             fragment3.initMyShop();
     }

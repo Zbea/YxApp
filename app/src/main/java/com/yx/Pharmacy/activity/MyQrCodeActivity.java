@@ -2,6 +2,7 @@ package com.yx.Pharmacy.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
@@ -45,6 +46,7 @@ public class MyQrCodeActivity extends BaseActivity {
         Intent intent = new Intent(context, MyQrCodeActivity.class);
         context.startActivity(intent);
     }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_my_qr_code;
@@ -54,12 +56,12 @@ public class MyQrCodeActivity extends BaseActivity {
     protected void init() {
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         tv_title.setText("我的二维码");
-        getPathAndLoadImg();
+//        getPathAndLoadImg();
         //https://blog.csdn.net/books1958/article/details/46346531   Zxing生成二维码
 
     }
 
-    @OnClick({R.id.rl_back,R.id.tv_save})
+    @OnClick({R.id.rl_back, R.id.tv_save})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rl_back:
@@ -76,44 +78,44 @@ public class MyQrCodeActivity extends BaseActivity {
             Bitmap bitmap = null;
 
             @Override
-            public void run() {
-                URL url = null;
-                try {
-                    url = new URL(mQrcode);
-                    InputStream         is  = null;
-                    BufferedInputStream bis = null;
-                    try {
-                        is = url.openConnection().getInputStream();
-                        bis = new BufferedInputStream(is);
-                        bitmap = BitmapFactory.decodeStream(bis);
+            public void run(){
 
-                        File file = new File(Environment.getExternalStorageDirectory(), "/yxyy/" + System.currentTimeMillis() + ".jpg");
-                        if (!file.getParentFile().exists()) {
-                            file.getParentFile().mkdirs();
-                        }
-                        file.createNewFile();
-                        OutputStream outStream = new FileOutputStream(file);
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
-                        outStream.flush();
-                        outStream.close();
-                        bitmap.recycle();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                InputStream is = null;
+                BufferedInputStream bis = null;
+                try {
+
+                    AssetManager am = mContext.getResources().getAssets();
+
+                    is = am.open("icon_scan.jpg");
+
+                    bis = new BufferedInputStream(is);
+                    bitmap = BitmapFactory.decodeStream(bis);
+
+                    File file = new File(Environment.getExternalStorageDirectory(), "scancode.jpg");
+                    if (!file.getParentFile().exists()) {
+                        file.getParentFile().mkdirs();
                     }
-                } catch (MalformedURLException e) {
+                    file.createNewFile();
+                    OutputStream outStream = new FileOutputStream(file);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
+                    outStream.flush();
+                    outStream.close();
+                    bitmap.recycle();
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }).start();
+        getShortToastByString("保存成功，请在相册查看");
     }
 
-    public void  getPathAndLoadImg(){
-        mQrcode = SPUtil.getString(this, Constants.KEY_QRCODE);
-        if(!TextUtils.isEmpty(mQrcode)){
-            GlideUtil.loadImgError(this,mQrcode,iv_qrcode,R.drawable.icon_logo);
-        }else {
-            iv_qrcode.setImageResource(R.drawable.icon_logo);
-        }
-    }
+//    public void  getPathAndLoadImg(){
+//        mQrcode = SPUtil.getString(this, Constants.KEY_QRCODE);
+//        if(!TextUtils.isEmpty(mQrcode)){
+//            GlideUtil.loadImgError(this,mQrcode,iv_qrcode,R.drawable.icon_logo);
+//        }else {
+//            iv_qrcode.setImageResource(R.drawable.icon_logo);
+//        }
+//    }
 
 }

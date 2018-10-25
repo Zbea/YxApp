@@ -1,657 +1,711 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-              android:background="@drawable/shape_back_white"
-              android:fitsSystemWindows="true"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_back_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
 
-    <include layout="@layout/include_title_my_shop"/>
+    <include layout="@layout/include_title_my_shop" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
 
             <!-- 门店选择 -->
             <LinearLayout
                 android:id="@+id/ll_shop_type"
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
                         android:id="@+id/tv_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="门店类型"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_shop_type"
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="选择门店类型"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:layout_height="wrap_content"/>
+                    android:gravity="right"
+                    android:hint="选择门店类型"
+                    android:textColor="@color/text_normal"
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
 
                 <ImageView
-                    android:src="@drawable/arrrightgray"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrrightgray" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 门店名称 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
                         android:id="@+id/tv_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="门店名称"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_shop_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入门店名称"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_shop_name"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入门店名称"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 主要负责人 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="采购负责人"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_shop_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入主要负责人"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_shop_user"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入主要负责人"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 联系电话 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="联系电话"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_shop_user_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入联系电话"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="11"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_shop_user_phone"
-                    android:inputType="number"
-                    android:maxLength="11"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入联系电话"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 所在省市 -->
             <LinearLayout
                 android:id="@+id/ll_address"
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="所在省市"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
+
                     <TextView
                         android:id="@+id/tv_address"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="选择所在省市"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_2"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="选择所在省市"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:src="@drawable/icon_add_address"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_add_address" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 门店地址 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="门店地址"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_shop_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入门店地址"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_shop_address"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入门店地址"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
             <!-- 营业执照 -->
             <LinearLayout
                 android:id="@+id/ll_business"
-                android:paddingStart="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="营业执照"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="center_vertical"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:gravity="center_vertical">
+
                     <TextView
                         android:id="@+id/tv_business_state"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="选择营业执照"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="选择营业执照"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:padding="@dimen/dp_10"
                         android:id="@+id/iv_business_state"
-                        android:src="@drawable/icon_add_takephoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_add_takephoto" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
-            <!-- 营业执照 -->
+            <!-- 营业执照编号 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="营业执照编号"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_14" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_business"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入营业执照编号"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_business"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入营业执照编号"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
             <!-- 医疗机构许可 -->
             <LinearLayout
                 android:id="@+id/ll_organ"
-                android:paddingStart="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
                         android:id="@+id/tv_organ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="医疗机构许可"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="center_vertical"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:gravity="center_vertical">
+
                     <TextView
                         android:id="@+id/tv_organ_state"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="上传医疗机构许可证"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="上传医疗机构许可证"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:padding="@dimen/dp_10"
                         android:id="@+id/iv_organ_state"
-                        android:src="@drawable/icon_add_takephoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_add_takephoto" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 许可证编号 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="许可证编号"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/edit_organ"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入许可证编号"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_organ"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入许可证编号"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_05"
+                android:background="#f6f6f6" />
 
             <!-- 许可证有效期 -->
             <LinearLayout
                 android:id="@+id/ll_organ_time"
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="许可证有效期"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
 
                     <TextView
                         android:id="@+id/tv_organ_time"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="选择日期"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="选择日期"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:src="@drawable/arrrightgray"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrrightgray" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
             <!-- GSP -->
             <LinearLayout
                 android:id="@+id/ll_gsp"
-                android:paddingStart="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
-                        android:text="GSP"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/black"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="GSP"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
                         android:id="@+id/tv_gsp_x"
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="center_vertical"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:gravity="center_vertical">
+
                     <TextView
                         android:id="@+id/tv_gsp_state"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="上传GSP证书"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="上传GSP证书"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:padding="@dimen/dp_10"
                         android:id="@+id/iv_gsp_state"
-                        android:src="@drawable/icon_add_takephoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_add_takephoto" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:visibility="gone"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6"
+                android:visibility="gone" />
 
 
             <!-- 门头照 -->
             <LinearLayout
                 android:id="@+id/ll_mentou"
-                android:paddingStart="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:visibility="gone"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10"
+                android:visibility="gone">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="门头照"
-                        android:textSize="@dimen/sp_14"
                         android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/sp_15" />
+
                     <TextView
-                        android:textColor="#ff0000"
-                        android:text="*"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#ff0000" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="center_vertical"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:layout_height="wrap_content">
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/tv_mentou_state"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/text_normal"
-                        android:textColorHint="@color/color_909090"
-                        android:hint="上传店面门头照"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:gravity="right|center_vertical"
+                        android:hint="上传店面门头照"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
 
                     <ImageView
-                        android:padding="@dimen/dp_10"
                         android:id="@+id/iv_mentou_state"
-                        android:src="@drawable/icon_add_takephoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_add_takephoto" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -660,190 +714,245 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <View
-                android:background="#f6f6f6"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
 
-            <RadioGroup
-                android:id="@+id/rg_invoice"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_general"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:button="@null"
-                    android:text="普通发票"
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/white"
-                    android:checked="true"
-                    android:gravity="center"
-                    android:background="@drawable/selector_check_bg_main_gary"/>
-
-                <RadioButton
-                    android:id="@+id/rb_special"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="增值税专用发票"
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/white"
-                    android:background="@drawable/selector_check_bg_main_gary"/>
-            </RadioGroup>
-            <LinearLayout
-                android:id="@+id/ll_invoice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="vertical">
-
-                <!-- 营业执照 -->
-                <LinearLayout
-                    android:id="@+id/ll_invoice_info"
-                    android:paddingStart="@dimen/dp_10"
-                    android:gravity="center_vertical"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_45">
+                    android:layout_height="@dimen/dp_10"
+                    android:background="#f6f6f6" />
+
+                <LinearLayout
+                    android:id="@+id/ll_invoice_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_10">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <TextView
-                            android:text="开票资料"
-                            android:textSize="@dimen/sp_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发票类型"
                             android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:textSize="@dimen/sp_15" />
+
                         <TextView
-                            android:textColor="#ff0000"
-                            android:text="*"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#ff0000" />
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/tv_invoice_select"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right|center_vertical"
+                        android:text="普通发票"
+                        android:textColor="@color/text_normal"
+                        android:textColorHint="@color/text_light"
+                        android:textSize="@dimen/sp_14" />
+
                     <ImageView
-                        android:padding="@dimen/dp_10"
-                        android:id="@+id/iv_invoice_state"
-                        android:src="@drawable/icon_add_takephoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrrightgray" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/rb_general"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_check_bg_main_gary"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="普通发票"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+
+                    <RadioButton
+                        android:id="@+id/rb_special"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_check_bg_main_gary"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="增值税专用发票"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/ll_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- 营业执照 -->
+                    <LinearLayout
+                        android:id="@+id/ll_invoice_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp_10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="开票资料"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_invoice_state"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_add_takephoto" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_05"
+                        android:background="#f6f6f6" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_biao"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_45"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp_10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="一般纳税人资格认定表"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_biao_state"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_add_takephoto" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <View
-                    android:background="#f6f6f6"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_05"/>
+                    android:layout_height="@dimen/dp_05"
+                    android:background="#f6f6f6" />
 
                 <LinearLayout
-                    android:id="@+id/ll_biao"
-                    android:paddingStart="@dimen/dp_10"
+                    android:id="@+id/ll_checkall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_45">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:text="一般纳税人资格认定表"
-                            android:textSize="@dimen/sp_14"
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:textColor="#ff0000"
-                            android:text="*"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
+                    android:padding="@dimen/dp_10">
 
-                    <ImageView
-                        android:padding="@dimen/dp_10"
-                        android:id="@+id/iv_biao_state"
-                        android:src="@drawable/icon_add_takephoto"
+                    <CheckBox
+                        android:id="@+id/cb_checkall"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:background="@drawable/selector_cb_shopcart"
+                        android:button="@null"
+                        android:checked="true" />
+
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:text="可接受电子发票"
+                        android:textColor="@color/text_normal"
+                        android:textSize="@dimen/sp_14" />
 
                 </LinearLayout>
-
             </LinearLayout>
+
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
-            <LinearLayout
-                android:id="@+id/ll_checkall"
-                android:gravity="center_vertical"
-                android:padding="@dimen/dp_10"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:id="@+id/cb_checkall"
-                    android:background="@drawable/selector_cb_shopcart"
-                    android:button="@null"
-                    android:checked="true"
-                    android:layout_width="@dimen/dp_18"
-                    android:layout_height="@dimen/dp_18"/>
-
-                <TextView
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/text_normal"
-                    android:layout_marginStart="@dimen/dp_8"
-                    android:text="可接受电子发票"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-            </LinearLayout>
-            <View
-                android:background="#f6f6f6"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_10"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
 
             <!-- 联系号码 -->
             <LinearLayout
-                android:paddingStart="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_10"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_45">
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10">
+
                 <TextView
-                    android:text="业务员手机号"
-                    android:textSize="@dimen/sp_14"
-                    android:textColor="@color/black"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:layout_height="wrap_content"/>
+                    android:text="业务员手机号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15" />
 
                 <EditText
+                    android:id="@+id/edit_buyer_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入业务员手机号码"
+                    android:inputType="phone"
+                    android:lines="1"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:id="@+id/edit_buyer_mobile"
-                    android:inputType="phone"
-                    android:background="@null"
-                    android:lines="1"
-                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
-                    android:textColorHint="@color/color_909090"
-                    android:hint="输入业务员手机号码"
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"/>
+                    android:textColorHint="@color/text_light"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
             <View
-                android:background="#f6f6f6"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_05"/>
+                android:layout_height="@dimen/dp_10"
+                android:background="#f6f6f6" />
 
 
         </LinearLayout>
@@ -851,13 +960,13 @@
 
 
     <TextView
-        android:background="@drawable/shape_btn_main"
         android:id="@+id/tv_add_shop"
-        android:gravity="center"
-        android:textSize="@dimen/sp_16"
-        android:textColor="@color/white"
-        android:text="提交审核"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_45"/>
+        android:layout_height="@dimen/dp_45"
+        android:background="@drawable/shape_btn_main"
+        android:gravity="center"
+        android:text="提交审核"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
 
 </LinearLayout>

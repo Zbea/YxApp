@@ -2,10 +2,12 @@ package com.yx.Pharmacy.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -255,6 +257,9 @@ public class CommendTjActivity
 
         if (!TextUtils.isEmpty(extention)) {
             mIvBanner.setVisibility(View.VISIBLE);
+            AppBarLayout.LayoutParams layoutParams = new AppBarLayout.LayoutParams(DensityUtils.getScreenWidth(),
+                    300);
+            mIvBanner.setLayoutParams(layoutParams);
             GlideUtil.loadImgNoStyle(this,extention,mIvBanner);
         }else {
             mIvBanner.setVisibility(View.GONE);

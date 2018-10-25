@@ -32,7 +32,8 @@
             android:layout_marginTop="@dimen/dp_100"
             android:id="@+id/iv_qrcode"
             android:layout_width="@dimen/dp_150"
-            android:layout_height="@dimen/dp_150" />
+            android:layout_height="@dimen/dp_150"
+            android:src="@drawable/icon_scan"/>
 
 
         <LinearLayout

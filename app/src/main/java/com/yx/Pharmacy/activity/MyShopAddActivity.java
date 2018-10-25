@@ -26,6 +26,7 @@ import com.yx.Pharmacy.adapter.BigPicAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.dialog.PhotoDialog;
+import com.yx.Pharmacy.dialog.ReasonDialog;
 import com.yx.Pharmacy.model.AddressModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -158,6 +159,10 @@ public class MyShopAddActivity
     CheckBox cbCheckall;
     @BindView(R.id.ll_checkall)
     LinearLayout llCheckall;
+    @BindView(R.id.ll_invoice_select)
+    LinearLayout llInvoiceSelect;
+    @BindView(R.id.tv_invoice_select)
+    TextView tvInvoiceSelect;
     private MyShopPresenter mPresenter;
     private List<AddressModel> mAddressModel;
     private List<StoreTypeModel> mStoreType;
@@ -186,7 +191,8 @@ public class MyShopAddActivity
     private ViewPagerFixed mViewpager;
     private TextView mTvPosition;
     private BigPicAdapter mBigPicAdapter;
-    private int type=1;
+    private int type = 1;
+    ReasonDialog invoiceDialog = null;
 
     public static void startActivity(Activity activity) {
         Intent intent = new Intent(activity, MyShopAddActivity.class);
@@ -215,14 +221,12 @@ public class MyShopAddActivity
         rgInvoice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId==R.id.rb_general)
-                {
-                    type=1;
+                if (checkedId == R.id.rb_general) {
+                    type = 1;
                     llInvoice.setVisibility(View.GONE);
                 }
-                if (checkedId==R.id.rb_special)
-                {
-                    type=2;
+                if (checkedId == R.id.rb_special) {
+                    type = 2;
                     llInvoice.setVisibility(View.VISIBLE);
                 }
             }
@@ -257,7 +261,8 @@ public class MyShopAddActivity
             R.id.iv_organ_state,
             R.id.ll_invoice_info,
             R.id.ll_biao,
-            R.id.tv_add_shop})
+            R.id.tv_add_shop,
+            R.id.ll_invoice_select})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_back:
@@ -334,14 +339,50 @@ public class MyShopAddActivity
                 if (!TextUtils.isEmpty(mSpecialUrl)) {
                     showBigPhotoDialog(mSpecialUrl);
                 } else {
-                    mPhotoType =5;
+                    mPhotoType = 5;
                     showPhotoDialog();
                 }
                 break;
             case R.id.tv_add_shop:
                 commit();
                 break;
+            case R.id.ll_invoice_select:
+
+                showInvoice();
+
+                break;
         }
+    }
+
+    /**
+     * 发票类型选择
+     */
+    private void showInvoice() {
+
+        if (invoiceDialog == null) {
+            List<String> invoices = new ArrayList<>();
+            invoices.add("普通发票");
+            invoices.add("增值税专用发票");
+
+            invoiceDialog = new ReasonDialog(mContext, invoices).builder();
+            invoiceDialog.setDialogClickListener(new ReasonDialog.DialogClickListener() {
+                @Override
+                public void reason(String reason) {
+                    tvInvoiceSelect.setText(reason);
+                    if (reason.equals("普通发票")) {
+                        type = 1;
+                        llInvoice.setVisibility(View.GONE);
+                    } else {
+                        type = 2;
+                        llInvoice.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+            invoiceDialog.show();
+        } else {
+            invoiceDialog.show();
+        }
+
     }
 
     private void commit() {
@@ -379,11 +420,11 @@ public class MyShopAddActivity
             getShortToastByString("上传营业执照");
             return;
         }
-        String business = mEditBusiness.getText().toString().trim();
-        if (TextUtils.isEmpty(business)) {
-            getShortToastByString("输入营业执照编号");
-            return;
-        }
+//        String business = mEditBusiness.getText().toString().trim();
+//        if (TextUtils.isEmpty(business)) {
+//            getShortToastByString("输入营业执照编号");
+//            return;
+//        }
 
         if (TextUtils.isEmpty(mOrganUrl)) {
             getShortToastByString("上传许可证照片");
@@ -394,10 +435,10 @@ public class MyShopAddActivity
             getShortToastByString("输入许可证编号");
             return;
         }
-        if (TextUtils.isEmpty(mOrganTime)) {
-            getShortToastByString("选择许可证有效期");
-            return;
-        }
+//        if (TextUtils.isEmpty(mOrganTime)) {
+//            getShortToastByString("选择许可证有效期");
+//            return;
+//        }
 
 //        if (TextUtils.isEmpty(mMentouUrl)) {
 //            getShortToastByString("上传门头照");
@@ -415,15 +456,12 @@ public class MyShopAddActivity
 
         String mobile = mEditBuyerMobile.getText().toString().trim();
 
-        if (type==2)
-        {
-            if (TextUtils.isEmpty(mGeneralUrl))
-            {
+        if (type == 2) {
+            if (TextUtils.isEmpty(mGeneralUrl)) {
                 getShortToastByString("请上传开票资料");
                 return;
             }
-            if (TextUtils.isEmpty(mSpecialUrl))
-            {
+            if (TextUtils.isEmpty(mSpecialUrl)) {
                 getShortToastByString("请上传纳税人资格认证表");
                 return;
             }
@@ -433,24 +471,23 @@ public class MyShopAddActivity
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("storecatid", String.valueOf(mSelectStoreType));//门店类型id
         urlMap.put("storename", name);//门店名称
-        urlMap.put("storenumber", business);//门店营业执照编号-
+//        urlMap.put("storenumber", business);//门店营业执照编号-
         urlMap.put("truename", shopUser);//负责人姓名
         urlMap.put("mobile", shopUserPhone);//负责人电话
         urlMap.put("areaid", mAddressId);//地址id
         urlMap.put("address", shopAddress);//门店地址
-        urlMap.put("overtime", mOrganTime);//许可证有效期
+//        urlMap.put("overtime", mOrganTime);//许可证有效期
         urlMap.put("storelicense", organ);//许可证有效期
         urlMap.put("saleyw", NetUtil.isStringNull(mobile));//业务员电话
         urlMap.put("thumb", mBusinessUrl);//营业执照图片url
         urlMap.put("thumb1", mOrganUrl);//许可证图片url
         urlMap.put("thumb2", NetUtil.isStringNull(mGspUrl));//GSP证url
         urlMap.put("thumb3", mMentouUrl);//门店形象图片url
-        urlMap.put("invoicetype", type+"");//发票类型
-        urlMap.put("einvoice", ""+(cbCheckall.isChecked()?1:0));//是否电子发票
-        if (type==2)
-        {
-            urlMap.put("invoiceimg1",mGeneralUrl);//门店形象图片url
-            urlMap.put("invoiceimg2", mSpecialUrl);//门店形象图片url
+        urlMap.put("invoicetype", type + "");//发票类型
+        urlMap.put("einvoice", "" + (cbCheckall.isChecked() ? 1 : 0));//是否电子发票
+        if (type == 2) {
+            urlMap.put("invoiceimg1", mGeneralUrl);//普通发票图片url
+            urlMap.put("invoiceimg2", mSpecialUrl);//认证表图片url
         }
         if (!TextUtils.isEmpty(itemid)) {
             urlMap.put("itemid", itemid);//门店id（特别注意：修改门店信息时需要上传 添加门店无此参数）
@@ -496,11 +533,9 @@ public class MyShopAddActivity
         } else if (mPhotoType == 3) {
             mMentouUrl = data.filepath;
             mTvMentouState.setText("已选择");
-        }
-        else if (mPhotoType == 4) {
+        } else if (mPhotoType == 4) {
             mGeneralUrl = data.filepath;
-        }
-        else if (mPhotoType == 5) {
+        } else if (mPhotoType == 5) {
             mSpecialUrl = data.filepath;
         }
     }
@@ -779,12 +814,10 @@ public class MyShopAddActivity
                 } else if (mPhotoType == 3) {
                     mMentouPath = path;
                     mIvMentouState.setImageResource(R.drawable.icon_add_look);
-                }
-                else if (mPhotoType == 4) {
+                } else if (mPhotoType == 4) {
                     mMentouPath = path;
                     ivInvoiceState.setImageResource(R.drawable.icon_add_look);
-                }
-                else if (mPhotoType == 5) {
+                } else if (mPhotoType == 5) {
                     mMentouPath = path;
                     ivBiaoState.setImageResource(R.drawable.icon_add_look);
                 }

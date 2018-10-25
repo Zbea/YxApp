@@ -102,7 +102,7 @@ public class HomePageFragment
     private HomeWebAdapter     mWebAdapter;
     private HomeProductAdapter mAdapter;
 
-    private int fadingHeight = 400; // 当ScrollView滑动到什么位置时渐变消失（根据需要进行调整）
+    private int fadingHeight = 500; // 当ScrollView滑动到什么位置时渐变消失（根据需要进行调整）
     private Drawable drawable; // 顶部渐变布局需设置的Drawable
     private static final int START_ALPHA = 0;//scrollview滑动开始位置
     private static final int END_ALPHA   = 255;//scrollview滑动结束位置
@@ -127,7 +127,9 @@ public class HomePageFragment
     @Override
     protected void init() {
         mImmersionBar = ImmersionBar.with(this);
-        mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
+        mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false)
+                .addViewSupportTransformColor(mMZBanner)
+                .init();
         mPresenter = new HomeDataPresenter(this);
 
         // 初始化列表 RecyclerView
@@ -150,9 +152,9 @@ public class HomePageFragment
     }
 
     private void initListener() {
-        drawable = getResources().getDrawable(R.drawable.shape_home_title_bg);
-        drawable.setAlpha(START_ALPHA);
-        mLlToolbar.setBackgroundDrawable(drawable);
+//        drawable = getResources().getDrawable(R.drawable.shape_home_title_bg);
+//        drawable.setAlpha(START_ALPHA);
+        mLlToolbar.getBackground().setAlpha(START_ALPHA);
         mNsvHome.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
@@ -174,8 +176,7 @@ public class HomePageFragment
                 } else if (scrollY < 0) {
                     scrollY = 0;
                 }
-                drawable.setAlpha(scrollY * (END_ALPHA - START_ALPHA) / fadingHeight + START_ALPHA);
-
+                mLlToolbar.getBackground().setAlpha(scrollY * END_ALPHA  / fadingHeight );
             }
         });
     }
@@ -191,44 +192,7 @@ public class HomePageFragment
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 HomeAdvanceModel.GoldBean goldBean = mWebAdapter.getData().get(position);
-                switch (goldBean.pushtype){
-                    case 1://app跳转活动模块，参数weburl
-                        HHActivity.startActivity(mContext,goldBean.weburl);
-                        break;
-                    case 2://app跳转商品详情，参数goodsid
-                        ProductDetailActivity.startActivity(mContext,goldBean.goodsid);
-                        break;
-                    case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
-                        if (TextUtils.isEmpty(NetUtil.getToken())) {
-                            LoginActivity.startActivity(mContext);
-                        }else {
-                            if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
-                                MyShopActivity.startActivity(mContext);
-                            }else {
-                                MyShopAddActivity.startActivity(mContext);
-                            }
-                        }
-                        break;
-                    case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
-                        SearchActivity.startActivity(mContext,goldBean.keyword);
-                        break;
-                    case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
-                        String type = goldBean.type;
-                        if (TextUtils.equals(type, "1")) {
-                            // 秒杀
-                            ComendMsActivity.startActivity(mContext,goldBean.levelid,goldBean.title);
-                        } else if (TextUtils.equals(type, "2")) {
-                            // 特价
-                            CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
-                        } else if (TextUtils.equals(type, "3")) {
-                            // 满减
-                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
-                        } else if (TextUtils.equals(type, "9")) {
-                            // 控销
-                            CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.title);
-                        }
-                        break;
-                }
+                gotoClick(goldBean);
             }
         });
 
@@ -258,16 +222,16 @@ public class HomePageFragment
                     case R.id.iv_title:
                         if (TextUtils.equals(type, "1")) {
                             // 秒杀
-                            ComendMsActivity.startActivity(mContext,homeDataModel.levelid);
+                            ComendMsActivity.startActivity(mContext,homeDataModel.levelid,homeDataModel.activityname);
                         } else if (TextUtils.equals(type, "2")) {
                             // 特价
-                            CommendTjActivity.startActivity(mContext, type, homeDataModel.levelid);
+                            CommendTjActivity.startActivity(mContext, type, homeDataModel.levelid,homeDataModel.activityname);
                         } else if (TextUtils.equals(type, "3")) {
                             // 满减
-                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid);
+                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid,homeDataModel.activityname);
                         } else if (TextUtils.equals(type, "9")) {
                             // 控销
-                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid);
+                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid,homeDataModel.activityname);
                         }
                         break;
                     default:
@@ -306,6 +270,9 @@ public class HomePageFragment
         });
 
     }
+
+
+
 
     public void initData() {
         mPresenter.getHomeData((BaseActivity) mContext);
@@ -364,44 +331,7 @@ public class HomePageFragment
         homeAdDialog.setDialogClickListener(new HomeAdDialog.DialogClickListener() {
             @Override
             public void clickAd() {
-                switch (alert.pushtype){
-                    case 1://app跳转活动模块，参数weburl
-                        HHActivity.startActivity(mContext,alert.weburl);
-                        break;
-                    case 2://app跳转商品详情，参数goodsid
-                        ProductDetailActivity.startActivity(mContext,alert.goodsid);
-                        break;
-                    case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
-                        if (TextUtils.isEmpty(NetUtil.getToken())) {
-                            LoginActivity.startActivity(mContext);
-                        }else {
-                            if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
-                                MyShopActivity.startActivity(mContext);
-                            }else {
-                                MyShopAddActivity.startActivity(mContext);
-                            }
-                        }
-                        break;
-                    case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
-                        SearchActivity.startActivity(mContext,alert.keyword);
-                        break;
-                    case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
-                        String type = alert.type;
-                        if (TextUtils.equals(type, "1")) {
-                            // 秒杀
-                            ComendMsActivity.startActivity(mContext,alert.levelid);
-                        } else if (TextUtils.equals(type, "2")) {
-                            // 特价
-                            CommendTjActivity.startActivity(mContext, type, alert.levelid);
-                        } else if (TextUtils.equals(type, "3")) {
-                            // 满减
-                            CommendProductActivity.startActivity(mContext, type, alert.levelid);
-                        } else if (TextUtils.equals(type, "9")) {
-                            // 控销
-                            CommendProductActivity.startActivity(mContext, type, alert.levelid);
-                        }
-                        break;
-                }
+               gotoClick(alert);
             }
         });
     }
@@ -528,31 +458,7 @@ public class HomePageFragment
                 break;
             case R.id.iv_advence:
                 if (mAdvenceGold != null) {
-                    switch (mAdvenceGold.pushtype){
-                        case 1://app跳转活动模块，参数weburl
-                            HHActivity.startActivity(mContext,mAdvenceGold.weburl);
-                            break;
-                        case 2://app跳转商品详情，参数goodsid
-                            ProductDetailActivity.startActivity(mContext,mAdvenceGold.goodsid);
-                            break;
-                        case 3://如果当前用户登录并且没有认证门店，跳转到门店认证页，不需要参数
-                            if (TextUtils.isEmpty(NetUtil.getToken())) {
-                                LoginActivity.startActivity(mContext);
-                            }else {
-                                if(SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY)){
-                                    MyShopActivity.startActivity(mContext);
-                                }else {
-                                    MyShopAddActivity.startActivity(mContext);
-                                }
-                            }
-                            break;
-                        case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
-                            SearchActivity.startActivity(mContext,mAdvenceGold.keyword);
-                            break;
-                        case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
-                            CommendProductActivity.startActivity(mContext,mAdvenceGold.type,mAdvenceGold.levelid);
-                            break;
-                    }
+                  gotoClick(mAdvenceGold);
                 }
                 break;
         }

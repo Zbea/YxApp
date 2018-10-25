@@ -1,0 +1,2 @@
+# Referenced at D:\androidSpace\android\app\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:65
+-keep class com.yx.Pharmacy.base.YxApp { <init>(...); }
