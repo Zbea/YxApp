@@ -133,6 +133,7 @@
             android:layout_toLeftOf="@id/tv_get_code"
             android:background="@null"
             android:hint="验证码"
+            android:inputType="textPassword"
             android:singleLine="true"
             android:textColor="@color/color_333333"
             android:textColorHint="@color/text_light"

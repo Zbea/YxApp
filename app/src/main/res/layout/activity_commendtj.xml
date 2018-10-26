@@ -19,6 +19,7 @@
                 android:id="@+id/iv_banner"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:scaleType="fitXY"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"/>
         </android.support.design.widget.AppBarLayout>

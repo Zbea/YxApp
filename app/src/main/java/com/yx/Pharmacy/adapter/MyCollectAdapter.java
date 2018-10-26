@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class MyCollectAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolder>
     @Override
     protected void convert(final BaseViewHolder helper, final DrugModel item) {
         ImageView iv_collect=helper.getView(R.id.iv_collect);
-        GlideUtil.loadImg(context,item.getThumb(),iv_collect);
+        GlideUtil.loadImg(context,!TextUtils.isEmpty(item.getThumb())?item.getThumb():"",iv_collect);
         helper.setText(R.id.tv_title,item.getTitle());
         helper.setText(R.id.tv_company_name,item.getScqy());
         helper.setText(R.id.tv_price,item.getPrice());

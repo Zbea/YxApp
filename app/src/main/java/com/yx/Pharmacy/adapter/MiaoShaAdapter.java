@@ -47,7 +47,6 @@ public class MiaoShaAdapter
         TextView       title      = helper.getView(R.id.tv_title);
         TextView       oldPrice   = helper.getView(R.id.tv_oldprice);
         TextView       tv_price   = helper.getView(R.id.tv_price);
-        RelativeLayout rl_iv_bg   = helper.getView(R.id.rl_iv_bg);
         LinearLayout   ll_time_bg = helper.getView(R.id.ll_time_bg);
         oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
         ImageView product = helper.getView(R.id.iv_product);
@@ -81,12 +80,10 @@ public class MiaoShaAdapter
                 }
                 tv_price.setTextColor(Color.parseColor("#909090"));
                 now.setEnabled(false);
-                rl_iv_bg.setBackground(mContext.getResources().getDrawable(R.drawable.shape_miaosha_iv_bg_n));
                 ll_time_bg.setEnabled(false);
             }else {
-                tv_price.setTextColor(Color.parseColor("#670F6A"));
+                tv_price.setTextColor(mContext.getResources().getColor(R.color.color_main));
                 now.setEnabled(true);
-                rl_iv_bg.setBackground(mContext.getResources().getDrawable(R.drawable.shape_miaosha_iv_bg));
                 ll_time_bg.setEnabled(true);
                 long countdown = endtime - currentTimeMillis;
                 if (countdown>=millDay){//结束时间减去现在时间大于一天

@@ -24,6 +24,7 @@ import com.yx.Pharmacy.model.SelectStoreHhBean;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -122,7 +123,7 @@ public class HHActivity
         }
         loadlayout.setStatus(LoadingLayout.Success);
         tv_h5_title.setVisibility(View.GONE);
-        Log.d(TAG, "onCreate: " + url);
+        L.i( "onCreate: " + url);
         //        ConfigXmlParser parser = new ConfigXmlParser();
         //        parser.parse(this);//这里会解析res/xml/config.xml配置文件
         //        CordovaWebView cordovaWebView = new CordovaWebViewImpl(new SystemWebViewEngine(mWebview));//创建一个cordovawebview

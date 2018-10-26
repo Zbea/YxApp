@@ -70,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_12"
             android:layout_marginTop="@dimen/dp_5"
-            app:cardBackgroundColor="#de9dfc"
             app:cardCornerRadius="@dimen/dp_5"
             app:cardElevation="0dp"
             app:cardPreventCornerOverlap="false"
@@ -81,7 +80,7 @@
                 android:layout_height="match_parent">
 
                 <ProgressBar
-                    android:progressDrawable="@drawable/progressbar_color"
+                    android:progressDrawable="@drawable/home_progress"
                     android:id="@+id/progress_bar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
@@ -89,6 +88,7 @@
                     android:maxHeight="@dimen/dp_12"
                     android:max="100"
                     android:progress="60" />
+
 
                 <TextView
                     android:layout_centerInParent="true"

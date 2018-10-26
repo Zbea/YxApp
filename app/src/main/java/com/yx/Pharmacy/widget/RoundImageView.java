@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
@@ -116,7 +117,7 @@ public class RoundImageView extends ImageView {
 
 		Bitmap b = ((BitmapDrawable) drawable).getBitmap();
 
-		Bitmap bitmap = b.copy(Config.ARGB_8888, true);
+		Bitmap bitmap = b.copy(Config.RGB_565, true);
 
 		if (defaultWidth == 0) {
 
@@ -177,6 +178,7 @@ public class RoundImageView extends ImageView {
 
 		canvas.drawBitmap(roundBitmap, defaultWidth / 2 - radius, defaultHeight
 				/ 2 - radius, null);
+
 
 	}
 

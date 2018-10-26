@@ -181,7 +181,7 @@
                                     android:layout_height="match_parent">
 
                                     <ProgressBar
-                                        android:progressDrawable="@drawable/progressbar_color"
+                                        android:progressDrawable="@drawable/home_progress"
                                         android:id="@+id/progress_bar"
                                         style="?android:attr/progressBarStyleHorizontal"
                                         android:layout_width="match_parent"

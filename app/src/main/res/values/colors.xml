@@ -4,7 +4,7 @@
     <color name="pink">#ff5981</color>
     <!-- 分割线颜色 -->
     <color name="color_main">#f10215</color>
-    <color name="color_end">#bbe72e55</color>
+    <color name="color_start">#ea521e</color>
     <color name="color_page_bg">#f6f6f6</color>
     <color name="divider">#f6f6f6</color>
     <color name="text_mian">#333333</color>

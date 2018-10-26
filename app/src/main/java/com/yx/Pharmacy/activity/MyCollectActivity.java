@@ -17,6 +17,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.presenter.MyCollectPresenter;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IMyCollectView;
@@ -106,6 +107,7 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
     @Override
     public void getCollectList(List<DrugModel> data) {
         if(data!=null&&data.size()>0){
+            L.i("sssssssssss");
             mLoadingLayout.setStatus(LoadingLayout.Success);
             mAdapter.setNewData(data);
         }else {

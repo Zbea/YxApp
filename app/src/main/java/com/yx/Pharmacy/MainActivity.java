@@ -268,7 +268,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         iv_my.setImageResource(page == 5 ? R.drawable.wdd : R.drawable.wdw);
         tv_message.setTextColor(page == 1 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
         tv_type.setTextColor(page == 2 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
-        tv_home_page.setTextColor(page == 3 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck1));
+        tv_home_page.setTextColor(page == 3 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
         tv_shopping_car.setTextColor(page == 4 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
         tv_my.setTextColor(page == 5 ? getResources().getColor(R.color.color_check1) : getResources().getColor(R.color.color_uncheck));
         curPage = page;
