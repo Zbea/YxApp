@@ -116,7 +116,6 @@ public class SettingActivity extends BaseActivity {
         SPUtil.delete(this, Constants.KEY_ITEM_ID);
         SPUtil.delete(this, Constants.KEY_STORENAME);
         SPUtil.delete(this, Constants.KEY_ADDRESS);
-        SPUtil.delete(this, Constants.KEY_COLLECT);
         SPUtil.delete(this, Constants.KEY_AVATAR);
         SPUtil.delete(this, Constants.KEY_TRUENAME);
         SPUtil.delete(this, Constants.KEY_MOBILE);
@@ -125,7 +124,6 @@ public class SettingActivity extends BaseActivity {
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_TOKEN);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_MOBILE);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_COMPANY);
-        SPUtil.delete(UiUtil.getContext(), Constants.KEY_CREDIT);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_MONEY);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_QRCODE);
         SPUtil.delete(UiUtil.getContext(), Constants.KEY_BANK);

@@ -45,7 +45,7 @@ public class HomeNet {
                                  Request.Builder builder = chain.request().newBuilder();
                                  builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
                                  builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
-                                 builder.addHeader("version", "1.0.1");
+                                 builder.addHeader("version", "1.0.2");
                                  builder.addHeader("platform","android");
                                  builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
                                  builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));

@@ -351,7 +351,6 @@ public class HomePageFragment
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
                 MainActivity context = (MainActivity) mContext;
@@ -379,7 +378,6 @@ public class HomePageFragment
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
                 MainActivity context = (MainActivity) mContext;

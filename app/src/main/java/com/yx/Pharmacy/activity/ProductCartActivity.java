@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -36,6 +37,7 @@ import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.ShopCartPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.DoubleMath;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.StackManager;
@@ -93,12 +95,16 @@ public class ProductCartActivity
     private TextView mTvCouponSize;
     private TextView mTvMoney;
     private TextView mTvOverallCoupon;
+    private CheckBox cbCoupon;
+    private CheckBox cbDiscount;
     private Double mAllPrice;
     private Double mSubPrice;
     private Double mAllCouponPrice;
     private ShopCartModel mResultBean;
     private double mYingPrice;
     private double mYingOrderPrice;
+    private double mMoney;
+    private double mDiscountMoney;
     private String mDiscount;
     private ArrayList<OrderModel.Goods> mOrderGoods;
     private HashMap<String, Object> mProducts;
@@ -125,6 +131,7 @@ public class ProductCartActivity
     private int mAmountDelete;
     private String mActivityid;
     private double mSelectAllCouponPrice;
+    private int type = 0;//选择优惠券还是折扣
 
 
     public static void startActivity(Context context) {
@@ -265,7 +272,9 @@ public class ProductCartActivity
                         }
                     }
                 }
-
+                if (!isAllSelect) {
+                    setCbView();
+                }
                 mCbCheckall.setChecked(isAllSelect);
                 mNotifyPosition = position;
                 selectCoupon("0");
@@ -429,6 +438,14 @@ public class ProductCartActivity
         mYingOrderPrice = 0.0;
         // 总优惠价格
         mAllCouponPrice = 0.0;
+        //支付显示金额
+        mMoney = 0.0;
+        //折扣后金额
+        mDiscountMoney = 0.0;
+        if (!cbCoupon.isChecked()&&!cbDiscount.isChecked())
+        {
+            type=0;
+        }
         List<ShopCartModel.ShopCartListBean> data = mAdapter.getData();
         if (data.size() > 0) {
             for (ShopCartModel.ShopCartListBean datum : data) {
@@ -452,17 +469,16 @@ public class ProductCartActivity
                         }*/
                         if (good.isSelect) {
                             goodsPrice = price * cartcount + goodsPrice;
-                            if (good.giftList!=null) {
+                            if (good.giftList != null) {
                                 for (ShopCartModel.GoodsBean.GiftListBean giftListBean : good.giftList) {
-                                    int carcount     = DensityUtils.parseInt(good.cartcount);
+                                    int carcount = DensityUtils.parseInt(good.cartcount);
                                     int limit = DensityUtils.parseInt(giftListBean.limit);
-                                    int give            = DensityUtils.parseInt(giftListBean.give);
-                                    if(carcount>=limit){
+                                    int give = DensityUtils.parseInt(giftListBean.give);
+                                    if (carcount >= limit) {
                                         int div = carcount / limit;
-                                        int count = div*give;
-                                        if (count>0)
-                                        {
-                                            goodsPrice=goodsPrice+0.01*count;
+                                        int count = div * give;
+                                        if (count > 0) {
+                                            goodsPrice = goodsPrice + 0.01 * count;
                                         }
                                     }
                                 }
@@ -544,11 +560,13 @@ public class ProductCartActivity
                                 bean.isSelectCoupon = true;
                                 mOrderCoupon = bean;
                                 mTvCouponSize.setText(bean.couponcontent);
+                                cbCoupon.setClickable(true);
                                 break;
                             } else {
                                 bean.isSelectCoupon = false;
                                 mOrderCoupon = null;
-                                mTvCouponSize.setText("");
+                                mTvCouponSize.setText(bean.couponcontent);
+                                cbCoupon.setClickable(false);
                             }
                         } else {
                             Double sub = DoubleMath.sub(mYingPrice, mAllCouponPrice);
@@ -556,40 +574,50 @@ public class ProductCartActivity
                                 bean.isSelectCoupon = true;
                                 mOrderCoupon = bean;
                                 mTvCouponSize.setText(bean.couponcontent);
+                                cbCoupon.setClickable(true);
                                 break;
                             } else {
                                 bean.isSelectCoupon = false;
                                 mOrderCoupon = null;
-                                mTvCouponSize.setText("");
+                                mTvCouponSize.setText(bean.couponcontent);
+                                cbCoupon.setClickable(false);
                             }
                         }
                     } else {
                         mOrderCoupon = mUserSelectCoupon;
                     }
                 }
-            }
 
-            // 全场优惠券价格计算
-            mYingOrderPrice = mSubPrice;
-            mYingLayoutPrice = mSubPrice;
-            mYingPrice = DoubleMath.sub(mYingPrice, mAllCouponPrice);
-            mSelectAllCouponPrice = mYingPrice;
-            if (mOrderCoupon != null) {
-                int couponmodel = DensityUtils.parseInt(mOrderCoupon.couponmodel);
-                double orderCouponPrice = 0.00;
-                if (couponmodel == 2) {
-                    double coupondiscount = DensityUtils.parseDouble(mOrderCoupon.coupondiscount);
-                    orderCouponPrice = DoubleMath.sub(mYingPrice, DoubleMath.mul(mYingPrice, coupondiscount));
-                } else {
-                    orderCouponPrice = DensityUtils.parseDouble(mOrderCoupon.discountprice);
+
+                // 全场优惠券价格计算
+                mYingOrderPrice = mSubPrice;
+                mYingLayoutPrice = mSubPrice;
+                if (type == 1) {
+                    mYingPrice = DoubleMath.sub(mYingPrice, mAllCouponPrice);
+                    mSelectAllCouponPrice = mYingPrice;
+                    if (mOrderCoupon != null) {
+                        int couponmodel = DensityUtils.parseInt(mOrderCoupon.couponmodel);
+                        double orderCouponPrice = 0.00;
+                        if (couponmodel == 2) {
+                            double coupondiscount = DensityUtils.parseDouble(mOrderCoupon.coupondiscount);
+                            orderCouponPrice = DoubleMath.sub(mYingPrice, DoubleMath.mul(mYingPrice, coupondiscount));
+                        } else {
+                            orderCouponPrice = DensityUtils.parseDouble(mOrderCoupon.discountprice);
+                        }
+                        mYingOrderPrice = DoubleMath.sub(mYingOrderPrice, orderCouponPrice);
+                        mYingPrice = DoubleMath.sub(mYingPrice, orderCouponPrice);
+                        mYingLayoutPrice = mYingOrderPrice;
+                    }
                 }
-                mYingOrderPrice = DoubleMath.sub(mYingOrderPrice, orderCouponPrice);
-                mYingPrice = DoubleMath.sub(mYingPrice, orderCouponPrice);
-                mYingLayoutPrice = mYingOrderPrice;
             }
-
+            else
+            {
+                cbCoupon.setClickable(false);
+                cbCoupon.setChecked(false);
+            }
 
             mDiscount = "";
+
             // 全场优惠
             List<ShopCartModel.DiscountListBean> discountList = mResultBean.discountList;
             if (discountList != null) {
@@ -603,32 +631,31 @@ public class ProductCartActivity
                 for (int i = discountList.size() - 1; i >= 0; i--) {
                     ShopCartModel.DiscountListBean bean = discountList.get(i);
                     double limit = DensityUtils.parseDouble(bean.limit);
-                    if (mYingPrice >= limit) {
+                    if (mAllPrice >= limit) {
+                        cbDiscount.setClickable(true);
                         mDiscount = bean.discount;
                         mTvOverallCoupon.setText("满" + bean.limit + "元,可享受" + bean.discount + "折优惠(不含控销商品)");
-                        // 计算没有控销的商品打完折后，加上控销商品的价格
-                        Double kxPrice = DoubleMath.sub(mYingOrderPrice, mYingPrice);
-                        double discount = DensityUtils.parseDouble(mDiscount) / 10;
-
-                        mYingOrderPrice = DoubleMath.mul(mYingPrice, discount);
-                        mYingOrderPrice = DoubleMath.add(mYingOrderPrice, kxPrice);
+                        if (type == 2) {
+                            // 计算没有控销的商品打完折后，加上控销商品的价格
+                            Double kxPrice = DoubleMath.sub(mYingOrderPrice, mYingPrice);
+                            double discount = DensityUtils.parseDouble(mDiscount) / 10;
+                            mDiscountMoney = DoubleMath.mul(mYingPrice, discount);
+                            mDiscountMoney = DoubleMath.add(mDiscountMoney, kxPrice);
+                        }
                         break;
                     } else {
+                        cbDiscount.setClickable(false);
+                        mDiscountMoney = mAllPrice;
                         mTvOverallCoupon.setText("订单金额低于全场优惠价最低金额");
                     }
                 }
             }
-
-            //-----------全场优惠-------
-
-            double i = DensityUtils.parseDouble(mResultBean.orderlimit);
-            if (mYingOrderPrice >= i) {
-                mTvBuy.setText("去结算");
-                mTvBuy.setEnabled(true);
-            } else {
-                mTvBuy.setText("满" + DensityUtils.doubleTrans2(i) + "起购");
-                mTvBuy.setEnabled(false);
+            else
+            {
+                cbDiscount.setClickable(false);
+                cbDiscount.setChecked(false);
             }
+
         }
 
         // 优惠金额
@@ -639,11 +666,40 @@ public class ProductCartActivity
         mTvOrderPrice.setText(DensityUtils.doubleToString(mSubPrice));
         // 应付总额
         mTvMoney.setText(DensityUtils.doubleToString(mYingLayoutPrice));
-        mYingOrderPrice = DensityUtils.round(mYingOrderPrice, 2);
+//        mYingOrderPrice = DensityUtils.round(mYingOrderPrice, 2);
+//        mTvPayPrice.setText(DensityUtils.doubleToString(mYingOrderPrice));
         // 支付总额
-        mTvPayPrice.setText(DensityUtils.doubleToString(mYingOrderPrice));
+        if (type == 1) {
+            mMoney = mYingLayoutPrice;
+        } else if (type == 2) {
+            mMoney = mDiscountMoney;
+        } else {
+            mMoney = mAllPrice;
+        }
+        mTvPayPrice.setText(DensityUtils.doubleToString(mMoney));
+
+        //-----------全场优惠-------
+
+        double i = DensityUtils.parseDouble(mResultBean.orderlimit);
+        if (mMoney >= i) {
+            mTvBuy.setText("去结算");
+            mTvBuy.setEnabled(true);
+
+        } else {
+            mTvBuy.setText("满" + DensityUtils.doubleTrans2(i) + "起购");
+            mTvBuy.setEnabled(false);
+            setCbView();
+        }
 
         checkAllCoupon();
+    }
+
+    private void setCbView() {
+        cbCoupon.setChecked(false);
+        cbCoupon.setClickable(false);
+        cbDiscount.setChecked(false);
+        cbDiscount.setClickable(false);
+        type = 0;
     }
 
     private void checkAllCoupon() {
@@ -676,6 +732,28 @@ public class ProductCartActivity
         mLlSelectCoupon = bottomView.findViewById(R.id.ll_select_coupon);
         mTvCouponSize = bottomView.findViewById(R.id.tv_coupon_size);
         mTvMoney = bottomView.findViewById(R.id.tv_money);
+        cbCoupon = bottomView.findViewById(R.id.cb_coupon);
+        cbCoupon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    type = 1;
+                    cbDiscount.setChecked(false);
+                }
+                addUpPrice();
+            }
+        });
+        cbDiscount = bottomView.findViewById(R.id.cb_discount);
+        cbDiscount.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    type = 2;
+                    cbCoupon.setChecked(false);
+                }
+                addUpPrice();
+            }
+        });
         mTvOverallCoupon = bottomView.findViewById(R.id.tv_overall_coupon);
 
         mLoadingLayout.setOnReloadListener(new LoadingLayout.OnReloadListener() {
@@ -686,6 +764,8 @@ public class ProductCartActivity
                 } else {
                     if (TextUtils.isEmpty(NetUtil.getToken())) {
                         LoginActivity.startActivity(ProductCartActivity.this, 1);
+                    } else if (TextUtils.isEmpty(NetUtil.getToken())) {
+
                     } else {
                         if (mSelectStoreUtil != null) {
                             mSelectStoreUtil.loadMyShop(ProductCartActivity.this, true);
@@ -767,6 +847,7 @@ public class ProductCartActivity
                     mOrderCoupon = null;
                     mUserSelectCoupon = null;
                     mTvCouponSize.setText("");
+                    setCbView();
                 }
                 addUpPrice();
                 break;
@@ -867,8 +948,16 @@ public class ProductCartActivity
                 }
             }
         }
-        map.put("needpay", mYingOrderPrice);
-        map.put("discount", NetUtil.isStringNull(mDiscount));
+        if (type == 1) {
+            map.put("discount", "");
+        } else if (type == 2) {
+            map.put("couponid", "");
+            map.put("discount", NetUtil.isStringNull(mDiscount));
+        } else {
+            map.put("couponid", "");
+            map.put("discount", "");
+        }
+        map.put("needpay", mMoney);
         map.put("product", mProducts);
         if (mCount != 0) {
             mPresenter.checkMoney((BaseActivity) this, new Gson().toJson(map));
@@ -922,8 +1011,17 @@ public class ProductCartActivity
     @Override
     public void showCheckResult(BasisBean<String> response) {
         if (TextUtils.equals(response.getCode(), "200")) {
-            OrderCreateActivity.startActivity(this, mOrderGoods, new CreateOrderIntentModel(mProducts, NetUtil.isStringNull(mCouponId), DensityUtils.doubleToString(mYingOrderPrice), String.valueOf(mCount), NetUtil.isStringNull(mDiscount)),
-                    mAllPrice, mAllCouponPrice, gifts);
+
+            CreateOrderIntentModel data = null;
+            if (type == 1) {
+                data = new CreateOrderIntentModel(mProducts, NetUtil.isStringNull(mCouponId), DensityUtils.doubleToString(mMoney), String.valueOf(mCount), "");
+            } else if (type == 2) {
+                data = new CreateOrderIntentModel(mProducts, "", DensityUtils.doubleToString(mMoney), String.valueOf(mCount), NetUtil.isStringNull(mDiscount));
+            } else {
+                data = new CreateOrderIntentModel(mProducts, "",DensityUtils.doubleToString(mMoney), String.valueOf(mCount), "");
+            }
+
+            OrderCreateActivity.startActivity(this, mOrderGoods, data, mAllPrice, mMoney, gifts);
         }
     }
 
@@ -967,14 +1065,6 @@ public class ProductCartActivity
             mCouponListAdapter.notifyDataSetChanged();
         }
 
-        try {
-            int credit = DensityUtils.parseInt(SPUtil.getString(this, Constants.KEY_CREDIT));
-            int usecredit = DensityUtils.parseInt(mCreditString);
-            int i = credit - usecredit;
-            SPUtil.putString(this, Constants.KEY_CREDIT, String.valueOf(i));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     /**

@@ -176,7 +176,7 @@ public class AskForAfterSaleActivity extends BaseActivity implements IAskAfterSa
         total = 0;
         for (int i = 0; i < mAdapter.getData().size(); i++) {
             if (mAdapter.getData().get(i).isSelect) {
-                total = DoubleMath.add(total, DoubleMath.mul(Double.valueOf(mAdapter.getData().get(i).disprice), Double.valueOf(mAdapter.getData().get(i).count)));
+                total = DoubleMath.add(total, Double.valueOf(mAdapter.getData().get(i).count));
             }
         }
         tv_back_price.setText(DensityUtils.doubleToString(total));

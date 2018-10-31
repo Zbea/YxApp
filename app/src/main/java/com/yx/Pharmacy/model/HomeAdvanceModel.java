@@ -33,6 +33,7 @@ public class HomeAdvanceModel {
     public GoldBean alert;
     public GoldBean custom;
 
+
     public static class GoldBean {
         /**
          * title : 何福林
@@ -50,6 +51,7 @@ public class HomeAdvanceModel {
         public String weburl;
         public String goodsid;
         public String keyword;
+        public String goodstype ;
 
     }
 }

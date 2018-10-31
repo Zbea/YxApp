@@ -120,6 +120,9 @@ public abstract class BaseFragment
                     CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
                 }
                 break;
+            case 6://新特药新区
+                CommendProductActivity.startActivity(mContext,goldBean.pushtype+"",goldBean.goodstype,goldBean.title,1);
+                break;
         }
     }
 

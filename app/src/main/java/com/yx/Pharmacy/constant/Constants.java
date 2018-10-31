@@ -16,15 +16,15 @@ public class Constants {
     //签到页面地址
     public static final String TEST      = "test";
     //签到页面地址
-    public static final String WEB_SIGN       = "https://o2o.yuanxinyy.com:8801/index.php/web/sign";
+    public static final String WEB_SIGN       = BASE_URL+"web/sign";
     //兑换优惠券地址
-    public static final String WEB_COUPON       = "https://o2o.yuanxinyy.com:8801/index.php/web/coupon";
+    public static final String WEB_COUPON       = BASE_URL+"web/coupon";
     //退换政策
-    public static final String WEB_EXCHANGE       = "https://o2o.yuanxinyy.com:8801/index.php/web/exchange";
+    public static final String WEB_EXCHANGE       = BASE_URL+"web/exchange";
     //有奖任务
-    public static final String WEB_PRIZETASK       = "https://o2o.yuanxinyy.com:8801/index.php/web/prizetask";
+    public static final String WEB_PRIZETASK       = BASE_URL+"web/prizetask";
     //关于源鑫
-    public static final String WEB_ABOUT       = "https://o2o.yuanxinyy.com:8801/index.php/web/about";
+    public static final String WEB_ABOUT       = BASE_URL+"web/about";
     // 获取验证码
     public static final String GET_CHECK_CODE      = "sms/send";
     // 注册
@@ -172,13 +172,11 @@ public class Constants {
     public static final String KEY_ITEM_ID = "key_item_id";// 门店id
     public static final String KEY_STORENAME = "key_storename";// 门店名
     public static final String KEY_ADDRESS = "key_storeaddress"; // 门店地址
-    public static final String KEY_COLLECT = "key_collectcount";// 门店收藏数量
+
     public static final String KEY_AVATAR = "key_avatar";// 门头照-头像
     public static final String KEY_TRUENAME = "key_truename";// 门店对应姓名
     public static final String KEY_MOBILE = "key_mobile";// 门店对应手机号
-//    public static final String KEY_CARCOUNT = "key_carcount";// 门店对应购物车数量
     public static final String KEY_COMPANY = "key_company"; // 公司名
-    public static final String KEY_CREDIT = "key_credit"; // 积分
     public static final String KEY_MONEY = "key_money"; // 余额
     public static final String KEY_QRCODE = "key_qrcode"; // 二维码
     public static final String KEY_BANK_USERNAME= "key_bank_usernam"; // 银行卡开户名

@@ -460,14 +460,14 @@ public class ProductDetailActivity
                     } else {
                         b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
                     }
-                } else if (TextUtils.equals(type, "2")) {
-                    b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-                } else if (TextUtils.equals(type, "3")) {
+                }
+//                else if (TextUtils.equals(type, "2")) {
+//                    b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+//                }
+                else if (TextUtils.equals(type, "3")) {
                     b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
                 } else if (TextUtils.equals(type, "9")) {
                     b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_kx);
-                } else {
-                    b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
                 }
 
                 CenterAlignImageSpan imgSpan = new CenterAlignImageSpan(UiUtil.getContext(), b);
@@ -480,13 +480,24 @@ public class ProductDetailActivity
             }
             mTvProductCompany.setText(data.scqy);
             mTvPrice.setText(data.price);
+            mTvTopPrice.setText(data.price);
             if (!TextUtils.isEmpty(NetUtil.getToken())) {
-                mTvOldprice.setText(data.oldprice);
-                mTvOldprice.getPaint()
-                        .setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                mTvOldprice.setText(TextUtils.equals(data.type, "9")?"":"折后约"+data.disprice);
             } else {
                 mTvOldprice.setVisibility(View.GONE);
             }
+
+            if (TextUtils.equals(data.type, "1") || TextUtils.equals(data.type, "3")) {
+                mTvTopUnit.setText(data.gg);
+                mTvTopOldPrice.setText(TextUtils.equals(data.type, "1")?"":"折后约"+data.disprice);
+                if (TextUtils.isEmpty(NetUtil.getToken()))
+                {
+                    mTvTopOldPrice.setVisibility(View.GONE);
+                }
+
+            }
+
+
 
             mTvUnit.setText(data.gg);
             mTvHasSale.setText("已售" + data.sales + "件");
@@ -612,18 +623,12 @@ public class ProductDetailActivity
                 ll_price.setVisibility(View.GONE);
                 rl_gg.setVisibility(View.GONE);
                 tv_sales.setVisibility(View.VISIBLE);
-            } else {
+            }
+            else {
                 mRlInfo.setVisibility(View.GONE);
                 ll_price.setVisibility(View.VISIBLE);
                 rl_gg.setVisibility(View.VISIBLE);
                 tv_sales.setVisibility(View.GONE);
-            }
-
-            if (TextUtils.equals(data.type, "1") || TextUtils.equals(data.type, "3")) {
-                mTvTopOldPrice.setText(data.oldprice);
-                mTvTopOldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-                mTvTopPrice.setText(data.price);
-                mTvTopUnit.setText(data.gg);
             }
 
             if (TextUtils.isEmpty(data.levelnote)) {
@@ -725,7 +730,6 @@ public class ProductDetailActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
                 MainActivity.startActivity(ProductDetailActivity.this, 1);
@@ -756,7 +760,6 @@ public class ProductDetailActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
                 MainActivity.startActivity(ProductDetailActivity.this, 1);

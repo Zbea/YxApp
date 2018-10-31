@@ -99,7 +99,6 @@ public class MyIntegralActivity extends BaseActivity implements IMyIntegralView 
     public void getIntegralData(CreditData data) {
         page++;
         tv_intergral.setText(data.credit);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_CREDIT,data.credit);
         if(data.creditlist!=null&&data.creditlist.size()>0){
             mAdapter.addData(data.creditlist);
         }

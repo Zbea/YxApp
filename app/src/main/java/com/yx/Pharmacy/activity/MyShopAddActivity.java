@@ -842,7 +842,6 @@ public class MyShopAddActivity
             View view = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
             mViewpager = view.findViewById(R.id.viewpager);
             mBigPicAdapter = new BigPicAdapter(files);
-
             mBigPicAdapter.setOnClick(new BigPicAdapter.OnClickFinishListener() {
                 @Override
                 public void onClick() {

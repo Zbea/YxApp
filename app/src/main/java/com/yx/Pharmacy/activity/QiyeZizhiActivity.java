@@ -1,18 +1,27 @@
 package com.yx.Pharmacy.activity;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.adapter.BigPicAdapter;
 import com.yx.Pharmacy.adapter.ImageListAdapter;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.presenter.QiyeZizhiPresenter;
 import com.yx.Pharmacy.view.IQiyeZizhiView;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -36,6 +45,8 @@ public class QiyeZizhiActivity
     RecyclerView   mRvZizhi;
     private QiyeZizhiPresenter mPresenter;
     private ImageListAdapter mAdapter;
+    private Dialog mPhotoDialog= null;
+    private ArrayList<String> imgs=new ArrayList<>();
 
     public static void startActivity(Activity activity) {
         Intent intent = new Intent(activity, QiyeZizhiActivity.class);
@@ -62,6 +73,12 @@ public class QiyeZizhiActivity
         mRvZizhi.setLayoutManager(layoutManager);
         mAdapter = new ImageListAdapter(R.layout.item_qiye_zizhi);
         mRvZizhi.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(new ImageListAdapter.OnItemClickListener() {
+            @Override
+            public void onClick() {
+                showBigPhotoDialog();
+            }
+        });
     }
 
 
@@ -72,6 +89,36 @@ public class QiyeZizhiActivity
 
     @Override
     public void showList(List<String> data) {
+        imgs= (ArrayList<String>) data;
         mAdapter.setNewData(data);
+    }
+
+    /**
+     * 查看图片弹窗
+     */
+    private void showBigPhotoDialog() {
+
+
+        if (mPhotoDialog == null) {
+            mPhotoDialog = new Dialog(this, R.style.Dialog_Fullscreen);
+            View view = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
+            ViewPager mViewpager = view.findViewById(R.id.viewpager);
+            LinearLayout ll=view.findViewById(R.id.ll_num);
+            ll.setVisibility(View.GONE);
+            BigPicAdapter mBigPicAdapter = new BigPicAdapter(imgs);
+            mBigPicAdapter.setOnClick(new BigPicAdapter.OnClickFinishListener() {
+                @Override
+                public void onClick() {
+                    mPhotoDialog.dismiss();
+                }
+            });
+            mViewpager.setAdapter(mBigPicAdapter);
+            mPhotoDialog.setContentView(view);
+            mPhotoDialog.show();
+        }
+        else
+        {
+            mPhotoDialog.show();
+        }
     }
 }

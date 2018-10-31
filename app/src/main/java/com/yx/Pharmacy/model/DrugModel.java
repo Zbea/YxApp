@@ -11,6 +11,7 @@ public class DrugModel {
     private String oldprice;
     private String sprice;
     private String levelnote;
+    public String disprice;
     private int minimun;
     private int maxmun;
     private long starttime;

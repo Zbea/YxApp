@@ -59,6 +59,7 @@ public class HomeDataModel {
         public String    levelnote;
         public String    qprice;
         public String    sprice;
+        public String    disprice;
         public String    minimum;
         public String    maxmum;
         public String    endtime;

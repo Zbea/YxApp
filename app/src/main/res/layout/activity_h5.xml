@@ -37,15 +37,26 @@
         </RelativeLayout>
 
         <TextView
-            android:layout_centerInParent="true"
-            android:id="@+id/tv_h5_title"
-            android:text="标题"
-            android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_h5_title"
+        android:text="标题"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp_18" />
+            android:textSize="@dimen/sp_14" />
     </RelativeLayout>
 
 </RelativeLayout>

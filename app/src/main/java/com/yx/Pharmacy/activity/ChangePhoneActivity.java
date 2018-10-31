@@ -156,14 +156,12 @@ public class ChangePhoneActivity extends BaseActivity implements IChangePwdView 
         SPUtil.delete(this, Constants.KEY_ITEM_ID);
         SPUtil.delete(this, Constants.KEY_STORENAME);
         SPUtil.delete(this, Constants.KEY_ADDRESS);
-        SPUtil.delete(this, Constants.KEY_COLLECT);
         SPUtil.delete(this, Constants.KEY_AVATAR);
         SPUtil.delete(this, Constants.KEY_TRUENAME);
         SPUtil.delete(this, Constants.KEY_MOBILE);
         SPUtil.delete(this, Constants.KEY_TOKEN);
         SPUtil.delete(this, Constants.KEY_MOBILE);
         SPUtil.delete(this, Constants.KEY_COMPANY);
-        SPUtil.delete(this, Constants.KEY_CREDIT);
         SPUtil.delete(this, Constants.KEY_MONEY);
         SPUtil.delete(this, Constants.KEY_QRCODE);
         SPUtil.delete(this, Constants.KEY_BANK);

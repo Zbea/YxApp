@@ -138,6 +138,8 @@ public abstract class BaseActivity
                     // 控销
                     CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
                 }
+            case 6://新特药新区
+                CommendProductActivity.startActivity(mContext,goldBean.pushtype+"",goldBean.goodstype,goldBean.title,1);
                 break;
         }
     }

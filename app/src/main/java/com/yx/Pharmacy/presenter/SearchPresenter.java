@@ -64,10 +64,18 @@ public class SearchPresenter {
      * 销量 2降序  1升序
      * 综合排序 0降序 1升序 （按照商品的订单量进行匹配商品）
      */
-    public void getSearchResult(final BaseActivity activity, final int pagenum, String keyword, int type, boolean isUpOrder, final boolean isRefresh) {
+    public void getSearchResult(final BaseActivity activity, final int pagenum, String keyword,int diff, int type, boolean isUpOrder, final boolean isRefresh) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("pagenum",pagenum+"");
-        urlMap.put("keyword",NetUtil.isStringNull(keyword));
+        if (diff==0)
+        {
+            urlMap.put("keyword",NetUtil.isStringNull(keyword));
+        }
+        else
+        {
+            urlMap.put("goodstype",NetUtil.isStringNull(keyword));
+        }
+
         if(type==1){
             urlMap.put("colligatesort","0");
             urlMap.put("pricesort",isUpOrder?"1":"2");
@@ -106,6 +114,8 @@ public class SearchPresenter {
                     }
                 });
     }
+
+
 
     /**
      * 添加商品到购物车

@@ -54,7 +54,8 @@ public class CategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseViewHold
         ImageView iv_presale = helper.getView(R.id.iv_presale);
         TextView tv_drug_name = helper.getView(R.id.tv_drug_name);
         GlideUtil.loadImg(context,item.getThumb(),iv_category);
-
+        TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
+        tv_oldprice.setText("折后约"+item.disprice);
 
         iv_presale.setVisibility(TextUtils.equals(item.getPresale(),"0")? View.GONE:View.VISIBLE);
         helper.setText(R.id.tv_drug_name,"");
@@ -62,17 +63,13 @@ public class CategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseViewHold
 
         helper.setText(R.id.tv_unit,item.getGg());
         helper.setText(R.id.tv_has_sale,"已售"+item.getSales());
-//        double zhekou=Double.valueOf(item.getPrice())/Double.valueOf(item.getOldprice());
-//        helper.setText(R.id.tv_zhekou,zhekou+"折");
+        tv_drug_name.setText(item.getTitle());
 
         helper.setText(R.id.tv_price,item.getPrice());
         if (!TextUtils.isEmpty(NetUtil.getToken())) {
-            helper.getView(R.id.tv_oldprice).setVisibility(View.VISIBLE);
-            TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
-            tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线
-            tv_oldprice.setText(item.getOldprice());
+            tv_oldprice.setVisibility(View.VISIBLE);
         }else {
-            helper.getView(R.id.tv_oldprice).setVisibility(View.GONE);
+            tv_oldprice.setVisibility(View.GONE);
         }
 
 
@@ -119,16 +116,19 @@ public class CategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseViewHold
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             tv_drug_name.setText(spanString);
             tv_drug_name.append(item.getTitle());
-        }else if(type==2){
-            // 特价
-
-            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString      spanString = new SpannableString("icon ");
-            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-            tv_drug_name.setText(spanString);
-            tv_drug_name.append(item.getTitle());
-        }else if(type==3){
+            tv_oldprice.setVisibility(View.GONE);
+        }
+//        else if(type==2){
+//            // 特价
+//
+//            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+//            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+//            SpannableString      spanString = new SpannableString("icon ");
+//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+//            tv_drug_name.setText(spanString);
+//            tv_drug_name.append(item.getTitle());
+//        }
+        else if(type==3){
             // 满赠
 
             Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
@@ -145,8 +145,7 @@ public class CategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseViewHold
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             tv_drug_name.setText(spanString);
             tv_drug_name.append(item.getTitle());
-        }else {
-            tv_drug_name.setText(item.getTitle());
+            tv_oldprice.setVisibility(View.GONE);
         }
     }
 }

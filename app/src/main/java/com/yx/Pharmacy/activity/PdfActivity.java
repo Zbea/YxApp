@@ -64,7 +64,7 @@ public class PdfActivity extends BaseActivity {
                 finish();
             }
         });
-        file = new File(getExternalCacheDir()+id+ ".pdf");
+        file = new File(getExternalCacheDir()+"/pdf/"+id+ ".pdf");
         //判断是否存在文件
         if (file.exists())
         {

@@ -70,7 +70,6 @@ public class CustomPlugin extends CordovaPlugin {
             String     json       = args.getString(0);
             JSONObject jsonObject = new JSONObject(json);
             String     score     = jsonObject.getString("score");
-            SPUtil.putString(UiUtil.getContext(), Constants.KEY_CREDIT, score);
         }
         //我的优惠券
         if ("visitCoupon".equals(action)){

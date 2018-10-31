@@ -81,6 +81,11 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
 //                }else {
 //                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
 //                }
+                if(item.order_back){
+                    helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
+                }else {
+                    helper.getView(R.id.tv_cancle_order).setVisibility(View.GONE);
+                }
             } else if(item.status==9){//已完成
                 helper.setText(R.id.tv_order_state,"已完成");
                 helper.setText(R.id.tv_order_todo,"再次采购");

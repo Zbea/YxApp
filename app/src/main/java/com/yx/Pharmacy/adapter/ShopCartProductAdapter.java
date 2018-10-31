@@ -211,16 +211,17 @@ public class ShopCartProductAdapter
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
-        }else if(TextUtils.equals(mType,"2")){
-            // 特价
-            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString spanString = new SpannableString("icon ");
-            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-            title.setText(spanString);
-            title.append(item.title);
-
-        }else if(TextUtils.equals(mType,"3")){
+        }
+//        else if(TextUtils.equals(mType,"2")){
+//            // 特价
+//            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+//            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+//            SpannableString spanString = new SpannableString("icon ");
+//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+//            title.setText(spanString);
+//            title.append(item.title);
+//        }
+        else if(TextUtils.equals(mType,"3")){
             // 满赠
             Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
             CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);

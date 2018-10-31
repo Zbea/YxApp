@@ -97,7 +97,6 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
     @Override
     protected void init() {
-        EventBus.getDefault().register(this);
         mImmersionBar = ImmersionBar.with(this);
         mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
         initView();
@@ -316,12 +315,14 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     public void initView() {
         presenter=new MyPresenter(this);
         if (!TextUtils.isEmpty(NetUtil.getToken())&!TextUtils.isEmpty(NetUtil.getStoreid()))
+        {
             presenter.getOrderNum((BaseActivity) mContext);
+        }
+        else
+        {
+            setLogoutView();
+        }
 
-        String collect = SPUtil.getString(UiUtil.getContext(), Constants.KEY_COLLECT);
-        tv_collect_num.setText(TextUtils.isEmpty(collect) ? "0" : collect);
-        String credit = SPUtil.getString(UiUtil.getContext(), Constants.KEY_CREDIT);
-        tv_my_integral.setText(TextUtils.isEmpty(credit) ? "0" : credit);
         if (TextUtils.isEmpty(NetUtil.getToken())) {
             tv_user_name.setText("登录/注册");
         } else {
@@ -359,22 +360,22 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onCollectNumChange(Integer event) {
-        tv_collect_num.setText("" + event);
-    }
-
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        EventBus.getDefault().unregister(this);
-    }
 
     @Override
     public void onResume() {
         super.onResume();
         initView();
+    }
+
+    private void setLogoutView()
+    {
+        setOrderNum(tvPayNum,0);
+        setOrderNum(tvSendNum,0);
+        setOrderNum(tvRecieveNum,0);
+        setOrderNum(tvDoneNum,0);
+        setOrderNum(tvAfterNum,0);
+        tv_collect_num.setText(""+0);
+        tv_my_integral.setText(""+0);
     }
 
     @Override
@@ -386,7 +387,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             setOrderNum(tvRecieveNum,data.waitRecieve);
             setOrderNum(tvDoneNum,data.done);
             setOrderNum(tvAfterNum,data.orderBack);
-
+            tv_collect_num.setText(""+data.collectCount);
+            tv_my_integral.setText(""+data.score);
         }
     }
 

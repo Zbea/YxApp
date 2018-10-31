@@ -642,14 +642,6 @@ public class ShopCartFragment
             }
         }
 
-        try {
-            int credit = DensityUtils.parseInt(SPUtil.getString(mContext, Constants.KEY_CREDIT));
-            int usecredit      = DensityUtils.parseInt(mCreditString);
-            int i = credit - usecredit;
-            SPUtil.putString(mContext, Constants.KEY_CREDIT,String.valueOf(i));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

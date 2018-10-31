@@ -43,7 +43,7 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
 
 
         TextView title = helper.getView(R.id.tv_title);
-//        title.setText(item.title);
+        title.setText(item.title);
         helper.setText(R.id.tv_scqy,item.scqy)
                .setText(R.id.tv_gg,item.gg)
                .setText(R.id.tv_count,"x"+item.count);
@@ -64,16 +64,17 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
-        }else if(type==2){
-            // 特价
-
-            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString      spanString = new SpannableString("icon ");
-            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-            title.setText(spanString);
-            title.append(item.title);
         }
+//        else if(type==2){
+//            // 特价
+//
+//            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+//            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+//            SpannableString      spanString = new SpannableString("icon ");
+//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+//            title.setText(spanString);
+//            title.append(item.title);
+//        }
         else if(type==3){
             // 满赠
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
@@ -90,9 +91,8 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
-        }else {
-            title.setText(item.title);
         }
+
         TextView tv_ph=helper.getView(R.id.tv_ph);
         tv_ph.setVisibility(isAfter?View.VISIBLE:View.GONE);
         if(!isAfter){

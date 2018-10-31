@@ -46,6 +46,7 @@ public class ProductDetailModel {
     public String          itemid;
     public String          elite;
     public String          price;
+    public String       disprice;
     public String       scqy;
     public String          endtime;
     public String       note;

@@ -121,8 +121,6 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
     @Override
     public void cancelSuccess(int position) {
         mAdapter.remove(position);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, ""+mAdapter.getData().size());
-        EventBus.getDefault().post(mAdapter.getData().size());
         if (mAdapter.getData().size()==0)
         {
             setEmptyView();

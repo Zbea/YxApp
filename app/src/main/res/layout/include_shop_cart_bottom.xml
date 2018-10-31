@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
@@ -98,19 +99,28 @@
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40">
+        <CheckBox
+            android:id="@+id/cb_coupon"
+            android:background="@drawable/selector_cb_shopcart"
+            android:button="@null"
+            android:clickable="false"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"/>
         <TextView
             android:text="全场优惠"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_15"
+            android:layout_marginLeft="@dimen/dp_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
-            android:text="(不含控销商品)"
-            android:textColor="@color/color_909090"
-            android:textSize="@dimen/sp_13"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:text="(不含控销秒杀商品)"
+            android:textColor="@color/color_909090"
+            android:textSize="@dimen/sp_13" />
         <TextView
             android:text="无可用优惠券"
             android:id="@+id/tv_coupon_size"
@@ -132,6 +142,7 @@
         android:background="@drawable/white_bg"
         android:paddingStart="@dimen/dp_15"
         android:paddingEnd="@dimen/dp_15"
+        android:visibility="gone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
@@ -161,14 +172,23 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
         android:layout_height="@dimen/dp_40">
+        <CheckBox
+            android:id="@+id/cb_discount"
+            android:background="@drawable/selector_cb_shopcart"
+            android:button="@null"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"/>
         <TextView
             android:id="@+id/tv_overall_coupon"
             android:text="订单金额低于全场优惠价最低金额"
-            android:textColor="@color/text_light"
+            android:textColor="@color/black"
             android:textSize="@dimen/sp_15"
+            android:clickable="false"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 

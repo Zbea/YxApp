@@ -84,7 +84,6 @@ public class ProductDetailPresenter {
                     public void onSuccess(BasisBean<Boolean> response) {
                         if (response.getData() != null) {
                             mView.showCollect();
-                            SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, response.getExtention());
                         }
                         activity.getShortToastByString(response.getAlertmsg());
                     }
@@ -106,7 +105,6 @@ public class ProductDetailPresenter {
                     public void onSuccess(BasisBean<Boolean> response) {
                         if (response.getData() != null) {
                             mView.showDisCollect();
-                            SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, response.getExtention());
                         }
                         activity.getShortToastByString(response.getAlertmsg());
                     }

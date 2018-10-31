@@ -61,7 +61,7 @@ public class BigPicAdapter
             // 文件
             GlideUtil.loadImgByPath(UiUtil.getContext(), url, photoView);
         }else {
-            GlideUtil.loadImg(UiUtil.getContext(), url, photoView);
+            GlideUtil.loadImgNoStyle(UiUtil.getContext(), url, photoView);
         }
         photoView.setOnClickListener(new View.OnClickListener() {
             @Override

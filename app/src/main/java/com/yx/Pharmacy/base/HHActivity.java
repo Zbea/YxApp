@@ -8,12 +8,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.activity.MyIntegralActivity;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
@@ -33,6 +35,7 @@ import com.yx.Pharmacy.widget.LoadingLayout;
 import org.apache.cordova.CordovaActivity;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CordovaWebViewImpl;
+import org.apache.cordova.engine.SystemWebChromeClient;
 import org.apache.cordova.engine.SystemWebView;
 import org.apache.cordova.engine.SystemWebViewClient;
 import org.apache.cordova.engine.SystemWebViewEngine;
@@ -55,28 +58,29 @@ import static com.yx.Pharmacy.activity.LoginActivity.START_LOGIN_RESULT;
  * Created by Administrator on 2017/5/17.
  */
 public class HHActivity
-        extends CordovaActivity
-{
+        extends CordovaActivity {
     @BindView(R.id.webview)
-    SystemWebView  mWebview;
+    SystemWebView mWebview;
     @BindView(R.id.loadlayout)
-    LoadingLayout  loadlayout;
+    LoadingLayout loadlayout;
     @BindView(R.id.include_title)
     RelativeLayout include_title;
     @BindView(R.id.rl_h5_back)
     RelativeLayout rl_h5_back;
     @BindView(R.id.tv_title)
-    TextView       tv_title;
+    TextView tv_title;
+    @BindView(R.id.tv_right)
+    TextView tv_right;
     @BindView(R.id.tv_h5_title)
-    TextView       tv_h5_title;
+    TextView tv_h5_title;
     @BindView(R.id.iv_back)
-    ImageView      mIvBack;
+    ImageView mIvBack;
     @BindView(R.id.rl_back)
     RelativeLayout mRlBack;
     @BindView(R.id.tv_more)
-    TextView       mTvMore;
+    TextView mTvMore;
     @BindView(R.id.iv_more)
-    ImageView      mIvMore;
+    ImageView mIvMore;
     @BindView(R.id.rl_more)
     RelativeLayout mRlMore;
     @BindView(R.id.rl_title)
@@ -98,8 +102,8 @@ public class HHActivity
 
     @Override
     @SuppressLint({"JavascriptInterface",
-                   "SetJavaScriptEnabled",
-                   "AddJavascriptInterface"})
+            "SetJavaScriptEnabled",
+            "AddJavascriptInterface"})
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_h5);
@@ -109,8 +113,8 @@ public class HHActivity
 
 
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
-        String url  = getIntent().getStringExtra(Constants.H5_URL);
-        int    type = getIntent().getIntExtra("type", 0);
+        String url = getIntent().getStringExtra(Constants.H5_URL);
+        int type = getIntent().getIntExtra("type", 0);
         if (type == 0) {
             include_title.setVisibility(View.GONE);
             rl_title.setVisibility(View.VISIBLE);
@@ -121,9 +125,11 @@ public class HHActivity
                 tv_title.setText("退换政策");
             }
         }
+
+        mWebview.getSettings().setDomStorageEnabled(true);
         loadlayout.setStatus(LoadingLayout.Success);
         tv_h5_title.setVisibility(View.GONE);
-        L.i( "onCreate: " + url);
+        L.i("onCreate: " + url);
         //        ConfigXmlParser parser = new ConfigXmlParser();
         //        parser.parse(this);//这里会解析res/xml/config.xml配置文件
         //        CordovaWebView cordovaWebView = new CordovaWebViewImpl(new SystemWebViewEngine(mWebview));//创建一个cordovawebview
@@ -131,9 +137,15 @@ public class HHActivity
         // Set by <content src="index.html" /> in config.xml
         mWebview.getSettings()
                 .setJavaScriptEnabled(true);
-        mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
-                                 "&itemId=" + NetUtil.isStringNull(
-                NetUtil.getItemId()));
+        if (NetUtil.getToken()!=null)
+        {
+            mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+                    "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
+        }
+        else
+        {
+            mWebview.loadUrl(url + "?platform=android");
+        }
         //        mWebview.loadUrl(launchUrl);
 
 //        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
@@ -158,6 +170,38 @@ public class HHActivity
 //
 //        });
 
+        mWebview.setWebChromeClient(new SystemWebChromeClient(mWebview.getParentEngine())
+
+                                    {
+                                        @Override
+                                        public void onReceivedTitle(WebView view, String title) {
+                                            super.onReceivedTitle(view, title);
+                                            L.i("title:"+title);
+                                            String[] infos=title.split("-");
+                                            if (infos!=null&&infos.length>1)
+                                            {
+                                                String titleStr=infos[0];
+                                                String rightStr=infos[1];
+                                                if (!TextUtils.isEmpty(titleStr)) {
+                                                    tv_title.setText(titleStr);
+                                                    tv_title.setVisibility(View.VISIBLE);
+                                                }
+                                                if (!TextUtils.isEmpty(rightStr)&&rightStr.equals("积分明细")) {
+                                                    tv_right.setText(rightStr);
+                                                    tv_right.setVisibility(View.VISIBLE);
+                                                    tv_right.setOnClickListener(new View.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(View v) {
+                                                            MyIntegralActivity.startActivity(HHActivity.this);
+                                                        }
+                                                    });
+                                                }
+                                            }
+
+                                        }
+                                    }
+        );
+
     }
 
     @Override
@@ -169,6 +213,7 @@ public class HHActivity
     protected void createViews() {
         appView.getView().requestFocusFromTouch();
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -176,7 +221,7 @@ public class HHActivity
     }
 
     @OnClick({R.id.rl_back,
-              R.id.rl_h5_back})
+            R.id.rl_h5_back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_back:
@@ -199,45 +244,44 @@ public class HHActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-        if (resultCode==START_LOGIN_RESULT) {
+        if (resultCode == START_LOGIN_RESULT) {
             String url = "javascript:setToken('" + NetUtil.getToken() + "')";
             mWebview.loadUrl(url);
-            loadMyShop(this,true);
+            loadMyShop(this, true);
         }
     }
 
 
-
-    public void loadMyShop(Activity activity,boolean isShow) {
+    public void loadMyShop(Activity activity, boolean isShow) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("doplace","home");
+        urlMap.put("doplace", "home");
         HomeNet.getHomeApi().getMyShop(urlMap).subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
-                   @Override
-                   public void onSuccess(BasisBean<List<MyShopModel>> response) {
-                       if (response.getData()!=null) {
-                           showShopData(response.getData());
-                       }
-                   }
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
+                    @Override
+                    public void onSuccess(BasisBean<List<MyShopModel>> response) {
+                        if (response.getData() != null) {
+                            showShopData(response.getData());
+                        }
+                    }
 
-                   @Override
-                   public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       super.onError(e);
-                   }
-               });
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        super.onError(e);
+                    }
+                });
     }
 
 
     public void showShopData(List<MyShopModel> data) {
-        if (data != null && data.size() > 0){
+        if (data != null && data.size() > 0) {
             // 修改门店认证状态
             SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, true);
         }
         String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-        if (data != null && data.size() > 0&& TextUtils.isEmpty(storename)) {
-            if (data.size()==1) {
+        if (data != null && data.size() > 0 && TextUtils.isEmpty(storename)) {
+            if (data.size() == 1) {
                 MyShopModel myShopModel = data.get(0);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
@@ -245,10 +289,9 @@ public class HHActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
-                String format = "setStoreIdAndItemId('"+myShopModel.storeid+"','"+myShopModel.itemid+"')";
+                String format = "setStoreIdAndItemId('" + myShopModel.storeid + "','" + myShopModel.itemid + "')";
                 mWebview.loadUrl("javascript:" + format);
                 return;
             }
@@ -258,7 +301,7 @@ public class HHActivity
 
 
     private void showChooseStoreDialog(List<MyShopModel> data) {
-        if (mChooseStoreDialog!=null) {
+        if (mChooseStoreDialog != null) {
             if (mChooseStoreDialog.isShown()) {
                 return;
             }
@@ -274,10 +317,9 @@ public class HHActivity
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
                 CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_COLLECT, myShopModel.collectcount);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
                 SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
-                String format = "setStoreIdAndItemId('"+myShopModel.storeid+"','"+myShopModel.itemid+"')";
+                String format = "setStoreIdAndItemId('" + myShopModel.storeid + "','" + myShopModel.itemid + "')";
                 mWebview.loadUrl("javascript:" + format);
             }
         });
@@ -285,7 +327,7 @@ public class HHActivity
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onSelectStore(SelectStoreHhBean bean) {
-        loadMyShop(this,true);
+        loadMyShop(this, true);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

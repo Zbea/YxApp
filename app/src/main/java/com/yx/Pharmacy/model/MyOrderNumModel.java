@@ -18,4 +18,6 @@ public class MyOrderNumModel {
     public int waitRecieve;
     public int done;
     public int orderBack;
+    public int collectCount;
+    public int score;
 }

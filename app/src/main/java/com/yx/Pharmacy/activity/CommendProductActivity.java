@@ -84,6 +84,7 @@ public class CommendProductActivity
     public static final String TYPE  = "type";
     public static final String LEVELID  = "levelid";
     private String mLevelid;
+    private int diff;
 
     public static void startActivity(Activity activity,String type,String levelid) {
         Intent intent = new Intent(activity, CommendProductActivity.class);
@@ -100,6 +101,15 @@ public class CommendProductActivity
         activity.startActivity(intent);
     }
 
+    public static void startActivity(Activity activity,String type,String levelid,String activityname,int diff) {
+        Intent intent = new Intent(activity, CommendProductActivity.class);
+        intent.putExtra(TYPE, type);
+        intent.putExtra(LEVELID, levelid);
+        intent.putExtra("activityname", activityname);
+        intent.putExtra("diff", diff);
+        activity.startActivity(intent);
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_commend_product;
@@ -111,8 +121,8 @@ public class CommendProductActivity
         mType = getIntent().getStringExtra(TYPE);
         mLevelid = getIntent().getStringExtra(LEVELID);
         mTvTitle.setText(getIntent().getStringExtra("activityname"));
+        diff=getIntent().getIntExtra("diff",0);
         mPresenter = new CommendProductPresenter(this);
-
 
         if(TextUtils.equals(mType, "3")){
             mTvTitle.setText("满赠专区");
@@ -150,11 +160,25 @@ public class CommendProductActivity
     }
 
     private void initNestPage() {
-        mPresenter.moreProduct(this,mLevelid,curType,isUp);
+        if (diff==1)
+        {
+            mPresenter.moreProduct(this,mLevelid,curType,isUp,diff);
+        }
+        else
+        {
+            mPresenter.moreProduct(this,mLevelid,curType,isUp);
+        }
     }
 
     private void initData() {
-        mPresenter.loadProduct(this,mLevelid,curType,isUp);
+        if (diff==1)
+        {
+            mPresenter.loadProduct(this,mLevelid,curType,isUp,diff);
+        }
+        else
+        {
+            mPresenter.loadProduct(this,mLevelid,curType,isUp);
+        }
     }
 
     @OnClick({R.id.rl_back,
@@ -185,7 +209,14 @@ public class CommendProductActivity
                         mIvZonghe.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
-                mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                if (diff==1)
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp,diff);
+                }
+                else
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                }
                 break;
             case R.id.ll_price://价格
                 if(curType!=TYPE_jiage){//切换类型
@@ -206,7 +237,14 @@ public class CommendProductActivity
                         mIvPrice.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
-                mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                if (diff==1)
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp,diff);
+                }
+                else
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                }
                 break;
             case R.id.ll_xiaoliang://销量
                 if(curType!=TYPE_xiaoliang){//切换类型
@@ -227,7 +265,14 @@ public class CommendProductActivity
                         mIvXiaoliang.setImageResource(R.drawable.pxxjtdj);
                     }
                 }
-                mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                if (diff==1)
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp,diff);
+                }
+                else
+                {
+                    mPresenter.loadProduct(this,mLevelid,curType,isUp);
+                }
                 break;
         }
     }

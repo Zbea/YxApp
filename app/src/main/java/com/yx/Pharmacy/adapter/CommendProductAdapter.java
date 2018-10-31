@@ -15,6 +15,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.DrugModel;
+import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -38,9 +39,15 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
     protected void convert(BaseViewHolder helper, DrugModel item) {
         ImageView product  = helper.getView(R.id.iv_product);
         TextView  oldPrice = helper.getView(R.id.tv_oldprice);
+        TextView  price = helper.getView(R.id.tv_price);
         TextView  title    = helper.getView(R.id.tv_title);
-        oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-        title.setText("");
+        title.setText(item.getTitle());
+        price.setText(item.getPrice());
+        oldPrice.setText("折后约"+item.disprice);
+        if (TextUtils.isEmpty(NetUtil.getToken()))
+        {
+            oldPrice.setVisibility(View.GONE);
+        }
 
         ViewGroup.LayoutParams layoutParams = product.getLayoutParams();
         layoutParams.height = (DensityUtils.getScreenWidth()-DensityUtils.dp2px(UiUtil.getContext(), 60))/2;
@@ -49,21 +56,21 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
         GlideUtil.loadImg(UiUtil.getContext(), item.getThumb(), product);
         helper.setText(R.id.tv_scqy,item.getScqy())
               .setText(R.id.tv_price,item.getPrice())
-              .setText(R.id.tv_oldprice,item.getOldprice())
               .setText(R.id.tv_gg,item.getGg())
               .setText(R.id.tv_sale,"已售"+item.getSales())
               .setGone(R.id.iv_presale,!TextUtils.equals(item.getPresale(),"0"));
-        if(TextUtils.equals(mType,"2")){
-            // 特价
-            helper.setText(R.id.tv_title,item.getTitle());
-
-            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString      spanString = new SpannableString("icon ");
-            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-            title.setText(spanString);
-            title.append(item.getTitle());
-        }else if(TextUtils.equals(mType, "3")){
+//        if(TextUtils.equals(mType,"2")){
+//            // 特价
+//            helper.setText(R.id.tv_title,item.getTitle());
+//
+//            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+//            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+//            SpannableString      spanString = new SpannableString("icon ");
+//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+//            title.setText(spanString);
+//            title.append(item.getTitle());
+//        }else
+            if(TextUtils.equals(mType, "3")){
             // 满赠
 
             TextView tv_levelnote = helper.getView(R.id.tv_levelnote);
@@ -89,6 +96,7 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.getTitle());
+            oldPrice.setVisibility(View.GONE);
         }
     }
 }

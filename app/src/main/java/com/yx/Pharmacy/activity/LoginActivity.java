@@ -216,7 +216,6 @@ public class LoginActivity
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_TOKEN,data.token);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,data.mobile);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY,data.company);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_CREDIT,data.credit);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_MONEY,data.money);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_QRCODE,data.codeimg);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_BANK,data.bank);

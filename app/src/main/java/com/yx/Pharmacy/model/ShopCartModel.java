@@ -101,6 +101,7 @@ public class ShopCartModel {
         public String     starttime;
         public String     limitnum;
         public String     oprice;
+        public String     disprice;
         public String     usefulprice;
         public String     presale;
         public String     presalenote;
