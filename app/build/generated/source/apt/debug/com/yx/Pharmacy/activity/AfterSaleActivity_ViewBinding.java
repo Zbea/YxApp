@@ -17,9 +17,9 @@ import java.lang.Override;
 public class AfterSaleActivity_ViewBinding implements Unbinder {
   private AfterSaleActivity target;
 
-  private View view2131296774;
+  private View view2131296777;
 
-  private View view2131296509;
+  private View view2131296511;
 
   @UiThread
   public AfterSaleActivity_ViewBinding(AfterSaleActivity target) {
@@ -35,7 +35,7 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
     target.vp_order = Utils.findRequiredViewAsType(source, R.id.vp_order, "field 'vp_order'", ViewPager.class);
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -43,7 +43,7 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'click'");
-    view2131296509 = view;
+    view2131296511 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,9 +63,9 @@ public class AfterSaleActivity_ViewBinding implements Unbinder {
     target.vp_order = null;
     target.topic_viewpager_title = null;
 
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
-    view2131296509.setOnClickListener(null);
-    view2131296509 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
+    view2131296511.setOnClickListener(null);
+    view2131296511 = null;
   }
 }

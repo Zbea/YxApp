@@ -16,49 +16,49 @@ import java.lang.Override;
 public class MyFragment_ViewBinding implements Unbinder {
   private MyFragment target;
 
-  private View view2131297128;
+  private View view2131297131;
 
-  private View view2131296812;
+  private View view2131296814;
 
-  private View view2131296807;
+  private View view2131296809;
 
-  private View view2131296569;
+  private View view2131296571;
 
-  private View view2131296808;
+  private View view2131296810;
 
-  private View view2131296795;
+  private View view2131296797;
 
-  private View view2131296592;
-
-  private View view2131296591;
+  private View view2131296594;
 
   private View view2131296593;
 
-  private View view2131296588;
+  private View view2131296595;
 
   private View view2131296590;
 
-  private View view2131296602;
+  private View view2131296592;
 
-  private View view2131296589;
+  private View view2131296605;
 
-  private View view2131296623;
+  private View view2131296591;
 
-  private View view2131296625;
+  private View view2131296626;
 
-  private View view2131296624;
+  private View view2131296628;
 
   private View view2131296627;
 
-  private View view2131296562;
+  private View view2131296630;
 
-  private View view2131296548;
+  private View view2131296564;
 
-  private View view2131296573;
+  private View view2131296550;
 
-  private View view2131296543;
+  private View view2131296575;
 
-  private View view2131296544;
+  private View view2131296545;
+
+  private View view2131296546;
 
   @UiThread
   public MyFragment_ViewBinding(final MyFragment target, View source) {
@@ -68,7 +68,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_collect_num = Utils.findRequiredViewAsType(source, R.id.tv_collect_num, "field 'tv_collect_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_user_name, "field 'tv_user_name' and method 'onclick'");
     target.tv_user_name = Utils.castView(view, R.id.tv_user_name, "field 'tv_user_name'", TextView.class);
-    view2131297128 = view;
+    view2131297131 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,7 +78,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_my_integral = Utils.findRequiredViewAsType(source, R.id.tv_my_integral, "field 'tv_my_integral'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_user_head, "field 'rl_user_head' and method 'onclick'");
     target.rl_user_head = Utils.castView(view, R.id.rl_user_head, "field 'rl_user_head'", RoundImageView.class);
-    view2131296812 = view;
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +91,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tvDoneNum = Utils.findRequiredViewAsType(source, R.id.tv_done_num, "field 'tvDoneNum'", TextView.class);
     target.tvAfterNum = Utils.findRequiredViewAsType(source, R.id.tv_after_num, "field 'tvAfterNum'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_setting, "method 'onclick'");
-    view2131296807 = view;
+    view2131296809 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +99,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_feedback, "method 'onclick'");
-    view2131296569 = view;
+    view2131296571 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -107,7 +107,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_signin, "method 'onclick'");
-    view2131296808 = view;
+    view2131296810 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +115,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_my_order, "method 'onclick'");
-    view2131296795 = view;
+    view2131296797 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -123,7 +123,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_store, "method 'onclick'");
-    view2131296592 = view;
+    view2131296594 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -131,14 +131,6 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_integral, "method 'onclick'");
-    view2131296591 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.onclick(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_my_wallet, "method 'onclick'");
     view2131296593 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -146,15 +138,15 @@ public class MyFragment_ViewBinding implements Unbinder {
         target.onclick(p0);
       }
     });
-    view = Utils.findRequiredView(source, R.id.ll_my_collect, "method 'onclick'");
-    view2131296588 = view;
+    view = Utils.findRequiredView(source, R.id.ll_my_wallet, "method 'onclick'");
+    view2131296595 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onclick(p0);
       }
     });
-    view = Utils.findRequiredView(source, R.id.ll_my_erweima, "method 'onclick'");
+    view = Utils.findRequiredView(source, R.id.ll_my_collect, "method 'onclick'");
     view2131296590 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -162,8 +154,16 @@ public class MyFragment_ViewBinding implements Unbinder {
         target.onclick(p0);
       }
     });
+    view = Utils.findRequiredView(source, R.id.ll_my_erweima, "method 'onclick'");
+    view2131296592 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onclick(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.ll_qiyezizhi, "method 'onclick'");
-    view2131296602 = view;
+    view2131296605 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -171,7 +171,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_coupons, "method 'onclick'");
-    view2131296589 = view;
+    view2131296591 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -179,7 +179,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_pay, "method 'onclick'");
-    view2131296623 = view;
+    view2131296626 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -187,7 +187,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_send, "method 'onclick'");
-    view2131296625 = view;
+    view2131296628 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -195,14 +195,6 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_receive, "method 'onclick'");
-    view2131296624 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.onclick(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_youjiang_task, "method 'onclick'");
     view2131296627 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -210,8 +202,16 @@ public class MyFragment_ViewBinding implements Unbinder {
         target.onclick(p0);
       }
     });
+    view = Utils.findRequiredView(source, R.id.ll_youjiang_task, "method 'onclick'");
+    view2131296630 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onclick(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.ll_completed, "method 'onclick'");
-    view2131296562 = view;
+    view2131296564 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -219,7 +219,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_after_sales, "method 'onclick'");
-    view2131296548 = view;
+    view2131296550 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -227,7 +227,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_have_need, "method 'onclick'");
-    view2131296573 = view;
+    view2131296575 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -235,7 +235,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_about, "method 'onclick'");
-    view2131296543 = view;
+    view2131296545 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -243,7 +243,7 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_accout_security, "method 'onclick'");
-    view2131296544 = view;
+    view2131296546 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -269,49 +269,49 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tvDoneNum = null;
     target.tvAfterNum = null;
 
-    view2131297128.setOnClickListener(null);
-    view2131297128 = null;
-    view2131296812.setOnClickListener(null);
-    view2131296812 = null;
-    view2131296807.setOnClickListener(null);
-    view2131296807 = null;
-    view2131296569.setOnClickListener(null);
-    view2131296569 = null;
-    view2131296808.setOnClickListener(null);
-    view2131296808 = null;
-    view2131296795.setOnClickListener(null);
-    view2131296795 = null;
-    view2131296592.setOnClickListener(null);
-    view2131296592 = null;
-    view2131296591.setOnClickListener(null);
-    view2131296591 = null;
+    view2131297131.setOnClickListener(null);
+    view2131297131 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
+    view2131296809.setOnClickListener(null);
+    view2131296809 = null;
+    view2131296571.setOnClickListener(null);
+    view2131296571 = null;
+    view2131296810.setOnClickListener(null);
+    view2131296810 = null;
+    view2131296797.setOnClickListener(null);
+    view2131296797 = null;
+    view2131296594.setOnClickListener(null);
+    view2131296594 = null;
     view2131296593.setOnClickListener(null);
     view2131296593 = null;
-    view2131296588.setOnClickListener(null);
-    view2131296588 = null;
+    view2131296595.setOnClickListener(null);
+    view2131296595 = null;
     view2131296590.setOnClickListener(null);
     view2131296590 = null;
-    view2131296602.setOnClickListener(null);
-    view2131296602 = null;
-    view2131296589.setOnClickListener(null);
-    view2131296589 = null;
-    view2131296623.setOnClickListener(null);
-    view2131296623 = null;
-    view2131296625.setOnClickListener(null);
-    view2131296625 = null;
-    view2131296624.setOnClickListener(null);
-    view2131296624 = null;
+    view2131296592.setOnClickListener(null);
+    view2131296592 = null;
+    view2131296605.setOnClickListener(null);
+    view2131296605 = null;
+    view2131296591.setOnClickListener(null);
+    view2131296591 = null;
+    view2131296626.setOnClickListener(null);
+    view2131296626 = null;
+    view2131296628.setOnClickListener(null);
+    view2131296628 = null;
     view2131296627.setOnClickListener(null);
     view2131296627 = null;
-    view2131296562.setOnClickListener(null);
-    view2131296562 = null;
-    view2131296548.setOnClickListener(null);
-    view2131296548 = null;
-    view2131296573.setOnClickListener(null);
-    view2131296573 = null;
-    view2131296543.setOnClickListener(null);
-    view2131296543 = null;
-    view2131296544.setOnClickListener(null);
-    view2131296544 = null;
+    view2131296630.setOnClickListener(null);
+    view2131296630 = null;
+    view2131296564.setOnClickListener(null);
+    view2131296564 = null;
+    view2131296550.setOnClickListener(null);
+    view2131296550 = null;
+    view2131296575.setOnClickListener(null);
+    view2131296575 = null;
+    view2131296545.setOnClickListener(null);
+    view2131296545 = null;
+    view2131296546.setOnClickListener(null);
+    view2131296546 = null;
   }
 }

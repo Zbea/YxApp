@@ -104,13 +104,14 @@
             android:background="@drawable/selector_cb_shopcart"
             android:button="@null"
             android:clickable="false"
+            android:layout_margin="@dimen/dp_10"
             android:layout_width="@dimen/dp_18"
             android:layout_height="@dimen/dp_18"/>
         <TextView
             android:text="全场优惠"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_15"
-            android:layout_marginLeft="@dimen/dp_5"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -179,6 +180,7 @@
             android:background="@drawable/selector_cb_shopcart"
             android:button="@null"
             android:layout_width="@dimen/dp_18"
+            android:layout_margin="@dimen/dp_10"
             android:layout_height="@dimen/dp_18"/>
         <TextView
             android:id="@+id/tv_overall_coupon"
@@ -188,7 +190,6 @@
             android:clickable="false"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 

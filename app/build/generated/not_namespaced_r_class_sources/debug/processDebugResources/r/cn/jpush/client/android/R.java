@@ -21,20 +21,20 @@ public final class R {
         private id() {}
 
         public static final int actionbarLayoutId = 0x7f09001e;
-        public static final int fullWebView = 0x7f0900a5;
-        public static final int imgRichpushBtnBack = 0x7f0900b9;
-        public static final int imgView = 0x7f0900ba;
-        public static final int popLayoutId = 0x7f0901e2;
-        public static final int pushPrograssBar = 0x7f0901ea;
-        public static final int rlRichpushTitleBar = 0x7f090201;
-        public static final int tvRichpushTitle = 0x7f090290;
-        public static final int wvPopwin = 0x7f09039f;
+        public static final int fullWebView = 0x7f0900a7;
+        public static final int imgRichpushBtnBack = 0x7f0900bb;
+        public static final int imgView = 0x7f0900bc;
+        public static final int popLayoutId = 0x7f0901e5;
+        public static final int pushPrograssBar = 0x7f0901ed;
+        public static final int rlRichpushTitleBar = 0x7f090204;
+        public static final int tvRichpushTitle = 0x7f090292;
+        public static final int wvPopwin = 0x7f0903a2;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int jpush_popwin_layout = 0x7f0b00a8;
-        public static final int jpush_webview_layout = 0x7f0b00a9;
+        public static final int jpush_popwin_layout = 0x7f0b00a9;
+        public static final int jpush_webview_layout = 0x7f0b00aa;
     }
     public static final class style {
         private style() {}

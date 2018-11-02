@@ -19,7 +19,7 @@ import java.lang.Override;
 public class SplashActivity_ViewBinding implements Unbinder {
   private SplashActivity target;
 
-  private View view2131296397;
+  private View view2131296399;
 
   @UiThread
   public SplashActivity_ViewBinding(SplashActivity target) {
@@ -35,7 +35,7 @@ public class SplashActivity_ViewBinding implements Unbinder {
     target.vp_guide = Utils.findRequiredViewAsType(source, R.id.vp_guide, "field 'vp_guide'", ViewPager.class);
     view = Utils.findRequiredView(source, R.id.enter_home_page_bottom_layout, "field 'enter_home_page_bottom_layout' and method 'click'");
     target.enter_home_page_bottom_layout = Utils.castView(view, R.id.enter_home_page_bottom_layout, "field 'enter_home_page_bottom_layout'", LinearLayout.class);
-    view2131296397 = view;
+    view2131296399 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +59,7 @@ public class SplashActivity_ViewBinding implements Unbinder {
     target.tv_downcount = null;
     target.rl_downcount = null;
 
-    view2131296397.setOnClickListener(null);
-    view2131296397 = null;
+    view2131296399.setOnClickListener(null);
+    view2131296399 = null;
   }
 }

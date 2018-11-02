@@ -11,7 +11,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.ComendMsActivity;
+import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.MyCouponActivity;
@@ -84,7 +84,7 @@ public class CouponFragment extends BaseFragment  {
                     String type = couponModel.leveltype+"";
                     if (TextUtils.equals(type, "1")) {
                         // 秒杀
-                        ComendMsActivity.startActivity(mContext,couponModel.levelid);
+                        CommendMsActivity.startActivity(mContext,couponModel.levelid);
                     } else if (TextUtils.equals(type, "2")) {
                         // 特价
                         CommendTjActivity.startActivity(mContext, type, couponModel.levelid);

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yx.Pharmacy"
     android:hardwareAccelerated="true"
-    android:versionCode="20181025"
+    android:versionCode="20181028"
     android:versionName="1.0.1" >
 
     <uses-sdk
@@ -65,7 +65,7 @@
     <application
         android:name="com.yx.Pharmacy.base.YxApp"
         android:allowBackup="true"
-        android:hardwareAccelerated="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"

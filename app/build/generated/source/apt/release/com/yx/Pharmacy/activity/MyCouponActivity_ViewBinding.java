@@ -17,9 +17,9 @@ import java.lang.Override;
 public class MyCouponActivity_ViewBinding implements Unbinder {
   private MyCouponActivity target;
 
-  private View view2131296774;
+  private View view2131296777;
 
-  private View view2131296794;
+  private View view2131296796;
 
   @UiThread
   public MyCouponActivity_ViewBinding(MyCouponActivity target) {
@@ -36,7 +36,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
     target.vp_coupon = Utils.findRequiredViewAsType(source, R.id.vp_coupon, "field 'vp_coupon'", ViewPager.class);
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -44,7 +44,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_more, "method 'click'");
-    view2131296794 = view;
+    view2131296796 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -65,9 +65,9 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
     target.vp_coupon = null;
     target.topic_viewpager_title = null;
 
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
-    view2131296794.setOnClickListener(null);
-    view2131296794 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
+    view2131296796.setOnClickListener(null);
+    view2131296796 = null;
   }
 }

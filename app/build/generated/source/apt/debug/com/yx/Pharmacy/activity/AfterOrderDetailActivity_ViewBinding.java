@@ -20,15 +20,15 @@ import java.lang.Override;
 public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
   private AfterOrderDetailActivity target;
 
-  private View view2131296597;
+  private View view2131296600;
 
-  private View view2131296561;
+  private View view2131296563;
 
   private View view2131296315;
 
-  private View view2131296774;
+  private View view2131296777;
 
-  private View view2131296509;
+  private View view2131296511;
 
   @UiThread
   public AfterOrderDetailActivity_ViewBinding(AfterOrderDetailActivity target) {
@@ -54,7 +54,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     target.view_gift_line = Utils.findRequiredView(source, R.id.view_gift_line, "field 'view_gift_line'");
     view = Utils.findRequiredView(source, R.id.ll_open, "field 'll_open' and method 'click'");
     target.ll_open = Utils.castView(view, R.id.ll_open, "field 'll_open'", LinearLayout.class);
-    view2131296597 = view;
+    view2131296600 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'll_close' and method 'click'");
     target.ll_close = Utils.castView(view, R.id.ll_close, "field 'll_close'", LinearLayout.class);
-    view2131296561 = view;
+    view2131296563 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +91,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +99,7 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'click'");
-    view2131296509 = view;
+    view2131296511 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -142,15 +142,15 @@ public class AfterOrderDetailActivity_ViewBinding implements Unbinder {
     target.tvDiscount = null;
     target.btnOk = null;
 
-    view2131296597.setOnClickListener(null);
-    view2131296597 = null;
-    view2131296561.setOnClickListener(null);
-    view2131296561 = null;
+    view2131296600.setOnClickListener(null);
+    view2131296600 = null;
+    view2131296563.setOnClickListener(null);
+    view2131296563 = null;
     view2131296315.setOnClickListener(null);
     view2131296315 = null;
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
-    view2131296509.setOnClickListener(null);
-    view2131296509 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
+    view2131296511.setOnClickListener(null);
+    view2131296511 = null;
   }
 }

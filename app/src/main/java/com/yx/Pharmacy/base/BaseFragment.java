@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.qiyukf.unicorn.api.ConsultSource;
 import com.qiyukf.unicorn.api.Unicorn;
 import com.qiyukf.unicorn.api.YSFUserInfo;
-import com.yx.Pharmacy.activity.ComendMsActivity;
+import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
@@ -22,6 +22,7 @@ import com.yx.Pharmacy.activity.MyShopActivity;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
+import com.yx.Pharmacy.activity.WebviewActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.net.NetUtil;
@@ -86,6 +87,14 @@ public abstract class BaseFragment
         switch (goldBean.pushtype){
             case 1://app跳转活动模块，参数weburl
                 HHActivity.startActivity(mContext,goldBean.weburl);
+//                if (goldBean.weburl.contains("coupon"))
+//                {
+//                    WebviewActivity.startActivity(mContext,goldBean.weburl);
+//                }
+//                else
+//                {
+//                    HHActivity.startActivity(mContext,goldBean.weburl);
+//                }
                 break;
             case 2://app跳转商品详情，参数goodsid
                 ProductDetailActivity.startActivity(mContext,goldBean.goodsid);
@@ -108,7 +117,7 @@ public abstract class BaseFragment
                 String type = goldBean.type;
                 if (TextUtils.equals(type, "1")) {
                     // 秒杀
-                    ComendMsActivity.startActivity(mContext,goldBean.levelid,goldBean.activityname);
+                    CommendMsActivity.startActivity(mContext,goldBean.levelid,goldBean.activityname);
                 } else if (TextUtils.equals(type, "2")) {
                     // 特价
                     CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);

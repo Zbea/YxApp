@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
-import com.yx.Pharmacy.activity.ComendMsActivity;
+import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.MessageDetailActivity;
@@ -361,7 +361,7 @@ public class MessageFragment
         public void godata7Activity(String levelid, String type) {
             if (TextUtils.equals(type, "1")) {
                 // 秒杀
-                ComendMsActivity.startActivity(mContext,levelid);
+                CommendMsActivity.startActivity(mContext,levelid);
             } else if (TextUtils.equals(type, "2")) {
                 // 特价
                 CommendTjActivity.startActivity(mContext, type,levelid);

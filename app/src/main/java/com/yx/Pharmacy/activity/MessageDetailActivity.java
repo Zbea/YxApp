@@ -216,7 +216,7 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
         public void goZoneActivity(int type,int levelid) {
             if (TextUtils.equals(String.valueOf(type), "1")) {
                 // 秒杀
-                ComendMsActivity.startActivity(MessageDetailActivity.this,""+levelid);
+                CommendMsActivity.startActivity(MessageDetailActivity.this,""+levelid);
             } else if (TextUtils.equals(String.valueOf(type), "2")) {
                 // 特价
                 CommendTjActivity.startActivity(MessageDetailActivity.this, String.valueOf(type), ""+levelid);
@@ -233,7 +233,7 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
         public void godata7Activity(String levelid, String type) {
             if (TextUtils.equals(type, "1")) {
                 // 秒杀
-                ComendMsActivity.startActivity(MessageDetailActivity.this,levelid);
+                CommendMsActivity.startActivity(MessageDetailActivity.this,levelid);
             } else if (TextUtils.equals(type, "2")) {
                 // 特价
                 CommendTjActivity.startActivity(MessageDetailActivity.this, type, levelid);

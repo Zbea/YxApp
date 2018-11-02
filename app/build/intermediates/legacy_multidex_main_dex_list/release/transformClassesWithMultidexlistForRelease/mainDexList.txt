@@ -254,7 +254,6 @@ com/yx/Pharmacy/base/BaseFragment.class
 com/yx/Pharmacy/base/HHActivity.class
 com/yx/Pharmacy/base/YxApp.class
 com/yx/Pharmacy/fragment/MessageFragment.class
-com/yx/Pharmacy/fragment/MyFragment.class
 com/yx/Pharmacy/loader/QiyuImageLoader.class
 com/yx/Pharmacy/manage/MessageIsReadNumManage$MessageIsReadNumManageListener.class
 com/yx/Pharmacy/net/NetUtil.class
@@ -264,7 +263,6 @@ com/yx/Pharmacy/util/LogUtils$TYPE.class
 com/yx/Pharmacy/util/UiUtil.class
 com/yx/Pharmacy/view/IMainView.class
 com/yx/Pharmacy/view/IMessageView.class
-com/yx/Pharmacy/view/IMyOrderNumView.class
 com/yx/Pharmacy/view/IMyShopView.class
 com/yx/Pharmacy/widget/LoadingLayout$Flavour.class
 io/reactivex/Completable.class

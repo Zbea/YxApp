@@ -26,10 +26,11 @@ buildscript {
         maven {
             url "https://maven.google.com"
         }
+        google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 
@@ -180,7 +181,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 26
         versionCode 20181028
-        versionName "1.0.1"
+        versionName "1.0.2"
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion

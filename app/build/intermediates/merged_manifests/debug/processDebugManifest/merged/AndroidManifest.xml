@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yx.Pharmacy"
     android:hardwareAccelerated="true"
-    android:versionCode="20181025"
-    android:versionName="1.0.1" >
+    android:versionCode="20181028"
+    android:versionName="1.0.2" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -138,6 +138,7 @@
         <activity android:name="com.yx.Pharmacy.activity.PayActivity" />
         <activity android:name="com.yx.Pharmacy.activity.CommendProductActivity" />
         <activity android:name="com.yx.Pharmacy.activity.PdfActivity" />
+        <activity android:name="com.yx.Pharmacy.activity.WebviewActivity" />
         <!-- ============= 极光推送 Receiver  start ========= -->
         <receiver
             android:name="com.yx.Pharmacy.receiver.YxJPushReceiver"
@@ -201,7 +202,7 @@
         <activity android:name="com.yx.Pharmacy.base.HHActivity" />
         <activity android:name="com.yx.Pharmacy.activity.MessageDetailActivity" />
         <activity android:name="com.yx.Pharmacy.activity.TestBannerActivity" />
-        <activity android:name="com.yx.Pharmacy.activity.ComendMsActivity" />
+        <activity android:name="com.yx.Pharmacy.activity.CommendMsActivity" />
         <activity android:name="com.yx.Pharmacy.activity.CommendTjActivity" />
         <activity android:name="com.yx.Pharmacy.activity.TokeOutActivity" />
         <activity android:name="com.yx.Pharmacy.activity.BankActivity" />

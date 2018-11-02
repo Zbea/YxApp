@@ -20,13 +20,10 @@ import android.widget.Toast;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.CaptureActivity;
-import com.yx.Pharmacy.activity.ComendMsActivity;
+import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
-import com.yx.Pharmacy.activity.LoginActivity;
-import com.yx.Pharmacy.activity.MyShopActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.adapter.BannerViewHolder;
@@ -47,7 +44,6 @@ import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
 import com.yx.Pharmacy.model.MyShopModel;
-import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.HomeDataPresenter;
 import com.yx.Pharmacy.util.ComMethodsUtil;
 import com.yx.Pharmacy.util.GlideUtil;
@@ -222,7 +218,7 @@ public class HomePageFragment
                     case R.id.iv_title:
                         if (TextUtils.equals(type, "1")) {
                             // 秒杀
-                            ComendMsActivity.startActivity(mContext,homeDataModel.levelid,homeDataModel.activityname);
+                            CommendMsActivity.startActivity(mContext,homeDataModel.levelid,homeDataModel.activityname);
                         } else if (TextUtils.equals(type, "2")) {
                             // 特价
                             CommendTjActivity.startActivity(mContext, type, homeDataModel.levelid,homeDataModel.activityname);

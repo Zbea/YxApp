@@ -15,9 +15,9 @@ import java.lang.Override;
 public class CategoryFragment_ViewBinding implements Unbinder {
   private CategoryFragment target;
 
-  private View view2131296608;
+  private View view2131296611;
 
-  private View view2131296804;
+  private View view2131296806;
 
   @UiThread
   public CategoryFragment_ViewBinding(final CategoryFragment target, View source) {
@@ -26,7 +26,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
     View view;
     target.rvSort = Utils.findRequiredViewAsType(source, R.id.rv_sort, "field 'rvSort'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_search, "method 'click'");
-    view2131296608 = view;
+    view2131296611 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -34,7 +34,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
-    view2131296804 = view;
+    view2131296806 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -52,9 +52,9 @@ public class CategoryFragment_ViewBinding implements Unbinder {
 
     target.rvSort = null;
 
-    view2131296608.setOnClickListener(null);
-    view2131296608 = null;
-    view2131296804.setOnClickListener(null);
-    view2131296804 = null;
+    view2131296611.setOnClickListener(null);
+    view2131296611 = null;
+    view2131296806.setOnClickListener(null);
+    view2131296806 = null;
   }
 }

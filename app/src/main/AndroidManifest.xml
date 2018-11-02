@@ -122,6 +122,7 @@
         <activity android:name=".activity.PayActivity" />
         <activity android:name=".activity.CommendProductActivity" />
         <activity android:name=".activity.PdfActivity" />
+        <activity android:name=".activity.WebviewActivity" />
         <!-- ============= 极光推送 Receiver  start ========= -->
         <receiver
             android:name=".receiver.YxJPushReceiver"
@@ -185,7 +186,7 @@
         <activity android:name=".base.HHActivity" />
         <activity android:name=".activity.MessageDetailActivity" />
         <activity android:name=".activity.TestBannerActivity" />
-        <activity android:name=".activity.ComendMsActivity" />
+        <activity android:name=".activity.CommendMsActivity" />
         <activity android:name=".activity.CommendTjActivity" />
         <activity android:name=".activity.TokeOutActivity" />
         <activity android:name=".activity.BankActivity" />

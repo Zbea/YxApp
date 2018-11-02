@@ -125,8 +125,6 @@ public class HHActivity
                 tv_title.setText("退换政策");
             }
         }
-
-        mWebview.getSettings().setDomStorageEnabled(true);
         loadlayout.setStatus(LoadingLayout.Success);
         tv_h5_title.setVisibility(View.GONE);
         L.i("onCreate: " + url);
@@ -135,19 +133,11 @@ public class HHActivity
         //        CordovaWebView cordovaWebView = new CordovaWebViewImpl(new SystemWebViewEngine(mWebview));//创建一个cordovawebview
         //        cordovaWebView.init(new CordovaInterfaceImpl(this), parser.getPluginEntries(), parser.getPreferences());//初始化
         // Set by <content src="index.html" /> in config.xml
-        mWebview.getSettings()
-                .setJavaScriptEnabled(true);
-        if (NetUtil.getToken()!=null)
-        {
-            mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
-                    "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
-        }
-        else
-        {
-            mWebview.loadUrl(url + "?platform=android");
-        }
-        //        mWebview.loadUrl(launchUrl);
-
+        mWebview.getSettings().setJavaScriptEnabled(true);
+//        mWebview.getSettings().setDomStorageEnabled(true);
+        mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+                "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
+        L.i("onCreate: " + mWebview.getUrl());
 //        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
 //            @Override
 //            public void onPageFinished(WebView view, String url) {
@@ -169,6 +159,17 @@ public class HHActivity
 //            }
 //
 //        });
+
+        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+                        "&itemId=" + NetUtil.isStringNull(
+                        NetUtil.getItemId()));
+                return true;
+            }
+
+        });
 
         mWebview.setWebChromeClient(new SystemWebChromeClient(mWebview.getParentEngine())
 

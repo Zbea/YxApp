@@ -15,17 +15,17 @@ import java.lang.IllegalStateException;
 import java.lang.Override;
 
 public class ComendMsActivity_ViewBinding implements Unbinder {
-  private ComendMsActivity target;
+  private CommendMsActivity target;
 
-  private View view2131296774;
+  private View view2131296777;
 
   @UiThread
-  public ComendMsActivity_ViewBinding(ComendMsActivity target) {
+  public ComendMsActivity_ViewBinding(CommendMsActivity target) {
     this(target, target.getWindow().getDecorView());
   }
 
   @UiThread
-  public ComendMsActivity_ViewBinding(final ComendMsActivity target, View source) {
+  public ComendMsActivity_ViewBinding(final CommendMsActivity target, View source) {
     this.target = target;
 
     View view;
@@ -33,7 +33,7 @@ public class ComendMsActivity_ViewBinding implements Unbinder {
     target.vp_order = Utils.findRequiredViewAsType(source, R.id.vp_order, "field 'vp_order'", ViewPager.class);
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +45,7 @@ public class ComendMsActivity_ViewBinding implements Unbinder {
   @Override
   @CallSuper
   public void unbind() {
-    ComendMsActivity target = this.target;
+    CommendMsActivity target = this.target;
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
@@ -53,7 +53,7 @@ public class ComendMsActivity_ViewBinding implements Unbinder {
     target.vp_order = null;
     target.topic_viewpager_title = null;
 
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
   }
 }

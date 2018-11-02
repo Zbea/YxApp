@@ -68,13 +68,13 @@
                         android:background="@drawable/selector_cb_shopcart"
                         android:button="@null"
                         android:clickable="false"
+                        android:layout_margin="@dimen/dp_10"
                         android:layout_width="@dimen/dp_18"
                         android:layout_height="@dimen/dp_18"/>
 
                     <TextView
                         android:textSize="@dimen/sp_15"
                         android:textColor="@color/black"
-                        android:layout_marginStart="@dimen/dp_8"
                         android:text="全选"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

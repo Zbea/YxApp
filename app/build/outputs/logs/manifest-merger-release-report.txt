@@ -290,7 +290,7 @@ MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\
 	android:label
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:49:9-41
 	android:hardwareAccelerated
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:47:9-43
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:47:9-44
 	android:allowBackup
 		ADDED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\f01f1d4f1e1cff97155048263e7366bf\AndroidManifest.xml:12:9-35
 	android:icon

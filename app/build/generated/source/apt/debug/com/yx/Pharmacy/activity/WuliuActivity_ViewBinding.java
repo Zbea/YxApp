@@ -16,7 +16,7 @@ import java.lang.Override;
 public class WuliuActivity_ViewBinding implements Unbinder {
   private WuliuActivity target;
 
-  private View view2131296774;
+  private View view2131296777;
 
   @UiThread
   public WuliuActivity_ViewBinding(WuliuActivity target) {
@@ -34,7 +34,7 @@ public class WuliuActivity_ViewBinding implements Unbinder {
     target.tv_wuliu_right2 = Utils.findRequiredViewAsType(source, R.id.tv_wuliu_right2, "field 'tv_wuliu_right2'", TextView.class);
     target.tv_wuliu_right3 = Utils.findRequiredViewAsType(source, R.id.tv_wuliu_right3, "field 'tv_wuliu_right3'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class WuliuActivity_ViewBinding implements Unbinder {
     target.tv_wuliu_right2 = null;
     target.tv_wuliu_right3 = null;
 
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
   }
 }

@@ -19,9 +19,9 @@ import org.apache.cordova.engine.SystemWebView;
 public class HHActivity_ViewBinding implements Unbinder {
   private HHActivity target;
 
-  private View view2131296788;
+  private View view2131296791;
 
-  private View view2131296774;
+  private View view2131296777;
 
   @UiThread
   public HHActivity_ViewBinding(HHActivity target) {
@@ -38,7 +38,7 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.include_title = Utils.findRequiredViewAsType(source, R.id.include_title, "field 'include_title'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_h5_back, "field 'rl_h5_back' and method 'onViewClicked'");
     target.rl_h5_back = Utils.castView(view, R.id.rl_h5_back, "field 'rl_h5_back'", RelativeLayout.class);
-    view2131296788 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,11 +46,12 @@ public class HHActivity_ViewBinding implements Unbinder {
       }
     });
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
+    target.tv_right = Utils.findRequiredViewAsType(source, R.id.tv_right, "field 'tv_right'", TextView.class);
     target.tv_h5_title = Utils.findRequiredViewAsType(source, R.id.tv_h5_title, "field 'tv_h5_title'", TextView.class);
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onViewClicked'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296774 = view;
+    view2131296777 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,6 +76,7 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.include_title = null;
     target.rl_h5_back = null;
     target.tv_title = null;
+    target.tv_right = null;
     target.tv_h5_title = null;
     target.mIvBack = null;
     target.mRlBack = null;
@@ -83,9 +85,9 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.mRlMore = null;
     target.rl_title = null;
 
-    view2131296788.setOnClickListener(null);
-    view2131296788 = null;
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131296777.setOnClickListener(null);
+    view2131296777 = null;
   }
 }
