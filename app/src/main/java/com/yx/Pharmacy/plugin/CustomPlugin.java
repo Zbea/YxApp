@@ -3,14 +3,18 @@ package com.yx.Pharmacy.plugin;
 import android.content.Intent;
 
 import com.yx.Pharmacy.MainActivity;
+import com.yx.Pharmacy.activity.CommendProductActivity;
+import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyCouponActivity;
 import com.yx.Pharmacy.activity.MyIntegralActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.BackHhBean;
 import com.yx.Pharmacy.model.SelectStoreHhBean;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -87,6 +91,24 @@ public class CustomPlugin extends CordovaPlugin {
             String message = args.getString(0);
             this.coolMethod(message, callbackContext);
             return true;
+        }
+        //关键字搜索的方法visitSearch
+        if ("visitSearch".equals(action)){
+            String     json       = args.getString(0);
+            JSONObject jsonObject = new JSONObject(json);
+            SearchActivity.startActivity(cordova.getActivity(),jsonObject.getString("keyWord"));
+        }
+        //商品类型搜索方法名是
+        if ("visitNewPharmacy".equals(action)){
+            String     json       = args.getString(0);
+            JSONObject jsonObject = new JSONObject(json);
+            CommendProductActivity.startActivity(cordova.getActivity(),"0",jsonObject.getString("goodsType"),jsonObject.getString("activityName"),1);
+        }
+        //专区
+        if ("visitActive".equals(action)){
+            String     json       = args.getString(0);
+            JSONObject jsonObject = new JSONObject(json);
+            CommendTjActivity.startActivity(cordova.getActivity(),"0",jsonObject.getString("levelId"),jsonObject.getString("activityName"));
         }
         return false;
     }

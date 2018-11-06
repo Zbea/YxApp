@@ -696,25 +696,25 @@ public final class R {
         public static final int abc_search_dropdown_item_icons_2line = 0x7f0b0017;
         public static final int abc_search_view = 0x7f0b0018;
         public static final int abc_select_dialog_material = 0x7f0b0019;
-        public static final int notification_media_action = 0x7f0b00ae;
-        public static final int notification_media_cancel_action = 0x7f0b00af;
-        public static final int notification_template_big_media = 0x7f0b00b0;
-        public static final int notification_template_big_media_narrow = 0x7f0b00b2;
-        public static final int notification_template_media = 0x7f0b00b7;
-        public static final int notification_template_part_chronometer = 0x7f0b00b9;
-        public static final int notification_template_part_time = 0x7f0b00ba;
-        public static final int select_dialog_item_material = 0x7f0b00cb;
-        public static final int select_dialog_multichoice_material = 0x7f0b00cc;
-        public static final int select_dialog_singlechoice_material = 0x7f0b00cd;
-        public static final int support_simple_spinner_dropdown_item = 0x7f0b00ce;
-        public static final int ucrop_activity_photobox = 0x7f0b00cf;
-        public static final int ucrop_aspect_ratio = 0x7f0b00d0;
-        public static final int ucrop_controls = 0x7f0b00d1;
-        public static final int ucrop_layout_rotate_wheel = 0x7f0b00d2;
-        public static final int ucrop_layout_scale_wheel = 0x7f0b00d3;
-        public static final int ucrop_picture_activity_multi_cutting = 0x7f0b00d4;
-        public static final int ucrop_picture_gf_adapter_edit_list = 0x7f0b00d5;
-        public static final int ucrop_view = 0x7f0b00d6;
+        public static final int notification_media_action = 0x7f0b00af;
+        public static final int notification_media_cancel_action = 0x7f0b00b0;
+        public static final int notification_template_big_media = 0x7f0b00b1;
+        public static final int notification_template_big_media_narrow = 0x7f0b00b3;
+        public static final int notification_template_media = 0x7f0b00b8;
+        public static final int notification_template_part_chronometer = 0x7f0b00ba;
+        public static final int notification_template_part_time = 0x7f0b00bb;
+        public static final int select_dialog_item_material = 0x7f0b00cc;
+        public static final int select_dialog_multichoice_material = 0x7f0b00cd;
+        public static final int select_dialog_singlechoice_material = 0x7f0b00ce;
+        public static final int support_simple_spinner_dropdown_item = 0x7f0b00cf;
+        public static final int ucrop_activity_photobox = 0x7f0b00d0;
+        public static final int ucrop_aspect_ratio = 0x7f0b00d1;
+        public static final int ucrop_controls = 0x7f0b00d2;
+        public static final int ucrop_layout_rotate_wheel = 0x7f0b00d3;
+        public static final int ucrop_layout_scale_wheel = 0x7f0b00d4;
+        public static final int ucrop_picture_activity_multi_cutting = 0x7f0b00d5;
+        public static final int ucrop_picture_gf_adapter_edit_list = 0x7f0b00d6;
+        public static final int ucrop_view = 0x7f0b00d7;
     }
     public static final class menu {
         private menu() {}

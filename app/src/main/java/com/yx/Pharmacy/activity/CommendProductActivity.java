@@ -78,13 +78,13 @@ public class CommendProductActivity
     @BindView(R.id.loadinglayout)
     LoadingLayout  mLoadinglayout;
     private CommendProductAdapter mAdapter;
-    private String mType;
+    private String mType;//专区类型
     private CommendProductPresenter mPresenter;
 
     public static final String TYPE  = "type";
     public static final String LEVELID  = "levelid";
     private String mLevelid;
-    private int diff;
+    private int diff;//请求参数区别
 
     public static void startActivity(Activity activity,String type,String levelid) {
         Intent intent = new Intent(activity, CommendProductActivity.class);
@@ -124,11 +124,6 @@ public class CommendProductActivity
         diff=getIntent().getIntExtra("diff",0);
         mPresenter = new CommendProductPresenter(this);
 
-        if(TextUtils.equals(mType, "3")){
-            mTvTitle.setText("满赠专区");
-        }else if(TextUtils.equals(mType, "9")){
-            mTvTitle.setText("控销专区");
-        }
         initRecycler();
         initData();
     }

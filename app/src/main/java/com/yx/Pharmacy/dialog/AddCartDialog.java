@@ -73,6 +73,10 @@ public class AddCartDialog {
         tvFactory.setText(data.scqy);
         TextView tvPrice=win.findViewById(R.id.tv_price);
         TextView tvInfo=win.findViewById(R.id.tv_info);
+        TextView tvRiqi=win.findViewById(R.id.tv_riqi);
+        TextView tvYouxiao=win.findViewById(R.id.tv_youxiao);
+        tvRiqi.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.birthtime) * 1000));
+        tvYouxiao.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.validtime) * 1000));
         AmountView amountView=win.findViewById(R.id.amount_view);
         amountView.setMinNum(DensityUtils.parseInt(data.minimum));
         amountView.setAddNum(DensityUtils.parseInt(data.addmum));

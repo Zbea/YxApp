@@ -17,6 +17,7 @@ import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.manage.MessageIsReadNumManage;
+import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.util.L;
 
 import org.greenrobot.eventbus.EventBus;
@@ -60,7 +61,10 @@ public class YxJPushReceiver
                 JSONObject jsonObject = null;
                 try {
                     jsonObject = new JSONObject(extra);
-                    ReceiverDialogManage.newInstance().showDialog(jsonObject);
+                    if (!TextUtils.isEmpty(NetUtil.getToken()))
+                    {
+                        ReceiverDialogManage.newInstance().showDialog(jsonObject);
+                    }
 //                    String pushtype = jsonObject.optString("pushtype");
 //                    JSONObject finalJsonObject = jsonObject;
 //                    ComDialog comDialog = new ComDialog(context);

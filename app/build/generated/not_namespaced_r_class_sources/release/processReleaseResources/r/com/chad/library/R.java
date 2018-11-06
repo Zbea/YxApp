@@ -44,7 +44,7 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int quick_view_load_more = 0x7f0b00ca;
+        public static final int quick_view_load_more = 0x7f0b00cb;
     }
     public static final class string {
         private string() {}

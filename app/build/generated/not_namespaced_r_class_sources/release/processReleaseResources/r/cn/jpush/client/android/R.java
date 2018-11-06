@@ -33,8 +33,8 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int jpush_popwin_layout = 0x7f0b00a8;
-        public static final int jpush_webview_layout = 0x7f0b00a9;
+        public static final int jpush_popwin_layout = 0x7f0b00a9;
+        public static final int jpush_webview_layout = 0x7f0b00aa;
     }
     public static final class style {
         private style() {}

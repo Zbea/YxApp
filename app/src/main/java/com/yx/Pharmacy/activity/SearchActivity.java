@@ -116,7 +116,6 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
     TextView tv_num;
 
     private String keyword;
-    private int type=0;
 
     public static void startActivity(Activity activity,String keyword) {
         Intent intent = new Intent(activity, SearchActivity.class);
@@ -124,14 +123,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         activity.startActivity(intent);
     }
 
-    public static void startActivity(Activity activity,String keyword,String s,int type) {
-        Intent intent = new Intent(activity, SearchActivity.class);
-        intent.putExtra("keyword",keyword);
-        intent.putExtra("title",s);
-        intent.putExtra("type",type);
-        activity.startActivity(intent);
 
-    }
 
     @Override
     protected int getLayoutId() {
@@ -151,7 +143,6 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
 
         ImmersionBarUtil.setBarColor(R.color.color_main,this,false);
         keyword=getIntent().getStringExtra("keyword");
-        type=getIntent().getIntExtra("type",0);
         mPresenter = new SearchPresenter(this);
         initView();
         initData();
@@ -195,7 +186,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
     }
 
     private void initNestPage() {
-        mPresenter.getSearchResult(SearchActivity.this,page+1,edit_search.getText().toString(),type,curType,isUp,false);
+        mPresenter.getSearchResult(SearchActivity.this,page+1,edit_search.getText().toString(),curType,isUp,false);
     }
 
     private void initView() {
@@ -220,7 +211,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                         ll_tuijian.setVisibility(View.GONE);
                         ll_search_result.setVisibility(View.VISIBLE);
                         page=1;
-                        mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),type,curType,isUp,true);
+                        mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
                         addSearchHistory(edit_search.getText().toString());
                     }
                     return true;
@@ -241,7 +232,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
             public void onRefresh() {
                 //TODO 刷新
                 page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),type,3,false,true);
+                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),3,false,true);
             }
         });
         if(!TextUtils.isEmpty(keyword)){
@@ -250,7 +241,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
             ll_search_result.setVisibility(View.VISIBLE);
             page=1;
             edit_search.setText(keyword);
-            mPresenter.getSearchResult(SearchActivity.this,page,keyword,type,curType,isUp,true);
+            mPresenter.getSearchResult(SearchActivity.this,page,keyword,curType,isUp,true);
         }
     }
 
@@ -277,7 +268,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         ll_tuijian.setVisibility(View.GONE);
         ll_search_result.setVisibility(View.VISIBLE);
         page=1;
-        mPresenter.getSearchResult(SearchActivity.this,page,name,type,curType,isUp,true);
+        mPresenter.getSearchResult(SearchActivity.this,page,name,curType,isUp,true);
     }
 
 
@@ -435,7 +426,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                     }
                 }
                 page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),type,curType,isUp,true);
+                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
                 break;
             case R.id.ll_price://价格
                 if(curType!=TYPE_jiage){//切换类型
@@ -459,7 +450,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                     }
                 }
                 page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),type,curType,isUp,true);
+                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
                 break;
             case R.id.ll_xiaoliang://销量
                 if(curType!=TYPE_xiaoliang){//切换类型
@@ -483,7 +474,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                     }
                 }
                 page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),type,curType,isUp,true);
+                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
                 break;
             case R.id.ll_change_layout://切换布局
                 if(mAdapter!=null)drugModels=mAdapter.getData();

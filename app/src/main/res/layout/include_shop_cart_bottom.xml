@@ -119,6 +119,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:singleLine="true"
             android:text="(不含控销秒杀商品)"
             android:textColor="@color/color_909090"
             android:textSize="@dimen/sp_13" />
@@ -190,6 +191,8 @@
             android:clickable="false"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 

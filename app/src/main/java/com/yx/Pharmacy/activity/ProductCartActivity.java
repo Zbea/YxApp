@@ -442,6 +442,7 @@ public class ProductCartActivity
         mMoney = 0.0;
         //折扣后金额
         mDiscountMoney = 0.0;
+
         if (!cbCoupon.isChecked()&&!cbDiscount.isChecked())
         {
             type=0;
@@ -679,16 +680,18 @@ public class ProductCartActivity
         mTvPayPrice.setText(DensityUtils.doubleToString(mMoney));
 
         //-----------全场优惠-------
+        if (mResultBean!=null&&mResultBean.orderlimit!=null)
+        {
+            double i = DensityUtils.parseDouble(mResultBean.orderlimit);
+            if (mMoney >= i) {
+                mTvBuy.setText("去结算");
+                mTvBuy.setEnabled(true);
 
-        double i = DensityUtils.parseDouble(mResultBean.orderlimit);
-        if (mMoney >= i) {
-            mTvBuy.setText("去结算");
-            mTvBuy.setEnabled(true);
-
-        } else {
-            mTvBuy.setText("满" + DensityUtils.doubleTrans2(i) + "起购");
-            mTvBuy.setEnabled(false);
-            setCbView();
+            } else {
+                mTvBuy.setText("满" + DensityUtils.doubleTrans2(i) + "起购");
+                mTvBuy.setEnabled(false);
+                setCbView();
+            }
         }
 
         checkAllCoupon();
