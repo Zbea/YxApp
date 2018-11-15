@@ -123,7 +123,7 @@ public abstract class BaseFragment
                     CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
                 } else if (TextUtils.equals(type, "3")) {
                     // 满减
-                    CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
+                    CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
                 } else if (TextUtils.equals(type, "9")) {
                     // 控销
                     CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);

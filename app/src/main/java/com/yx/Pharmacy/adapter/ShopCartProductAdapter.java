@@ -18,8 +18,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.ShopCartModel;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.widget.AmountView;
 import com.yx.Pharmacy.widget.CenterAlignImageSpan;
@@ -51,12 +53,14 @@ public class ShopCartProductAdapter
         ImageView    product     = helper.getView(R.id.iv_product);
         ImageView    iv_state    = helper.getView(R.id.iv_state);
         TextView     title       = helper.getView(R.id.tv_title);
+        TextView     time       = helper.getView(R.id.tv_time);
         MarqueeView  marqueeView = helper.getView(R.id.marqueeView);
         CheckBox     cbSelect    = helper.getView(R.id.cb_select);
         LinearLayout ll_item     = helper.getView(R.id.ll_item);
         LinearLayout ll_gift     = helper.getView(R.id.ll_gift);
         AmountView   amountView  = helper.getView(R.id.amount_view);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
+//        time.setText("有效期："+DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.endtimes)));
         List<String> info = item.info;
         if (info!=null&&info.size()>0) {
             marqueeView.setVisibility(View.VISIBLE);
@@ -72,7 +76,6 @@ public class ShopCartProductAdapter
         }else {
             marqueeView.setVisibility(View.GONE);
         }
-
         cbSelect.setChecked(item.isSelect);
         if (item.isSelect) {
             ll_item.setBackgroundColor(Color.parseColor("#fafafa"));

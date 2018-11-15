@@ -19,6 +19,8 @@ import android.widget.ImageView;
 
 import com.yx.Pharmacy.R;
 
+import java.io.ByteArrayOutputStream;
+
 
 /**
  * 
@@ -117,7 +119,8 @@ public class RoundImageView extends ImageView {
 
 		Bitmap b = ((BitmapDrawable) drawable).getBitmap();
 
-		Bitmap bitmap = b.copy(Config.RGB_565, true);
+
+//		Bitmap bitmap = b.copy(Config.RGB_565, true);
 
 		if (defaultWidth == 0) {
 
@@ -130,6 +133,17 @@ public class RoundImageView extends ImageView {
 			defaultHeight = getHeight();
 
 		}
+
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		b.compress(Bitmap.CompressFormat.JPEG, 50, baos);
+		byte[] datas = baos.toByteArray();
+
+		final BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inJustDecodeBounds = true;
+		options.inSampleSize = 2;
+		options.inJustDecodeBounds = false;
+		Bitmap bitmap =BitmapFactory.decodeByteArray(datas,0,datas.length,options);
+
 
 		int radius = 0;
 

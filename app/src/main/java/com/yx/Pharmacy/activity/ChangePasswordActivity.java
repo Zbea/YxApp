@@ -126,10 +126,10 @@ public class ChangePasswordActivity extends BaseActivity implements IChangePwdVi
         String newpsw=editNewPassword.getText().toString().trim();
         String mobile=editPhoneNum.getText().toString().trim();
         String smscode=editCode.getText().toString().trim();
-        if(TextUtils.isEmpty(psw)){
-            getShortToastByString("请输入原密码");
-            return;
-        }
+//        if(TextUtils.isEmpty(psw)){
+//            getShortToastByString("请输入原密码");
+//            return;
+//        }
         if(TextUtils.isEmpty(newpsw)){
             getShortToastByString("请输入新密码");
             return;

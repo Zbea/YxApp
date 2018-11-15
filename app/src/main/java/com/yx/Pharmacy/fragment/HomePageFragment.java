@@ -272,8 +272,8 @@ public class HomePageFragment
 
     public void initData() {
         mPresenter.getHomeData((BaseActivity) mContext);
-        mPresenter.getAdvanceData((BaseActivity) mContext);
         mPresenter.loadProductList((BaseActivity) mContext);
+        mPresenter.getAdvanceData((BaseActivity) mContext);
     }
 
     public void initMyShop(){
@@ -286,7 +286,6 @@ public class HomePageFragment
         if (data.size() > 0) {
             mAdapter.setNewData(data);
         }
-        if(swipeRefreshLayout!=null)swipeRefreshLayout.setRefreshing(false);
     }
 
     @Override
@@ -385,6 +384,7 @@ public class HomePageFragment
     public void showProductListResult(List<DrugModel> data) {
         mPresenter.loadMyShop((BaseActivity) mContext,false);
         mBottomAdapter.setNewData(data);
+        if(swipeRefreshLayout!=null)swipeRefreshLayout.setRefreshing(false);
     }
 
     @Override
@@ -418,28 +418,28 @@ public class HomePageFragment
         switch (view.getId()) {
             case R.id.iv_qrcode:
                 //打开二维码扫描界面
-                if(CommonUtil.isCameraCanUse()){
+//                if(CommonUtil.isCameraCanUse()){
                     CaptureActivity.startActivity(mContext);
-                }else{
-                    Toast.makeText(mContext,"请打开此应用的摄像头权限！",Toast.LENGTH_SHORT).show();
-                    ConfirmDialog confirmDialog =new ConfirmDialog(mContext);
-                    confirmDialog.setTitle("请打开此应用的摄像头权限").setContent("立即前往?").setOk("设置").setcancle("取消");
-                    confirmDialog.builder().show();
-                    confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
-                        @Override
-                        public void ok() {
-                            Intent intent = new Intent(
-                                    Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                            intent.setData(Uri.parse("package:" + mContext.getPackageName()));
-                            startActivity(intent);
-                        }
-
-                        @Override
-                        public void cancle() {
-
-                        }
-                    });
-                }
+//                }else{
+//                    Toast.makeText(mContext,"请打开此应用的摄像头权限！",Toast.LENGTH_SHORT).show();
+//                    ConfirmDialog confirmDialog =new ConfirmDialog(mContext);
+//                    confirmDialog.setTitle("请打开此应用的摄像头权限").setContent("立即前往?").setOk("设置").setcancle("取消");
+//                    confirmDialog.builder().show();
+//                    confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+//                        @Override
+//                        public void ok() {
+//                            Intent intent = new Intent(
+//                                    Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+//                            intent.setData(Uri.parse("package:" + mContext.getPackageName()));
+//                            startActivity(intent);
+//                        }
+//
+//                        @Override
+//                        public void cancle() {
+//
+//                        }
+//                    });
+//                }
                 break;
             case R.id.ll_search:
                 SearchActivity.startActivity(mContext,"");

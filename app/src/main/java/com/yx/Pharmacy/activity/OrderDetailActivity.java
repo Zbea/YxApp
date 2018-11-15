@@ -273,7 +273,11 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
     @Override
     public void showAdvanceData(HomeAdvanceModel data) {
         if (data != null)
-            showAdDiaog(data.custom);
+        {
+            if (data.custom!=null)
+                showAdDiaog(data.custom);
+        }
+
     }
 
     @OnClick({R.id.rl_back, R.id.ll_open, R.id.ll_close, R.id.tv_detail_todo, R.id.tv_reload,R.id.rl_invoice})

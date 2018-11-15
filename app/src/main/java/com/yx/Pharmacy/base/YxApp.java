@@ -42,6 +42,7 @@ public class YxApp
     private void initBugly() {
         Beta.canShowUpgradeActs.add(MainActivity.class);
         Beta.upgradeDialogLayoutId = R.layout.dialog_upgrade;
+        Beta.autoCheckUpgrade=true;
 /*
         Beta.upgradeDialogLifecycleListener = new UILifecycleListener<UpgradeInfo>() {
             @Override

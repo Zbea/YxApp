@@ -88,7 +88,14 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
             public void cancel(int position, DrugModel model) {
                 mPresenter.cancleCollect(MyCollectActivity.this,model.getItemid(),position);
             }
+
+            @Override
+            public void click(DrugModel model) {
+                ProductDetailActivity.startActivity(mContext,model.getItemid()+"");
+            }
         });
+
+
 
     }
     private void initData() {

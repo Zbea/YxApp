@@ -42,7 +42,8 @@ public class CheckPermissionsActivity extends AppCompatActivity implements
 			Manifest.permission.WRITE_EXTERNAL_STORAGE,
 			Manifest.permission.READ_EXTERNAL_STORAGE,
 			Manifest.permission.READ_PHONE_STATE,
-			Manifest.permission.RECORD_AUDIO
+			Manifest.permission.RECORD_AUDIO,
+			Manifest.permission.CAMERA
 			};
 	
 	private static final int PERMISSON_REQUESTCODE = 0;

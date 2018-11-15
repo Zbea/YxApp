@@ -21,6 +21,7 @@ package com.yx.Pharmacy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
@@ -44,6 +45,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ComDialog;
+import com.yx.Pharmacy.dialog.FunctionGuidDialog;
 import com.yx.Pharmacy.fragment.CategoryFragment;
 import com.yx.Pharmacy.fragment.HomePageFragment;
 import com.yx.Pharmacy.fragment.MessageFragment;
@@ -52,7 +54,6 @@ import com.yx.Pharmacy.fragment.ShopCartFragment;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.presenter.MainPresenter;
 import com.yx.Pharmacy.receiver.ReceiverDialogManage;
-import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IMainView;
@@ -139,6 +140,11 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         showFragment(3);
         mPresenter = new MainPresenter(this);
         mPresenter.getSplashAdData(this);
+        if (SPUtil.getBoolean(mContext,"mainFrist",true))
+        {
+            new FunctionGuidDialog(mContext,0).builder();
+            SPUtil.putBoolean(mContext,"mainFrist",false);
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -148,11 +154,9 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        getFragmentManager().getFragments().clear();
         EventBus.getDefault().unregister(this);
     }
 
@@ -186,6 +190,12 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                 break;
             case R.id.ll_my://我的
                 showFragment(5);
+                if (SPUtil.getBoolean(mContext,"myFrist",true))
+                {
+                    new FunctionGuidDialog(mContext,1).builder();
+                    SPUtil.putBoolean(mContext,"myFrist",false);
+                }
+
                 break;
         }
 

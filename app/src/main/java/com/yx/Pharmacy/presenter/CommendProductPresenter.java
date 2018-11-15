@@ -32,7 +32,6 @@ public class CommendProductPresenter {
         mPage = 1;
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("pagenum",mPage+"");
-
         urlMap.put("levelid",levelid);
 
         if(curtype==1){

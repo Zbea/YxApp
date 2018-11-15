@@ -47,7 +47,10 @@ public class WalletListAdapter extends BaseQuickAdapter<WalletData.WallatModel,B
             tv_type.setText("退");
             helper.setText(R.id.tv_integral_case,"+"+item.fee);
         }
-
+        else
+        {
+            helper.setText(R.id.tv_integral_case,item.fee);
+        }
 
 
         helper.setText(R.id.tv_note,item.title)

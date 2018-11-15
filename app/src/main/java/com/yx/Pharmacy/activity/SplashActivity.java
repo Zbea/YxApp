@@ -80,7 +80,6 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        ImmersionBar.with(this).transparentStatusBar().init();
         initView();
     }
 

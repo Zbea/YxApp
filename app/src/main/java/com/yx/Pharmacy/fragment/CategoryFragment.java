@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -42,6 +43,8 @@ public class CategoryFragment extends BaseFragment implements ICategoryView, Che
     private CategoryPresenter mPresenter;
     private ArrayList<YaoType1>yaoType1s=new ArrayList<>();
 
+    @BindView(R.id.swipeRefreshLayout)
+    SwipeRefreshLayout swipeRefreshLayout;
     @BindView(R.id.rv_sort)
     RecyclerView rvSort;
 
@@ -86,6 +89,13 @@ public class CategoryFragment extends BaseFragment implements ICategoryView, Che
         rvSort.setLayoutManager(mLinearLayoutManager);
         DividerItemDecoration decoration = new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL);
         rvSort.addItemDecoration(decoration);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initData();
+            }
+        });
     }
 
     //获取到数据
@@ -95,6 +105,7 @@ public class CategoryFragment extends BaseFragment implements ICategoryView, Che
     }
     //初始化数据
     private void initData(List<YaoType1> data) {
+        if(swipeRefreshLayout!=null)swipeRefreshLayout.setRefreshing(false);
         yaoType1s= (ArrayList<YaoType1>) data;
         List<String> list = new ArrayList<>();
         for (int i = 0; i < yaoType1s.size(); i++) {

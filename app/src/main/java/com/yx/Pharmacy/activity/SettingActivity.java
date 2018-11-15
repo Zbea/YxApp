@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tencent.bugly.beta.Beta;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
@@ -52,7 +53,7 @@ public class SettingActivity extends BaseActivity {
     }
 
     @OnClick({R.id.rl_back,R.id.rl_clean_cache,R.id.tv_login_out,
-//            R.id.rl_user_info,
+            R.id.rl_update,
             R.id.rl_evaluation,R.id.rl_about})
     public void click(View v){
         switch (v.getId()){
@@ -73,9 +74,9 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_login_out://退出
                 loginOut();
                 break;
-//            case R.id.rl_user_info://个人资料
-//                UserInfoActivity.startActivity(this);
-//                break;
+            case R.id.rl_update:
+                Beta.checkUpgrade();
+                break;
         }
     }
 

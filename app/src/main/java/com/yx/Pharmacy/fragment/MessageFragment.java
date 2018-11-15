@@ -231,7 +231,6 @@ public class MessageFragment
 
     @Override
     public void onRefreshReadNum(int type, int num) {
-        L.i("111111111111111111");
         mMessageIsReadManage.print();
         if (type==1)
         {

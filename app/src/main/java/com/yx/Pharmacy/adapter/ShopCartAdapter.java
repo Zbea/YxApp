@@ -6,11 +6,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.ShopCartModel;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.widget.WrapContentLinearLayoutManager;
@@ -38,6 +40,9 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         RecyclerView product = helper.getView(R.id.rc_product);
         ImageView    ivType  = helper.getView(R.id.iv_type);
         LinearLayout ll_type = helper.getView(R.id.ll_type);
+        LinearLayout ll_open = helper.getView(R.id.ll_open);
+        LinearLayout ll_close = helper.getView(R.id.ll_close);
+        TextView tv_clear = helper.getView(R.id.tv_clear);
         ll_type.setVisibility(View.VISIBLE);
         String type = item.type;
         if(TextUtils.equals(type, "1")){
@@ -52,13 +57,28 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         }else if(TextUtils.equals(type,"9")){
             // 控销
             ivType.setImageResource(R.drawable.icon_shopcar_full_accuse);
-        }else {
+        } else {
             ll_type.setVisibility(View.GONE);
         }
+
+        if (TextUtils.equals(item.activityname, "失效商品"))
+        {
+            ll_open.setVisibility(View.VISIBLE);
+            product.setVisibility(View.GONE);
+            ll_close.setVisibility(View.GONE);
+            tv_clear.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            ll_open.setVisibility(View.GONE);
+            product.setVisibility(View.VISIBLE);
+            ll_close.setVisibility(View.GONE);
+            tv_clear.setVisibility(View.GONE);
+        }
+
         helper.setText(R.id.tv_type,item.activityname);
         product.setNestedScrollingEnabled(false);
 
-        LogUtils.e("start = "+item.type+"  ----  "+System.currentTimeMillis()+"     -----------**");
         if (product.getAdapter()!=null) {
             for (int i = 0; i < item.goods.size(); i++) {
                 ((ShopCartProductAdapter)product.getAdapter()).setNewData(item.goods);
@@ -95,8 +115,9 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
                     switch (view.getId()) {
                         case R.id.ll_checkall:
                             ShopCartModel.GoodsBean bean = item.goods.get(position);
-                            if (!TextUtils.equals(bean.quehuo, "true")) {
+                            if (TextUtils.equals(bean.quehuo, "false")&&TextUtils.equals(bean.isvalid, "false")) {
                                 bean.isSelect = !bean.isSelect;
+                                ((ShopCartProductAdapter)product.getAdapter()).setData(position,bean);
                                 if (mOnShopCartListener!=null) {
                                     mOnShopCartListener.modifySelect(helper.getAdapterPosition());
                                 }
@@ -123,8 +144,28 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
             });
         }
 
+        ll_open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                product.setVisibility(View.VISIBLE);
+                ll_close.setVisibility(View.VISIBLE);
+                ll_open.setVisibility(View.GONE);
+            }
+        });
+
+        ll_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                product.setVisibility(View.GONE);
+                ll_close.setVisibility(View.GONE);
+                ll_open.setVisibility(View.VISIBLE);
+            }
+        });
+
         helper.setGone(R.id.tv_coupon,item.couponList!=null&&item.couponList.size()>0)
               .addOnClickListener(R.id.tv_coupon);
+
+        helper.addOnClickListener(R.id.tv_clear);
 
         boolean isHaveCoupon = false;
         if (item.couponList!=null&&item.couponList.size()>0) {

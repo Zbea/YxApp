@@ -4,11 +4,13 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -134,10 +136,28 @@ public class HHActivity
         //        cordovaWebView.init(new CordovaInterfaceImpl(this), parser.getPluginEntries(), parser.getPreferences());//初始化
         // Set by <content src="index.html" /> in config.xml
         mWebview.getSettings().setJavaScriptEnabled(true);
-//        mWebview.getSettings().setDomStorageEnabled(true);
-        mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
-                "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
-        L.i("onCreate: " + mWebview.getUrl());
+        mWebview.getSettings().setDomStorageEnabled(true);
+        mWebview.getSettings().setBlockNetworkImage(false); // 解决图片不显示
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {
+            mWebview.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+        url=url.replace("#","");
+        url=url.replace("/?","?");
+        if (!url.contains("token")) {
+            if (url.contains("?")) {
+                mWebview.loadUrl(url + "&platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+                        "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
+
+            } else {
+                mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+                        "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
+            }
+        } else {
+            mWebview.loadUrl(url);
+        }
+        L.i("onCreate: getUrl" + mWebview.getUrl());
+
 //        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
 //            @Override
 //            public void onPageFinished(WebView view, String url) {
@@ -160,16 +180,21 @@ public class HHActivity
 //
 //        });
 
-        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
-                        "&itemId=" + NetUtil.isStringNull(
-                        NetUtil.getItemId()));
-                return true;
-            }
-
-        });
+//        mWebview.setWebViewClient(new SystemWebViewClient(mWebview.getParentEngine()) {
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                if (!url.contains("token"))
+//                {
+//                    mWebview.loadUrl(url + "?platform=android&token=" + NetUtil.isStringNull(NetUtil.getToken()) + "&storeId=" + NetUtil.isStringNull(NetUtil.getStoreid()) +
+//                            "&itemId=" + NetUtil.isStringNull(NetUtil.getItemId()));
+//                }
+//                else
+//                {
+//                    mWebview.loadUrl(url);
+//                }
+//                return true;
+//            }
+//        });
 
         mWebview.setWebChromeClient(new SystemWebChromeClient(mWebview.getParentEngine())
 
@@ -177,17 +202,16 @@ public class HHActivity
                                         @Override
                                         public void onReceivedTitle(WebView view, String title) {
                                             super.onReceivedTitle(view, title);
-                                            L.i("title:"+title);
-                                            String[] infos=title.split("-");
-                                            if (infos!=null&&infos.length>1)
-                                            {
-                                                String titleStr=infos[0];
-                                                String rightStr=infos[1];
+                                            L.i("title:" + title);
+                                            String[] infos = title.split("-");
+                                            if (infos != null && infos.length > 1) {
+                                                String titleStr = infos[0];
+                                                String rightStr = infos[1];
                                                 if (!TextUtils.isEmpty(titleStr)) {
                                                     tv_title.setText(titleStr);
                                                     tv_title.setVisibility(View.VISIBLE);
                                                 }
-                                                if (!TextUtils.isEmpty(rightStr)&&rightStr.equals("积分明细")) {
+                                                if (!TextUtils.isEmpty(rightStr) && rightStr.equals("积分明细")) {
                                                     tv_right.setText(rightStr);
                                                     tv_right.setVisibility(View.VISIBLE);
                                                     tv_right.setOnClickListener(new View.OnClickListener() {

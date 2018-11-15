@@ -84,8 +84,8 @@ public class MyWalletActivity extends BaseActivity implements IMyWalletView {
     private void initDate()
     {
         Calendar c = Calendar.getInstance();//
-        mOrganTime = c.get(Calendar.YEAR)+"0"+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
-        mTvTime= c.get(Calendar.YEAR)+"-0"+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        mOrganTime = c.get(Calendar.YEAR)+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        mTvTime= c.get(Calendar.YEAR)+"-"+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
         tv_select_ximing.setText(mTvTime);
     }
 

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
@@ -128,12 +129,19 @@ public class CommendTjActivity
         initData();
     }
     private void initRecycler() {
-        // 商品列表
-        GridLayoutManager manager = new GridLayoutManager(this, 2);
-        mRvProduct.setLayoutManager(manager);
-        mAdapter = new CommendProductAdapter(R.layout.item_home_product_special, mType);
-        mRvProduct.setAdapter(mAdapter);
+        if(TextUtils.equals(mType, "3")) {
+            LinearLayoutManager manager = new LinearLayoutManager(this);
+            mRvProduct.setLayoutManager(manager);
+            mAdapter = new CommendProductAdapter(R.layout.item_home_product_minus, mType);
+        }
+        else
+        {
+            GridLayoutManager manager = new GridLayoutManager(this, 2);
+            mRvProduct.setLayoutManager(manager);
+            mAdapter = new CommendProductAdapter(R.layout.item_home_product_special, mType);
+        }
 
+        mRvProduct.setAdapter(mAdapter);
         int itemDecoration = DensityUtils.dp2px(this, 1);
         mRvProduct.addItemDecoration(new SpacesItemDecoration(itemDecoration, itemDecoration));
 
@@ -269,6 +277,10 @@ public class CommendTjActivity
             if (data.size() < Constants.PAGESIZE) {
                 mAdapter.loadMoreEnd();
             }
+        }
+        else
+        {
+
         }
     }
 

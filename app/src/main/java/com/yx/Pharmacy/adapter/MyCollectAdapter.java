@@ -26,6 +26,7 @@ public class MyCollectAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolder>
 
     public interface MyListener{
         void cancel(int position, DrugModel model);
+        void click(DrugModel model);
     }
     private MyListener listener;
     public void setListener(MyListener listener) {
@@ -52,6 +53,12 @@ public class MyCollectAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolder>
             @Override
             public void onClick(View v) {
                 if(listener!=null)listener.cancel(helper.getLayoutPosition(),item);
+            }
+        });
+        helper.getView(R.id.rl_click).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener!=null)listener.click(item);
             }
         });
 
