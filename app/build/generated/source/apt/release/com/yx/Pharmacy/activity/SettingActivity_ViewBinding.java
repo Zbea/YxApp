@@ -19,7 +19,9 @@ public class SettingActivity_ViewBinding implements Unbinder {
 
   private View view2131296782;
 
-  private View view2131297012;
+  private View view2131297013;
+
+  private View view2131296814;
 
   private View view2131296788;
 
@@ -55,7 +57,15 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_login_out, "method 'click'");
-    view2131297012 = view;
+    view2131297013 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.rl_update, "method 'click'");
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -95,8 +105,10 @@ public class SettingActivity_ViewBinding implements Unbinder {
     view2131296777 = null;
     view2131296782.setOnClickListener(null);
     view2131296782 = null;
-    view2131297012.setOnClickListener(null);
-    view2131297012 = null;
+    view2131297013.setOnClickListener(null);
+    view2131297013 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
     view2131296788.setOnClickListener(null);
     view2131296788 = null;
     view2131296773.setOnClickListener(null);

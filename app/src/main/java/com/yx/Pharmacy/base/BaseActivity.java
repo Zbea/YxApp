@@ -27,7 +27,9 @@ import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.activity.WebviewActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
+import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.SPUtil;
@@ -105,14 +107,6 @@ public abstract class BaseActivity
         switch (goldBean.pushtype){
             case 1://app跳转活动模块，参数weburl
                 HHActivity.startActivity(mContext,goldBean.weburl);
-//                if (goldBean.weburl.contains("coupon"))
-//                {
-//                    WebviewActivity.startActivity(mContext,goldBean.weburl);
-//                }
-//                else
-//                {
-//                    HHActivity.startActivity(mContext,goldBean.weburl);
-//                }
                 break;
             case 2://app跳转商品详情，参数goodsid
                 ProductDetailActivity.startActivity(mContext,goldBean.goodsid);
@@ -146,6 +140,10 @@ public abstract class BaseActivity
                     // 控销
                     CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
                 }
+                else {
+                    // 自定义专区
+                    CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
+                }
                 break;
             case 6://新特药新区
                 CommendProductActivity.startActivity(mContext,goldBean.pushtype+"",goldBean.goodstype,goldBean.title,1);
@@ -173,6 +171,20 @@ public abstract class BaseActivity
         Unicorn.setUserInfo(userInfo);
         ConsultSource source = new ConsultSource("我的门店", title, "custom information string");
         Unicorn.openServiceActivity(mContext, "点药呗", source);
+    }
+
+
+    public void saveShopStore(MyShopModel myShopModel )
+    {
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
+        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME,myShopModel.truename);
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY, myShopModel.company);
     }
 
 }

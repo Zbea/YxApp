@@ -16,8 +16,10 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.net.NetUtil;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.widget.CenterAlignImageSpan;
 
@@ -41,8 +43,10 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
         TextView  oldPrice = helper.getView(R.id.tv_oldprice);
         TextView  price = helper.getView(R.id.tv_price);
         TextView  title    = helper.getView(R.id.tv_title);
+        TextView  time    = helper.getView(R.id.tv_validity_time);
         title.setText(item.getTitle());
         price.setText(item.getPrice());
+        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.getEndtime()*1000) );
         oldPrice.setText("折后约"+item.disprice);
         if (TextUtils.isEmpty(NetUtil.getToken()))
         {
@@ -59,7 +63,7 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
               .setText(R.id.tv_gg,item.getGg())
               .setText(R.id.tv_sale,"已售"+item.getSales())
               .setGone(R.id.iv_presale,!TextUtils.equals(item.getPresale(),"0"));
-//        if(TextUtils.equals(mType,"2")){
+//        if(TextUtils.equals(mType,"1")){
 //            // 特价
 //            helper.setText(R.id.tv_title,item.getTitle());
 //

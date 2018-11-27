@@ -56,9 +56,9 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int bottom = 0x7f090034;
-        public static final int center = 0x7f090047;
-        public static final int top = 0x7f090286;
+        public static final int bottom = 0x7f09003b;
+        public static final int center = 0x7f09004e;
+        public static final int top = 0x7f090295;
     }
     public static final class styleable {
         private styleable() {}

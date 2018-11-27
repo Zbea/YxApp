@@ -30,7 +30,7 @@ public class MyShopModel {
      * storenumber : 111
      * storetype : null
      */
-
+    public String company;
     public String itemid;
     public String storeaddress;
     public String    collectcount;

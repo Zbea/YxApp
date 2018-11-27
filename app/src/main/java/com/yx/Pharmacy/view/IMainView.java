@@ -10,7 +10,9 @@ package com.yx.Pharmacy.view;
  */
 
 import com.yx.Pharmacy.model.SplashData;
+import com.yx.Pharmacy.model.UrlBean;
 
 public interface IMainView {
     void getSplashAd(SplashData.SplashModel data);
+    void getUrl(UrlBean data);
 }

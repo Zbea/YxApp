@@ -36,32 +36,32 @@ public final class R {
 
         public static final int black_background = 0x7f080062;
         public static final int gray_radius = 0x7f080090;
-        public static final int white_radius = 0x7f080184;
+        public static final int white_radius = 0x7f080199;
     }
     public static final class id {
         private id() {}
 
-        public static final int bannerFrame = 0x7f09002d;
-        public static final int bannerTitle = 0x7f09002e;
-        public static final int center = 0x7f090047;
-        public static final int center_crop = 0x7f090048;
-        public static final int center_inside = 0x7f09004a;
-        public static final int fit_center = 0x7f09009d;
-        public static final int fit_end = 0x7f09009e;
-        public static final int fit_start = 0x7f09009f;
-        public static final int fit_xy = 0x7f0900a0;
-        public static final int indicator = 0x7f0900c0;
-        public static final int indicatorInside = 0x7f0900c1;
-        public static final int matrix = 0x7f090187;
-        public static final int numIndicator = 0x7f0901b8;
-        public static final int numIndicatorInside = 0x7f0901b9;
-        public static final int titleView = 0x7f090282;
-        public static final int viewpager = 0x7f090394;
+        public static final int bannerFrame = 0x7f090034;
+        public static final int bannerTitle = 0x7f090035;
+        public static final int center = 0x7f09004e;
+        public static final int center_crop = 0x7f09004f;
+        public static final int center_inside = 0x7f090051;
+        public static final int fit_center = 0x7f0900a4;
+        public static final int fit_end = 0x7f0900a5;
+        public static final int fit_start = 0x7f0900a6;
+        public static final int fit_xy = 0x7f0900a7;
+        public static final int indicator = 0x7f0900c7;
+        public static final int indicatorInside = 0x7f0900c8;
+        public static final int matrix = 0x7f090194;
+        public static final int numIndicator = 0x7f0901c5;
+        public static final int numIndicatorInside = 0x7f0901c6;
+        public static final int titleView = 0x7f090291;
+        public static final int viewpager = 0x7f0903a9;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int banner = 0x7f0b0052;
+        public static final int banner = 0x7f0b0053;
     }
     public static final class styleable {
         private styleable() {}

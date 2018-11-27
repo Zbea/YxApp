@@ -103,7 +103,7 @@
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.UserInfoActivity" />
         <activity android:name=".activity.FeedBackActivity" />
-        <activity android:name=".activity.CategoryDetailActivity" />
+        <activity android:name=".activity.ProductCategoryDetailActivity" />
         <activity android:name=".activity.ProductDetailActivity" />
         <activity android:name=".activity.OrderDetailActivity" />
         <activity android:name=".activity.SearchActivity" />

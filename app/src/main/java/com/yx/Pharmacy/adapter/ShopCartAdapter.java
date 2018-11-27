@@ -67,6 +67,9 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
             product.setVisibility(View.GONE);
             ll_close.setVisibility(View.GONE);
             tv_clear.setVisibility(View.VISIBLE);
+            ll_type.setVisibility(View.VISIBLE);
+            ivType.setImageResource(R.drawable.icon_cart_disable_product);
+            type="11111";
         }
         else
         {
@@ -114,10 +117,10 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
                 public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                     switch (view.getId()) {
                         case R.id.ll_checkall:
-                            ShopCartModel.GoodsBean bean = item.goods.get(position);
+                            ShopCartModel.GoodsBean bean = getData().get(helper.getAdapterPosition()).goods.get(position);
                             if (TextUtils.equals(bean.quehuo, "false")&&TextUtils.equals(bean.isvalid, "false")) {
                                 bean.isSelect = !bean.isSelect;
-                                ((ShopCartProductAdapter)product.getAdapter()).setData(position,bean);
+//                                ((ShopCartProductAdapter)product.getAdapter()).setData(position,bean);
                                 if (mOnShopCartListener!=null) {
                                     mOnShopCartListener.modifySelect(helper.getAdapterPosition());
                                 }

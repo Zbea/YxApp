@@ -1366,9 +1366,13 @@ drawable ic_video_play
 drawable icon_add_address
 drawable icon_add_look
 drawable icon_add_takephoto
+drawable icon_arrow_right_white
 drawable icon_audio
 drawable icon_bankcard_logo
+drawable icon_cart_clear_disable
+drawable icon_cart_disable_product
 drawable icon_code_bg_bottom
+drawable icon_coupon_goto
 drawable icon_detail_home
 drawable icon_detail_info
 drawable icon_detail_shopcar
@@ -1378,8 +1382,21 @@ drawable icon_flash_time_bg
 drawable icon_flash_time_bg_n
 drawable icon_full_give_detail
 drawable icon_full_give_detail_bg
+drawable icon_function_guid_main_cart
+drawable icon_function_guid_main_qiandao
+drawable icon_function_guid_main_servier
+drawable icon_function_guid_my_coupon
+drawable icon_function_guid_my_jifen
+drawable icon_function_guid_my_yue
 drawable icon_home_flash_buy
+drawable icon_home_ggxz
+drawable icon_home_hdxz
+drawable icon_home_message_bg
+drawable icon_home_qhan
+drawable icon_home_red
 drawable icon_home_server
+drawable icon_home_shopp
+drawable icon_home_store_bg
 drawable icon_image_loading
 drawable icon_image_loading_cc
 drawable icon_logo
@@ -1426,6 +1443,7 @@ drawable icon_shopcar_lose
 drawable icon_shopcar_n
 drawable icon_shopcar_notify
 drawable icon_shopcar_s
+drawable icon_validity_bg
 drawable icon_wallet_allow_right_white
 drawable icon_wallet_czicon
 drawable icon_wallet_ljczan
@@ -1450,6 +1468,9 @@ drawable jrgwciaon
 drawable jrgwcwxz
 drawable kprogresshud_spinner
 drawable kyyhqbj
+drawable leak_canary_icon
+drawable leak_canary_notification
+drawable leak_canary_toast_background
 drawable ljgman
 drawable ljgmann
 drawable ljgmannn
@@ -1844,6 +1865,13 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id __leak_canary_action
+id __leak_canary_display_leak_failure
+id __leak_canary_display_leak_list
+id __leak_canary_row_connector
+id __leak_canary_row_more
+id __leak_canary_row_text
+id __leak_canary_row_time
 id action0
 id action_bar
 id action_bar_activity_content
@@ -2053,7 +2081,9 @@ id iv_coupon_icon
 id iv_dot
 id iv_file_icon
 id iv_gift_product
+id iv_goto
 id iv_gsp_state
+id iv_guid
 id iv_home
 id iv_home_page
 id iv_icon_left
@@ -2155,6 +2185,7 @@ id ll_go_product_detail
 id ll_gsp
 id ll_have_need
 id ll_home_page
+id ll_info
 id ll_invoice
 id ll_invoice_content
 id ll_invoice_info
@@ -2162,6 +2193,7 @@ id ll_invoice_select
 id ll_item
 id ll_levelnote
 id ll_main_container
+id ll_maizeng
 id ll_manjian
 id ll_many_products
 id ll_mentou
@@ -2195,6 +2227,8 @@ id ll_select_coupon
 id ll_shop_type
 id ll_shopping_car
 id ll_single_coupon
+id ll_store
+id ll_store_logout
 id ll_time_bg
 id ll_tixian
 id ll_toolbar
@@ -2361,6 +2395,7 @@ id rl_bottom
 id rl_cancle
 id rl_category
 id rl_clean_cache
+id rl_click
 id rl_close
 id rl_code
 id rl_collect
@@ -2392,6 +2427,7 @@ id rl_signin
 id rl_system_notice
 id rl_system_notice_bottom
 id rl_title
+id rl_update
 id rl_user_head
 id rl_wechat_pay
 id rl_wuliu
@@ -2530,6 +2566,7 @@ id tv_card_num
 id tv_changjia
 id tv_check_wuliu
 id tv_chongzhi
+id tv_clear
 id tv_clear_history
 id tv_collect_num
 id tv_commit
@@ -2539,6 +2576,7 @@ id tv_content
 id tv_count
 id tv_coupon
 id tv_coupon_couponscene
+id tv_coupon_discount
 id tv_coupon_info
 id tv_coupon_price
 id tv_coupon_size
@@ -2561,6 +2599,7 @@ id tv_drug_name
 id tv_duration
 id tv_empty
 id tv_factory
+id tv_factory_address
 id tv_file_name
 id tv_file_size
 id tv_find
@@ -2593,7 +2632,6 @@ id tv_login_hint_type
 id tv_login_out
 id tv_login_type
 id tv_long_chart
-id tv_look_gift
 id tv_mentou_state
 id tv_message
 id tv_mobile
@@ -2604,6 +2642,7 @@ id tv_musicStatus
 id tv_musicTime
 id tv_musicTotal
 id tv_my
+id tv_my_coupon
 id tv_my_integral
 id tv_my_money
 id tv_name
@@ -2645,6 +2684,7 @@ id tv_paytype
 id tv_ph
 id tv_phone_num
 id tv_pickphtoto
+id tv_pihao
 id tv_pizhun
 id tv_presale
 id tv_price
@@ -2672,6 +2712,7 @@ id tv_save
 id tv_scqy
 id tv_select_ximing
 id tv_send_num
+id tv_shop
 id tv_shop_type
 id tv_shopping_car
 id tv_shouru_or_tuikuan
@@ -2711,6 +2752,7 @@ id tv_user_address
 id tv_user_info
 id tv_user_name
 id tv_username
+id tv_validity_time
 id tv_where
 id tv_wuliu_date
 id tv_wuliu_info
@@ -2959,6 +3001,8 @@ integer cancel_button_image_alpha
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer hide_password_duration
+integer leak_canary_max_stored_leaks
+integer leak_canary_watch_delay_millis
 integer show_password_duration
 integer status_bar_notification_info_maxnum
 integer ucrop_progress_loading_anim_time
@@ -3008,6 +3052,7 @@ layout activity_commendtj
 layout activity_comment_ms
 layout activity_create_order
 layout activity_feed_back
+layout activity_function_guid
 layout activity_h5
 layout activity_have_need
 layout activity_integral_detail
@@ -3133,6 +3178,11 @@ layout item_vp
 layout item_wuliu
 layout jpush_popwin_layout
 layout jpush_webview_layout
+layout leak_canary_display_leak
+layout leak_canary_heap_dump_toast
+layout leak_canary_leak_row
+layout leak_canary_ref_row
+layout leak_canary_ref_top_row
 layout mz_banner_effect_layout
 layout mz_banner_normal_layout
 layout notification_action
@@ -3331,6 +3381,27 @@ string bottom_sheet_behavior
 string cancel
 string character_counter_pattern
 string gif_tag
+string leak_canary_analysis_failed
+string leak_canary_class_has_leaked
+string leak_canary_could_not_save_text
+string leak_canary_could_not_save_title
+string leak_canary_delete
+string leak_canary_delete_all
+string leak_canary_display_activity_label
+string leak_canary_excluded_row
+string leak_canary_failure_report
+string leak_canary_leak_excluded
+string leak_canary_leak_list_title
+string leak_canary_no_leak_text
+string leak_canary_no_leak_title
+string leak_canary_notification_message
+string leak_canary_permission_notification_text
+string leak_canary_permission_notification_title
+string leak_canary_share_heap_dump
+string leak_canary_share_leak
+string leak_canary_share_with
+string leak_canary_storage_permission_activity_label
+string leak_canary_toast_heap_dump
 string load_end
 string load_failed
 string loading
@@ -3406,6 +3477,7 @@ string ucrop_label_edit_photo
 string ucrop_label_original
 string ucrop_menu_crop
 string ucrop_mutate_exception_hint
+string version_name
 string ysf_activity_file_download
 string ysf_activity_leave_message_detail
 string ysf_app_name
@@ -3956,6 +4028,8 @@ style Widget_GifView
 style WindowStyle
 style activity_Theme
 style activity_Theme_Transparent
+style leak_canary_LeakCanary_Base
+style leak_canary_Theme_Transparent
 style mycustom_dialog
 style mystyle
 style picture_default_style

@@ -81,6 +81,29 @@ public class HomeDataPresenter {
                });
     }
 
+    public void getMessageData(BaseActivity activity) {
+        HomeNet.getHomeApi().getMessageData().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<HomeAdvanceModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<HomeAdvanceModel> response) {
+                        if (response.getData()!=null) {
+                            mView.showMessageListResult(response.getData());
+                        }else {
+                            activity.getShortToastByString(response.getAlertmsg());
+                            mView.hideFlash();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error========="+e.toString());
+                        mView.hideFlash();
+                        super.onError(e);
+                    }
+                });
+    }
+
     public void loadMyShop(BaseActivity activity,boolean isShow) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("doplace","home");

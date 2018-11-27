@@ -16,9 +16,9 @@ import java.lang.Override;
 public class MyFragment_ViewBinding implements Unbinder {
   private MyFragment target;
 
-  private View view2131297131;
+  private View view2131297132;
 
-  private View view2131296814;
+  private View view2131296815;
 
   private View view2131296809;
 
@@ -68,7 +68,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_collect_num = Utils.findRequiredViewAsType(source, R.id.tv_collect_num, "field 'tv_collect_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_user_name, "field 'tv_user_name' and method 'onclick'");
     target.tv_user_name = Utils.castView(view, R.id.tv_user_name, "field 'tv_user_name'", TextView.class);
-    view2131297131 = view;
+    view2131297132 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,7 +78,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_my_integral = Utils.findRequiredViewAsType(source, R.id.tv_my_integral, "field 'tv_my_integral'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_user_head, "field 'rl_user_head' and method 'onclick'");
     target.rl_user_head = Utils.castView(view, R.id.rl_user_head, "field 'rl_user_head'", RoundImageView.class);
-    view2131296814 = view;
+    view2131296815 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -269,10 +269,10 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tvDoneNum = null;
     target.tvAfterNum = null;
 
-    view2131297131.setOnClickListener(null);
-    view2131297131 = null;
-    view2131296814.setOnClickListener(null);
-    view2131296814 = null;
+    view2131297132.setOnClickListener(null);
+    view2131297132 = null;
+    view2131296815.setOnClickListener(null);
+    view2131296815 = null;
     view2131296809.setOnClickListener(null);
     view2131296809 = null;
     view2131296571.setOnClickListener(null);

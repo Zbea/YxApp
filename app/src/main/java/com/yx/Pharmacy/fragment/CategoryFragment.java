@@ -183,24 +183,29 @@ public class CategoryFragment extends BaseFragment implements ICategoryView, Che
                 if(CommonUtil.isCameraCanUse()){
                     CaptureActivity.startActivity(mContext);
                 }else{
-                    Toast.makeText(mContext,"请打开此应用的摄像头权限！",Toast.LENGTH_SHORT).show();
-                    ConfirmDialog confirmDialog=new ConfirmDialog(mContext);
-                    confirmDialog.setTitle("请打开此应用的摄像头权限").setContent("立即前往?").setOk("设置").setcancle("取消");
-                    confirmDialog.builder().show();
-                    confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
-                        @Override
-                        public void ok() {
-                            Intent intent = new Intent(
-                                    Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                            intent.setData(Uri.parse("package:" + mContext.getPackageName()));
-                            startActivity(intent);
-                        }
 
-                        @Override
-                        public void cancle() {
-
-                        }
-                    });
+                    Intent intent = new Intent(
+                            Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    intent.setData(Uri.parse("package:" + mContext.getPackageName()));
+                    startActivity(intent);
+//                    Toast.makeText(mContext,"请打开此应用的摄像头权限！",Toast.LENGTH_SHORT).show();
+//                    ConfirmDialog confirmDialog=new ConfirmDialog(mContext);
+//                    confirmDialog.setTitle("请打开此应用的摄像头权限").setContent("立即前往?").setOk("设置").setcancle("取消");
+//                    confirmDialog.builder().show();
+//                    confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+//                        @Override
+//                        public void ok() {
+//                            Intent intent = new Intent(
+//                                    Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+//                            intent.setData(Uri.parse("package:" + mContext.getPackageName()));
+//                            startActivity(intent);
+//                        }
+//
+//                        @Override
+//                        public void cancle() {
+//
+//                        }
+//                    });
                 }
                 break;
         }

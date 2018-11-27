@@ -55,8 +55,8 @@ public final class R {
         public static final int matrix = 0x7f090187;
         public static final int numIndicator = 0x7f0901b8;
         public static final int numIndicatorInside = 0x7f0901b9;
-        public static final int titleView = 0x7f090282;
-        public static final int viewpager = 0x7f090394;
+        public static final int titleView = 0x7f090283;
+        public static final int viewpager = 0x7f090395;
     }
     public static final class layout {
         private layout() {}

@@ -15,10 +15,11 @@
             android:id="@+id/nsv_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -31,73 +32,206 @@
 
                     <ImageView
                         android:id="@+id/iv_banner_bg"
-                        android:scaleType="fitXY"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_180" />
+                        android:layout_height="@dimen/dp_180"
+                        android:scaleType="fitXY" />
+
                     <View
-                        android:background="#4D000000"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_180" />
+                        android:layout_height="@dimen/dp_180"
+                        android:background="#4D000000" />
 
                     <com.zhouwei.mzbanner.MZBannerView
                         android:id="@+id/banner"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_135"
                         android:layout_marginTop="@dimen/dp_70"
-                        app:open_mz_mode="true"
                         app:canLoop="true"
-                        app:middle_page_cover="true"
                         app:indicatorAlign="center"
+                        app:indicatorPaddingBottom="50dp"
                         app:indicatorPaddingLeft="10dp"
-                        app:indicatorPaddingBottom="50dp"/>
+                        app:middle_page_cover="true"
+                        app:open_mz_mode="true" />
                     <!--<android.support.v4.view.ViewPager-->
                     <!--android:id="@+id/viewpager"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="@dimen/dp_230"/>-->
 
-
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:background="@color/white"
                     android:id="@+id/rv_webview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:id="@+id/ll_store_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:background="@drawable/icon_home_store_bg"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:text="注册新店，获赠礼包"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:src="@drawable/icon_arrow_right_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_home_red" />
+
+                        <TextView
+                            android:id="@+id/tv_shop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text=""
+                            android:layout_weight="1"
+                            android:textColor="@color/text_mian"
+                            android:textSize="@dimen/sp_13" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.0001"
+                            android:src="@drawable/icon_home_qhan" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_home_red" />
+
+                        <TextView
+                            android:id="@+id/tv_factory_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text=""
+                            android:textColor="@color/text_mian"
+                            android:textSize="@dimen/sp_13" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:src="@drawable/icon_home_qhan" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/icon_home_message_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_90"
+                        android:src="@drawable/icon_home_hdxz" />
+
+                    <com.yx.Pharmacy.widget.MarqueeView
+                        android:id="@+id/marqueeView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_25"
+                        android:background="@color/transparent"
+                        app:mvDirection="bottom_to_top"
+                        app:mvAnimDuration="1000"
+                        app:mvInterval="3000"
+                        app:mvTextSize="@dimen/sp_12"
+                        app:mvTextColor="@color/text_normal"
+                        app:mvSingleLine="true"/>
+
+                </LinearLayout>
 
                 <ImageView
                     android:id="@+id/iv_advence"
-                    android:layout_marginTop="@dimen/dp_12"
-                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:scaleType="fitXY" />
 
                 <View
-                    android:background="#f6f6f6"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_10"/>
+                    android:layout_height="@dimen/dp_10"
+                    android:background="#f6f6f6" />
 
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_good"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_product"
-                    android:background="@color/white"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
                 <TextView
-                    android:visibility="gone"
+                    android:id="@+id/tv_no_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
                     android:background="@color/color_f6f6f6"
                     android:gravity="center"
-                    android:id="@+id/tv_no_more"
+                    android:text="没有更多数据"
                     android:textColor="@color/color_uncheck"
                     android:textSize="@dimen/sp_13"
-                    android:text="没有更多数据"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_30"/>
+                    android:visibility="gone" />
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 

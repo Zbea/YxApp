@@ -21,6 +21,7 @@ import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.CreateOrderIntentModel;
 import com.yx.Pharmacy.model.CreateOrderModel;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.OrderModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.CreateOrderPresenter;
@@ -145,6 +146,7 @@ public class OrderCreateActivity
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
 
         mPresenter = new CreateOrderPresenter(this);
+        mPresenter.getOrderNum(this);
 
         mGoods = (ArrayList<OrderModel.Goods>) getIntent().getSerializableExtra("products");
         mGifts = (ArrayList<OrderModel.Goods>) getIntent().getSerializableExtra("gifts");
@@ -180,14 +182,7 @@ public class OrderCreateActivity
         // 地址
         mStoreAddress = SPUtil.getString(UiUtil.getContext(), Constants.KEY_ADDRESS);
         mTvLocation.setText(mStoreAddress);
-        // 余额
-        mStoreMoney = DensityUtils.parseDouble(SPUtil.getString(UiUtil.getContext(), Constants.KEY_MONEY));
-        mNeedpay = DensityUtils.parseDouble(mDatas.needpay);
-        if (mStoreMoney> mNeedpay){
-            mTvYuePrice.setText("-"+ mNeedpay);
-        }else {
-            mTvYuePrice.setText("-"+mStoreMoney);
-        }
+
         mTvCompanyName.setText(SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME));
         mTvCouponPrice.setText("-"+DensityUtils.doubleToString(mCouponPrice));
         mTvPrice.setText(DensityUtils.doubleToString(mAllPrice));
@@ -305,6 +300,26 @@ public class OrderCreateActivity
                 PayActivity.startActivity(this,mDatas.needpay,data.ordernum);
             }
         }
+    }
+
+    @Override
+    public void resultCartNum(MyOrderNumModel data) {
+        if (data!=null)
+        {
+            // 余额
+            mStoreMoney = data.money;
+        }
+        else
+        {
+            mStoreMoney = 0;
+        }
+        mNeedpay = DensityUtils.parseDouble(mDatas.needpay);
+        if (mStoreMoney> mNeedpay){
+            mTvYuePrice.setText("-"+ mNeedpay);
+        }else {
+            mTvYuePrice.setText("-"+mStoreMoney);
+        }
+
     }
 
     @Override

@@ -29,7 +29,9 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.LocalUrlManage;
 import com.yx.Pharmacy.model.MyOrderNumModel;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.MyPresenter;
 import com.yx.Pharmacy.util.GlideUtil;
@@ -72,6 +74,10 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     TextView tvDoneNum;
     @BindView(R.id.tv_after_num)
     TextView tvAfterNum;
+    @BindView(R.id.tv_my_money)
+    TextView tvMyMoney;
+    @BindView(R.id.tv_my_coupon)
+    TextView tvMyCoupon;
     Unbinder unbinder;
     private String mAvatar;
     private boolean mIsFirstLoad = true;
@@ -107,6 +113,9 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             R.id.ll_my_coupons, R.id.ll_waitto_pay, R.id.ll_waitto_send, R.id.ll_waitto_receive, R.id.ll_youjiang_task, R.id.tv_user_name,
             R.id.ll_completed, R.id.ll_after_sales, R.id.ll_have_need, R.id.ll_about, R.id.ll_accout_security})
     public void onclick(View v) {
+
+        UrlBean urlBean=LocalUrlManage.newInstance().getUrlBean();
+
         switch (v.getId()) {
             case R.id.rl_setting://设置
                 if (TextUtils.isEmpty(NetUtil.getToken())) {
@@ -116,10 +125,25 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 SettingActivity.startActivity(mContext);
                 break;
             case R.id.ll_feedback:// 退换政策
-                HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
+                if (urlBean!=null)
+                {
+                    HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().exchange,1);
+                }
+                else
+                {
+                    HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
+                }
+
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
-                HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
+                if (urlBean!=null)
+                {
+                    HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().prizetask);
+                }
+                else
+                {
+                    HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
+                }
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);
@@ -376,6 +400,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         setOrderNum(tvAfterNum,0);
         tv_collect_num.setText(""+0);
         tv_my_integral.setText(""+0);
+        tvMyCoupon.setText(""+0);
+        tvMyMoney.setText(""+0);
     }
 
     @Override
@@ -389,6 +415,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             setOrderNum(tvAfterNum,data.orderBack);
             tv_collect_num.setText(""+data.collectCount);
             tv_my_integral.setText(""+data.score);
+            tvMyCoupon.setText(""+data.coupon);
+            tvMyMoney.setText(""+data.money);
         }
     }
 

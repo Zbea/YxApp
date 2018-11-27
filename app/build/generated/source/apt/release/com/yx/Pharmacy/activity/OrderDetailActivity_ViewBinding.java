@@ -19,7 +19,7 @@ import java.lang.Override;
 public class OrderDetailActivity_ViewBinding implements Unbinder {
   private OrderDetailActivity target;
 
-  private View view2131296972;
+  private View view2131296973;
 
   private View view2131296793;
 
@@ -29,7 +29,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296777;
 
-  private View view2131297083;
+  private View view2131297084;
 
   @UiThread
   public OrderDetailActivity_ViewBinding(OrderDetailActivity target) {
@@ -45,7 +45,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.nestedScrollView = Utils.findRequiredViewAsType(source, R.id.nestedScrollView, "field 'nestedScrollView'", NestedScrollView.class);
     view = Utils.findRequiredView(source, R.id.tv_detail_todo, "field 'tv_detail_todo' and method 'click'");
     target.tv_detail_todo = Utils.castView(view, R.id.tv_detail_todo, "field 'tv_detail_todo'", TextView.class);
-    view2131296972 = view;
+    view2131296973 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -112,7 +112,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297083 = view;
+    view2131297084 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -159,8 +159,8 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.rl_paytype = null;
     target.tv_paytype = null;
 
-    view2131296972.setOnClickListener(null);
-    view2131296972 = null;
+    view2131296973.setOnClickListener(null);
+    view2131296973 = null;
     view2131296793.setOnClickListener(null);
     view2131296793 = null;
     view2131296600.setOnClickListener(null);
@@ -169,7 +169,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     view2131296563 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
-    view2131297083.setOnClickListener(null);
-    view2131297083 = null;
+    view2131297084.setOnClickListener(null);
+    view2131297084 = null;
   }
 }

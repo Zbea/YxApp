@@ -95,6 +95,7 @@
     <RelativeLayout
         android:id="@+id/rl_public_pay"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="@dimen/dp_60">
         <ImageView
             android:layout_marginLeft="@dimen/dp_16"
@@ -164,10 +165,10 @@
         android:text="去付款"
         android:textSize="@dimen/sp_16"
         android:textColor="@color/white"
-        android:background="@drawable/shape_btn_main"
+        android:background="@drawable/shape_btn_main_bg_radiu"
         android:layout_marginLeft="@dimen/dp_32"
         android:layout_marginRight="@dimen/dp_32"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_35" />
+        android:layout_height="@dimen/dp_40" />
 
 </LinearLayout>

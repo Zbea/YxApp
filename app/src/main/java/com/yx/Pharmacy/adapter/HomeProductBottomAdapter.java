@@ -25,6 +25,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.net.NetUtil;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -43,7 +44,8 @@ public class HomeProductBottomAdapter extends BaseQuickAdapter<DrugModel,BaseVie
         ImageView product = helper.getView(R.id.iv_product);
         ImageView iv_presale = helper.getView(R.id.iv_presale);
         GlideUtil.loadImg(UiUtil.getContext(), item.getThumb(), product);
-
+        TextView  time    = helper.getView(R.id.tv_validity_time);
+        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.getEndtime()*1000) );
         ViewGroup.LayoutParams layoutParams = product.getLayoutParams();
         layoutParams.height = (DensityUtils.getScreenWidth()-DensityUtils.dp2px(UiUtil.getContext(), 60))/2;
         product.setLayoutParams(layoutParams);

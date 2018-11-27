@@ -121,15 +121,9 @@ public class MyShopActivity
                 MyShopModel myShopModel = mAdapter.getData().get(position);
                 switch (view.getId()) {
                     case R.id.tv_cut:
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
-                        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME,myShopModel.truename);
+                        saveShopStore(myShopModel);
                         getShortToastByString("切换门店成功");
+                        EventBus.getDefault().post("changeStore");
                         finish();
                         break;
                     case R.id.tv_modifi:

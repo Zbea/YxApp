@@ -57,7 +57,7 @@
 
         <EditText
             android:inputType="textPassword"
-            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:digits="0123456789abcdefghijgklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:id="@+id/edit_password"
             android:singleLine="true"
             android:textColor="@color/color_333333"

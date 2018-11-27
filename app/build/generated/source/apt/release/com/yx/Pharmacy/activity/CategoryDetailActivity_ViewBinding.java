@@ -26,7 +26,7 @@ public class CategoryDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296629;
 
-  private View view2131297083;
+  private View view2131297084;
 
   private View view2131296559;
 
@@ -90,7 +90,7 @@ public class CategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297083 = view;
+    view2131297084 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -158,8 +158,8 @@ public class CategoryDetailActivity_ViewBinding implements Unbinder {
     view2131296604 = null;
     view2131296629.setOnClickListener(null);
     view2131296629 = null;
-    view2131297083.setOnClickListener(null);
-    view2131297083 = null;
+    view2131297084.setOnClickListener(null);
+    view2131297084 = null;
     view2131296559.setOnClickListener(null);
     view2131296559 = null;
     view2131296512.setOnClickListener(null);

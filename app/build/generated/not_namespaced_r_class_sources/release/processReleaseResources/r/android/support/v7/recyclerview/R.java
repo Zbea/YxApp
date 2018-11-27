@@ -129,13 +129,13 @@ public final class R {
         public static final int right = 0x7f090200;
         public static final int right_icon = 0x7f090201;
         public static final int right_side = 0x7f090202;
-        public static final int start = 0x7f090268;
-        public static final int tag_transition_group = 0x7f090272;
-        public static final int text = 0x7f090273;
-        public static final int text2 = 0x7f090274;
-        public static final int time = 0x7f09027e;
-        public static final int title = 0x7f090280;
-        public static final int top = 0x7f090286;
+        public static final int start = 0x7f090269;
+        public static final int tag_transition_group = 0x7f090273;
+        public static final int text = 0x7f090274;
+        public static final int text2 = 0x7f090275;
+        public static final int time = 0x7f09027f;
+        public static final int title = 0x7f090281;
+        public static final int top = 0x7f090287;
     }
     public static final class integer {
         private integer() {}

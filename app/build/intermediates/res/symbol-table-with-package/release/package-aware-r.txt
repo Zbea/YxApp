@@ -2392,6 +2392,7 @@ id rl_signin
 id rl_system_notice
 id rl_system_notice_bottom
 id rl_title
+id rl_update
 id rl_user_head
 id rl_wechat_pay
 id rl_wuliu
@@ -3406,6 +3407,7 @@ string ucrop_label_edit_photo
 string ucrop_label_original
 string ucrop_menu_crop
 string ucrop_mutate_exception_hint
+string version_name
 string ysf_activity_file_download
 string ysf_activity_leave_message_detail
 string ysf_app_name

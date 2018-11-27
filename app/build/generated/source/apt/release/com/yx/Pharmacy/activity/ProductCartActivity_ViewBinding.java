@@ -3,6 +3,7 @@ package com.yx.Pharmacy.activity;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;
@@ -19,11 +20,11 @@ import java.lang.Override;
 public class ProductCartActivity_ViewBinding implements Unbinder {
   private ProductCartActivity target;
 
-  private View view2131297021;
+  private View view2131297022;
 
   private View view2131296562;
 
-  private View view2131296941;
+  private View view2131296942;
 
   private View view2131296777;
 
@@ -38,10 +39,11 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
 
     View view;
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
+    target.swipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.swipeRefreshLayout, "field 'swipeRefreshLayout'", SwipeRefreshLayout.class);
     target.mTvNotice = Utils.findRequiredViewAsType(source, R.id.tv_notice, "field 'mTvNotice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onViewClicked'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297021 = view;
+    view2131297022 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,7 +62,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mCbCheckall = Utils.findRequiredViewAsType(source, R.id.cb_checkall, "field 'mCbCheckall'", CheckBox.class);
     view = Utils.findRequiredView(source, R.id.tv_buy, "field 'mTvBuy' and method 'onViewClicked'");
     target.mTvBuy = Utils.castView(view, R.id.tv_buy, "field 'mTvBuy'", TextView.class);
-    view2131296941 = view;
+    view2131296942 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -88,6 +90,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     this.target = null;
 
     target.mTvTitle = null;
+    target.swipeRefreshLayout = null;
     target.mTvNotice = null;
     target.mTvMore = null;
     target.mLlCheckall = null;
@@ -97,12 +100,12 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mRvShopCart = null;
     target.mLoadingLayout = null;
 
-    view2131297021.setOnClickListener(null);
-    view2131297021 = null;
+    view2131297022.setOnClickListener(null);
+    view2131297022 = null;
     view2131296562.setOnClickListener(null);
     view2131296562 = null;
-    view2131296941.setOnClickListener(null);
-    view2131296941 = null;
+    view2131296942.setOnClickListener(null);
+    view2131296942 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
   }

@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.PayOrderModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
@@ -55,6 +56,31 @@ public class PayPresenter {
                        super.onError(e);
                    }
                });
+    }
+
+    /**
+     *  发送验证码
+     */
+    public void getOrderNum(BaseActivity activity) {
+
+        HomeNet.getHomeApi().getOrderNum().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<MyOrderNumModel>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<MyOrderNumModel> response) {
+                        if (response!=null)
+                        {
+                            if (response.getCode().equals("200"))
+                            {
+                                mView.resultCartNum(response.getData());
+                            }
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
     }
 
 }

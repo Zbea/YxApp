@@ -20,7 +20,7 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296777;
 
-  private View view2131297083;
+  private View view2131297084;
 
   @UiThread
   public MessageDetailActivity_ViewBinding(MessageDetailActivity target) {
@@ -46,7 +46,7 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297083 = view;
+    view2131297084 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
 
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
-    view2131297083.setOnClickListener(null);
-    view2131297083 = null;
+    view2131297084.setOnClickListener(null);
+    view2131297084 = null;
   }
 }

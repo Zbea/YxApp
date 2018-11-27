@@ -13,8 +13,9 @@ public class Constants {
     // H5连接
     public static final String H5_URL              = "h5_url";
 
-    //签到页面地址
     public static final String TEST      = "test";
+    //获取本地所有地址
+    public static final String LOCAL_URL     = BASE_URL+"app/config";
     //签到页面地址
     public static final String WEB_SIGN       = BASE_URL+"web/sign";
     //兑换优惠券地址
@@ -47,6 +48,8 @@ public class Constants {
     public static final String ACTIVITY_HOME      = "activity/home";
     // 获取首页活动及产品
     public static final String ACTIVITY_CUTOM     = "advance/custom";
+    // 获取首页公告
+    public static final String ACTIVITY_MESSAGE    = "message/billBoard";
     // 获取首页广告信息
     public static final String ADVANCE_HOME      = "advance/home";
     // 商品列表/详情
@@ -172,7 +175,6 @@ public class Constants {
     public static final String KEY_ITEM_ID = "key_item_id";// 门店id
     public static final String KEY_STORENAME = "key_storename";// 门店名
     public static final String KEY_ADDRESS = "key_storeaddress"; // 门店地址
-
     public static final String KEY_AVATAR = "key_avatar";// 门头照-头像
     public static final String KEY_TRUENAME = "key_truename";// 门店对应姓名
     public static final String KEY_MOBILE = "key_mobile";// 门店对应手机号

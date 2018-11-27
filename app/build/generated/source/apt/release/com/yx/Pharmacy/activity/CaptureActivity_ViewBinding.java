@@ -14,7 +14,7 @@ import java.lang.Override;
 public class CaptureActivity_ViewBinding implements Unbinder {
   private CaptureActivity target;
 
-  private View view2131297021;
+  private View view2131297022;
 
   private View view2131296490;
 
@@ -31,7 +31,7 @@ public class CaptureActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.tv_more, "method 'onClick'");
-    view2131297021 = view;
+    view2131297022 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,8 +63,8 @@ public class CaptureActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131297021.setOnClickListener(null);
-    view2131297021 = null;
+    view2131297022.setOnClickListener(null);
+    view2131297022 = null;
     view2131296490.setOnClickListener(null);
     view2131296490 = null;
     view2131296777.setOnClickListener(null);

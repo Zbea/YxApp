@@ -20,4 +20,7 @@ public class MyOrderNumModel {
     public int orderBack;
     public int collectCount;
     public int score;
+    public int coupon;
+    public double money;
+    public int isPublic;
 }

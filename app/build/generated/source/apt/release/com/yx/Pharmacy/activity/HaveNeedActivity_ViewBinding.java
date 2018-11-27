@@ -18,7 +18,7 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
 
   private View view2131296777;
 
-  private View view2131296954;
+  private View view2131296955;
 
   private View view2131296808;
 
@@ -46,7 +46,7 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296954 = view;
+    view2131296955 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,8 +78,8 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
 
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
-    view2131296954.setOnClickListener(null);
-    view2131296954 = null;
+    view2131296955.setOnClickListener(null);
+    view2131296955 = null;
     view2131296808.setOnClickListener(null);
     view2131296808 = null;
   }

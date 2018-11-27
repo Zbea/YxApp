@@ -46,7 +46,8 @@ public class CouponListAdapter extends BaseQuickAdapter<CouponModel,BaseViewHold
         helper.setText(R.id.tv_coupon_price,""+item.getCouponprice())
                 .setText(R.id.tv_coupon_use_range,item.getCouponcontent())
                 .setText(R.id.tv_coupon_couponscene,item.getCouponscene())
-                .setText(R.id.tv_coupon_time_limit,item.getCouponovertime());
+                .setText(R.id.tv_coupon_time_limit,item.getCouponovertime())
+         .setText(R.id.tv_coupon_discount,item.title);
 
         if(item.getCoupontype()==1){
             helper.setText(R.id.tv_coupon_use_type,"【单品券】");

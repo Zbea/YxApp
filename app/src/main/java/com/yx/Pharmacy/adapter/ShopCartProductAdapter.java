@@ -28,16 +28,18 @@ import com.yx.Pharmacy.widget.CenterAlignImageSpan;
 import com.yx.Pharmacy.widget.MarqueeView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Created time  2018/8/2 0002
+ *
  * @author : mcx
  * 类描述 :
  */
 
 public class ShopCartProductAdapter
-        extends BaseQuickAdapter<ShopCartModel.GoodsBean,BaseViewHolder> {
+        extends BaseQuickAdapter<ShopCartModel.GoodsBean, BaseViewHolder> {
 
     private String mType;
     private boolean mCheckAll;
@@ -45,24 +47,24 @@ public class ShopCartProductAdapter
 
     public ShopCartProductAdapter(int layoutResId, String type) {
         super(layoutResId);
-        this.mType = type ;
+        this.mType = type;
     }
 
     @Override
     protected void convert(BaseViewHolder helper, ShopCartModel.GoodsBean item) {
-        ImageView    product     = helper.getView(R.id.iv_product);
-        ImageView    iv_state    = helper.getView(R.id.iv_state);
-        TextView     title       = helper.getView(R.id.tv_title);
-        TextView     time       = helper.getView(R.id.tv_time);
-        MarqueeView  marqueeView = helper.getView(R.id.marqueeView);
-        CheckBox     cbSelect    = helper.getView(R.id.cb_select);
-        LinearLayout ll_item     = helper.getView(R.id.ll_item);
-        LinearLayout ll_gift     = helper.getView(R.id.ll_gift);
-        AmountView   amountView  = helper.getView(R.id.amount_view);
+        ImageView product = helper.getView(R.id.iv_product);
+        ImageView iv_state = helper.getView(R.id.iv_state);
+        TextView title = helper.getView(R.id.tv_title);
+        TextView time = helper.getView(R.id.tv_time);
+        MarqueeView marqueeView = helper.getView(R.id.marqueeView);
+        CheckBox cbSelect = helper.getView(R.id.cb_select);
+        LinearLayout ll_item = helper.getView(R.id.ll_item);
+        LinearLayout ll_gift = helper.getView(R.id.ll_gift);
+        AmountView amountView = helper.getView(R.id.amount_view);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
-//        time.setText("有效期："+DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.endtimes)));
+        time.setText("有效期：" + DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validtime)* 1000));
         List<String> info = item.info;
-        if (info!=null&&info.size()>0) {
+        if (info != null && info.size() > 0) {
             marqueeView.setVisibility(View.VISIBLE);
             List<CharSequence> list = new ArrayList<>();
             for (String s : info) {
@@ -73,28 +75,33 @@ public class ShopCartProductAdapter
                 }
             }
             marqueeView.startWithList(list);
-        }else {
+        } else {
             marqueeView.setVisibility(View.GONE);
         }
         cbSelect.setChecked(item.isSelect);
         if (item.isSelect) {
             ll_item.setBackgroundColor(Color.parseColor("#fafafa"));
-        }else {
+        } else {
             ll_item.setBackgroundColor(Color.WHITE);
         }
+
+        if (TextUtils.equals(mType, "11111")) {
+            cbSelect.setVisibility(View.GONE);
+        }
+
 
         if (TextUtils.equals(item.isvalid, "true")) {
             iv_state.setVisibility(View.VISIBLE);
             iv_state.setImageResource(R.drawable.icon_shopcar_lose);
             amountView.setEnable(false);
             helper.addOnClickListener(R.id.right);
-        }else if (TextUtils.equals(item.quehuo, "true")) {
+        } else if (TextUtils.equals(item.quehuo, "true")) {
             iv_state.setVisibility(View.VISIBLE);
             iv_state.setImageResource(R.drawable.icon_shopcar_lack);
             amountView.setEnable(false);
 
             helper.addOnClickListener(R.id.right);
-        }else {
+        } else {
             iv_state.setVisibility(View.GONE);
             amountView.setEnable(true);
 
@@ -102,30 +109,47 @@ public class ShopCartProductAdapter
         }
 
         // 赠送产品
-        if (item.giftInfo!=null) {
-            ImageView    gift_product    = helper.getView(R.id.iv_gift_product);
-            GlideUtil.loadImg(UiUtil.getContext(), item.giftInfo.goodsthumb, gift_product);
-            helper.setText(R.id.tv_gift_title,item.giftInfo.goodsname)
-                  .setText(R.id.tv_gift_gg,item.giftInfo.goodsgg)
-           .setText(R.id.tv_gift_price,"0.01");
-            if (item.giftList!=null) {
-                for (ShopCartModel.GoodsBean.GiftListBean giftListBean : item.giftList) {
-                    int carcount     = DensityUtils.parseInt(item.cartcount);
-                    int limit = DensityUtils.parseInt(giftListBean.limit);
-                    int give            = DensityUtils.parseInt(giftListBean.give);
-                    if(carcount>=limit){
-                        int div = carcount / limit;
-                        int count = div*give;
-                        if (count==0){
-                            ll_gift.setVisibility(View.GONE);
-                        }else {
-                            ll_gift.setVisibility(item.isSelect?View.VISIBLE:View.GONE);
-                        }
-                        helper.setText(R.id.tv_gift_number,"x"+count);
-                    }else {
-                        ll_gift.setVisibility(View.GONE);
+
+
+        if (item.giftList != null) {
+            List<Integer> limits=new ArrayList<>();
+            List<ShopCartModel.GoodsBean.GiftListBean> listBeans=new ArrayList<>();
+            int carcount = DensityUtils.parseInt(item.cartcount);
+            for (ShopCartModel.GoodsBean.GiftListBean giftListBean : item.giftList) {
+                int limit = DensityUtils.parseInt(giftListBean.limit);
+                int give = DensityUtils.parseInt(giftListBean.give);
+                if (carcount >= limit&&giftListBean.giftInfo!=null) {
+                    int div = carcount / limit;
+                    int count = div * give;
+                    if (count> 0) {
+                        limits.add(limit);
+                        listBeans.add(giftListBean);
                     }
                 }
+            }
+
+            if (limits.size()>0)
+            {
+                int limit=Collections.max(limits);
+                for (ShopCartModel.GoodsBean.GiftListBean giftListBean : listBeans) {
+                    int limit3 = DensityUtils.parseInt(giftListBean.limit);
+                    int give = DensityUtils.parseInt(giftListBean.give);
+                    if (limit== limit3) {
+                        int div = carcount / limit;
+                        int count = div * give;
+                        ll_gift.setVisibility(item.isSelect ? View.VISIBLE : View.GONE);
+                        ImageView gift_product = helper.getView(R.id.iv_gift_product);
+                        GlideUtil.loadImg(UiUtil.getContext(), giftListBean.giftInfo.goodsthumb, gift_product);
+                        helper.setText(R.id.tv_gift_title, giftListBean.giftInfo.goodsname)
+                                .setText(R.id.tv_gift_gg, giftListBean.giftInfo.goodsgg)
+                                .setText(R.id.tv_gift_price, "0.01");
+                        helper.setText(R.id.tv_gift_number, "x" + count);
+                    }
+                }
+            }
+            else
+            {
+                ll_gift.setVisibility(View.GONE);
             }
         }
         else
@@ -133,28 +157,28 @@ public class ShopCartProductAdapter
             ll_gift.setVisibility(View.GONE);
         }
 
+
         int addnum = DensityUtils.parseInt(item.addmum);
         int minnum = DensityUtils.parseInt(item.minimum);
-        helper.setText(R.id.tv_scqy,item.scqy)
-              .setText(R.id.tv_price,item.price)
-              .setText(R.id.tv_limit_count,"每"+addnum+"件起购")
-             .setText(R.id.tv_gg,item.gg)
-              .setVisible(R.id.tv_limit_count,addnum!=1);
+        helper.setText(R.id.tv_scqy, item.scqy)
+                .setText(R.id.tv_price, item.price)
+                .setText(R.id.tv_limit_count, "每" + addnum + "件起购")
+                .setText(R.id.tv_gg, item.gg)
+                .setVisible(R.id.tv_limit_count, addnum != 1);
 
         amountView.setMinNum(minnum);
         amountView.setAddNum(addnum);
 
         if (TextUtils.isEmpty(item.max)) {
             amountView.setGoods_storage(Integer.MAX_VALUE);
-        }else {
+        } else {
             int i = DensityUtils.parseInt(item.max);
-            if (i==0){
-                if (DensityUtils.parseInt(item.cartcount)<minnum)
-                {
+            if (i == 0) {
+                if (DensityUtils.parseInt(item.cartcount) < minnum) {
                     amountView.setMinNum(DensityUtils.parseInt(item.cartcount));
                 }
                 amountView.setGoods_storage(DensityUtils.parseInt(item.cartcount));
-            }else {
+            } else {
                 amountView.setGoods_storage(i);
             }
         }
@@ -164,53 +188,77 @@ public class ShopCartProductAdapter
 
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override
-            public void onAmountChange(View view, int amount,boolean isEdit) {
+            public void onAmountChange(View view, int amount, boolean isEdit) {
                 ShopCartModel.GoodsBean goodsBean = getData().get(helper.getAdapterPosition());
                 // 修改购物车商品数
-                if (DensityUtils.parseInt(getData().get(helper.getAdapterPosition()).cartcount)!=amount) {
-                    if (amount> DensityUtils.parseInt(getData().get(helper.getLayoutPosition()).max)) {
-                        getData().get(helper.getAdapterPosition()).cartcount=getData().get(helper.getAdapterPosition()).max;
+                if (DensityUtils.parseInt(getData().get(helper.getAdapterPosition()).cartcount) != amount) {
+                    if (amount > DensityUtils.parseInt(getData().get(helper.getLayoutPosition()).max)) {
+                        getData().get(helper.getAdapterPosition()).cartcount = getData().get(helper.getAdapterPosition()).max;
 //                        item.cartcount = item.max;
-                    }else {
-                        getData().get(helper.getLayoutPosition()).cartcount=String.valueOf(amount);
+                    } else {
+                        getData().get(helper.getLayoutPosition()).cartcount = String.valueOf(amount);
 //                        item.cartcount = String.valueOf(amount);
-                        if (mOnShopGoodListener!=null) {
-                            mOnShopGoodListener.onAumountChangeListener(view,amount,goodsBean.goodsid,isEdit,DensityUtils.parseInt(goodsBean.addmum));
+                        if (mOnShopGoodListener != null) {
+                            mOnShopGoodListener.onAumountChangeListener(view, amount, goodsBean.goodsid, isEdit, DensityUtils.parseInt(goodsBean.addmum));
                         }
                     }
 
 
-                    // 赠送产品
-                    if (goodsBean.giftInfo!=null) {
-                        if (goodsBean.giftList!=null) {
-                            for (ShopCartModel.GoodsBean.GiftListBean giftListBean : goodsBean.giftList) {
-                                int carcount     = DensityUtils.parseInt(goodsBean.cartcount);
-                                int limit = DensityUtils.parseInt(giftListBean.limit);
-                                int give            = DensityUtils.parseInt(giftListBean.give);
-                                if(carcount>=limit){
-                                    int div = carcount / limit;
-                                    int count = div*give;
-                                    if (count==0){
-                                        ll_gift.setVisibility(View.GONE);
-                                    }else {
-                                        ll_gift.setVisibility(goodsBean.isSelect?View.VISIBLE:View.GONE);
-                                    }
-                                    helper.setText(R.id.tv_gift_number,"x"+count);
-                                }else {
-                                    ll_gift.setVisibility(View.GONE);
+                    if (item.giftList != null) {
+                        List<Integer> limits=new ArrayList<>();
+                        List<ShopCartModel.GoodsBean.GiftListBean> listBeans=new ArrayList<>();
+                        int carcount = DensityUtils.parseInt(item.cartcount);
+                        for (ShopCartModel.GoodsBean.GiftListBean giftListBean : item.giftList) {
+                            int limit = DensityUtils.parseInt(giftListBean.limit);
+                            int give = DensityUtils.parseInt(giftListBean.give);
+                            if (carcount >= limit&&giftListBean.giftInfo!=null) {
+                                int div = carcount / limit;
+                                int count = div * give;
+                                if (count> 0) {
+                                    limits.add(limit);
+                                    listBeans.add(giftListBean);
                                 }
                             }
                         }
+
+                        if (limits.size()>0)
+                        {
+                            int limit=Collections.max(limits);
+                            for (ShopCartModel.GoodsBean.GiftListBean giftListBean : listBeans) {
+                                int limit3 = DensityUtils.parseInt(giftListBean.limit);
+                                int give = DensityUtils.parseInt(giftListBean.give);
+                                if (limit== limit3) {
+                                    int div = carcount / limit;
+                                    int count = div * give;
+                                    ll_gift.setVisibility(item.isSelect ? View.VISIBLE : View.GONE);
+                                    ImageView gift_product = helper.getView(R.id.iv_gift_product);
+                                    GlideUtil.loadImg(UiUtil.getContext(), giftListBean.giftInfo.goodsthumb, gift_product);
+                                    helper.setText(R.id.tv_gift_title, giftListBean.giftInfo.goodsname)
+                                            .setText(R.id.tv_gift_gg, giftListBean.giftInfo.goodsgg)
+                                            .setText(R.id.tv_gift_price, "0.01");
+                                    helper.setText(R.id.tv_gift_number, "x" + count);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            ll_gift.setVisibility(View.GONE);
+                        }
                     }
+                    else
+                    {
+                        ll_gift.setVisibility(View.GONE);
+                    }
+
                 }
             }
         });
 
-        if(TextUtils.equals(mType, "1")){
+        if (TextUtils.equals(mType, "1")) {
             // 秒杀
-            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
-            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString      spanString = new SpannableString("icon ");
+            Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
+            CenterAlignImageSpan imgSpan = new CenterAlignImageSpan(UiUtil.getContext(), b);
+            SpannableString spanString = new SpannableString("icon ");
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
@@ -224,56 +272,55 @@ public class ShopCartProductAdapter
 //            title.setText(spanString);
 //            title.append(item.title);
 //        }
-        else if(TextUtils.equals(mType,"3")){
+        else if (TextUtils.equals(mType, "3")) {
             // 满赠
-            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
-            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+            Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
+            CenterAlignImageSpan imgSpan = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString spanString = new SpannableString("icon ");
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
-        }else if(TextUtils.equals(mType,"9")){
+        } else if (TextUtils.equals(mType, "9")) {
             // 控销
             Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_kx);
-            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(),b);
+            CenterAlignImageSpan imgSpan = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString spanString = new SpannableString("icon ");
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.title);
-        }else {
+        } else {
             title.setText(item.title);
         }
 
-        helper.setGone(R.id.ll_single_coupon,TextUtils.equals(mType,"4"))
-              .addOnClickListener(R.id.ll_single_coupon);
+        helper.setGone(R.id.ll_single_coupon, TextUtils.equals(mType, "4"))
+                .addOnClickListener(R.id.ll_single_coupon);
 
         if (TextUtils.equals(mType, "4")) {
-            if (item.couponList!=null&&item.couponList.size()>0) {
+            if (item.couponList != null && item.couponList.size() > 0) {
                 boolean isSelectCoupon = false;
                 for (ShopCartModel.CouponListBean couponListBean : item.couponList) {
                     if (couponListBean.isSelectCoupon) {
                         isSelectCoupon = true;
-                        helper.setText(R.id.tv_single_coupon,couponListBean.couponcontent);
+                        helper.setText(R.id.tv_single_coupon, couponListBean.couponcontent);
                     }
                 }
                 if (!isSelectCoupon) {
-                    helper.setText(R.id.tv_single_coupon,"去领券");
+                    helper.setText(R.id.tv_single_coupon, "去领券");
                 }
-            }else {
-                helper.setText(R.id.tv_single_coupon,"暂无可用优惠券");
+            } else {
+                helper.setText(R.id.tv_single_coupon, "暂无可用优惠券");
             }
         }
 
     }
 
 
-
-    public  interface OnShopGoodListener{
+    public interface OnShopGoodListener {
 
         void onAumountChangeListener(View view, int amount, String goodsid, boolean isEdit, int addnum);
     }
 
-    public void setOnShopGoodListener(OnShopGoodListener listener){
+    public void setOnShopGoodListener(OnShopGoodListener listener) {
         this.mOnShopGoodListener = listener;
     }
 

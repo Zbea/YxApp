@@ -1,6 +1,7 @@
 package com.yx.Pharmacy.view;
 
 import com.yx.Pharmacy.model.HomeAdvanceModel;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.PayOrderModel;
 
 /**
@@ -11,4 +12,5 @@ import com.yx.Pharmacy.model.PayOrderModel;
 
 public interface IPayView {
     void showPay(PayOrderModel data, String alertmsg);
+    void resultCartNum(MyOrderNumModel data);
 }

@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.L;
 
 /**
@@ -131,7 +132,7 @@ public class AmountView extends LinearLayout
             }
             return;
         }
-        amount = Integer.valueOf(s.toString());
+        amount = DensityUtils.parseInt(s.toString());
         amount = Math.abs(amount);
         goods_storage = Math.abs(goods_storage);
         if (amount==0)

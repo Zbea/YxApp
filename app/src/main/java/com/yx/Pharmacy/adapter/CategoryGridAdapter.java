@@ -19,6 +19,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.net.NetUtil;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -55,6 +56,9 @@ public class CategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseViewHold
         TextView tv_drug_name = helper.getView(R.id.tv_drug_name);
         GlideUtil.loadImg(context,item.getThumb(),iv_category);
         TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
+
+        TextView  time    = helper.getView(R.id.tv_validity_time);
+        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.getEndtime()*1000) );
         tv_oldprice.setText("折后约"+item.disprice);
 
         iv_presale.setVisibility(TextUtils.equals(item.getPresale(),"0")? View.GONE:View.VISIBLE);

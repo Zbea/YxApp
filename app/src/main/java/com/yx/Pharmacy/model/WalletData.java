@@ -16,6 +16,7 @@ public class WalletData {
         public String fee;
         public String paytime;
         public int type;
+        public String orderid;
     }
 
 }

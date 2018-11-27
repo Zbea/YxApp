@@ -24,5 +24,7 @@ public interface IHomeView {
 
     void addProductListResult(List<DrugModel> data);
 
+    void showMessageListResult(HomeAdvanceModel data);
+
     void hideFlash();
 }

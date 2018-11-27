@@ -16,13 +16,13 @@ import java.lang.Override;
 public class RegisterActivity_ViewBinding implements Unbinder {
   private RegisterActivity target;
 
-  private View view2131297021;
+  private View view2131297038;
 
-  private View view2131296987;
+  private View view2131297005;
 
-  private View view2131297082;
+  private View view2131297101;
 
-  private View view2131296777;
+  private View view2131296790;
 
   @UiThread
   public RegisterActivity_ViewBinding(RegisterActivity target) {
@@ -37,7 +37,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onClick'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297021 = view;
+    view2131297038 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditPassword = Utils.findRequiredViewAsType(source, R.id.edit_password, "field 'mEditPassword'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'mTvGetCode' and method 'onClick'");
     target.mTvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'mTvGetCode'", TextView.class);
-    view2131296987 = view;
+    view2131297005 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +59,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditTuijianma = Utils.findRequiredViewAsType(source, R.id.edit_tuijianma, "field 'mEditTuijianma'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_register, "field 'mTvRegister' and method 'onClick'");
     target.mTvRegister = Utils.castView(view, R.id.tv_register, "field 'mTvRegister'", TextView.class);
-    view2131297082 = view;
+    view2131297101 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +67,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onClick'");
-    view2131296777 = view;
+    view2131296790 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -92,13 +92,13 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditTuijianma = null;
     target.mTvRegister = null;
 
-    view2131297021.setOnClickListener(null);
-    view2131297021 = null;
-    view2131296987.setOnClickListener(null);
-    view2131296987 = null;
-    view2131297082.setOnClickListener(null);
-    view2131297082 = null;
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
+    view2131297038.setOnClickListener(null);
+    view2131297038 = null;
+    view2131297005.setOnClickListener(null);
+    view2131297005 = null;
+    view2131297101.setOnClickListener(null);
+    view2131297101 = null;
+    view2131296790.setOnClickListener(null);
+    view2131296790 = null;
   }
 }

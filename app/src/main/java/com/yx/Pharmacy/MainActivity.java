@@ -51,7 +51,9 @@ import com.yx.Pharmacy.fragment.HomePageFragment;
 import com.yx.Pharmacy.fragment.MessageFragment;
 import com.yx.Pharmacy.fragment.MyFragment;
 import com.yx.Pharmacy.fragment.ShopCartFragment;
+import com.yx.Pharmacy.manage.LocalUrlManage;
 import com.yx.Pharmacy.model.SplashData;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.presenter.MainPresenter;
 import com.yx.Pharmacy.receiver.ReceiverDialogManage;
 import com.yx.Pharmacy.util.SPUtil;
@@ -140,6 +142,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         showFragment(3);
         mPresenter = new MainPresenter(this);
         mPresenter.getSplashAdData(this);
+        mPresenter.getUrl(this);
         if (SPUtil.getBoolean(mContext,"mainFrist",true))
         {
             new FunctionGuidDialog(mContext,0).builder();
@@ -151,6 +154,9 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
     public void onEvent(String type) {
         if (type.equals("gotohome")) {
             showFragment(3);
+        }
+        if (type.equals("changeStore")) {
+            notifyData();
         }
     }
 
@@ -168,6 +174,9 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
             showFragment(3);
         } else if (start_in == 2) {
             getMyShop();
+        }
+        else if (start_in == 0) {
+            notifyData();
         }
     }
 
@@ -296,6 +305,14 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
             SPUtil.putString(this, Constants.KEY_AD, json);
         } else {
             SPUtil.putString(this, Constants.KEY_AD, "");
+        }
+    }
+
+    @Override
+    public void getUrl(UrlBean data) {
+        if (data!=null)
+        {
+            LocalUrlManage.newInstance().setCount(data);
         }
     }
 

@@ -14,6 +14,7 @@ import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.widget.MarqueeView;
 import com.zhouwei.mzbanner.MZBannerView;
 import java.lang.IllegalStateException;
 import java.lang.Override;
@@ -21,15 +22,19 @@ import java.lang.Override;
 public class HomePageFragment_ViewBinding implements Unbinder {
   private HomePageFragment target;
 
-  private View view2131296455;
+  private View view2131296462;
 
-  private View view2131296507;
+  private View view2131297113;
 
-  private View view2131296611;
+  private View view2131297000;
 
-  private View view2131296513;
+  private View view2131296516;
 
-  private View view2131296511;
+  private View view2131296622;
+
+  private View view2131296522;
+
+  private View view2131296520;
 
   @UiThread
   public HomePageFragment_ViewBinding(final HomePageFragment target, View source) {
@@ -45,7 +50,7 @@ public class HomePageFragment_ViewBinding implements Unbinder {
     target.mRvProduct = Utils.findRequiredViewAsType(source, R.id.rv_product, "field 'mRvProduct'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.iv_advence, "field 'mIvAdvence' and method 'onViewClicked'");
     target.mIvAdvence = Utils.castView(view, R.id.iv_advence, "field 'mIvAdvence'", ImageView.class);
-    view2131296455 = view;
+    view2131296462 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,8 +59,29 @@ public class HomePageFragment_ViewBinding implements Unbinder {
     });
     target.mNsvHome = Utils.findRequiredViewAsType(source, R.id.nsv_home, "field 'mNsvHome'", NestedScrollView.class);
     target.tv_no_more = Utils.findRequiredViewAsType(source, R.id.tv_no_more, "field 'tv_no_more'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.tv_shop, "field 'tvShop' and method 'onViewClicked'");
+    target.tvShop = Utils.castView(view, R.id.tv_shop, "field 'tvShop'", TextView.class);
+    view2131297113 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onViewClicked(p0);
+      }
+    });
+    target.llStoreLogout = Utils.findRequiredViewAsType(source, R.id.ll_store_logout, "field 'llStoreLogout'", LinearLayout.class);
+    target.llStore = Utils.findRequiredViewAsType(source, R.id.ll_store, "field 'llStore'", LinearLayout.class);
+    view = Utils.findRequiredView(source, R.id.tv_factory_address, "field 'tvFactoryAddress' and method 'onViewClicked'");
+    target.tvFactoryAddress = Utils.castView(view, R.id.tv_factory_address, "field 'tvFactoryAddress'", TextView.class);
+    view2131297000 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onViewClicked(p0);
+      }
+    });
+    target.marqueeView = Utils.findRequiredViewAsType(source, R.id.marqueeView, "field 'marqueeView'", MarqueeView.class);
     view = Utils.findRequiredView(source, R.id.iv_qrcode, "method 'onViewClicked'");
-    view2131296507 = view;
+    view2131296516 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +89,7 @@ public class HomePageFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_search, "method 'onViewClicked'");
-    view2131296611 = view;
+    view2131296622 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,7 +97,7 @@ public class HomePageFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_sign, "method 'onViewClicked'");
-    view2131296513 = view;
+    view2131296522 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,7 +105,7 @@ public class HomePageFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_service, "method 'onViewClicked'");
-    view2131296511 = view;
+    view2131296520 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,16 +131,25 @@ public class HomePageFragment_ViewBinding implements Unbinder {
     target.mIvAdvence = null;
     target.mNsvHome = null;
     target.tv_no_more = null;
+    target.tvShop = null;
+    target.llStoreLogout = null;
+    target.llStore = null;
+    target.tvFactoryAddress = null;
+    target.marqueeView = null;
 
-    view2131296455.setOnClickListener(null);
-    view2131296455 = null;
-    view2131296507.setOnClickListener(null);
-    view2131296507 = null;
-    view2131296611.setOnClickListener(null);
-    view2131296611 = null;
-    view2131296513.setOnClickListener(null);
-    view2131296513 = null;
-    view2131296511.setOnClickListener(null);
-    view2131296511 = null;
+    view2131296462.setOnClickListener(null);
+    view2131296462 = null;
+    view2131297113.setOnClickListener(null);
+    view2131297113 = null;
+    view2131297000.setOnClickListener(null);
+    view2131297000 = null;
+    view2131296516.setOnClickListener(null);
+    view2131296516 = null;
+    view2131296622.setOnClickListener(null);
+    view2131296622 = null;
+    view2131296522.setOnClickListener(null);
+    view2131296522 = null;
+    view2131296520.setOnClickListener(null);
+    view2131296520 = null;
   }
 }

@@ -19,6 +19,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.HomeDataModel;
 import com.yx.Pharmacy.net.NetUtil;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -55,7 +56,8 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
         TextView oldPrice = helper.getView(R.id.tv_oldprice);
         ImageView product = helper.getView(R.id.iv_product);
         GlideUtil.loadImg(UiUtil.getContext(),item.thumb,product);
-
+        TextView  time    = helper.getView(R.id.tv_validity_time);
+        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.endtime*1000) );
         price.setText(item.price);
         oldPrice.setText("折后约"+item.disprice);
         if (TextUtils.isEmpty(NetUtil.getToken()))
