@@ -19,13 +19,13 @@ import java.lang.Override;
 public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
   private AskForAfterSaleActivity target;
 
-  private View view2131296777;
+  private View view2131296783;
 
-  private View view2131296551;
+  private View view2131296553;
 
-  private View view2131296955;
+  private View view2131296964;
 
-  private View view2131296606;
+  private View view2131296610;
 
   @UiThread
   public AskForAfterSaleActivity_ViewBinding(AskForAfterSaleActivity target) {
@@ -51,7 +51,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tvDiscount = Utils.findRequiredViewAsType(source, R.id.tv_discount, "field 'tvDiscount'", TextView.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recyclerView, "field 'recyclerView'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296777 = view;
+    view2131296783 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +59,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_all_select, "method 'click'");
-    view2131296551 = view;
+    view2131296553 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +67,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296955 = view;
+    view2131296964 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +75,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_reason, "method 'click'");
-    view2131296606 = view;
+    view2131296610 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,13 +105,13 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tvDiscount = null;
     target.recyclerView = null;
 
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
-    view2131296551.setOnClickListener(null);
-    view2131296551 = null;
-    view2131296955.setOnClickListener(null);
-    view2131296955 = null;
-    view2131296606.setOnClickListener(null);
-    view2131296606 = null;
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131296553.setOnClickListener(null);
+    view2131296553 = null;
+    view2131296964.setOnClickListener(null);
+    view2131296964 = null;
+    view2131296610.setOnClickListener(null);
+    view2131296610 = null;
   }
 }

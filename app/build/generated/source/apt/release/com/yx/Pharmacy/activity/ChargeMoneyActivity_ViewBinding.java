@@ -17,13 +17,13 @@ import java.lang.Override;
 public class ChargeMoneyActivity_ViewBinding implements Unbinder {
   private ChargeMoneyActivity target;
 
-  private View view2131296777;
+  private View view2131296783;
 
-  private View view2131297119;
+  private View view2131297132;
 
-  private View view2131296816;
+  private View view2131296824;
 
-  private View view2131296774;
+  private View view2131296780;
 
   @UiThread
   public ChargeMoneyActivity_ViewBinding(ChargeMoneyActivity target) {
@@ -40,7 +40,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
     target.iv_select_alipay = Utils.findRequiredViewAsType(source, R.id.iv_select_alipay, "field 'iv_select_alipay'", ImageView.class);
     target.edit_search = Utils.findRequiredViewAsType(source, R.id.edit_search, "field 'edit_search'", EditText.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296777 = view;
+    view2131296783 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_to_chongzhi, "method 'click'");
-    view2131297119 = view;
+    view2131297132 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_wechat_pay, "method 'click'");
-    view2131296816 = view;
+    view2131296824 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,7 +64,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_alipay, "method 'click'");
-    view2131296774 = view;
+    view2131296780 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -85,13 +85,13 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
     target.iv_select_alipay = null;
     target.edit_search = null;
 
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
-    view2131297119.setOnClickListener(null);
-    view2131297119 = null;
-    view2131296816.setOnClickListener(null);
-    view2131296816 = null;
-    view2131296774.setOnClickListener(null);
-    view2131296774 = null;
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131297132.setOnClickListener(null);
+    view2131297132 = null;
+    view2131296824.setOnClickListener(null);
+    view2131296824 = null;
+    view2131296780.setOnClickListener(null);
+    view2131296780 = null;
   }
 }

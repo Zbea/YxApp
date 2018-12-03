@@ -24,7 +24,7 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
 
   private View view2131296790;
 
-  private View view2131296820;
+  private View view2131296821;
 
   private View view2131296625;
 
@@ -40,7 +40,7 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
 
   private View view2131296614;
 
-  private View view2131296934;
+  private View view2131296935;
 
   private View view2131296483;
 
@@ -79,7 +79,7 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_scan, "field 'mRlScan' and method 'onViewClicked'");
     target.mRlScan = Utils.castView(view, R.id.rl_scan, "field 'mRlScan'", RelativeLayout.class);
-    view2131296820 = view;
+    view2131296821 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -166,7 +166,7 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
     target.mEditBuyerMobile = Utils.findRequiredViewAsType(source, R.id.edit_buyer_mobile, "field 'mEditBuyerMobile'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_add_shop, "field 'mTvAddShop' and method 'onViewClicked'");
     target.mTvAddShop = Utils.castView(view, R.id.tv_add_shop, "field 'mTvAddShop'", TextView.class);
-    view2131296934 = view;
+    view2131296935 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -308,8 +308,8 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
 
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296820.setOnClickListener(null);
-    view2131296820 = null;
+    view2131296821.setOnClickListener(null);
+    view2131296821 = null;
     view2131296625.setOnClickListener(null);
     view2131296625 = null;
     view2131296558.setOnClickListener(null);
@@ -324,8 +324,8 @@ public class MyShopAddActivity_ViewBinding implements Unbinder {
     view2131296613 = null;
     view2131296614.setOnClickListener(null);
     view2131296614 = null;
-    view2131296934.setOnClickListener(null);
-    view2131296934 = null;
+    view2131296935.setOnClickListener(null);
+    view2131296935 = null;
     view2131296483.setOnClickListener(null);
     view2131296483 = null;
     view2131296583.setOnClickListener(null);

@@ -19,9 +19,9 @@ import java.lang.Override;
 public class OrderDetailActivity_ViewBinding implements Unbinder {
   private OrderDetailActivity target;
 
-  private View view2131296989;
+  private View view2131296990;
 
-  private View view2131296807;
+  private View view2131296808;
 
   private View view2131296611;
 
@@ -29,7 +29,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296790;
 
-  private View view2131297102;
+  private View view2131297103;
 
   @UiThread
   public OrderDetailActivity_ViewBinding(OrderDetailActivity target) {
@@ -45,7 +45,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.nestedScrollView = Utils.findRequiredViewAsType(source, R.id.nestedScrollView, "field 'nestedScrollView'", NestedScrollView.class);
     view = Utils.findRequiredView(source, R.id.tv_detail_todo, "field 'tv_detail_todo' and method 'click'");
     target.tv_detail_todo = Utils.castView(view, R.id.tv_detail_todo, "field 'tv_detail_todo'", TextView.class);
-    view2131296989 = view;
+    view2131296990 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.rl_invoice, "field 'rlInvoice' and method 'click'");
     target.rlInvoice = Utils.castView(view, R.id.rl_invoice, "field 'rlInvoice'", RelativeLayout.class);
-    view2131296807 = view;
+    view2131296808 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -112,7 +112,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297102 = view;
+    view2131297103 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -159,17 +159,17 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.rl_paytype = null;
     target.tv_paytype = null;
 
-    view2131296989.setOnClickListener(null);
-    view2131296989 = null;
-    view2131296807.setOnClickListener(null);
-    view2131296807 = null;
+    view2131296990.setOnClickListener(null);
+    view2131296990 = null;
+    view2131296808.setOnClickListener(null);
+    view2131296808 = null;
     view2131296611.setOnClickListener(null);
     view2131296611 = null;
     view2131296572.setOnClickListener(null);
     view2131296572 = null;
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131297102.setOnClickListener(null);
-    view2131297102 = null;
+    view2131297103.setOnClickListener(null);
+    view2131297103 = null;
   }
 }

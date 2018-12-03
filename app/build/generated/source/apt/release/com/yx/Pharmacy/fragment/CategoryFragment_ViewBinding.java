@@ -3,6 +3,7 @@ package com.yx.Pharmacy.fragment;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import butterknife.Unbinder;
@@ -15,18 +16,19 @@ import java.lang.Override;
 public class CategoryFragment_ViewBinding implements Unbinder {
   private CategoryFragment target;
 
-  private View view2131296611;
+  private View view2131296615;
 
-  private View view2131296806;
+  private View view2131296814;
 
   @UiThread
   public CategoryFragment_ViewBinding(final CategoryFragment target, View source) {
     this.target = target;
 
     View view;
+    target.swipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.swipeRefreshLayout, "field 'swipeRefreshLayout'", SwipeRefreshLayout.class);
     target.rvSort = Utils.findRequiredViewAsType(source, R.id.rv_sort, "field 'rvSort'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_search, "method 'click'");
-    view2131296611 = view;
+    view2131296615 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -34,7 +36,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
-    view2131296806 = view;
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,11 +52,12 @@ public class CategoryFragment_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
+    target.swipeRefreshLayout = null;
     target.rvSort = null;
 
-    view2131296611.setOnClickListener(null);
-    view2131296611 = null;
-    view2131296806.setOnClickListener(null);
-    view2131296806 = null;
+    view2131296615.setOnClickListener(null);
+    view2131296615 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
   }
 }

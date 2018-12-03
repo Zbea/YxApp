@@ -62,7 +62,14 @@ public class ShopCartProductAdapter
         LinearLayout ll_gift = helper.getView(R.id.ll_gift);
         AmountView amountView = helper.getView(R.id.amount_view);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
-        time.setText("有效期：" + DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validtime)* 1000));
+        if (TextUtils.isEmpty(item.validtime))
+        {
+            time.setVisibility(View.GONE);
+        }
+        else
+        {
+            time.setText("有效期：" +DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validtime)*1000) );
+        }
         List<String> info = item.info;
         if (info != null && info.size() > 0) {
             marqueeView.setVisibility(View.VISIBLE);
@@ -85,9 +92,13 @@ public class ShopCartProductAdapter
             ll_item.setBackgroundColor(Color.WHITE);
         }
 
-        if (TextUtils.equals(mType, "11111")) {
-            cbSelect.setVisibility(View.GONE);
-        }
+//        if (TextUtils.equals(mType, "11111")) {
+//            cbSelect.setVisibility(View.GONE);
+//        }
+//        else
+//        {
+//            cbSelect.setVisibility(View.VISIBLE);
+//        }
 
 
         if (TextUtils.equals(item.isvalid, "true")) {
@@ -161,7 +172,7 @@ public class ShopCartProductAdapter
         int addnum = DensityUtils.parseInt(item.addmum);
         int minnum = DensityUtils.parseInt(item.minimum);
         helper.setText(R.id.tv_scqy, item.scqy)
-                .setText(R.id.tv_price, item.price)
+                .setText(R.id.tv_price, item.usefulprice)
                 .setText(R.id.tv_limit_count, "每" + addnum + "件起购")
                 .setText(R.id.tv_gg, item.gg)
                 .setVisible(R.id.tv_limit_count, addnum != 1);
@@ -263,15 +274,15 @@ public class ShopCartProductAdapter
             title.setText(spanString);
             title.append(item.title);
         }
-//        else if(TextUtils.equals(mType,"2")){
-//            // 特价
-//            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-//            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-//            SpannableString spanString = new SpannableString("icon ");
-//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-//            title.setText(spanString);
-//            title.append(item.title);
-//        }
+        else if(TextUtils.equals(mType,"2")){
+            // 特价
+            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+            SpannableString spanString = new SpannableString("icon ");
+            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+            title.setText(spanString);
+            title.append(item.title);
+        }
         else if (TextUtils.equals(mType, "3")) {
             // 满赠
             Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);

@@ -20,7 +20,7 @@ import java.lang.Override;
 public class SaleRecordActivity_ViewBinding implements Unbinder {
   private SaleRecordActivity target;
 
-  private View view2131296810;
+  private View view2131296811;
 
   private View view2131296790;
 
@@ -41,7 +41,7 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_more, "field 'rl_more' and method 'onClick'");
     target.rl_more = Utils.castView(view, R.id.rl_more, "field 'rl_more'", RelativeLayout.class);
-    view2131296810 = view;
+    view2131296811 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -94,8 +94,8 @@ public class SaleRecordActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.mTvNum = null;
 
-    view2131296810.setOnClickListener(null);
-    view2131296810 = null;
+    view2131296811.setOnClickListener(null);
+    view2131296811 = null;
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
     view2131296485.setOnClickListener(null);

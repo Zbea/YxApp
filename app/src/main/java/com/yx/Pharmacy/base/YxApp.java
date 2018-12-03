@@ -32,7 +32,7 @@ public class YxApp
     @Override
     public void onCreate() {
         super.onCreate();
-        LeakCanary.install(this);
+//        LeakCanary.install(this);
         UiUtil.init(this);
         AppStatusTracker.init(this);
         Unicorn.init(this, Constants.QIYU_ID, options(), new QiyuImageLoader(this));

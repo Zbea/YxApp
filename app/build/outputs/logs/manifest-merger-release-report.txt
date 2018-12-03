@@ -13,10 +13,10 @@ INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:64:9-74:2
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:65:13-53
 manifest
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
 MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\d917d12a01c34c8134840b88af5e7c7a\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\5840d533164de4274e6fcb1fcc16598c\AndroidManifest.xml:2:1-17:12
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\e3c6ee66585929a67dc3b903b0e27bf6\AndroidManifest.xml:2:1-133:12
@@ -43,6 +43,7 @@ MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\cach
 MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\db372cd17d4951e2c63261e814199123\AndroidManifest.xml:2:1-12:12
 MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\73b4ece0d9d11455cea763a45ede7c4a\AndroidManifest.xml:2:1-12:12
 MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1bfdefa99da06440811fa7ba9ab34c7e\AndroidManifest.xml:2:1-12:12
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\4745c2706e6c05a7003c7513efe85712\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\dd8936ad7b6a65c9f1c072fe92febc37\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\092863521e0b96cc03730dcc290933e7\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\2907ee63fe0b0b6b8d29df5b7870e8fd\AndroidManifest.xml:17:1-22:12
@@ -60,9 +61,9 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\48b2c58acef2f6922da64e6c690e76d7\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ed2af29773469ab2e44db37a0f65d794\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0d1c73941737038e6339400ab758d9ba\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
-INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-204:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
+INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:2:1-211:12
 	package
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:4:5-30
 		INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
@@ -266,7 +267,7 @@ ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:43:5-80
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:43:22-77
 application
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:45:5-202:19
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:45:5-209:19
 MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\5840d533164de4274e6fcb1fcc16598c\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\5840d533164de4274e6fcb1fcc16598c\AndroidManifest.xml:11:5-15:19
 MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\e3c6ee66585929a67dc3b903b0e27bf6\AndroidManifest.xml:37:5-131:19
@@ -355,317 +356,325 @@ ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:87:9-92:66
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:88:13-36
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:90:13-41
-activity#com.yx.Pharmacy.activity.RegisterActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:93:9-63
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:93:19-60
-activity#com.yx.Pharmacy.activity.LoginActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:94:9-96:55
+activity#com.yx.Pharmacy.activity.ProductDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:94:9-99:66
+	android:screenOrientation
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:96:13-49
+	android:launchMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:98:13-44
 	android:windowSoftInputMode
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:96:13-52
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:99:13-64
+	android:exported
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:95:13-36
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:95:13-51
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:97:13-59
+activity#com.yx.Pharmacy.activity.RegisterActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:101:9-63
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:101:19-60
+activity#com.yx.Pharmacy.activity.LoginActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:102:9-104:55
+	android:windowSoftInputMode
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:104:13-52
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:103:13-51
 activity#com.tencent.bugly.beta.ui.BetaActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:98:9-101:64
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:106:9-109:64
 MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\2dd88c57fdafed40bdda4717a39d32c8\AndroidManifest.xml:23:9-27:56
 MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\2dd88c57fdafed40bdda4717a39d32c8\AndroidManifest.xml:23:9-27:56
 	android:configChanges
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:100:13-81
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:108:13-81
 	android:theme
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:101:13-61
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:109:13-61
 	tools:replace
 		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.6.aar\2dd88c57fdafed40bdda4717a39d32c8\AndroidManifest.xml:27:13-53
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:99:13-66
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:107:13-66
 activity#com.yx.Pharmacy.activity.SettingActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:103:9-62
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:9-62
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:103:19-59
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:19-59
 activity#com.yx.Pharmacy.activity.UserInfoActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:104:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:104:19-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:19-60
 activity#com.yx.Pharmacy.activity.FeedBackActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:105:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:105:19-60
-activity#com.yx.Pharmacy.activity.CategoryDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:106:9-69
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:19-60
+activity#com.yx.Pharmacy.activity.ProductCategoryDetailActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:9-76
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:106:19-66
-activity#com.yx.Pharmacy.activity.ProductDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:107:9-68
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:107:19-65
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:19-73
 activity#com.yx.Pharmacy.activity.OrderDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:108:9-66
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:9-66
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:108:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:19-63
 activity#com.yx.Pharmacy.activity.SearchActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:109:9-61
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:9-61
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:109:19-58
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:19-58
 activity#com.yx.Pharmacy.activity.MyShopActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:9-61
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:9-61
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:110:19-58
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:19-58
 activity#com.yx.Pharmacy.activity.MyShopAddActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:9-64
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:9-64
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:111:19-61
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:19-61
 activity#com.yx.Pharmacy.activity.MyCollectActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:9-64
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:9-64
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:112:19-61
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:19-61
 activity#com.yx.Pharmacy.activity.ChargeMoneyActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:9-66
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:9-66
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:113:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:19-63
 activity#com.yx.Pharmacy.activity.MyIntegralActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:9-65
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:9-65
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:114:19-62
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:19-62
 activity#com.yx.Pharmacy.activity.MyWalletActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:115:19-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:19-60
 activity#com.yx.Pharmacy.activity.OftenBuyActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:116:19-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:19-60
 activity#com.yx.Pharmacy.activity.MyCouponActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:117:19-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:19-60
 activity#com.yx.Pharmacy.activity.CaptureActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:9-62
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:118:19-59
-activity#com.yx.Pharmacy.activity.MyOrderListActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:9-66
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:119:19-63
-activity#com.yx.Pharmacy.activity.OrderActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:9-60
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:120:19-57
-activity#com.yx.Pharmacy.activity.AfterSaleActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:9-64
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:121:19-61
-activity#com.yx.Pharmacy.activity.PayActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:9-58
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:122:19-55
-activity#com.yx.Pharmacy.activity.CommendProductActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:9-69
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:123:19-66
-activity#com.yx.Pharmacy.activity.PdfActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:9-58
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:124:19-55
-activity#com.yx.Pharmacy.activity.WebviewActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:125:9-62
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:125:19-59
+activity#com.yx.Pharmacy.activity.MyOrderListActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:126:9-66
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:126:19-63
+activity#com.yx.Pharmacy.activity.OrderActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:127:9-60
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:127:19-57
+activity#com.yx.Pharmacy.activity.AfterSaleActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:128:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:128:19-61
+activity#com.yx.Pharmacy.activity.PayActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:129:9-58
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:129:19-55
+activity#com.yx.Pharmacy.activity.CommendProductActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:130:9-69
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:130:19-66
+activity#com.yx.Pharmacy.activity.PdfActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:131:9-58
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:131:19-55
+activity#com.yx.Pharmacy.activity.WebviewActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:19-59
 receiver#com.yx.Pharmacy.receiver.YxJPushReceiver
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:127:9-141:20
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:134:9-148:20
 	android:enabled
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:129:13-35
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:136:13-35
 	android:exported
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:130:13-37
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:137:13-37
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:128:13-53
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:135:13-53
 intent-filter#action:name:cn.jpush.android.intent.CONNECTION+action:name:cn.jpush.android.intent.MESSAGE_RECEIVED+action:name:cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION+action:name:cn.jpush.android.intent.NOTIFICATION_OPENED+action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED+action:name:cn.jpush.android.intent.REGISTRATION+category:name:com.yx.Pharmacy
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:131:13-140:29
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:138:13-147:29
 action#cn.jpush.android.intent.REGISTRATION
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:17-79
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:17-79
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:132:25-76
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:25-76
 action#cn.jpush.android.intent.MESSAGE_RECEIVED
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:133:17-83
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:140:17-83
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:133:25-80
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:140:25-80
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:134:17-88
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:141:17-88
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:134:25-85
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:141:25-85
 action#cn.jpush.android.intent.NOTIFICATION_OPENED
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:135:17-86
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:142:17-86
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:135:25-83
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:142:25-83
 action#cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:136:17-92
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:17-92
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:136:25-89
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:25-89
 action#cn.jpush.android.intent.CONNECTION
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:137:17-77
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:144:17-77
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:137:25-74
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:144:25-74
 category#com.yx.Pharmacy
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:17-60
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:146:17-60
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:139:27-57
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:146:27-57
 service#cn.jpush.android.service.PushService
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:9-145:50
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:9-152:50
 REJECTED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\e3c6ee66585929a67dc3b903b0e27bf6\AndroidManifest.xml:60:9-71:19
 	tools:node
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:145:18-38
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:152:18-38
 	android:process
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:144:18-49
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:151:18-49
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:143:18-69
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:18-69
 activity#com.yx.Pharmacy.activity.AskForAfterSaleActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:147:9-70
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:154:9-70
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:147:19-67
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:154:19-67
 activity#com.yx.Pharmacy.activity.AfterOrderDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:148:9-71
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:155:9-71
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:148:19-68
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:155:19-68
 activity#com.yx.Pharmacy.activity.WalletDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:9-67
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:156:9-67
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:149:19-64
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:156:19-64
 activity#com.yx.Pharmacy.activity.IntegralDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:9-69
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:157:9-69
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:150:19-66
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:157:19-66
 activity#com.yx.Pharmacy.activity.OrderCreateActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:151:9-66
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:158:9-66
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:151:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:158:19-63
 activity#com.yx.Pharmacy.activity.AddBankCardActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:152:9-66
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:159:9-66
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:152:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:159:19-63
 activity#com.yx.Pharmacy.activity.AboutActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:153:9-60
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:160:9-60
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:153:19-57
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:160:19-57
 activity#com.alipay.sdk.app.H5PayActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:156:9-161:70
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:163:9-168:70
 	android:screenOrientation
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:160:13-47
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:167:13-47
 	android:windowSoftInputMode
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:161:13-67
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:168:13-67
 	android:exported
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:159:13-37
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:166:13-37
 	android:configChanges
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:158:13-85
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:165:13-85
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:157:13-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:164:13-60
 activity#com.alipay.sdk.app.H5AuthActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:162:9-167:70
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:169:9-174:70
 	android:screenOrientation
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:166:13-47
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:173:13-47
 	android:windowSoftInputMode
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:167:13-67
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:174:13-67
 	android:exported
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:165:13-37
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:172:13-37
 	android:configChanges
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:164:13-74
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:171:13-74
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:163:13-61
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:170:13-61
 activity#com.yx.Pharmacy.wxapi.WXPayEntryActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:171:9-174:46
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:178:9-181:46
 	android:launchMode
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:174:13-43
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:181:13-43
 	android:exported
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:173:13-36
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:180:13-36
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:172:13-53
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:179:13-53
 activity#com.yx.Pharmacy.wxapi.WXEntryActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:175:9-178:75
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:182:9-185:75
 	android:exported
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:177:13-36
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:184:13-36
 	android:theme
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:178:13-72
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:185:13-72
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:176:13-50
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:183:13-50
 activity#com.yx.Pharmacy.activity.AccountSecurityActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:180:9-70
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:9-70
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:180:19-67
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:19-67
 activity#com.yx.Pharmacy.activity.ChangePhoneActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:181:9-66
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:9-66
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:181:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:19-63
 activity#com.yx.Pharmacy.activity.ChangePasswordActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:182:9-69
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:9-69
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:182:19-66
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:19-66
 activity#com.yx.Pharmacy.activity.HaveNeedActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:183:9-185:55
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:190:9-192:55
 	android:windowSoftInputMode
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:185:13-52
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:192:13-52
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:184:13-54
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:191:13-54
 activity#com.yx.Pharmacy.base.HHActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:186:9-53
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:9-53
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:186:19-50
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:19-50
 activity#com.yx.Pharmacy.activity.MessageDetailActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:9-68
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:9-68
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:187:19-65
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:19-65
 activity#com.yx.Pharmacy.activity.TestBannerActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:9-65
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:188:19-62
-activity#com.yx.Pharmacy.activity.CommendMsActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:9-64
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:189:19-61
-activity#com.yx.Pharmacy.activity.CommendTjActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:190:9-64
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:190:19-61
-activity#com.yx.Pharmacy.activity.TokeOutActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:191:9-62
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:191:19-59
-activity#com.yx.Pharmacy.activity.BankActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:192:9-59
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:192:19-56
-activity#com.yx.Pharmacy.activity.MyBankActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:9-61
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:193:19-58
-activity#com.yx.Pharmacy.activity.WithdrawalActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:9-65
-	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:194:19-62
-activity#com.yx.Pharmacy.activity.SaleRecordActivity
 ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:195:9-65
 	android:name
 		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:195:19-62
+activity#com.yx.Pharmacy.activity.CommendMsActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:19-61
+activity#com.yx.Pharmacy.activity.CommendTjActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:9-64
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:19-61
+activity#com.yx.Pharmacy.activity.TokeOutActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:9-62
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:19-59
+activity#com.yx.Pharmacy.activity.BankActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:9-59
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:19-56
+activity#com.yx.Pharmacy.activity.MyBankActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:9-61
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:19-58
+activity#com.yx.Pharmacy.activity.WithdrawalActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:19-62
+activity#com.yx.Pharmacy.activity.SaleRecordActivity
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:202:9-65
+	android:name
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:202:19-62
 activity#com.yx.Pharmacy.activity.MyQrCodeActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:203:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:196:19-60
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:203:19-60
 activity#com.yx.Pharmacy.activity.WuliuActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:9-60
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:204:9-60
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:197:19-57
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:204:19-57
 activity#com.yx.Pharmacy.activity.ChangeBankCardActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:9-68
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:205:9-68
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:198:19-66
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:205:19-66
 activity#com.yx.Pharmacy.activity.ProductCartActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:9-65
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:206:9-65
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:199:19-63
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:206:19-63
 activity#com.yx.Pharmacy.activity.ProductCouponActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:9-67
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:207:9-67
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:200:19-65
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:207:19-65
 activity#com.yx.Pharmacy.activity.QiyeZizhiActivity
-ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:9-63
+ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:208:9-63
 	android:name
-		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:201:19-61
+		ADDED from D:\androidSpace\android\app\src\main\AndroidManifest.xml:208:19-61
 uses-sdk
 INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\androidSpace\android\app\src\main\AndroidManifest.xml
@@ -722,6 +731,8 @@ MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\cach
 MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\73b4ece0d9d11455cea763a45ede7c4a\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1bfdefa99da06440811fa7ba9ab34c7e\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1bfdefa99da06440811fa7ba9ab34c7e\AndroidManifest.xml:8:5-10:41
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\4745c2706e6c05a7003c7513efe85712\AndroidManifest.xml:20:5-22:41
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\4745c2706e6c05a7003c7513efe85712\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\dd8936ad7b6a65c9f1c072fe92febc37\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\dd8936ad7b6a65c9f1c072fe92febc37\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\092863521e0b96cc03730dcc290933e7\AndroidManifest.xml:20:5-44

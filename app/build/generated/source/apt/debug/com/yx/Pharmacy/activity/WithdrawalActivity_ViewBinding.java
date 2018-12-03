@@ -18,9 +18,9 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
 
   private View view2131296790;
 
-  private View view2131296970;
+  private View view2131296971;
 
-  private View view2131297128;
+  private View view2131297129;
 
   @UiThread
   public WithdrawalActivity_ViewBinding(WithdrawalActivity target) {
@@ -47,7 +47,7 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296970 = view;
+    view2131296971 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_take_all, "method 'click'");
-    view2131297128 = view;
+    view2131297129 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,9 +80,9 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
 
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296970.setOnClickListener(null);
-    view2131296970 = null;
-    view2131297128.setOnClickListener(null);
-    view2131297128 = null;
+    view2131296971.setOnClickListener(null);
+    view2131296971 = null;
+    view2131297129.setOnClickListener(null);
+    view2131297129 = null;
   }
 }

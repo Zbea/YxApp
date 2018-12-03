@@ -27,7 +27,7 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
 
   private View view2131296572;
 
-  private View view2131296985;
+  private View view2131296986;
 
   @UiThread
   public OrderCreateActivity_ViewBinding(OrderCreateActivity target) {
@@ -89,7 +89,7 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.mTvPayPrice = Utils.findRequiredViewAsType(source, R.id.tv_pay_price, "field 'mTvPayPrice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_create_order, "field 'mTvCreateOrder' and method 'onClick'");
     target.mTvCreateOrder = Utils.castView(view, R.id.tv_create_order, "field 'mTvCreateOrder'", TextView.class);
-    view2131296985 = view;
+    view2131296986 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -139,7 +139,7 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     view2131296611 = null;
     view2131296572.setOnClickListener(null);
     view2131296572 = null;
-    view2131296985.setOnClickListener(null);
-    view2131296985 = null;
+    view2131296986.setOnClickListener(null);
+    view2131296986 = null;
   }
 }

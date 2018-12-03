@@ -24,9 +24,11 @@ public class HomePageFragment_ViewBinding implements Unbinder {
 
   private View view2131296462;
 
-  private View view2131297113;
+  private View view2131297114;
 
-  private View view2131297000;
+  private View view2131296629;
+
+  private View view2131297001;
 
   private View view2131296516;
 
@@ -61,18 +63,26 @@ public class HomePageFragment_ViewBinding implements Unbinder {
     target.tv_no_more = Utils.findRequiredViewAsType(source, R.id.tv_no_more, "field 'tv_no_more'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_shop, "field 'tvShop' and method 'onViewClicked'");
     target.tvShop = Utils.castView(view, R.id.tv_shop, "field 'tvShop'", TextView.class);
-    view2131297113 = view;
+    view2131297114 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onViewClicked(p0);
       }
     });
-    target.llStoreLogout = Utils.findRequiredViewAsType(source, R.id.ll_store_logout, "field 'llStoreLogout'", LinearLayout.class);
+    view = Utils.findRequiredView(source, R.id.ll_store_logout, "field 'llStoreLogout' and method 'onViewClicked'");
+    target.llStoreLogout = Utils.castView(view, R.id.ll_store_logout, "field 'llStoreLogout'", LinearLayout.class);
+    view2131296629 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onViewClicked(p0);
+      }
+    });
     target.llStore = Utils.findRequiredViewAsType(source, R.id.ll_store, "field 'llStore'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.tv_factory_address, "field 'tvFactoryAddress' and method 'onViewClicked'");
     target.tvFactoryAddress = Utils.castView(view, R.id.tv_factory_address, "field 'tvFactoryAddress'", TextView.class);
-    view2131297000 = view;
+    view2131297001 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -139,10 +149,12 @@ public class HomePageFragment_ViewBinding implements Unbinder {
 
     view2131296462.setOnClickListener(null);
     view2131296462 = null;
-    view2131297113.setOnClickListener(null);
-    view2131297113 = null;
-    view2131297000.setOnClickListener(null);
-    view2131297000 = null;
+    view2131297114.setOnClickListener(null);
+    view2131297114 = null;
+    view2131296629.setOnClickListener(null);
+    view2131296629 = null;
+    view2131297001.setOnClickListener(null);
+    view2131297001 = null;
     view2131296516.setOnClickListener(null);
     view2131296516 = null;
     view2131296622.setOnClickListener(null);

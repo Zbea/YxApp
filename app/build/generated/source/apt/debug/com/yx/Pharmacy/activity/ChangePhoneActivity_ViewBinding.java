@@ -16,11 +16,11 @@ import java.lang.Override;
 public class ChangePhoneActivity_ViewBinding implements Unbinder {
   private ChangePhoneActivity target;
 
-  private View view2131297005;
+  private View view2131297006;
 
   private View view2131296790;
 
-  private View view2131296970;
+  private View view2131296971;
 
   @UiThread
   public ChangePhoneActivity_ViewBinding(ChangePhoneActivity target) {
@@ -38,7 +38,7 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.editNewPhoneNum = Utils.findRequiredViewAsType(source, R.id.edit_new_phone_num, "field 'editNewPhoneNum'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tvGetCode' and method 'click'");
     target.tvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'tvGetCode'", TextView.class);
-    view2131297005 = view;
+    view2131297006 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296970 = view;
+    view2131296971 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +78,11 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.tvGetCode = null;
     target.editCode = null;
 
-    view2131297005.setOnClickListener(null);
-    view2131297005 = null;
+    view2131297006.setOnClickListener(null);
+    view2131297006 = null;
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296970.setOnClickListener(null);
-    view2131296970 = null;
+    view2131296971.setOnClickListener(null);
+    view2131296971 = null;
   }
 }

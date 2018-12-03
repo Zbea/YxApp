@@ -16,11 +16,11 @@ import java.lang.Override;
 public class ChangeBankCardActivity_ViewBinding implements Unbinder {
   private ChangeBankCardActivity target;
 
-  private View view2131297005;
+  private View view2131297006;
 
   private View view2131296790;
 
-  private View view2131296970;
+  private View view2131296971;
 
   @UiThread
   public ChangeBankCardActivity_ViewBinding(ChangeBankCardActivity target) {
@@ -41,7 +41,7 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'edit_code'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tv_get_code' and method 'click'");
     target.tv_get_code = Utils.castView(view, R.id.tv_get_code, "field 'tv_get_code'", TextView.class);
-    view2131297005 = view;
+    view2131297006 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296970 = view;
+    view2131296971 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -82,11 +82,11 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = null;
     target.tv_get_code = null;
 
-    view2131297005.setOnClickListener(null);
-    view2131297005 = null;
+    view2131297006.setOnClickListener(null);
+    view2131297006 = null;
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296970.setOnClickListener(null);
-    view2131296970 = null;
+    view2131296971.setOnClickListener(null);
+    view2131296971 = null;
   }
 }

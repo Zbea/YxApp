@@ -63,7 +63,7 @@ public class OrderDetailPresenter {
         urlMap.put("orderid",orderid);
         HomeNet.getHomeApi().getOrderDetail(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<OrderModel>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<OrderModel>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<OrderModel> response) {
                         if (response.getData()!=null) {

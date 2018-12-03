@@ -61,7 +61,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
             ll_type.setVisibility(View.GONE);
         }
 
-        if (TextUtils.equals(item.activityname, "失效商品"))
+        if (TextUtils.equals(item.activityname, "失效商品")&&TextUtils.equals(type, "0"))
         {
             ll_open.setVisibility(View.VISIBLE);
             product.setVisibility(View.GONE);

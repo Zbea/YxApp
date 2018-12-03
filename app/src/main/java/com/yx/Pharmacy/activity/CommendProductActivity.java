@@ -132,7 +132,7 @@ public class CommendProductActivity
         // 商品列表
         LinearLayoutManager manager = new LinearLayoutManager(this);
         mRvProduct.setLayoutManager(manager);
-        mAdapter = new CommendProductAdapter(R.layout.item_home_product_minus, mType);
+        mAdapter = new CommendProductAdapter(R.layout.item_home_product_minus);
         mRvProduct.setAdapter(mAdapter);
 
         int itemDecoration = DensityUtils.dp2px(this, 1);

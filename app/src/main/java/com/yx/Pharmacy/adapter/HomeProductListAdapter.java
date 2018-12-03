@@ -11,7 +11,9 @@ import android.text.style.ImageSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -55,9 +57,17 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
         TextView price = helper.getView(R.id.tv_price);
         TextView oldPrice = helper.getView(R.id.tv_oldprice);
         ImageView product = helper.getView(R.id.iv_product);
+        RelativeLayout rl_image = helper.getView(R.id.rl_image);
         GlideUtil.loadImg(UiUtil.getContext(),item.thumb,product);
         TextView  time    = helper.getView(R.id.tv_validity_time);
-        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.endtime*1000) );
+        if (TextUtils.isEmpty(item.validend))
+        {
+            time.setVisibility(View.GONE);
+        }
+        else
+        {
+            time.setText("有效期：" +DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validend)*1000) );
+        }
         price.setText(item.price);
         oldPrice.setText("折后约"+item.disprice);
         if (TextUtils.isEmpty(NetUtil.getToken()))
@@ -86,16 +96,16 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
                   .setGone(R.id.iv_presale,!TextUtils.equals(item.presale,"0"));
 //            oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
-            ViewGroup.LayoutParams layoutParams = product.getLayoutParams();
+            ViewGroup.LayoutParams layoutParams = rl_image.getLayoutParams();
             layoutParams.height = (DensityUtils.getScreenWidth()-DensityUtils.dp2px(UiUtil.getContext(),60))/2;
-            product.setLayoutParams(layoutParams);
+            rl_image.setLayoutParams(layoutParams);
 
-//            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-//            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-//            SpannableString      spanString = new SpannableString("icon ");
-//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-//            title.setText(spanString);
-//            title.append(item.title);
+            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+            SpannableString      spanString = new SpannableString("icon ");
+            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+            title.setText(spanString);
+            title.append(item.title);
         }else if(TextUtils.equals(mType,"3")){
             // 满赠
             helper.setText(R.id.tv_scqy,item.scqy)

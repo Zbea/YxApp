@@ -44,6 +44,7 @@ import com.yx.Pharmacy.dialog.ScanAfterDialog;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.ScanPresenter;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IScanView;
 import com.yx.Pharmacy.zxing.camera.CameraManager;
@@ -175,6 +176,7 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
                         @Override
                         public void run() {
                             Result result = scanningImage(photoPath);
+                            L.i("dddddddddddddddddddddddddd");
                             if (result != null) {
                                 Message msg = mHandler.obtainMessage();
                                 msg.what=MESSAGE_SUCCESS;
@@ -476,10 +478,10 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
                     }
                     return;
                 }
-                if(model.getType()==1){ //特价商品特殊处理
+                if(model.getType()==1||model.getType()==2){ //特价商品特殊处理
                     showComfirmDialog1(model);
                 }else {
-                    mPresenter.addCartProduct(CaptureActivity.this,model.getItemid()+"");
+                    mPresenter.addCartProduct(CaptureActivity.this,model);
                 }
             }
 
@@ -529,7 +531,6 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
 
     };
 
-    private DrugModel pModel;
     @Override
     public void ifFuGai() {
         showComfirmDialog2();
@@ -539,20 +540,21 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
     public void compelete() {
 
     }
+    private DrugModel pModel;
     private void showComfirmDialog1(DrugModel model) {
+        pModel=model;
         ConfirmDialog confirmDialog=new ConfirmDialog(this);
-        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk("特价购买").builder().show();;
+        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(model.getType()+"", "1")?"秒杀购买":"特价购买").builder().show();;
         confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
             @Override
             public void ok() {//第一次特价购买，不需要传是否覆盖
                 confirmDialog.cancle();
-                pModel=model;
-                mPresenter.miaoshaBuy(CaptureActivity.this,model.getItemid()+"");
+                mPresenter.miaoshaBuy(CaptureActivity.this,pModel,"1");
             }
             @Override
             public void cancle() {//原价购买(加入购物车)
                 confirmDialog.cancle();
-                mPresenter.addCartProduct(CaptureActivity.this,model.getItemid()+"");
+                mPresenter.addCartProduct(CaptureActivity.this,model);
             }
         });
     }
@@ -564,12 +566,12 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
             @Override
             public void ok() {//覆盖
                 confirmDialog.cancle();
-                mPresenter.miaoshaBuy(CaptureActivity.this,pModel.getItemid()+"","1");
+                mPresenter.miaoshaBuy(CaptureActivity.this,pModel,"1");
             }
             @Override
             public void cancle() {//不覆盖
                 confirmDialog.cancle();
-                mPresenter.miaoshaBuy(CaptureActivity.this,pModel.getItemid()+"","0");
+                mPresenter.miaoshaBuy(CaptureActivity.this,pModel,"0");
             }
         });
     }

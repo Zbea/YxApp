@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
         android:orientation="vertical"
-        android:background="@drawable/shape_btn_main">
+        android:background="@color/color_main">
 
         <RelativeLayout
             android:layout_centerVertical="true"

@@ -21,10 +21,11 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.adapter.CategoryGridAdapter;
+import com.yx.Pharmacy.adapter.ProductCategoryGridAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
@@ -43,7 +44,7 @@ import butterknife.OnClick;
 
 import static com.yx.Pharmacy.activity.LoginActivity.START_LOGIN_RESULT;
 
-public class ProductCategoryDetailActivity extends BaseActivity implements CategoryGridAdapter.AddListener, ICategoryDetailView {
+public class ProductCategoryDetailActivity extends BaseActivity implements ProductCategoryGridAdapter.AddListener, ICategoryDetailView {
 
     private static final int TYPE_zonghe=3;
     private static final int TYPE_jiage=1;
@@ -74,7 +75,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
 
     private CategoryDetailPresenter mPresenter;
 
-    CategoryGridAdapter mAdapter;
+    ProductCategoryGridAdapter mAdapter;
     private RecyclerView recyclerview_category;
     private List<DrugModel>drugModels=new ArrayList<>();
 
@@ -171,7 +172,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
             @Override
             public void onLoadMoreRequested() {
                 //TODO 加载下一页
-                if(mAdapter.getData().size()>Constants.PAGESIZE){
+                if(mAdapter.getData().size()>=Constants.PAGESIZE){
                     initNestPage();
                 }else {
                     mAdapter.loadMoreEnd();
@@ -186,7 +187,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
         iv_layout_mode.setImageResource(R.drawable.twck);
         final GridLayoutManager layoutManager=new GridLayoutManager(this,2);
         recyclerview_category.setLayoutManager(layoutManager);
-        mAdapter=new CategoryGridAdapter(this, R.layout.item_category_detail,drugModels,1);
+        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_detail,drugModels,1);
         recyclerview_category.setAdapter(mAdapter);
         addListener();
     }
@@ -194,7 +195,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
         curLayout=mode_linear;
         iv_layout_mode.setImageResource(R.drawable.dtmock);
         recyclerview_category.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter=new CategoryGridAdapter(this, R.layout.item_category_linear,drugModels,0);
+        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_linear,drugModels,0);
         recyclerview_category.setAdapter(mAdapter);
         addListener();
     }
@@ -220,8 +221,36 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
             }
             return;
         }
-        mPresenter.addCartProduct(this,item.getItemid()+"",item,imgview);
+        if (item.getType()==1||item.getType()==2)
+        {
+            showComfirmDialog(item,imgview);
+        }
+        else
+        {
+            mPresenter.addCartProduct(this,item.getItemid()+"",item,imgview);
+        }
+
     }
+
+    private void showComfirmDialog(DrugModel item, ImageView imgview) {
+        ConfirmDialog confirmDialog = new ConfirmDialog(this);
+        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(item.getType()+"", "1")?"秒杀购买":"特价购买").builder().show();
+        ;
+        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+            @Override
+            public void ok() {//特价购买
+                confirmDialog.cancle();
+                mPresenter.miaoshaBuy(ProductCategoryDetailActivity.this, item.getItemid()+"", "1",item,imgview);
+            }
+
+            @Override
+            public void cancle() {//原价购买(加入购物车)
+                confirmDialog.cancle();
+                mPresenter.addCartProduct(ProductCategoryDetailActivity.this,item.getItemid()+"",item,imgview);
+            }
+        });
+    }
+
 
     @Override
     public void productArrived(int itemid) {
@@ -452,7 +481,6 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Categ
     }
     //加载下一页
     private void initNestPage() {
-        Log.e("kid","-==============initNestPage");
         mPresenter.getProductList(ProductCategoryDetailActivity.this,page+1,catid,curType,isUp,false);
     }
 

@@ -223,6 +223,7 @@ public class ProductCartActivity
     }
 
     private void initData() {
+        checkType=3;
         mPresenter.loadShopCart(this);
     }
 
@@ -346,7 +347,7 @@ public class ProductCartActivity
 
             @Override
             public void toDetail(BaseQuickAdapter adapter, String goodsid) {
-//                ProductDetailActivity.startActivity(mContext, goodsid);
+                ProductDetailActivity.startActivity(mContext, goodsid);
             }
 
             @Override
@@ -366,7 +367,6 @@ public class ProductCartActivity
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                checkType=3;
                 initData();
             }
         });
@@ -388,7 +388,7 @@ public class ProductCartActivity
                     cbDiscount.setChecked(false);
                 } else {
                     if (!cbDiscount.isChecked())
-                        checkType = 0;
+                        checkType = checkType==3?3:0;
                 }
                 addUpPrice();
             }
@@ -402,7 +402,7 @@ public class ProductCartActivity
                     cbCoupon.setChecked(false);
                 } else {
                     if (!cbCoupon.isChecked())
-                        checkType = 0;
+                        checkType = checkType==3?3:0;;
                 }
                 addUpPrice();
             }
@@ -434,6 +434,8 @@ public class ProductCartActivity
                 }
             }
         });
+
+
 
         mTvCouponSize.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -635,10 +637,10 @@ public class ProductCartActivity
                 }
                 mAllPrice = DoubleMath.add(mAllPrice, goodsPrice);
                 //不含控销和秒杀的商品价格
-                if (TextUtils.isEmpty(datum.alldiscount)||TextUtils.equals(datum.alldiscount, "1")) {
-                    mAllSubPrice = DoubleMath.add(mAllSubPrice, goodsPrice);
-                } else {
+                if (!TextUtils.isEmpty(datum.alldiscount)&&TextUtils.equals(datum.alldiscount, "0")) {
                     mAllSpecial = DoubleMath.add(mAllSpecial, goodsPrice);
+                } else {
+                    mAllSubPrice = DoubleMath.add(mAllSubPrice, goodsPrice);
                 }
 
                 //每个商品的优惠券价格
@@ -939,7 +941,7 @@ public class ProductCartActivity
                         HashMap<String, Object> detailMap = new HashMap<>();
                         detailMap.put("pid", good.goodsid);
                         detailMap.put("price", good.usefulprice);
-                        detailMap.put("couponid", "");
+//                        detailMap.put("couponid", "");
                         if (good.couponList != null) {
                             for (ShopCartModel.CouponListBean couponListBean : good.couponList) {
                                 if (couponListBean.isSelectCoupon) {
@@ -970,14 +972,17 @@ public class ProductCartActivity
                         int carcount = DensityUtils.parseInt(good.cartcount);
                         if (good.giftList != null) {
                             for (ShopCartModel.GoodsBean.GiftListBean giftListBean : good.giftList) {
-                                int limit = DensityUtils.parseInt(giftListBean.limit);
-                                int give = DensityUtils.parseInt(giftListBean.give);
-                                if (carcount >= limit) {
-                                    int div = carcount / limit;
-                                    int count = div * give;
-                                    if (count > 0 && giftListBean.giftInfo != null) {
-                                        limits.add(limit);
-                                        listBeans.add(giftListBean);
+                                if (giftListBean.limit!=null)
+                                {
+                                    int limit = DensityUtils.parseInt(giftListBean.limit);
+                                    int give = DensityUtils.parseInt(giftListBean.give);
+                                    if (carcount >= limit) {
+                                        int div = carcount / limit;
+                                        int count = div * give;
+                                        if (count > 0 && giftListBean.giftInfo != null) {
+                                            limits.add(limit);
+                                            listBeans.add(giftListBean);
+                                        }
                                     }
                                 }
                             }

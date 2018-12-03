@@ -16,11 +16,11 @@ import java.lang.Override;
 public class ChangePasswordActivity_ViewBinding implements Unbinder {
   private ChangePasswordActivity target;
 
-  private View view2131297005;
+  private View view2131297006;
 
   private View view2131296790;
 
-  private View view2131296970;
+  private View view2131296971;
 
   @UiThread
   public ChangePasswordActivity_ViewBinding(ChangePasswordActivity target) {
@@ -39,7 +39,7 @@ public class ChangePasswordActivity_ViewBinding implements Unbinder {
     target.editCode = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'editCode'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tvGetCode' and method 'click'");
     target.tvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'tvGetCode'", TextView.class);
-    view2131297005 = view;
+    view2131297006 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class ChangePasswordActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296970 = view;
+    view2131296971 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +78,11 @@ public class ChangePasswordActivity_ViewBinding implements Unbinder {
     target.editCode = null;
     target.tvGetCode = null;
 
-    view2131297005.setOnClickListener(null);
-    view2131297005 = null;
+    view2131297006.setOnClickListener(null);
+    view2131297006 = null;
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296970.setOnClickListener(null);
-    view2131296970 = null;
+    view2131296971.setOnClickListener(null);
+    view2131296971 = null;
   }
 }

@@ -56,12 +56,12 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_message_item_bot_list.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_picture_selector.xml.flat",
-        "source": "D:\\androidSpace\\android\\picture_library\\build\\intermediates\\packaged_res\\release\\layout\\picture_selector.xml"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_view_holder_card.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_view_holder_card.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_picture_selector.xml.flat",
+        "source": "D:\\androidSpace\\android\\picture_library\\build\\intermediates\\packaged_res\\release\\layout\\picture_selector.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_def_avatar_user.png.flat",
@@ -96,28 +96,32 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\activity_order.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_webview.xml.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\activity_webview.xml"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_yhqicon.png.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\yhqicon.png"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_webview.xml.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\activity_webview.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_coupon_goto.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_coupon_goto.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_design_snackbar_background.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9f63b189081b3bab45d1f1b3673e7bb5\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_item_shop_cart_product.xml.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\item_shop_cart_product.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_yhqicon.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\yhqicon.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_shape_amount_edit.xml.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable\\shape_amount_edit.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_item_shop_cart_product.xml.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\item_shop_cart_product.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_design_snackbar_in.xml.flat",
@@ -156,12 +160,12 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_image_loading_cc.png.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_image_loading_cc.png"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_message_right_bg_no_padding_pressed.9.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-hdpi-v4\\ysf_message_right_bg_no_padding_pressed.9.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_image_loading_cc.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_image_loading_cc.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_shape_gift_product_bg.xml.flat",
@@ -172,32 +176,32 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_message_clean.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ucrop_picture_gf_adapter_edit_list.xml.flat",
-        "source": "D:\\androidSpace\\android\\ucrop\\build\\intermediates\\packaged_res\\release\\layout\\ucrop_picture_gf_adapter_edit_list.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_secondary_text_material_light.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_ysf_emoji_item_selector.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_emoji_item_selector.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_secondary_text_material_light.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_secondary_text_material_light.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ucrop_picture_gf_adapter_edit_list.xml.flat",
+        "source": "D:\\androidSpace\\android\\ucrop\\build\\intermediates\\packaged_res\\release\\layout\\ucrop_picture_gf_adapter_edit_list.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_hint_foreground_material_light.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_ysf_message_right_bg_product_selector.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_message_right_bg_product_selector.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_hint_foreground_material_light.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_hint_foreground_material_light.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_message_right_bg.9.png.flat",
@@ -256,16 +260,16 @@
         "source": "D:\\androidSpace\\android\\picture_library\\build\\intermediates\\packaged_res\\release\\drawable\\audio_placeholder.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_dialog_product_details_add.xml.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\dialog_product_details_add.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_dialog_product_details_add.xml.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\dialog_product_details_add.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_edit_text_material.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_often_buy.xml.flat",
@@ -280,28 +284,28 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\tcbtbj.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4_ucrop_ic_crop.png.flat",
-        "source": "D:\\androidSpace\\android\\ucrop\\build\\intermediates\\packaged_res\\release\\drawable-ldpi-v4\\ucrop_ic_crop.png"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_color_highlight_material.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_message_item_clickable_list.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_message_item_clickable_list.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4_ucrop_ic_crop.png.flat",
+        "source": "D:\\androidSpace\\android\\ucrop\\build\\intermediates\\packaged_res\\release\\drawable-ldpi-v4\\ucrop_ic_crop.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_txicon.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\txicon.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\b91de97c328c3a5cbd96184ec2cead71\\res\\layout\\notification_template_big_media.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_message_item_clickable_list.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_message_item_clickable_list.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_ysf_audio_animation_list_right.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_audio_animation_list_right.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\b91de97c328c3a5cbd96184ec2cead71\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_ysf_evaluation_very_dissatisfied.png.flat",
@@ -348,20 +352,20 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_wlqszt.png.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\wlqszt.png"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_ysf_message_file_icon_txt.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-xhdpi-v4\\ysf_message_file_icon_txt.png"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_selector_product_addcart_state.xml.flat",
-        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable\\selector_product_addcart_state.xml"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_wlqszt.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\wlqszt.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ysdjt.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\ysdjt.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_selector_product_addcart_state.xml.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable\\selector_product_addcart_state.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_kyyhqbj.png.flat",
@@ -400,16 +404,20 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_message_left_bg_no_padding_selector.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_cart_disable_product.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_cart_disable_product.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_primary_text_material_dark.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_picture_sb_thumb.xml.flat",
         "source": "D:\\androidSpace\\android\\picture_library\\build\\intermediates\\packaged_res\\release\\drawable\\picture_sb_thumb.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_ptr_footer.xml.flat",
@@ -562,6 +570,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_sample_footer_loading.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\BaseRecyclerViewAdapterHelper-2.9.30.aar\\892d161f846e4a4a255d68f3518babf2\\res\\drawable\\sample_footer_loading.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_main_cart.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_main_cart.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_shape_man_theme.xml.flat",
@@ -1408,6 +1420,10 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_audio_cancel_record_red_bg.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_message_bg.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_message_bg.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_new_message_notify.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-hdpi-v4\\ysf_new_message_notify.png"
     },
@@ -1494,6 +1510,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_nydqcyzt.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\nydqcyzt.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_qhan.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_qhan.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_emoji_del.png.flat",
@@ -2148,6 +2168,10 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_ggxz.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_ggxz.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_ysf_message_image_cover_left_selector.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_message_image_cover_left_selector.xml"
     },
@@ -2424,6 +2448,10 @@
         "source": "D:\\androidSpace\\android\\picture_library\\build\\intermediates\\packaged_res\\release\\anim\\photo_overshoot_interpolator.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_my_yue.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_my_yue.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_selector_miaosha_buy_bg.xml.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable\\selector_miaosha_buy_bg.xml"
     },
@@ -2576,12 +2604,16 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable\\shape_radiu_white_line_bg.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_ysf_message_input_edit_text_disabled.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable\\ysf_message_input_edit_text_disabled.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_cart_clear_disable.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_cart_clear_disable.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_service_action_menu_item_folded.xml.flat",
@@ -3256,6 +3288,10 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_arrow_right_white.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_arrow_right_white.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_message_item_goods.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_message_item_goods.xml"
     },
@@ -3338,6 +3374,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_wswdmdicon.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\wswdmdicon.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_my_jifen.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_my_jifen.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_ysf_message_file_icon_mp4.png.flat",
@@ -3450,6 +3490,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_ysf_evaluation_star_disabled_dark.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-xhdpi-v4\\ysf_evaluation_star_disabled_dark.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_shopp.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_shopp.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_change_password.xml.flat",
@@ -3634,6 +3678,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_slide_out_top.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_function_guid.xml.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\activity_function_guid.xml"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_media_action.xml.flat",
@@ -3846,6 +3894,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_main_servier.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_main_servier.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_item_type_arrive_notice.xml.flat",
@@ -4192,6 +4244,10 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xxhdpi\\icon_scan.jpg"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_validity_bg.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_validity_bg.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9f63b189081b3bab45d1f1b3673e7bb5\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
     },
@@ -4218,6 +4274,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_my_wallet.xml.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\activity_my_wallet.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_store_bg.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_store_bg.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_message_item_evaluation.xml.flat",
@@ -4916,6 +4976,10 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_emoji_layout.xml"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_main_qiandao.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_main_qiandao.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_mzzqckgd.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\mzzqckgd.png"
     },
@@ -5034,6 +5098,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_fhw.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\fhw.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_red.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_red.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_sjhmicon.png.flat",
@@ -5180,6 +5248,10 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-hdpi-v4\\ysf_message_image_cover_left.9.png"
     },
     {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_function_guid_my_coupon.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_function_guid_my_coupon.png"
+    },
+    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ucrop_ic_angle.png.flat",
         "source": "D:\\androidSpace\\android\\ucrop\\build\\intermediates\\packaged_res\\release\\drawable-hdpi-v4\\ucrop_ic_angle.png"
     },
@@ -5218,6 +5290,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_ysf_picker_photofolder_item.xml.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\layout\\ysf_picker_photofolder_item.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_hdxz.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_hdxz.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",

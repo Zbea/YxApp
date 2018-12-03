@@ -445,7 +445,8 @@ public interface HomeApi {
      */
     @FormUrlEncoded
     @POST(Constants.MIAOSHA_BUY)
-    Observable<BasisBean<Object>> miaoshaBuy(@FieldMap HashMap<String, String> map);
+    Observable<BasisBean<AddShopCartModel>> miaoshaBuy(@FieldMap HashMap<String, String> map);
+
     /**
      * 企业资质
      */

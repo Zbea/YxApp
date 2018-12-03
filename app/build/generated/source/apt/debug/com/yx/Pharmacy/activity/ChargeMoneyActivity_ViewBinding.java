@@ -19,9 +19,9 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
 
   private View view2131296790;
 
-  private View view2131297138;
+  private View view2131297139;
 
-  private View view2131296830;
+  private View view2131296831;
 
   private View view2131296787;
 
@@ -48,7 +48,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_to_chongzhi, "method 'click'");
-    view2131297138 = view;
+    view2131297139 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_wechat_pay, "method 'click'");
-    view2131296830 = view;
+    view2131296831 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -87,10 +87,10 @@ public class ChargeMoneyActivity_ViewBinding implements Unbinder {
 
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131297138.setOnClickListener(null);
-    view2131297138 = null;
-    view2131296830.setOnClickListener(null);
-    view2131296830 = null;
+    view2131297139.setOnClickListener(null);
+    view2131297139 = null;
+    view2131296831.setOnClickListener(null);
+    view2131296831 = null;
     view2131296787.setOnClickListener(null);
     view2131296787 = null;
   }

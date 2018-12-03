@@ -17,9 +17,9 @@ public class AccountSecurityActivity_ViewBinding implements Unbinder {
 
   private View view2131296790;
 
-  private View view2131296816;
+  private View view2131296817;
 
-  private View view2131296813;
+  private View view2131296814;
 
   @UiThread
   public AccountSecurityActivity_ViewBinding(AccountSecurityActivity target) {
@@ -42,7 +42,7 @@ public class AccountSecurityActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_phone, "method 'click'");
-    view2131296816 = view;
+    view2131296817 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class AccountSecurityActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_password, "method 'click'");
-    view2131296813 = view;
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,9 +71,9 @@ public class AccountSecurityActivity_ViewBinding implements Unbinder {
 
     view2131296790.setOnClickListener(null);
     view2131296790 = null;
-    view2131296816.setOnClickListener(null);
-    view2131296816 = null;
-    view2131296813.setOnClickListener(null);
-    view2131296813 = null;
+    view2131296817.setOnClickListener(null);
+    view2131296817 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
   }
 }

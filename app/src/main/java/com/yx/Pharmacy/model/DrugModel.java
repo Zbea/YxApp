@@ -16,6 +16,7 @@ public class DrugModel {
     private int maxmun;
     private long starttime;
     private long endtime;
+    public String validend;
     private String gg;
     private String scqy;//公司
     private int sales;//已售

@@ -85,20 +85,20 @@ public class AddCartDialog {
             if (type==1)
             {
                 tvPrice.setText("￥"+data.price);
-                tvInfo.setText("（每人限购"+data.flashmax+"件）");
+                tvInfo.setText("（每人限购"+(Double.parseDouble(data.flashmax)<=0?0:data.flashmax)+"件）");
                 amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
             }
             else
             {
                 tvPrice.setText("￥"+data.oldprice);
-                tvInfo.setText("（每人限购"+data.max+"件）");
+                tvInfo.setText("（每人限购"+(data.max<=0?0:data.max)+"件）");
                 amountView.setGoods_storage((int)data.max);
             }
         }
         else
         {
             tvPrice.setText("￥"+data.price);
-            tvInfo.setText("（每人限购"+data.max+"件）");
+            tvInfo.setText("（每人限购"+(data.max<=0?0:data.max)+"件）");
             amountView.setGoods_storage((int)data.max);
         }
         amountView.setAmount((int)Double.parseDouble(data.minimum));

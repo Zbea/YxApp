@@ -62,6 +62,7 @@ public class HomeDataModel {
         public String    disprice;
         public String    minimum;
         public String    maxmum;
+        public String    validend;
         public long    endtime;
         public String gg;
         public String scqy;

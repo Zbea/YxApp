@@ -18,7 +18,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
 
   private View view2131296622;
 
-  private View view2131296820;
+  private View view2131296821;
 
   @UiThread
   public CategoryFragment_ViewBinding(final CategoryFragment target, View source) {
@@ -36,7 +36,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
-    view2131296820 = view;
+    view2131296821 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
 
     view2131296622.setOnClickListener(null);
     view2131296622 = null;
-    view2131296820.setOnClickListener(null);
-    view2131296820 = null;
+    view2131296821.setOnClickListener(null);
+    view2131296821 = null;
   }
 }

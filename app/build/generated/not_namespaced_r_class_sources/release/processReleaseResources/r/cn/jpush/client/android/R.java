@@ -12,10 +12,10 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800e7;
-        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800e8;
-        public static final int jpush_richpush_btn_selector = 0x7f0800e9;
-        public static final int jpush_richpush_progressbar = 0x7f0800ea;
+        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800f9;
+        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800fa;
+        public static final int jpush_richpush_btn_selector = 0x7f0800fb;
+        public static final int jpush_richpush_progressbar = 0x7f0800fc;
     }
     public static final class id {
         private id() {}
@@ -24,17 +24,17 @@ public final class R {
         public static final int fullWebView = 0x7f0900a7;
         public static final int imgRichpushBtnBack = 0x7f0900bb;
         public static final int imgView = 0x7f0900bc;
-        public static final int popLayoutId = 0x7f0901e5;
-        public static final int pushPrograssBar = 0x7f0901ed;
-        public static final int rlRichpushTitleBar = 0x7f090204;
-        public static final int tvRichpushTitle = 0x7f090293;
-        public static final int wvPopwin = 0x7f0903a3;
+        public static final int popLayoutId = 0x7f0901eb;
+        public static final int pushPrograssBar = 0x7f0901f3;
+        public static final int rlRichpushTitleBar = 0x7f09020a;
+        public static final int tvRichpushTitle = 0x7f09029b;
+        public static final int wvPopwin = 0x7f0903b1;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int jpush_popwin_layout = 0x7f0b00a9;
-        public static final int jpush_webview_layout = 0x7f0b00aa;
+        public static final int jpush_popwin_layout = 0x7f0b00aa;
+        public static final int jpush_webview_layout = 0x7f0b00ab;
     }
     public static final class style {
         private style() {}

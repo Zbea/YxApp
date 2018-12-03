@@ -11,7 +11,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="@dimen/dp_300"
-        android:layout_height="320dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_30"
         app:cardBackgroundColor="#FFFFFF"
@@ -42,8 +42,8 @@
                 <ImageView
                     android:layout_centerInParent="true"
                     android:id="@+id/iv_product"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp" />
+                    android:layout_width="90dp"
+                    android:layout_height="90dp" />
 
             </RelativeLayout>
 
@@ -85,8 +85,8 @@
 
                     <ImageView
                         android:src="@drawable/jrgwcwxz"
-                        android:layout_width="@dimen/dp_51"
-                        android:layout_height="@dimen/dp_51" />
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
                     <TextView
                         android:textSize="@dimen/sp_12"
                         android:layout_marginTop="@dimen/dp_5"
@@ -106,8 +106,8 @@
 
                     <ImageView
                         android:src="@drawable/jrgwcwxz"
-                        android:layout_width="@dimen/dp_51"
-                        android:layout_height="@dimen/dp_51" />
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
                     <TextView
                         android:textSize="@dimen/sp_12"
                         android:layout_marginTop="@dimen/dp_5"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/iv_jizhu"
-                    android:src="@drawable/jizhu_uncheck"
+                    android:src="@drawable/selector_cb_shopcart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

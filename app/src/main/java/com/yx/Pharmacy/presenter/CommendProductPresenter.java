@@ -165,7 +165,7 @@ public class CommendProductPresenter {
 
         HomeNet.getHomeApi().getProductList(urlMap).subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressSubscriber<BasisBean<List<DrugModel>>>(activity, true) {
+               .subscribe(new ProgressSubscriber<BasisBean<List<DrugModel>>>(activity, false) {
                    @Override
                    public void onSuccess(BasisBean<List<DrugModel>> response) {
                        if (response.getData()!=null) {

@@ -187,6 +187,7 @@ public class Constants {
     public static final String KEY_ACCOUNT = "key_account"; // 银行卡号
     public static final String KEY_HAVEBANK = "key_havebank"; // 是否有银行卡
     public static final String KEY_STORE_CERTIFY = "key_storecertify"; // 是否有认证的门店
+    public static final String KEY_TRANSFER_MONEY = "key_transfer_money"; // 是否可以转账
 
     public static final String SEARCH_HISTORY="search_history";
     public static final String KEY_ORDER_NUMBER="KEY_order_number";//订单号

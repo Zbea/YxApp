@@ -177,6 +177,7 @@ public class ProductDetailActivity
     private ChooseStoreDialog mChooseStoreDialog;
     private int cartCount = 0;
     private AddCartDialog addCartDialog=null;
+    private int type=0;//判断是原价还是特价购买
 
     public static void startActivity(Context context, String itemid) {
         Intent intent = new Intent(context, ProductDetailActivity.class);
@@ -194,7 +195,6 @@ public class ProductDetailActivity
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         mItemId = getIntent().getStringExtra(Constants.KEY_ITEM_ID);
         mPresenter = new ProductDetailPresenter(this);
-        mPresenter.getShopcarNum(this);
         loadinglayout.setStatus(LoadingLayout.Loading);
 
         CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
@@ -228,7 +228,7 @@ public class ProductDetailActivity
         initRecycler();
         initListener();
         initBanner();
-        initData();
+//        initData();
     }
 
     private void initBanner() {
@@ -242,7 +242,9 @@ public class ProductDetailActivity
     }
 
     private void initData() {
-        mPresenter.loadProductDetail(this, mItemId);
+        type=0;
+        mPresenter.loadProductDetail(ProductDetailActivity.this, mItemId);
+        mPresenter.getShopcarNum(ProductDetailActivity.this);
     }
 
     private void initListener() {
@@ -336,17 +338,17 @@ public class ProductDetailActivity
                 }
 
                 if (mResultBean != null) {
-                    if (TextUtils.equals(mResultBean.type, "1")||TextUtils.equals(mResultBean.type, "2")) {
-                        if (mIsStart) {
-                            // 抢购未开始
-                            showComfirmDialog1();
-                            return;
-                        }
-                    }
                     if (mQuehuo) {
                         mPresenter.productArrive(this, mItemId);
                     } else {
-                        if (mResultBean != null && TextUtils.equals(mResultBean.type, "1")||TextUtils.equals(mResultBean.type, "2")) { //特价商品特殊处理
+//                        if (TextUtils.equals(mResultBean.type, "1")||TextUtils.equals(mResultBean.type, "2")) {
+//                            if (mIsStart) {
+//                                // 抢购未开始
+//                                showComfirmDialog1();
+//                                return;
+//                            }
+//                        }
+                        if (TextUtils.equals(mResultBean.type, "1")||TextUtils.equals(mResultBean.type, "2")) { //特价商品特殊处理
                             showComfirmDialog1();
                         } else {
                             if (!mResultBean.productLimit) {
@@ -513,9 +515,10 @@ public class ProductDetailActivity
                 mTvAddCart.setText("售罄（调货通知）");
                 mTvAddCart.setSelected(true);
             } else {
-                if (!mResultBean.productLimit) {
-                    mTvAddCart.setText("加入购物车");
+                if (mResultBean.productLimit) {
+                    mTvAddCart.setText("已达限购");
                     mTvAddCart.setSelected(false);
+                    mTvAddCart.setEnabled(false);
                 }
             }
 
@@ -529,7 +532,15 @@ public class ProductDetailActivity
             mTvChangjia.setText(data.scqy);
 
             mTvRiqi.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.birthtime) * 1000));
-            mTvYouxiao.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.validtime) * 1000));
+            if (TextUtils.isEmpty(data.validtime))
+            {
+                mTvYouxiao.setVisibility(View.GONE);
+            }
+            else
+            {
+                mTvYouxiao.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.validtime) * 1000));
+            }
+
 
             if (TextUtils.equals(data.type, "1")) {
 
@@ -539,10 +550,12 @@ public class ProductDetailActivity
                 } else {
                     if (mResultBean.productLimit&&mResultBean.flashLimit) {
                         mTvAddCart.setEnabled(false);
+                        mTvAddCart.setSelected(false);
                         mTvAddCart.setText("已达限购");
-                        mTvAddCart.setSelected(true);
                     } else {
                         mTvAddCart.setEnabled(true);
+                        mTvAddCart.setSelected(false);
+                        mTvAddCart.setText("加入购物车");
                     }
                 }
 
@@ -600,10 +613,12 @@ public class ProductDetailActivity
                 } else {
                     if (mResultBean.productLimit&&mResultBean.flashLimit) {
                         mTvAddCart.setEnabled(false);
+                        mTvAddCart.setSelected(false);
                         mTvAddCart.setText("已达限购");
-                        mTvAddCart.setSelected(true);
                     } else {
                         mTvAddCart.setEnabled(true);
+                        mTvAddCart.setSelected(false);
+                        mTvAddCart.setText("加入购物车");
                     }
                 }
                 mRlInfo.setVisibility(View.GONE);
@@ -669,9 +684,27 @@ public class ProductDetailActivity
     @Override
     public void showAddResult(AddShopCartModel data) {
         setCartNum(Integer.parseInt(data.count));
-        mResultBean.max = mResultBean.max - cartCount;
-        if (mResultBean.max == 0) {
+        setRefreshMax();
+    }
+
+    /**
+     * 添加成功后刷新商品数量变化
+     */
+    private void setRefreshMax()
+    {
+        if (type==1)
+        {
+            mResultBean.flashmax =(DensityUtils.parseDouble(mResultBean.flashmax)  - cartCount)+"";
+            L.i(mResultBean.flashmax);
+        }
+        else
+        {
+            mResultBean.max = mResultBean.max - cartCount;
+        }
+        if (mResultBean.max <= 0&&DensityUtils.parseDouble(mResultBean.flashmax)<=1) {
             mTvAddCart.setEnabled(false);
+            mTvAddCart.setSelected(false);
+            mTvAddCart.setText("已达限购");
         }
     }
 
@@ -700,13 +733,14 @@ public class ProductDetailActivity
 
     @Override
     public void compelete() {
+        getShortToastByString("添加成功");
         mPresenter.getShopcarNum(this);
-        mResultBean.flashmax = String.valueOf(Double.parseDouble(mResultBean.flashmax) - cartCount);
+        setRefreshMax();
     }
 
     @Override
     public void errorView() {
-        loadinglayout.setStatus(LoadingLayout.Empty);
+        loadinglayout.setStatus(LoadingLayout.Error);
         mRlCollect.setVisibility(View.GONE);
     }
 
@@ -778,6 +812,7 @@ public class ProductDetailActivity
             public void ok() {//第一次特价购买，不需要传是否覆盖
                 confirmDialog.cancle();
                 if (!mResultBean.flashLimit) {
+                    type=1;
                     showAddDialog(1);
                 } else {
                     getShortToastByString("购买已达上限");
@@ -788,6 +823,7 @@ public class ProductDetailActivity
             public void cancle() {//原价购买(加入购物车)
                 confirmDialog.cancle();
                 if (!mResultBean.productLimit) {
+                    type=0;
                     showAddDialog(0);
                 } else {
                     getShortToastByString("购买已达上限");
@@ -825,5 +861,9 @@ public class ProductDetailActivity
         }
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initData();
+    }
 }

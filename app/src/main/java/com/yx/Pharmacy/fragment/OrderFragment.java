@@ -299,6 +299,11 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
         public void tuihuo(String orderbackid, int layoutPosition) {
 
         }
+
+        @Override
+        public void gotoDetails(String orderid, int layoutPosition) {
+            OrderDetailActivity.startActivity(mContext,orderAdapter.getData().get(layoutPosition).orderid);
+        }
     };
 
     private void showPhotoDialog()

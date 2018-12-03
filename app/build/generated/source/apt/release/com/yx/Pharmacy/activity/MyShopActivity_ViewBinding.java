@@ -20,11 +20,11 @@ import java.lang.Override;
 public class MyShopActivity_ViewBinding implements Unbinder {
   private MyShopActivity target;
 
-  private View view2131296777;
+  private View view2131296783;
 
-  private View view2131296806;
+  private View view2131296814;
 
-  private View view2131296547;
+  private View view2131296549;
 
   @UiThread
   public MyShopActivity_ViewBinding(MyShopActivity target) {
@@ -39,7 +39,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296777 = view;
+    view2131296783 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -49,7 +49,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_scan, "field 'mRlScan' and method 'onClick'");
     target.mRlScan = Utils.castView(view, R.id.rl_scan, "field 'mRlScan'", RelativeLayout.class);
-    view2131296806 = view;
+    view2131296814 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +59,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mRvShop = Utils.findRequiredViewAsType(source, R.id.rv_shop, "field 'mRvShop'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_add_shop, "field 'mLlAddShop' and method 'onClick'");
     target.mLlAddShop = Utils.castView(view, R.id.ll_add_shop, "field 'mLlAddShop'", LinearLayout.class);
-    view2131296547 = view;
+    view2131296549 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,11 +84,11 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mLlAddShop = null;
     target.mLoadingLayout = null;
 
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
-    view2131296806.setOnClickListener(null);
-    view2131296806 = null;
-    view2131296547.setOnClickListener(null);
-    view2131296547 = null;
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
+    view2131296549.setOnClickListener(null);
+    view2131296549 = null;
   }
 }

@@ -289,6 +289,11 @@ public class MyOrderListActivity extends BaseActivity implements IMyOrderListVie
         public void tuihuo(String orderbackid, int layoutPosition) {
 
         }
+
+        @Override
+        public void gotoDetails(String orderid, int layoutPosition) {
+            OrderDetailActivity.startActivity(mContext,orderAdapter.getData().get(layoutPosition).orderid);
+        }
     };
 
 

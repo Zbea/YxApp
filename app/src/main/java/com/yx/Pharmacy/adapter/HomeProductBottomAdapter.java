@@ -18,6 +18,7 @@ import android.text.style.ImageSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -45,10 +46,18 @@ public class HomeProductBottomAdapter extends BaseQuickAdapter<DrugModel,BaseVie
         ImageView iv_presale = helper.getView(R.id.iv_presale);
         GlideUtil.loadImg(UiUtil.getContext(), item.getThumb(), product);
         TextView  time    = helper.getView(R.id.tv_validity_time);
-        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.getEndtime()*1000) );
-        ViewGroup.LayoutParams layoutParams = product.getLayoutParams();
+        RelativeLayout rl_image = helper.getView(R.id.rl_image);
+        if (TextUtils.isEmpty(item.validend))
+        {
+            time.setVisibility(View.GONE);
+        }
+        else
+        {
+            time.setText("有效期：" +DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validend)*1000) );
+        }
+        ViewGroup.LayoutParams layoutParams = rl_image.getLayoutParams();
         layoutParams.height = (DensityUtils.getScreenWidth()-DensityUtils.dp2px(UiUtil.getContext(), 60))/2;
-        product.setLayoutParams(layoutParams);
+        rl_image.setLayoutParams(layoutParams);
         TextView price=helper.getView(R.id.tv_price);
         iv_presale.setVisibility(TextUtils.equals(item.getPresale(),"0")? View.GONE:View.VISIBLE);
         helper.setText(R.id.tv_scqy,item.getScqy())
@@ -78,15 +87,15 @@ public class HomeProductBottomAdapter extends BaseQuickAdapter<DrugModel,BaseVie
             title.append(item.getTitle());
             oldPrice.setVisibility(View.GONE);
         }
-//        else if(type==2){
-//            // 满赠
-//            Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-//            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(),b);
-//            SpannableString spanString = new SpannableString("icon ");
-//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-//            title.setText(spanString);
-//            title.append(item.getTitle());
-//        }
+        else if(type==2){
+            // 满赠
+            Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(),b);
+            SpannableString spanString = new SpannableString("icon ");
+            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+            title.setText(spanString);
+            title.append(item.getTitle());
+        }
         else if(type==3){
             // 满赠
             Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);

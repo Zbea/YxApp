@@ -28,6 +28,7 @@ import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
+import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.adapter.BannerViewHolder;
@@ -161,7 +162,7 @@ public class HomePageFragment
     public void onResume() {
         super.onResume();
         mMZBanner.start();
-//        mPresenter.loadMyShop((BaseActivity) mContext,false);
+        mPresenter.loadMyShop((BaseActivity) mContext,false);
     }
 
     @Override
@@ -290,7 +291,7 @@ public class HomePageFragment
 
 
     public void initData() {
-        if (TextUtils.isEmpty(SPUtil.getString(mContext,Constants.KEY_STORENAME)))
+        if (!SPUtil.getBoolean(mContext,Constants.KEY_STORE_CERTIFY))
         {
             llStore.setVisibility(View.GONE);
             llStoreLogout.setVisibility(View.VISIBLE);
@@ -369,19 +370,19 @@ public class HomePageFragment
             shopModels = data;
             // 修改门店认证状态
             SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, true);
-        }
-        String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-        if (data != null && data.size() > 0 && TextUtils.isEmpty(storename)) {
-            if (data.size() == 1) {
-                MyShopModel myShopModel = data.get(0);
-                saveShopStore(myShopModel);
-                MainActivity context = (MainActivity) mContext;
-                tvShop.setText(myShopModel.storename);
-                tvFactoryAddress.setText(TextUtils.isEmpty(myShopModel.company)?"深圳市源鑫药业药业有限公司":myShopModel.company);
-                context.notifyData();
-                return;
+            String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
+            if (data != null && data.size() > 0 && TextUtils.isEmpty(storename)) {
+                if (data.size() == 1) {
+                    MyShopModel myShopModel = data.get(0);
+                    saveShopStore(myShopModel);
+                    MainActivity context = (MainActivity) mContext;
+                    tvShop.setText(myShopModel.storename);
+                    tvFactoryAddress.setText(TextUtils.isEmpty(myShopModel.company)?"深圳市源鑫药业药业有限公司":myShopModel.company);
+                    context.notifyData();
+                    return;
+                }
+                showChooseStoreDialog(data);
             }
-            showChooseStoreDialog(data);
         }
     }
 
@@ -471,6 +472,7 @@ public class HomePageFragment
             R.id.iv_sign,
             R.id.iv_service,
             R.id.iv_advence,
+            R.id.ll_store_logout,
             R.id.tv_shop,
             R.id.tv_factory_address})
     public void onViewClicked(View view) {
@@ -520,15 +522,31 @@ public class HomePageFragment
                 if (mAdvenceGold != null) {
                     gotoClick(mAdvenceGold);
                 }
+            case R.id.ll_store_logout:
+                if (TextUtils.isEmpty(SPUtil.getString(mContext, Constants.KEY_TOKEN)))
+                {
+                    LoginActivity.startActivity(mContext,0);
+                    return;
+                }
+                if (!SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY))
+                {
+                    MyShopAddActivity.startActivity(mContext);
+                }
+                else
+                {
+                    showChooseStoreDialog(shopModels);
+                }
             case R.id.tv_shop:
                 if (TextUtils.isEmpty(SPUtil.getString(mContext, Constants.KEY_TOKEN)))
                 {
                     LoginActivity.startActivity(mContext,0);
                     return;
                 }
-                if (!TextUtils.isEmpty(SPUtil.getString(mContext, Constants.KEY_STORENAME))) {
+                if (SPUtil.getBoolean(mContext, Constants.KEY_STORE_CERTIFY))
+                {
                     showChooseStoreDialog(shopModels);
                 }
+
             case R.id.tv_factory_address:
 
                 break;

@@ -51,10 +51,8 @@ public class SelectStoreUtil {
                            showShopData(response.getData());
                        }
                    }
-
                    @Override
                    public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
                        super.onError(e);
                    }
                });

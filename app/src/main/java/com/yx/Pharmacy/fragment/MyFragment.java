@@ -129,10 +129,10 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 {
                     HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().exchange,1);
                 }
-                else
-                {
-                    HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
-                }
+//                else
+//                {
+//                    HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
+//                }
 
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
@@ -140,10 +140,10 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 {
                     HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().prizetask);
                 }
-                else
-                {
-                    HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
-                }
+//                else
+//                {
+//                    HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
+//                }
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);
@@ -417,6 +417,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             tv_my_integral.setText(""+data.score);
             tvMyCoupon.setText(""+data.coupon);
             tvMyMoney.setText(""+data.money);
+            SPUtil.putInt(mContext,Constants.KEY_TRANSFER_MONEY,data.isPublic);
         }
     }
 

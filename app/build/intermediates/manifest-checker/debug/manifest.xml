@@ -108,6 +108,12 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.yx.Pharmacy.activity.ProductDetailActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name="com.yx.Pharmacy.activity.RegisterActivity" />
         <activity
             android:name="com.yx.Pharmacy.activity.LoginActivity"
@@ -120,7 +126,6 @@
         <activity android:name="com.yx.Pharmacy.activity.UserInfoActivity" />
         <activity android:name="com.yx.Pharmacy.activity.FeedBackActivity" />
         <activity android:name="com.yx.Pharmacy.activity.ProductCategoryDetailActivity" />
-        <activity android:name="com.yx.Pharmacy.activity.ProductDetailActivity" />
         <activity android:name="com.yx.Pharmacy.activity.OrderDetailActivity" />
         <activity android:name="com.yx.Pharmacy.activity.SearchActivity" />
         <activity android:name="com.yx.Pharmacy.activity.MyShopActivity" />
