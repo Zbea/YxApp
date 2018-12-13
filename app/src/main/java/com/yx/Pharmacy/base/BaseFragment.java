@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.qiyukf.unicorn.api.ConsultSource;
 import com.qiyukf.unicorn.api.Unicorn;
 import com.qiyukf.unicorn.api.YSFUserInfo;
+import com.yx.Pharmacy.MainActivity;
+import com.yx.Pharmacy.activity.AfterSaleActivity;
 import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
@@ -30,9 +32,11 @@ import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2016/12/8.
@@ -43,13 +47,14 @@ public abstract class BaseFragment
 
     private Toast toast;
     protected  Activity mContext;
+    public Unbinder unbinder;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
          mContext = getActivity();
 //        View view = View.inflate(mContext, getLayoutId(), null);
         View view=inflater.inflate(getLayoutId(),container,false);
-        ButterKnife.bind(this, view);
+        unbinder=ButterKnife.bind(this, view);
         init();
         return view;
     }
@@ -107,6 +112,18 @@ public abstract class BaseFragment
             case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
                 SearchActivity.startActivity(mContext,goldBean.keyword);
                 break;
+//            case 5:
+//                if (TextUtils.isEmpty(NetUtil.getToken())) {
+//                    LoginActivity.startActivity(mContext, 2);
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(NetUtil.getStoreid())) {
+//                    MainActivity mainActivity = (MainActivity) mContext;
+//                    mainActivity.getMyShop();
+//                    return;
+//                }
+//                AfterSaleActivity.startActivity(mContext);
+//                break;
             case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
                 String type = goldBean.type;
                 if (TextUtils.equals(type, "1")) {
@@ -148,7 +165,18 @@ public abstract class BaseFragment
             case 4://app携带关键字跳转至搜索页，参数keyword(需要查找商品的关键字)
                 SearchActivity.startActivity(mContext,goldBean.keyword);
                 break;
-            case 5://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
+            case 5:
+                if (TextUtils.isEmpty(NetUtil.getToken())) {
+                    LoginActivity.startActivity(mContext, 2);
+                    return;
+                }
+                if (TextUtils.isEmpty(NetUtil.getStoreid())) {
+                    SelectStoreUtil selectStoreUtil=new SelectStoreUtil(mContext,null);
+                    return;
+                }
+                AfterSaleActivity.startActivity(mContext);
+                break;
+            case 7://跳转到其他专区的活动，参数activityname（活动名册）levelid（活动id）type（活动的类型）
                 String type = goldBean.type;
                 if (TextUtils.equals(type, "1")) {
                     // 秒杀
@@ -191,21 +219,9 @@ public abstract class BaseFragment
         Unicorn.openServiceActivity(mContext, "点药呗", source);
     }
 
-    /**
-     * 保存门店信息
-     * @param myShopModel
-     */
-    public void saveShopStore(MyShopModel myShopModel )
-    {
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
-        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME,myShopModel.truename);
-        SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY, myShopModel.company);
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
-
 }

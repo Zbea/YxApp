@@ -29,6 +29,7 @@ import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
+import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.CategoryDetailPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
@@ -214,7 +215,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Produ
                 mSelectStoreUtil.loadMyShop(ProductCategoryDetailActivity.this,true);
                 return;
             }else {
-                mSelectStoreUtil = new SelectStoreUtil(ProductCategoryDetailActivity.this, () -> {
+                mSelectStoreUtil = new SelectStoreUtil(ProductCategoryDetailActivity.this, (MyShopModel myShopModel) -> {
                     page = 1;
                     mPresenter.getProductList(this,page,catid,curType,isUp,true);
                 });
@@ -490,7 +491,7 @@ public class ProductCategoryDetailActivity extends BaseActivity implements Produ
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (resultCode==START_LOGIN_RESULT) {
-            mSelectStoreUtil = new SelectStoreUtil(this, () -> {
+            mSelectStoreUtil = new SelectStoreUtil(this, (MyShopModel myShopModel) -> {
                 page = 1;
                 mPresenter.getProductList(this,page,catid,curType,isUp,true);
             });

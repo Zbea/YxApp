@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yx.Pharmacy"
     android:hardwareAccelerated="true"
-    android:versionCode="20181032"
-    android:versionName="1.0.2" >
+    android:versionCode="20181033"
+    android:versionName="1.0.3" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -111,7 +111,6 @@
         <activity
             android:name="com.yx.Pharmacy.activity.ProductDetailActivity"
             android:exported="true"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name="com.yx.Pharmacy.activity.RegisterActivity" />

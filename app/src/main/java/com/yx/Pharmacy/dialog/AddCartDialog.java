@@ -80,25 +80,26 @@ public class AddCartDialog {
         AmountView amountView=win.findViewById(R.id.amount_view);
         amountView.setMinNum(DensityUtils.parseInt(data.minimum));
         amountView.setAddNum(DensityUtils.parseInt(data.addmum));
+        amountView.setIsChanage(true);
         if (TextUtils.equals(data.type,"1")||TextUtils.equals(data.type,"2"))
         {
             if (type==1)
             {
                 tvPrice.setText("￥"+data.price);
-                tvInfo.setText("（每人限购"+(Double.parseDouble(data.flashmax)<=0?0:data.flashmax)+"件）");
+                tvInfo.setText("（剩余库存"+String.valueOf(Double.parseDouble(data.flashmax)<=0?0:data.flashmax)+"）");
                 amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
             }
             else
             {
                 tvPrice.setText("￥"+data.oldprice);
-                tvInfo.setText("（每人限购"+(data.max<=0?0:data.max)+"件）");
+                tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
                 amountView.setGoods_storage((int)data.max);
             }
         }
         else
         {
             tvPrice.setText("￥"+data.price);
-            tvInfo.setText("（每人限购"+(data.max<=0?0:data.max)+"件）");
+            tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
             amountView.setGoods_storage((int)data.max);
         }
         amountView.setAmount((int)Double.parseDouble(data.minimum));

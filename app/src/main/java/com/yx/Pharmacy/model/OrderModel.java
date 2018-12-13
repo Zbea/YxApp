@@ -50,6 +50,7 @@ public class OrderModel implements Serializable {
     public String number;
     public List<Goods> goodsList;
     public List<Goods> gift;
+    public List<CouponModel> couponList;
     //详情
     public int itemid;
     public String discount;

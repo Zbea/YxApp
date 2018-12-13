@@ -152,6 +152,7 @@
                     android:layout_height="@dimen/dp_0_5"/>
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/rl_coupon"
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_45">
@@ -166,13 +167,21 @@
                 <TextView
                     android:id="@+id/tv_discount"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_26"
                     android:text="-￥454"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mzzqckgd"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
                 <View
                     android:layout_alignParentBottom="true"
                     android:background="#eaeaea"
@@ -319,7 +328,7 @@
                 <TextView
                     android:id="@+id/tv_storename"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_26"
                     android:text=""
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
@@ -330,7 +339,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/mzzqckgd"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="16dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />

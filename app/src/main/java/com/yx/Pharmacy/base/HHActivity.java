@@ -22,6 +22,7 @@ import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.BackHhBean;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.SelectStoreHhBean;
@@ -208,16 +209,16 @@ public class HHActivity
                                                 String titleStr = infos[0];
                                                 String rightStr = infos[1];
                                                 if (!TextUtils.isEmpty(titleStr)) {
-                                                    tv_title.setText(titleStr);
-                                                    tv_title.setVisibility(View.VISIBLE);
+                                                    tv_h5_title.setText(titleStr);
+                                                    tv_h5_title.setVisibility(View.VISIBLE);
                                                 }
-                                                if (!TextUtils.isEmpty(rightStr) && rightStr.equals("积分明细")) {
+                                                if (!TextUtils.isEmpty(rightStr)) {
                                                     tv_right.setText(rightStr);
                                                     tv_right.setVisibility(View.VISIBLE);
                                                     tv_right.setOnClickListener(new View.OnClickListener() {
                                                         @Override
                                                         public void onClick(View v) {
-                                                            MyIntegralActivity.startActivity(HHActivity.this);
+                                                            loadUrl("javascript:rightItemClick()");
                                                         }
                                                     });
                                                 }
@@ -301,21 +302,10 @@ public class HHActivity
 
     public void showShopData(List<MyShopModel> data) {
         if (data != null && data.size() > 0) {
-            // 修改门店认证状态
-            SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, true);
-        }
-        String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-        if (data != null && data.size() > 0 && TextUtils.isEmpty(storename)) {
             if (data.size() == 1) {
                 MyShopModel myShopModel = data.get(0);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
+                myShopModel.storeStutus=true;
+                StoreManage.newInstance().saveStore(myShopModel);
                 String format = "setStoreIdAndItemId('" + myShopModel.storeid + "','" + myShopModel.itemid + "')";
                 mWebview.loadUrl("javascript:" + format);
                 return;
@@ -336,14 +326,8 @@ public class HHActivity
         mChooseStoreDialog.setDialogClickListener(new ChooseStoreDialog.DialogClickListener() {
             @Override
             public void select(MyShopModel myShopModel) {
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
+                myShopModel.storeStutus=true;
+                StoreManage.newInstance().saveStore(myShopModel);
                 String format = "setStoreIdAndItemId('" + myShopModel.storeid + "','" + myShopModel.itemid + "')";
                 mWebview.loadUrl("javascript:" + format);
             }
@@ -356,8 +340,13 @@ public class HHActivity
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onBack(BackHhBean bean) {
-        mWebview.goBack();
+    public void onBack(String type) {
+        if (type.equals("back")) {
+            if (mWebview.canGoBack()) {
+                mWebview.goBack();
+            } else {
+                finish();
+            }
+        }
     }
-
 }

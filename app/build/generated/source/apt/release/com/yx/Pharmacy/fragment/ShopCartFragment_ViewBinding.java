@@ -19,11 +19,11 @@ import java.lang.Override;
 public class ShopCartFragment_ViewBinding implements Unbinder {
   private ShopCartFragment target;
 
-  private View view2131297032;
+  private View view2131297033;
 
   private View view2131296564;
 
-  private View view2131296950;
+  private View view2131296951;
 
   @UiThread
   public ShopCartFragment_ViewBinding(final ShopCartFragment target, View source) {
@@ -34,7 +34,7 @@ public class ShopCartFragment_ViewBinding implements Unbinder {
     target.mTvNotice = Utils.findRequiredViewAsType(source, R.id.tv_notice, "field 'mTvNotice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onViewClicked'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297032 = view;
+    view2131297033 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class ShopCartFragment_ViewBinding implements Unbinder {
     target.mCbCheckall = Utils.findRequiredViewAsType(source, R.id.cb_checkall, "field 'mCbCheckall'", CheckBox.class);
     view = Utils.findRequiredView(source, R.id.tv_buy, "field 'mTvBuy' and method 'onViewClicked'");
     target.mTvBuy = Utils.castView(view, R.id.tv_buy, "field 'mTvBuy'", TextView.class);
-    view2131296950 = view;
+    view2131296951 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -82,11 +82,11 @@ public class ShopCartFragment_ViewBinding implements Unbinder {
     target.mRvShopCart = null;
     target.mLoadingLayout = null;
 
-    view2131297032.setOnClickListener(null);
-    view2131297032 = null;
+    view2131297033.setOnClickListener(null);
+    view2131297033 = null;
     view2131296564.setOnClickListener(null);
     view2131296564 = null;
-    view2131296950.setOnClickListener(null);
-    view2131296950 = null;
+    view2131296951.setOnClickListener(null);
+    view2131296951 = null;
   }
 }

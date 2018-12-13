@@ -261,27 +261,4 @@ public class ProductDetailPresenter {
     }
 
 
-    public void loadMyShop(BaseActivity activity, boolean isShow) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("doplace", "home");
-        HomeNet.getHomeApi().getMyShop(urlMap).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
-                    @Override
-                    public void onSuccess(BasisBean<List<MyShopModel>> response) {
-                        if (response.getData() != null) {
-                            mView.showShopData(response.getData());
-                        } else {
-                            mView.hideFlash();
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        LogUtils.e("error=========" + e.toString());
-                        mView.hideFlash();
-                        super.onError(e);
-                    }
-                });
-    }
 }

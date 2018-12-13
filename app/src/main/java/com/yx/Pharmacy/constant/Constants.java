@@ -8,8 +8,8 @@ package com.yx.Pharmacy.constant;
 
 public class Constants {
 //     测试
-//    public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
-    public static final String BASE_URL            = "http://120.79.62.56:8808/index.php/";
+    public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
+//    public static final String BASE_URL            = "http://120.79.62.56:8808/index.php/";
     // H5连接
     public static final String H5_URL              = "h5_url";
 
@@ -179,6 +179,10 @@ public class Constants {
     public static final String KEY_TRUENAME = "key_truename";// 门店对应姓名
     public static final String KEY_MOBILE = "key_mobile";// 门店对应手机号
     public static final String KEY_COMPANY = "key_company"; // 公司名
+    public static final String KEY_SIGN = "key_sign";// 签到
+    public static final String KEY_COUPON = "key_coupon";// 优惠券
+    public static final String KEY_EXCHANGE = "key_exchange"; // 退换政策
+    public static final String KEY_PRIZETASK = "key_prizetask"; // 有奖任务
     public static final String KEY_MONEY = "key_money"; // 余额
     public static final String KEY_QRCODE = "key_qrcode"; // 二维码
     public static final String KEY_BANK_USERNAME= "key_bank_usernam"; // 银行卡开户名

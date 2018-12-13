@@ -18,7 +18,7 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
 
   private View view2131296783;
 
-  private View view2131297103;
+  private View view2131297104;
 
   @UiThread
   public MyQrCodeActivity_ViewBinding(MyQrCodeActivity target) {
@@ -41,7 +41,7 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_save, "method 'onClick'");
-    view2131297103 = view;
+    view2131297104 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
 
     view2131296783.setOnClickListener(null);
     view2131296783 = null;
-    view2131297103.setOnClickListener(null);
-    view2131297103 = null;
+    view2131297104.setOnClickListener(null);
+    view2131297104 = null;
   }
 }

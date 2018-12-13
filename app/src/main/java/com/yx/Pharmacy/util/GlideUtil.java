@@ -121,6 +121,7 @@ public class GlideUtil {
         RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .circleCrop()
+                .override(250)
                 .placeholder(resource)
                 .error(resource)
                 .diskCacheStrategy(DiskCacheStrategy.ALL);

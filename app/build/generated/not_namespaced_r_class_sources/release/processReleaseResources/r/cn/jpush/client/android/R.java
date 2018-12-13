@@ -27,8 +27,8 @@ public final class R {
         public static final int popLayoutId = 0x7f0901eb;
         public static final int pushPrograssBar = 0x7f0901f3;
         public static final int rlRichpushTitleBar = 0x7f09020a;
-        public static final int tvRichpushTitle = 0x7f09029b;
-        public static final int wvPopwin = 0x7f0903b1;
+        public static final int tvRichpushTitle = 0x7f09029c;
+        public static final int wvPopwin = 0x7f0903b2;
     }
     public static final class layout {
         private layout() {}

@@ -14,11 +14,11 @@ import java.lang.Override;
 public class CaptureActivity_ViewBinding implements Unbinder {
   private CaptureActivity target;
 
-  private View view2131297039;
+  private View view2131297042;
 
   private View view2131296499;
 
-  private View view2131296790;
+  private View view2131296791;
 
   @UiThread
   public CaptureActivity_ViewBinding(CaptureActivity target) {
@@ -31,7 +31,7 @@ public class CaptureActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.tv_more, "method 'onClick'");
-    view2131297039 = view;
+    view2131297042 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class CaptureActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onClick'");
-    view2131296790 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,11 +63,11 @@ public class CaptureActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131297039.setOnClickListener(null);
-    view2131297039 = null;
+    view2131297042.setOnClickListener(null);
+    view2131297042 = null;
     view2131296499.setOnClickListener(null);
     view2131296499 = null;
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
   }
 }

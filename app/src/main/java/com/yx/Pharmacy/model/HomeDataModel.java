@@ -73,6 +73,7 @@ public class HomeDataModel {
         public String    salesacti;
         public String note;
         public String    levelid;
+        public String     type;
         public String    starttime;
         public String     presale; // 预售 0:不是预售  1 预售
         public String     presalenote;// 预售说明

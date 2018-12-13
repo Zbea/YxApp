@@ -80,7 +80,6 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
         if(TextUtils.equals(mType,"1")){
             // 特价
             helper.setText(R.id.tv_title,item.getTitle());
-
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
             CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString      spanString = new SpannableString("icon ");
@@ -90,20 +89,21 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
         }else if(TextUtils.equals(mType,"2")){
             // 特价
             helper.setText(R.id.tv_title,item.getTitle());
-
+            oldPrice.setVisibility(View.GONE);
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
             CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString      spanString = new SpannableString("icon ");
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
             title.setText(spanString);
             title.append(item.getTitle());
-        }else
-            if(TextUtils.equals(mType, "3")){
+        }else if(TextUtils.equals(mType, "3")){
             // 满赠
-
             TextView tv_levelnote = helper.getView(R.id.tv_levelnote);
-            tv_levelnote.setVisibility(TextUtils.isEmpty(item.getLevelnote()) ? View.INVISIBLE : View.VISIBLE);
-            tv_levelnote.setText(item.getLevelnote());
+            if (tv_levelnote!=null)
+            {
+                tv_levelnote.setVisibility(TextUtils.isEmpty(item.getLevelnote()) ? View.INVISIBLE : View.VISIBLE);
+                tv_levelnote.setText(item.getLevelnote());
+            }
 
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);
             CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);

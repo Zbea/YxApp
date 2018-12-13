@@ -16,11 +16,11 @@ import java.lang.Override;
 public class RegisterActivity_ViewBinding implements Unbinder {
   private RegisterActivity target;
 
-  private View view2131297032;
+  private View view2131297033;
 
-  private View view2131296999;
+  private View view2131297000;
 
-  private View view2131297095;
+  private View view2131297096;
 
   private View view2131296783;
 
@@ -37,7 +37,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onClick'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297032 = view;
+    view2131297033 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditPassword = Utils.findRequiredViewAsType(source, R.id.edit_password, "field 'mEditPassword'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'mTvGetCode' and method 'onClick'");
     target.mTvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'mTvGetCode'", TextView.class);
-    view2131296999 = view;
+    view2131297000 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +59,7 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditTuijianma = Utils.findRequiredViewAsType(source, R.id.edit_tuijianma, "field 'mEditTuijianma'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_register, "field 'mTvRegister' and method 'onClick'");
     target.mTvRegister = Utils.castView(view, R.id.tv_register, "field 'mTvRegister'", TextView.class);
-    view2131297095 = view;
+    view2131297096 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -92,12 +92,12 @@ public class RegisterActivity_ViewBinding implements Unbinder {
     target.mEditTuijianma = null;
     target.mTvRegister = null;
 
-    view2131297032.setOnClickListener(null);
-    view2131297032 = null;
-    view2131296999.setOnClickListener(null);
-    view2131296999 = null;
-    view2131297095.setOnClickListener(null);
-    view2131297095 = null;
+    view2131297033.setOnClickListener(null);
+    view2131297033 = null;
+    view2131297000.setOnClickListener(null);
+    view2131297000 = null;
+    view2131297096.setOnClickListener(null);
+    view2131297096 = null;
     view2131296783.setOnClickListener(null);
     view2131296783 = null;
   }

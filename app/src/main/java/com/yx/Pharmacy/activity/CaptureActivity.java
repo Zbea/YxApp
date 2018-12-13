@@ -42,6 +42,7 @@ import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.dialog.LoadingDialog;
 import com.yx.Pharmacy.dialog.ScanAfterDialog;
 import com.yx.Pharmacy.model.DrugModel;
+import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.ScanPresenter;
 import com.yx.Pharmacy.util.L;
@@ -191,7 +192,7 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
                     break;
             }
         }else if (resultCode==START_LOGIN_RESULT) {
-            mSelectStoreUtil = new SelectStoreUtil(this, () -> {
+            mSelectStoreUtil = new SelectStoreUtil(this, (MyShopModel myShopModel) -> {
             });
         }
         super.onActivityResult(requestCode, resultCode, intent);
@@ -472,7 +473,7 @@ public class CaptureActivity extends BasePermissionActivity implements SurfaceHo
                     }else {
                         mSelectStoreUtil = new SelectStoreUtil(CaptureActivity.this, new SelectStoreUtil.OnSelectStoreListener() {
                             @Override
-                            public void onSelect() {
+                            public void onSelect(MyShopModel myShopModel) {
                             }
                         });
                     }

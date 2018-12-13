@@ -38,7 +38,7 @@ public class HomeDataPresenter {
     public void getHomeData(BaseActivity activity) {
         HomeNet.getHomeApi().getHomeData().subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressSubscriber<BasisBean<List<HomeDataModel>>>(activity, false) {
+               .subscribe(new ProgressSubscriber<BasisBean<List<HomeDataModel>>>(activity, true) {
                    @Override
                    public void onSuccess(BasisBean<List<HomeDataModel>> response) {
                        if (response.getData()!=null) {
@@ -102,30 +102,6 @@ public class HomeDataPresenter {
                         super.onError(e);
                     }
                 });
-    }
-
-    public void loadMyShop(BaseActivity activity,boolean isShow) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("doplace","home");
-        HomeNet.getHomeApi().getMyShop(urlMap).subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
-               .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
-                   @Override
-                   public void onSuccess(BasisBean<List<MyShopModel>> response) {
-                       if (response.getData()!=null) {
-                           mView.showShopData(response.getData());
-                       }else {
-                           mView.hideFlash();
-                       }
-                   }
-
-                   @Override
-                   public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       mView.hideFlash();
-                       super.onError(e);
-                   }
-               });
     }
 
     public void loadProductList(BaseActivity activity) {

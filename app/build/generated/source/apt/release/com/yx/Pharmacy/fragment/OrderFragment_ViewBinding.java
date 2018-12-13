@@ -17,7 +17,7 @@ import java.lang.Override;
 public class OrderFragment_ViewBinding implements Unbinder {
   private OrderFragment target;
 
-  private View view2131297096;
+  private View view2131297097;
 
   @UiThread
   public OrderFragment_ViewBinding(final OrderFragment target, View source) {
@@ -29,7 +29,7 @@ public class OrderFragment_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297096 = view;
+    view2131297097 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class OrderFragment_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
-    view2131297096.setOnClickListener(null);
-    view2131297096 = null;
+    view2131297097.setOnClickListener(null);
+    view2131297097 = null;
   }
 }

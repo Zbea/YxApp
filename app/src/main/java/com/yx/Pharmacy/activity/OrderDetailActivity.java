@@ -1,32 +1,43 @@
 package com.yx.Pharmacy.activity;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.adapter.CouponListAdapter;
 import com.yx.Pharmacy.adapter.GiftListAdapter;
 import com.yx.Pharmacy.adapter.GoodsListAdapter;
+import com.yx.Pharmacy.adapter.ShopCartCouponAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
+import com.yx.Pharmacy.model.CouponModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.OrderModel;
+import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.OrderDetailPresenter;
 import com.yx.Pharmacy.util.DateUtil;
+import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.view.IOrderDetailView;
+import com.yx.Pharmacy.widget.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +54,8 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
     TextView tv_detail_todo;
     @BindView(R.id.rl_invoice)
     RelativeLayout rlInvoice;
+    @BindView(R.id.rl_coupon)
+    RelativeLayout rlCoupon;
 
     private HomeAdDialog homeAdDialog;
     private void showError() {
@@ -126,6 +139,9 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
     private GiftListAdapter giftListAdapter;
     private List<OrderModel.Goods> gifts = new ArrayList<>();
     private Activity mContext;
+    private Dialog mCouponDialog;
+    private CouponListAdapter mCouponListAdapter;
+    private List<CouponModel> mCouponList;
 
     public static void startActivity(Activity activity, String orderid) {
         Intent intent = new Intent(activity, OrderDetailActivity.class);
@@ -267,6 +283,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
             tv_product_num.setText("数量" + String.valueOf(model.number));
             goodsListAdapter.setNewData(model.goodsList);
             giftListAdapter.setNewData(model.gift);
+            mCouponList=model.couponList;
         }
     }
 
@@ -280,7 +297,7 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
 
     }
 
-    @OnClick({R.id.rl_back, R.id.ll_open, R.id.ll_close, R.id.tv_detail_todo, R.id.tv_reload,R.id.rl_invoice})
+    @OnClick({R.id.rl_back, R.id.ll_open, R.id.ll_close, R.id.tv_detail_todo, R.id.tv_reload,R.id.rl_invoice,R.id.rl_coupon})
     public void click(View v) {
         switch (v.getId()) {
             case R.id.rl_back:
@@ -324,7 +341,60 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
                 mPresenter = new OrderDetailPresenter(this);
                 mPresenter.getOrderDetailData(this, orderid);
                 break;
+            case R.id.rl_coupon:
+                if (mCouponList!=null&&mCouponList.size()>0)
+                {
+                    showCouponDialog();
+                }
+                break;
         }
+    }
+
+
+    /**
+     * 优惠券弹窗
+     */
+    public void showCouponDialog() {
+        if (mCouponDialog == null) {
+            mCouponDialog = new Dialog(this, R.style.SrcbDialog);
+            View view = getLayoutInflater().inflate(R.layout.dialog_shopcart_coupon, null);
+            View.OnClickListener onClickListener = v -> {
+                switch (v.getId()) {
+                    case R.id.iv_cancel:
+                        mCouponDialog.dismiss();
+                        break;
+                    default:
+                        break;
+                }
+            };
+            view.findViewById(R.id.iv_cancel).setOnClickListener(onClickListener);
+            RecyclerView dialogCoupon = view.findViewById(R.id.rv_coupon);
+            dialogCoupon.setLayoutManager(new LinearLayoutManager(this));
+            mCouponListAdapter = new CouponListAdapter(mContext,1,mCouponList);
+            dialogCoupon.setAdapter(mCouponListAdapter);
+            int itemDecoration = DensityUtils.dp2px(mContext, 10);
+            dialogCoupon.addItemDecoration(new SpacesItemDecoration(0, itemDecoration));
+            mCouponListAdapter.setNewData(mCouponList);
+
+            Window win = mCouponDialog.getWindow();
+            win.setWindowAnimations(R.style.mystyle);
+            win.getDecorView().setPadding(0, 0, 0, 0);
+            WindowManager.LayoutParams lp = win.getAttributes();
+            // 设置弹出框的宽高
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = DensityUtils.dp2px(this, 400);
+            // 设置弹出框的位置
+            win.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
+            win.setAttributes(lp);
+            mCouponDialog.setContentView(view);
+            mCouponDialog.show();
+        } else {
+            mCouponDialog.show();
+            if (mCouponListAdapter != null) {
+                mCouponListAdapter.setNewData(mCouponList);
+            }
+        }
+
     }
 
     /**

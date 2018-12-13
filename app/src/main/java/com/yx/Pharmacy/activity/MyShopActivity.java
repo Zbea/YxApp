@@ -24,6 +24,7 @@ import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.AddressModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -123,7 +124,8 @@ public class MyShopActivity
                     case R.id.tv_cut:
                         saveShopStore(myShopModel);
                         getShortToastByString("切换门店成功");
-                        EventBus.getDefault().post("changeStore");
+                        myShopModel.storeStutus=true;
+                        StoreManage.newInstance().saveStore(myShopModel);
                         finish();
                         break;
                     case R.id.tv_modifi:

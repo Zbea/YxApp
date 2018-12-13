@@ -30,13 +30,16 @@ import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.manage.LocalUrlManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.MyOrderNumModel;
+import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.MyPresenter;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IMyOrderNumView;
 import com.yx.Pharmacy.widget.RoundImageView;
@@ -105,6 +108,14 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     protected void init() {
         mImmersionBar = ImmersionBar.with(this);
         mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
+
+        StoreManage.newInstance().setStoreManageListener(new StoreManage.StoreManageListener() {
+            @Override
+            public void onRefresh(MyShopModel data) {
+                initView();
+            }
+        });
+
         initView();
     }
 
@@ -127,23 +138,14 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             case R.id.ll_feedback:// 退换政策
                 if (urlBean!=null)
                 {
-                    HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().exchange,1);
+                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().exchange,1);
                 }
-//                else
-//                {
-//                    HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
-//                }
-
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
                 if (urlBean!=null)
                 {
-                    HHActivity.startActivity(mContext, Constants.BASE_URL+LocalUrlManage.newInstance().getUrlBean().prizetask);
+                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().prizetask);
                 }
-//                else
-//                {
-//                    HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
-//                }
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);
@@ -154,8 +156,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyOrderListActivity.startActivity(mContext);
@@ -209,8 +210,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyCollectActivity.startActivity(mContext);
@@ -228,8 +228,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 HaveNeedActivity.startActivity(mContext);
@@ -247,8 +246,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 QiyeZizhiActivity.startActivity(mContext);
@@ -262,8 +260,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyCouponActivity.startActivity(mContext);
@@ -274,8 +271,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(0);
@@ -286,8 +282,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(1);
@@ -298,8 +293,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(2);
@@ -310,8 +304,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(3);
@@ -322,8 +315,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 AfterSaleActivity.startActivity(mContext);
@@ -338,7 +330,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
     public void initView() {
         presenter=new MyPresenter(this);
-        if (!TextUtils.isEmpty(NetUtil.getToken())&!TextUtils.isEmpty(NetUtil.getStoreid()))
+        if (!TextUtils.isEmpty(NetUtil.getToken())&&!TextUtils.isEmpty(NetUtil.getStoreid()))
         {
             presenter.getOrderNum((BaseActivity) mContext);
         }
@@ -350,8 +342,9 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         if (TextUtils.isEmpty(NetUtil.getToken())) {
             tv_user_name.setText("登录/注册");
         } else {
-            String truename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-            tv_user_name.setText(TextUtils.isEmpty(truename) ? SPUtil.getString(UiUtil.getContext(), Constants.KEY_MOBILE) : truename);
+            MyShopModel myShopModel=StoreManage.newInstance().getStore();
+            String truename = myShopModel.storename;
+            tv_user_name.setText(TextUtils.isEmpty(truename) ? myShopModel.mobile : truename);
         }
 
         if (TextUtils.isEmpty(mAvatar)) {
@@ -378,10 +371,13 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         } else {
             if (!TextUtils.equals(mStoreid, NetUtil.getStoreid())) {// 切换门店账号  刷新五个tab数据
                 mStoreid = NetUtil.getStoreid();
-                MainActivity mainActivity = (MainActivity) mContext;
-                mainActivity.notifyData();
             }
         }
+    }
+
+    private void setChooseStore()
+    {
+        SelectStoreUtil selectStoreUtil=new SelectStoreUtil(mContext, null);
     }
 
 

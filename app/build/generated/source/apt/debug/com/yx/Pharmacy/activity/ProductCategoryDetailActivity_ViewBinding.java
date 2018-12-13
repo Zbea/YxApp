@@ -18,23 +18,23 @@ import java.lang.Override;
 public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
   private ProductCategoryDetailActivity target;
 
-  private View view2131296790;
+  private View view2131296791;
 
-  private View view2131296645;
+  private View view2131296646;
 
-  private View view2131296615;
+  private View view2131296616;
 
-  private View view2131296642;
+  private View view2131296643;
 
-  private View view2131297103;
+  private View view2131297106;
 
-  private View view2131296568;
+  private View view2131296569;
 
   private View view2131296521;
 
-  private View view2131296822;
+  private View view2131296824;
 
-  private View view2131296821;
+  private View view2131296823;
 
   @UiThread
   public ProductCategoryDetailActivity_ViewBinding(ProductCategoryDetailActivity target) {
@@ -59,7 +59,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296790 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +67,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_zonghe, "method 'click'");
-    view2131296645 = view;
+    view2131296646 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +75,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_price, "method 'click'");
-    view2131296615 = view;
+    view2131296616 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -83,7 +83,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "method 'click'");
-    view2131296642 = view;
+    view2131296643 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +91,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297103 = view;
+    view2131297106 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +99,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_change_layout, "method 'click'");
-    view2131296568 = view;
+    view2131296569 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +115,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_search, "method 'click'");
-    view2131296822 = view;
+    view2131296824 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -123,7 +123,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
-    view2131296821 = view;
+    view2131296823 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -151,23 +151,23 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
-    view2131296645.setOnClickListener(null);
-    view2131296645 = null;
-    view2131296615.setOnClickListener(null);
-    view2131296615 = null;
-    view2131296642.setOnClickListener(null);
-    view2131296642 = null;
-    view2131297103.setOnClickListener(null);
-    view2131297103 = null;
-    view2131296568.setOnClickListener(null);
-    view2131296568 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131296646.setOnClickListener(null);
+    view2131296646 = null;
+    view2131296616.setOnClickListener(null);
+    view2131296616 = null;
+    view2131296643.setOnClickListener(null);
+    view2131296643 = null;
+    view2131297106.setOnClickListener(null);
+    view2131297106 = null;
+    view2131296569.setOnClickListener(null);
+    view2131296569 = null;
     view2131296521.setOnClickListener(null);
     view2131296521 = null;
-    view2131296822.setOnClickListener(null);
-    view2131296822 = null;
-    view2131296821.setOnClickListener(null);
-    view2131296821 = null;
+    view2131296824.setOnClickListener(null);
+    view2131296824 = null;
+    view2131296823.setOnClickListener(null);
+    view2131296823 = null;
   }
 }

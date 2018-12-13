@@ -95,7 +95,6 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:name=".activity.ProductDetailActivity"
-            android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden|adjustPan"/>
 
         <activity android:name=".activity.RegisterActivity" />

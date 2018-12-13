@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.ImageSpan;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -40,6 +41,7 @@ import com.yx.Pharmacy.dialog.ChooseStoreDialog;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.loader.GlideImageLoader;
 import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.ProductDetailModel;
@@ -48,6 +50,7 @@ import com.yx.Pharmacy.presenter.ProductDetailPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IProductDetailView;
 import com.yx.Pharmacy.widget.AmountView;
@@ -103,7 +106,7 @@ public class ProductDetailActivity
     @BindView(R.id.rv_commend_product)
     RecyclerView mRvCommendProduct;
     @BindView(R.id.webview)
-    SystemWebView mWebview;
+    WebView mWebview;
     @BindView(R.id.iv_home)
     ImageView mIvHome;
     @BindView(R.id.iv_cart)
@@ -185,6 +188,13 @@ public class ProductDetailActivity
         context.startActivity(intent);
     }
 
+    private StoreManage.StoreManageListener storeManageListener=new StoreManage.StoreManageListener() {
+        @Override
+        public void onRefresh(MyShopModel data) {
+            initData();
+        }
+    };
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_product_detail;
@@ -197,6 +207,8 @@ public class ProductDetailActivity
         mPresenter = new ProductDetailPresenter(this);
         loadinglayout.setStatus(LoadingLayout.Loading);
 
+        StoreManage.newInstance().setStoreManageListener(storeManageListener);
+
         CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
             @Override
             public void onRefresh(int max) {
@@ -204,21 +216,6 @@ public class ProductDetailActivity
             }
         });
 
-//        ProductMaxManage.newInstance().setProductMaxManageListener(new ProductMaxManage.ProductMaxManageListener() {
-//            @Override
-//            public void onRefresh(int max) {
-//                L.i("max:"+max);
-//                if (mResultBean!=null)
-//                    mResultBean.max=max;
-//                if (mResultBean.max==0)
-//                {
-//                    mTvAddCart.setEnabled(false);
-//                }
-//            }
-//        });
-
-        //        String carcount = SPUtil.getString(UiUtil.getContext(), Constants.KEY_CARCOUNT);
-        //        mTvNum.setText(DensityUtils.parseInt(carcount)>99 ? "99+" : carcount);
         loadinglayout.setEmptyImage(R.drawable.wdddwk);
         loadinglayout.setEmptyText("商品已下架");
         loadinglayout.setEmptyReloadButtonText("返回首页");
@@ -268,15 +265,24 @@ public class ProductDetailActivity
         });
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void initRecycler() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRvCommendProduct.setLayoutManager(layoutManager);
         mCommendAdapter = new ProductCommendAdapter(R.layout.item_product_detail_commend);
         mRvCommendProduct.setAdapter(mCommendAdapter);
-
-        mWebview.setNestedScrollingEnabled(false);
         mRvCommendProduct.setNestedScrollingEnabled(false);
+    }
+
+    private void setStoreJudge()
+    {
+        if (TextUtils.isEmpty(NetUtil.getToken())) {
+            LoginActivity.startActivity(this, 1);
+            return;
+        }
+        if (TextUtils.isEmpty(NetUtil.getStoreid())) {
+            SelectStoreUtil selectStoreUtil=new SelectStoreUtil(mContext,null);
+            return;
+        }
     }
 
 
@@ -294,19 +300,7 @@ public class ProductDetailActivity
                 finish();
                 break;
             case R.id.rl_collect://收藏
-                if (TextUtils.isEmpty(NetUtil.getToken())) {
-                    LoginActivity.startActivity(this, 1);
-                    return;
-                }
-                if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                        mPresenter.loadMyShop(this, true);
-                    } else {
-                        MyShopAddActivity.startActivity(this);
-                    }
-                    return;
-                }
-
+                setStoreJudge();
                 if (mResultBean.issave) {
                     mPresenter.cancleCollect(ProductDetailActivity.this, mItemId);
                 } else {
@@ -324,18 +318,7 @@ public class ProductDetailActivity
                 break;
             case R.id.tv_add_cart:
                 // 加入购物车
-                if (TextUtils.isEmpty(NetUtil.getToken())) {
-                    LoginActivity.startActivity(this, 1);
-                    return;
-                }
-                if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                        mPresenter.loadMyShop(this, true);
-                    } else {
-                        MyShopAddActivity.startActivity(this);
-                    }
-                    return;
-                }
+                setStoreJudge();
 
                 if (mResultBean != null) {
                     if (mQuehuo) {
@@ -362,18 +345,7 @@ public class ProductDetailActivity
 
                 break;
             case R.id.rl_manjian://优惠劵
-                if (TextUtils.isEmpty(NetUtil.getToken())) {
-                    LoginActivity.startActivity(this, 1);
-                    return;
-                }
-                if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                        mPresenter.loadMyShop(this, true);
-                    } else {
-                        MyShopAddActivity.startActivity(this);
-                    }
-                    return;
-                }
+                setStoreJudge();
                 ProductCouponActivity.startActivity(this, mItemId);
                 break;
 //            case R.id.tv_look_gift:// 查看赠品
@@ -477,7 +449,7 @@ public class ProductDetailActivity
             mTvProductCompany.setText(data.scqy);
             mTvPrice.setText(data.price);
             mTvTopPrice.setText(data.price);
-            if (!TextUtils.isEmpty(NetUtil.getToken())) {
+            if (!TextUtils.isEmpty(NetUtil.getStoreid())) {
                 mTvOldprice.setText(TextUtils.equals(data.type, "9")?"":"折后约"+data.disprice);
             } else {
                 mTvOldprice.setVisibility(View.GONE);
@@ -486,7 +458,7 @@ public class ProductDetailActivity
             if (TextUtils.equals(data.type, "1") || TextUtils.equals(data.type, "3")) {
                 mTvTopUnit.setText(data.gg);
                 mTvTopOldPrice.setText(TextUtils.equals(data.type, "1")?"":"折后约"+data.disprice);
-                if (TextUtils.isEmpty(NetUtil.getToken()))
+                if (TextUtils.isEmpty(NetUtil.getStoreid()))
                 {
                     mTvTopOldPrice.setVisibility(View.GONE);
                 }
@@ -627,6 +599,7 @@ public class ProductDetailActivity
                 ll_price.setVisibility(View.VISIBLE);
                 rl_gg.setVisibility(View.VISIBLE);
                 tv_sales.setVisibility(View.GONE);
+                mTvOldprice.setVisibility(View.GONE);
             }
             else if (TextUtils.equals(data.type, "3")) {
                 mRlInfo.setVisibility(View.VISIBLE);
@@ -695,17 +668,29 @@ public class ProductDetailActivity
         if (type==1)
         {
             mResultBean.flashmax =(DensityUtils.parseDouble(mResultBean.flashmax)  - cartCount)+"";
-            L.i(mResultBean.flashmax);
         }
         else
         {
             mResultBean.max = mResultBean.max - cartCount;
         }
-        if (mResultBean.max <= 0&&DensityUtils.parseDouble(mResultBean.flashmax)<=1) {
-            mTvAddCart.setEnabled(false);
-            mTvAddCart.setSelected(false);
-            mTvAddCart.setText("已达限购");
+
+        if (TextUtils.equals(mResultBean.type,"1")|TextUtils.equals(mResultBean.type,"2"))
+        {
+            if (mResultBean.max <= 0&&DensityUtils.parseDouble(mResultBean.flashmax)<=1) {
+                mTvAddCart.setEnabled(false);
+                mTvAddCart.setSelected(false);
+                mTvAddCart.setText("已达限购");
+            }
         }
+        else
+        {
+            if (mResultBean.max <= 0) {
+                mTvAddCart.setEnabled(false);
+                mTvAddCart.setSelected(false);
+                mTvAddCart.setText("已达限购");
+            }
+        }
+
     }
 
     @Override
@@ -750,57 +735,9 @@ public class ProductDetailActivity
         mRlCollect.setVisibility(View.GONE);
     }
 
-    @Override
-    public void showShopData(List<MyShopModel> data) {
-        if (data != null && data.size() > 0) {
-            // 修改门店认证状态
-            SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, true);
-        }
-        String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-        if (data != null && data.size() > 0 && TextUtils.isEmpty(storename)) {
-            if (data.size() == 1) {
-                MyShopModel myShopModel = data.get(0);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
-                MainActivity.startActivity(ProductDetailActivity.this, 1);
-                return;
-            }
-            showChooseStoreDialog(data);
-        }
-    }
 
-    @Override
-    public void hideFlash() {
-        MyShopActivity.startActivity(this);
-    }
 
-    private void showChooseStoreDialog(List<MyShopModel> data) {
-        if (mChooseStoreDialog != null) {
-            if (mChooseStoreDialog.isShown()) {
-                return;
-            }
-        }
-        mChooseStoreDialog = new ChooseStoreDialog(this, data);
-        mChooseStoreDialog.builder().show();
-        mChooseStoreDialog.setDialogClickListener(new ChooseStoreDialog.DialogClickListener() {
-            @Override
-            public void select(MyShopModel myShopModel) {
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
-                MainActivity.startActivity(ProductDetailActivity.this, 1);
-            }
-        });
-    }
+
 
 
     private void showComfirmDialog1() {
@@ -856,9 +793,15 @@ public class ProductDetailActivity
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == LoginActivity.START_LOGIN_RESULT) {
             if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                mPresenter.loadMyShop(this, true);
+                SelectStoreUtil selectStoreUtil=new SelectStoreUtil(mContext,null);
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        StoreManage.newInstance().clearStoreManageListener(storeManageListener);
     }
 
     @Override

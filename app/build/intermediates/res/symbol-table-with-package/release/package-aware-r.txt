@@ -2389,6 +2389,7 @@ id rl_click
 id rl_close
 id rl_code
 id rl_collect
+id rl_coupon
 id rl_dialog
 id rl_downcount
 id rl_evaluation

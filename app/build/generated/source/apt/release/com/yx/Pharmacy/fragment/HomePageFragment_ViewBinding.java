@@ -24,11 +24,11 @@ public class HomePageFragment_ViewBinding implements Unbinder {
 
   private View view2131296455;
 
-  private View view2131297107;
-
   private View view2131296622;
 
-  private View view2131296994;
+  private View view2131296621;
+
+  private View view2131296995;
 
   private View view2131296509;
 
@@ -61,15 +61,7 @@ public class HomePageFragment_ViewBinding implements Unbinder {
     });
     target.mNsvHome = Utils.findRequiredViewAsType(source, R.id.nsv_home, "field 'mNsvHome'", NestedScrollView.class);
     target.tv_no_more = Utils.findRequiredViewAsType(source, R.id.tv_no_more, "field 'tv_no_more'", TextView.class);
-    view = Utils.findRequiredView(source, R.id.tv_shop, "field 'tvShop' and method 'onViewClicked'");
-    target.tvShop = Utils.castView(view, R.id.tv_shop, "field 'tvShop'", TextView.class);
-    view2131297107 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.onViewClicked(p0);
-      }
-    });
+    target.tvShop = Utils.findRequiredViewAsType(source, R.id.tv_shop, "field 'tvShop'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_store_logout, "field 'llStoreLogout' and method 'onViewClicked'");
     target.llStoreLogout = Utils.castView(view, R.id.ll_store_logout, "field 'llStoreLogout'", LinearLayout.class);
     view2131296622 = view;
@@ -79,10 +71,18 @@ public class HomePageFragment_ViewBinding implements Unbinder {
         target.onViewClicked(p0);
       }
     });
-    target.llStore = Utils.findRequiredViewAsType(source, R.id.ll_store, "field 'llStore'", LinearLayout.class);
+    view = Utils.findRequiredView(source, R.id.ll_store, "field 'llStore' and method 'onViewClicked'");
+    target.llStore = Utils.castView(view, R.id.ll_store, "field 'llStore'", LinearLayout.class);
+    view2131296621 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.onViewClicked(p0);
+      }
+    });
     view = Utils.findRequiredView(source, R.id.tv_factory_address, "field 'tvFactoryAddress' and method 'onViewClicked'");
     target.tvFactoryAddress = Utils.castView(view, R.id.tv_factory_address, "field 'tvFactoryAddress'", TextView.class);
-    view2131296994 = view;
+    view2131296995 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -149,12 +149,12 @@ public class HomePageFragment_ViewBinding implements Unbinder {
 
     view2131296455.setOnClickListener(null);
     view2131296455 = null;
-    view2131297107.setOnClickListener(null);
-    view2131297107 = null;
     view2131296622.setOnClickListener(null);
     view2131296622 = null;
-    view2131296994.setOnClickListener(null);
-    view2131296994 = null;
+    view2131296621.setOnClickListener(null);
+    view2131296621 = null;
+    view2131296995.setOnClickListener(null);
+    view2131296995 = null;
     view2131296509.setOnClickListener(null);
     view2131296509 = null;
     view2131296615.setOnClickListener(null);

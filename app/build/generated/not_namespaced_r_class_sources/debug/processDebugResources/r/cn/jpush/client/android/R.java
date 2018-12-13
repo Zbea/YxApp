@@ -12,10 +12,10 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800f9;
-        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800fa;
-        public static final int jpush_richpush_btn_selector = 0x7f0800fb;
-        public static final int jpush_richpush_progressbar = 0x7f0800fc;
+        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800fa;
+        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800fb;
+        public static final int jpush_richpush_btn_selector = 0x7f0800fc;
+        public static final int jpush_richpush_progressbar = 0x7f0800fd;
     }
     public static final class id {
         private id() {}
@@ -24,11 +24,11 @@ public final class R {
         public static final int fullWebView = 0x7f0900ae;
         public static final int imgRichpushBtnBack = 0x7f0900c2;
         public static final int imgView = 0x7f0900c3;
-        public static final int popLayoutId = 0x7f0901f2;
-        public static final int pushPrograssBar = 0x7f0901fa;
-        public static final int rlRichpushTitleBar = 0x7f090211;
-        public static final int tvRichpushTitle = 0x7f0902a2;
-        public static final int wvPopwin = 0x7f0903b8;
+        public static final int popLayoutId = 0x7f0901f3;
+        public static final int pushPrograssBar = 0x7f0901fb;
+        public static final int rlRichpushTitleBar = 0x7f090212;
+        public static final int tvRichpushTitle = 0x7f0902a4;
+        public static final int wvPopwin = 0x7f0903bb;
     }
     public static final class layout {
         private layout() {}

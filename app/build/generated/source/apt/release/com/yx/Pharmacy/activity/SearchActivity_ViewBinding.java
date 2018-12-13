@@ -32,9 +32,9 @@ public class SearchActivity_ViewBinding implements Unbinder {
 
   private View view2131296561;
 
-  private View view2131296962;
+  private View view2131296963;
 
-  private View view2131296953;
+  private View view2131296954;
 
   @UiThread
   public SearchActivity_ViewBinding(SearchActivity target) {
@@ -105,7 +105,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_clear_history, "method 'click'");
-    view2131296962 = view;
+    view2131296963 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -113,7 +113,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_cancel, "method 'click'");
-    view2131296953 = view;
+    view2131296954 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -158,9 +158,9 @@ public class SearchActivity_ViewBinding implements Unbinder {
     view2131296635 = null;
     view2131296561.setOnClickListener(null);
     view2131296561 = null;
-    view2131296962.setOnClickListener(null);
-    view2131296962 = null;
-    view2131296953.setOnClickListener(null);
-    view2131296953 = null;
+    view2131296963.setOnClickListener(null);
+    view2131296963 = null;
+    view2131296954.setOnClickListener(null);
+    view2131296954 = null;
   }
 }

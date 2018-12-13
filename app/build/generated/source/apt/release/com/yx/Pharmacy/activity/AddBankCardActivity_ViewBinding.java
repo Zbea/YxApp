@@ -16,9 +16,9 @@ import java.lang.Override;
 public class AddBankCardActivity_ViewBinding implements Unbinder {
   private AddBankCardActivity target;
 
-  private View view2131296999;
+  private View view2131297000;
 
-  private View view2131296964;
+  private View view2131296965;
 
   private View view2131296783;
 
@@ -40,7 +40,7 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_wangdian = Utils.findRequiredViewAsType(source, R.id.edit_wangdian, "field 'edit_wangdian'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tv_get_code' and method 'click'");
     target.tv_get_code = Utils.castView(view, R.id.tv_get_code, "field 'tv_get_code'", TextView.class);
-    view2131296999 = view;
+    view2131297000 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'edit_code'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_commit, "field 'tv_commit' and method 'click'");
     target.tv_commit = Utils.castView(view, R.id.tv_commit, "field 'tv_commit'", TextView.class);
-    view2131296964 = view;
+    view2131296965 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,10 +84,10 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = null;
     target.tv_commit = null;
 
-    view2131296999.setOnClickListener(null);
-    view2131296999 = null;
-    view2131296964.setOnClickListener(null);
-    view2131296964 = null;
+    view2131297000.setOnClickListener(null);
+    view2131297000 = null;
+    view2131296965.setOnClickListener(null);
+    view2131296965 = null;
     view2131296783.setOnClickListener(null);
     view2131296783 = null;
   }

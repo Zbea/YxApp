@@ -100,12 +100,16 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
             layoutParams.height = (DensityUtils.getScreenWidth()-DensityUtils.dp2px(UiUtil.getContext(),60))/2;
             rl_image.setLayoutParams(layoutParams);
 
-            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-            SpannableString      spanString = new SpannableString("icon ");
-            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-            title.setText(spanString);
-            title.append(item.title);
+            if(TextUtils.equals(item.type,"2"))
+            {
+                Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+                CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+                SpannableString      spanString = new SpannableString("icon ");
+                spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+                title.setText(spanString);
+                title.append(item.title);
+                oldPrice.setVisibility(View.GONE);
+            }
         }else if(TextUtils.equals(mType,"3")){
             // 满赠
             helper.setText(R.id.tv_scqy,item.scqy)

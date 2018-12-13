@@ -20,9 +20,9 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
 
   private View view2131296482;
 
-  private View view2131296790;
+  private View view2131296791;
 
-  private View view2131296811;
+  private View view2131296813;
 
   @UiThread
   public MyCouponActivity_ViewBinding(MyCouponActivity target) {
@@ -48,7 +48,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296790 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_more, "method 'click'");
-    view2131296811 = view;
+    view2131296813 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,9 +80,9 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
 
     view2131296482.setOnClickListener(null);
     view2131296482 = null;
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
-    view2131296811.setOnClickListener(null);
-    view2131296811 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131296813.setOnClickListener(null);
+    view2131296813 = null;
   }
 }

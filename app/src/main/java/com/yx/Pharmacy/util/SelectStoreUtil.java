@@ -12,10 +12,12 @@ package com.yx.Pharmacy.util;
 import android.app.Activity;
 import android.text.TextUtils;
 
+import com.yx.Pharmacy.activity.MyShopActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
@@ -38,7 +40,6 @@ public class SelectStoreUtil {
         loadMyShop(mContext,true);
     }
 
-
     public void loadMyShop(Activity activity, boolean isShow) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("doplace","home");
@@ -60,27 +61,21 @@ public class SelectStoreUtil {
 
     public void showShopData(List<MyShopModel> data) {
         if (data != null && data.size() > 0){
-            // 修改门店认证状态
-            SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, true);
-        }
-        String storename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-        if (data != null && data.size() > 0&& TextUtils.isEmpty(storename)) {
+            SPUtil.putBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY,true);
             if (data.size()==1) {
                 MyShopModel myShopModel = data.get(0);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
+                myShopModel.storeStutus=true;
+                StoreManage.newInstance().saveStore(myShopModel);
                 if (mListener!=null) {
-                    mListener.onSelect();
+                    mListener.onSelect(myShopModel);
                 }
                 return;
             }
             showChooseStoreDialog(data);
+        }
+        else
+        {
+            MyShopActivity.startActivity(mContext);
         }
     }
 
@@ -96,16 +91,10 @@ public class SelectStoreUtil {
         mChooseStoreDialog.setDialogClickListener(new ChooseStoreDialog.DialogClickListener() {
             @Override
             public void select(MyShopModel myShopModel) {
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID, myShopModel.storeid);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME, myShopModel.storename);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS, myShopModel.storeaddress);
-                CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR, myShopModel.avatar);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE, myShopModel.mobile);
-                SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME, myShopModel.truename);
+                myShopModel.storeStutus=true;
+                StoreManage.newInstance().saveStore(myShopModel);
                 if (mListener!=null) {
-                    mListener.onSelect();
+                    mListener.onSelect(myShopModel);
                 }
             }
         });
@@ -116,6 +105,6 @@ public class SelectStoreUtil {
     }
 
     public interface OnSelectStoreListener{
-        public void onSelect();
+        public void onSelect(MyShopModel myShopModel);
     }
 }

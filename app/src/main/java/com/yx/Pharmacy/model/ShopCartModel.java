@@ -96,6 +96,7 @@ public class ShopCartModel {
         public String     minimum;
         public String     addmum;
         public String     goodsid;
+        public String     goodsType;
         public String     max;
         public String quehuo;
         public String     price;

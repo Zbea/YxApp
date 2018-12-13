@@ -2,8 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
               android:orientation="horizontal">
-
+    <View
+        android:id="@+id/tv_focas"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_weight="0.000001"></View>
     <Button
         android:id="@+id/btnDecrease"
         android:layout_width="0dp"

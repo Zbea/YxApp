@@ -23,7 +23,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
 
   private View view2131296553;
 
-  private View view2131296964;
+  private View view2131296965;
 
   private View view2131296610;
 
@@ -67,7 +67,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
-    view2131296964 = view;
+    view2131296965 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -109,8 +109,8 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     view2131296783 = null;
     view2131296553.setOnClickListener(null);
     view2131296553 = null;
-    view2131296964.setOnClickListener(null);
-    view2131296964 = null;
+    view2131296965.setOnClickListener(null);
+    view2131296965 = null;
     view2131296610.setOnClickListener(null);
     view2131296610 = null;
   }

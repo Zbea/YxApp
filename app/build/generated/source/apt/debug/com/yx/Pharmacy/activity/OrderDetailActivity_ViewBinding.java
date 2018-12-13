@@ -19,17 +19,19 @@ import java.lang.Override;
 public class OrderDetailActivity_ViewBinding implements Unbinder {
   private OrderDetailActivity target;
 
-  private View view2131296990;
+  private View view2131296992;
 
-  private View view2131296808;
+  private View view2131296810;
 
-  private View view2131296611;
+  private View view2131296801;
 
-  private View view2131296572;
+  private View view2131296612;
 
-  private View view2131296790;
+  private View view2131296573;
 
-  private View view2131297103;
+  private View view2131296791;
+
+  private View view2131297106;
 
   @UiThread
   public OrderDetailActivity_ViewBinding(OrderDetailActivity target) {
@@ -45,7 +47,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.nestedScrollView = Utils.findRequiredViewAsType(source, R.id.nestedScrollView, "field 'nestedScrollView'", NestedScrollView.class);
     view = Utils.findRequiredView(source, R.id.tv_detail_todo, "field 'tv_detail_todo' and method 'click'");
     target.tv_detail_todo = Utils.castView(view, R.id.tv_detail_todo, "field 'tv_detail_todo'", TextView.class);
-    view2131296990 = view;
+    view2131296992 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +56,16 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.rl_invoice, "field 'rlInvoice' and method 'click'");
     target.rlInvoice = Utils.castView(view, R.id.rl_invoice, "field 'rlInvoice'", RelativeLayout.class);
-    view2131296808 = view;
+    view2131296810 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.rl_coupon, "field 'rlCoupon' and method 'click'");
+    target.rlCoupon = Utils.castView(view, R.id.rl_coupon, "field 'rlCoupon'", RelativeLayout.class);
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -85,7 +96,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.view_gift_line = Utils.findRequiredView(source, R.id.view_gift_line, "field 'view_gift_line'");
     view = Utils.findRequiredView(source, R.id.ll_open, "field 'll_open' and method 'click'");
     target.ll_open = Utils.castView(view, R.id.ll_open, "field 'll_open'", LinearLayout.class);
-    view2131296611 = view;
+    view2131296612 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -94,7 +105,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'll_close' and method 'click'");
     target.ll_close = Utils.castView(view, R.id.ll_close, "field 'll_close'", LinearLayout.class);
-    view2131296572 = view;
+    view2131296573 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -104,7 +115,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.rl_paytype = Utils.findRequiredViewAsType(source, R.id.rl_paytype, "field 'rl_paytype'", RelativeLayout.class);
     target.tv_paytype = Utils.findRequiredViewAsType(source, R.id.tv_paytype, "field 'tv_paytype'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296790 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -112,7 +123,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297103 = view;
+    view2131297106 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -132,6 +143,7 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.nestedScrollView = null;
     target.tv_detail_todo = null;
     target.rlInvoice = null;
+    target.rlCoupon = null;
     target.tv_title = null;
     target.tv_order_state = null;
     target.tv_order_state_desc = null;
@@ -159,17 +171,19 @@ public class OrderDetailActivity_ViewBinding implements Unbinder {
     target.rl_paytype = null;
     target.tv_paytype = null;
 
-    view2131296990.setOnClickListener(null);
-    view2131296990 = null;
-    view2131296808.setOnClickListener(null);
-    view2131296808 = null;
-    view2131296611.setOnClickListener(null);
-    view2131296611 = null;
-    view2131296572.setOnClickListener(null);
-    view2131296572 = null;
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
-    view2131297103.setOnClickListener(null);
-    view2131297103 = null;
+    view2131296992.setOnClickListener(null);
+    view2131296992 = null;
+    view2131296810.setOnClickListener(null);
+    view2131296810 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
+    view2131296612.setOnClickListener(null);
+    view2131296612 = null;
+    view2131296573.setOnClickListener(null);
+    view2131296573 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131297106.setOnClickListener(null);
+    view2131297106 = null;
   }
 }

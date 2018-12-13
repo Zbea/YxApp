@@ -62,6 +62,9 @@ public class ShopCartProductAdapter
         LinearLayout ll_gift = helper.getView(R.id.ll_gift);
         AmountView amountView = helper.getView(R.id.amount_view);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
+
+
+//        L.i("刷新产品");
         if (TextUtils.isEmpty(item.validtime))
         {
             time.setVisibility(View.GONE);
@@ -91,7 +94,7 @@ public class ShopCartProductAdapter
         } else {
             ll_item.setBackgroundColor(Color.WHITE);
         }
-
+        mType=item.goodsType;
 //        if (TextUtils.equals(mType, "11111")) {
 //            cbSelect.setVisibility(View.GONE);
 //        }
@@ -116,7 +119,7 @@ public class ShopCartProductAdapter
             iv_state.setVisibility(View.GONE);
             amountView.setEnable(true);
 
-            helper.addOnClickListener(R.id.content).addOnClickListener(R.id.right).addOnClickListener(R.id.ll_checkall);
+            helper.addOnClickListener(R.id.content).addOnClickListener(R.id.right).addOnClickListener(R.id.ll_checkall).addOnClickListener(R.id.iv_product);
         }
 
         // 赠送产品
@@ -179,12 +182,12 @@ public class ShopCartProductAdapter
 
         amountView.setMinNum(minnum);
         amountView.setAddNum(addnum);
-
+//        amountView.setIsChanage(false);
         if (TextUtils.isEmpty(item.max)) {
             amountView.setGoods_storage(Integer.MAX_VALUE);
         } else {
             int i = DensityUtils.parseInt(item.max);
-            if (i == 0) {
+            if (i <= 0) {
                 if (DensityUtils.parseInt(item.cartcount) < minnum) {
                     amountView.setMinNum(DensityUtils.parseInt(item.cartcount));
                 }
@@ -194,8 +197,7 @@ public class ShopCartProductAdapter
             }
         }
 
-
-        amountView.setAmount(DensityUtils.parseInt(item.cartcount));
+        amountView.setAmount((int) DensityUtils.parseDouble(item.cartcount));
 
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override
@@ -207,10 +209,11 @@ public class ShopCartProductAdapter
                         getData().get(helper.getAdapterPosition()).cartcount = getData().get(helper.getAdapterPosition()).max;
 //                        item.cartcount = item.max;
                     } else {
-                        getData().get(helper.getLayoutPosition()).cartcount = String.valueOf(amount);
+                        getData().get(helper.getAdapterPosition()).cartcount = String.valueOf(amount);
+                        getData().get(helper.getAdapterPosition()).isSelect=true;
 //                        item.cartcount = String.valueOf(amount);
                         if (mOnShopGoodListener != null) {
-                            mOnShopGoodListener.onAumountChangeListener(view, amount, goodsBean.goodsid, isEdit, DensityUtils.parseInt(goodsBean.addmum));
+                            mOnShopGoodListener.onAumountChangeListener(view, amount, goodsBean.goodsid,helper.getAdapterPosition() ,isEdit, DensityUtils.parseInt(goodsBean.addmum));
                         }
                     }
 
@@ -327,8 +330,7 @@ public class ShopCartProductAdapter
 
 
     public interface OnShopGoodListener {
-
-        void onAumountChangeListener(View view, int amount, String goodsid, boolean isEdit, int addnum);
+        void onAumountChangeListener(View view, int amount, String goodsid,int position, boolean isEdit, int addnum);
     }
 
     public void setOnShopGoodListener(OnShopGoodListener listener) {

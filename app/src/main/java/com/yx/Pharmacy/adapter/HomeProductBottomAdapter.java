@@ -88,7 +88,7 @@ public class HomeProductBottomAdapter extends BaseQuickAdapter<DrugModel,BaseVie
             oldPrice.setVisibility(View.GONE);
         }
         else if(type==2){
-            // 满赠
+            oldPrice.setVisibility(View.GONE);
             Bitmap b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
             CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(),b);
             SpannableString spanString = new SpannableString("icon ");

@@ -488,7 +488,15 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                 flowlayout_history.setVisibility(View.GONE);
                 break;
             case R.id.tv_cancel:
-                finish();
+                if(!TextUtils.isEmpty(edit_search.getText().toString().trim())){
+                    ComMethodsUtil.hideSoftKeyBoard(SearchActivity.this);
+                    //TODO 搜索
+                    ll_tuijian.setVisibility(View.GONE);
+                    ll_search_result.setVisibility(View.VISIBLE);
+                    page=1;
+                    mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
+                    addSearchHistory(edit_search.getText().toString());
+                }
                 break;
             case R.id.iv_shopping_car:
                 ProductCartActivity.startActivity(this);

@@ -50,7 +50,7 @@ public class MyOrderListPresenter {
         urlMap.put("pagenum",String.valueOf(pagenum));
         HomeNet.getHomeApi().getOrderList(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<List<OrderModel>>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<List<OrderModel>>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<List<OrderModel>> response) {
                         if (response.getData()!=null) {

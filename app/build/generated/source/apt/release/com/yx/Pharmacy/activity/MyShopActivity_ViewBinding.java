@@ -22,7 +22,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
 
   private View view2131296783;
 
-  private View view2131296814;
+  private View view2131296815;
 
   private View view2131296549;
 
@@ -49,7 +49,7 @@ public class MyShopActivity_ViewBinding implements Unbinder {
     target.mTvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'mTvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_scan, "field 'mRlScan' and method 'onClick'");
     target.mRlScan = Utils.castView(view, R.id.rl_scan, "field 'mRlScan'", RelativeLayout.class);
-    view2131296814 = view;
+    view2131296815 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -86,8 +86,8 @@ public class MyShopActivity_ViewBinding implements Unbinder {
 
     view2131296783.setOnClickListener(null);
     view2131296783 = null;
-    view2131296814.setOnClickListener(null);
-    view2131296814 = null;
+    view2131296815.setOnClickListener(null);
+    view2131296815 = null;
     view2131296549.setOnClickListener(null);
     view2131296549 = null;
   }

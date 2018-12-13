@@ -132,11 +132,7 @@ public class MyCouponActivity extends BaseActivity implements IUserCouponView {
                 UrlBean urlBean= LocalUrlManage.newInstance().getUrlBean();
                 if (urlBean!=null)
                 {
-                    HHActivity.startActivity(mContext, Constants.BASE_URL+urlBean.coupon);
-                }
-                else
-                {
-                    HHActivity.startActivity(mContext, Constants.WEB_COUPON);
+                    HHActivity.startActivity(mContext, urlBean.coupon);
                 }
                 break;
         }

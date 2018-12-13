@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/white_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -767,10 +768,11 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <org.apache.cordova.engine.SystemWebView
+                        <WebView
                             android:id="@+id/webview"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent"
+                            tools:ignore="WebViewLayout" />
 
                     </RelativeLayout>
                 </LinearLayout>

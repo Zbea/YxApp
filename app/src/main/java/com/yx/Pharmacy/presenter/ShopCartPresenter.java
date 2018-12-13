@@ -54,7 +54,7 @@ public class ShopCartPresenter {
 
                    @Override
                    public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
+                       mView.showFailView();
                        super.onError(e);
                    }
                });

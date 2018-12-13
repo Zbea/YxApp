@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -19,24 +20,23 @@ import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.widget.LoadingLayout;
 import java.lang.IllegalStateException;
 import java.lang.Override;
-import org.apache.cordova.engine.SystemWebView;
 
 public class ProductDetailActivity_ViewBinding implements Unbinder {
   private ProductDetailActivity target;
 
-  private View view2131296790;
+  private View view2131296791;
 
-  private View view2131296799;
+  private View view2131296800;
 
-  private View view2131296810;
+  private View view2131296812;
 
-  private View view2131296621;
+  private View view2131296622;
 
   private View view2131296485;
 
   private View view2131296473;
 
-  private View view2131296934;
+  private View view2131296936;
 
   private View view2131296520;
 
@@ -53,7 +53,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mBanner = Utils.findRequiredViewAsType(source, R.id.banner, "field 'mBanner'", Banner.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296790 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.rl_collect, "field 'mRlCollect' and method 'onClick'");
     target.mRlCollect = Utils.castView(view, R.id.rl_collect, "field 'mRlCollect'", RelativeLayout.class);
-    view2131296799 = view;
+    view2131296800 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,7 +79,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mLlManjian = Utils.findRequiredViewAsType(source, R.id.ll_manjian, "field 'mLlManjian'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_manjian, "field 'mRlManjian' and method 'onClick'");
     target.mRlManjian = Utils.castView(view, R.id.rl_manjian, "field 'mRlManjian'", RelativeLayout.class);
-    view2131296810 = view;
+    view2131296812 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +91,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mTvSaleRecord = Utils.findRequiredViewAsType(source, R.id.tv_sale_record, "field 'mTvSaleRecord'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_sale_record, "field 'mLlSaleRecord' and method 'onClick'");
     target.mLlSaleRecord = Utils.castView(view, R.id.ll_sale_record, "field 'mLlSaleRecord'", LinearLayout.class);
-    view2131296621 = view;
+    view2131296622 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -100,7 +100,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     target.mLlMore = Utils.findRequiredViewAsType(source, R.id.ll_more, "field 'mLlMore'", LinearLayout.class);
     target.mRvCommendProduct = Utils.findRequiredViewAsType(source, R.id.rv_commend_product, "field 'mRvCommendProduct'", RecyclerView.class);
-    target.mWebview = Utils.findRequiredViewAsType(source, R.id.webview, "field 'mWebview'", SystemWebView.class);
+    target.mWebview = Utils.findRequiredViewAsType(source, R.id.webview, "field 'mWebview'", WebView.class);
     view = Utils.findRequiredView(source, R.id.iv_home, "field 'mIvHome' and method 'onClick'");
     target.mIvHome = Utils.castView(view, R.id.iv_home, "field 'mIvHome'", ImageView.class);
     view2131296485 = view;
@@ -121,7 +121,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tv_add_cart, "field 'mTvAddCart' and method 'onClick'");
     target.mTvAddCart = Utils.castView(view, R.id.tv_add_cart, "field 'mTvAddCart'", TextView.class);
-    view2131296934 = view;
+    view2131296936 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -224,20 +224,20 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.progress_bar = null;
     target.llMaizeng = null;
 
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
-    view2131296799.setOnClickListener(null);
-    view2131296799 = null;
-    view2131296810.setOnClickListener(null);
-    view2131296810 = null;
-    view2131296621.setOnClickListener(null);
-    view2131296621 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131296800.setOnClickListener(null);
+    view2131296800 = null;
+    view2131296812.setOnClickListener(null);
+    view2131296812 = null;
+    view2131296622.setOnClickListener(null);
+    view2131296622 = null;
     view2131296485.setOnClickListener(null);
     view2131296485 = null;
     view2131296473.setOnClickListener(null);
     view2131296473 = null;
-    view2131296934.setOnClickListener(null);
-    view2131296934 = null;
+    view2131296936.setOnClickListener(null);
+    view2131296936 = null;
     view2131296520.setOnClickListener(null);
     view2131296520 = null;
   }

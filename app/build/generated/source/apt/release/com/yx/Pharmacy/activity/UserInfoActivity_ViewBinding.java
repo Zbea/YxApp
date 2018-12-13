@@ -18,7 +18,7 @@ public class UserInfoActivity_ViewBinding implements Unbinder {
 
   private View view2131296783;
 
-  private View view2131296823;
+  private View view2131296824;
 
   private View view2131296784;
 
@@ -43,7 +43,7 @@ public class UserInfoActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_user_head, "method 'click'");
-    view2131296823 = view;
+    view2131296824 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -72,8 +72,8 @@ public class UserInfoActivity_ViewBinding implements Unbinder {
 
     view2131296783.setOnClickListener(null);
     view2131296783 = null;
-    view2131296823.setOnClickListener(null);
-    view2131296823 = null;
+    view2131296824.setOnClickListener(null);
+    view2131296824 = null;
     view2131296784.setOnClickListener(null);
     view2131296784 = null;
   }

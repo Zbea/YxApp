@@ -1397,6 +1397,7 @@ drawable icon_home_red
 drawable icon_home_server
 drawable icon_home_shopp
 drawable icon_home_store_bg
+drawable icon_home_top
 drawable icon_image_loading
 drawable icon_image_loading_cc
 drawable icon_logo
@@ -2129,6 +2130,7 @@ id iv_stop_download
 id iv_system_notice
 id iv_system_notice_isread
 id iv_title
+id iv_top
 id iv_top_bg
 id iv_type
 id iv_user_head
@@ -2399,6 +2401,7 @@ id rl_click
 id rl_close
 id rl_code
 id rl_collect
+id rl_coupon
 id rl_dialog
 id rl_downcount
 id rl_evaluation
@@ -2604,6 +2607,7 @@ id tv_factory_address
 id tv_file_name
 id tv_file_size
 id tv_find
+id tv_focas
 id tv_folder_name
 id tv_get_code
 id tv_gg

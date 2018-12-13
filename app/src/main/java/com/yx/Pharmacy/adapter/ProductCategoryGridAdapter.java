@@ -132,7 +132,7 @@ public class ProductCategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseV
         }
         else if(type==2){
             // 特价
-
+            tv_oldprice.setVisibility(View.GONE);
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
             CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString      spanString = new SpannableString("icon ");

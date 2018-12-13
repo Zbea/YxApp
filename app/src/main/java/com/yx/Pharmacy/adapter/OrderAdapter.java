@@ -78,7 +78,7 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                 helper.setText(R.id.tv_order_state,"待发货");
                 helper.setText(R.id.tv_order_todo,"提醒发货");
                 helper.setText(R.id.tv_cancle_order,"申请售后");
-                helper.setText(R.id.tv_check_wuliu,"申请售后");
+//                helper.setText(R.id.tv_check_wuliu,"申请售后");
                 helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
 //                if(item.order_back){
 //                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
