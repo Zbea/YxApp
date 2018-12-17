@@ -1378,6 +1378,12 @@ drawable icon_flash_time_bg
 drawable icon_flash_time_bg_n
 drawable icon_full_give_detail
 drawable icon_full_give_detail_bg
+drawable icon_function_guid_main_cart
+drawable icon_function_guid_main_qiandao
+drawable icon_function_guid_main_servier
+drawable icon_function_guid_my_coupon
+drawable icon_function_guid_my_jifen
+drawable icon_function_guid_my_yue
 drawable icon_home_flash_buy
 drawable icon_home_server
 drawable icon_image_loading
@@ -2054,6 +2060,7 @@ id iv_dot
 id iv_file_icon
 id iv_gift_product
 id iv_gsp_state
+id iv_guid
 id iv_home
 id iv_home_page
 id iv_icon_left
@@ -2361,6 +2368,7 @@ id rl_bottom
 id rl_cancle
 id rl_category
 id rl_clean_cache
+id rl_click
 id rl_close
 id rl_code
 id rl_collect
@@ -2392,6 +2400,7 @@ id rl_signin
 id rl_system_notice
 id rl_system_notice_bottom
 id rl_title
+id rl_update
 id rl_user_head
 id rl_wechat_pay
 id rl_wuliu
@@ -2530,6 +2539,7 @@ id tv_card_num
 id tv_changjia
 id tv_check_wuliu
 id tv_chongzhi
+id tv_clear
 id tv_clear_history
 id tv_collect_num
 id tv_commit
@@ -3008,6 +3018,7 @@ layout activity_commendtj
 layout activity_comment_ms
 layout activity_create_order
 layout activity_feed_back
+layout activity_function_guid
 layout activity_h5
 layout activity_have_need
 layout activity_integral_detail
@@ -3406,6 +3417,7 @@ string ucrop_label_edit_photo
 string ucrop_label_original
 string ucrop_menu_crop
 string ucrop_mutate_exception_hint
+string version_name
 string ysf_activity_file_download
 string ysf_activity_leave_message_detail
 string ysf_app_name
