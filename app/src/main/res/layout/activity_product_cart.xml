@@ -39,6 +39,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1">
+                <!--<ScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:descendantFocusability="blocksDescendants">-->
+
             <android.support.v4.widget.NestedScrollView
                 android:id="@+id/nestedScrollView"
                 android:layout_width="match_parent"
@@ -53,6 +61,8 @@
                     android:layout_height="match_parent"
                     android:overScrollMode="never"/>
             </android.support.v4.widget.NestedScrollView>
+                    <!--</RelativeLayout>-->
+            <!--</ScrollView>-->
             </android.support.v4.widget.SwipeRefreshLayout>
             <View
                 android:background="@color/color_eaeaea"

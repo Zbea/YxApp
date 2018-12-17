@@ -64,7 +64,7 @@ public class ShopCartProductAdapter
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
 
 
-//        L.i("刷新产品");
+        L.i("刷新产品");
         if (TextUtils.isEmpty(item.validtime))
         {
             time.setVisibility(View.GONE);
@@ -187,10 +187,8 @@ public class ShopCartProductAdapter
             amountView.setGoods_storage(Integer.MAX_VALUE);
         } else {
             int i = DensityUtils.parseInt(item.max);
-            if (i <= 0) {
-                if (DensityUtils.parseInt(item.cartcount) < minnum) {
-                    amountView.setMinNum(DensityUtils.parseInt(item.cartcount));
-                }
+            if (i <= DensityUtils.parseDouble(item.cartcount)) {
+                item.max=item.cartcount;
                 amountView.setGoods_storage(DensityUtils.parseInt(item.cartcount));
             } else {
                 amountView.setGoods_storage(i);

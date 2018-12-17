@@ -97,8 +97,8 @@ public class ProductCartActivity
     RecyclerView mRvShopCart;
     @BindView(R.id.loadinglayout)
     LoadingLayout mLoadingLayout;
-    @BindView(R.id.nestedScrollView)
-    NestedScrollView nestingScrollview;
+//    @BindView(R.id.nestedScrollView)
+//    NestedScrollView nestingScrollview;
     private ShopCartPresenter mPresenter;
     private ShopCartAdapter mAdapter;
     private TextView mTvPrice;

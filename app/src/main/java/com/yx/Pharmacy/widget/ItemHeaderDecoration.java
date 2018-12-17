@@ -3,6 +3,7 @@ package com.yx.Pharmacy.widget;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +30,7 @@ public class ItemHeaderDecoration extends RecyclerView.ItemDecoration {
     private LayoutInflater mInflater;
     private CheckListener mCheckListener;
     public static String currentTag = "0";//标记当前左侧选中的position，因为有可能选中的item，右侧不能置顶，所以强制替换掉当前的tag
+    private Context mContext;
 
     public void setCheckListener(CheckListener checkListener) {
         mCheckListener = checkListener;
@@ -42,6 +44,7 @@ public class ItemHeaderDecoration extends RecyclerView.ItemDecoration {
         paint.setTextSize(titleFontSize);
         paint.setAntiAlias(true);
         mInflater = LayoutInflater.from(context);
+        mContext=context;
     }
 
 
@@ -113,7 +116,7 @@ public class ItemHeaderDecoration extends RecyclerView.ItemDecoration {
             topTitleView.setLayoutParams(lp);
         }
         topTitleView.setLayoutParams(lp);
-        topTitleView.setBackgroundColor(parent.getContext().getColor(R.color.white));
+        topTitleView.setBackgroundColor(ContextCompat.getColor(mContext,R.color.white));
         if (lp.width == ViewGroup.LayoutParams.MATCH_PARENT) {
             //如果是MATCH_PARENT，则用父控件能分配的最大宽度和EXACTLY构建MeasureSpec
             toDrawWidthSpec = View.MeasureSpec.makeMeasureSpec(parent.getWidth() - parent.getPaddingLeft() - parent.getPaddingRight(), View.MeasureSpec.EXACTLY);

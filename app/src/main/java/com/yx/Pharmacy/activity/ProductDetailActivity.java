@@ -631,10 +631,10 @@ public class ProductDetailActivity
                 String[] split = levelnote.split("●");
                 for (String s : split) {
                     if (!TextUtils.isEmpty(s)) {
-                        SpannableStringBuilder builder = new SpannableStringBuilder("●");
-                        ForegroundColorSpan span = new ForegroundColorSpan(Color.parseColor("#ff8f00"));
-                        builder.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        mTvLevelnote.append(builder);
+//                        SpannableStringBuilder builder = new SpannableStringBuilder("●");
+//                        ForegroundColorSpan span = new ForegroundColorSpan(Color.parseColor("#ff8f00"));
+//                        builder.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                        mTvLevelnote.append(builder);
                         mTvLevelnote.append(s);//● 满1000元一天可享受10件特价商品
                     }
                 }
@@ -668,10 +668,18 @@ public class ProductDetailActivity
         if (type==1)
         {
             mResultBean.flashmax =(DensityUtils.parseDouble(mResultBean.flashmax)  - cartCount)+"";
+            if ((DensityUtils.parseDouble(mResultBean.flashmax)<=1))
+            {
+                mResultBean.flashLimit=true;
+            }
         }
         else
         {
             mResultBean.max = mResultBean.max - cartCount;
+            if ((mResultBean.max<=1))
+            {
+                mResultBean.productLimit=true;
+            }
         }
 
         if (TextUtils.equals(mResultBean.type,"1")|TextUtils.equals(mResultBean.type,"2"))
