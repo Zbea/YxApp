@@ -16,11 +16,19 @@ import java.lang.Override;
 public class WithdrawalActivity_ViewBinding implements Unbinder {
   private WithdrawalActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131296954;
 
   private View view2131297108;
+=======
+  private View view2131296784;
+
+  private View view2131296966;
+
+  private View view2131297125;
+>>>>>>> Stashed changes
 
   @UiThread
   public WithdrawalActivity_ViewBinding(WithdrawalActivity target) {
@@ -39,7 +47,11 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
     target.edit_withdrawal = Utils.findRequiredViewAsType(source, R.id.edit_withdrawal, "field 'edit_withdrawal'", EditText.class);
     target.tv_my_money = Utils.findRequiredViewAsType(source, R.id.tv_my_money, "field 'tv_my_money'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +59,11 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
+<<<<<<< Updated upstream
     view2131296954 = view;
+=======
+    view2131296966 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +71,11 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_take_all, "method 'click'");
+<<<<<<< Updated upstream
     view2131297108 = view;
+=======
+    view2131297125 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +98,20 @@ public class WithdrawalActivity_ViewBinding implements Unbinder {
     target.edit_withdrawal = null;
     target.tv_my_money = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296954.setOnClickListener(null);
     view2131296954 = null;
     view2131297108.setOnClickListener(null);
     view2131297108 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296966.setOnClickListener(null);
+    view2131296966 = null;
+    view2131297125.setOnClickListener(null);
+    view2131297125 = null;
+>>>>>>> Stashed changes
   }
 }

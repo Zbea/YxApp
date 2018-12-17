@@ -15,9 +15,15 @@ import java.lang.Override;
 public class CategoryFragment_ViewBinding implements Unbinder {
   private CategoryFragment target;
 
+<<<<<<< Updated upstream
   private View view2131296611;
 
   private View view2131296806;
+=======
+  private View view2131296616;
+
+  private View view2131296816;
+>>>>>>> Stashed changes
 
   @UiThread
   public CategoryFragment_ViewBinding(final CategoryFragment target, View source) {
@@ -26,7 +32,11 @@ public class CategoryFragment_ViewBinding implements Unbinder {
     View view;
     target.rvSort = Utils.findRequiredViewAsType(source, R.id.rv_sort, "field 'rvSort'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_search, "method 'click'");
+<<<<<<< Updated upstream
     view2131296611 = view;
+=======
+    view2131296616 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -34,7 +44,11 @@ public class CategoryFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
+<<<<<<< Updated upstream
     view2131296806 = view;
+=======
+    view2131296816 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -52,9 +66,16 @@ public class CategoryFragment_ViewBinding implements Unbinder {
 
     target.rvSort = null;
 
+<<<<<<< Updated upstream
     view2131296611.setOnClickListener(null);
     view2131296611 = null;
     view2131296806.setOnClickListener(null);
     view2131296806 = null;
+=======
+    view2131296616.setOnClickListener(null);
+    view2131296616 = null;
+    view2131296816.setOnClickListener(null);
+    view2131296816 = null;
+>>>>>>> Stashed changes
   }
 }

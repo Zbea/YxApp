@@ -19,6 +19,7 @@ import java.lang.Override;
 public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
   private AskForAfterSaleActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131296551;
@@ -26,6 +27,15 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
   private View view2131296954;
 
   private View view2131296606;
+=======
+  private View view2131296784;
+
+  private View view2131296554;
+
+  private View view2131296966;
+
+  private View view2131296611;
+>>>>>>> Stashed changes
 
   @UiThread
   public AskForAfterSaleActivity_ViewBinding(AskForAfterSaleActivity target) {
@@ -51,7 +61,11 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tvDiscount = Utils.findRequiredViewAsType(source, R.id.tv_discount, "field 'tvDiscount'", TextView.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recyclerView, "field 'recyclerView'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +73,11 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_all_select, "method 'click'");
+<<<<<<< Updated upstream
     view2131296551 = view;
+=======
+    view2131296554 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +85,11 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
+<<<<<<< Updated upstream
     view2131296954 = view;
+=======
+    view2131296966 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +97,11 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_reason, "method 'click'");
+<<<<<<< Updated upstream
     view2131296606 = view;
+=======
+    view2131296611 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,6 +131,7 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     target.tvDiscount = null;
     target.recyclerView = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296551.setOnClickListener(null);
@@ -113,5 +140,15 @@ public class AskForAfterSaleActivity_ViewBinding implements Unbinder {
     view2131296954 = null;
     view2131296606.setOnClickListener(null);
     view2131296606 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296554.setOnClickListener(null);
+    view2131296554 = null;
+    view2131296966.setOnClickListener(null);
+    view2131296966 = null;
+    view2131296611.setOnClickListener(null);
+    view2131296611 = null;
+>>>>>>> Stashed changes
   }
 }

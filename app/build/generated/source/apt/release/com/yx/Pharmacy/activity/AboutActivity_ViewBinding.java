@@ -15,7 +15,11 @@ import java.lang.Override;
 public class AboutActivity_ViewBinding implements Unbinder {
   private AboutActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public AboutActivity_ViewBinding(AboutActivity target) {
@@ -29,7 +33,11 @@ public class AboutActivity_ViewBinding implements Unbinder {
     View view;
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +55,12 @@ public class AboutActivity_ViewBinding implements Unbinder {
 
     target.tv_title = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

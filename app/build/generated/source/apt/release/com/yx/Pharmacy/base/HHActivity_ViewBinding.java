@@ -19,9 +19,15 @@ import org.apache.cordova.engine.SystemWebView;
 public class HHActivity_ViewBinding implements Unbinder {
   private HHActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296791;
 
   private View view2131296777;
+=======
+  private View view2131296800;
+
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public HHActivity_ViewBinding(HHActivity target) {
@@ -38,7 +44,11 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.include_title = Utils.findRequiredViewAsType(source, R.id.include_title, "field 'include_title'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_h5_back, "field 'rl_h5_back' and method 'onViewClicked'");
     target.rl_h5_back = Utils.castView(view, R.id.rl_h5_back, "field 'rl_h5_back'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296791 = view;
+=======
+    view2131296800 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -51,7 +61,11 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onViewClicked'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -85,9 +99,16 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.mRlMore = null;
     target.rl_title = null;
 
+<<<<<<< Updated upstream
     view2131296791.setOnClickListener(null);
     view2131296791 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131296800.setOnClickListener(null);
+    view2131296800 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

@@ -17,7 +17,11 @@ import java.lang.Override;
 public class QiyeZizhiActivity_ViewBinding implements Unbinder {
   private QiyeZizhiActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public QiyeZizhiActivity_ViewBinding(QiyeZizhiActivity target) {
@@ -31,7 +35,11 @@ public class QiyeZizhiActivity_ViewBinding implements Unbinder {
     View view;
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onViewClicked'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +61,12 @@ public class QiyeZizhiActivity_ViewBinding implements Unbinder {
     target.mTvTitle = null;
     target.mRvZizhi = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

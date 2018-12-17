@@ -16,11 +16,19 @@ import java.lang.Override;
 public class HaveNeedActivity_ViewBinding implements Unbinder {
   private HaveNeedActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131296954;
 
   private View view2131296808;
+=======
+  private View view2131296784;
+
+  private View view2131296966;
+
+  private View view2131296818;
+>>>>>>> Stashed changes
 
   @UiThread
   public HaveNeedActivity_ViewBinding(HaveNeedActivity target) {
@@ -38,7 +46,11 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
     target.edit_product_type = Utils.findRequiredViewAsType(source, R.id.edit_product_type, "field 'edit_product_type'", TextView.class);
     target.edit_need_note = Utils.findRequiredViewAsType(source, R.id.edit_need_note, "field 'edit_need_note'", EditText.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +58,11 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
+<<<<<<< Updated upstream
     view2131296954 = view;
+=======
+    view2131296966 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +70,11 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_select_product_type, "method 'click'");
+<<<<<<< Updated upstream
     view2131296808 = view;
+=======
+    view2131296818 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -76,11 +96,20 @@ public class HaveNeedActivity_ViewBinding implements Unbinder {
     target.edit_product_type = null;
     target.edit_need_note = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296954.setOnClickListener(null);
     view2131296954 = null;
     view2131296808.setOnClickListener(null);
     view2131296808 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296966.setOnClickListener(null);
+    view2131296966 = null;
+    view2131296818.setOnClickListener(null);
+    view2131296818 = null;
+>>>>>>> Stashed changes
   }
 }

@@ -16,11 +16,19 @@ import java.lang.Override;
 public class MyIntegralActivity_ViewBinding implements Unbinder {
   private MyIntegralActivity target;
 
+<<<<<<< Updated upstream
   private View view2131297021;
 
   private View view2131296777;
 
   private View view2131296794;
+=======
+  private View view2131297035;
+
+  private View view2131296784;
+
+  private View view2131296804;
+>>>>>>> Stashed changes
 
   @UiThread
   public MyIntegralActivity_ViewBinding(MyIntegralActivity target) {
@@ -35,7 +43,11 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'tv_more' and method 'click'");
     target.tv_more = Utils.castView(view, R.id.tv_more, "field 'tv_more'", TextView.class);
+<<<<<<< Updated upstream
     view2131297021 = view;
+=======
+    view2131297035 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +57,11 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_intergral = Utils.findRequiredViewAsType(source, R.id.tv_intergral, "field 'tv_intergral'", TextView.class);
     target.recyclerview = Utils.findRequiredViewAsType(source, R.id.recyclerview, "field 'recyclerview'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +69,11 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_liwu, "method 'click'");
+<<<<<<< Updated upstream
     view2131296794 = view;
+=======
+    view2131296804 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -74,11 +94,20 @@ public class MyIntegralActivity_ViewBinding implements Unbinder {
     target.tv_intergral = null;
     target.recyclerview = null;
 
+<<<<<<< Updated upstream
     view2131297021.setOnClickListener(null);
     view2131297021 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296794.setOnClickListener(null);
     view2131296794 = null;
+=======
+    view2131297035.setOnClickListener(null);
+    view2131297035 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296804.setOnClickListener(null);
+    view2131296804 = null;
+>>>>>>> Stashed changes
   }
 }

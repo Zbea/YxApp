@@ -73,6 +73,7 @@ public final class R {
         public static final int default_scroll_handle_left = 0x7f080074;
         public static final int default_scroll_handle_right = 0x7f080075;
         public static final int default_scroll_handle_top = 0x7f080076;
+<<<<<<< Updated upstream
         public static final int notification_action_background = 0x7f0800f9;
         public static final int notification_bg = 0x7f0800fa;
         public static final int notification_bg_low = 0x7f0800fb;
@@ -85,6 +86,20 @@ public final class R {
         public static final int notification_template_icon_low_bg = 0x7f080102;
         public static final int notification_tile_bg = 0x7f080103;
         public static final int notify_panel_notification_icon_bg = 0x7f080104;
+=======
+        public static final int notification_action_background = 0x7f08010c;
+        public static final int notification_bg = 0x7f08010d;
+        public static final int notification_bg_low = 0x7f08010e;
+        public static final int notification_bg_low_normal = 0x7f08010f;
+        public static final int notification_bg_low_pressed = 0x7f080110;
+        public static final int notification_bg_normal = 0x7f080111;
+        public static final int notification_bg_normal_pressed = 0x7f080112;
+        public static final int notification_icon_background = 0x7f080113;
+        public static final int notification_template_icon_bg = 0x7f080114;
+        public static final int notification_template_icon_low_bg = 0x7f080115;
+        public static final int notification_tile_bg = 0x7f080116;
+        public static final int notify_panel_notification_icon_bg = 0x7f080117;
+>>>>>>> Stashed changes
     }
     public static final class id {
         private id() {}
@@ -105,6 +120,7 @@ public final class R {
         public static final int icon_group = 0x7f0900ad;
         public static final int info = 0x7f0900c2;
         public static final int italic = 0x7f0900c3;
+<<<<<<< Updated upstream
         public static final int line1 = 0x7f09011d;
         public static final int line3 = 0x7f09011e;
         public static final int media_actions = 0x7f090188;
@@ -119,6 +135,22 @@ public final class R {
         public static final int text2 = 0x7f090274;
         public static final int time = 0x7f09027e;
         public static final int title = 0x7f090280;
+=======
+        public static final int line1 = 0x7f090120;
+        public static final int line3 = 0x7f090121;
+        public static final int media_actions = 0x7f09018f;
+        public static final int normal = 0x7f0901ba;
+        public static final int notification_background = 0x7f0901bb;
+        public static final int notification_main_column = 0x7f0901bc;
+        public static final int notification_main_column_container = 0x7f0901bd;
+        public static final int right_icon = 0x7f090208;
+        public static final int right_side = 0x7f090209;
+        public static final int status_bar_latest_event_content = 0x7f090277;
+        public static final int text = 0x7f09027e;
+        public static final int text2 = 0x7f09027f;
+        public static final int time = 0x7f090289;
+        public static final int title = 0x7f09028b;
+>>>>>>> Stashed changes
     }
     public static final class integer {
         private integer() {}

@@ -198,10 +198,21 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_flash_buy_detail.png.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_flash_buy_detail.png"
+<<<<<<< Updated upstream
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ysf_message_file_icon_jpg.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-xhdpi-v4\\ysf_message_file_icon_jpg.png"
+=======
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ysf_message_file_icon_jpg.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\c5a3f9a7d582a67061fd1c28e5cba799\\res\\drawable-xhdpi-v4\\ysf_message_file_icon_jpg.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_leak_canary_icon.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\leakcanary-android-1.4-beta2.aar\\924bcd0c10e3ce2d7a72ba797d79c6c8\\res\\drawable-xxxhdpi-v4\\leak_canary_icon.png"
+>>>>>>> Stashed changes
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_com.xml.flat",

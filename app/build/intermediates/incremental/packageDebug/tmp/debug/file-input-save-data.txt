@@ -1,5 +1,9 @@
 #Internal package file, do not edit.
+<<<<<<< Updated upstream
 #Mon Nov 05 17:58:22 CST 2018
+=======
+#Mon Dec 17 10:06:51 CST 2018
+>>>>>>> Stashed changes
 210.set=ASSET
 2.path=www/cordova-js-src/android/nativeapiprovider.js
 14.set=ASSET

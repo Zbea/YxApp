@@ -16,9 +16,15 @@ import java.lang.Override;
 public class MyQrCodeActivity_ViewBinding implements Unbinder {
   private MyQrCodeActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131297090;
+=======
+  private View view2131296784;
+
+  private View view2131297106;
+>>>>>>> Stashed changes
 
   @UiThread
   public MyQrCodeActivity_ViewBinding(MyQrCodeActivity target) {
@@ -33,7 +39,11 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     target.iv_qrcode = Utils.findRequiredViewAsType(source, R.id.iv_qrcode, "field 'iv_qrcode'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -41,7 +51,11 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_save, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131297090 = view;
+=======
+    view2131297106 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,9 +74,16 @@ public class MyQrCodeActivity_ViewBinding implements Unbinder {
     target.tv_title = null;
     target.iv_qrcode = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131297090.setOnClickListener(null);
     view2131297090 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131297106.setOnClickListener(null);
+    view2131297106 = null;
+>>>>>>> Stashed changes
   }
 }

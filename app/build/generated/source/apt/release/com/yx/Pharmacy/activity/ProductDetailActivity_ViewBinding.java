@@ -24,6 +24,7 @@ import org.apache.cordova.engine.SystemWebView;
 public class ProductDetailActivity_ViewBinding implements Unbinder {
   private ProductDetailActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131296785;
@@ -31,12 +32,25 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
   private View view2131296795;
 
   private View view2131296610;
+=======
+  private View view2131296784;
+
+  private View view2131296793;
+
+  private View view2131296805;
+
+  private View view2131296615;
+>>>>>>> Stashed changes
 
   private View view2131296476;
 
   private View view2131296466;
 
+<<<<<<< Updated upstream
   private View view2131296918;
+=======
+  private View view2131296929;
+>>>>>>> Stashed changes
 
   private View view2131297015;
 
@@ -55,7 +69,11 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mBanner = Utils.findRequiredViewAsType(source, R.id.banner, "field 'mBanner'", Banner.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,7 +82,11 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.rl_collect, "field 'mRlCollect' and method 'onClick'");
     target.mRlCollect = Utils.castView(view, R.id.rl_collect, "field 'mRlCollect'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296785 = view;
+=======
+    view2131296793 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,7 +103,11 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mLlManjian = Utils.findRequiredViewAsType(source, R.id.ll_manjian, "field 'mLlManjian'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_manjian, "field 'mRlManjian' and method 'onClick'");
     target.mRlManjian = Utils.castView(view, R.id.rl_manjian, "field 'mRlManjian'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296795 = view;
+=======
+    view2131296805 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -93,7 +119,11 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.mTvSaleRecord = Utils.findRequiredViewAsType(source, R.id.tv_sale_record, "field 'mTvSaleRecord'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_sale_record, "field 'mLlSaleRecord' and method 'onClick'");
     target.mLlSaleRecord = Utils.castView(view, R.id.ll_sale_record, "field 'mLlSaleRecord'", LinearLayout.class);
+<<<<<<< Updated upstream
     view2131296610 = view;
+=======
+    view2131296615 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -123,7 +153,11 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tv_add_cart, "field 'mTvAddCart' and method 'onClick'");
     target.mTvAddCart = Utils.castView(view, R.id.tv_add_cart, "field 'mTvAddCart'", TextView.class);
+<<<<<<< Updated upstream
     view2131296918 = view;
+=======
+    view2131296929 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -233,6 +267,7 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     target.tv_sales = null;
     target.tv_product_progress = null;
     target.progress_bar = null;
+<<<<<<< Updated upstream
 
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
@@ -252,5 +287,25 @@ public class ProductDetailActivity_ViewBinding implements Unbinder {
     view2131297015 = null;
     view2131296511.setOnClickListener(null);
     view2131296511 = null;
+=======
+    target.llMaizeng = null;
+
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296793.setOnClickListener(null);
+    view2131296793 = null;
+    view2131296805.setOnClickListener(null);
+    view2131296805 = null;
+    view2131296615.setOnClickListener(null);
+    view2131296615 = null;
+    view2131296478.setOnClickListener(null);
+    view2131296478 = null;
+    view2131296466.setOnClickListener(null);
+    view2131296466 = null;
+    view2131296929.setOnClickListener(null);
+    view2131296929 = null;
+    view2131296513.setOnClickListener(null);
+    view2131296513 = null;
+>>>>>>> Stashed changes
   }
 }

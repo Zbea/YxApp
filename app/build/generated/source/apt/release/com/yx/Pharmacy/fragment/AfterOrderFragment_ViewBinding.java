@@ -17,7 +17,11 @@ import java.lang.Override;
 public class AfterOrderFragment_ViewBinding implements Unbinder {
   private AfterOrderFragment target;
 
+<<<<<<< Updated upstream
   private View view2131297083;
+=======
+  private View view2131297099;
+>>>>>>> Stashed changes
 
   @UiThread
   public AfterOrderFragment_ViewBinding(final AfterOrderFragment target, View source) {
@@ -29,7 +33,11 @@ public class AfterOrderFragment_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
+<<<<<<< Updated upstream
     view2131297083 = view;
+=======
+    view2131297099 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +58,12 @@ public class AfterOrderFragment_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
+<<<<<<< Updated upstream
     view2131297083.setOnClickListener(null);
     view2131297083 = null;
+=======
+    view2131297099.setOnClickListener(null);
+    view2131297099 = null;
+>>>>>>> Stashed changes
   }
 }

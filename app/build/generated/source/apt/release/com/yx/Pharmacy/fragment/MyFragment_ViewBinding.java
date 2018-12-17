@@ -16,6 +16,7 @@ import java.lang.Override;
 public class MyFragment_ViewBinding implements Unbinder {
   private MyFragment target;
 
+<<<<<<< Updated upstream
   private View view2131297131;
 
   private View view2131296814;
@@ -23,31 +24,59 @@ public class MyFragment_ViewBinding implements Unbinder {
   private View view2131296809;
 
   private View view2131296571;
+=======
+  private View view2131297148;
+
+  private View view2131296825;
+>>>>>>> Stashed changes
 
   private View view2131296810;
 
+<<<<<<< Updated upstream
   private View view2131296797;
 
   private View view2131296594;
 
   private View view2131296593;
+=======
+  private View view2131296574;
+
+  private View view2131296820;
+
+  private View view2131296807;
+>>>>>>> Stashed changes
 
   private View view2131296595;
 
+<<<<<<< Updated upstream
   private View view2131296590;
 
   private View view2131296592;
 
   private View view2131296605;
+=======
+  private View view2131296598;
+
+  private View view2131296600;
+>>>>>>> Stashed changes
 
   private View view2131296591;
 
+<<<<<<< Updated upstream
   private View view2131296626;
 
   private View view2131296628;
+=======
+  private View view2131296597;
+
+  private View view2131296610;
+
+  private View view2131296596;
+>>>>>>> Stashed changes
 
   private View view2131296627;
 
+<<<<<<< Updated upstream
   private View view2131296630;
 
   private View view2131296564;
@@ -57,8 +86,23 @@ public class MyFragment_ViewBinding implements Unbinder {
   private View view2131296575;
 
   private View view2131296545;
+=======
+  private View view2131296635;
+
+  private View view2131296634;
+
+  private View view2131296637;
+
+  private View view2131296567;
+
+  private View view2131296553;
+
+  private View view2131296578;
+>>>>>>> Stashed changes
 
   private View view2131296546;
+
+  private View view2131296549;
 
   @UiThread
   public MyFragment_ViewBinding(final MyFragment target, View source) {
@@ -68,7 +112,11 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_collect_num = Utils.findRequiredViewAsType(source, R.id.tv_collect_num, "field 'tv_collect_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_user_name, "field 'tv_user_name' and method 'onclick'");
     target.tv_user_name = Utils.castView(view, R.id.tv_user_name, "field 'tv_user_name'", TextView.class);
+<<<<<<< Updated upstream
     view2131297131 = view;
+=======
+    view2131297148 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,7 +126,11 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tv_my_integral = Utils.findRequiredViewAsType(source, R.id.tv_my_integral, "field 'tv_my_integral'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_user_head, "field 'rl_user_head' and method 'onclick'");
     target.rl_user_head = Utils.castView(view, R.id.rl_user_head, "field 'rl_user_head'", RoundImageView.class);
+<<<<<<< Updated upstream
     view2131296814 = view;
+=======
+    view2131296825 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +143,11 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tvDoneNum = Utils.findRequiredViewAsType(source, R.id.tv_done_num, "field 'tvDoneNum'", TextView.class);
     target.tvAfterNum = Utils.findRequiredViewAsType(source, R.id.tv_after_num, "field 'tvAfterNum'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_setting, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296809 = view;
+=======
+    view2131296819 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +155,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_feedback, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296571 = view;
+=======
+    view2131296574 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -107,7 +167,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_signin, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296810 = view;
+=======
+    view2131296820 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +179,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_my_order, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296797 = view;
+=======
+    view2131296807 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -123,7 +191,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_store, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296594 = view;
+=======
+    view2131296599 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -131,7 +203,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_integral, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296593 = view;
+=======
+    view2131296598 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -139,7 +215,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_wallet, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296595 = view;
+=======
+    view2131296600 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -147,7 +227,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_collect, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296590 = view;
+=======
+    view2131296595 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -155,7 +239,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_erweima, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296592 = view;
+=======
+    view2131296597 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -163,7 +251,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_qiyezizhi, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296605 = view;
+=======
+    view2131296610 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -171,7 +263,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my_coupons, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296591 = view;
+=======
+    view2131296596 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -179,7 +275,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_pay, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296626 = view;
+=======
+    view2131296633 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -187,7 +287,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_send, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296628 = view;
+=======
+    view2131296635 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -195,7 +299,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_waitto_receive, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296627 = view;
+=======
+    view2131296634 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -203,7 +311,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_youjiang_task, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296630 = view;
+=======
+    view2131296637 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -211,7 +323,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_completed, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296564 = view;
+=======
+    view2131296567 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -219,7 +335,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_after_sales, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296550 = view;
+=======
+    view2131296553 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -227,7 +347,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_have_need, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296575 = view;
+=======
+    view2131296578 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -235,7 +359,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_about, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296545 = view;
+=======
+    view2131296548 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -243,7 +371,11 @@ public class MyFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_accout_security, "method 'onclick'");
+<<<<<<< Updated upstream
     view2131296546 = view;
+=======
+    view2131296549 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -269,6 +401,7 @@ public class MyFragment_ViewBinding implements Unbinder {
     target.tvDoneNum = null;
     target.tvAfterNum = null;
 
+<<<<<<< Updated upstream
     view2131297131.setOnClickListener(null);
     view2131297131 = null;
     view2131296814.setOnClickListener(null);
@@ -313,5 +446,51 @@ public class MyFragment_ViewBinding implements Unbinder {
     view2131296545 = null;
     view2131296546.setOnClickListener(null);
     view2131296546 = null;
+=======
+    view2131297148.setOnClickListener(null);
+    view2131297148 = null;
+    view2131296825.setOnClickListener(null);
+    view2131296825 = null;
+    view2131296819.setOnClickListener(null);
+    view2131296819 = null;
+    view2131296574.setOnClickListener(null);
+    view2131296574 = null;
+    view2131296820.setOnClickListener(null);
+    view2131296820 = null;
+    view2131296807.setOnClickListener(null);
+    view2131296807 = null;
+    view2131296599.setOnClickListener(null);
+    view2131296599 = null;
+    view2131296598.setOnClickListener(null);
+    view2131296598 = null;
+    view2131296600.setOnClickListener(null);
+    view2131296600 = null;
+    view2131296595.setOnClickListener(null);
+    view2131296595 = null;
+    view2131296597.setOnClickListener(null);
+    view2131296597 = null;
+    view2131296610.setOnClickListener(null);
+    view2131296610 = null;
+    view2131296596.setOnClickListener(null);
+    view2131296596 = null;
+    view2131296633.setOnClickListener(null);
+    view2131296633 = null;
+    view2131296635.setOnClickListener(null);
+    view2131296635 = null;
+    view2131296634.setOnClickListener(null);
+    view2131296634 = null;
+    view2131296637.setOnClickListener(null);
+    view2131296637 = null;
+    view2131296567.setOnClickListener(null);
+    view2131296567 = null;
+    view2131296553.setOnClickListener(null);
+    view2131296553 = null;
+    view2131296578.setOnClickListener(null);
+    view2131296578 = null;
+    view2131296548.setOnClickListener(null);
+    view2131296548 = null;
+    view2131296549.setOnClickListener(null);
+    view2131296549 = null;
+>>>>>>> Stashed changes
   }
 }

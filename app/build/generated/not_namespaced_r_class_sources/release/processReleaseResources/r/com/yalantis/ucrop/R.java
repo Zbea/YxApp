@@ -519,6 +519,7 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f080055;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f080056;
         public static final int abc_textfield_search_material = 0x7f080057;
+<<<<<<< Updated upstream
         public static final int notification_template_icon_bg = 0x7f080101;
         public static final int ucrop_ic_angle = 0x7f080165;
         public static final int ucrop_ic_crop = 0x7f080166;
@@ -532,6 +533,21 @@ public final class R {
         public static final int ucrop_shadow_upside = 0x7f08016e;
         public static final int ucrop_vector_loader = 0x7f08016f;
         public static final int ucrop_vector_loader_animated = 0x7f080170;
+=======
+        public static final int notification_template_icon_bg = 0x7f080114;
+        public static final int ucrop_ic_angle = 0x7f080178;
+        public static final int ucrop_ic_crop = 0x7f080179;
+        public static final int ucrop_ic_cross = 0x7f08017a;
+        public static final int ucrop_ic_delete_photo = 0x7f08017b;
+        public static final int ucrop_ic_done = 0x7f08017c;
+        public static final int ucrop_ic_reset = 0x7f08017d;
+        public static final int ucrop_ic_rotate = 0x7f08017e;
+        public static final int ucrop_ic_scale = 0x7f08017f;
+        public static final int ucrop_oval_true = 0x7f080180;
+        public static final int ucrop_shadow_upside = 0x7f080181;
+        public static final int ucrop_vector_loader = 0x7f080182;
+        public static final int ucrop_vector_loader_animated = 0x7f080183;
+>>>>>>> Stashed changes
     }
     public static final class id {
         private id() {}
@@ -583,6 +599,7 @@ public final class R {
         public static final int info = 0x7f0900c2;
         public static final int item_touch_helper_previous_elevation = 0x7f0900c4;
         public static final int iv_dot = 0x7f0900d8;
+<<<<<<< Updated upstream
         public static final int iv_photo = 0x7f0900f3;
         public static final int layout_aspect_ratio = 0x7f090115;
         public static final int layout_rotate_wheel = 0x7f090116;
@@ -659,6 +676,84 @@ public final class R {
         public static final int wrapper_reset_rotate = 0x7f09039f;
         public static final int wrapper_rotate_by_angle = 0x7f0903a0;
         public static final int wrapper_states = 0x7f0903a1;
+=======
+        public static final int iv_photo = 0x7f0900f5;
+        public static final int layout_aspect_ratio = 0x7f090118;
+        public static final int layout_rotate_wheel = 0x7f090119;
+        public static final int layout_scale_wheel = 0x7f09011a;
+        public static final int line1 = 0x7f090120;
+        public static final int line3 = 0x7f090121;
+        public static final int listMode = 0x7f090122;
+        public static final int list_item = 0x7f090123;
+        public static final int media_actions = 0x7f09018f;
+        public static final int menu_crop = 0x7f090190;
+        public static final int menu_loader = 0x7f090191;
+        public static final int middle = 0x7f0901a8;
+        public static final int multiply = 0x7f0901ab;
+        public static final int never = 0x7f0901b1;
+        public static final int none = 0x7f0901b9;
+        public static final int normal = 0x7f0901ba;
+        public static final int parentPanel = 0x7f0901c4;
+        public static final int progress_circular = 0x7f0901f1;
+        public static final int progress_horizontal = 0x7f0901f2;
+        public static final int radio = 0x7f0901f7;
+        public static final int recyclerView = 0x7f0901fd;
+        public static final int rotate_scroll_wheel = 0x7f09023e;
+        public static final int scale_scroll_wheel = 0x7f09024e;
+        public static final int screen = 0x7f090250;
+        public static final int scrollIndicatorDown = 0x7f090253;
+        public static final int scrollIndicatorUp = 0x7f090254;
+        public static final int scrollView = 0x7f090255;
+        public static final int search_badge = 0x7f090258;
+        public static final int search_bar = 0x7f090259;
+        public static final int search_button = 0x7f09025a;
+        public static final int search_close_btn = 0x7f09025b;
+        public static final int search_edit_frame = 0x7f09025c;
+        public static final int search_go_btn = 0x7f09025d;
+        public static final int search_mag_icon = 0x7f09025e;
+        public static final int search_plate = 0x7f09025f;
+        public static final int search_src_text = 0x7f090260;
+        public static final int search_voice_btn = 0x7f090261;
+        public static final int select_dialog_listview = 0x7f090262;
+        public static final int shortcut = 0x7f090264;
+        public static final int showCustom = 0x7f090265;
+        public static final int showHome = 0x7f090266;
+        public static final int showTitle = 0x7f090267;
+        public static final int spacer = 0x7f09026c;
+        public static final int split_action_bar = 0x7f09026d;
+        public static final int src_atop = 0x7f090270;
+        public static final int src_in = 0x7f090271;
+        public static final int src_over = 0x7f090272;
+        public static final int state_aspect_ratio = 0x7f090274;
+        public static final int state_rotate = 0x7f090275;
+        public static final int state_scale = 0x7f090276;
+        public static final int status_bar_latest_event_content = 0x7f090277;
+        public static final int submit_area = 0x7f090279;
+        public static final int tabMode = 0x7f09027c;
+        public static final int text = 0x7f09027e;
+        public static final int text2 = 0x7f09027f;
+        public static final int textSpacerNoButtons = 0x7f090281;
+        public static final int text_view_rotate = 0x7f090285;
+        public static final int text_view_scale = 0x7f090286;
+        public static final int time = 0x7f090289;
+        public static final int title = 0x7f09028b;
+        public static final int title_template = 0x7f09028e;
+        public static final int toolbar = 0x7f09028f;
+        public static final int toolbar_title = 0x7f090290;
+        public static final int topPanel = 0x7f090292;
+        public static final int ucrop = 0x7f090397;
+        public static final int ucrop_mulit_photobox = 0x7f090398;
+        public static final int ucrop_photobox = 0x7f090399;
+        public static final int up = 0x7f09039b;
+        public static final int useLogo = 0x7f09039c;
+        public static final int view_overlay = 0x7f0903a1;
+        public static final int withText = 0x7f0903ad;
+        public static final int wrap_content = 0x7f0903af;
+        public static final int wrapper_controls = 0x7f0903b0;
+        public static final int wrapper_reset_rotate = 0x7f0903b1;
+        public static final int wrapper_rotate_by_angle = 0x7f0903b2;
+        public static final int wrapper_states = 0x7f0903b3;
+>>>>>>> Stashed changes
     }
     public static final class integer {
         private integer() {}

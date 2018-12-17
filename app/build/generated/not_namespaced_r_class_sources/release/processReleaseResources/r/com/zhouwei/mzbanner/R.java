@@ -544,6 +544,7 @@ public final class R {
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f080056;
         public static final int abc_textfield_search_material = 0x7f080057;
         public static final int abc_vector_test = 0x7f080058;
+<<<<<<< Updated upstream
         public static final int indicator_normal = 0x7f0800e2;
         public static final int indicator_selected = 0x7f0800e3;
         public static final int notification_action_background = 0x7f0800f9;
@@ -558,6 +559,22 @@ public final class R {
         public static final int notification_template_icon_low_bg = 0x7f080102;
         public static final int notification_tile_bg = 0x7f080103;
         public static final int notify_panel_notification_icon_bg = 0x7f080104;
+=======
+        public static final int indicator_normal = 0x7f0800f5;
+        public static final int indicator_selected = 0x7f0800f6;
+        public static final int notification_action_background = 0x7f08010c;
+        public static final int notification_bg = 0x7f08010d;
+        public static final int notification_bg_low = 0x7f08010e;
+        public static final int notification_bg_low_normal = 0x7f08010f;
+        public static final int notification_bg_low_pressed = 0x7f080110;
+        public static final int notification_bg_normal = 0x7f080111;
+        public static final int notification_bg_normal_pressed = 0x7f080112;
+        public static final int notification_icon_background = 0x7f080113;
+        public static final int notification_template_icon_bg = 0x7f080114;
+        public static final int notification_template_icon_low_bg = 0x7f080115;
+        public static final int notification_tile_bg = 0x7f080116;
+        public static final int notify_panel_notification_icon_bg = 0x7f080117;
+>>>>>>> Stashed changes
     }
     public static final class id {
         private id() {}
@@ -612,6 +629,7 @@ public final class R {
         public static final int ifRoom = 0x7f0900b1;
         public static final int image = 0x7f0900b2;
         public static final int info = 0x7f0900c2;
+<<<<<<< Updated upstream
         public static final int left = 0x7f090119;
         public static final int line1 = 0x7f09011d;
         public static final int line3 = 0x7f09011e;
@@ -677,6 +695,73 @@ public final class R {
         public static final int useLogo = 0x7f09038a;
         public static final int withText = 0x7f09039b;
         public static final int wrap_content = 0x7f09039d;
+=======
+        public static final int left = 0x7f09011c;
+        public static final int line1 = 0x7f090120;
+        public static final int line3 = 0x7f090121;
+        public static final int listMode = 0x7f090122;
+        public static final int list_item = 0x7f090123;
+        public static final int media_actions = 0x7f09018f;
+        public static final int middle = 0x7f0901a8;
+        public static final int multiply = 0x7f0901ab;
+        public static final int mz_banner_item_tag = 0x7f0901ad;
+        public static final int mzbanner_vp = 0x7f0901ae;
+        public static final int never = 0x7f0901b1;
+        public static final int none = 0x7f0901b9;
+        public static final int normal = 0x7f0901ba;
+        public static final int notification_background = 0x7f0901bb;
+        public static final int notification_main_column = 0x7f0901bc;
+        public static final int notification_main_column_container = 0x7f0901bd;
+        public static final int parentPanel = 0x7f0901c4;
+        public static final int progress_circular = 0x7f0901f1;
+        public static final int progress_horizontal = 0x7f0901f2;
+        public static final int radio = 0x7f0901f7;
+        public static final int right = 0x7f090207;
+        public static final int right_icon = 0x7f090208;
+        public static final int right_side = 0x7f090209;
+        public static final int screen = 0x7f090250;
+        public static final int scrollIndicatorDown = 0x7f090253;
+        public static final int scrollIndicatorUp = 0x7f090254;
+        public static final int scrollView = 0x7f090255;
+        public static final int search_badge = 0x7f090258;
+        public static final int search_bar = 0x7f090259;
+        public static final int search_button = 0x7f09025a;
+        public static final int search_close_btn = 0x7f09025b;
+        public static final int search_edit_frame = 0x7f09025c;
+        public static final int search_go_btn = 0x7f09025d;
+        public static final int search_mag_icon = 0x7f09025e;
+        public static final int search_plate = 0x7f09025f;
+        public static final int search_src_text = 0x7f090260;
+        public static final int search_voice_btn = 0x7f090261;
+        public static final int select_dialog_listview = 0x7f090262;
+        public static final int shortcut = 0x7f090264;
+        public static final int showCustom = 0x7f090265;
+        public static final int showHome = 0x7f090266;
+        public static final int showTitle = 0x7f090267;
+        public static final int spacer = 0x7f09026c;
+        public static final int split_action_bar = 0x7f09026d;
+        public static final int src_atop = 0x7f090270;
+        public static final int src_in = 0x7f090271;
+        public static final int src_over = 0x7f090272;
+        public static final int status_bar_latest_event_content = 0x7f090277;
+        public static final int submenuarrow = 0x7f090278;
+        public static final int submit_area = 0x7f090279;
+        public static final int tabMode = 0x7f09027c;
+        public static final int text = 0x7f09027e;
+        public static final int text2 = 0x7f09027f;
+        public static final int textSpacerNoButtons = 0x7f090281;
+        public static final int textSpacerNoTitle = 0x7f090282;
+        public static final int time = 0x7f090289;
+        public static final int title = 0x7f09028b;
+        public static final int titleDividerNoCustom = 0x7f09028c;
+        public static final int title_template = 0x7f09028e;
+        public static final int top = 0x7f090291;
+        public static final int topPanel = 0x7f090292;
+        public static final int up = 0x7f09039b;
+        public static final int useLogo = 0x7f09039c;
+        public static final int withText = 0x7f0903ad;
+        public static final int wrap_content = 0x7f0903af;
+>>>>>>> Stashed changes
     }
     public static final class integer {
         private integer() {}

@@ -1380,6 +1380,12 @@ drawable icon_full_give_detail
 drawable icon_full_give_detail_bg
 drawable icon_home_flash_buy
 drawable icon_home_server
+<<<<<<< Updated upstream
+=======
+drawable icon_home_shopp
+drawable icon_home_store_bg
+drawable icon_home_top
+>>>>>>> Stashed changes
 drawable icon_image_loading
 drawable icon_image_loading_cc
 drawable icon_logo
@@ -2099,6 +2105,7 @@ id iv_stop_download
 id iv_system_notice
 id iv_system_notice_isread
 id iv_title
+id iv_top
 id iv_top_bg
 id iv_type
 id iv_user_head
@@ -2564,6 +2571,7 @@ id tv_factory
 id tv_file_name
 id tv_file_size
 id tv_find
+id tv_focas
 id tv_folder_name
 id tv_get_code
 id tv_gg

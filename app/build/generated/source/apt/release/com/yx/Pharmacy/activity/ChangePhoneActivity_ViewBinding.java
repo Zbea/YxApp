@@ -16,11 +16,19 @@ import java.lang.Override;
 public class ChangePhoneActivity_ViewBinding implements Unbinder {
   private ChangePhoneActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296987;
 
   private View view2131296777;
 
   private View view2131296954;
+=======
+  private View view2131297002;
+
+  private View view2131296784;
+
+  private View view2131296966;
+>>>>>>> Stashed changes
 
   @UiThread
   public ChangePhoneActivity_ViewBinding(ChangePhoneActivity target) {
@@ -38,7 +46,11 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.editNewPhoneNum = Utils.findRequiredViewAsType(source, R.id.edit_new_phone_num, "field 'editNewPhoneNum'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tvGetCode' and method 'click'");
     target.tvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'tvGetCode'", TextView.class);
+<<<<<<< Updated upstream
     view2131296987 = view;
+=======
+    view2131297002 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +59,11 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     });
     target.editCode = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'editCode'", EditText.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +71,11 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
+<<<<<<< Updated upstream
     view2131296954 = view;
+=======
+    view2131296966 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +98,20 @@ public class ChangePhoneActivity_ViewBinding implements Unbinder {
     target.tvGetCode = null;
     target.editCode = null;
 
+<<<<<<< Updated upstream
     view2131296987.setOnClickListener(null);
     view2131296987 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296954.setOnClickListener(null);
     view2131296954 = null;
+=======
+    view2131297002.setOnClickListener(null);
+    view2131297002 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296966.setOnClickListener(null);
+    view2131296966 = null;
+>>>>>>> Stashed changes
   }
 }

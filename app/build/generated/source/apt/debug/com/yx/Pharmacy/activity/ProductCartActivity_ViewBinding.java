@@ -3,6 +3,10 @@ package com.yx.Pharmacy.activity;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+<<<<<<< Updated upstream
+=======
+import android.support.v4.widget.SwipeRefreshLayout;
+>>>>>>> Stashed changes
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;

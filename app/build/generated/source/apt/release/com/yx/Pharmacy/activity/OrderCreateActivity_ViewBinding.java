@@ -21,6 +21,7 @@ import java.lang.Override;
 public class OrderCreateActivity_ViewBinding implements Unbinder {
   private OrderCreateActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131296600;
@@ -28,6 +29,15 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
   private View view2131296563;
 
   private View view2131296968;
+=======
+  private View view2131296784;
+
+  private View view2131296605;
+
+  private View view2131296566;
+
+  private View view2131296981;
+>>>>>>> Stashed changes
 
   @UiThread
   public OrderCreateActivity_ViewBinding(OrderCreateActivity target) {
@@ -42,7 +52,11 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,7 +80,11 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.mTvProductNum = Utils.findRequiredViewAsType(source, R.id.tv_product_num, "field 'mTvProductNum'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_open, "field 'mLlOpen' and method 'onClick'");
     target.mLlOpen = Utils.castView(view, R.id.ll_open, "field 'mLlOpen'", LinearLayout.class);
+<<<<<<< Updated upstream
     view2131296600 = view;
+=======
+    view2131296605 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,7 +97,11 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.view_gift_line = Utils.findRequiredView(source, R.id.view_gift_line, "field 'view_gift_line'");
     view = Utils.findRequiredView(source, R.id.ll_close, "field 'mLlClose' and method 'onClick'");
     target.mLlClose = Utils.castView(view, R.id.ll_close, "field 'mLlClose'", LinearLayout.class);
+<<<<<<< Updated upstream
     view2131296563 = view;
+=======
+    view2131296566 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -89,7 +111,11 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.mTvPayPrice = Utils.findRequiredViewAsType(source, R.id.tv_pay_price, "field 'mTvPayPrice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_create_order, "field 'mTvCreateOrder' and method 'onClick'");
     target.mTvCreateOrder = Utils.castView(view, R.id.tv_create_order, "field 'mTvCreateOrder'", TextView.class);
+<<<<<<< Updated upstream
     view2131296968 = view;
+=======
+    view2131296981 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -133,6 +159,7 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     target.mTvCreateOrder = null;
     target.mEdtNote = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131296600.setOnClickListener(null);
@@ -141,5 +168,15 @@ public class OrderCreateActivity_ViewBinding implements Unbinder {
     view2131296563 = null;
     view2131296968.setOnClickListener(null);
     view2131296968 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131296605.setOnClickListener(null);
+    view2131296605 = null;
+    view2131296566.setOnClickListener(null);
+    view2131296566 = null;
+    view2131296981.setOnClickListener(null);
+    view2131296981 = null;
+>>>>>>> Stashed changes
   }
 }

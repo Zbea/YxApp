@@ -19,6 +19,7 @@ import java.lang.Override;
 public class ProductCartActivity_ViewBinding implements Unbinder {
   private ProductCartActivity target;
 
+<<<<<<< Updated upstream
   private View view2131297021;
 
   private View view2131296562;
@@ -26,6 +27,15 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
   private View view2131296941;
 
   private View view2131296777;
+=======
+  private View view2131297035;
+
+  private View view2131296565;
+
+  private View view2131296952;
+
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public ProductCartActivity_ViewBinding(ProductCartActivity target) {
@@ -41,7 +51,11 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mTvNotice = Utils.findRequiredViewAsType(source, R.id.tv_notice, "field 'mTvNotice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onViewClicked'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
+<<<<<<< Updated upstream
     view2131297021 = view;
+=======
+    view2131297035 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +64,11 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_checkall, "field 'mLlCheckall' and method 'onViewClicked'");
     target.mLlCheckall = Utils.castView(view, R.id.ll_checkall, "field 'mLlCheckall'", LinearLayout.class);
+<<<<<<< Updated upstream
     view2131296562 = view;
+=======
+    view2131296565 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,7 +78,11 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mCbCheckall = Utils.findRequiredViewAsType(source, R.id.cb_checkall, "field 'mCbCheckall'", CheckBox.class);
     view = Utils.findRequiredView(source, R.id.tv_buy, "field 'mTvBuy' and method 'onViewClicked'");
     target.mTvBuy = Utils.castView(view, R.id.tv_buy, "field 'mTvBuy'", TextView.class);
+<<<<<<< Updated upstream
     view2131296941 = view;
+=======
+    view2131296952 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,7 +93,11 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mRvShopCart = Utils.findRequiredViewAsType(source, R.id.rv_shop_cart, "field 'mRvShopCart'", RecyclerView.class);
     target.mLoadingLayout = Utils.findRequiredViewAsType(source, R.id.loadinglayout, "field 'mLoadingLayout'", LoadingLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onViewClicked'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -97,6 +123,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mRvShopCart = null;
     target.mLoadingLayout = null;
 
+<<<<<<< Updated upstream
     view2131297021.setOnClickListener(null);
     view2131297021 = null;
     view2131296562.setOnClickListener(null);
@@ -105,5 +132,15 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     view2131296941 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131297035.setOnClickListener(null);
+    view2131297035 = null;
+    view2131296565.setOnClickListener(null);
+    view2131296565 = null;
+    view2131296952.setOnClickListener(null);
+    view2131296952 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

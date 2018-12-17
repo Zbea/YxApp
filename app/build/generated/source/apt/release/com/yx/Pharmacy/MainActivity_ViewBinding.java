@@ -16,6 +16,7 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296587;
 
   private View view2131296621;
@@ -25,6 +26,17 @@ public class MainActivity_ViewBinding implements Unbinder {
   private View view2131296615;
 
   private View view2131296589;
+=======
+  private View view2131296592;
+
+  private View view2131296628;
+
+  private View view2131296579;
+
+  private View view2131296620;
+
+  private View view2131296594;
+>>>>>>> Stashed changes
 
   @UiThread
   public MainActivity_ViewBinding(MainActivity target) {
@@ -48,7 +60,11 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.iv_my = Utils.findRequiredViewAsType(source, R.id.iv_my, "field 'iv_my'", ImageView.class);
     target.tv_my = Utils.findRequiredViewAsType(source, R.id.tv_my, "field 'tv_my'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_message, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296587 = view;
+=======
+    view2131296592 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +72,11 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_type, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296621 = view;
+=======
+    view2131296628 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,7 +84,11 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_home_page, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296576 = view;
+=======
+    view2131296579 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -72,7 +96,11 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_shopping_car, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296615 = view;
+=======
+    view2131296620 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,7 +108,11 @@ public class MainActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_my, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296589 = view;
+=======
+    view2131296594 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -108,6 +140,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.iv_my = null;
     target.tv_my = null;
 
+<<<<<<< Updated upstream
     view2131296587.setOnClickListener(null);
     view2131296587 = null;
     view2131296621.setOnClickListener(null);
@@ -118,5 +151,17 @@ public class MainActivity_ViewBinding implements Unbinder {
     view2131296615 = null;
     view2131296589.setOnClickListener(null);
     view2131296589 = null;
+=======
+    view2131296592.setOnClickListener(null);
+    view2131296592 = null;
+    view2131296628.setOnClickListener(null);
+    view2131296628 = null;
+    view2131296579.setOnClickListener(null);
+    view2131296579 = null;
+    view2131296620.setOnClickListener(null);
+    view2131296620 = null;
+    view2131296594.setOnClickListener(null);
+    view2131296594 = null;
+>>>>>>> Stashed changes
   }
 }

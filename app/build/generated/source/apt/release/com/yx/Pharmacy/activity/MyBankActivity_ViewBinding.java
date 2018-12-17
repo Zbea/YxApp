@@ -15,7 +15,11 @@ import java.lang.Override;
 public class MyBankActivity_ViewBinding implements Unbinder {
   private MyBankActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   private View view2131296322;
 
@@ -33,7 +37,11 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = Utils.findRequiredViewAsType(source, R.id.tv_bank, "field 'tv_bank'", TextView.class);
     target.tv_card_num = Utils.findRequiredViewAsType(source, R.id.tv_card_num, "field 'tv_card_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,8 +69,13 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = null;
     target.tv_card_num = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
     view2131296322.setOnClickListener(null);
     view2131296322 = null;
   }

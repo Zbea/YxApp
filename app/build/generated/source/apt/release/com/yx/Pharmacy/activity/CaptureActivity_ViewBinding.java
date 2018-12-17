@@ -14,11 +14,19 @@ import java.lang.Override;
 public class CaptureActivity_ViewBinding implements Unbinder {
   private CaptureActivity target;
 
+<<<<<<< Updated upstream
   private View view2131297021;
+=======
+  private View view2131297035;
+>>>>>>> Stashed changes
 
   private View view2131296490;
 
+<<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public CaptureActivity_ViewBinding(CaptureActivity target) {
@@ -31,7 +39,11 @@ public class CaptureActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.tv_more, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131297021 = view;
+=======
+    view2131297035 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +59,11 @@ public class CaptureActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onClick'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,11 +79,20 @@ public class CaptureActivity_ViewBinding implements Unbinder {
     target = null;
 
 
+<<<<<<< Updated upstream
     view2131297021.setOnClickListener(null);
     view2131297021 = null;
     view2131296490.setOnClickListener(null);
     view2131296490 = null;
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131297035.setOnClickListener(null);
+    view2131297035 = null;
+    view2131296492.setOnClickListener(null);
+    view2131296492 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

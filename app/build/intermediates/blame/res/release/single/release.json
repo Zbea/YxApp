@@ -628,12 +628,12 @@
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\dialog_photo.xml"
     },
     {
-        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_dialog_home_ad.xml.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\dialog_home_ad.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -4978,6 +4978,10 @@
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_dialog_loading.xml.flat",
         "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon_home_top.png.flat",
+        "source": "D:\\androidSpace\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_top.png"
     },
     {
         "merged": "D:\\androidSpace\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ysf_message_left_bg_no_padding.9.png.flat",

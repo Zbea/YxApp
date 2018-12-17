@@ -18,7 +18,11 @@ import java.lang.Override;
 public class ProductCouponActivity_ViewBinding implements Unbinder {
   private ProductCouponActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296784;
+>>>>>>> Stashed changes
 
   @UiThread
   public ProductCouponActivity_ViewBinding(ProductCouponActivity target) {
@@ -35,7 +39,11 @@ public class ProductCouponActivity_ViewBinding implements Unbinder {
     target.swipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.swipeRefreshLayout, "field 'swipeRefreshLayout'", SwipeRefreshLayout.class);
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onViewClicked'");
+<<<<<<< Updated upstream
     view2131296777 = view;
+=======
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +64,12 @@ public class ProductCouponActivity_ViewBinding implements Unbinder {
     target.swipeRefreshLayout = null;
     target.ll_nodata = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
+=======
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+>>>>>>> Stashed changes
   }
 }

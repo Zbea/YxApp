@@ -16,6 +16,7 @@ import java.lang.Override;
 public class PayActivity_ViewBinding implements Unbinder {
   private PayActivity target;
 
+<<<<<<< Updated upstream
   private View view2131296777;
 
   private View view2131297119;
@@ -25,6 +26,17 @@ public class PayActivity_ViewBinding implements Unbinder {
   private View view2131296774;
 
   private View view2131296804;
+=======
+  private View view2131296814;
+
+  private View view2131296784;
+
+  private View view2131297136;
+
+  private View view2131296826;
+
+  private View view2131296781;
+>>>>>>> Stashed changes
 
   @UiThread
   public PayActivity_ViewBinding(PayActivity target) {
@@ -40,40 +52,66 @@ public class PayActivity_ViewBinding implements Unbinder {
     target.iv_select_wechat_pay = Utils.findRequiredViewAsType(source, R.id.iv_select_wechat_pay, "field 'iv_select_wechat_pay'", ImageView.class);
     target.iv_select_alipay = Utils.findRequiredViewAsType(source, R.id.iv_select_alipay, "field 'iv_select_alipay'", ImageView.class);
     target.iv_select_public_pay = Utils.findRequiredViewAsType(source, R.id.iv_select_public_pay, "field 'iv_select_public_pay'", ImageView.class);
+<<<<<<< Updated upstream
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
     view2131296777 = view;
+=======
+    view = Utils.findRequiredView(source, R.id.rl_public_pay, "field 'rlPublicPay' and method 'click'");
+    target.rlPublicPay = Utils.castView(view, R.id.rl_public_pay, "field 'rlPublicPay'", RelativeLayout.class);
+    view2131296814 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.click(p0);
       }
     });
+<<<<<<< Updated upstream
     view = Utils.findRequiredView(source, R.id.tv_to_pay, "method 'click'");
     view2131297119 = view;
+=======
+    view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+    view2131296784 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.click(p0);
       }
     });
+<<<<<<< Updated upstream
     view = Utils.findRequiredView(source, R.id.rl_wechat_pay, "method 'click'");
     view2131296815 = view;
+=======
+    view = Utils.findRequiredView(source, R.id.tv_to_pay, "method 'click'");
+    view2131297136 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.click(p0);
       }
     });
+<<<<<<< Updated upstream
     view = Utils.findRequiredView(source, R.id.rl_alipay, "method 'click'");
     view2131296774 = view;
+=======
+    view = Utils.findRequiredView(source, R.id.rl_wechat_pay, "method 'click'");
+    view2131296826 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.click(p0);
       }
     });
+<<<<<<< Updated upstream
     view = Utils.findRequiredView(source, R.id.rl_public_pay, "method 'click'");
     view2131296804 = view;
+=======
+    view = Utils.findRequiredView(source, R.id.rl_alipay, "method 'click'");
+    view2131296781 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -94,6 +132,7 @@ public class PayActivity_ViewBinding implements Unbinder {
     target.iv_select_alipay = null;
     target.iv_select_public_pay = null;
 
+<<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
     view2131297119.setOnClickListener(null);
@@ -104,5 +143,17 @@ public class PayActivity_ViewBinding implements Unbinder {
     view2131296774 = null;
     view2131296804.setOnClickListener(null);
     view2131296804 = null;
+=======
+    view2131296814.setOnClickListener(null);
+    view2131296814 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
+    view2131297136.setOnClickListener(null);
+    view2131297136 = null;
+    view2131296826.setOnClickListener(null);
+    view2131296826 = null;
+    view2131296781.setOnClickListener(null);
+    view2131296781 = null;
+>>>>>>> Stashed changes
   }
 }

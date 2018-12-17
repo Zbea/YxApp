@@ -19,6 +19,7 @@ public class LoginActivity_ViewBinding implements Unbinder {
 
   private View view2131296465;
 
+<<<<<<< Updated upstream
   private View view2131296987;
 
   private View view2131297010;
@@ -28,6 +29,17 @@ public class LoginActivity_ViewBinding implements Unbinder {
   private View view2131297082;
 
   private View view2131296985;
+=======
+  private View view2131297002;
+
+  private View view2131297025;
+
+  private View view2131296982;
+
+  private View view2131297098;
+
+  private View view2131296999;
+>>>>>>> Stashed changes
 
   @UiThread
   public LoginActivity_ViewBinding(LoginActivity target) {
@@ -54,7 +66,11 @@ public class LoginActivity_ViewBinding implements Unbinder {
     target.mIvCodeType = Utils.findRequiredViewAsType(source, R.id.iv_code_type, "field 'mIvCodeType'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'mTvGetCode' and method 'onClick'");
     target.mTvGetCode = Utils.castView(view, R.id.tv_get_code, "field 'mTvGetCode'", TextView.class);
+<<<<<<< Updated upstream
     view2131296987 = view;
+=======
+    view2131297002 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,7 +80,11 @@ public class LoginActivity_ViewBinding implements Unbinder {
     target.mEditCode = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'mEditCode'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_login, "field 'mTvLogin' and method 'onClick'");
     target.mTvLogin = Utils.castView(view, R.id.tv_login, "field 'mTvLogin'", TextView.class);
+<<<<<<< Updated upstream
     view2131297010 = view;
+=======
+    view2131297025 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -73,7 +93,11 @@ public class LoginActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tv_cut, "field 'mTvCut' and method 'onClick'");
     target.mTvCut = Utils.castView(view, R.id.tv_cut, "field 'mTvCut'", TextView.class);
+<<<<<<< Updated upstream
     view2131296969 = view;
+=======
+    view2131296982 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -82,7 +106,11 @@ public class LoginActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tv_register, "field 'mTvRegister' and method 'onClick'");
     target.mTvRegister = Utils.castView(view, R.id.tv_register, "field 'mTvRegister'", TextView.class);
+<<<<<<< Updated upstream
     view2131297082 = view;
+=======
+    view2131297098 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +119,11 @@ public class LoginActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.tv_find, "field 'mTvFind' and method 'onClick'");
     target.mTvFind = Utils.castView(view, R.id.tv_find, "field 'mTvFind'", TextView.class);
+<<<<<<< Updated upstream
     view2131296985 = view;
+=======
+    view2131296999 = view;
+>>>>>>> Stashed changes
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -121,6 +153,7 @@ public class LoginActivity_ViewBinding implements Unbinder {
 
     view2131296465.setOnClickListener(null);
     view2131296465 = null;
+<<<<<<< Updated upstream
     view2131296987.setOnClickListener(null);
     view2131296987 = null;
     view2131297010.setOnClickListener(null);
@@ -131,5 +164,17 @@ public class LoginActivity_ViewBinding implements Unbinder {
     view2131297082 = null;
     view2131296985.setOnClickListener(null);
     view2131296985 = null;
+=======
+    view2131297002.setOnClickListener(null);
+    view2131297002 = null;
+    view2131297025.setOnClickListener(null);
+    view2131297025 = null;
+    view2131296982.setOnClickListener(null);
+    view2131296982 = null;
+    view2131297098.setOnClickListener(null);
+    view2131297098 = null;
+    view2131296999.setOnClickListener(null);
+    view2131296999 = null;
+>>>>>>> Stashed changes
   }
 }

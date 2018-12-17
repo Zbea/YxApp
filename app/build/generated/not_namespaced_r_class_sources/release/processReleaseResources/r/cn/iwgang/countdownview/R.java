@@ -58,7 +58,11 @@ public final class R {
 
         public static final int bottom = 0x7f090034;
         public static final int center = 0x7f090047;
+<<<<<<< Updated upstream
         public static final int top = 0x7f090286;
+=======
+        public static final int top = 0x7f090291;
+>>>>>>> Stashed changes
     }
     public static final class styleable {
         private styleable() {}

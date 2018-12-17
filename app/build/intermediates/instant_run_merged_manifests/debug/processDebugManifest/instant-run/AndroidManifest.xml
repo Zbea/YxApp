@@ -2,8 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yx.Pharmacy"
     android:hardwareAccelerated="true"
+<<<<<<< Updated upstream
     android:versionCode="20181030"
     android:versionName="1.0.2" >
+=======
+    android:versionCode="20181214"
+    android:versionName="1.0.3" >
+>>>>>>> Stashed changes
 
     <uses-sdk
         android:minSdkVersion="17"

@@ -24,8 +24,13 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
+<<<<<<< Updated upstream
         public static final int sample_footer_loading = 0x7f080118;
         public static final int sample_footer_loading_progress = 0x7f080119;
+=======
+        public static final int sample_footer_loading = 0x7f08012b;
+        public static final int sample_footer_loading_progress = 0x7f08012c;
+>>>>>>> Stashed changes
     }
     public static final class id {
         private id() {}
@@ -34,12 +39,21 @@ public final class R {
         public static final int BaseQuickAdapter_dragging_support = 0x7f090002;
         public static final int BaseQuickAdapter_swiping_support = 0x7f090003;
         public static final int BaseQuickAdapter_viewholder_support = 0x7f090004;
+<<<<<<< Updated upstream
         public static final int load_more_load_end_view = 0x7f090179;
         public static final int load_more_load_fail_view = 0x7f09017a;
         public static final int load_more_loading_view = 0x7f09017b;
         public static final int loading_progress = 0x7f09017d;
         public static final int loading_text = 0x7f09017e;
         public static final int tv_prompt = 0x7f090335;
+=======
+        public static final int load_more_load_end_view = 0x7f090180;
+        public static final int load_more_load_fail_view = 0x7f090181;
+        public static final int load_more_loading_view = 0x7f090182;
+        public static final int loading_progress = 0x7f090184;
+        public static final int loading_text = 0x7f090185;
+        public static final int tv_prompt = 0x7f090345;
+>>>>>>> Stashed changes
     }
     public static final class layout {
         private layout() {}
