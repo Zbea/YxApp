@@ -18,9 +18,15 @@ import java.lang.Override;
 public class IntegralDetailActivity_ViewBinding implements Unbinder {
   private IntegralDetailActivity target;
 
+<<<<<<< HEAD
   private View view2131296778;
 
   private View view2131297087;
+=======
+  private View view2131296791;
+
+  private View view2131297106;
+>>>>>>> feature_1.0
 
   @UiThread
   public IntegralDetailActivity_ViewBinding(IntegralDetailActivity target) {
@@ -38,7 +44,11 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< HEAD
     view2131296778 = view;
+=======
+    view2131296791 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +56,11 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
+<<<<<<< HEAD
     view2131297087 = view;
+=======
+    view2131297106 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -68,9 +82,16 @@ public class IntegralDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
+<<<<<<< HEAD
     view2131296778.setOnClickListener(null);
     view2131296778 = null;
     view2131297087.setOnClickListener(null);
     view2131297087 = null;
+=======
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131297106.setOnClickListener(null);
+    view2131297106 = null;
+>>>>>>> feature_1.0
   }
 }

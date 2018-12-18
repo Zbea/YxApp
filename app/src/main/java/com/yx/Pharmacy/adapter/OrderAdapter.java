@@ -48,6 +48,7 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
         void askForAfterSale(String orderid);
         void cancelOrderBack(String orderbackid, int layoutPosition);
         void tuihuo(String orderbackid, int layoutPosition);
+        void gotoDetails(String orderid, int layoutPosition);
     }
     public void setListener(ClickListener listener) {
         this.listener = listener;
@@ -68,13 +69,16 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                 helper.setText(R.id.tv_order_todo,"去支付");
                 helper.setText(R.id.tv_cancle_order,"取消订单");
                 helper.getView(R.id.tv_cancle_order).setVisibility(View.VISIBLE);
-                helper.setText(R.id.tv_check_wuliu,"转账截图");
-                helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
+                if (!TextUtils.isEmpty(item.payment_type))
+                {
+                    helper.setText(R.id.tv_check_wuliu,"转账截图");
+                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
+                }
             }else if(item.status==2){//待发货
                 helper.setText(R.id.tv_order_state,"待发货");
                 helper.setText(R.id.tv_order_todo,"提醒发货");
                 helper.setText(R.id.tv_cancle_order,"申请售后");
-                helper.setText(R.id.tv_check_wuliu,"申请售后");
+//                helper.setText(R.id.tv_check_wuliu,"申请售后");
                 helper.getView(R.id.tv_check_wuliu).setVisibility(View.GONE);
 //                if(item.order_back){
 //                    helper.getView(R.id.tv_check_wuliu).setVisibility(View.VISIBLE);
@@ -147,6 +151,13 @@ public class OrderAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolder> {
                 ll_many_products.addView(orderItemView);
             }
         }
+        helper.getView(R.id.ll_many_products).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener!=null)listener.gotoDetails(item.orderid,helper.getLayoutPosition());
+            }
+        });
+
         helper.getView(R.id.tv_cancle_order).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

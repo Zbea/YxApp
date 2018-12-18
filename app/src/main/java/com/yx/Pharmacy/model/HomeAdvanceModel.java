@@ -30,16 +30,13 @@ public class HomeAdvanceModel {
     public GoldBean gold;
     public List<GoldBean> banner;
     public List<GoldBean>   guid;
+    public List<GoldBean>   message;
     public GoldBean alert;
     public GoldBean custom;
 
 
     public static class GoldBean {
-        /**
-         * title : 何福林
-         * image_src : http://192.168.0.80:8806/file/upload/201806/26/152727121.png
-         * image_url : 
-         */
+
 
         public String title;
         public String image_src;
@@ -47,6 +44,10 @@ public class HomeAdvanceModel {
         public String activityname;
         public String levelid;
         public String type;
+        public String pushdata;
+        public String areaid;
+        public String content;
+        public String introduce;
 
         public String weburl;
         public String goodsid;

@@ -27,6 +27,7 @@ import com.yx.Pharmacy.model.StoreDetailModel;
 import com.yx.Pharmacy.model.StoreTypeModel;
 import com.yx.Pharmacy.model.TagModel;
 import com.yx.Pharmacy.model.UploadModel;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.model.WalletData;
 import com.yx.Pharmacy.model.WuliuData;
 import com.yx.Pharmacy.model.YaoType1;
@@ -50,6 +51,11 @@ import retrofit2.http.Part;
  */
 public interface HomeApi {
 
+    /**
+     *  得到本地url
+     */
+    @POST(Constants.LOCAL_URL)
+    Observable<BasisBean<UrlBean>> getUrlData();
     /**
      *  上传文件
      */
@@ -110,7 +116,11 @@ public interface HomeApi {
      */
     @POST(Constants.ADVANCE_HOME)
     Observable<BasisBean<HomeAdvanceModel>> getBannerData();
-
+    /**
+     *  获取首页公告
+     */
+    @POST(Constants.ACTIVITY_MESSAGE)
+    Observable<BasisBean<HomeAdvanceModel>> getMessageData();
     /**
      *  商品列表/详情
      */
@@ -435,7 +445,8 @@ public interface HomeApi {
      */
     @FormUrlEncoded
     @POST(Constants.MIAOSHA_BUY)
-    Observable<BasisBean<Object>> miaoshaBuy(@FieldMap HashMap<String, String> map);
+    Observable<BasisBean<AddShopCartModel>> miaoshaBuy(@FieldMap HashMap<String, String> map);
+
     /**
      * 企业资质
      */

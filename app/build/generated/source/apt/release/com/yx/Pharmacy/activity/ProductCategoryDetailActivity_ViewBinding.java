@@ -18,6 +18,7 @@ import java.lang.Override;
 public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
   private ProductCategoryDetailActivity target;
 
+<<<<<<< HEAD
   private View view2131296784;
 
   private View view2131296639;
@@ -36,6 +37,26 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
 
   private View view2131296816;
 
+=======
+  private View view2131296783;
+
+  private View view2131296638;
+
+  private View view2131296608;
+
+  private View view2131296635;
+
+  private View view2131297097;
+
+  private View view2131296561;
+
+  private View view2131296514;
+
+  private View view2131296816;
+
+  private View view2131296815;
+
+>>>>>>> feature_1.0
   @UiThread
   public ProductCategoryDetailActivity_ViewBinding(ProductCategoryDetailActivity target) {
     this(target, target.getWindow().getDecorView());
@@ -59,7 +80,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< HEAD
     view2131296784 = view;
+=======
+    view2131296783 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +92,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_zonghe, "method 'click'");
+<<<<<<< HEAD
     view2131296639 = view;
+=======
+    view2131296638 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +104,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_price, "method 'click'");
+<<<<<<< HEAD
     view2131296609 = view;
+=======
+    view2131296608 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -83,7 +116,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "method 'click'");
+<<<<<<< HEAD
     view2131296636 = view;
+=======
+    view2131296635 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,7 +128,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
+<<<<<<< HEAD
     view2131297099 = view;
+=======
+    view2131297097 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +140,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_change_layout, "method 'click'");
+<<<<<<< HEAD
     view2131296562 = view;
+=======
+    view2131296561 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +160,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_search, "method 'click'");
+<<<<<<< HEAD
     view2131296817 = view;
+=======
+    view2131296816 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -123,7 +172,11 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
+<<<<<<< HEAD
     view2131296816 = view;
+=======
+    view2131296815 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -151,6 +204,7 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
+<<<<<<< HEAD
     view2131296784.setOnClickListener(null);
     view2131296784 = null;
     view2131296639.setOnClickListener(null);
@@ -169,5 +223,25 @@ public class ProductCategoryDetailActivity_ViewBinding implements Unbinder {
     view2131296817 = null;
     view2131296816.setOnClickListener(null);
     view2131296816 = null;
+=======
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131296638.setOnClickListener(null);
+    view2131296638 = null;
+    view2131296608.setOnClickListener(null);
+    view2131296608 = null;
+    view2131296635.setOnClickListener(null);
+    view2131296635 = null;
+    view2131297097.setOnClickListener(null);
+    view2131297097 = null;
+    view2131296561.setOnClickListener(null);
+    view2131296561 = null;
+    view2131296514.setOnClickListener(null);
+    view2131296514 = null;
+    view2131296816.setOnClickListener(null);
+    view2131296816 = null;
+    view2131296815.setOnClickListener(null);
+    view2131296815 = null;
+>>>>>>> feature_1.0
   }
 }

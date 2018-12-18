@@ -19,13 +19,18 @@ import java.lang.Override;
 public class CommendTjActivity_ViewBinding implements Unbinder {
   private CommendTjActivity target;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   private View view2131296777;
+=======
+  private View view2131296783;
+>>>>>>> feature_1.0
 
-  private View view2131296632;
+  private View view2131296638;
 
-  private View view2131296604;
+  private View view2131296608;
 
+<<<<<<< HEAD
   private View view2131296629;
 =======
   private View view2131296784;
@@ -36,6 +41,9 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
 
   private View view2131296636;
 >>>>>>> Stashed changes
+=======
+  private View view2131296635;
+>>>>>>> feature_1.0
 
   @UiThread
   public CommendTjActivity_ViewBinding(CommendTjActivity target) {
@@ -50,11 +58,15 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296777 = view;
 =======
     view2131296784 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296783 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,11 +78,15 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvZonghe = Utils.findRequiredViewAsType(source, R.id.iv_zonghe, "field 'mIvZonghe'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_zonghe, "field 'mLlZonghe' and method 'onClick'");
     target.mLlZonghe = Utils.castView(view, R.id.ll_zonghe, "field 'mLlZonghe'", LinearLayout.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296632 = view;
 =======
     view2131296639 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296638 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,11 +97,15 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvPrice = Utils.findRequiredViewAsType(source, R.id.iv_price, "field 'mIvPrice'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_price, "field 'mLlPrice' and method 'onClick'");
     target.mLlPrice = Utils.castView(view, R.id.ll_price, "field 'mLlPrice'", LinearLayout.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296604 = view;
 =======
     view2131296609 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296608 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -97,11 +117,15 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvBanner = Utils.findRequiredViewAsType(source, R.id.iv_banner, "field 'mIvBanner'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "field 'mLlXiaoliang' and method 'onClick'");
     target.mLlXiaoliang = Utils.castView(view, R.id.ll_xiaoliang, "field 'mLlXiaoliang'", LinearLayout.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296629 = view;
 =======
     view2131296636 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296635 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -133,6 +157,7 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mLlXiaoliang = null;
     target.mRvProduct = null;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296777.setOnClickListener(null);
     view2131296777 = null;
@@ -152,5 +177,15 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     view2131296636.setOnClickListener(null);
     view2131296636 = null;
 >>>>>>> Stashed changes
+=======
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131296638.setOnClickListener(null);
+    view2131296638 = null;
+    view2131296608.setOnClickListener(null);
+    view2131296608 = null;
+    view2131296635.setOnClickListener(null);
+    view2131296635 = null;
+>>>>>>> feature_1.0
   }
 }

@@ -24,8 +24,8 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int sample_footer_loading = 0x7f080118;
-        public static final int sample_footer_loading_progress = 0x7f080119;
+        public static final int sample_footer_loading = 0x7f08012e;
+        public static final int sample_footer_loading_progress = 0x7f08012f;
     }
     public static final class id {
         private id() {}
@@ -34,24 +34,24 @@ public final class R {
         public static final int BaseQuickAdapter_dragging_support = 0x7f090002;
         public static final int BaseQuickAdapter_swiping_support = 0x7f090003;
         public static final int BaseQuickAdapter_viewholder_support = 0x7f090004;
-        public static final int load_more_load_end_view = 0x7f090179;
-        public static final int load_more_load_fail_view = 0x7f09017a;
-        public static final int load_more_loading_view = 0x7f09017b;
-        public static final int loading_progress = 0x7f09017d;
-        public static final int loading_text = 0x7f09017e;
-        public static final int tv_prompt = 0x7f090335;
+        public static final int load_more_load_end_view = 0x7f090187;
+        public static final int load_more_load_fail_view = 0x7f090188;
+        public static final int load_more_loading_view = 0x7f090189;
+        public static final int loading_progress = 0x7f09018b;
+        public static final int loading_text = 0x7f09018c;
+        public static final int tv_prompt = 0x7f09034c;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int quick_view_load_more = 0x7f0b00cb;
+        public static final int quick_view_load_more = 0x7f0b00d1;
     }
     public static final class string {
         private string() {}
 
         public static final int app_name = 0x7f0f001d;
-        public static final int load_end = 0x7f0f0023;
-        public static final int load_failed = 0x7f0f0024;
-        public static final int loading = 0x7f0f0025;
+        public static final int load_end = 0x7f0f0038;
+        public static final int load_failed = 0x7f0f0039;
+        public static final int loading = 0x7f0f003a;
     }
 }

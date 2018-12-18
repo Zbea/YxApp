@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.L;
 
 /**
@@ -35,11 +36,13 @@ public class AmountView extends LinearLayout
     private EditText etAmount;
     private Button   btnDecrease;
     private Button   btnIncrease;
+    private View   tvFocas;
     private int mMinNum = 1;
     private int mAddNum = 1;
     private boolean mClickBtn = false;
     private boolean mEnable = true;
     private int mLookAmount;
+    private boolean isChanage=true;
 
     public AmountView(Context context) {
         this(context, null);
@@ -51,6 +54,7 @@ public class AmountView extends LinearLayout
         etAmount = (EditText) findViewById(R.id.etAmount);
         btnDecrease = (Button) findViewById(R.id.btnDecrease);
         btnIncrease = (Button) findViewById(R.id.btnIncrease);
+        tvFocas= (View) findViewById(R.id.tv_focas);
         btnDecrease.setOnClickListener(this);
         btnIncrease.setOnClickListener(this);
         etAmount.addTextChangedListener(this);
@@ -98,7 +102,6 @@ public class AmountView extends LinearLayout
         } else if (i == R.id.btnIncrease) {
             if (amount < goods_storage) {
                 amount = amount + mAddNum;
-                L.i("amount2:"+amount);
                 etAmount.setText(amount + "");
                 etAmount.setSelection(etAmount.getText().length());
             }
@@ -107,7 +110,7 @@ public class AmountView extends LinearLayout
         etAmount.clearFocus();
 
         if (mListener != null) {
-            mListener.onAmountChange(this, amount,false);
+            mListener.onAmountChange(etAmount, amount,false);
         }
     }
 
@@ -125,23 +128,27 @@ public class AmountView extends LinearLayout
         if (s.toString().isEmpty()) {
             if (mListener != null) {
                 if (!mClickBtn) {
-                    mListener.onAmountChange(this, 0,true);
+                    mListener.onAmountChange(etAmount, 0,true);
                 }
                 mClickBtn = false;
             }
             return;
         }
-        amount = Integer.valueOf(s.toString());
+        amount = DensityUtils.parseInt(s.toString());
+        L.i("amount:"+amount);
         amount = Math.abs(amount);
         goods_storage = Math.abs(goods_storage);
         if (amount==0)
         {
             return;
         }
-        if (amount >goods_storage) {
-            etAmount.setText(goods_storage + "");
-            etAmount.setSelection(etAmount.getText().length());
-            return;
+        if (isChanage)
+        {
+            if (amount >goods_storage) {
+                etAmount.setText(Math.abs(goods_storage) + "");
+                etAmount.setSelection(etAmount.getText().length());
+                return;
+            }
         }
         if (mEnable) {
             if (amount >= goods_storage) {
@@ -159,7 +166,7 @@ public class AmountView extends LinearLayout
 
         if (mListener != null) {
             if (!mClickBtn) {
-                mListener.onAmountChange(this, amount,true);
+                mListener.onAmountChange(etAmount, amount,true);
             }
             mClickBtn = false;
         }
@@ -192,5 +199,13 @@ public class AmountView extends LinearLayout
         etAmount.setEnabled(b);
     }
 
+    /**
+     * 判断输入值是否可以变
+     * @param is
+     */
+    public void setIsChanage(boolean is)
+    {
+        isChanage=is;
+    }
 
 }

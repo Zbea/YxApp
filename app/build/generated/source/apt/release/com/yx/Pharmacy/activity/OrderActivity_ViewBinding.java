@@ -17,6 +17,7 @@ import java.lang.Override;
 public class OrderActivity_ViewBinding implements Unbinder {
   private OrderActivity target;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   private View view2131297021;
 
@@ -26,6 +27,11 @@ public class OrderActivity_ViewBinding implements Unbinder {
 
   private View view2131296784;
 >>>>>>> Stashed changes
+=======
+  private View view2131297033;
+
+  private View view2131296783;
+>>>>>>> feature_1.0
 
   @UiThread
   public OrderActivity_ViewBinding(OrderActivity target) {
@@ -40,11 +46,15 @@ public class OrderActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'tv_more' and method 'click'");
     target.tv_more = Utils.castView(view, R.id.tv_more, "field 'tv_more'", TextView.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131297021 = view;
 =======
     view2131297035 = view;
 >>>>>>> Stashed changes
+=======
+    view2131297033 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,11 +64,15 @@ public class OrderActivity_ViewBinding implements Unbinder {
     target.vp_order = Utils.findRequiredViewAsType(source, R.id.vp_order, "field 'vp_order'", ViewPager.class);
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296777 = view;
 =======
     view2131296784 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296783 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,6 +93,7 @@ public class OrderActivity_ViewBinding implements Unbinder {
     target.vp_order = null;
     target.topic_viewpager_title = null;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131297021.setOnClickListener(null);
     view2131297021 = null;
@@ -90,5 +105,11 @@ public class OrderActivity_ViewBinding implements Unbinder {
     view2131296784.setOnClickListener(null);
     view2131296784 = null;
 >>>>>>> Stashed changes
+=======
+    view2131297033.setOnClickListener(null);
+    view2131297033 = null;
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+>>>>>>> feature_1.0
   }
 }

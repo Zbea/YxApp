@@ -12,12 +12,23 @@
     <RelativeLayout
         android:background="@drawable/shape_cart_line_gray"
         android:layout_width="@dimen/dp_90"
-        android:layout_height="@dimen/dp_90">
+        android:layout_height="@dimen/dp_92">
         <ImageView
             android:id="@+id/iv_product"
             android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
             android:layout_width="@dimen/dp_90"
             android:layout_height="@dimen/dp_90"/>
+        <TextView
+            android:id="@+id/tv_validity_time"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/sp_8"
+            android:text="有效期:"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:background="@drawable/icon_validity_bg"/>
         <ImageView
             android:visibility="gone"
             android:id="@+id/iv_presale"

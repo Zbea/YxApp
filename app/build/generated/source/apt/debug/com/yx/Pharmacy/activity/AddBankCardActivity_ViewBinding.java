@@ -16,11 +16,11 @@ import java.lang.Override;
 public class AddBankCardActivity_ViewBinding implements Unbinder {
   private AddBankCardActivity target;
 
-  private View view2131296987;
+  private View view2131297009;
 
-  private View view2131296954;
+  private View view2131296973;
 
-  private View view2131296777;
+  private View view2131296791;
 
   @UiThread
   public AddBankCardActivity_ViewBinding(AddBankCardActivity target) {
@@ -40,7 +40,7 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_wangdian = Utils.findRequiredViewAsType(source, R.id.edit_wangdian, "field 'edit_wangdian'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tv_get_code' and method 'click'");
     target.tv_get_code = Utils.castView(view, R.id.tv_get_code, "field 'tv_get_code'", TextView.class);
-    view2131296987 = view;
+    view2131297009 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'edit_code'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_commit, "field 'tv_commit' and method 'click'");
     target.tv_commit = Utils.castView(view, R.id.tv_commit, "field 'tv_commit'", TextView.class);
-    view2131296954 = view;
+    view2131296973 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296777 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,11 +84,11 @@ public class AddBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = null;
     target.tv_commit = null;
 
-    view2131296987.setOnClickListener(null);
-    view2131296987 = null;
-    view2131296954.setOnClickListener(null);
-    view2131296954 = null;
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
+    view2131297009.setOnClickListener(null);
+    view2131297009 = null;
+    view2131296973.setOnClickListener(null);
+    view2131296973 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
   }
 }

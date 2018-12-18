@@ -4,7 +4,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.activity.CategoryDetailActivity;
+import com.yx.Pharmacy.activity.ProductCategoryDetailActivity;
 import com.yx.Pharmacy.adapter.ClassifyDetailAdapter;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.model.RightBean;
@@ -61,7 +61,7 @@ public class  SortDetailFragment extends BaseFragment {
             public void onItemClick(int position) {
 //                Toast.makeText(mContext, "当前点击的是=="+ mDatas.get(position).getCatname()+"catid=="+
 //                        mDatas.get(position).getCatid(), Toast.LENGTH_SHORT).show();
-                CategoryDetailActivity.startActivity(mContext,mDatas.get(position).getCatid(),mDatas.get(position).getCatname());
+                ProductCategoryDetailActivity.startActivity(mContext,mDatas.get(position).getCatid(),mDatas.get(position).getCatname());
             }
         });
 

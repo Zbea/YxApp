@@ -22,6 +22,7 @@ import java.lang.Override;
 public class SearchActivity_ViewBinding implements Unbinder {
   private SearchActivity target;
 
+<<<<<<< HEAD
   private View view2131296513;
 
   private View view2131296633;
@@ -35,6 +36,21 @@ public class SearchActivity_ViewBinding implements Unbinder {
   private View view2131296956;
 
   private View view2131296947;
+=======
+  private View view2131296521;
+
+  private View view2131296646;
+
+  private View view2131296616;
+
+  private View view2131296643;
+
+  private View view2131296569;
+
+  private View view2131296971;
+
+  private View view2131296962;
+>>>>>>> feature_1.0
 
   @UiThread
   public SearchActivity_ViewBinding(SearchActivity target) {
@@ -64,7 +80,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.rl_amin_window = Utils.findRequiredViewAsType(source, R.id.rl_amin_window, "field 'rl_amin_window'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.iv_shopping_car, "field 'iv_shopping_car' and method 'click'");
     target.iv_shopping_car = Utils.castView(view, R.id.iv_shopping_car, "field 'iv_shopping_car'", ImageView.class);
+<<<<<<< HEAD
     view2131296513 = view;
+=======
+    view2131296521 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -73,7 +93,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
     });
     target.tv_num = Utils.findRequiredViewAsType(source, R.id.tv_num, "field 'tv_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_zonghe, "method 'click'");
+<<<<<<< HEAD
     view2131296633 = view;
+=======
+    view2131296646 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,7 +105,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_price, "method 'click'");
+<<<<<<< HEAD
     view2131296605 = view;
+=======
+    view2131296616 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -89,7 +117,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "method 'click'");
+<<<<<<< HEAD
     view2131296630 = view;
+=======
+    view2131296643 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -97,7 +129,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_change_layout, "method 'click'");
+<<<<<<< HEAD
     view2131296560 = view;
+=======
+    view2131296569 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,7 +141,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_clear_history, "method 'click'");
+<<<<<<< HEAD
     view2131296956 = view;
+=======
+    view2131296971 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -113,7 +153,11 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_cancel, "method 'click'");
+<<<<<<< HEAD
     view2131296947 = view;
+=======
+    view2131296962 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -148,6 +192,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.iv_shopping_car = null;
     target.tv_num = null;
 
+<<<<<<< HEAD
     view2131296513.setOnClickListener(null);
     view2131296513 = null;
     view2131296633.setOnClickListener(null);
@@ -162,5 +207,21 @@ public class SearchActivity_ViewBinding implements Unbinder {
     view2131296956 = null;
     view2131296947.setOnClickListener(null);
     view2131296947 = null;
+=======
+    view2131296521.setOnClickListener(null);
+    view2131296521 = null;
+    view2131296646.setOnClickListener(null);
+    view2131296646 = null;
+    view2131296616.setOnClickListener(null);
+    view2131296616 = null;
+    view2131296643.setOnClickListener(null);
+    view2131296643 = null;
+    view2131296569.setOnClickListener(null);
+    view2131296569 = null;
+    view2131296971.setOnClickListener(null);
+    view2131296971 = null;
+    view2131296962.setOnClickListener(null);
+    view2131296962 = null;
+>>>>>>> feature_1.0
   }
 }

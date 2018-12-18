@@ -10,7 +10,10 @@ package com.yx.Pharmacy.view;
  */
 
 import com.yx.Pharmacy.model.CreateOrderModel;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 
 public interface ICreateOrderView {
     void showCreateResult(CreateOrderModel data);
+    void resultCartNum(MyOrderNumModel data);
+
 }

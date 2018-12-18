@@ -17,7 +17,7 @@ import java.lang.Override;
 public class CommendMsActivity_ViewBinding implements Unbinder {
   private CommendMsActivity target;
 
-  private View view2131296777;
+  private View view2131296791;
 
   @UiThread
   public CommendMsActivity_ViewBinding(CommendMsActivity target) {
@@ -33,7 +33,7 @@ public class CommendMsActivity_ViewBinding implements Unbinder {
     target.vp_order = Utils.findRequiredViewAsType(source, R.id.vp_order, "field 'vp_order'", ViewPager.class);
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296777 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class CommendMsActivity_ViewBinding implements Unbinder {
     target.vp_order = null;
     target.topic_viewpager_title = null;
 
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
   }
 }

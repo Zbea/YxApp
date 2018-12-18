@@ -24,6 +24,7 @@ import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.AddressModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -121,15 +122,10 @@ public class MyShopActivity
                 MyShopModel myShopModel = mAdapter.getData().get(position);
                 switch (view.getId()) {
                     case R.id.tv_cut:
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ITEM_ID, myShopModel.itemid);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
-                        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME,myShopModel.truename);
+                        saveShopStore(myShopModel);
                         getShortToastByString("切换门店成功");
+                        myShopModel.storeStutus=true;
+                        StoreManage.newInstance().saveStore(myShopModel);
                         finish();
                         break;
                     case R.id.tv_modifi:

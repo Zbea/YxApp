@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 #Mon Nov 05 14:45:38 CST 2018
 =======
 #Mon Dec 17 09:46:44 CST 2018
 >>>>>>> Stashed changes
+=======
+#Wed Dec 12 17:06:33 CST 2018
+>>>>>>> feature_1.0

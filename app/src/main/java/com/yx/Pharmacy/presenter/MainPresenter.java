@@ -15,6 +15,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.SplashData;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
@@ -63,5 +64,27 @@ public class MainPresenter {
                        super.onError(e);
                    }
                });
+    }
+
+    /**
+     *  获取本地url
+     */
+    public void getUrl(BaseActivity activity) {
+        HomeNet.getHomeApi().getUrlData().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<UrlBean>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<UrlBean> response) {
+                        if (response.getData()!=null) {
+                            mView.getUrl(response.getData());
+                        }else {
+                            activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
     }
 }

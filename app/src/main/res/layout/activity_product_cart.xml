@@ -39,16 +39,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1">
+                <!--<ScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:descendantFocusability="blocksDescendants">-->
+
             <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_shop_cart"
                     android:background="@color/color_f6f6f6"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
             </android.support.v4.widget.NestedScrollView>
+                    <!--</RelativeLayout>-->
+            <!--</ScrollView>-->
             </android.support.v4.widget.SwipeRefreshLayout>
             <View
                 android:background="@color/color_eaeaea"
@@ -87,7 +101,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_10"
                     android:textColor="@color/black"
                     android:text="应付金额"
                     android:layout_width="wrap_content"

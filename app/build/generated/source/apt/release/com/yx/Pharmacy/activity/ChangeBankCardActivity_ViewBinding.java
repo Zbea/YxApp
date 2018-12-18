@@ -16,11 +16,16 @@ import java.lang.Override;
 public class ChangeBankCardActivity_ViewBinding implements Unbinder {
   private ChangeBankCardActivity target;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   private View view2131296987;
+=======
+  private View view2131297000;
+>>>>>>> feature_1.0
 
-  private View view2131296777;
+  private View view2131296783;
 
+<<<<<<< HEAD
   private View view2131296954;
 =======
   private View view2131297002;
@@ -29,6 +34,9 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
 
   private View view2131296966;
 >>>>>>> Stashed changes
+=======
+  private View view2131296965;
+>>>>>>> feature_1.0
 
   @UiThread
   public ChangeBankCardActivity_ViewBinding(ChangeBankCardActivity target) {
@@ -49,11 +57,15 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = Utils.findRequiredViewAsType(source, R.id.edit_code, "field 'edit_code'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_get_code, "field 'tv_get_code' and method 'click'");
     target.tv_get_code = Utils.castView(view, R.id.tv_get_code, "field 'tv_get_code'", TextView.class);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296987 = view;
 =======
     view2131297002 = view;
 >>>>>>> Stashed changes
+=======
+    view2131297000 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,11 +73,15 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296777 = view;
 =======
     view2131296784 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296783 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -73,11 +89,15 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_commit, "method 'click'");
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296954 = view;
 =======
     view2131296966 = view;
 >>>>>>> Stashed changes
+=======
+    view2131296965 = view;
+>>>>>>> feature_1.0
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -102,6 +122,7 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
     target.edit_code = null;
     target.tv_get_code = null;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     view2131296987.setOnClickListener(null);
     view2131296987 = null;
@@ -117,5 +138,13 @@ public class ChangeBankCardActivity_ViewBinding implements Unbinder {
     view2131296966.setOnClickListener(null);
     view2131296966 = null;
 >>>>>>> Stashed changes
+=======
+    view2131297000.setOnClickListener(null);
+    view2131297000 = null;
+    view2131296783.setOnClickListener(null);
+    view2131296783 = null;
+    view2131296965.setOnClickListener(null);
+    view2131296965 = null;
+>>>>>>> feature_1.0
   }
 }

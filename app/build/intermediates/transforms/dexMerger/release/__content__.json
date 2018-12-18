@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [{"name":"main","index":0,"scopes":["PROJECT","SUB_PROJECTS","MAIN_SPLIT","EXTERNAL_LIBRARIES"],"types":["DEX"],"format":"DIRECTORY","present":true}]
 =======
 [{"name":"main","index":0,"scopes":["SUB_PROJECTS","EXTERNAL_LIBRARIES","PROJECT","MAIN_SPLIT"],"types":["DEX"],"format":"DIRECTORY","present":true}]
 >>>>>>> Stashed changes
+=======
+[{"name":"main","index":0,"scopes":["EXTERNAL_LIBRARIES","MAIN_SPLIT","SUB_PROJECTS","PROJECT"],"types":["DEX"],"format":"DIRECTORY","present":true}]
+>>>>>>> feature_1.0

@@ -30,8 +30,5 @@ public interface IProductDetailView {
 
     void errorNetView();
 
-    void showShopData(List<MyShopModel> data);
-
-    void hideFlash();
 
 }

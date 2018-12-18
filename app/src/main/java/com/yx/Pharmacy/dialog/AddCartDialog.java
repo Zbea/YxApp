@@ -39,7 +39,7 @@ public class AddCartDialog {
         this.type=type;
     }
     public AddCartDialog builder() {
-        alertDialog = new Dialog(context, R.style.mycustom_dialog);
+        alertDialog = new Dialog(context, R.style.DialogStyle);
         alertDialog.show();
         Window win = alertDialog.getWindow();
         win.setWindowAnimations(R.style.mystyle);
@@ -73,31 +73,34 @@ public class AddCartDialog {
         tvFactory.setText(data.scqy);
         TextView tvPrice=win.findViewById(R.id.tv_price);
         TextView tvInfo=win.findViewById(R.id.tv_info);
-        TextView tvRiqi=win.findViewById(R.id.tv_riqi);
+        TextView tvRiqi=win.findViewById(R.id.tv_pihao);
         TextView tvYouxiao=win.findViewById(R.id.tv_youxiao);
-        tvRiqi.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.birthtime) * 1000));
+        tvRiqi.setText(data.ph1);
         tvYouxiao.setText(DensityUtils.getDayMothDate(DensityUtils.parseLong(data.validtime) * 1000));
         AmountView amountView=win.findViewById(R.id.amount_view);
         amountView.setMinNum(DensityUtils.parseInt(data.minimum));
         amountView.setAddNum(DensityUtils.parseInt(data.addmum));
-        if (TextUtils.equals(data.type,"1")&&type==1)
+        amountView.setIsChanage(true);
+        if (TextUtils.equals(data.type,"1")||TextUtils.equals(data.type,"2"))
         {
-            tvPrice.setText("￥"+data.price);
-            tvInfo.setText("（每人限购"+data.flashmax+"件）");
-            amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
-        }
-        else
-        {
-            if (TextUtils.equals(data.type,"1"))
+            if (type==1)
             {
-                tvPrice.setText("￥"+data.oldprice);
+                tvPrice.setText("￥"+data.price);
+                tvInfo.setText("（剩余库存"+String.valueOf(Double.parseDouble(data.flashmax)<=0?0:data.flashmax)+"）");
+                amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
             }
             else
             {
-                tvPrice.setText("￥"+data.price);
+                tvPrice.setText("￥"+data.oldprice);
+                tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
+                amountView.setGoods_storage((int)data.max);
             }
-            tvInfo.setText("（每人限购"+data.max+"件）");
-            amountView.setGoods_storage(data.max);
+        }
+        else
+        {
+            tvPrice.setText("￥"+data.price);
+            tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
+            amountView.setGoods_storage((int)data.max);
         }
         amountView.setAmount((int)Double.parseDouble(data.minimum));
 

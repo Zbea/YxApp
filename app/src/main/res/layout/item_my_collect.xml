@@ -9,17 +9,29 @@
     <RelativeLayout
         android:id="@+id/rl_click"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_130">
+        android:layout_height="@dimen/dp_110">
 
         <ImageView
-            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_10"
             android:layout_centerVertical="true"
             android:id="@+id/iv_collect"
             android:layout_width="@dimen/dp_90"
             android:layout_height="@dimen/dp_90" />
+        <TextView
+            android:id="@+id/tv_validity_time"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/sp_8"
+            android:text="有效期:"
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/icon_validity_bg"/>
 
         <LinearLayout
-            android:layout_marginLeft="@dimen/dp_125"
+            android:layout_marginLeft="@dimen/dp_110"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -29,7 +41,7 @@
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:id="@+id/tv_title"
-                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
                 android:textSize="@dimen/sp_16"
                 android:textColor="@color/color_333333"
                 android:text="kjdkjflkdjakfd"

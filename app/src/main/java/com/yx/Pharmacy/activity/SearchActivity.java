@@ -25,13 +25,12 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.adapter.CategoryGridAdapter;
+import com.yx.Pharmacy.adapter.ProductCategoryGridAdapter;
 import com.yx.Pharmacy.adapter.DrugTagAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.manage.CartCountManage;
-import com.yx.Pharmacy.manage.ProductMaxManage;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.TagModel;
@@ -51,7 +50,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class SearchActivity extends BaseActivity implements OnTagSelectListener, ISearchView, CategoryGridAdapter.AddListener {
+public class SearchActivity extends BaseActivity implements OnTagSelectListener, ISearchView, ProductCategoryGridAdapter.AddListener {
 
     @BindView(R.id.flowlayout_history)
     FlowTagLayout flowlayout_history;
@@ -104,7 +103,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
     RecyclerView recyclerview;
     @BindView(R.id.ll_nodata)
     LinearLayout ll_nodata;
-    private CategoryGridAdapter mAdapter;
+    private ProductCategoryGridAdapter mAdapter;
     private List<DrugModel>drugModels=new ArrayList<>();
 
 
@@ -152,7 +151,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         iv_layout_mode.setImageResource(R.drawable.twck);
         final GridLayoutManager layoutManager=new GridLayoutManager(this,2);
         recyclerview.setLayoutManager(layoutManager);
-        mAdapter=new CategoryGridAdapter(this, R.layout.item_category_detail,drugModels,1);
+        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_detail,drugModels,1);
         recyclerview.setAdapter(mAdapter);
         addListener();
     }
@@ -160,7 +159,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         curLayout=mode_linear;
         iv_layout_mode.setImageResource(R.drawable.dtmock);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter=new CategoryGridAdapter(this, R.layout.item_category_linear,drugModels,0);
+        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_linear,drugModels,0);
         recyclerview.setAdapter(mAdapter);
         addListener();
     }
@@ -489,7 +488,15 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                 flowlayout_history.setVisibility(View.GONE);
                 break;
             case R.id.tv_cancel:
-                finish();
+                if(!TextUtils.isEmpty(edit_search.getText().toString().trim())){
+                    ComMethodsUtil.hideSoftKeyBoard(SearchActivity.this);
+                    //TODO 搜索
+                    ll_tuijian.setVisibility(View.GONE);
+                    ll_search_result.setVisibility(View.VISIBLE);
+                    page=1;
+                    mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
+                    addSearchHistory(edit_search.getText().toString());
+                }
                 break;
             case R.id.iv_shopping_car:
                 ProductCartActivity.startActivity(this);

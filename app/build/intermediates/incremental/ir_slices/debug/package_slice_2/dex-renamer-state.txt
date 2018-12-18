@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Dec 17 15:48:51 CST 2018
+=======
+#Thu Dec 13 11:23:07 CST 2018
+>>>>>>> feature_1.0
 base.0=D\:\\androidSpace\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

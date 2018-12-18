@@ -62,7 +62,8 @@ public class HomeDataModel {
         public String    disprice;
         public String    minimum;
         public String    maxmum;
-        public String    endtime;
+        public String    validend;
+        public long    endtime;
         public String gg;
         public String scqy;
         public String    sales;
@@ -72,6 +73,7 @@ public class HomeDataModel {
         public String    salesacti;
         public String note;
         public String    levelid;
+        public String     type;
         public String    starttime;
         public String     presale; // 预售 0:不是预售  1 预售
         public String     presalenote;// 预售说明

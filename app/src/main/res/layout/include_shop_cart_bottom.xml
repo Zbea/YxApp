@@ -42,6 +42,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="@dimen/dp_40">
         <TextView
             android:text="优惠总金额"

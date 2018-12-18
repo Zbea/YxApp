@@ -15,9 +15,9 @@ import java.lang.Override;
 public class MyBankActivity_ViewBinding implements Unbinder {
   private MyBankActivity target;
 
-  private View view2131296777;
+  private View view2131296791;
 
-  private View view2131296322;
+  private View view2131296329;
 
   @UiThread
   public MyBankActivity_ViewBinding(MyBankActivity target) {
@@ -33,7 +33,7 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = Utils.findRequiredViewAsType(source, R.id.tv_bank, "field 'tv_bank'", TextView.class);
     target.tv_card_num = Utils.findRequiredViewAsType(source, R.id.tv_card_num, "field 'tv_card_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296777 = view;
+    view2131296791 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -41,7 +41,7 @@ public class MyBankActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.cardView, "method 'click'");
-    view2131296322 = view;
+    view2131296329 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,9 +61,9 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = null;
     target.tv_card_num = null;
 
-    view2131296777.setOnClickListener(null);
-    view2131296777 = null;
-    view2131296322.setOnClickListener(null);
-    view2131296322 = null;
+    view2131296791.setOnClickListener(null);
+    view2131296791 = null;
+    view2131296329.setOnClickListener(null);
+    view2131296329 = null;
   }
 }

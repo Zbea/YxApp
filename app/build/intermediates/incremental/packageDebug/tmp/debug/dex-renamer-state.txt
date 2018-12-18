@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 #Mon Nov 05 17:58:21 CST 2018
 =======
 #Mon Dec 17 10:06:51 CST 2018
 >>>>>>> Stashed changes
+=======
+#Wed Dec 12 17:55:42 CST 2018
+>>>>>>> feature_1.0
 path.1=classes.dex
 path.0=classes.dex
 renamed.10=classes11.dex

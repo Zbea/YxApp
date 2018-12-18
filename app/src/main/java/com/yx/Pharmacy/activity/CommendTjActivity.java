@@ -132,13 +132,13 @@ public class CommendTjActivity
         if(TextUtils.equals(mType, "3")) {
             LinearLayoutManager manager = new LinearLayoutManager(this);
             mRvProduct.setLayoutManager(manager);
-            mAdapter = new CommendProductAdapter(R.layout.item_home_product_minus, mType);
+            mAdapter = new CommendProductAdapter(R.layout.item_home_product_minus);
         }
         else
         {
             GridLayoutManager manager = new GridLayoutManager(this, 2);
             mRvProduct.setLayoutManager(manager);
-            mAdapter = new CommendProductAdapter(R.layout.item_home_product_special, mType);
+            mAdapter = new CommendProductAdapter(R.layout.item_home_product_special);
         }
 
         mRvProduct.setAdapter(mAdapter);

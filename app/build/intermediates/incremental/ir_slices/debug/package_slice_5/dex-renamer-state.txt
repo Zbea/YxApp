@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 #Mon Nov 05 18:00:35 CST 2018
 =======
 #Mon Dec 17 10:06:51 CST 2018
 >>>>>>> Stashed changes
+=======
+#Wed Dec 12 17:55:41 CST 2018
+>>>>>>> feature_1.0
 base.0=D\:\\androidSpace\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex
