@@ -1,6 +1,7 @@
 package com.yx.Pharmacy.adapter;
 
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.widget.WrapContentLinearLayoutManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +32,10 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
 
     private OnClickShopCartListener mOnShopCartListener;
     private ListDeviderDecoration mDecoration;
-
+    private List<ShopCartProductAdapter> adapters=new ArrayList<>();
+    private  int pos;
+    private boolean isBoolean;
+    private boolean isDelete;
     public ShopCartAdapter(int layoutResId) {
         super(layoutResId);
     }
@@ -61,12 +66,15 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
             ll_type.setVisibility(View.GONE);
         }
 
-        if (TextUtils.equals(item.activityname, "失效商品"))
+        if (TextUtils.equals(item.activityname, "失效商品")&&TextUtils.equals(type, "0"))
         {
             ll_open.setVisibility(View.VISIBLE);
             product.setVisibility(View.GONE);
             ll_close.setVisibility(View.GONE);
             tv_clear.setVisibility(View.VISIBLE);
+            ll_type.setVisibility(View.VISIBLE);
+            ivType.setImageResource(R.drawable.icon_cart_disable_product);
+            type="11111";
         }
         else
         {
@@ -79,18 +87,37 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         helper.setText(R.id.tv_type,item.activityname);
         product.setNestedScrollingEnabled(false);
 
-        if (product.getAdapter()!=null) {
-            for (int i = 0; i < item.goods.size(); i++) {
-                ((ShopCartProductAdapter)product.getAdapter()).setNewData(item.goods);
-                ((ShopCartProductAdapter)product.getAdapter()).notifyItemChanged(i);
-            }
-        }else {
-            ShopCartProductAdapter adapter = new ShopCartProductAdapter(R.layout.item_shop_cart_product,type);
-            product.setLayoutManager(new WrapContentLinearLayoutManager(UiUtil.getContext()));
-            ((DefaultItemAnimator) product.getItemAnimator()).setSupportsChangeAnimations(false);
-            product.setAdapter(adapter);
-            adapter.setNewData(item.goods);
+        if (item.goods.size()==0)
+        {
+            ll_type.setVisibility(View.GONE);
+        }
 
+        if (adapters.size()>helper.getAdapterPosition()&&adapters.get(helper.getAdapterPosition())!=null) {
+            L.i("LLLLLLLLLLLLLLLLLLLL");
+            if (isBoolean)
+            {
+                for (int i = 0; i < item.goods.size(); i++) {
+                    adapters.get(helper.getAdapterPosition()).notifyItemChanged(i,0);
+                }
+            }
+            else
+            {
+                if (!isDelete)
+                    adapters.get(helper.getAdapterPosition()).notifyItemChanged(pos,0);
+                isDelete=false;
+            }
+//            adapters.get(helper.getAdapterPosition()).setNewData(item.goods);
+        }else
+          {
+            ShopCartProductAdapter adapter = new ShopCartProductAdapter(R.layout.item_shop_cart_product,type);
+              product.setLayoutManager(new WrapContentLinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
+//            product.setLayoutManager(new WrapContentLinearLayoutManager(UiUtil.getContext()));
+//            ((DefaultItemAnimator) product.getItemAnimator()).setSupportsChangeAnimations(false);
+            product.setAdapter(adapter);
+//              product.setHasFixedSize(false);
+            adapter.setNewData(item.goods);
+            adapters.add(adapter);
+            L.i("dddddddddddddddddddddddd");
             if (mDecoration==null) {
                 mDecoration = new ListDeviderDecoration(UiUtil.getContext());
                 product.addItemDecoration(mDecoration);
@@ -99,11 +126,13 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
                 product.addItemDecoration(mDecoration);
             }
 
-
             adapter.setOnShopGoodListener(new ShopCartProductAdapter.OnShopGoodListener() {
                 @Override
-                public void onAumountChangeListener(View view, int amount, String goodsid,boolean isEdit,int addnum) {
+                public void onAumountChangeListener(View view, int amount, String goodsid, int position, boolean isEdit, int addnum) {
                     if (mOnShopCartListener!=null) {
+                        isBoolean=false;
+                        pos=position;
+//                        adapters.get(helper.getAdapterPosition()).notifyItemChanged(position);
                         mOnShopCartListener.aumontChange(view,amount,goodsid,item.activityid,isEdit,helper.getAdapterPosition(),addnum);
                     }
                 }
@@ -114,16 +143,18 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
                 public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                     switch (view.getId()) {
                         case R.id.ll_checkall:
-                            ShopCartModel.GoodsBean bean = item.goods.get(position);
+                            ShopCartModel.GoodsBean bean =item.goods.get(position);
                             if (TextUtils.equals(bean.quehuo, "false")&&TextUtils.equals(bean.isvalid, "false")) {
                                 bean.isSelect = !bean.isSelect;
-                                ((ShopCartProductAdapter)product.getAdapter()).setData(position,bean);
+                                isBoolean=false;
+                                pos=position;
+//                                adapters.get(helper.getAdapterPosition()).notifyItemChanged(position);
                                 if (mOnShopCartListener!=null) {
                                     mOnShopCartListener.modifySelect(helper.getAdapterPosition());
                                 }
                             }
                             break;
-                        case R.id.content:
+                        case R.id.iv_product:
                             ShopCartModel.GoodsBean bean1 = item.goods.get(position);
                             if (mOnShopCartListener!=null) {
                                 mOnShopCartListener.toDetail(adapter,bean1.goodsid);
@@ -168,30 +199,71 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         helper.addOnClickListener(R.id.tv_clear);
 
         boolean isHaveCoupon = false;
+        boolean isOkCoupon=false;
         if (item.couponList!=null&&item.couponList.size()>0) {
             for (ShopCartModel.CouponListBean couponListBean : item.couponList) {
                 if (couponListBean.isSelectCoupon) {
-                    isHaveCoupon = true;
+                    isOkCoupon = true;
+                    isHaveCoupon=true;
                     helper.setText(R.id.tv_coupon,couponListBean.couponcontent);
+                    break;
+                }
+                else
+                {
+                    isOkCoupon = false;
+                    isHaveCoupon=true;
                 }
             }
         }
+        else
+        {
+            isHaveCoupon = false;
+        }
+
         if (!isHaveCoupon) {
             helper.setText(R.id.tv_coupon,"去领券");
         }
-        LogUtils.e("end = "+item.type+"  ----  "+System.currentTimeMillis()+"     -----------**");
+        else
+        {
+            if (!isOkCoupon)
+            {
+                helper.setText(R.id.tv_coupon,item.couponList.get(0).couponcontent);
+            }
+        }
     }
 
     public void setCheckAll(boolean checkAll) {
+        isBoolean=true;
         List<ShopCartModel.ShopCartListBean> data = getData();
-        for (int i = 0; i < data.size(); i++) {
-            ShopCartModel.ShopCartListBean shopCartListBean = data.get(i);
-            for (ShopCartModel.GoodsBean good : shopCartListBean.goods) {
-                if (!TextUtils.equals(good.quehuo, "true")&&!TextUtils.equals(good.isvalid, "true")) {
-                    good.isSelect = checkAll;
+        int count=getData().size();
+        if (count>0)
+        {
+            for (int i = 0; i < count; i++) {
+                ShopCartModel.ShopCartListBean shopCartListBean = data.get(i);
+                for (int j = 0; j <shopCartListBean.goods.size() ; j++) {
+                    ShopCartModel.GoodsBean good=shopCartListBean.goods.get(j);
+                    if (!TextUtils.equals(good.quehuo, "true")&&!TextUtils.equals(good.isvalid, "true")) {
+                        good.isSelect = checkAll;
+                    }
                 }
+                notifyItemChanged(i,0);
             }
-            notifyItemChanged(i);
+        }
+    }
+
+    public void setRefresh()
+    {
+        adapters.clear();
+    }
+
+    public void setDelete(int cartPosition,int position)
+    {
+        pos=position;
+        adapters.get(cartPosition).notifyItemRemoved(position);
+        if (getData().get(cartPosition).goods.size()==0)
+        {
+            isDelete=true;
+            adapters.remove(cartPosition);
         }
     }
 

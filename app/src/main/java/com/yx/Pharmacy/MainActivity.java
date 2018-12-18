@@ -21,9 +21,7 @@ package com.yx.Pharmacy;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
@@ -50,10 +48,12 @@ import com.yx.Pharmacy.fragment.CategoryFragment;
 import com.yx.Pharmacy.fragment.HomePageFragment;
 import com.yx.Pharmacy.fragment.MessageFragment;
 import com.yx.Pharmacy.fragment.MyFragment;
-import com.yx.Pharmacy.fragment.ShopCartFragment;
+import com.yx.Pharmacy.manage.LocalUrlManage;
 import com.yx.Pharmacy.model.SplashData;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.presenter.MainPresenter;
 import com.yx.Pharmacy.receiver.ReceiverDialogManage;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IMainView;
@@ -91,6 +91,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
     TextView tv_my;
     //当前选中的页面
     private int curPage = 3;
+    private Fragment currentFragment;
 
     private MainPresenter mPresenter;
 
@@ -98,7 +99,6 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
     private MessageFragment fragment1;
     private CategoryFragment fragment2;
     private HomePageFragment fragment3;
-    private ShopCartFragment fragment4;
     private MyFragment fragment5;
     private SelectStoreUtil mSelectStoreUtil;
 
@@ -140,6 +140,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         showFragment(3);
         mPresenter = new MainPresenter(this);
         mPresenter.getSplashAdData(this);
+        mPresenter.getUrl(this);
         if (SPUtil.getBoolean(mContext,"mainFrist",true))
         {
             new FunctionGuidDialog(mContext,0).builder();
@@ -152,6 +153,9 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         if (type.equals("gotohome")) {
             showFragment(3);
         }
+//        if (type.equals("changeStore")) {
+//            notifyData();
+//        }
     }
 
     @Override
@@ -166,8 +170,12 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         int start_in = intent.getIntExtra("start_in", 0);
         if (start_in == 1) {
             showFragment(3);
-        } else if (start_in == 2) {
+        }
+        else if (start_in == 2) {
             getMyShop();
+        }
+        else if (start_in == 0) {
+            notifyData();
         }
     }
 
@@ -185,7 +193,6 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
 
                 break;
             case R.id.ll_shopping_car://购物车
-//                showFragment(4);
                 ProductCartActivity.startActivity(this);
                 break;
             case R.id.ll_my://我的
@@ -203,55 +210,53 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
 
     public void showFragment(int page) {
         FragmentTransaction ft = fragmentManager.beginTransaction();
-
         // 想要显示一个fragment,先隐藏所有fragment，防止重叠
         hideFragments(ft);
         switch (page) {
             case 1:
                 // 如果fragment1已经存在则将其显示出来
                 if (fragment1 != null) {
-                    ft.show(fragment1);
+                    ft.hide(currentFragment).show(fragment1);
                 }
                 // 否则添加fragment1，注意添加后是会显示出来的，replace方法也是先remove后add
                 else {
                     fragment1 = new MessageFragment();
                     ft.add(R.id.ll_main_container, fragment1, MessageFragment.class.getName().toString());
                 }
+                currentFragment=fragment1;
                 break;
             case 2:
                 if (fragment2 != null)
-                    ft.show(fragment2);
+                    ft.hide(currentFragment).show(fragment2);
                 else {
                     fragment2 = new CategoryFragment();
                     ft.add(R.id.ll_main_container, fragment2, CategoryFragment.class.getName().toString());
                 }
+                currentFragment=fragment2;
                 break;
             case 3:
                 if (fragment3 != null) {
-                    ft.show(fragment3);
+                    ft.hide(currentFragment).show(fragment3);
                 } else {
                     fragment3 = new HomePageFragment();
                     ft.add(R.id.ll_main_container, fragment3, HomePageFragment.class.getName().toString());
                 }
+                currentFragment=fragment3;
                 break;
             case 4:
-                if (fragment4 != null) {
-                    ft.show(fragment4);
-                } else {
-                    fragment4 = new ShopCartFragment();
-                    ft.add(R.id.ll_main_container, fragment4);
-                }
+
                 break;
             case 5:
                 if (fragment5 != null) {
-                    ft.show(fragment5);
+                    ft.hide(currentFragment).show(fragment5);
                 } else {
                     fragment5 = new MyFragment();
                     ft.add(R.id.ll_main_container, fragment5, MyFragment.class.getName().toString());
                 }
+                currentFragment=fragment5;
                 break;
         }
-        ft.commit();
+        ft.commitAllowingStateLoss();
         setSelectPage(page);
     }
 
@@ -263,8 +268,6 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
             ft.hide(fragment2);
         if (fragment3 != null)
             ft.hide(fragment3);
-        if (fragment4 != null)
-            ft.hide(fragment4);
         if (fragment5 != null)
             ft.hide(fragment5);
     }
@@ -299,6 +302,14 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         }
     }
 
+    @Override
+    public void getUrl(UrlBean data) {
+        if (data!=null)
+        {
+            LocalUrlManage.newInstance().setCount(data);
+        }
+    }
+
     public void notifyData() {
         if (fragment1 != null)
             fragment1.initData();
@@ -306,15 +317,12 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
             fragment2.initData();
         if (fragment3 != null)
             fragment3.initData();
-        if (fragment4 != null)
-            fragment4.initData();
         if (fragment5 != null)
             fragment5.initView();
     }
 
     public void getMyShop() {
-        if (fragment3 != null)
-            fragment3.initMyShop();
+       mSelectStoreUtil=new SelectStoreUtil(this,null);
     }
 
     @Override

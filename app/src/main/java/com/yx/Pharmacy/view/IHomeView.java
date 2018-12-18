@@ -18,11 +18,11 @@ public interface IHomeView {
 
     void showAdvanceData(HomeAdvanceModel data);
 
-    void showShopData(List<MyShopModel> data);
-
     void showProductListResult(List<DrugModel> data);
 
     void addProductListResult(List<DrugModel> data);
+
+    void showMessageListResult(HomeAdvanceModel data);
 
     void hideFlash();
 }

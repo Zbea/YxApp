@@ -106,7 +106,7 @@
             <TextView
                 android:paddingRight="@dimen/dp_12"
                 android:paddingLeft="@dimen/dp_54"
-                android:text="陈生 15602201480"
+                android:text="0755-23776653"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_12"
                 android:layout_width="match_parent"

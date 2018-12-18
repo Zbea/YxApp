@@ -30,11 +30,13 @@ public class ShopCartModel {
 
         public String activitytype;
         public String               activityname;
+        public boolean isUnvalid;
         public String                  type;
         public String                  activityid;
         public String               sort;
         public List<CouponListBean> couponList;
         public List<GoodsBean>      goods;
+        public String alldiscount;
 
     }
 
@@ -94,10 +96,12 @@ public class ShopCartModel {
         public String     minimum;
         public String     addmum;
         public String     goodsid;
+        public String     goodsType;
         public String     max;
         public String quehuo;
         public String     price;
         public String     endtimes;
+        public String     validtime;
         public String     starttime;
         public String     limitnum;
         public String     oprice;
@@ -112,30 +116,25 @@ public class ShopCartModel {
 
 
         /**
-         * goodsname : 颈复康 颈复康颗粒 5g*10袋（活血通络 散风止痛 用于风湿瘀阻所致的颈椎病）
-         * goodsid : 27
-         * goodsthumb : http://120.79.62.56:8806/file/upload/201807/07/103922592.png.thumb.png
-         * goodsgg : 5g*10袋*1
-         */
-
-        public GiftInfoBean       giftInfo;
-        /**
          * limit : 10
          * give : 1
          */
 
         public List<GiftListBean> giftList;
 
-        public static class GiftInfoBean {
-            public String goodsname;
-            public String    goodsid;
-            public String goodsthumb;
-            public String goodsgg;
-        }
+
 
         public static class GiftListBean {
             public String limit;
             public String give;
+            public GiftInfoBean       giftInfo;
+
+            public static class GiftInfoBean {
+                public String goodsname;
+                public String    goodsid;
+                public String goodsthumb;
+                public String goodsgg;
+            }
         }
     }
 }

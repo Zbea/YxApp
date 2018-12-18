@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.adapter.WalletListAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBar;
@@ -96,6 +97,15 @@ public class MyWalletActivity extends BaseActivity implements IMyWalletView {
         recyclerview.setLayoutManager(layoutManager);
         mAdapter=new WalletListAdapter(R.layout.item_my_integral,wallatModels);
         recyclerview.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                if (!TextUtils.isEmpty(mAdapter.getData().get(position).orderid))
+                {
+                    OrderDetailActivity.startActivity(mContext,mAdapter.getData().get(position).orderid);
+                }
+            }
+        });
 
         recyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override

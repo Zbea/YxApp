@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,9 @@
     android:fitsSystemWindows="true"
     android:clipToPadding="true">
 
-    <include layout="@layout/include_title"/>
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title"/>
 
 
     <com.yx.Pharmacy.widget.PagerSlidingTabStrip
@@ -17,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="top"
+        android:layout_below="@+id/include_title"
         android:background="@drawable/white_bg"
         app:pstsDefTextColor="@color/color_606060"
         app:pstsDividerColor="#00000000"
@@ -33,10 +36,19 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_coupon"
+        android:layout_below="@+id/topic_viewpager_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <ImageView
+        android:id="@+id/iv_goto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_coupon_goto"/>
 
 
-
-</LinearLayout>
+</RelativeLayout>

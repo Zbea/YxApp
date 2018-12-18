@@ -14,6 +14,7 @@ import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
 import com.yx.Pharmacy.net.ProgressSubscriber;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -53,7 +54,7 @@ public class ShopCartPresenter {
 
                    @Override
                    public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
+                       mView.showFailView();
                        super.onError(e);
                    }
                });
@@ -70,15 +71,16 @@ public class ShopCartPresenter {
                    @Override
                    public void onSuccess(BasisBean<String> response) {
                        if (TextUtils.equals(response.getCode(), "200")) {
-                           mView.updateResult();
-                           CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
+                           if (!TextUtils.isEmpty(response.getExtention()))
+                           {
+                               mView.updateResult();
+                               CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
+                           }
                        }
                    }
 
                    @Override
                    public void onError(Throwable e) {
-                       LogUtils.e("error========="+e.toString());
-                       activity.getShortToastByString("修改失败");
                        super.onError(e);
                    }
                });
@@ -96,8 +98,11 @@ public class ShopCartPresenter {
                    public void onSuccess(BasisBean<String> response) {
                        activity.getShortToastByString(response.getAlertmsg());
                        if (TextUtils.equals(response.getCode(), "200")) {
-                           CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
-                           mView.deleteSuccess();
+                           if (!TextUtils.isEmpty(response.getExtention()))
+                           {
+                               CartCountManage.newInstance().refresh(Integer.parseInt(response.getExtention()));
+                               mView.deleteSuccess();
+                           }
                        }
                    }
 
@@ -111,7 +116,7 @@ public class ShopCartPresenter {
 
     public void checkMoney(BaseActivity activity, String cartdata) {
         cartdata=cartdata.replace("\\","");
-        LogUtils.e(cartdata);
+        L.i(cartdata);
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("cartdata",NetUtil.isStringNull(cartdata));
         HomeNet.getHomeApi().checkMoney(urlMap).subscribeOn(Schedulers.io())

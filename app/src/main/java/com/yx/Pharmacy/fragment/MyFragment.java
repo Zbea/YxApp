@@ -29,12 +29,17 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.manage.LocalUrlManage;
+import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.MyOrderNumModel;
+import com.yx.Pharmacy.model.MyShopModel;
+import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.MyPresenter;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IMyOrderNumView;
 import com.yx.Pharmacy.widget.RoundImageView;
@@ -72,6 +77,10 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     TextView tvDoneNum;
     @BindView(R.id.tv_after_num)
     TextView tvAfterNum;
+    @BindView(R.id.tv_my_money)
+    TextView tvMyMoney;
+    @BindView(R.id.tv_my_coupon)
+    TextView tvMyCoupon;
     Unbinder unbinder;
     private String mAvatar;
     private boolean mIsFirstLoad = true;
@@ -99,6 +108,14 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     protected void init() {
         mImmersionBar = ImmersionBar.with(this);
         mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
+
+        StoreManage.newInstance().setStoreManageListener(new StoreManage.StoreManageListener() {
+            @Override
+            public void onRefresh(MyShopModel data) {
+                initView();
+            }
+        });
+
         initView();
     }
 
@@ -107,6 +124,9 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             R.id.ll_my_coupons, R.id.ll_waitto_pay, R.id.ll_waitto_send, R.id.ll_waitto_receive, R.id.ll_youjiang_task, R.id.tv_user_name,
             R.id.ll_completed, R.id.ll_after_sales, R.id.ll_have_need, R.id.ll_about, R.id.ll_accout_security})
     public void onclick(View v) {
+
+        UrlBean urlBean=LocalUrlManage.newInstance().getUrlBean();
+
         switch (v.getId()) {
             case R.id.rl_setting://设置
                 if (TextUtils.isEmpty(NetUtil.getToken())) {
@@ -116,10 +136,16 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 SettingActivity.startActivity(mContext);
                 break;
             case R.id.ll_feedback:// 退换政策
-                HHActivity.startActivity(mContext, Constants.WEB_EXCHANGE, 1);
+                if (urlBean!=null)
+                {
+                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().exchange,1);
+                }
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
-                HHActivity.startActivity(mContext, Constants.WEB_PRIZETASK);
+                if (urlBean!=null)
+                {
+                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().prizetask);
+                }
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);
@@ -130,8 +156,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyOrderListActivity.startActivity(mContext);
@@ -185,8 +210,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyCollectActivity.startActivity(mContext);
@@ -204,8 +228,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 HaveNeedActivity.startActivity(mContext);
@@ -223,8 +246,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 QiyeZizhiActivity.startActivity(mContext);
@@ -238,8 +260,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 MyCouponActivity.startActivity(mContext);
@@ -250,8 +271,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(0);
@@ -262,8 +282,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(1);
@@ -274,8 +293,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(2);
@@ -286,8 +304,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 goOrder(3);
@@ -298,8 +315,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                     return;
                 }
                 if (TextUtils.isEmpty(NetUtil.getStoreid())) {
-                    MainActivity mainActivity = (MainActivity) mContext;
-                    mainActivity.getMyShop();
+                    setChooseStore();
                     return;
                 }
                 AfterSaleActivity.startActivity(mContext);
@@ -314,7 +330,7 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
     public void initView() {
         presenter=new MyPresenter(this);
-        if (!TextUtils.isEmpty(NetUtil.getToken())&!TextUtils.isEmpty(NetUtil.getStoreid()))
+        if (!TextUtils.isEmpty(NetUtil.getToken())&&!TextUtils.isEmpty(NetUtil.getStoreid()))
         {
             presenter.getOrderNum((BaseActivity) mContext);
         }
@@ -326,8 +342,9 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         if (TextUtils.isEmpty(NetUtil.getToken())) {
             tv_user_name.setText("登录/注册");
         } else {
-            String truename = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-            tv_user_name.setText(TextUtils.isEmpty(truename) ? SPUtil.getString(UiUtil.getContext(), Constants.KEY_MOBILE) : truename);
+            MyShopModel myShopModel=StoreManage.newInstance().getStore();
+            String truename = myShopModel.storename;
+            tv_user_name.setText(TextUtils.isEmpty(truename) ? myShopModel.mobile : truename);
         }
 
         if (TextUtils.isEmpty(mAvatar)) {
@@ -354,10 +371,13 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         } else {
             if (!TextUtils.equals(mStoreid, NetUtil.getStoreid())) {// 切换门店账号  刷新五个tab数据
                 mStoreid = NetUtil.getStoreid();
-                MainActivity mainActivity = (MainActivity) mContext;
-                mainActivity.notifyData();
             }
         }
+    }
+
+    private void setChooseStore()
+    {
+        SelectStoreUtil selectStoreUtil=new SelectStoreUtil(mContext, null);
     }
 
 
@@ -376,6 +396,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
         setOrderNum(tvAfterNum,0);
         tv_collect_num.setText(""+0);
         tv_my_integral.setText(""+0);
+        tvMyCoupon.setText(""+0);
+        tvMyMoney.setText(""+0);
     }
 
     @Override
@@ -389,6 +411,9 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
             setOrderNum(tvAfterNum,data.orderBack);
             tv_collect_num.setText(""+data.collectCount);
             tv_my_integral.setText(""+data.score);
+            tvMyCoupon.setText(""+data.coupon);
+            tvMyMoney.setText(""+data.money);
+            SPUtil.putInt(mContext,Constants.KEY_TRANSFER_MONEY,data.isPublic);
         }
     }
 

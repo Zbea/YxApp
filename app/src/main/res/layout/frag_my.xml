@@ -163,9 +163,19 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tv_my_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_18" />
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/dp_20"
+                        android:visibility="gone"
                         android:src="@drawable/wdqbicon" />
 
                     <TextView
@@ -185,10 +195,20 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tv_my_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_18" />
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/dp_20"
-                        android:src="@drawable/yhqicon" />
+                        android:src="@drawable/yhqicon"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:layout_width="wrap_content"

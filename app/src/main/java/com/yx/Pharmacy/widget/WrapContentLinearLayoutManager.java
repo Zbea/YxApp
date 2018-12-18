@@ -31,7 +31,7 @@ public class WrapContentLinearLayoutManager
         try {
             super.onLayoutChildren(recycler, state);
         } catch (IndexOutOfBoundsException e) {
-
+            e.printStackTrace();
         }
     }
 }

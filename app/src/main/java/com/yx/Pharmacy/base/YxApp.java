@@ -5,6 +5,7 @@ import android.support.multidex.MultiDexApplication;
 import com.qiyukf.unicorn.api.StatusBarNotificationConfig;
 import com.qiyukf.unicorn.api.Unicorn;
 import com.qiyukf.unicorn.api.YSFOptions;
+import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
@@ -31,6 +32,7 @@ public class YxApp
     @Override
     public void onCreate() {
         super.onCreate();
+//        LeakCanary.install(this);
         UiUtil.init(this);
         AppStatusTracker.init(this);
         Unicorn.init(this, Constants.QIYU_ID, options(), new QiyuImageLoader(this));

@@ -8,13 +8,14 @@ package com.yx.Pharmacy.constant;
 
 public class Constants {
 //     测试
-//    public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
-    public static final String BASE_URL            = "http://120.79.62.56:8808/index.php/";
+    public static final String BASE_URL            = "https://o2o.yuanxinyy.com:8801/index.php/";
+//    public static final String BASE_URL            = "http://120.79.62.56:8808/index.php/";
     // H5连接
     public static final String H5_URL              = "h5_url";
 
-    //签到页面地址
     public static final String TEST      = "test";
+    //获取本地所有地址
+    public static final String LOCAL_URL     = BASE_URL+"app/config";
     //签到页面地址
     public static final String WEB_SIGN       = BASE_URL+"web/sign";
     //兑换优惠券地址
@@ -47,6 +48,8 @@ public class Constants {
     public static final String ACTIVITY_HOME      = "activity/home";
     // 获取首页活动及产品
     public static final String ACTIVITY_CUTOM     = "advance/custom";
+    // 获取首页公告
+    public static final String ACTIVITY_MESSAGE    = "message/billBoard";
     // 获取首页广告信息
     public static final String ADVANCE_HOME      = "advance/home";
     // 商品列表/详情
@@ -172,11 +175,14 @@ public class Constants {
     public static final String KEY_ITEM_ID = "key_item_id";// 门店id
     public static final String KEY_STORENAME = "key_storename";// 门店名
     public static final String KEY_ADDRESS = "key_storeaddress"; // 门店地址
-
     public static final String KEY_AVATAR = "key_avatar";// 门头照-头像
     public static final String KEY_TRUENAME = "key_truename";// 门店对应姓名
     public static final String KEY_MOBILE = "key_mobile";// 门店对应手机号
     public static final String KEY_COMPANY = "key_company"; // 公司名
+    public static final String KEY_SIGN = "key_sign";// 签到
+    public static final String KEY_COUPON = "key_coupon";// 优惠券
+    public static final String KEY_EXCHANGE = "key_exchange"; // 退换政策
+    public static final String KEY_PRIZETASK = "key_prizetask"; // 有奖任务
     public static final String KEY_MONEY = "key_money"; // 余额
     public static final String KEY_QRCODE = "key_qrcode"; // 二维码
     public static final String KEY_BANK_USERNAME= "key_bank_usernam"; // 银行卡开户名
@@ -185,6 +191,7 @@ public class Constants {
     public static final String KEY_ACCOUNT = "key_account"; // 银行卡号
     public static final String KEY_HAVEBANK = "key_havebank"; // 是否有银行卡
     public static final String KEY_STORE_CERTIFY = "key_storecertify"; // 是否有认证的门店
+    public static final String KEY_TRANSFER_MONEY = "key_transfer_money"; // 是否可以转账
 
     public static final String SEARCH_HISTORY="search_history";
     public static final String KEY_ORDER_NUMBER="KEY_order_number";//订单号

@@ -1,6 +1,7 @@
 package com.yx.Pharmacy.plugin;
 
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
@@ -17,6 +18,7 @@ import com.yx.Pharmacy.model.SelectStoreHhBean;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.ToolUtils;
 import com.yx.Pharmacy.util.UiUtil;
 
 import org.apache.cordova.CallbackContext;
@@ -49,7 +51,7 @@ public class CustomPlugin extends CordovaPlugin {
         }
         //返回上一页
         if ("back".equals(action)) {
-            EventBus.getDefault().post(new BackHhBean());
+            EventBus.getDefault().post("back");
         }
         //返回首页
         if ("backRoot".equals(action)) {
@@ -109,6 +111,11 @@ public class CustomPlugin extends CordovaPlugin {
             String     json       = args.getString(0);
             JSONObject jsonObject = new JSONObject(json);
             CommendTjActivity.startActivity(cordova.getActivity(),"0",jsonObject.getString("levelId"),jsonObject.getString("activityName"));
+        }
+        if ("alertMessage".equals(action)){
+            String     json       = args.getString(0);
+            JSONObject jsonObject = new JSONObject(json);
+            Toast.makeText(cordova.getActivity(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
         }
         return false;
     }

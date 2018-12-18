@@ -59,6 +59,7 @@ public class ProductDetailModel {
     public String       thumb;
     public String       thumb1;
     public String       thumb2;
+    public String       ph1;
     public String          catid;
     public String          oldprice;
     public String          oprice;
@@ -72,7 +73,7 @@ public class ProductDetailModel {
     public String       giftId;
     public List<String> pic;
     public boolean issave;
-    public int max;
+    public double max;
     public String flashmax;
     public String addmum;
     public String minimum;

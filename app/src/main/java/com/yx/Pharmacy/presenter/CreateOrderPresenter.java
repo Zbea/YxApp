@@ -15,9 +15,11 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.CreateOrderModel;
+import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
+import com.yx.Pharmacy.net.ProgressSubscriber;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
@@ -59,5 +61,30 @@ public class CreateOrderPresenter {
                        super.onError(e);
                    }
                });
+    }
+
+    /**
+     *  发送验证码
+     */
+    public void getOrderNum(BaseActivity activity) {
+
+        HomeNet.getHomeApi().getOrderNum().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<MyOrderNumModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<MyOrderNumModel> response) {
+                        if (response!=null)
+                        {
+                            if (response.getCode().equals("200"))
+                            {
+                                mView.resultCartNum(response.getData());
+                            }
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
     }
 }

@@ -9,6 +9,7 @@ package com.yx.Pharmacy.presenter;
  *  @描述：    TODO
  */
 
+import android.text.TextUtils;
 import android.widget.ImageView;
 
 import com.yx.Pharmacy.base.BaseActivity;
@@ -21,6 +22,8 @@ import com.yx.Pharmacy.net.ProgressNoCode;
 import com.yx.Pharmacy.net.ProgressSubscriber;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.view.ICategoryDetailView;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -84,7 +87,6 @@ public class CategoryDetailPresenter {
                    }
                    @Override
                    public void onError(Throwable e) {
-                       LogUtils.e("kid","getProductList error========="+e.toString());
                        super.onError(e);
                        mView.onErrorPage();
                    }
@@ -96,6 +98,7 @@ public class CategoryDetailPresenter {
     public void addCartProduct(final BaseActivity activity, String pid, final DrugModel item, final ImageView imgview) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("pid",pid);
+        urlMap.put("count", item.getMinimun()+"");
         HomeNet.getHomeApi().addShopcart(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
@@ -163,6 +166,34 @@ public class CategoryDetailPresenter {
 
                     @Override
                     public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
+
+    public void miaoshaBuy(BaseActivity activity, String pid, String confirm,final DrugModel item, final ImageView imgview) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("pid", pid);
+        urlMap.put("confirm", confirm);
+        urlMap.put("count", item.getMinimun()+"");
+        HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (TextUtils.equals(response.getCode(), "200")) {
+                            mView.showAddResult(response.getData(),item,imgview);
+                        }
+                        else
+                        {
+                            if (!TextUtils.isEmpty(response.getAlertmsg()))
+                                activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
                         super.onError(e);
                     }
                 });

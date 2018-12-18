@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -37,7 +38,6 @@ public class WuliuAdapter extends BaseQuickAdapter<WuliuData.WuliModel,BaseViewH
         this.context=context;
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void convert(BaseViewHolder helper, final WuliuData.WuliModel item) {
         TextView tv_wuliu_translate=helper.getView(R.id.tv_wuliu_translate);
@@ -53,13 +53,13 @@ public class WuliuAdapter extends BaseQuickAdapter<WuliuData.WuliModel,BaseViewH
 
             ImageView iv_status=helper.getView(R.id.iv_status);
             if(helper.getLayoutPosition()==0){
-                tv_wuliu_translate.setTextColor(item.translate.contains("签收")?context.getColor(R.color.green):context.getColor(R.color.color_606060));
-                tv_wuliu_date.setTextColor(item.translate.contains("签收")?context.getColor(R.color.green):context.getColor(R.color.color_606060));
+                tv_wuliu_translate.setTextColor(item.translate.contains("签收")?ContextCompat.getColor(context,R.color.green):ContextCompat.getColor(context,R.color.color_606060));
+                tv_wuliu_date.setTextColor(item.translate.contains("签收")?ContextCompat.getColor(context,R.color.green):ContextCompat.getColor(context,R.color.color_606060));
                 iv_status.setImageResource(item.translate.contains("签收")?R.drawable.wlqszt:R.drawable.wldqwqszt);
             }else {
                 iv_status.setImageResource(R.drawable.wlgwzt);
-                tv_wuliu_translate.setTextColor(context.getColor(R.color.color_606060));
-                tv_wuliu_date.setTextColor(context.getColor(R.color.color_606060));
+                tv_wuliu_translate.setTextColor(ContextCompat.getColor(context,R.color.color_606060));
+                tv_wuliu_date.setTextColor(ContextCompat.getColor(context,R.color.color_606060));
             }
         }
 

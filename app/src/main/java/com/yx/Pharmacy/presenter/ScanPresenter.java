@@ -64,9 +64,10 @@ public class ScanPresenter {
     /**
      * 添加商品到购物车
      */
-    public void addCartProduct(final BasePermissionActivity activity, String pid) {
+    public void addCartProduct(final BasePermissionActivity activity,DrugModel model) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid",model.getItemid()+"");
+        urlMap.put("count",model.getMinimun()+"");
         HomeNet.getHomeApi().addShopcart(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
@@ -90,21 +91,20 @@ public class ScanPresenter {
      * 秒杀专区商品秒杀价购买
      * confirm：是否覆盖购物车内的的秒杀活动商品 0 不覆盖  1覆盖
      */
-    public void miaoshaBuy(final BasePermissionActivity activity, String pid,String confirm) {
+    public void miaoshaBuy(final BasePermissionActivity activity, DrugModel model,String confirm) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid",model.getItemid()+"");
+        urlMap.put("count",model.getMinimun()+"");
         urlMap.put("confirm",confirm);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
-                    public void onSuccess(BasisBean<Object> response) {
-//                        if (TextUtils.equals(response.getCode(), "200")) {
-////                            activity.getShortToastByString(response.getAlertmsg());
-//                        }else {
-//                            mView.ifFuGai();
-//                        }
-                        if(!TextUtils.isEmpty(response.getAlertmsg()))activity.getShortToastByString(response.getAlertmsg());
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (response.getData()!=null)
+                        {
+                            activity.getShortToastByString("添加成功");
+                        }
                     }
 
                     @Override
@@ -117,14 +117,15 @@ public class ScanPresenter {
     /**
      * 秒杀专区商品秒杀价购买
      */
-    public void miaoshaBuy(final BasePermissionActivity activity, String pid) {
+    public void miaoshaBuy(final BasePermissionActivity activity, DrugModel model) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",pid);
+        urlMap.put("pid",model.getItemid()+"");
+        urlMap.put("count",model.getMinimun()+"");
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
-                    public void onSuccess(BasisBean<Object> response) {
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
                         if (TextUtils.equals(response.getCode(), "201")) {
                             mView.ifFuGai();
                         }else {

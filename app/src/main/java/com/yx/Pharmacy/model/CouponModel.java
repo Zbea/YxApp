@@ -16,7 +16,7 @@ public class CouponModel {
     private String pid;
     public String leveltype;
     public String levelid;
-
+    public String title;
     //查看领取优惠劵
     private String limitprice;
     private int couponmodel;

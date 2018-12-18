@@ -21,6 +21,7 @@ import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
 import com.yx.Pharmacy.net.ProgressSubscriber;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
@@ -46,11 +47,11 @@ public class ProductDetailPresenter {
      * @param itemId
      */
     public void loadProductDetail(BaseActivity activity, String itemId) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        HashMap<String, String> urlMap =new HashMap<>() ;
         urlMap.put("pid", itemId);
         HomeNet.getHomeApi().getProductDetail(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<ProductDetailModel>>(activity, true) {
+                .subscribe(new ProgressNoCode<BasisBean<ProductDetailModel>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<ProductDetailModel> response) {
                         if (response.getData() != null) {
@@ -204,9 +205,9 @@ public class ProductDetailPresenter {
         urlMap.put("count", count);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
-                    public void onSuccess(BasisBean<Object> response) {
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
                         if (TextUtils.equals(response.getCode(), "200")) {
                             mView.compelete();
                         }
@@ -234,9 +235,9 @@ public class ProductDetailPresenter {
         urlMap.put("count", "" + count);
         HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<Object>>(activity, false) {
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
                     @Override
-                    public void onSuccess(BasisBean<Object> response) {
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
                         if (TextUtils.equals(response.getCode(), "201")) {
                             mView.ifFuGai();
                         } else {
@@ -260,27 +261,4 @@ public class ProductDetailPresenter {
     }
 
 
-    public void loadMyShop(BaseActivity activity, boolean isShow) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("doplace", "home");
-        HomeNet.getHomeApi().getMyShop(urlMap).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<List<MyShopModel>>>(activity, isShow) {
-                    @Override
-                    public void onSuccess(BasisBean<List<MyShopModel>> response) {
-                        if (response.getData() != null) {
-                            mView.showShopData(response.getData());
-                        } else {
-                            mView.hideFlash();
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        LogUtils.e("error=========" + e.toString());
-                        mView.hideFlash();
-                        super.onError(e);
-                    }
-                });
-    }
 }

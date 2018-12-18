@@ -15,7 +15,7 @@ public class MyShopModel {
     public String catid;
     public String gstatus;
     public String companynumber;
-
+    public boolean storeStutus;
     /**
      * itemid : 27
      * storeaddress : 深圳
@@ -30,7 +30,7 @@ public class MyShopModel {
      * storenumber : 111
      * storetype : null
      */
-
+    public String company;
     public String itemid;
     public String storeaddress;
     public String    collectcount;
@@ -43,4 +43,8 @@ public class MyShopModel {
     public String    status;
     public String storenumber;
     public String storetype;
+    public String sign;
+    public String coupon;
+    public String exchange;
+    public String prizetask;
 }

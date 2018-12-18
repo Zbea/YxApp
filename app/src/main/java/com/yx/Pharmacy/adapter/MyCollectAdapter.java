@@ -13,6 +13,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.model.DrugModel;
+import com.yx.Pharmacy.util.DateUtil;
 import com.yx.Pharmacy.util.GlideUtil;
 
 import java.util.List;
@@ -48,6 +49,10 @@ public class MyCollectAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolder>
         TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
         tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线
         tv_oldprice.setText(item.getPrice());
+
+        TextView  time    = helper.getView(R.id.tv_validity_time);
+        time.setText("有效期：" +DateUtil.formatyyyyMMdd(item.getEndtime()*1000) );
+
         helper.setText(R.id.tv_unit,item.getGg());
         helper.getView(R.id.tv_cancel_collect).setOnClickListener(new View.OnClickListener() {
             @Override

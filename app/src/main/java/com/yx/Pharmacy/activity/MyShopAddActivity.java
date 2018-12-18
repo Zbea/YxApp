@@ -482,7 +482,7 @@ public class MyShopAddActivity
         urlMap.put("thumb", mBusinessUrl);//营业执照图片url
         urlMap.put("thumb1", mOrganUrl);//许可证图片url
         urlMap.put("thumb2", NetUtil.isStringNull(mGspUrl));//GSP证url
-        urlMap.put("thumb3", mMentouUrl);//门店形象图片url
+//        urlMap.put("thumb3", mMentouUrl);//门店形象图片url
         urlMap.put("invoicetype", type + "");//发票类型
         urlMap.put("einvoice", "" + (cbCheckall.isChecked() ? 1 : 0));//是否电子发票
         if (type == 2) {
@@ -544,7 +544,7 @@ public class MyShopAddActivity
     public void showStoreDetail(StoreDetailModel data) {
         mEditShopUser.setText(data.truename);
         mEditBuyerMobile.setText(data.saleyw);
-        mEditOrgan.setText(data.storenumber);
+        mEditOrgan.setText(data.storelicense);
         mEditBusiness.setText(data.storelicense);
         mEditShopAddress.setText(data.address);
         mEditShopName.setText(data.storename);
@@ -657,8 +657,20 @@ public class MyShopAddActivity
             mAddressPicker.setOnAddressPickListener(new AddressPicker.OnAddressPickListener() {
                 @Override
                 public void onAddressPicked(Province province, City city, County county) {
-                    mAddressId = county.getAreaId();
-                    mTvAddress.setText(province.getAreaName() + " " + city.getAreaName() + " " + county.getAreaName());
+                    if (county!=null)
+                    {
+                        mAddressId = county.getAreaId();
+                        mTvAddress.setText(province.getAreaName() + " " + city.getAreaName() + " " + county.getAreaName());
+                    }
+                    else
+                    {
+                        if (city!=null)
+                        {
+                            mAddressId = city.getAreaId();
+                            mTvAddress.setText(province.getAreaName() + " " + city.getAreaName());
+                        }
+                    }
+
                 }
             });
             mAddressPicker.show();
