@@ -54,7 +54,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
             ImageView iv_youhui=helper.getView(R.id.iv_youhui);
-            GlideUtil.loadImg(context,item.banner,iv_youhui);
+            GlideUtil.loadImg(context,item.banner,iv_youhui,R.drawable.icon_image_loading_cc);
             helper.setText(R.id.tv_youhui_name,item.activityname);
             helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");

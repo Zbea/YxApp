@@ -62,7 +62,7 @@ public class HomeProductBottomAdapter extends BaseQuickAdapter<DrugModel,BaseVie
         iv_presale.setVisibility(TextUtils.equals(item.getPresale(),"0")? View.GONE:View.VISIBLE);
         helper.setText(R.id.tv_scqy,item.getScqy())
               .setText(R.id.tv_gg,item.getGg())
-              .setText(R.id.tv_sale, "已售"+item.getSales());
+              .setText(R.id.tv_sale, "库存"+item.getSales());
         price.setText(item.getPrice());
         oldPrice.setText("折后约"+item.disprice);
         if (TextUtils.isEmpty(NetUtil.getToken()))

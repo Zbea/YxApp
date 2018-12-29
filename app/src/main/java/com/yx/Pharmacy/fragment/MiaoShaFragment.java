@@ -108,11 +108,11 @@ public class MiaoShaFragment
     public void getProductListResult(List<DrugModel> data, String extention) {
         if (!TextUtils.isEmpty(extention)) {
             ImageView imageView = new ImageView(mContext);
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                                                                                300);
+                    ViewGroup.LayoutParams.WRAP_CONTENT );
             imageView.setLayoutParams(layoutParams);
-            GlideUtil.loadImgNoStyle(mContext,extention,imageView);
+            GlideUtil.loadImgNoStyle(mContext,extention,imageView,R.drawable.icon_image_loading_cc);
             mMiaoShaAdapter.setHeaderView(imageView);
         }
         mLoadinglayout.setStatus(LoadingLayout.Success);

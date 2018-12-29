@@ -262,7 +262,8 @@ public class OrderCreateActivity
         address.put("address",mStoreAddress);
         address.put("mobile",mStoreMobile);
         address.put("truename",mStoreTurename);
-        if (mDatas!=null) {
+        if (mDatas!=null)
+        {
             String note = mEdtNote.getText()
                                   .toString()
                                   .trim();

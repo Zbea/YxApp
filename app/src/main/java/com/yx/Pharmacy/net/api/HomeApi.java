@@ -18,9 +18,11 @@ import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.OrderModel;
 import com.yx.Pharmacy.model.PayOrderModel;
+import com.yx.Pharmacy.model.PayWayModel;
 import com.yx.Pharmacy.model.ProductDetailModel;
 import com.yx.Pharmacy.model.SaleRecordModel;
 import com.yx.Pharmacy.model.SavaCouponModel;
+import com.yx.Pharmacy.model.SearchAutoModel;
 import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.model.StoreDetailModel;
@@ -56,6 +58,11 @@ public interface HomeApi {
      */
     @POST(Constants.LOCAL_URL)
     Observable<BasisBean<UrlBean>> getUrlData();
+    /**
+     *  是否可以对公转账
+     */
+    @POST(Constants.PAY_STYLE)
+    Observable<BasisBean<PayWayModel>> getPayStyle();
     /**
      *  上传文件
      */
@@ -105,6 +112,13 @@ public interface HomeApi {
     @FormUrlEncoded
     @POST(Constants.SEARCH_HOT)
     Observable<BasisBean<List<TagModel>>> getSearchHotList(@FieldMap HashMap<String, String> map);
+
+    /**
+     *  热门搜索
+     */
+    @FormUrlEncoded
+    @POST(Constants.SEARCH_AUTO)
+    Observable<BasisBean<List<SearchAutoModel>>> getSearchAutoList(@FieldMap HashMap<String, String> map);
     /**
      *  获取首页活动及产品
      */

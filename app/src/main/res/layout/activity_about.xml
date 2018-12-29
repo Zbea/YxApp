@@ -40,6 +40,24 @@
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coyprinht@2018"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深圳市点融医药科技有限公司所有"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:paddingTop="@dimen/dp_12"
@@ -47,6 +65,7 @@
         android:background="@drawable/shape_btn_main"
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -84,7 +103,7 @@
             <TextView
                 android:paddingRight="@dimen/dp_12"
                 android:paddingLeft="@dimen/dp_54"
-                android:text="0755-290134870"
+                android:text="0755-29013680"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_12"
                 android:layout_width="match_parent"
@@ -100,13 +119,13 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/dp_12"
                 android:paddingRight="@dimen/dp_12"
-                android:text="联系人："
+                android:text="售后电话："
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_12" />
             <TextView
                 android:paddingRight="@dimen/dp_12"
                 android:paddingLeft="@dimen/dp_54"
-                android:text="0755-23776653"
+                android:text="0755-21053094   0755-23776653"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_12"
                 android:layout_width="match_parent"

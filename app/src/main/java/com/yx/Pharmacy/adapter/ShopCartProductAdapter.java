@@ -63,8 +63,6 @@ public class ShopCartProductAdapter
         AmountView amountView = helper.getView(R.id.amount_view);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
 
-
-        L.i("刷新产品");
         if (TextUtils.isEmpty(item.validtime))
         {
             time.setVisibility(View.GONE);
@@ -186,28 +184,32 @@ public class ShopCartProductAdapter
         if (TextUtils.isEmpty(item.max)) {
             amountView.setGoods_storage(Integer.MAX_VALUE);
         } else {
-            int i = DensityUtils.parseInt(item.max);
-            if (i <= DensityUtils.parseDouble(item.cartcount)) {
-                item.max=item.cartcount;
-                amountView.setGoods_storage(DensityUtils.parseInt(item.cartcount));
+            int i = (int) Math.floor(DensityUtils.parseDouble(item.max));
+            L.i("i:"+i);
+            if (i <= (int) Math.floor(DensityUtils.parseDouble(item.cartcount))) {
+                item.cartcount=i+"";
+                amountView.setGoods_storage((int) Math.floor(DensityUtils.parseDouble(item.cartcount)));
             } else {
                 amountView.setGoods_storage(i);
             }
         }
 
-        amountView.setAmount((int) DensityUtils.parseDouble(item.cartcount));
+        amountView.setAmount((int) Math.floor(DensityUtils.parseDouble(item.cartcount)));
 
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override
             public void onAmountChange(View view, int amount, boolean isEdit) {
+                L.i("max:"+(int) Math.floor(DensityUtils.parseDouble(getData().get(helper.getLayoutPosition()).max)));
+                int max=(int) Math.floor(DensityUtils.parseDouble(getData().get(helper.getLayoutPosition()).max));
                 ShopCartModel.GoodsBean goodsBean = getData().get(helper.getAdapterPosition());
                 // 修改购物车商品数
-                if (DensityUtils.parseInt(getData().get(helper.getAdapterPosition()).cartcount) != amount) {
-                    if (amount > DensityUtils.parseInt(getData().get(helper.getLayoutPosition()).max)) {
-                        getData().get(helper.getAdapterPosition()).cartcount = getData().get(helper.getAdapterPosition()).max;
+                if (Math.floor(DensityUtils.parseDouble(getData().get(helper.getAdapterPosition()).cartcount)) != amount) {
+                    if (amount >max) {
+                        getData().get(helper.getAdapterPosition()).cartcount =max+"";
 //                        item.cartcount = item.max;
                     } else {
-                        getData().get(helper.getAdapterPosition()).cartcount = String.valueOf(amount);
+                        getData().get(helper.getAdapterPosition()).cartcount = amount+"";
+                        L.i("getData().get(helper.getAdapterPosition()).cartcount:"+getData().get(helper.getAdapterPosition()).cartcount);
                         getData().get(helper.getAdapterPosition()).isSelect=true;
 //                        item.cartcount = String.valueOf(amount);
                         if (mOnShopGoodListener != null) {
@@ -219,13 +221,13 @@ public class ShopCartProductAdapter
                     if (item.giftList != null) {
                         List<Integer> limits=new ArrayList<>();
                         List<ShopCartModel.GoodsBean.GiftListBean> listBeans=new ArrayList<>();
-                        int carcount = DensityUtils.parseInt(item.cartcount);
+                        double carcount = DensityUtils.parseDouble(item.cartcount);
                         for (ShopCartModel.GoodsBean.GiftListBean giftListBean : item.giftList) {
                             int limit = DensityUtils.parseInt(giftListBean.limit);
                             int give = DensityUtils.parseInt(giftListBean.give);
                             if (carcount >= limit&&giftListBean.giftInfo!=null) {
-                                int div = carcount / limit;
-                                int count = div * give;
+                                int div = (int) (carcount / limit);
+                                double count = div * give;
                                 if (count> 0) {
                                     limits.add(limit);
                                     listBeans.add(giftListBean);
@@ -240,8 +242,8 @@ public class ShopCartProductAdapter
                                 int limit3 = DensityUtils.parseInt(giftListBean.limit);
                                 int give = DensityUtils.parseInt(giftListBean.give);
                                 if (limit== limit3) {
-                                    int div = carcount / limit;
-                                    int count = div * give;
+                                    int div = (int) (carcount / limit);
+                                    double count = div * give;
                                     ll_gift.setVisibility(item.isSelect ? View.VISIBLE : View.GONE);
                                     ImageView gift_product = helper.getView(R.id.iv_gift_product);
                                     GlideUtil.loadImg(UiUtil.getContext(), giftListBean.giftInfo.goodsthumb, gift_product);

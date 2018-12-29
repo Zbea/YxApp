@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_45">
                 <TextView
-                    android:text="原总金额"
+                    android:text="订单总金额"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_15"
                     android:layout_width="0dp"
@@ -226,6 +226,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="@dimen/dp_45">
                 <TextView
                     android:textStyle="bold"

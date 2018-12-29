@@ -19,7 +19,7 @@ public class DrugModel {
     public String validend;
     private String gg;
     private String scqy;//公司
-    private int sales;//已售
+    private double sales;//已售
     private String thumb;//缩略图
     private int itemid;
     private String amount;
@@ -32,6 +32,7 @@ public class DrugModel {
     private String     presalenote;// 预售说明
     public int activityCount ;
     public int salesCount;
+    public int sale;
 
     public String getLevelnote() {
         return levelnote;
@@ -145,7 +146,7 @@ public class DrugModel {
         this.scqy = scqy;
     }
 
-    public int getSales() {
+    public double getSales() {
         return sales;
     }
 

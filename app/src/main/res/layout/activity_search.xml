@@ -11,23 +11,32 @@
         android:background="@color/color_main"
         android:layout_width="match_parent"
         android:layout_height="48dp">
+
+        <ImageView
+            android:src="@drawable/ysdjt"
+            android:id="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dp_40"
+            android:padding="@dimen/dp_13"
+            android:layout_height="match_parent" />
+
         <RelativeLayout
             android:layout_centerVertical="true"
             android:id="@+id/rl_right"
             android:layout_alignParentRight="true"
-            android:padding="16dp"
+            android:padding="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_cancel"
                 android:textColor="#FFFFFF"
                 android:text="搜索"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
         <LinearLayout
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="40dp"
             android:layout_toLeftOf="@id/rl_right"
             android:layout_centerVertical="true"
             android:background="@drawable/shape_halt_white_bg"

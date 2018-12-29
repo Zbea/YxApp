@@ -118,6 +118,8 @@ public class HomePageFragment
     TextView tvFactoryAddress;
     @BindView(R.id.marqueeView)
     MarqueeView marqueeView;
+    @BindView(R.id.ll_message)
+    LinearLayout llMessage;
     @BindView(R.id.iv_top)
     ImageView ivTop;
 
@@ -144,6 +146,7 @@ public class HomePageFragment
         public void handleMessage(Message msg) {
             if (msg.what==1)
             {
+                mAdapter.getData().clear();
                 mAdapter.setNewData(homeDataModels);
             }
             if (msg.what==2)
@@ -155,6 +158,11 @@ public class HomePageFragment
                 mAdvenceGold = homeAdvanceModel.gold;
                 if (mAdvenceGold != null) {
                     GlideUtil.loadImgFit(UiUtil.getContext(), mAdvenceGold.image_src, mIvAdvence,R.drawable.icon_image_loading_cc);
+                    mIvAdvence.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    mIvAdvence.setVisibility(View.GONE);
                 }
                 //初始化banner数据
                 if (homeAdvanceModel.banner != null && homeAdvanceModel.banner.size() > 0) {
@@ -176,27 +184,36 @@ public class HomePageFragment
             {
                 List<String> info=new ArrayList<>();
                 List<HomeAdvanceModel.GoldBean> datas=messageModel.message;
-                for (int i = 0; i <datas.size() ; i++) {
-                    info.add(datas.get(i).title);
+                if (messageModel.message==null||datas.size()==0)
+                {
+                    llMessage.setVisibility(View.GONE);
                 }
-                if (info!=null&&info.size()>0) {
-                    marqueeView.setVisibility(View.VISIBLE);
-                    List<CharSequence> list = new ArrayList<>();
-                    for (String s : info) {
-                        if (!TextUtils.isEmpty(s)) {
-                            SpannableString ss = new SpannableString(s);
-                            list.add(ss);
-                        }
+                else
+                {
+                    llMessage.setVisibility(View.VISIBLE);
+                    for (int i = 0; i <datas.size() ; i++) {
+                        info.add(datas.get(i).title);
                     }
-                    marqueeView.startWithList(list);
-                    marqueeView.setOnItemClickListener(new MarqueeView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(int position, TextView textView) {
-                            messageClick(datas.get(position));
+                    if (marqueeView==null)return;
+                    if (info.size()>0) {
+                        marqueeView.setVisibility(View.VISIBLE);
+                        List<CharSequence> list = new ArrayList<>();
+                        for (String s : info) {
+                            if (!TextUtils.isEmpty(s)) {
+                                SpannableString ss = new SpannableString(s);
+                                list.add(ss);
+                            }
                         }
-                    });
-                }else {
-                    marqueeView.setVisibility(View.GONE);
+                        marqueeView.startWithList(list);
+                        marqueeView.setOnItemClickListener(new MarqueeView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(int position, TextView textView) {
+                                messageClick(datas.get(position));
+                            }
+                        });
+                    }else {
+                        marqueeView.setVisibility(View.GONE);
+                    }
                 }
             }
         }
@@ -210,7 +227,7 @@ public class HomePageFragment
     private ImmersionBar mImmersionBar;
 
     @Override
-    public void onHiddenChanged(boolean hidden) {
+        public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if (!hidden && mImmersionBar != null)
             mImmersionBar.init();
@@ -228,14 +245,19 @@ public class HomePageFragment
             public void onRefresh(MyShopModel data) {
 //                tv_no_more.setVisibility(View.GONE);
                 mFirstLoadMore = true;
-                initData();
+                if (mView!=null)
+                {
+                    initData();
+                }
             }
         });
 
-        // 初始化列表 RecyclerView
-        initRecycler();
-        initListener();
-        initData();
+        if (mView!=null)
+        {
+            initRecycler();
+            initListener();
+            initData();
+        }
     }
 
     @Override
@@ -269,7 +291,6 @@ public class HomePageFragment
                     }
 
                 }
-                L.i("scrollY:"+scrollY);
                 ivTop.setVisibility(scrollY>=400?View.VISIBLE:View.GONE);
                 if (scrollY > fadingHeight) {
                     scrollY = fadingHeight; // 当滑动到指定位置之后设置颜色为纯色，之前的话要渐变---实现下面的公式即可
@@ -376,7 +397,7 @@ public class HomePageFragment
 
 
     public void initData() {
-        if (TextUtils.isEmpty(StoreManage.newInstance().getStore().storeid))
+        if (StoreManage.newInstance().getStore()==null||TextUtils.isEmpty(StoreManage.newInstance().getStore().storeid))
         {
             llStore.setVisibility(View.GONE);
             llStoreLogout.setVisibility(View.VISIBLE);
@@ -459,7 +480,6 @@ public class HomePageFragment
             messageModel=data;
             mHandler.sendEmptyMessage(3);
         }
-
     }
 
 

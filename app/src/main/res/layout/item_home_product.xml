@@ -20,6 +20,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <com.yx.Pharmacy.widget.NestListview
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.yx.Pharmacy.widget.NestListview>
+    <com.yx.Pharmacy.widget.NestGridView
+        android:id="@+id/gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"></com.yx.Pharmacy.widget.NestGridView>
     <View
         android:background="@color/color_f6f6f6"
         android:layout_width="match_parent"

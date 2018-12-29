@@ -60,7 +60,7 @@ public class ShopCartPresenter {
                });
     }
 
-    public void updateShopCart(BaseActivity activity, String activityid, String goodsid, int amount) {
+    public void updateShopCart(BaseActivity activity, String activityid, String goodsid, double amount) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("activityid",NetUtil.isStringNull(activityid));
         urlMap.put("pid",NetUtil.isStringNull(goodsid));
@@ -156,4 +156,6 @@ public class ShopCartPresenter {
                    }
                });
     }
+
+    String s="{ \"discount \": \" \", \"couponid \": \"218234 \", \"product \":{ \"4 \":{ \"activityid \": \"4 \", \"couponid \": \" \", \"goodsList \":[{ \"pid \": \"3409 \", \"price \": \"13.80 \", \"count \": \"40 \"}]}, \"25 \":{ \"activityid \": \"25 \", \"couponid \": \" \", \"goodsList \":[{ \"pid \": \"6743 \", \"price \": \"2.50 \", \"count \": \"41 \"}]}, \"single \":{ \"activityid \": \"single \", \"couponid \": \" \", \"goodsList \":[{ \"couponid \": \" \", \"count \": \"3 \", \"price \": \"8.50 \", \"pid \": \"5757 \"}]}}, \"needpay \": \"572.08 \"}";
 }

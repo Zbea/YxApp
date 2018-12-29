@@ -87,7 +87,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
             if (mPresenter!=null)
             {
                 page=1;
-                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true);
+                mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true,false);
             }
         }
     }
@@ -102,7 +102,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
         status=getArguments().getString(STATUS);
         initView();
         mPresenter = new MyOrderListPresenter(this);
-        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true);
+        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true,true);
     }
 
     private void initView() {
@@ -145,7 +145,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     }
     //加载下一页
     private void initNestPage() {
-        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page+1,false);
+        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page+1,false,false);
     }
     @Override
     public void getOrderList(List<OrderModel> data) {//获取下一页数据成功,page+1
@@ -168,7 +168,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     @Override
     public void onRefresh() {
         page=1;
-        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true);
+        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true,false);
     }
     @Override
     public void noOrderList() {//没有订单
@@ -424,7 +424,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
                 orderAdapter.setNewData(models);
                 showNornaml();
                 page=1;
-                mPresenter.getMyOrderListData((BaseActivity) mContext,status,page,true);
+                mPresenter.getMyOrderListData((BaseActivity) mContext,status,page,true,true);
                 break;
         }
     }

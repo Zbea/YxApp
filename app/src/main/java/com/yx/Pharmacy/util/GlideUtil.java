@@ -29,6 +29,18 @@ public class GlideUtil {
 
     }
 
+    public static void loadImgNoStyle(Context context, String url, ImageView imageView,int resource){
+        RequestOptions options = new RequestOptions().error(R.drawable.icon_image_loading)
+                .placeholder(resource)
+                .error(resource)
+                .diskCacheStrategy(DiskCacheStrategy.ALL);
+        Glide.with(context)
+                .load(url)
+                .apply(options)
+                .into(imageView);
+
+    }
+
     public static void loadImg(Context context, String url, ImageView imageView){
         RequestOptions options = new RequestOptions()
                 .centerCrop().error(R.drawable.icon_image_loading)

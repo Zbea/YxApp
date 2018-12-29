@@ -117,7 +117,6 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
 //              product.setHasFixedSize(false);
             adapter.setNewData(item.goods);
             adapters.add(adapter);
-            L.i("dddddddddddddddddddddddd");
             if (mDecoration==null) {
                 mDecoration = new ListDeviderDecoration(UiUtil.getContext());
                 product.addItemDecoration(mDecoration);

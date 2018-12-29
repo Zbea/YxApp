@@ -63,6 +63,7 @@ public class OrderModel implements Serializable {
     public String note;
     public String payment_type;
     public String updatetime;
+    public String money;
     public String send_no;
     public String send_type;
     public int cartcount;

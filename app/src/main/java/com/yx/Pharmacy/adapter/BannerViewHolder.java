@@ -57,6 +57,7 @@ public class BannerViewHolder implements MZViewHolder<HomeAdvanceModel.GoldBean>
     private void doClick(HomeAdvanceModel.GoldBean data) {
         //获取当前的activity
         Activity activity=AppStatusTracker.getInstance().getOnResumActivity();
-        ((BaseActivity)activity).gotoClick(data);
+        if (activity instanceof  BaseActivity)
+            ((BaseActivity)activity).gotoClick(data);
     }
 }

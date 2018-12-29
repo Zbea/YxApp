@@ -44,13 +44,13 @@ public class MyOrderListPresenter {
      * @param status 0获取所有订单 1未支付，2已支付，3拣货中，，7.已发货，8已取消，9订单完成
      * @param pagenum
      */
-    public void getMyOrderListData(final BaseActivity activity, String status, final int pagenum, final boolean isRefresh) {
+    public void getMyOrderListData(final BaseActivity activity, String status, final int pagenum, final boolean isRefresh ,boolean isLoading) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("status",status);
         urlMap.put("pagenum",String.valueOf(pagenum));
         HomeNet.getHomeApi().getOrderList(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<List<OrderModel>>>(activity, true) {
+                .subscribe(new ProgressSubscriber<BasisBean<List<OrderModel>>>(activity, isLoading) {
                     @Override
                     public void onSuccess(BasisBean<List<OrderModel>> response) {
                         if (response.getData()!=null) {
@@ -145,7 +145,7 @@ public class MyOrderListPresenter {
         urlMap.put("orderid",orderid);
         HomeNet.getHomeApi().buyAgain(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<String> response) {
                         activity.getShortToastByString(response.getAlertmsg());

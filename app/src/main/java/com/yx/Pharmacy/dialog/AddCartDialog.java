@@ -87,22 +87,22 @@ public class AddCartDialog {
             {
                 tvPrice.setText("￥"+data.price);
                 tvInfo.setText("（剩余库存"+String.valueOf(Double.parseDouble(data.flashmax)<=0?0:data.flashmax)+"）");
-                amountView.setGoods_storage((int) Double.parseDouble(data.flashmax));
+                amountView.setGoods_storage((int) Math.floor(DensityUtils.parseDouble(data.flashmax)));
             }
             else
             {
                 tvPrice.setText("￥"+data.oldprice);
                 tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
-                amountView.setGoods_storage((int)data.max);
+                amountView.setGoods_storage((int) Math.floor(data.max));
             }
         }
         else
         {
             tvPrice.setText("￥"+data.price);
             tvInfo.setText("（剩余库存"+String.valueOf(data.max<=0?0:data.max)+"）");
-            amountView.setGoods_storage((int)data.max);
+            amountView.setGoods_storage((int) Math.floor(data.max));
         }
-        amountView.setAmount((int)Double.parseDouble(data.minimum));
+        amountView.setAmount((int) Math.floor(DensityUtils.parseDouble(data.minimum)));
 
         amountView.setOnAmountChangeListener(new AmountView.OnAmountChangeListener() {
             @Override

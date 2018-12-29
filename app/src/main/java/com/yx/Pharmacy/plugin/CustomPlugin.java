@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import com.yx.Pharmacy.MainActivity;
+import com.yx.Pharmacy.activity.ChargeMoneyActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
@@ -84,6 +85,10 @@ public class CustomPlugin extends CordovaPlugin {
         //登录
         if ("login".equals(action)){
             LoginActivity.startActivity(cordova.getActivity(),1);
+        }
+        //充值
+        if ("visitTopUp".equals(action)){
+            ChargeMoneyActivity.startActivity(cordova.getActivity());
         }
         //选择门店
         if ("selectedStore".equals(action)){

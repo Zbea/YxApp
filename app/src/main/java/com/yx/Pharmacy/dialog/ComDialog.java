@@ -73,7 +73,7 @@ public class ComDialog {
         if (!is)
         {
             titleTv.setVisibility(View.GONE);
-            contentTv.setMinHeight(200);
+            contentTv.setHeight(250);
         }
         if(!TextUtils.isEmpty(content))contentTv.setText(content);
         if(!TextUtils.isEmpty(cancle))cancleTv.setText(cancle);
@@ -97,8 +97,8 @@ public class ComDialog {
         builder.setView(view);
         dialog=builder.create();
 //        dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-        cardView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
+//        cardView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT));
         return this;
     }
 

@@ -47,16 +47,17 @@ public abstract class BaseFragment
 
     private Toast toast;
     protected  Activity mContext;
+    protected  View mView;
     public Unbinder unbinder;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
          mContext = getActivity();
 //        View view = View.inflate(mContext, getLayoutId(), null);
-        View view=inflater.inflate(getLayoutId(),container,false);
-        unbinder=ButterKnife.bind(this, view);
+        mView=inflater.inflate(getLayoutId(),container,false);
+        unbinder=ButterKnife.bind(this, mView);
         init();
-        return view;
+        return mView;
     }
 
     protected abstract int getLayoutId();

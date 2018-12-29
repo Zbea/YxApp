@@ -12,8 +12,10 @@ import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.yx.Pharmacy.constant.Constants;
 
+import cn.sharesdk.wechat.utils.WechatHandlerActivity;
 
-public class WXEntryActivity extends Activity
+
+public class WXEntryActivity extends WechatHandlerActivity
         implements IWXAPIEventHandler
 {
 

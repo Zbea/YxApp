@@ -2,6 +2,8 @@ package com.yx.Pharmacy.base;
 
 import android.support.multidex.MultiDexApplication;
 
+//import com.mob.MobSDK;
+import com.mob.MobSDK;
 import com.qiyukf.unicorn.api.StatusBarNotificationConfig;
 import com.qiyukf.unicorn.api.Unicorn;
 import com.qiyukf.unicorn.api.YSFOptions;
@@ -39,6 +41,7 @@ public class YxApp
         initBugly();
         initJPush();// 推送
         registToWX();// 注册微信
+        MobSDK.init(this);
     }
 
     private void initBugly() {
@@ -83,6 +86,7 @@ public class YxApp
     }
 
     private void initJPush() {
+
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
         JPushInterface.setAlias(this, 0, NetUtil.getToken());

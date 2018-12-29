@@ -132,7 +132,7 @@ public class CategoryFragment extends BaseFragment implements ICategoryView, Che
         mSortDetailFragment.setArguments(bundle);
         mSortDetailFragment.setListener(this);
         fragmentTransaction.add(R.id.lin_fragment, mSortDetailFragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
     private void setChecked(int position, boolean isLeft) {
         Log.d("p-------->", String.valueOf(position));

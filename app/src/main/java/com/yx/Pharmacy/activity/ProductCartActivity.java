@@ -27,6 +27,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.github.barteksc.pdfviewer.util.MathUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.luck.picture.lib.dialog.CustomDialog;
 import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.adapter.ShopCartAdapter;
@@ -35,6 +36,7 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
+import com.yx.Pharmacy.dialog.ComDialog;
 import com.yx.Pharmacy.manage.StoreManage;
 import com.yx.Pharmacy.model.CreateOrderIntentModel;
 import com.yx.Pharmacy.model.MyShopModel;
@@ -370,7 +372,7 @@ public class ProductCartActivity
                 arrayList.add(goodsid);
                 HashMap<String, ArrayList<String>> urlMap = new HashMap<>();
                 urlMap.put(activityid, arrayList);
-                mPresenter.deleteShopCart(ProductCartActivity.this, urlMap);
+                showDialogDelete(urlMap);
             }
 
             @Override
@@ -380,6 +382,7 @@ public class ProductCartActivity
                 mGoodsid = goodsid;
                 mIsEdit = isEdit;
                 mAmountEdit = amount;
+                L.i("mAmountEdit:"+mAmountEdit);
                 mNotifyPosition = position;
                 mActivityid = activityid;
                 if (!mIsEdit) {
@@ -543,7 +546,7 @@ public class ProductCartActivity
             if (datum.goods != null) {
                 for (ShopCartModel.GoodsBean good : datum.goods) {
                     int limitnum = DensityUtils.parseInt(good.limitnum);// 特价数量
-                    int cartcount = DensityUtils.parseInt(good.cartcount);//购物车数量
+                    double cartcount = DensityUtils.parseDouble(good.cartcount);//购物车数量
                     double price = DensityUtils.parseDouble(good.usefulprice);// 当前售价
                     double oprice = DensityUtils.parseDouble(good.oprice);// 原价
                     if (!TextUtils.equals(goodsid, "0")) {
@@ -620,6 +623,8 @@ public class ProductCartActivity
         mSubCouponPrice = 0.0;
         //不含特殊商品价格
         mAllSubPrice = 0.0;
+        //赠品总价
+        double mAllGiftPrice = 0.0;
         //不含特殊商品优惠价格
         mSubCouponSpecialPrice = 0.0;
         // 不参与全场折扣的专区优惠券总优惠金额
@@ -650,23 +655,21 @@ public class ProductCartActivity
                 Double goodsPrice = 0.0;
                 if (goods != null) {
                     for (ShopCartModel.GoodsBean good : goods) {
-                        int limitnum = DensityUtils.parseInt(good.limitnum);// 特价数量
-                        double cartcount = DensityUtils.parseInt(good.cartcount);//购物车数量
+                        double cartcount = DensityUtils.parseDouble(good.cartcount);//购物车数量
                         double price = DensityUtils.parseDouble(good.usefulprice);// 当前售价
-                        double oprice = DensityUtils.parseDouble(good.oprice);// 原价
 
                         if (good.isSelect) {
                             goodsPrice =DoubleMath.mul(price , cartcount)+ goodsPrice;
                             List<ShopCartModel.GoodsBean.GiftListBean> listBeans = new ArrayList<>();
                             List<Integer> limits = new ArrayList<>();
-                            int carcount = DensityUtils.parseInt(good.cartcount);
+                            double carcount = DensityUtils.parseDouble(good.cartcount);
                             if (good.giftList != null) {
                                 for (ShopCartModel.GoodsBean.GiftListBean giftListBean : good.giftList) {
                                     if (giftListBean.limit != null) {
                                         int limit = DensityUtils.parseInt(giftListBean.limit);
                                         int give = DensityUtils.parseInt(giftListBean.give);
                                         if (carcount >= limit) {
-                                            int div = carcount / limit;
+                                            int div = (int)carcount / limit;
                                             int count = div * give;
                                             if (count > 0 && giftListBean.giftInfo != null) {
                                                 limits.add(limit);
@@ -681,9 +684,10 @@ public class ProductCartActivity
                                         int limit3 = DensityUtils.parseInt(giftListBean.limit);
                                         int give = DensityUtils.parseInt(giftListBean.give);
                                         if (limit == limit3) {
-                                            int div = carcount / limit;
+                                            int div = (int)carcount / limit;
                                             int count = div * give;
                                             goodsPrice = goodsPrice + 0.01 * count;
+                                            mAllGiftPrice=mAllGiftPrice+ 0.01 * count;
                                         }
                                     }
                                 }
@@ -761,6 +765,9 @@ public class ProductCartActivity
                 mSubCouponPrice = DoubleMath.sub(mAllPrice, mAllCouponPrice);
             }
 
+            mAllSubPrice=mAllSubPrice-mAllGiftPrice;//可参与要去掉赠品
+            mAllSpecial=mAllSpecial+mAllGiftPrice;//不参与优惠要加上赠品
+
             // 全场优惠券
             List<ShopCartModel.CouponListBean> couponListAll = mResultBean.couponList;
             if (couponListAll != null && couponListAll.size() > 0) {
@@ -837,7 +844,7 @@ public class ProductCartActivity
                             isDiscount = true;
                             cbDiscount.setClickable(true);
                             mDiscount = bean.discount;
-                            mTvOverallCoupon.setText("满" + bean.limit + "元,可享受" + bean.discount + "折优惠(不含控销商品)");
+                            mTvOverallCoupon.setText("满" + bean.limit + "元,可享受" + bean.discount + "折优惠");
                             // 计算没有控销的商品打完折后，加上控销商品的价格
                             double discount = DensityUtils.parseDouble(mDiscount) / 10;
                             mDiscountMoney = DoubleMath.mul(mSubCouponSpecialPrice, discount);
@@ -860,13 +867,14 @@ public class ProductCartActivity
         L.i("mAllCouponPrice:" + mAllCouponPrice);
         L.i("mCouponMoney:" + mCouponMoney);
         L.i("mDiscountMoney:" + mDiscountMoney);
+        L.i("mAllGiftPrice:" + mAllGiftPrice);
         L.i("mSpecialCouponPrice:" + mSpecialCouponPrice);
         L.i("mSingeCouponPrice:" + mSingeCouponPrice);
         L.i("checkType:" + checkType);
         L.i("isCoupon:" + isCoupon);
         L.i("isDiscount:" + isDiscount);
         // 优惠金额
-        mTvCouponPrice.setText("-" + DensityUtils.doubleToString(mAllCouponPrice));
+        mTvCouponPrice.setText( DensityUtils.doubleToString(mAllSubPrice));
         // 原总金额
         mTvPrice.setText(DensityUtils.doubleToString(mAllPrice));
         // 实付总金额
@@ -1022,7 +1030,7 @@ public class ProductCartActivity
                         }
                     }
                     if (mDeleteMap.size() > 0) {
-                        mPresenter.deleteShopCart(this, mDeleteMap);
+                        showDialogDelete(mDeleteMap);
                     }
                 }
                 break;
@@ -1063,24 +1071,20 @@ public class ProductCartActivity
                         HashMap<String, Object> detailMap = new HashMap<>();
                         detailMap.put("pid", good.goodsid);
                         detailMap.put("price", good.usefulprice);
-//                        detailMap.put("couponid", "");
+                        detailMap.put("couponid", "");
                         if (good.couponList != null) {
                             for (ShopCartModel.CouponListBean couponListBean : good.couponList) {
                                 if (couponListBean.isSelectCoupon) {
                                     detailMap.put("couponid", couponListBean.couponid);
                                     break;
                                 }
-                                else
-                                {
-                                    detailMap.put("couponid", "");
-                                }
                             }
                         }
                         detailMap.put("count",good.cartcount);
-                        mCount = mCount + DensityUtils.parseInt(good.cartcount);
+                        mCount = mCount + (int) Math.floor(DensityUtils.parseDouble((good.cartcount)));
                         goodList.add(detailMap);
                         OrderModel.Goods ordergood = new OrderModel.Goods();
-                        ordergood.count = DensityUtils.parseInt(good.cartcount);
+                        ordergood.count = (int) Math.floor(DensityUtils.parseDouble((good.cartcount)));
                         ordergood.thumb = good.thumb;
                         ordergood.title = good.title;
                         ordergood.scqy = good.scqy;
@@ -1096,14 +1100,14 @@ public class ProductCartActivity
 
                         List<ShopCartModel.GoodsBean.GiftListBean> listBeans = new ArrayList<>();
                         List<Integer> limits = new ArrayList<>();
-                        int carcount = DensityUtils.parseInt(good.cartcount);
+                        double carcount = DensityUtils.parseDouble(good.cartcount);
                         if (good.giftList != null) {
                             for (ShopCartModel.GoodsBean.GiftListBean giftListBean : good.giftList) {
                                 if (giftListBean.limit != null) {
                                     int limit = DensityUtils.parseInt(giftListBean.limit);
                                     int give = DensityUtils.parseInt(giftListBean.give);
                                     if (carcount >= limit) {
-                                        int div = carcount / limit;
+                                        int div =(int)(carcount / limit) ;
                                         int count = div * give;
                                         if (count > 0 && giftListBean.giftInfo != null) {
                                             limits.add(limit);
@@ -1122,7 +1126,7 @@ public class ProductCartActivity
                                         gift.title = giftListBean.giftInfo.goodsname;
                                         gift.gg = giftListBean.giftInfo.goodsgg;
                                         gift.thumb = giftListBean.giftInfo.goodsthumb;
-                                        int div = carcount / limit;
+                                        int div =(int)(carcount / limit) ;
                                         int count = div * give;
                                         gift.count = count;
                                         gifts.add(gift);
@@ -1143,6 +1147,7 @@ public class ProductCartActivity
                         }
                     }
                 }
+
                 goodsMap.put("activityid", datum.activityid);
 
                 mProducts.put(datum.activityid, goodsMap);
@@ -1171,7 +1176,7 @@ public class ProductCartActivity
             map.put("couponid", "");
             map.put("discount", "");
         }
-        map.put("needpay", mMoney);
+        map.put("needpay", mMoney+"");
         map.put("product", mProducts);
         if (mCount != 0) {
             mPresenter.checkMoney((BaseActivity) this, new Gson().toJson(map));
@@ -1199,7 +1204,6 @@ public class ProductCartActivity
             L.i("mDeletePosition:"+mDeletePosition);
             ShopCartModel.ShopCartListBean shopCartListBean = mAdapter.getData().get(mDeleteCartPosition);
             shopCartListBean.goods.remove(mDeletePosition);
-            mAdapter.setDelete(mDeleteCartPosition,mDeletePosition);
 //            if (shopCartListBean.goods.size()==0)
 //            {
 //                mAdapter.getData().remove(mDeleteCartPosition);
@@ -1208,6 +1212,7 @@ public class ProductCartActivity
             if (mAdapter.getData().size() == 0) {
                 mLoadingLayout.setStatus(LoadingLayout.Empty);
             }
+            mAdapter.setDelete(mDeleteCartPosition,mDeletePosition);
             addUpPrice();
         }
 
@@ -1271,6 +1276,32 @@ public class ProductCartActivity
         }
 
     }
+
+    /**
+     * 删除确认按钮
+     * @param urlMap
+     */
+    public void showDialogDelete( HashMap<String, ArrayList<String>> urlMap)
+    {
+        ComDialog customDialog=new ComDialog(mContext);
+        customDialog.setTitleView(false);
+        customDialog.setContent("是否确定删除？");
+
+        customDialog.setDialogClickListener(new ComDialog.DialogClickListener() {
+            @Override
+            public void cancle() {
+
+            }
+
+            @Override
+            public void ok() {
+                mPresenter.deleteShopCart(ProductCartActivity.this, urlMap);
+            }
+        });
+        customDialog.builder();
+        customDialog.show();
+    }
+
 
     /**
      * 优惠券弹窗

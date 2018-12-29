@@ -215,7 +215,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
         switch (page) {
             case 1:
                 // 如果fragment1已经存在则将其显示出来
-                if (fragment1 != null) {
+                if (fragment1 != null&&currentFragment!=null) {
                     ft.hide(currentFragment).show(fragment1);
                 }
                 // 否则添加fragment1，注意添加后是会显示出来的，replace方法也是先remove后add
@@ -226,7 +226,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                 currentFragment=fragment1;
                 break;
             case 2:
-                if (fragment2 != null)
+                if (fragment2 != null&&currentFragment!=null)
                     ft.hide(currentFragment).show(fragment2);
                 else {
                     fragment2 = new CategoryFragment();
@@ -235,7 +235,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                 currentFragment=fragment2;
                 break;
             case 3:
-                if (fragment3 != null) {
+                if (fragment3 != null&&currentFragment!=null) {
                     ft.hide(currentFragment).show(fragment3);
                 } else {
                     fragment3 = new HomePageFragment();
@@ -247,7 +247,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
 
                 break;
             case 5:
-                if (fragment5 != null) {
+                if (fragment5 != null&&currentFragment!=null) {
                     ft.hide(currentFragment).show(fragment5);
                 } else {
                     fragment5 = new MyFragment();
@@ -327,7 +327,10 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
 
     @Override
     public void onDialogShow(JSONObject jsonObject) {
-
+        if (mContext==null)
+        {
+            return;
+        }
         String pushtype = jsonObject.optString("pushtype");
         ComDialog comDialog = new ComDialog(this);
         comDialog.setTitleView(false).setContent("有新的消息请您查看").setOk("去看看").builder().show();
@@ -386,6 +389,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                     i.putExtra(Constants.KEY_ITEM_ID, goodsid);
                 } else {
                     comDialog.cancle();
+                    return;
                 }
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);

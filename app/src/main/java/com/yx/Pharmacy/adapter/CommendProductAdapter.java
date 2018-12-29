@@ -75,7 +75,7 @@ public class CommendProductAdapter extends BaseQuickAdapter<DrugModel,BaseViewHo
         helper.setText(R.id.tv_scqy,item.getScqy())
               .setText(R.id.tv_price,item.getPrice())
               .setText(R.id.tv_gg,item.getGg())
-              .setText(R.id.tv_sale,"已售"+item.getSales())
+              .setText(R.id.tv_sale,"库存"+item.getSales())
               .setGone(R.id.iv_presale,!TextUtils.equals(item.getPresale(),"0"));
         if(TextUtils.equals(mType,"1")){
             // 特价

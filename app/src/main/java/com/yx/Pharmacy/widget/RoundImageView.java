@@ -15,11 +15,16 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
 import android.util.AttributeSet;
+import android.util.Base64;
 import android.widget.ImageView;
 
 import com.yx.Pharmacy.R;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.ref.SoftReference;
 
 
 /**
@@ -139,10 +144,29 @@ public class RoundImageView extends ImageView {
 		byte[] datas = baos.toByteArray();
 
 		final BitmapFactory.Options options = new BitmapFactory.Options();
-		options.inJustDecodeBounds = true;
 		options.inSampleSize = 2;
-		options.inJustDecodeBounds = false;
-		Bitmap bitmap =BitmapFactory.decodeByteArray(datas,0,datas.length,options);
+
+		Bitmap bitmap = null;
+
+		InputStream input = null;
+		try{
+
+			input = new ByteArrayInputStream(datas);
+			SoftReference softRef = new SoftReference(BitmapFactory.decodeStream(input, null, options));
+			bitmap = (Bitmap)softRef.get();;
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+
+
+			if(input!=null){
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 
 
 		int radius = 0;
@@ -193,7 +217,9 @@ public class RoundImageView extends ImageView {
 		canvas.drawBitmap(roundBitmap, defaultWidth / 2 - radius, defaultHeight
 				/ 2 - radius, null);
 
-
+		b=null;
+		bitmap=null;
+		roundBitmap=null;
 	}
 
 	/**

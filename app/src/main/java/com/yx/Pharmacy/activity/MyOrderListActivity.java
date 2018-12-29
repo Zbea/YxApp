@@ -77,7 +77,7 @@ public class MyOrderListActivity extends BaseActivity implements IMyOrderListVie
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         initView();
         mPresenter = new MyOrderListPresenter(this);
-        mPresenter.getMyOrderListData(this,"0",page,true);
+        mPresenter.getMyOrderListData(this,"0",page,true,true);
     }
 
     private void initView() {
@@ -122,7 +122,7 @@ public class MyOrderListActivity extends BaseActivity implements IMyOrderListVie
     }
     //加载下一页
     private void initNestPage() {
-        mPresenter.getMyOrderListData(this,"0",page+1,true);
+        mPresenter.getMyOrderListData(this,"0",page+1,true,false);
     }
     @Override
     public void getOrderList(List<OrderModel> data) {//获取下一页数据成功,page+1
@@ -145,7 +145,7 @@ public class MyOrderListActivity extends BaseActivity implements IMyOrderListVie
     @Override
     public void onRefresh() {
         page=1;
-        mPresenter.getMyOrderListData(this,"0",page,true);
+        mPresenter.getMyOrderListData(this,"0",page,true,false);
     }
     @Override
     public void noOrderList() {//没有订单
@@ -204,7 +204,7 @@ public class MyOrderListActivity extends BaseActivity implements IMyOrderListVie
                 orderAdapter.setNewData(models);
                 showNornaml();
                 page=1;
-                mPresenter.getMyOrderListData(this,"0",page,true);
+                mPresenter.getMyOrderListData(this,"0",page,true,true);
                 break;
         }
     }

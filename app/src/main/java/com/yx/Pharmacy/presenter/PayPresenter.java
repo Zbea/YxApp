@@ -7,6 +7,7 @@ import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.PayOrderModel;
+import com.yx.Pharmacy.model.PayWayModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
@@ -83,4 +84,25 @@ public class PayPresenter {
                 });
     }
 
+    public void getPay(BaseActivity activity) {
+
+        HomeNet.getHomeApi().getPayStyle().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<PayWayModel>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<PayWayModel> response) {
+                        if (response!=null)
+                        {
+                            if (response.getCode().equals("200"))
+                            {
+                                mView.resultPayWay(response.getData());
+                            }
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
 }

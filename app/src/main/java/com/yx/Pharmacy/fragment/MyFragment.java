@@ -136,16 +136,10 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 SettingActivity.startActivity(mContext);
                 break;
             case R.id.ll_feedback:// 退换政策
-                if (urlBean!=null)
-                {
-                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().exchange,1);
-                }
+                HHActivity.startActivity(mContext, StoreManage.newInstance().getStore().exchange,1);
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
-                if (urlBean!=null)
-                {
-                    HHActivity.startActivity(mContext, LocalUrlManage.newInstance().getUrlBean().prizetask);
-                }
+                HHActivity.startActivity(mContext,StoreManage.newInstance().getStore().prizetask);
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);
@@ -329,48 +323,51 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
 
     public void initView() {
-        presenter=new MyPresenter(this);
-        if (!TextUtils.isEmpty(NetUtil.getToken())&&!TextUtils.isEmpty(NetUtil.getStoreid()))
+        if (mView!=null)
         {
-            presenter.getOrderNum((BaseActivity) mContext);
-        }
-        else
-        {
-            setLogoutView();
-        }
-
-        if (TextUtils.isEmpty(NetUtil.getToken())) {
-            tv_user_name.setText("登录/注册");
-        } else {
-            MyShopModel myShopModel=StoreManage.newInstance().getStore();
-            String truename = myShopModel.storename;
-            tv_user_name.setText(TextUtils.isEmpty(truename) ? myShopModel.mobile : truename);
-        }
-
-        if (TextUtils.isEmpty(mAvatar)) {
-            mAvatar = SPUtil.getString(UiUtil.getContext(), Constants.KEY_AVATAR);
-            if (TextUtils.isEmpty(mAvatar)) {
-                rl_user_head.setImageResource(R.drawable.icon_logo);
-            } else {
-                GlideUtil.loadRoundImg(mContext, mAvatar, rl_user_head, R.drawable.icon_logo);
+            presenter=new MyPresenter(this);
+            if (!TextUtils.isEmpty(NetUtil.getToken())&&!TextUtils.isEmpty(NetUtil.getStoreid()))
+            {
+                presenter.getOrderNum((BaseActivity) mContext);
             }
-        } else {
-            if (!TextUtils.equals(mAvatar, SPUtil.getString(UiUtil.getContext(), Constants.KEY_AVATAR))) {
+            else
+            {
+                setLogoutView();
+            }
+
+            if (TextUtils.isEmpty(NetUtil.getToken())) {
+                tv_user_name.setText("登录/注册");
+            } else {
+                MyShopModel myShopModel=StoreManage.newInstance().getStore();
+                String truename = myShopModel.storename;
+                tv_user_name.setText(TextUtils.isEmpty(truename) ? myShopModel.mobile : truename);
+            }
+
+            if (TextUtils.isEmpty(mAvatar)) {
                 mAvatar = SPUtil.getString(UiUtil.getContext(), Constants.KEY_AVATAR);
                 if (TextUtils.isEmpty(mAvatar)) {
                     rl_user_head.setImageResource(R.drawable.icon_logo);
                 } else {
                     GlideUtil.loadRoundImg(mContext, mAvatar, rl_user_head, R.drawable.icon_logo);
                 }
+            } else {
+                if (!TextUtils.equals(mAvatar, SPUtil.getString(UiUtil.getContext(), Constants.KEY_AVATAR))) {
+                    mAvatar = SPUtil.getString(UiUtil.getContext(), Constants.KEY_AVATAR);
+                    if (TextUtils.isEmpty(mAvatar)) {
+                        rl_user_head.setImageResource(R.drawable.icon_logo);
+                    } else {
+                        GlideUtil.loadRoundImg(mContext, mAvatar, rl_user_head, R.drawable.icon_logo);
+                    }
+                }
             }
-        }
 
-        if (mIsFirstLoad) {
-            mIsFirstLoad = false;
-            mStoreid = NetUtil.getStoreid();
-        } else {
-            if (!TextUtils.equals(mStoreid, NetUtil.getStoreid())) {// 切换门店账号  刷新五个tab数据
+            if (mIsFirstLoad) {
+                mIsFirstLoad = false;
                 mStoreid = NetUtil.getStoreid();
+            } else {
+                if (!TextUtils.equals(mStoreid, NetUtil.getStoreid())) {// 切换门店账号  刷新五个tab数据
+                    mStoreid = NetUtil.getStoreid();
+                }
             }
         }
     }
@@ -419,8 +416,11 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
 
     private void setOrderNum(TextView tv,int num)
     {
-        tv.setText(""+num);
-        tv.setVisibility(num>0?View.VISIBLE:View.GONE);
+        if (tv!=null)
+        {
+            tv.setText(""+num);
+            tv.setVisibility(num>0?View.VISIBLE:View.GONE);
+        }
     }
 
 }

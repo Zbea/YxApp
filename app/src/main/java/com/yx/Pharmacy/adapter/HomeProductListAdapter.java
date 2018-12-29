@@ -77,7 +77,7 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
         if(TextUtils.equals(mType, "1")){
             // 秒杀
             int         max           = DensityUtils.parseInt(item.salesacti);
-            int         progress             = DensityUtils.parseInt(item.sales);
+            int         progress             = DensityUtils.parseInt(item.sale);
             ProgressBar progressBar = helper.getView(R.id.progress_bar);
             progressBar.setMax(max);
             progressBar.setProgress(progress);
@@ -92,7 +92,7 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
             helper.setText(R.id.tv_title,item.title)
                   .setText(R.id.tv_scqy,item.scqy)
                   .setText(R.id.tv_gg,item.gg)
-                  .setText(R.id.tv_sale,"已售"+item.sales)
+                  .setText(R.id.tv_sale,"库存"+item.sales)
                   .setGone(R.id.iv_presale,!TextUtils.equals(item.presale,"0"));
 //            oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
@@ -114,7 +114,7 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
             // 满赠
             helper.setText(R.id.tv_scqy,item.scqy)
                   .setText(R.id.tv_gg,item.gg)
-                  .setText(R.id.tv_sale,"已售"+item.sales)
+                  .setText(R.id.tv_sale,"库存"+item.sales)
                   .setGone(R.id.iv_presale,!TextUtils.equals(item.presale,"0"));
 //            oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
@@ -131,7 +131,7 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
             // 控销
             helper.setText(R.id.tv_scqy,item.scqy)
                   .setText(R.id.tv_gg,item.gg)
-                  .setText(R.id.tv_sale,"已售"+item.sales)
+                  .setText(R.id.tv_sale,"库存"+item.sales)
                   .setGone(R.id.iv_presale,!TextUtils.equals(item.presale,"0"));
 
             TextView tv_levelnote = helper.getView(R.id.tv_levelnote);

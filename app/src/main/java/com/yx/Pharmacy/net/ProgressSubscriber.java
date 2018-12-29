@@ -36,15 +36,22 @@ public abstract class ProgressSubscriber<T extends BasisBean> implements Observe
     private CommonDialogUtils dialogUtils;
     public ProgressSubscriber(Activity activity) {
         this.activity = activity;
-        dialogUtils=new CommonDialogUtils();
-        dialogUtils.showProgress(activity);
+        if (activity!=null)
+        {
+            dialogUtils=new CommonDialogUtils();
+            dialogUtils.showProgress(activity);
+        }
+
     }
 
     public ProgressSubscriber(Activity activity, boolean isShowLoading) {
         this.activity = activity;
-        dialogUtils=new CommonDialogUtils();
-        if (isShowLoading) {
-            dialogUtils.showProgress(activity,"Loading...");
+        if (activity!=null)
+        {
+            dialogUtils=new CommonDialogUtils();
+            if (isShowLoading) {
+                dialogUtils.showProgress(activity,"Loading...");
+            }
         }
     }
 
@@ -59,13 +66,17 @@ public abstract class ProgressSubscriber<T extends BasisBean> implements Observe
         if (TextUtils.equals(response.getCode(),"200")) {
             onSuccess(response);
         } else {
+            if (TextUtils.equals(response.getCode(),"204"))
+            {
+                onFail(response);
+            }
             try {
                 if(!TextUtils.isEmpty(response.getAlertmsg())){
                     NetUtil.getShortToastByString(response.getAlertmsg());
                 }else if(!TextUtils.isEmpty(response.getMessage())){
                     NetUtil.getShortToastByString(response.getMessage());
                 }else {
-                    NetUtil.getShortToastByString("请求出错啦");
+//                    NetUtil.getShortToastByString("请求出错啦");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -108,7 +119,6 @@ public abstract class ProgressSubscriber<T extends BasisBean> implements Observe
      * @param response 服务器返回的数据
      */
     abstract public void onSuccess(T response);
-
     /**
      * 服务器返回数据，但响应码不为200
      *

@@ -47,6 +47,7 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
             //售后    //status：售后订单的状态  0已申请、1审核中，6.已撤销 7通过处理中，8不通过，9已完成
             helper.getView(R.id.tv_cancle_order).setVisibility(View.GONE);
             helper.setText(R.id.tv_order_todo,"撤销申请");
+            helper.setText(R.id.tv_order_total_price,"退款金额 ¥ 0");
             if(item.status==0||item.status==1){//去支付
                 helper.getView(R.id.ll_bottom).setVisibility(View.VISIBLE);
                 helper.setText(R.id.tv_order_state,"审核中");
@@ -71,12 +72,13 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
             } else {
                 helper.getView(R.id.ll_bottom).setVisibility(View.GONE);
                 helper.setText(R.id.tv_order_state,"已完成");
+                helper.setText(R.id.tv_order_total_price,"退款金额 ¥"+item.price);
             }
 
 
         helper.setText(R.id.tv_order_total_num,"退货数量 "+item.count);
         helper.setText(R.id.tv_total_number,"总数量 "+item.number);
-        helper.setText(R.id.tv_order_total_price,"退款金额 ¥"+item.price);
+
         helper.setText(R.id.tv_order_old_price,"已付金额 ¥"+item.oprice);
         helper.setText(R.id.tv_order_code,"订单编号:"+item.orderid);
         helper.setText(R.id.tv_order_old_number,"退货单号:"+item.orderbackid);
@@ -89,6 +91,7 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
             helper.setText(R.id.tv_order_title,item.goodsList.get(0).title);
             helper.setText(R.id.tv_order_company,item.goodsList.get(0).scqy);
             helper.setText(R.id.tv_price,"折后价："+item.goodsList.get(0).price);
+            helper.getView(R.id.tv_price).setVisibility(View.GONE);
             helper.setText(R.id.tv_ph,"批号"+item.goodsList.get(0).ph1);
             TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
 //            tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG); //中划线

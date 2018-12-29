@@ -468,8 +468,8 @@ public class ProductDetailActivity
 
 
             mTvUnit.setText(data.gg);
-            mTvHasSale.setText("已售" + data.sales + "件");
-            tv_sales.setText("已售" + data.sales + "件");
+            mTvHasSale.setText("库存" + data.sales );
+            tv_sales.setText("库存" + data.sales );
             mTvSaleRecord.setText(data.orders);
             String couponinfo = data.couponinfo;
             if (TextUtils.isEmpty(couponinfo)) {//无优惠劵

@@ -192,6 +192,7 @@
             <RelativeLayout
                 android:background="@drawable/white_bg"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="@dimen/dp_45">
                 <TextView
                     android:text="折扣率"
@@ -222,7 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_45">
                 <TextView
-                    android:text="合计"
+                    android:text="余额"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_16"
                     android:textSize="@dimen/sp_14"

@@ -104,7 +104,7 @@ public class MiaoShaAdapter
                 b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_xs);
             }
 
-            int         max           = item.activityCount;
+            int         max           = item.getSalesacti();
             int         progress             = item.salesCount;
             progressbar.setMax(max);
             progressbar.setProgress(progress);

@@ -19,6 +19,33 @@
 
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "2976b7f999888"
+    appSecret "989f7983a02547bbe882ea2653240542"
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wx2fd55082c0d01ccf"
+                appSecret "cd86efaeff61efc0a5a0accfdc24d215"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            WechatMoments {
+                appId "wx2fd55082c0d01ccf"
+                appSecret "cd86efaeff61efc0a5a0accfdc24d215"
+            }
+//            WechatFavorite {
+//                appId "wx2fd55082c0d01ccf"
+//                appSecret "cd86efaeff61efc0a5a0accfdc24d215"
+//            }
+        }
+    }
+}
+
 buildscript {
     repositories {
         mavenCentral()
@@ -157,6 +184,8 @@ task cdvPrintProps << {
     }
 }
 
+
+
 android {
     signingConfigs {
         debug {
@@ -166,6 +195,7 @@ android {
             storePassword 'yuanxin'
         }
         release {
+            storeFile file("jshare.jks") //签名文件路径
             keyAlias 'yuanxin'
             keyPassword 'yuanxin'
             storeFile file('yuanxin.jks')
@@ -176,18 +206,24 @@ android {
         exclude 'META-INF/rxjava.properties'
     }
     defaultConfig {
-        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
+//        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId "com.yx.Pharmacy"
-        minSdkVersion 17
+        minSdkVersion 18
         targetSdkVersion 26
-        versionCode 20181214
-        versionName "1.0.3"
+        versionCode 20181227
+        versionName "1.0.4"
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
         }
         //解决Lib重复
         multiDexEnabled true
+
+        javaCompileOptions {
+
+            annotationProcessorOptions { includeCompileClasspath = true }
+        }
+
         ndk {
             //设置支持的SO库架构
             abiFilters "armeabi", "armeabi-v7a", "x86", "armeabi-v8a", "x86_64"
@@ -289,6 +325,7 @@ android {
         }
     }
 
+
 }
 
 
@@ -335,6 +372,8 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.0'
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     implementation 'org.greenrobot:eventbus:3.1.1'
+
+
     compile 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
     compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
     compile 'cn.jiguang.sdk:jpush:3.1.5'  // JPush 3.1.5

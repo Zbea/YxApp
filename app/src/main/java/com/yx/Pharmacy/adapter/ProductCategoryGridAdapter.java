@@ -74,7 +74,7 @@ public class ProductCategoryGridAdapter extends BaseQuickAdapter<DrugModel,BaseV
         helper.setText(R.id.tv_company,item.getScqy());
 
         helper.setText(R.id.tv_unit,item.getGg());
-        helper.setText(R.id.tv_has_sale,"已售"+item.getSales());
+        helper.setText(R.id.tv_has_sale,"库存"+item.getSales());
         tv_drug_name.setText(item.getTitle());
 
         helper.setText(R.id.tv_price,item.getPrice());

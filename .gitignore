@@ -12,7 +12,6 @@ gen
 out
 # Gradle builds
 /build
-build/
 *.iml
 .gradle
 /local.properties

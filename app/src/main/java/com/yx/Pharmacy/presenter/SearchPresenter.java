@@ -8,10 +8,12 @@ import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
+import com.yx.Pharmacy.model.SearchAutoModel;
 import com.yx.Pharmacy.model.TagModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.view.ISearchView;
 
@@ -84,6 +86,7 @@ public class SearchPresenter {
             urlMap.put("pricesort", "2");
             urlMap.put("salesort", "2");
         }
+        L.i("urlMap:"+urlMap.toString());
         HomeNet.getHomeApi().getProductList(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<List<DrugModel>>>(activity, true) {
@@ -137,6 +140,35 @@ public class SearchPresenter {
                     }
                 });
     }
+
+    /**
+     *z自动补全
+     */
+    public void productSearchAuto(final BaseActivity activity, String keyword) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("keyword", keyword);
+        HomeNet.getHomeApi().getSearchAutoList(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<List<SearchAutoModel>>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<List<SearchAutoModel>> response) {
+                        mView.getAutoSearchList(response.getData());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                        mView.getAutoSearchList(null);
+                    }
+
+                    @Override
+                    public void onFail(BasisBean<List<SearchAutoModel>> response) {
+                        super.onFail(response);
+                        mView.getAutoSearchList(null);
+                    }
+                });
+    }
+
 
     /**
      * 到货通知

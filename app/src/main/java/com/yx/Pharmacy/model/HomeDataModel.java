@@ -67,6 +67,7 @@ public class HomeDataModel {
         public String gg;
         public String scqy;
         public String    sales;
+        public String    sale;
         public String thumb;
         public String    itemid;
         public String    amount;

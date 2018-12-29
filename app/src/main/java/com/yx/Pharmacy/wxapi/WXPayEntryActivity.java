@@ -14,6 +14,7 @@ import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.StackManager;
 import com.yx.Pharmacy.util.UiUtil;
@@ -56,6 +57,7 @@ public class WXPayEntryActivity extends Activity
 			}
 			StackManager.getManagerStack().popAllActivityExceptOne();
 		}else {
+			L.i("resp.errCode:"+resp.errCode);
 			Toast.makeText(this, "支付失败", Toast.LENGTH_SHORT).show();
 		}
 		finish();
