@@ -10,8 +10,8 @@
     <ImageView
         android:scaleType="fitCenter"
         android:id="@+id/iv_image"
-        android:layout_width="@dimen/dp_32"
-        android:layout_height="@dimen/dp_32"/>
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"/>
 
 
     <TextView

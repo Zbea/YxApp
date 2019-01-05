@@ -147,10 +147,14 @@ public class HomePageFragment
             if (msg.what==1)
             {
                 mAdapter.getData().clear();
-                mAdapter.setNewData(homeDataModels);
+                if (homeDataModels!=null)
+                {
+                    mAdapter.setNewData(homeDataModels);
+                }
             }
             if (msg.what==2)
             {
+                mWebAdapter.getData().clear();
                 if (homeAdvanceModel.guid != null && homeAdvanceModel.guid.size() > 0) {
                     mWebAdapter.setNewData(homeAdvanceModel.guid);
                 }
@@ -418,20 +422,15 @@ public class HomePageFragment
 
     @Override
     public void showHomeData(List<HomeDataModel> data) {
-        if (data.size() > 0) {
-            homeDataModels=data;
-            mHandler.sendEmptyMessage(1);
-        }
+        homeDataModels=data;
+        mHandler.sendEmptyMessage(1);
     }
 
     @Override
     public void showAdvanceData(HomeAdvanceModel data) {
 
-        if (data!=null)
-        {
-            homeAdvanceModel=data;
-            mHandler.sendEmptyMessage(2);
-        }
+        homeAdvanceModel=data;
+        mHandler.sendEmptyMessage(2);
 
     }
 
@@ -475,11 +474,8 @@ public class HomePageFragment
 
     @Override
     public void showMessageListResult(HomeAdvanceModel data) {
-        if (data!=null)
-        {
-            messageModel=data;
-            mHandler.sendEmptyMessage(3);
-        }
+        messageModel=data;
+        mHandler.sendEmptyMessage(3);
     }
 
 

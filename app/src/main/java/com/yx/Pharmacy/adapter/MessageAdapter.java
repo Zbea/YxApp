@@ -173,10 +173,15 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");
             helper.getView(R.id.iv_youhui_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
         } else {//其他特殊情况暂不处理，只显示
-            helper.getView(R.id.ll_type_wuliu).setVisibility(View.VISIBLE);
-            helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
+            helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
+            helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
+
+            helper.setText(R.id.tv_system_notice_name,"系统通知");
+            helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+            helper.setText(R.id.tv_system_notice_content,item.content);
+            helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
         }
 
         helper.getView(R.id.ll_type_wuliu).setOnClickListener(new View.OnClickListener() {

@@ -9,8 +9,8 @@ package com.yx.Pharmacy.constant;
 
 public class Constants {
     //     测试
-    public static final String BASE_URL            = "https://api.dianyaobei.com/index.php/";
-//    public static final String BASE_URL = "http://api.dianyaobei.com:8808/index.php/";
+//    public static final String BASE_URL            = "https://api.dianyaobei.com/index.php/";
+    public static final String BASE_URL = "http://api.dianyaobei.com:8808/index.php/";
     // H5连接
     public static final String H5_URL = "h5_url";
 

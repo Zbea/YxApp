@@ -41,7 +41,7 @@ public class HomeDataPresenter {
                .subscribe(new ProgressSubscriber<BasisBean<List<HomeDataModel>>>(activity, true) {
                    @Override
                    public void onSuccess(BasisBean<List<HomeDataModel>> response) {
-                       if (response.getData()!=null) {
+                       if (response.getCode().equals("200")) {
                            mView.showHomeData(response.getData());
                        }else {
                            activity.getShortToastByString(response.getAlertmsg());
@@ -64,7 +64,7 @@ public class HomeDataPresenter {
                .subscribe(new ProgressSubscriber<BasisBean<HomeAdvanceModel>>(activity, false) {
                    @Override
                    public void onSuccess(BasisBean<HomeAdvanceModel> response) {
-                       if (response.getData()!=null) {
+                       if (response.getCode().equals("200")) {
                            mView.showAdvanceData(response.getData());
                        }else {
                            activity.getShortToastByString(response.getAlertmsg());
@@ -87,7 +87,7 @@ public class HomeDataPresenter {
                 .subscribe(new ProgressSubscriber<BasisBean<HomeAdvanceModel>>(activity, false) {
                     @Override
                     public void onSuccess(BasisBean<HomeAdvanceModel> response) {
-                        if (response.getData()!=null) {
+                        if (response.getCode().equals("200")) {
                             mView.showMessageListResult(response.getData());
                         }else {
                             activity.getShortToastByString(response.getAlertmsg());
@@ -114,7 +114,7 @@ public class HomeDataPresenter {
                .subscribe(new ProgressSubscriber<BasisBean<List<DrugModel>>>(activity, false) {
                    @Override
                    public void onSuccess(BasisBean<List<DrugModel>> response) {
-                       if (response.getData()!=null) {
+                       if (response.getCode().equals("200")) {
                            mView.showProductListResult(response.getData());
                        }else {
                            mView.hideFlash();
