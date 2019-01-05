@@ -17,15 +17,17 @@ import java.lang.Override;
 public class PayActivity_ViewBinding implements Unbinder {
   private PayActivity target;
 
-  private View view2131296813;
+  private View view2131296818;
 
-  private View view2131296783;
+  private View view2131296786;
 
-  private View view2131297134;
+  private View view2131296788;
 
-  private View view2131296825;
+  private View view2131297140;
 
-  private View view2131296780;
+  private View view2131296830;
+
+  private View view2131296784;
 
   @UiThread
   public PayActivity_ViewBinding(PayActivity target) {
@@ -41,9 +43,19 @@ public class PayActivity_ViewBinding implements Unbinder {
     target.iv_select_wechat_pay = Utils.findRequiredViewAsType(source, R.id.iv_select_wechat_pay, "field 'iv_select_wechat_pay'", ImageView.class);
     target.iv_select_alipay = Utils.findRequiredViewAsType(source, R.id.iv_select_alipay, "field 'iv_select_alipay'", ImageView.class);
     target.iv_select_public_pay = Utils.findRequiredViewAsType(source, R.id.iv_select_public_pay, "field 'iv_select_public_pay'", ImageView.class);
+    target.iv_select_another_pay = Utils.findRequiredViewAsType(source, R.id.iv_select_another_pay, "field 'iv_select_another_pay'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_public_pay, "field 'rlPublicPay' and method 'click'");
     target.rlPublicPay = Utils.castView(view, R.id.rl_public_pay, "field 'rlPublicPay'", RelativeLayout.class);
-    view2131296813 = view;
+    view2131296818 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.click(p0);
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.rl_another_pay, "field 'rlAnotherPay' and method 'click'");
+    target.rlAnotherPay = Utils.castView(view, R.id.rl_another_pay, "field 'rlAnotherPay'", RelativeLayout.class);
+    view2131296786 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -51,7 +63,7 @@ public class PayActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296783 = view;
+    view2131296788 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,7 +71,7 @@ public class PayActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_to_pay, "method 'click'");
-    view2131297134 = view;
+    view2131297140 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +79,7 @@ public class PayActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_wechat_pay, "method 'click'");
-    view2131296825 = view;
+    view2131296830 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +87,7 @@ public class PayActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_alipay, "method 'click'");
-    view2131296780 = view;
+    view2131296784 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -95,17 +107,21 @@ public class PayActivity_ViewBinding implements Unbinder {
     target.iv_select_wechat_pay = null;
     target.iv_select_alipay = null;
     target.iv_select_public_pay = null;
+    target.iv_select_another_pay = null;
     target.rlPublicPay = null;
+    target.rlAnotherPay = null;
 
-    view2131296813.setOnClickListener(null);
-    view2131296813 = null;
-    view2131296783.setOnClickListener(null);
-    view2131296783 = null;
-    view2131297134.setOnClickListener(null);
-    view2131297134 = null;
-    view2131296825.setOnClickListener(null);
-    view2131296825 = null;
-    view2131296780.setOnClickListener(null);
-    view2131296780 = null;
+    view2131296818.setOnClickListener(null);
+    view2131296818 = null;
+    view2131296786.setOnClickListener(null);
+    view2131296786 = null;
+    view2131296788.setOnClickListener(null);
+    view2131296788 = null;
+    view2131297140.setOnClickListener(null);
+    view2131297140 = null;
+    view2131296830.setOnClickListener(null);
+    view2131296830 = null;
+    view2131296784.setOnClickListener(null);
+    view2131296784 = null;
   }
 }

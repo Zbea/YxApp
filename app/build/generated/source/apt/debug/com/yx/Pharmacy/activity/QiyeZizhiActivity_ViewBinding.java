@@ -17,7 +17,7 @@ import java.lang.Override;
 public class QiyeZizhiActivity_ViewBinding implements Unbinder {
   private QiyeZizhiActivity target;
 
-  private View view2131296791;
+  private View view2131296795;
 
   @UiThread
   public QiyeZizhiActivity_ViewBinding(QiyeZizhiActivity target) {
@@ -31,7 +31,7 @@ public class QiyeZizhiActivity_ViewBinding implements Unbinder {
     View view;
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onViewClicked'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296791 = view;
+    view2131296795 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class QiyeZizhiActivity_ViewBinding implements Unbinder {
     target.mTvTitle = null;
     target.mRvZizhi = null;
 
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
+    view2131296795.setOnClickListener(null);
+    view2131296795 = null;
   }
 }

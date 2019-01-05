@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\androidSpace\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\3609a480f8fd2aab914771a0186b9680\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\b91de97c328c3a5cbd96184ec2cead71\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\28d8d770da3c21be5473a5e561a6a131\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

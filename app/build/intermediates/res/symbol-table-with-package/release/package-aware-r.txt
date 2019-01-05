@@ -1336,6 +1336,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dfzzzffs
 drawable dgzzzffs
 drawable dialog_custom_bg
 drawable dialog_loading
@@ -1397,6 +1398,7 @@ drawable icon_home_red
 drawable icon_home_server
 drawable icon_home_shopp
 drawable icon_home_store_bg
+drawable icon_home_top
 drawable icon_image_loading
 drawable icon_image_loading_cc
 drawable icon_logo
@@ -2021,6 +2023,7 @@ id folder_list
 id forever
 id fullWebView
 id ghost_view
+id gridView
 id home
 id homeAsUp
 id horizontal_scrollview
@@ -2107,6 +2110,7 @@ id iv_product_thumb
 id iv_product_type
 id iv_qrcode
 id iv_select_alipay
+id iv_select_another_pay
 id iv_select_public_pay
 id iv_select_wechat_pay
 id iv_service
@@ -2119,6 +2123,7 @@ id iv_stop_download
 id iv_system_notice
 id iv_system_notice_isread
 id iv_title
+id iv_top
 id iv_top_bg
 id iv_type
 id iv_user_head
@@ -2142,6 +2147,7 @@ id lin_fragment
 id line1
 id line3
 id listMode
+id listView
 id list_item
 id ll_about
 id ll_accout_security
@@ -2378,6 +2384,7 @@ id rlRichpushTitleBar
 id rl_about
 id rl_alipay
 id rl_amin_window
+id rl_another_pay
 id rl_arrive_notice
 id rl_back
 id rl_birthday
@@ -2595,6 +2602,7 @@ id tv_factory_address
 id tv_file_name
 id tv_file_size
 id tv_find
+id tv_focas
 id tv_folder_name
 id tv_get_code
 id tv_gg
@@ -3155,6 +3163,7 @@ layout item_qianggou
 layout item_qiye_zizhi
 layout item_reason
 layout item_sale_record
+layout item_search_auto
 layout item_shop_cart
 layout item_shop_cart_product
 layout item_sort_list
@@ -3200,6 +3209,7 @@ layout picture_selector
 layout picture_title_bar
 layout picture_wind_base_dialog_xml
 layout picture_window_folder
+layout popwindow_search_auto
 layout quick_view_load_more
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

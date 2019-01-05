@@ -15,7 +15,7 @@ import java.lang.Override;
 public class MyBankActivity_ViewBinding implements Unbinder {
   private MyBankActivity target;
 
-  private View view2131296783;
+  private View view2131296788;
 
   private View view2131296322;
 
@@ -33,7 +33,7 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = Utils.findRequiredViewAsType(source, R.id.tv_bank, "field 'tv_bank'", TextView.class);
     target.tv_card_num = Utils.findRequiredViewAsType(source, R.id.tv_card_num, "field 'tv_card_num'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296783 = view;
+    view2131296788 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,8 +61,8 @@ public class MyBankActivity_ViewBinding implements Unbinder {
     target.tv_bank = null;
     target.tv_card_num = null;
 
-    view2131296783.setOnClickListener(null);
-    view2131296783 = null;
+    view2131296788.setOnClickListener(null);
+    view2131296788 = null;
     view2131296322.setOnClickListener(null);
     view2131296322 = null;
   }

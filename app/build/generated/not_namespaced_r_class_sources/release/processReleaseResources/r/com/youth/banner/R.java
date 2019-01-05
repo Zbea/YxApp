@@ -35,8 +35,8 @@ public final class R {
         private drawable() {}
 
         public static final int black_background = 0x7f080062;
-        public static final int gray_radius = 0x7f080090;
-        public static final int white_radius = 0x7f080196;
+        public static final int gray_radius = 0x7f080091;
+        public static final int white_radius = 0x7f080198;
     }
     public static final class id {
         private id() {}
@@ -50,13 +50,13 @@ public final class R {
         public static final int fit_end = 0x7f09009e;
         public static final int fit_start = 0x7f09009f;
         public static final int fit_xy = 0x7f0900a0;
-        public static final int indicator = 0x7f0900c0;
-        public static final int indicatorInside = 0x7f0900c1;
-        public static final int matrix = 0x7f09018d;
-        public static final int numIndicator = 0x7f0901be;
-        public static final int numIndicatorInside = 0x7f0901bf;
-        public static final int titleView = 0x7f09028c;
-        public static final int viewpager = 0x7f0903a4;
+        public static final int indicator = 0x7f0900c1;
+        public static final int indicatorInside = 0x7f0900c2;
+        public static final int matrix = 0x7f090191;
+        public static final int numIndicator = 0x7f0901c2;
+        public static final int numIndicatorInside = 0x7f0901c3;
+        public static final int titleView = 0x7f090291;
+        public static final int viewpager = 0x7f0903aa;
     }
     public static final class layout {
         private layout() {}

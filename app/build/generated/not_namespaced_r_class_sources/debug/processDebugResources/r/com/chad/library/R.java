@@ -24,8 +24,8 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int sample_footer_loading = 0x7f08012e;
-        public static final int sample_footer_loading_progress = 0x7f08012f;
+        public static final int sample_footer_loading = 0x7f08012f;
+        public static final int sample_footer_loading_progress = 0x7f080130;
     }
     public static final class id {
         private id() {}
@@ -34,17 +34,17 @@ public final class R {
         public static final int BaseQuickAdapter_dragging_support = 0x7f090002;
         public static final int BaseQuickAdapter_swiping_support = 0x7f090003;
         public static final int BaseQuickAdapter_viewholder_support = 0x7f090004;
-        public static final int load_more_load_end_view = 0x7f090187;
-        public static final int load_more_load_fail_view = 0x7f090188;
-        public static final int load_more_loading_view = 0x7f090189;
-        public static final int loading_progress = 0x7f09018b;
-        public static final int loading_text = 0x7f09018c;
-        public static final int tv_prompt = 0x7f09034c;
+        public static final int load_more_load_end_view = 0x7f09018a;
+        public static final int load_more_load_fail_view = 0x7f09018b;
+        public static final int load_more_loading_view = 0x7f09018c;
+        public static final int loading_progress = 0x7f09018e;
+        public static final int loading_text = 0x7f09018f;
+        public static final int tv_prompt = 0x7f090359;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int quick_view_load_more = 0x7f0b00d1;
+        public static final int quick_view_load_more = 0x7f0b00d3;
     }
     public static final class string {
         private string() {}

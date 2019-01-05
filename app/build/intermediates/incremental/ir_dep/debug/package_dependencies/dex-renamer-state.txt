@@ -1,7 +1,7 @@
-#Wed Dec 12 17:55:41 CST 2018
-base.0=D\:\\androidSpace\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Wed Jan 02 17:49:47 CST 2019
+base.0=D\:\\androidSpace\\YxApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\androidSpace\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+base.1=D\:\\androidSpace\\YxApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10

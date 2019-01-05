@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\androidSpace\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\f644883643a729ea2ac5f1bcbbcba90b\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\3609a480f8fd2aab914771a0186b9680\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
