@@ -28,7 +28,7 @@ public class SaleRecordAdapter extends BaseQuickAdapter<SaleRecordModel,BaseView
 //        ImageView iv_sale_record_head=helper.getView(R.id.iv_sale_record_head);
 //        GlideUtil.loadRoundImg(mContext,);
 
-        helper.setText(R.id.tv_username, ComMethodsUtil.phoneFormat(item.mobile))
+        helper.setText(R.id.tv_username, ComMethodsUtil.phoneFormat(item.buyer_company))
                .setText(R.id.tv_date, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.add_time+"000")))
                 .setText(R.id.tv_sale_num,"x"+item.count);
     }

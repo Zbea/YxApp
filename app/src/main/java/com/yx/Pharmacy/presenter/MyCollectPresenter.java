@@ -61,7 +61,7 @@ public class MyCollectPresenter {
         urlMap.put("pid",String.valueOf(pid));
         HomeNet.getHomeApi().cancelcollect(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, false) {
+                .subscribe(new ProgressSubscriber<BasisBean<Boolean>>(activity, true) {
                     @Override
                     public void onSuccess(BasisBean<Boolean> response) {
                         if(response.getData()){

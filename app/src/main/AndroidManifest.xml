@@ -117,6 +117,7 @@
         <activity android:name=".activity.SearchActivity"
             android:windowSoftInputMode="adjustNothing"
             />
+        <activity android:name=".activity.ProductItemActivity" />
         <activity android:name=".activity.MyShopActivity" />
         <activity android:name=".activity.MyShopAddActivity" />
         <activity android:name=".activity.MyCollectActivity" />

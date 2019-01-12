@@ -13,6 +13,7 @@ import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
@@ -171,10 +172,7 @@ public class YxJPushReceiver
                         String activityname = jsonObject.optString("activityname");
                         String levelid = jsonObject.optString("levelid");
                         String type = jsonObject.optString("type");
-                        i = new Intent(context, CommendProductActivity.class);
-                        i.putExtra("activityname", activityname);
-                        i.putExtra("levelid", levelid);
-                        i.putExtra("type", type);
+                        ProductItemActivity.startActivity(context,2,""+levelid,activityname);
                     } else if (TextUtils.equals(pushtype, "6")) {
                         //app跳转订单详情
                         String orderid = jsonObject.optString("orderid");

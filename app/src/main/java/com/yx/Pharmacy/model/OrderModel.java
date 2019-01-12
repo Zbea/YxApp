@@ -80,6 +80,7 @@ public class OrderModel implements Serializable {
     public String recordnote;
     public String checknote;
     public String pay_url;
+    public String subTitle;
 
     public static class Goods  implements Serializable {
         public String mallid;

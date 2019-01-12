@@ -13,9 +13,9 @@ import com.google.gson.reflect.TypeToken;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
-import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.MyCouponActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.adapter.CouponListAdapter;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.model.CouponModel;
@@ -82,18 +82,11 @@ public class CouponFragment extends BaseFragment  {
                 }
                 if(couponModel.getCoupontype()==2) {
                     String type = couponModel.leveltype+"";
-                    if (TextUtils.equals(type, "1")) {
+                    if (TextUtils.equals(String.valueOf(type), "1")) {
                         // 秒杀
-                        CommendMsActivity.startActivity(mContext,couponModel.levelid);
-                    } else if (TextUtils.equals(type, "2")) {
-                        // 特价
-                        CommendTjActivity.startActivity(mContext, type, couponModel.levelid);
-                    } else if (TextUtils.equals(type, "3")) {
-                        // 满减
-                        CommendProductActivity.startActivity(mContext, type, couponModel.levelid);
-                    } else if (TextUtils.equals(type, "9")) {
-                        // 控销
-                        CommendProductActivity.startActivity(mContext, type, couponModel.levelid);
+                        CommendMsActivity.startActivity(mContext,""+couponModel.levelid);
+                    } else  {
+                        ProductItemActivity.startActivity(mContext,2,""+couponModel.levelid,couponModel.title);
                     }
                 }
                 if(couponModel.getCoupontype()==3)

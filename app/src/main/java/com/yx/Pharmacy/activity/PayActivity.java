@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +19,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alipay.sdk.app.PayTask;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
@@ -26,6 +33,7 @@ import com.yx.Pharmacy.model.MyOrderNumModel;
 import com.yx.Pharmacy.model.PayOrderModel;
 import com.yx.Pharmacy.model.PayResult;
 import com.yx.Pharmacy.model.PayWayModel;
+import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.PayPresenter;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
@@ -34,13 +42,17 @@ import com.yx.Pharmacy.util.StackManager;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IPayView;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
+import cn.sharesdk.wechat.friends.Wechat;
 //import cn.sharesdk.onekeyshare.OnekeyShare;
 
 import static com.yx.Pharmacy.base.YxApp.mWxApi;
@@ -71,6 +83,7 @@ public class PayActivity extends BaseActivity implements IPayView {
     private String mOrdernum;
     private PayPresenter mPresenter;
     private PayWayModel payWayModel;
+    private IWXAPI wxapi;
 
     public static void startActivity(Activity activity) {
         Intent intent = new Intent(activity, PayActivity.class);
@@ -91,15 +104,22 @@ public class PayActivity extends BaseActivity implements IPayView {
 
     @Override
     protected void init() {
+
+
+        wxapi = WXAPIFactory.createWXAPI(this, Constants.WX_ID, true);
+        wxapi.registerApp(Constants.WX_ID);
+
         StackManager.getManagerStack().pushActivity(this);
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         mPresenter = new PayPresenter(this);
-        mPresenter.getPay(this);
+
         tv_title.setText("选择支付方式");
         iv_select_wechat_pay.setVisibility(View.VISIBLE);
 
         mNeedpay = getIntent().getStringExtra("needpay");
         mOrdernum = getIntent().getStringExtra("ordernum");
+
+        mPresenter.getPay(this,mOrdernum);
     }
 
     @OnClick({R.id.rl_back, R.id.tv_to_pay, R.id.rl_wechat_pay, R.id.rl_alipay, R.id.rl_public_pay, R.id.rl_another_pay})
@@ -148,43 +168,58 @@ public class PayActivity extends BaseActivity implements IPayView {
     }
 
     private void showPay() {
+
+        WXWebpageObject webpage = new WXWebpageObject();
+        webpage.webpageUrl = payWayModel.otherPayUrl;
+        final WXMediaMessage msg = new WXMediaMessage(webpage);
+        msg.title = payWayModel.shareTitle;
+        msg.description = payWayModel.shareContent;
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.logo);
+//        final Bitmap[] thumbBmp = {Bitmap.createScaledBitmap(bmp, 80, 80, true)};
+//        bmp.recycle();
+//        msg.
+//        msg.thumbData = WRKFileUtil.bmpToByteArray(thumbBmp[0], true);
+        msg.setThumbImage(bmp);
+        SendMessageToWX.Req req = new SendMessageToWX.Req();
+        req.transaction = buildTransaction("webpage");
+        req.message = msg;
+        req.scene = SendMessageToWX.Req.WXSceneSession;
+        wxapi.sendReq(req);
+
 //        if (payWayModel != null) {
 //            OnekeyShare oks = new OnekeyShare();
 //            //关闭sso授权
 //            oks.disableSSOWhenAuthorize();
 //            // title标题，微信、QQ和QQ空间等平台使用
 //            oks.setTitle(payWayModel.shareTitle);
-//            // titleUrl QQ和QQ空间跳转链接
-//            oks.setTitleUrl(payWayModel.otherPayUrl);
 //            // text是分享文本，所有平台都需要这个字段
-//            oks.setText(payWayModel.shareContent);
+////            oks.setText(payWayModel.shareContent);
+//            oks.setText(payWayModel.shareContent+payWayModel.otherPayUrl);
 //            // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
-//            oks.setImagePath(getResourcesUri(R.drawable.icon_logo));//确保SDcard下面存在此张图片
+////            oks.setImagePath(getResourcesUri(R.drawable.logo));//确保SDcard下面存在此张图片
+//            oks.setImageUrl("https://mmbiz.qlogo.cn/mmbiz_png/pwqpMKT1RTxAziaQUsnFUicyl8G1xGxFpbKJ9TOBhxEut1FJbW6CxcvE1axUFQEY43zEKKQ0BoLxtlFyFiaA9XItw/0?wx_fmt=png");
 //            // url在微信、微博，Facebook等平台中使用
 //            oks.setUrl(payWayModel.otherPayUrl);
-//            // comment是我对这条分享的评论，仅在人人网和QQ空间使用
-//            oks.setComment("我是测试评论文本");
-//            // site是分享此内容的网站名称，仅在QQ空间使用
-//            oks.setSite(mContext.getString(R.string.app_name));
-//            // siteUrl是分享此内容的网站地址，仅在QQ空间使用
-//            oks.setSiteUrl(payWayModel.otherPayUrl);
 //            // 启动分享GUI
 //            oks.show(this);
 //
-//
 //        }
 
-//
-        Intent intent=new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-//        String path = getResourcesUri(R.drawable.icon_logo);
-//        intent.setType("image/jpg");
-//        Uri u = Uri.parse(path);
-//        intent.putExtra(Intent.EXTRA_STREAM, u);
-        intent.putExtra(Intent.EXTRA_SUBJECT, payWayModel==null?"他人代付":payWayModel.shareTitle);
-        intent.putExtra(Intent.EXTRA_TEXT, payWayModel==null?"他人代付":payWayModel.shareTitle+":"+payWayModel.otherPayUrl+"."+payWayModel.shareContent);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(Intent.createChooser(intent,payWayModel==null?"他人代付":payWayModel.shareTitle));
+////
+//        Intent intent=new Intent(Intent.ACTION_SEND);
+//        intent.setType("text/plain");
+////        String path = getResourcesUri(R.drawable.icon_logo);
+////        intent.setType("image/jpg");
+////        Uri u = Uri.parse(path);
+////        intent.putExtra(Intent.EXTRA_STREAM, u);
+//        intent.putExtra(Intent.EXTRA_SUBJECT, payWayModel==null?"他人代付":payWayModel.shareTitle);
+//        intent.putExtra(Intent.EXTRA_TEXT, payWayModel==null?"他人代付":payWayModel.shareTitle+":"+payWayModel.otherPayUrl+"."+payWayModel.shareContent);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(Intent.createChooser(intent,payWayModel==null?"他人代付":payWayModel.shareTitle));
+    }
+
+    private String buildTransaction(final String type) {
+        return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
     }
 
     private String getResourcesUri(@DrawableRes int id) {

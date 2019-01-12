@@ -13,13 +13,4 @@ import java.util.List;
 public interface ISearchView {
     void getHotSearchList(List<TagModel> data);
     void getAutoSearchList(List<SearchAutoModel> data);
-    void getSearchResultList(List<DrugModel> data);
-    void addSearchResultList(List<DrugModel> data);
-    void noData();
-    void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview);
-
-    void getShopCarNum(String count);
-
-    void noErrorData();
-
 }

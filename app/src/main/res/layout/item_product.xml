@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_115"
+    android:background="@drawable/white_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <RelativeLayout
+        android:id="@+id/rl_category"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="102dp"
+        android:background="@drawable/shape_cart_line_gray">
+
+        <ImageView
+            android:id="@+id/iv_category"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tv_validity_time"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/icon_validity_bg"
+            android:gravity="center_vertical"
+            android:text="有效期:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8" />
+
+        <ImageView
+            android:id="@+id/iv_presale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ysbjicon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toRightOf="@id/rl_category">
+
+        <TextView
+            android:id="@+id/tv_drug_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="B族维生素片"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_drug_name"
+            android:layout_marginTop="@dimen/dp_2"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="白云山药业公司"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/tv_levelnote"
+            android:layout_below="@id/tv_company"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/sp_11"
+            android:layout_marginTop="@dimen/dp_2"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="mandddddddddd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_category_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_company"
+                android:layout_marginTop="@dimen/dp_3"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="320.00"
+                    android:textColor="@color/color_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_oldprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="329.00"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_category_price"
+                android:layout_marginTop="@dimen/dp_2"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="盒/100片"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_car"
+        android:layout_width="@dimen/dp_29"
+        android:layout_height="@dimen/dp_29"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/tv_has_sale"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:src="@drawable/jrgwciaon" />
+
+    <TextView
+        android:id="@+id/tv_product_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/tv_has_sale"
+        android:background="@drawable/shape_frame_quehuo"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        android:text="到货提醒"
+        android:textColor="@color/color_main"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_has_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="已售554"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/sp_11" />
+
+</RelativeLayout>

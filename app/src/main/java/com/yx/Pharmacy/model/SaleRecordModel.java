@@ -7,4 +7,5 @@ public class SaleRecordModel {
     public int count;
     public String add_time;
     public String mobile;
+    public String buyer_company;
 }

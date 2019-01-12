@@ -214,35 +214,23 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
 
         @Override
         public void goZoneActivity(int type,int levelid) {
+
             if (TextUtils.equals(String.valueOf(type), "1")) {
                 // 秒杀
-                CommendMsActivity.startActivity(MessageDetailActivity.this,""+levelid);
-            } else if (TextUtils.equals(String.valueOf(type), "2")) {
-                // 特价
-                CommendTjActivity.startActivity(MessageDetailActivity.this, String.valueOf(type), ""+levelid);
-            } else if (TextUtils.equals(String.valueOf(type), "3")) {
-                // 满减
-                CommendProductActivity.startActivity(MessageDetailActivity.this, String.valueOf(type), ""+levelid);
-            } else if (TextUtils.equals(String.valueOf(type), "9")) {
-                // 控销
-                CommendProductActivity.startActivity(MessageDetailActivity.this, String.valueOf(type), ""+levelid);
+                CommendMsActivity.startActivity(mContext,""+levelid);
+            } else  {
+                ProductItemActivity.startActivity(mContext,2,""+levelid,"");
             }
+
         }
 
         @Override
         public void godata7Activity(String levelid, String type) {
-            if (TextUtils.equals(type, "1")) {
+            if (TextUtils.equals(String.valueOf(type), "1")) {
                 // 秒杀
-                CommendMsActivity.startActivity(MessageDetailActivity.this,levelid);
-            } else if (TextUtils.equals(type, "2")) {
-                // 特价
-                CommendTjActivity.startActivity(MessageDetailActivity.this, type, levelid);
-            } else if (TextUtils.equals(type, "3")) {
-                // 满减
-                CommendProductActivity.startActivity(MessageDetailActivity.this, type,levelid);
-            } else if (TextUtils.equals(type, "9")) {
-                // 控销
-                CommendProductActivity.startActivity(MessageDetailActivity.this, type,levelid);
+                CommendMsActivity.startActivity(mContext,""+levelid);
+            } else  {
+                ProductItemActivity.startActivity(mContext,2,""+levelid,"");
             }
         }
         @Override

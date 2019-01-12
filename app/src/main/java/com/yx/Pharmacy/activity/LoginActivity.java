@@ -63,8 +63,11 @@ public class LoginActivity
     TextView  mTvRegister;
     @BindView(R.id.tv_find)
     TextView  mTvFind;
+    @BindView(R.id.tv_login_member)
+    TextView  mTvLoginMember;
     private LoginPresenter mPresenter;
-    private int mLoginType; // 0 : 验证码登录 1:账号密码登录
+    private int mLoginType=0; // 0 : 验证码登录 1:账号密码登录
+    private int mLoginMember=0;//0人员登录，1业务员登录
     // 验证码倒计时
     CountDownTimer timer = new CountDownTimer(60*1000, 1000) {
         @Override
@@ -103,7 +106,7 @@ public class LoginActivity
         ImmersionBarUtil.setBarColor(R.color.white, this, true);
         mStartIn = getIntent().getIntExtra("start_in", 0);
         mPresenter = new LoginPresenter(this);
-        mLoginType = 0;
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MEMBER,mLoginMember+"");
         cutLoinType();
     }
 
@@ -112,6 +115,7 @@ public class LoginActivity
               R.id.tv_login,
               R.id.tv_cut,
               R.id.tv_register,
+              R.id.tv_login_member,
               R.id.tv_find})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -127,6 +131,9 @@ public class LoginActivity
             case R.id.tv_cut:
                 cutLoinType();
                 break;
+            case R.id.tv_login_member:
+                cutLoinMember();
+                break;
             case R.id.tv_register:
                 RegisterActivity.startActivity(this);
                 break;
@@ -135,6 +142,7 @@ public class LoginActivity
         }
     }
 
+    //13267156156
     private void UserLogin() {
         mPhoneNum = mEditPhoneNum.getText().toString();
         String code = mEditCode.getText()
@@ -151,7 +159,7 @@ public class LoginActivity
                 getShortToastByString("请输入正确的密码");
                 return;
             }
-            mPresenter.loginPwd(this,mPhoneNum,code);
+            mPresenter.loginPwd(this,mPhoneNum,code,mLoginMember);
         }
     }
 
@@ -180,6 +188,32 @@ public class LoginActivity
 
             mTvCut.setText("账号密码登录");
         }
+    }
+
+    /**
+     * 切换业务员登录
+     */
+    private void cutLoinMember() {
+        mTvLoginType.setText("账号密码登录");
+        mTvLoginHintType.setText("请正确输入账号密码登录");
+        mEditCode.setHint("6至16位字母/数字登录密码");
+        mEditPhoneNum.setHint("手机号码/账号");
+        mIvCodeType.setImageResource(R.drawable.dlmmicon);
+        mTvGetCode.setVisibility(View.GONE);
+
+        if (mLoginMember == 0) {
+            mLoginMember=1;
+            mTvCut.setVisibility(View.GONE);
+            mTvRegister.setVisibility(View.GONE);
+            mTvLoginMember.setText("客户登录");
+        }else {
+            mLoginMember=0;
+            mLoginType=0;
+            mTvCut.setVisibility(View.VISIBLE);
+            mTvRegister.setVisibility(View.VISIBLE);
+            mTvLoginMember.setText("业务员登录");
+        }
+        SPUtil.putString(UiUtil.getContext(), Constants.KEY_MEMBER,mLoginMember+"");
     }
 
     /**

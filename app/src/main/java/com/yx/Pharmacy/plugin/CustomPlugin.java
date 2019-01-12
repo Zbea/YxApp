@@ -11,6 +11,7 @@ import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyCouponActivity;
 import com.yx.Pharmacy.activity.MyIntegralActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
@@ -109,13 +110,13 @@ public class CustomPlugin extends CordovaPlugin {
         if ("visitNewPharmacy".equals(action)){
             String     json       = args.getString(0);
             JSONObject jsonObject = new JSONObject(json);
-            CommendProductActivity.startActivity(cordova.getActivity(),"0",jsonObject.getString("goodsType"),jsonObject.getString("activityName"),1);
+            ProductItemActivity.startActivity(cordova.getActivity(),2,jsonObject.getString("goodsType"),jsonObject.getString("activityName"));
         }
         //专区
         if ("visitActive".equals(action)){
             String     json       = args.getString(0);
             JSONObject jsonObject = new JSONObject(json);
-            CommendTjActivity.startActivity(cordova.getActivity(),"0",jsonObject.getString("levelId"),jsonObject.getString("activityName"));
+            ProductItemActivity.startActivity(cordova.getActivity(),2,jsonObject.getString("goodsType"),jsonObject.getString("activityName"));
         }
         if ("alertMessage".equals(action)){
             String     json       = args.getString(0);

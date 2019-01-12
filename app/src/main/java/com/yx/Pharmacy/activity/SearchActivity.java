@@ -62,7 +62,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class SearchActivity extends BaseActivity implements OnTagSelectListener, ISearchView, ProductCategoryGridAdapter.AddListener {
+public class SearchActivity extends BaseActivity implements OnTagSelectListener, ISearchView{
 
     @BindView(R.id.flowlayout_history)
     FlowTagLayout flowlayout_history;
@@ -80,8 +80,6 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
     EditText edit_search;
     @BindView(R.id.ll_tuijian)
     LinearLayout ll_tuijian;
-    @BindView(R.id.ll_search_result)
-    LinearLayout ll_search_result;
 
 
     private static final int TYPE_zonghe=3;
@@ -96,36 +94,11 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
 
     @BindView(R.id.iv_back)
     ImageView  ivBack;
-    @BindView(R.id.tv_zonghe)
-    TextView  tv_zonghe;
-    @BindView(R.id.iv_zonghe)
-    ImageView iv_zonghe;
-    @BindView(R.id.tv_price)
-    TextView  tv_price;
-    @BindView(R.id.iv_price)
-    ImageView iv_price;
-    @BindView(R.id.tv_xiaoliang)
-    TextView  tv_xiaoliang;
-    @BindView(R.id.iv_xiaoliang)
-    ImageView iv_xiaoliang;
-    @BindView(R.id.iv_layout_mode)
-    ImageView iv_layout_mode;
-    @BindView(R.id.swipeRefreshLayout)
-    SwipeRefreshLayout swipeRefreshLayout;
-    @BindView(R.id.recyclerview)
-    RecyclerView recyclerview;
-    @BindView(R.id.ll_nodata)
-    LinearLayout ll_nodata;
-    private ProductCategoryGridAdapter mAdapter;
-    private List<DrugModel>drugModels=new ArrayList<>();
 
 
-    @BindView(R.id.rl_amin_window)
-    RelativeLayout rl_amin_window;
-    @BindView(R.id.iv_shopping_car)
-    ImageView iv_shopping_car;
-    @BindView(R.id.tv_num)
-    TextView tv_num;
+
+
+
 
     private String keyword;
     private SearchAutoAdapter searchAutoAdapter;
@@ -148,60 +121,12 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
     @Override
     protected void init() {
 
-        CartCountManage.newInstance().setCartCountManageListener(new CartCountManage.CartCountManageListener() {
-            @Override
-            public void onRefresh(int max) {
-                getShopCarNum(""+max);
-
-            }
-        });
 
         ImmersionBarUtil.setBarColor(R.color.color_main,this,false);
         keyword=getIntent().getStringExtra("keyword");
         mPresenter = new SearchPresenter(this);
         initView();
         initData();
-    }
-    private void setGridLayout() {
-        curLayout=mode_grid;
-        iv_layout_mode.setImageResource(R.drawable.twck);
-        final GridLayoutManager layoutManager=new GridLayoutManager(this,2);
-        recyclerview.setLayoutManager(layoutManager);
-        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_detail,drugModels,1);
-        recyclerview.setAdapter(mAdapter);
-        addListener();
-    }
-    private void setLinearLayout() {
-        curLayout=mode_linear;
-        iv_layout_mode.setImageResource(R.drawable.dtmock);
-        recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter=new ProductCategoryGridAdapter(this, R.layout.item_category_linear,drugModels,0);
-        recyclerview.setAdapter(mAdapter);
-        addListener();
-    }
-    private void addListener() {
-        mAdapter.setListener(this);
-        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                ProductDetailActivity.startActivity(SearchActivity.this,String.valueOf(mAdapter.getData().get(position).getItemid()));
-            }
-        });
-        mAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
-            @Override
-            public void onLoadMoreRequested() {
-                //TODO 加载下一页
-                if(mAdapter.getData().size()>=Constants.PAGESIZE){
-                    initNestPage();
-                }else {
-                    mAdapter.loadMoreEnd();
-                }
-            }
-        },recyclerview);
-    }
-
-    private void initNestPage() {
-        mPresenter.getSearchResult(SearchActivity.this,page+1,edit_search.getText().toString(),curType,isUp,false);
     }
 
     private void initView() {
@@ -247,21 +172,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
                 return false;
             }
         });
-        if(curLayout==mode_grid){
-            setGridLayout();
-        }else {
-            setLinearLayout();
-        }
-        int itemDecoration = DensityUtils.dp2px(this, 2);
-        recyclerview.addItemDecoration(new SpacesItemDecoration(itemDecoration, itemDecoration));
 
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),3,false,true);
-            }
-        });
         if (!TextUtils.isEmpty(keyword)) search(keyword);
     }
 
@@ -301,10 +212,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
         isShowPop=false;
         if(!TextUtils.isEmpty(search)){
             ComMethodsUtil.hideSoftKeyBoard(SearchActivity.this);
-            ll_tuijian.setVisibility(View.GONE);
-            ll_search_result.setVisibility(View.VISIBLE);
-            page=1;
-            mPresenter.getSearchResult(SearchActivity.this,page,search,curType,isUp,true);
+            ProductItemActivity.startActivity(mContext,1,search+"",search);
             addSearchHistory(search);
         }
     }
@@ -401,214 +309,20 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
 
     }
 
-    @Override
-    public void getSearchResultList(List<DrugModel> data) {//获取搜索结果
-        ll_nodata.setVisibility(View.GONE);
-        swipeRefreshLayout.setVisibility(View.VISIBLE);
-        mAdapter.setNewData(data);
-        if (data.size()< Constants.PAGESIZE){
-            mAdapter.loadMoreEnd();
-        }
-        if (swipeRefreshLayout != null)
-            swipeRefreshLayout.setRefreshing(false);
-    }
 
-    @Override
-    public void addSearchResultList(List<DrugModel> data) {
-        ll_nodata.setVisibility(View.GONE);
-        swipeRefreshLayout.setVisibility(View.VISIBLE);
-        mAdapter.addData(data);
-        if (data.size()<Constants.PAGESIZE){
-            mAdapter.loadMoreEnd();
-        }else {
-            mAdapter.loadMoreComplete();
-        }
-        page++;
-    }
-    @Override
-    public void noData() {
-        if(swipeRefreshLayout!=null)swipeRefreshLayout.setRefreshing(false);
-        swipeRefreshLayout.setVisibility(View.GONE);
-        ll_nodata.setVisibility(View.VISIBLE);
-    }
 
-    @Override
-    public void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview) {
-        startAddAnim(item,imgview,data.count);
-    }
 
-    @Override
-    public void getShopCarNum(String carnum) {
-        CartCountManage.newInstance().setCount(Integer.parseInt(carnum));
-        tv_num.setVisibility(Integer.valueOf(carnum)==0?View.GONE:View.VISIBLE);
-        tv_num.setText(Integer.valueOf(carnum)>99?"99+":carnum+"");
-    }
 
-    @Override
-    public void noErrorData() {
-        mAdapter.loadMoreEnd();
-    }
 
-    private PathMeasure mPathMeasure;
-    private float[] mCurrentPosition = new float[2];
-    //添加购物车动画实现
-    @Override
-    public void addCart(DrugModel item, ImageView imageView) {//加入购物车
-        mPresenter.addCartProduct(this,item.getItemid()+"",item,imageView);
-    }
 
-    @Override
-    public void productArrived(int itemid) {//到货提醒
-        mPresenter.productArrive(this,itemid+"");
-    }
-    //开始加入购物车动画
-    private void startAddAnim(DrugModel item, ImageView imgview, final String count) {
-        int parent[] = new int[2];
-        rl_amin_window.getLocationInWindow(parent);
-        int startLoc[] = new int[2];
-        imgview.getLocationInWindow(startLoc);
-        int endLoc[] = new int[2];
-        iv_shopping_car.getLocationInWindow(endLoc);
-        final ImageView goods = new ImageView(getApplicationContext());
-//        goods.setImageDrawable(imgview.getDrawable());
-        goods.setImageResource(R.drawable.ydd);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(80, 80);
-        rl_amin_window.addView(goods, params);
-        float startX = startLoc[0];
-        float startY = startLoc[1] - parent[1];
-        float toX = endLoc[0] + iv_shopping_car.getWidth() / 3;
-//        float toY = endLoc[1] ;
-//        float toY = endLoc[1] - iv_shopping_car.getHeight()-goods.getHeight()-DensityUtils.dp2px(this,30);
-        float toY = endLoc[1] - parent[1];
-        Path path = new Path();
-        path.moveTo(startX, startY);
-        path.quadTo((startX + toX) / 2, startY, toX, toY);
-        mPathMeasure = new PathMeasure(path, false);
-        //属性动画实现
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-        valueAnimator.setDuration(800);
-        // 匀速插值器
-        valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float value = (Float) animation.getAnimatedValue();
-                // 获取当前点坐标封装到mCurrentPosition
-                mPathMeasure.getPosTan(value, mCurrentPosition, null);
-                goods.setTranslationX(mCurrentPosition[0]);
-                goods.setTranslationY(mCurrentPosition[1]);
-            }
-        });
-        valueAnimator.start();
 
-        valueAnimator.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-            }
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                tv_num.setVisibility(View.VISIBLE);
-                tv_num.setText(Integer.valueOf(count)>99?"99+":count+"");
-                rl_amin_window.removeView(goods);
-            }
-            @Override
-            public void onAnimationCancel(Animator animation) {
-            }
-            @Override
-            public void onAnimationRepeat(Animator animation) {
 
-            }
-        });
-    }
-
-    @OnClick({R.id.ll_zonghe, R.id.ll_price,
-              R.id.ll_xiaoliang,R.id.ll_change_layout,R.id.iv_shopping_car,R.id.iv_back,
-              R.id.tv_clear_history,R.id.tv_cancel})
+    @OnClick({R.id.iv_back, R.id.tv_clear_history,R.id.tv_cancel})
     public void click(View v){
         switch (v.getId()){
             case R.id.iv_back://切换布局
                 ComMethodsUtil.hideSoftKeyBoard(SearchActivity.this);
                 finish();
-                break;
-            case R.id.ll_zonghe://综合
-                if(curType!=TYPE_zonghe){//切换类型
-                    curType=TYPE_zonghe;
-                    isUp=false;
-                    tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
-                    iv_zonghe.setImageResource(R.drawable.zi_down);
-                    tv_price.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_price.setImageResource(R.drawable.gray_down);
-                    tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_xiaoliang.setImageResource(R.drawable.gray_down);
-                }else {//非切换类型,要判断当前是升序还是降序
-                    if(isUp){
-                        isUp=false;
-                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_zonghe.setImageResource(R.drawable.zi_down);
-                    }else {
-                        isUp=true;
-                        tv_zonghe.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_zonghe.setImageResource(R.drawable.zi_up);
-                    }
-                }
-                page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
-                break;
-            case R.id.ll_price://价格
-                if(curType!=TYPE_jiage){//切换类型
-                    curType=TYPE_jiage;
-                    isUp=false;
-                    tv_zonghe.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_zonghe.setImageResource(R.drawable.gray_down);
-                    tv_price.setTextColor(getResources().getColor(R.color.color_main));
-                    iv_price.setImageResource(R.drawable.zi_down);
-                    tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_xiaoliang.setImageResource(R.drawable.gray_down);
-                }else {//非切换类型,要判断当前是升序还是降序
-                    if(isUp){
-                        isUp=false;
-                        tv_price.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_price.setImageResource(R.drawable.zi_down);
-                    }else {
-                        isUp=true;
-                        tv_price.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_price.setImageResource(R.drawable.zi_up);
-                    }
-                }
-                page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
-                break;
-            case R.id.ll_xiaoliang://销量
-                if(curType!=TYPE_xiaoliang){//切换类型
-                    curType=TYPE_xiaoliang;
-                    isUp=false;
-                    tv_zonghe.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_zonghe.setImageResource(R.drawable.gray_down);
-                    tv_price.setTextColor(getResources().getColor(R.color.color_606060));
-                    iv_price.setImageResource(R.drawable.gray_down);
-                    tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
-                    iv_xiaoliang.setImageResource(R.drawable.zi_down);//
-                }else {//非切换类型,要判断当前是升序还是降序
-                    if(isUp){
-                        isUp=false;
-                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_xiaoliang.setImageResource(R.drawable.zi_down);
-                    }else {
-                        isUp=true;
-                        tv_xiaoliang.setTextColor(getResources().getColor(R.color.color_main));
-                        iv_xiaoliang.setImageResource(R.drawable.zi_up);
-                    }
-                }
-                page=1;
-                mPresenter.getSearchResult(SearchActivity.this,page,edit_search.getText().toString(),curType,isUp,true);
-                break;
-            case R.id.ll_change_layout://切换布局
-                if(mAdapter!=null)drugModels=mAdapter.getData();
-                if(curLayout!=mode_grid){
-                    setGridLayout();
-                }else {
-                    setLinearLayout();
-                }
                 break;
             case R.id.tv_clear_history://清除历史
                 removeHistory();
@@ -617,9 +331,7 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
             case R.id.tv_cancel:
                 search(edit_search.getText().toString());
                 break;
-            case R.id.iv_shopping_car:
-                ProductCartActivity.startActivity(this);
-                break;
+
         }
     }
     //获取搜索历史

@@ -39,6 +39,8 @@ public class Constants {
     public static final String LOGIN_SMS = "login/sms";
     // 获取用户数据
     public static final String USER_INFO = "user/info";
+    // 获取供应商列表
+    public static final String USER_STORE = "store/selectSupplier";
     // 分类数据
     public static final String CATEGORY_DATA = "category/list";
     // 根据关键字或者分类id获取商品列表
@@ -173,6 +175,7 @@ public class Constants {
     //企业资质
     public static final String STORE_VALIDE = "store/valide";
 
+    public static final String KEY_MEMBER = "key_member";
     public static final String KEY_TOKEN = "key_token";
     public static final String KEY_STORE_ID = "key_store_id";// 仓库id
     public static final String KEY_ITEM_ID = "key_item_id";// 门店id

@@ -102,7 +102,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
         status=getArguments().getString(STATUS);
         initView();
         mPresenter = new MyOrderListPresenter(this);
-        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true,true);
+        mPresenter.getMyOrderListData((BaseActivity)mContext,status,page,true,false);
     }
 
     private void initView() {

@@ -85,7 +85,7 @@
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/sp_25"
                     android:textColor="#FFFFFF"
-                    android:text="审核中"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -95,7 +95,7 @@
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/sp_14"
                     android:textColor="@color/white"
-                    android:text="请保持电话畅通，客服将尽快与您联系"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/text_normal"
-                    android:text="dsssssssssssssssssssssssssssssfdddddddddddddddddddddddddddsssssss"/>
+                    android:text=""/>
 
             </LinearLayout>
 
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/text_normal"
-                    android:text="dsssssssssssssssssssssssssssssfdddddddddddddddddddddddddddsssssss"/>
+                    android:text=""/>
 
             </LinearLayout>
 
@@ -169,7 +169,7 @@
                     android:id="@+id/tv_order_id"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dp_16"
-                    android:text="45464654644645"
+                    android:text=""
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
@@ -200,7 +200,7 @@
                     android:id="@+id/tv_backorderid"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dp_16"
-                    android:text="45464654644645"
+                    android:text=""
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
@@ -226,7 +226,7 @@
                     android:id="@+id/tv_applyfor_time"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dp_16"
-                    android:text="2017-11-05 00:00:00"
+                    android:text=""
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_normal"
@@ -307,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dp_16"
-                    android:text="￥2245"
+                    android:layout_centerVertical="true"
                     android:textColor="@color/color_main"
                     android:textSize="@dimen/sp_14" />
                 <View
@@ -409,7 +409,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_16"
-                    android:text="数量24"
+                    android:text="数量"
                     android:textColor="@color/text_normal"
                     android:textSize="@dimen/sp_14" />
             </LinearLayout>

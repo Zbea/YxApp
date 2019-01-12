@@ -26,6 +26,18 @@ MobSDK {
     appSecret "989f7983a02547bbe882ea2653240542"
     ShareSDK {
         devInfo {
+//            Wechat {
+//                appId "wx2e654dca1ada96c7"
+//                appSecret "c0f5f14120cd708d7ec860b938ffbf03"
+//                userName "gh_afb25ac019c9"
+//                path "pages/index/index.html?id=1"
+//                withShareTicket true
+//                miniprogramType 2
+//            }
+//            WechatMoments {
+//                appId "wx2e654dca1ada96c7"
+//                appSecret "c0f5f14120cd708d7ec860b938ffbf03"
+//            }
             Wechat {
                 appId "wx2fd55082c0d01ccf"
                 appSecret "cd86efaeff61efc0a5a0accfdc24d215"
@@ -373,6 +385,7 @@ dependencies {
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     implementation 'org.greenrobot:eventbus:3.1.1'
 
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 
     compile 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
     compile 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'

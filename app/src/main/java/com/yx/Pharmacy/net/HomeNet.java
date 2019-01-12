@@ -1,9 +1,12 @@
 package com.yx.Pharmacy.net;
 
+import com.luck.picture.lib.tools.Constant;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.net.api.HomeApi;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
+import com.yx.Pharmacy.util.SPUtil;
+import com.yx.Pharmacy.util.UiUtil;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -43,19 +46,21 @@ public class HomeNet {
                                  Request request=chain.request();
 
                                  Request.Builder builder = chain.request().newBuilder();
-                                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+//                                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 //                                 builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
 //                                 builder.addHeader("version", "1.0.5");
 //                                 builder.addHeader("platform","android");
 //                                 builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
 //                                 builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));
+//                                 builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
+
 
                                  builder.addHeader("token", NetUtil.isStringNull(NetUtil.getToken().trim()));
                                  builder.addHeader("version", "1.0.5");
                                  builder.addHeader("platform","android");
                                  builder.addHeader("storeid",NetUtil.isStringNull(NetUtil.getStoreid().trim()));
                                  builder.addHeader("itemid",NetUtil.isStringNull(NetUtil.getItemId().trim()));
-
+                                 builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
 //                                 if (request.body()!=null)
 //                                 {
 //                                     if(request.body() instanceof FormBody){

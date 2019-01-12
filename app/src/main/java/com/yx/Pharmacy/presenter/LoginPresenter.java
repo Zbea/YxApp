@@ -112,10 +112,11 @@ public class LoginPresenter {
     /**
      *  密码登录
      */
-    public void loginPwd(BaseActivity activity, String phoneNum, String code) {
+    public void loginPwd(BaseActivity activity, String phoneNum, String code,int type) {
         HashMap<String, String> urlMap = NetUtil.getUrlMap();
         urlMap.put("username",phoneNum);
         urlMap.put("password",code);
+        urlMap.put("isSalesman",type+"");
         HomeNet.getHomeApi().loginPwd(urlMap).subscribeOn(Schedulers.io())
                .observeOn(AndroidSchedulers.mainThread())
                .subscribe(new ProgressSubscriber<BasisBean<LoginModel>>(activity, true) {

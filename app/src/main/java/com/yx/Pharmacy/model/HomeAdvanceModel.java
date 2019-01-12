@@ -31,6 +31,7 @@ public class HomeAdvanceModel {
     public List<GoldBean> banner;
     public List<GoldBean>   guid;
     public List<GoldBean>   message;
+    public List<GoldBean>   secondGold;
     public GoldBean alert;
     public GoldBean custom;
 

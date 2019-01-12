@@ -49,8 +49,8 @@ public class ComMethodsUtil {
         context.startActivity(intent);
     }
     public static String phoneFormat(String phone){
-        if(phone.length()==11){
-            String phoneMa=phone.substring(0,3)+"****"+phone.substring(7,11);
+        if(phone.length()>=4){
+            String phoneMa=phone.substring(0,4)+"******";
             return phoneMa;
         }else {
             return TextUtils.isEmpty(phone)?"":phone;

@@ -18,6 +18,7 @@ import com.yx.Pharmacy.adapter.GiftListAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.dialog.FunctionGuidDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.model.CreateOrderIntentModel;
 import com.yx.Pharmacy.model.CreateOrderModel;
@@ -213,6 +214,13 @@ public class OrderCreateActivity
                 }
             }
         });
+
+        if (SPUtil.getBoolean(mContext,"orderFrist",true))
+        {
+            new FunctionGuidDialog(mContext,3).builder();
+            SPUtil.putBoolean(mContext,"orderFrist",false);
+        }
+
 
     }
 

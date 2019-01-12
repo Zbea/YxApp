@@ -88,7 +88,6 @@ public class StoreManage {
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,myShopModel.storeid);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORENAME,myShopModel.storename);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_ADDRESS,myShopModel.storeaddress);
-        CartCountManage.newInstance().refresh(Integer.parseInt(myShopModel.carcount));
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_AVATAR,myShopModel.avatar);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_MOBILE,myShopModel.mobile);
         SPUtil.putString(UiUtil.getContext(), Constants.KEY_TRUENAME,myShopModel.truename);

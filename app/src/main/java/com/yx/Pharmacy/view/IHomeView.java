@@ -1,5 +1,8 @@
 package com.yx.Pharmacy.view;
 
+import android.widget.ImageView;
+
+import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
@@ -25,4 +28,11 @@ public interface IHomeView {
     void showMessageListResult(HomeAdvanceModel data);
 
     void hideFlash();
+
+    void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview);
+
+    void ifFuGai();
+
+    void compelete();
+
 }

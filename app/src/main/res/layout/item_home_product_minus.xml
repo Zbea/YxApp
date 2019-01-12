@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:paddingTop="@dimen/dp_3"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/dp_3"
               android:paddingBottom="@dimen/dp_3"
               android:paddingStart="@dimen/dp_10"
               android:paddingEnd="@dimen/dp_10"

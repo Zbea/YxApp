@@ -26,6 +26,7 @@ import com.yx.Pharmacy.model.SearchAutoModel;
 import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.model.SplashData;
 import com.yx.Pharmacy.model.StoreDetailModel;
+import com.yx.Pharmacy.model.SupplierListModel;
 import com.yx.Pharmacy.model.StoreTypeModel;
 import com.yx.Pharmacy.model.TagModel;
 import com.yx.Pharmacy.model.UploadModel;
@@ -39,8 +40,6 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
-import retrofit2.http.Body;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
@@ -61,8 +60,9 @@ public interface HomeApi {
     /**
      *  是否可以对公转账
      */
+    @FormUrlEncoded
     @POST(Constants.PAY_STYLE)
-    Observable<BasisBean<PayWayModel>> getPayStyle();
+    Observable<BasisBean<PayWayModel>> getPayStyle(@FieldMap HashMap<String, String> map);
     /**
      *  上传文件
      */
@@ -81,6 +81,13 @@ public interface HomeApi {
     @FormUrlEncoded
     @POST(Constants.MEMBER_REGIST)
     Observable<BasisBean<String>> register(@FieldMap HashMap<String, String> map);
+
+    /**
+     *  供应商列表
+     *
+     */
+    @POST(Constants.USER_STORE)
+    Observable<BasisBean<List<SupplierListModel>>> storeList();
     /**
      *  用户密码登录
      */

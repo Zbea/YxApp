@@ -183,23 +183,7 @@ public class AfterOrderDetailActivity extends BaseActivity implements IBackOrder
                 view_gift_line.setVisibility(View.GONE);
                 break;
             case R.id.iv_service:
-                YSFUserInfo userInfo = new YSFUserInfo();
-                String title = "";
-                if (TextUtils.isEmpty(NetUtil.getToken())) {
-                    title = "游客" + DensityUtils.getRandomString(16);
-                    userInfo.userId = title;
-                } else {
-                    if (SPUtil.getBoolean(UiUtil.getContext(), Constants.KEY_STORE_CERTIFY, false)) {
-                        title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_MOBILE);
-                    } else {
-                        title = SPUtil.getString(UiUtil.getContext(), Constants.KEY_STORENAME);
-                    }
-                    userInfo.userId = NetUtil.getToken();
-                }
-                userInfo.data = "[{\"key\":\"real_name\", \"value\":" + title + "}]";
-                Unicorn.setUserInfo(userInfo);
-                ConsultSource source = new ConsultSource("我的门店", title, "custom information string");
-                Unicorn.openServiceActivity(mContext, "源鑫药业", source);
+                contactService();
                 break;
             case R.id.btn_ok:
                 mPresenter.cancelOrderBack((BaseActivity) mContext,orderbackid);
@@ -215,28 +199,23 @@ public class AfterOrderDetailActivity extends BaseActivity implements IBackOrder
             if (model.status == 0 || model.status == 1) {
                 tv_order_state.setText("审核中");
                 tvState.setText("审核中");
-                tv_order_state_desc.setText("请保持电话畅通，客服将尽快与您联系");
                 btnOk.setVisibility(View.VISIBLE);
             } else if (model.status == 6) {
                 tv_order_state.setText("已撤销");
                 tvState.setText("已撤销");
-                tv_order_state_desc.setText("如有需要可在对应订单中再次申请");
             } else if (model.status == 7) {
                 tv_order_state.setText("退款中");
                 tvState.setText("退款中");
-                tv_order_state_desc.setText("货款已退回到您的账户，请注意查收");
             } else if (model.status == 8) {
                 tv_order_state.setText("审核不通过");
                 tvState.setText("不同意");
                 tvState.setTextColor(getResources().getColor(R.color.red));
-                tv_order_state_desc.setText("非常抱歉您的退款申请不通过");
                 ivBg.setImageResource(R.drawable.icon_sale_afer_details_bg_error);
             } else if (model.status == 9) {
                 tv_order_state.setText("已完成");
                 tvState.setText("已完成");
-                tv_order_state_desc.setText("货款已退回到您的账户");
             }
-
+            tv_order_state_desc.setText(data.subTitle);
             tv_order_id.setText(model.orderid);
             tv_backorderid.setText(model.orderbackid);
             tv_applyfor_time.setText(DateUtil.formatyyyyMMddHHmmss(Long.valueOf(model.addtime + "000")));

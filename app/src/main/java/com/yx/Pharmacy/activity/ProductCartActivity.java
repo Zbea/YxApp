@@ -20,7 +20,9 @@ import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -99,8 +101,14 @@ public class ProductCartActivity
     RecyclerView mRvShopCart;
     @BindView(R.id.loadinglayout)
     LoadingLayout mLoadingLayout;
-//    @BindView(R.id.nestedScrollView)
-//    NestedScrollView nestingScrollview;
+    @BindView(R.id.ll_indicate)
+    LinearLayout llIndicate;
+    @BindView(R.id.iv_top)
+    ImageView ivTop;
+    @BindView(R.id.iv_bottom)
+    ImageView ivBottom;
+    @BindView(R.id.nestedScrollView)
+    NestedScrollView nestingScrollview;
     private ShopCartPresenter mPresenter;
     private ShopCartAdapter mAdapter;
     private TextView mTvPrice;
@@ -377,12 +385,12 @@ public class ProductCartActivity
 
             @Override
             public void aumontChange(View view, int amount, String goodsid, String activityid, boolean isEdit, int position, int addnum) {
-                etAmount= (EditText) view;
+                etAmount = (EditText) view;
                 // 修改商品数量
                 mGoodsid = goodsid;
                 mIsEdit = isEdit;
                 mAmountEdit = amount;
-                L.i("mAmountEdit:"+mAmountEdit);
+                L.i("mAmountEdit:" + mAmountEdit);
                 mNotifyPosition = position;
                 mActivityid = activityid;
                 if (!mIsEdit) {
@@ -429,6 +437,21 @@ public class ProductCartActivity
                 }
             }
         });
+
+        nestingScrollview.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY>800)
+                {
+                    llIndicate.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    llIndicate.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
     private void initView() {
@@ -1008,7 +1031,9 @@ public class ProductCartActivity
     @OnClick({R.id.tv_more,
             R.id.rl_back,
             R.id.ll_checkall,
-            R.id.tv_buy})
+            R.id.tv_buy,
+    R.id.iv_top,
+    R.id.iv_bottom})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_back:
@@ -1049,6 +1074,19 @@ public class ProductCartActivity
                 break;
             case R.id.tv_buy:
                 checkMoney();
+                break;
+            case R.id.iv_top:
+                nestingScrollview.fling(0);
+                nestingScrollview.smoothScrollTo(0, 0);
+                break;
+            case R.id.iv_bottom:
+                nestingScrollview.fling(0);
+                new Handler().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        nestingScrollview.fullScroll(ScrollView.FOCUS_DOWN);
+                    }
+                });
                 break;
         }
     }

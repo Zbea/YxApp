@@ -17,6 +17,7 @@ import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.MessageDetailActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.adapter.MessageAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBar;
 import com.yx.Pharmacy.base.BaseActivity;
@@ -353,24 +354,19 @@ public class MessageFragment
 
         @Override
         public void goZoneActivity(int type,int levelid) {
-            CommendProductActivity.startActivity(mContext,""+type,""+levelid);
+            ProductItemActivity.startActivity(mContext,2,""+levelid,"");
         }
 
         @Override
         public void godata7Activity(String levelid, String type) {
-            if (TextUtils.equals(type, "1")) {
+            if (TextUtils.equals(String.valueOf(type), "1")) {
                 // 秒杀
-                CommendMsActivity.startActivity(mContext,levelid);
-            } else if (TextUtils.equals(type, "2")) {
-                // 特价
-                CommendTjActivity.startActivity(mContext, type,levelid);
-            } else if (TextUtils.equals(type, "3")) {
-                // 满减
-                CommendProductActivity.startActivity(mContext, type,levelid);
-            } else if (TextUtils.equals(type, "9")) {
-                // 控销
-                CommendProductActivity.startActivity(mContext, type,levelid);
+                CommendMsActivity.startActivity(mContext,""+levelid);
+            } else  {
+                ProductItemActivity.startActivity(mContext,2,""+levelid,"");
             }
+
+
         }
 
         @Override

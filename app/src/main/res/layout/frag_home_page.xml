@@ -46,7 +46,7 @@
                         android:id="@+id/banner"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_135"
-                        android:layout_marginTop="@dimen/dp_70"
+                        android:layout_marginTop="@dimen/dp_72"
                         app:canLoop="true"
                         app:indicatorAlign="center"
                         app:indicatorPaddingBottom="50dp"
@@ -157,13 +157,14 @@
                             android:ellipsize="end"
                             android:lines="1"
                             android:text=""
+                            android:layout_weight="1"
                             android:textColor="@color/text_mian"
                             android:textSize="@dimen/sp_13" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:visibility="gone"
+                            android:layout_weight="0.0001"
                             android:src="@drawable/icon_home_qhan" />
 
                     </LinearLayout>
@@ -176,6 +177,7 @@
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_marginRight="@dimen/dp_10"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/dp_10"
                     android:visibility="gone"
                     android:background="@drawable/icon_home_message_bg"
                     android:gravity="center_vertical"
@@ -205,9 +207,14 @@
                     android:id="@+id/iv_advence"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_12"
                     android:visibility="gone"
                     android:scaleType="centerCrop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_advence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
                 <View
                     android:layout_width="match_parent"
@@ -218,13 +225,21 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_good"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_product_commend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_home_commend"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white" />
+                    android:background="@color/color_f6f6f6"
+                    />
 
                 <TextView
                     android:id="@+id/tv_no_more"

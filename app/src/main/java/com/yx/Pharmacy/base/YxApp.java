@@ -3,6 +3,7 @@ package com.yx.Pharmacy.base;
 import android.support.multidex.MultiDexApplication;
 
 //import com.mob.MobSDK;
+import com.luck.picture.lib.tools.Constant;
 import com.mob.MobSDK;
 import com.qiyukf.unicorn.api.StatusBarNotificationConfig;
 import com.qiyukf.unicorn.api.Unicorn;
@@ -42,6 +43,8 @@ public class YxApp
         initJPush();// 推送
         registToWX();// 注册微信
         MobSDK.init(this);
+
+
     }
 
     private void initBugly() {

@@ -1,5 +1,6 @@
 package com.yx.Pharmacy.activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
@@ -30,8 +32,10 @@ import com.qiyukf.unicorn.api.Unicorn;
 import com.qiyukf.unicorn.api.YSFUserInfo;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerClickListener;
 import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
+import com.yx.Pharmacy.adapter.BigPicAdapter;
 import com.yx.Pharmacy.adapter.ProductCommendAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
@@ -59,6 +63,7 @@ import com.yx.Pharmacy.widget.LoadingLayout;
 
 import org.apache.cordova.engine.SystemWebView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -181,6 +186,8 @@ public class ProductDetailActivity
     private int cartCount = 0;
     private AddCartDialog addCartDialog=null;
     private int type=0;//判断是原价还是特价购买
+    private Dialog mPhotoDialog;
+    private List<String> imgs=new ArrayList<>();
 
     public static void startActivity(Context context, String itemid) {
         Intent intent = new Intent(context, ProductDetailActivity.class);
@@ -234,6 +241,12 @@ public class ProductDetailActivity
         mBanner.setViewPagerIsScroll(true);
         //设置图片加载器
         mBanner.setImageLoader(new GlideImageLoader());
+        mBanner.setOnBannerClickListener(new OnBannerClickListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                showBigPhotoDialog(position);
+            }
+        });
         //设置自动轮播，默认为true
         mBanner.isAutoPlay(false);
     }
@@ -408,6 +421,7 @@ public class ProductDetailActivity
         }
         if (mResultBean != null) {
             if (data.pic != null) {
+                imgs=data.pic;
                 mBanner.setImages(data.pic);
                 mBanner.start();
             }
@@ -745,7 +759,35 @@ public class ProductDetailActivity
 
 
 
+    /**
+     * 查看图片弹窗
+     */
+    private void showBigPhotoDialog(int postion) {
 
+
+        if (mPhotoDialog == null) {
+            mPhotoDialog = new Dialog(this, R.style.Dialog_Fullscreen);
+            View view = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
+            ViewPager mViewpager = view.findViewById(R.id.viewpager);
+            LinearLayout ll=view.findViewById(R.id.ll_num);
+            ll.setVisibility(View.GONE);
+            BigPicAdapter mBigPicAdapter = new BigPicAdapter((ArrayList<String>) imgs);
+            mBigPicAdapter.setOnClick(new BigPicAdapter.OnClickFinishListener() {
+                @Override
+                public void onClick() {
+                    mPhotoDialog.dismiss();
+                }
+            });
+            mViewpager.setAdapter(mBigPicAdapter);
+            mViewpager.setCurrentItem(postion);
+            mPhotoDialog.setContentView(view);
+            mPhotoDialog.show();
+        }
+        else
+        {
+            mPhotoDialog.show();
+        }
+    }
 
 
     private void showComfirmDialog1() {

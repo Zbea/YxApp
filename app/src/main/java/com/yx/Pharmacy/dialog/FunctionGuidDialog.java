@@ -29,13 +29,25 @@ public class FunctionGuidDialog {
     private Dialog alertDialog;
     private int[] mainStrs={R.drawable.icon_function_guid_main_qiandao,R.drawable.icon_function_guid_main_servier,R.drawable.icon_function_guid_main_cart};
     private int[] myStrs={R.drawable.icon_function_guid_my_jifen,R.drawable.icon_function_guid_my_yue,R.drawable.icon_function_guid_my_coupon};
+    private int[] orderStrs={R.drawable.icon_function_guid_order_dikou,R.drawable.icon_function_guid_order_liebiao,R.drawable.icon_function_guid_order_queren};
     private int position=0;
     private int[] strs;
     private  ImageView ivGuid;
 
     public FunctionGuidDialog(Context context, int type) {
         this.context = context;
-        strs=type==0?mainStrs:myStrs;
+        if (type==0)
+        {
+            strs=mainStrs;
+        }
+        if (type==1)
+        {
+            strs=myStrs;
+        }
+        if (type==3)
+        {
+            strs=orderStrs;
+        }
     }
     public FunctionGuidDialog builder() {
         alertDialog = new Dialog(context, R.style.DialogStyle);

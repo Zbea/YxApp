@@ -24,6 +24,7 @@ import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyShopActivity;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.activity.WebviewActivity;
 import com.yx.Pharmacy.constant.Constants;
@@ -130,23 +131,12 @@ public abstract class BaseActivity
                 if (TextUtils.equals(type, "1")) {
                     // 秒杀
                     CommendMsActivity.startActivity(mContext,goldBean.levelid,goldBean.activityname);
-                } else if (TextUtils.equals(type, "2")) {
-                    // 特价
-                    CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
-                } else if (TextUtils.equals(type, "3")) {
-                    // 满减
-                    CommendTjActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
-                } else if (TextUtils.equals(type, "9")) {
-                    // 控销
-                    CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
-                }
-                else {
-                    // 自定义专区
-                    CommendProductActivity.startActivity(mContext, type, goldBean.levelid,goldBean.activityname);
+                } else  {
+                    ProductItemActivity.startActivity(mContext,2,goldBean.levelid,goldBean.activityname);
                 }
                 break;
             case 6://新特药新区
-                CommendProductActivity.startActivity(mContext,goldBean.pushtype+"",goldBean.goodstype,goldBean.title,1);
+                ProductItemActivity.startActivity(mContext,3,goldBean.goodstype+"",goldBean.title);
                 break;
         }
     }

@@ -1,5 +1,7 @@
 package com.yx.Pharmacy.model;
 
+import java.util.List;
+
 /**
  * Created by KID on 2018/7/17.
  */
@@ -33,6 +35,25 @@ public class DrugModel {
     public int activityCount ;
     public int salesCount;
     public int sale;
+
+    public String          qprice;
+    public String          elite;
+    public String       pzwh;
+    public String          orders;
+    public String       ph1;
+    public String          catid;
+    public String          oprice;
+    public String       content;
+    public String       couponinfo;
+    public String       giftId;
+    public List<String> pic;
+    public boolean issave;
+    public double max;
+    public String flashmax;
+    public String addmum;
+    public String minimum;
+    public boolean productLimit;
+    public boolean flashLimit ;
 
     public String getLevelnote() {
         return levelnote;

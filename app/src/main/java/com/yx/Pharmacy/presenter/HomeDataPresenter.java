@@ -1,13 +1,15 @@
 package com.yx.Pharmacy.presenter;
 
 import android.app.Activity;
+import android.text.TextUtils;
 
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
+import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
-import com.yx.Pharmacy.model.MyShopModel;
+import com.yx.Pharmacy.model.SupplierListModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressNoCode;
@@ -149,4 +151,134 @@ public class HomeDataPresenter {
                    }
                });
     }
+
+
+    /**
+     * 添加商品到购物车
+     */
+    public void addCartProduct(final BaseActivity activity, final DrugModel item,int count ) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("pid",item.getItemid()+"");
+        urlMap.put("count", count+"");
+        HomeNet.getHomeApi().addShopcart(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (response.getData()!=null) {
+                            activity.getShortToastByString("添加成功");
+                            mView.showAddResult(response.getData(),item,null);
+                        }else {
+                            activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
+
+
+
+
+
+    /**
+     * 到货通知
+     */
+    public void productArrive(final BaseActivity activity, String pid) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("pid",pid);
+        HomeNet.getHomeApi().product_arriveNotify(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (response.getData()!=null) {
+                            activity.getShortToastByString(response.getAlertmsg());
+//                            activity.getShortToastByString("已为您设置到货提醒，请留意平台到货通知");
+//                            mView.showAddResult(response.getData(),item,imgview);
+                        }else {
+                            activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
+
+
+    /**
+     * 秒杀专区商品秒杀价购买
+     */
+    public void miaoshaBuy(BaseActivity activity, String pid, int count) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("pid", pid);
+        urlMap.put("count", "" + count);
+        HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (TextUtils.equals(response.getCode(), "201")) {
+                            mView.ifFuGai();
+                        } else {
+                            if (!TextUtils.isEmpty(response.getAlertmsg()))
+                            {
+                                activity.getShortToastByString(response.getAlertmsg());
+                            }
+                            else
+                            {
+                                mView.compelete();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        super.onError(e);
+                    }
+                });
+    }
+
+    /**
+     * 秒杀专区商品秒杀价购买
+     * confirm：是否覆盖购物车内的的秒杀活动商品 0 不覆盖  1覆盖
+     */
+    public void miaoshaBuy(BaseActivity activity, String pid, String confirm,String count) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("pid", pid);
+        urlMap.put("confirm", confirm);
+        urlMap.put("count", count);
+        HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
+                    @Override
+                    public void onSuccess(BasisBean<AddShopCartModel> response) {
+                        if (TextUtils.equals(response.getCode(), "200")) {
+                            mView.compelete();
+                        }
+                        else
+                        {
+                            if (!TextUtils.isEmpty(response.getAlertmsg()))
+                                activity.getShortToastByString(response.getAlertmsg());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error=========" + e.toString());
+                        super.onError(e);
+                    }
+                });
+    }
+
+
+
+
 }

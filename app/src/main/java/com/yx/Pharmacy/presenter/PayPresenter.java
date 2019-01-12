@@ -84,9 +84,10 @@ public class PayPresenter {
                 });
     }
 
-    public void getPay(BaseActivity activity) {
-
-        HomeNet.getHomeApi().getPayStyle().subscribeOn(Schedulers.io())
+    public void getPay(BaseActivity activity,String order_no) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("orderid",order_no);
+        HomeNet.getHomeApi().getPayStyle(urlMap).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ProgressSubscriber<BasisBean<PayWayModel>>(activity, true) {
                     @Override

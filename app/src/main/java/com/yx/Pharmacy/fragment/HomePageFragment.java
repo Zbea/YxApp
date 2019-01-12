@@ -28,40 +28,51 @@ import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.CaptureActivity;
 import com.yx.Pharmacy.activity.CommendMsActivity;
 import com.yx.Pharmacy.activity.CommendProductActivity;
-import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
+import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.adapter.BannerViewHolder;
 import com.yx.Pharmacy.adapter.GridDividerItemDecoration;
+import com.yx.Pharmacy.adapter.HomeAdvanceAdapter;
 import com.yx.Pharmacy.adapter.HomeProductAdapter;
 import com.yx.Pharmacy.adapter.HomeProductBottomAdapter;
 import com.yx.Pharmacy.adapter.HomeWebAdapter;
+import com.yx.Pharmacy.adapter.ProductItemAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBar;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
+import com.yx.Pharmacy.dialog.AddCartItemDialog;
 import com.yx.Pharmacy.dialog.ChooseStoreDialog;
+import com.yx.Pharmacy.dialog.ChooseSupplierDialog;
+import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
 import com.yx.Pharmacy.manage.LocalUrlManage;
 import com.yx.Pharmacy.manage.StoreManage;
+import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
 import com.yx.Pharmacy.model.MyShopModel;
+import com.yx.Pharmacy.model.SupplierListModel;
 import com.yx.Pharmacy.model.UrlBean;
+import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.HomeDataPresenter;
 import com.yx.Pharmacy.util.ComMethodsUtil;
+import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.GlideUtil;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IHomeView;
+import com.yx.Pharmacy.widget.AmountView;
 import com.yx.Pharmacy.widget.MarqueeView;
+import com.yx.Pharmacy.widget.SpacesItemDecoration;
 import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 
@@ -98,6 +109,8 @@ public class HomePageFragment
 
     @BindView(R.id.rv_webview)
     RecyclerView mRvWebview;
+    @BindView(R.id.rv_advence)
+    RecyclerView mRvAdvance;
     @BindView(R.id.rv_good)
     RecyclerView mRvGood;
     @BindView(R.id.rv_product)
@@ -126,19 +139,24 @@ public class HomePageFragment
     private HomeDataPresenter mPresenter;
     private HomeWebAdapter mWebAdapter;
     private HomeProductAdapter mAdapter;
+    private HomeAdvanceAdapter homeAdvanceAdapter;
 
     private int fadingHeight = 500; // 当ScrollView滑动到什么位置时渐变消失（根据需要进行调整）
     private Drawable drawable; // 顶部渐变布局需设置的Drawable
     private static final int START_ALPHA = 0;//scrollview滑动开始位置
     private static final int END_ALPHA = 255;//scrollview滑动结束位置
     private HomeAdvanceModel.GoldBean mAdvenceGold;
-    private HomeProductBottomAdapter mBottomAdapter;
+    private ProductItemAdapter mBottomAdapter;
     private List<DrugModel> mAddData;
     private boolean mFirstLoadMore = true;
     private boolean mIsShowAdDialog = false;
     private List<HomeDataModel> homeDataModels;
     private HomeAdvanceModel homeAdvanceModel;
     private HomeAdvanceModel messageModel;
+    private AddCartItemDialog addCartItemDialog;
+    private int cartCount=1;
+    private DrugModel itemModel;
+    private int type;
 
     private Handler mHandler=new Handler()
     {
@@ -151,6 +169,10 @@ public class HomePageFragment
                 {
                     mAdapter.setNewData(homeDataModels);
                 }
+                else
+                {
+                    mRvGood.setVisibility(View.GONE);
+                }
             }
             if (msg.what==2)
             {
@@ -161,7 +183,7 @@ public class HomePageFragment
 
                 mAdvenceGold = homeAdvanceModel.gold;
                 if (mAdvenceGold != null) {
-                    GlideUtil.loadImgFit(UiUtil.getContext(), mAdvenceGold.image_src, mIvAdvence,R.drawable.icon_image_loading_cc);
+                    GlideUtil.loadImg(UiUtil.getContext(), mAdvenceGold.image_src, mIvAdvence,R.drawable.icon_image_loading_cc);
                     mIvAdvence.setVisibility(View.VISIBLE);
                 }
                 else
@@ -171,6 +193,10 @@ public class HomePageFragment
                 //初始化banner数据
                 if (homeAdvanceModel.banner != null && homeAdvanceModel.banner.size() > 0) {
                     initBanner(homeAdvanceModel.banner);
+                }
+
+                if (homeAdvanceModel.secondGold != null && homeAdvanceModel.secondGold.size() > 0) {
+                    homeAdvanceAdapter.setNewData(homeAdvanceModel.secondGold);
                 }
 
                 if (homeAdvanceModel.alert != null) {
@@ -312,11 +338,23 @@ public class HomePageFragment
         mRvWebview.setLayoutManager(layoutManager);
         mWebAdapter = new HomeWebAdapter(R.layout.item_home_web);
         mRvWebview.setAdapter(mWebAdapter);
-
         mWebAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 HomeAdvanceModel.GoldBean goldBean = mWebAdapter.getData().get(position);
+                gotoClick(goldBean);
+            }
+        });
+
+        // 广告列表
+        GridLayoutManager layoutManagers = new GridLayoutManager(mContext, 2);
+        mRvAdvance.setLayoutManager(layoutManagers);
+        homeAdvanceAdapter = new HomeAdvanceAdapter(R.layout.item_home_advance);
+        mRvAdvance.setAdapter(homeAdvanceAdapter);
+        homeAdvanceAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                HomeAdvanceModel.GoldBean goldBean = homeAdvanceAdapter.getData().get(position);
                 gotoClick(goldBean);
             }
         });
@@ -329,18 +367,6 @@ public class HomePageFragment
         mRvGood.setItemViewCacheSize(20);
         mRvGood.setDrawingCacheEnabled(true);
         mRvGood.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
-
-        GridLayoutManager productManager = new GridLayoutManager(mContext, 2);
-        mRvProduct.setLayoutManager(productManager);
-
-        mBottomAdapter = new HomeProductBottomAdapter(R.layout.item_home_product_special);
-        mRvProduct.setAdapter(mBottomAdapter);
-        mRvProduct.addItemDecoration(new GridDividerItemDecoration(UiUtil.getContext()));
-
-        mRvGood.setNestedScrollingEnabled(false);
-        mRvWebview.setNestedScrollingEnabled(false);
-        mRvProduct.setNestedScrollingEnabled(false);
-
         mAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
@@ -351,16 +377,9 @@ public class HomePageFragment
                     case R.id.iv_title:
                         if (TextUtils.equals(type, "1")) {
                             // 秒杀
-                            CommendMsActivity.startActivity(mContext, homeDataModel.levelid, homeDataModel.activityname);
-                        } else if (TextUtils.equals(type, "2")) {
-                            // 特价
-                            CommendTjActivity.startActivity(mContext, type, homeDataModel.levelid, homeDataModel.activityname);
-                        } else if (TextUtils.equals(type, "3")) {
-                            // 满减
-                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid, homeDataModel.activityname);
-                        } else if (TextUtils.equals(type, "9")) {
-                            // 控销
-                            CommendProductActivity.startActivity(mContext, type, homeDataModel.levelid, homeDataModel.activityname);
+                            CommendMsActivity.startActivity(mContext,homeDataModel.levelid,homeDataModel.activityname);
+                        } else  {
+                            ProductItemActivity.startActivity(mContext,2,homeDataModel.levelid,homeDataModel.activityname);
                         }
                         break;
                     default:
@@ -368,7 +387,6 @@ public class HomePageFragment
                 }
             }
         });
-
         mAdapter.setOnProdutcClick(new HomeProductAdapter.onProdutcClick() {
             @Override
             public void onClick(HomeDataModel.GoodlistsBean o) {
@@ -380,20 +398,64 @@ public class HomePageFragment
                 mPresenter.getHomeData((BaseActivity) mContext);
             }
         });
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                tv_no_more.setVisibility(View.GONE);
-                mFirstLoadMore = true;
-                initData();
-            }
-        });
+        int itemDecoration = DensityUtils.dp2px(mContext, 1);
+        mRvProduct.addItemDecoration(new SpacesItemDecoration(itemDecoration, itemDecoration));
+        mRvProduct.setLayoutManager(new LinearLayoutManager(mContext));
+        mBottomAdapter=new ProductItemAdapter(mContext, R.layout.item_product);
+        mRvProduct.setAdapter(mBottomAdapter);
         mBottomAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 DrugModel drugModel = mBottomAdapter.getData()
                         .get(position);
                 ProductDetailActivity.startActivity(mContext, String.valueOf(drugModel.getItemid()));
+            }
+        });
+        mBottomAdapter.setListener(new ProductItemAdapter.AddListener() {
+            @Override
+            public void addCart(DrugModel item, ImageView imageView) {
+                if (TextUtils.isEmpty(NetUtil.getToken())) {
+                    LoginActivity.startActivity(mContext,1);
+                    return;
+                }
+                if (item!=null)
+                {
+                    itemModel=item;
+                    cartCount=DensityUtils.parseInt(item.minimum);
+
+                    if (item.getType()==1||item.getType()==2) { //特价商品特殊处理
+                        showComfirmDialog();
+                    } else {
+                        if (!item.productLimit) {
+                            showAddDialog(0,item);
+                        }
+                        else
+                        {
+                            getShortToastByString("商品已达限购");
+                        }
+//                        mPresenter.addCartProduct(this, mItemId);
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void productArrived(int itemid) {
+                mPresenter.productArrive((BaseActivity) mContext,itemid+"");
+            }
+        });
+
+        mRvGood.setNestedScrollingEnabled(false);
+        mRvWebview.setNestedScrollingEnabled(false);
+        mRvProduct.setNestedScrollingEnabled(false);
+        mRvAdvance.setNestedScrollingEnabled(false);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                tv_no_more.setVisibility(View.GONE);
+                mFirstLoadMore = true;
+                initData();
             }
         });
 
@@ -417,6 +479,89 @@ public class HomePageFragment
         mPresenter.getAdvanceData((BaseActivity) mContext);
         mPresenter.getMessageData((BaseActivity) mContext);
         mPresenter.getHomeData((BaseActivity) mContext);
+    }
+
+
+    private void showAddDialog(int type,DrugModel item) {
+        if (item == null) return;
+
+        addCartItemDialog = new AddCartItemDialog(mContext, item, type);
+        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
+            @Override
+            public void ok() {
+                if (cartCount <= 0) {
+                    getShortToastByString("起购量必须大于0");
+                    return;
+                }
+                if (item != null && (item.getType()==1||item.getType()==2) && type == 1) { //特价商品特殊处理
+                    mPresenter.miaoshaBuy((BaseActivity) mContext, String.valueOf(item.getItemid()), cartCount);
+                } else {
+                    mPresenter.addCartProduct((BaseActivity) mContext,item, cartCount);
+                }
+            }
+
+            @Override
+            public void onAumountChangeListener(View view, int amount, boolean isEdit) {
+                L.i("amount:" + amount);
+                cartCount = amount;
+                double i = (double) amount / Double.parseDouble(item.addmum);
+                if (i % 1 != 0) {
+                    NetUtil.getShortToastByString("输入商品的数量必须是起购量的倍数");
+                    cartCount = (int) (DensityUtils.parseInt(item.addmum) * (int) i);
+                    ((AmountView) view).setAmount(cartCount);
+                }
+            }
+        });
+        addCartItemDialog.builder().show();
+    }
+
+
+    private void showComfirmDialog() {
+        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
+        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(""+itemModel.getType(), "1")?"秒杀购买":"特价购买").builder().show();
+        ;
+        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+            @Override
+            public void ok() {//第一次特价购买，不需要传是否覆盖
+                confirmDialog.cancle();
+                if (!itemModel.flashLimit) {
+                    type=1;
+                    showAddDialog(1,itemModel);
+                } else {
+                    getShortToastByString("购买已达上限");
+                }
+            }
+
+            @Override
+            public void cancle() {//原价购买(加入购物车)
+                confirmDialog.cancle();
+                if (!itemModel.productLimit) {
+                    type=0;
+                    showAddDialog(0,itemModel);
+                } else {
+                    getShortToastByString("购买已达上限");
+                }
+            }
+        });
+    }
+
+    //询问是否覆盖
+    private void showComfirmDialog2() {
+        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
+        confirmDialog.setTitle("温馨提示").setContent("购物车中已有秒杀商品，是否覆盖").setcancle("否").setOk("是").builder().show();
+        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+            @Override
+            public void ok() {//覆盖
+                confirmDialog.cancle();
+                mPresenter.miaoshaBuy((BaseActivity) mContext, itemModel.getItemid()+"", "1", String.valueOf(cartCount));
+            }
+
+            @Override
+            public void cancle() {//不覆盖
+                confirmDialog.cancle();
+//                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"0",cartCount);
+            }
+        });
     }
 
 
@@ -483,6 +628,71 @@ public class HomePageFragment
     public void hideFlash() {
         if (swipeRefreshLayout != null) {
             swipeRefreshLayout.setRefreshing(false);
+        }
+    }
+
+    @Override
+    public void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview) {
+        setRefreshMax();
+    }
+
+    @Override
+    public void ifFuGai() {
+        showComfirmDialog2();
+    }
+
+    @Override
+    public void compelete() {
+        getShortToastByString("添加成功");
+        setRefreshMax();
+    }
+
+    /**
+     * 添加成功后刷新商品数量变化
+     */
+    private void setRefreshMax()
+    {
+        if (type==1)
+        {
+            itemModel.flashmax =(DensityUtils.parseDouble(itemModel.flashmax)  - cartCount)+"";
+            if ((DensityUtils.parseDouble(itemModel.flashmax)<=1))
+            {
+                itemModel.flashLimit=true;
+            }
+        }
+        else
+        {
+            itemModel.max = itemModel.max - cartCount;
+            if ((itemModel.max<=1))
+            {
+                itemModel.productLimit=true;
+            }
+        }
+        if (itemModel.getType()==1||itemModel.getType()==2)
+        {
+            if (itemModel.max <= 0&&DensityUtils.parseDouble(itemModel.flashmax)<=1) {
+                itemModel.setQuehuo(true);
+            }
+        }
+        else
+        {
+            if (itemModel.max <= 0) {
+                itemModel.setQuehuo(true);
+            }
+        }
+        List<DrugModel> lists=mBottomAdapter.getData();
+        for (int i = 0; i <lists.size(); i++) {
+            DrugModel drugModel=lists.get(i);
+            if (drugModel.getItemid()==itemModel.getItemid())
+            {
+                mBottomAdapter.getData().get(i).setQuehuo(itemModel.isQuehuo());
+                mBottomAdapter.getData().get(i).max=itemModel.max;
+                mBottomAdapter.getData().get(i).flashmax=itemModel.flashmax;
+                mBottomAdapter.getData().get(i).flashLimit=itemModel.flashLimit;
+                mBottomAdapter.getData().get(i).productLimit=itemModel.productLimit;
+                mBottomAdapter.notifyItemChanged(i);
+                return;
+            }
         }
     }
 
@@ -567,6 +777,24 @@ public class HomePageFragment
                 });
                 break;
             case R.id.tv_factory_address:
+                ChooseSupplierDialog supplierDialog=new ChooseSupplierDialog(mContext);
+                supplierDialog.setDialogClickListener(new ChooseSupplierDialog.DialogClickListener() {
+                    @Override
+                    public void select(SupplierListModel model) {
+                        L.i(model.company);
+                        tvFactoryAddress.setText(model.company);
+                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,model.storeid);
+                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY,model.company);
+                        MyShopModel myShopModel=StoreManage.newInstance().getStore();
+                        if (myShopModel!=null)
+                        {
+                            myShopModel.storeid=model.storeid;
+                            myShopModel.company=model.company;
+                            StoreManage.newInstance().saveStore(myShopModel);
+                        }
+
+                    }
+                });
 
                 break;
             case R.id.iv_top:
