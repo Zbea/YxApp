@@ -3,14 +3,10 @@ package com.yx.Pharmacy.activity;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
@@ -22,19 +18,11 @@ import java.lang.Override;
 public class SearchActivity_ViewBinding implements Unbinder {
   private SearchActivity target;
 
-  private View view2131296521;
+  private View view2131296467;
 
-  private View view2131296646;
+  private View view2131296986;
 
-  private View view2131296616;
-
-  private View view2131296643;
-
-  private View view2131296569;
-
-  private View view2131296971;
-
-  private View view2131296962;
+  private View view2131296978;
 
   @UiThread
   public SearchActivity_ViewBinding(SearchActivity target) {
@@ -50,54 +38,9 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.flowlayout_hot = Utils.findRequiredViewAsType(source, R.id.flowlayout_hot, "field 'flowlayout_hot'", FlowTagLayout.class);
     target.edit_search = Utils.findRequiredViewAsType(source, R.id.edit_search, "field 'edit_search'", EditText.class);
     target.ll_tuijian = Utils.findRequiredViewAsType(source, R.id.ll_tuijian, "field 'll_tuijian'", LinearLayout.class);
-    target.ll_search_result = Utils.findRequiredViewAsType(source, R.id.ll_search_result, "field 'll_search_result'", LinearLayout.class);
-    target.tv_zonghe = Utils.findRequiredViewAsType(source, R.id.tv_zonghe, "field 'tv_zonghe'", TextView.class);
-    target.iv_zonghe = Utils.findRequiredViewAsType(source, R.id.iv_zonghe, "field 'iv_zonghe'", ImageView.class);
-    target.tv_price = Utils.findRequiredViewAsType(source, R.id.tv_price, "field 'tv_price'", TextView.class);
-    target.iv_price = Utils.findRequiredViewAsType(source, R.id.iv_price, "field 'iv_price'", ImageView.class);
-    target.tv_xiaoliang = Utils.findRequiredViewAsType(source, R.id.tv_xiaoliang, "field 'tv_xiaoliang'", TextView.class);
-    target.iv_xiaoliang = Utils.findRequiredViewAsType(source, R.id.iv_xiaoliang, "field 'iv_xiaoliang'", ImageView.class);
-    target.iv_layout_mode = Utils.findRequiredViewAsType(source, R.id.iv_layout_mode, "field 'iv_layout_mode'", ImageView.class);
-    target.swipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.swipeRefreshLayout, "field 'swipeRefreshLayout'", SwipeRefreshLayout.class);
-    target.recyclerview = Utils.findRequiredViewAsType(source, R.id.recyclerview, "field 'recyclerview'", RecyclerView.class);
-    target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
-    target.rl_amin_window = Utils.findRequiredViewAsType(source, R.id.rl_amin_window, "field 'rl_amin_window'", RelativeLayout.class);
-    view = Utils.findRequiredView(source, R.id.iv_shopping_car, "field 'iv_shopping_car' and method 'click'");
-    target.iv_shopping_car = Utils.castView(view, R.id.iv_shopping_car, "field 'iv_shopping_car'", ImageView.class);
-    view2131296521 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    target.tv_num = Utils.findRequiredViewAsType(source, R.id.tv_num, "field 'tv_num'", TextView.class);
-    view = Utils.findRequiredView(source, R.id.ll_zonghe, "method 'click'");
-    view2131296646 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_price, "method 'click'");
-    view2131296616 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "method 'click'");
-    view2131296643 = view;
-    view.setOnClickListener(new DebouncingOnClickListener() {
-      @Override
-      public void doClick(View p0) {
-        target.click(p0);
-      }
-    });
-    view = Utils.findRequiredView(source, R.id.ll_change_layout, "method 'click'");
-    view2131296569 = view;
+    view = Utils.findRequiredView(source, R.id.iv_back, "field 'ivBack' and method 'click'");
+    target.ivBack = Utils.castView(view, R.id.iv_back, "field 'ivBack'", ImageView.class);
+    view2131296467 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -105,7 +48,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_clear_history, "method 'click'");
-    view2131296971 = view;
+    view2131296986 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -113,7 +56,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_cancel, "method 'click'");
-    view2131296962 = view;
+    view2131296978 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -133,34 +76,13 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.flowlayout_hot = null;
     target.edit_search = null;
     target.ll_tuijian = null;
-    target.ll_search_result = null;
-    target.tv_zonghe = null;
-    target.iv_zonghe = null;
-    target.tv_price = null;
-    target.iv_price = null;
-    target.tv_xiaoliang = null;
-    target.iv_xiaoliang = null;
-    target.iv_layout_mode = null;
-    target.swipeRefreshLayout = null;
-    target.recyclerview = null;
-    target.ll_nodata = null;
-    target.rl_amin_window = null;
-    target.iv_shopping_car = null;
-    target.tv_num = null;
+    target.ivBack = null;
 
-    view2131296521.setOnClickListener(null);
-    view2131296521 = null;
-    view2131296646.setOnClickListener(null);
-    view2131296646 = null;
-    view2131296616.setOnClickListener(null);
-    view2131296616 = null;
-    view2131296643.setOnClickListener(null);
-    view2131296643 = null;
-    view2131296569.setOnClickListener(null);
-    view2131296569 = null;
-    view2131296971.setOnClickListener(null);
-    view2131296971 = null;
-    view2131296962.setOnClickListener(null);
-    view2131296962 = null;
+    view2131296467.setOnClickListener(null);
+    view2131296467 = null;
+    view2131296986.setOnClickListener(null);
+    view2131296986 = null;
+    view2131296978.setOnClickListener(null);
+    view2131296978 = null;
   }
 }

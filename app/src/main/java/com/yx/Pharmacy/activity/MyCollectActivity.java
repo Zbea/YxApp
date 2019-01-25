@@ -15,20 +15,15 @@ import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.adapter.MyCollectAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
-import com.yx.Pharmacy.constant.Constants;
-import com.yx.Pharmacy.dialog.AddCartIDialog;
+import com.yx.Pharmacy.dialog.AddCartItemDialog;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.presenter.MyCollectPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.L;
-import com.yx.Pharmacy.util.SPUtil;
-import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IMyCollectView;
 import com.yx.Pharmacy.widget.LoadingLayout;
 import com.yx.Pharmacy.widget.SpacesItemDecoration;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -142,8 +137,8 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
 
     private void showAddDialog(int type,DrugModel item) {
         if (item == null) return;
-        AddCartIDialog addCartIDialog=new AddCartIDialog(this,item,type);
-        addCartIDialog.setDialogClickListener(new AddCartIDialog.DialogClickListener() {
+        AddCartItemDialog addCartItemDialog =new AddCartItemDialog(this,item,type);
+        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
             @Override
             public void ok(int count) {
                 L.i("count:"+count);
@@ -151,7 +146,7 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
                 setRefreshMax();
             }
         });
-        addCartIDialog.builder().show();
+        addCartItemDialog.builder().show();
 
     }
 

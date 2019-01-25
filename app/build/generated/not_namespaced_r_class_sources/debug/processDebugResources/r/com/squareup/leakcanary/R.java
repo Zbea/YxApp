@@ -12,9 +12,9 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int leak_canary_icon = 0x7f080103;
-        public static final int leak_canary_notification = 0x7f080104;
-        public static final int leak_canary_toast_background = 0x7f080105;
+        public static final int leak_canary_icon = 0x7f08010b;
+        public static final int leak_canary_notification = 0x7f08010c;
+        public static final int leak_canary_toast_background = 0x7f08010d;
     }
     public static final class id {
         private id() {}
@@ -36,11 +36,11 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int leak_canary_display_leak = 0x7f0b00ad;
-        public static final int leak_canary_heap_dump_toast = 0x7f0b00ae;
-        public static final int leak_canary_leak_row = 0x7f0b00af;
-        public static final int leak_canary_ref_row = 0x7f0b00b0;
-        public static final int leak_canary_ref_top_row = 0x7f0b00b1;
+        public static final int leak_canary_display_leak = 0x7f0b00b1;
+        public static final int leak_canary_heap_dump_toast = 0x7f0b00b2;
+        public static final int leak_canary_leak_row = 0x7f0b00b3;
+        public static final int leak_canary_ref_row = 0x7f0b00b4;
+        public static final int leak_canary_ref_top_row = 0x7f0b00b5;
     }
     public static final class string {
         private string() {}

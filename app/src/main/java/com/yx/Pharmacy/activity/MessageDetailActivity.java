@@ -213,7 +213,7 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
         }
 
         @Override
-        public void goZoneActivity(int type,int levelid) {
+        public void goZoneActivity(int type,String levelid) {
 
             if (TextUtils.equals(String.valueOf(type), "1")) {
                 // 秒杀
@@ -239,6 +239,11 @@ public class MessageDetailActivity extends BaseActivity implements SwipeRefreshL
             mAdapter.notifyDataSetChanged();
             MessageIsReadNumManage.newInstance().refresh();
             mPresenter.sendReadMessage(MessageDetailActivity.this,itemid);
+        }
+
+        @Override
+        public void search(String search) {
+            SearchActivity.startActivity(mContext,search);
         }
     };
 

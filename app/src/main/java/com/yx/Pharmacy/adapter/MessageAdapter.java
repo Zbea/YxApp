@@ -30,10 +30,10 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
         void goOrderDetail(String orderid);//跳转订单详情
         void goBackOrderDetail(String orderbackid); //跳转售后订单详情
         void goMenDianInfo(String itemid); //跳转门店信息
-        void goZoneActivity(int type, int levelid); //跳转专区活动
+        void goZoneActivity(int type, String levelid); //跳转专区活动
         void godata7Activity(String levelid, String type);//push=7 活动
         void readMessage(String itemid, int position);
-
+        void search(String search);
     }
     public void setListener(MessageClickListener listener){
         this.listener=listener;
@@ -54,8 +54,8 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
             ImageView iv_youhui=helper.getView(R.id.iv_youhui);
-            GlideUtil.loadImg(context,item.banner,iv_youhui,R.drawable.icon_image_loading_cc);
-            helper.setText(R.id.tv_youhui_name,item.activityname);
+            GlideUtil.loadImgNoStyle(context,item.thumb,iv_youhui,R.drawable.icon_image_loading_cc);
+            helper.setText(R.id.tv_youhui_name,item.content);
             helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");
             helper.getView(R.id.iv_youhui_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
@@ -65,7 +65,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
             ImageView iv_youhui=helper.getView(R.id.iv_youhui);
-            GlideUtil.loadImg(context,item.banner,iv_youhui);
+            GlideUtil.loadImgNoStyle(context,item.thumb,iv_youhui);
             helper.setText(R.id.tv_youhui_name,"单品优惠");
             helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_youhui_bottom_desc,"点击查看商品详情");
@@ -85,8 +85,28 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.setText(R.id.tv_arrive_notice_gg,item.gg);
             helper.setText(R.id.tv_arrive_notice_bottom_desc,"点击产看商品详情");
             helper.getView(R.id.iv_arrive_notice_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+        }
+        else if (item.pushtype==4){//其他特殊情况暂不处理，只显示
+            helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
+            helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
+            helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
+            helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
 
-        }else if(item.pushtype==4){//4.订单的各种状态的处理消息，根据status
+            helper.setText(R.id.tv_system_notice_name,"关键字搜索");
+            helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+            helper.setText(R.id.tv_system_notice_content,item.content);
+            helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
+            if (item.is_imgtext==1)
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image));
+            }
+            else
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+            }
+        }
+        else if(item.pushtype==7){//4.订单的各种状态的处理消息，根据status
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
@@ -95,25 +115,25 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             GlideUtil.loadImg(context,item.img_url,iv_wuliu);
             helper.setText(R.id.tv_wuliu_num,item.count+"");
             helper.setText(R.id.tv_wuliu_name,"订单通知");
-            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+//            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_wuliu_left2, "下单时间");
-            helper.setText(R.id.tv_wuliu_right2, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.order_time+"000")));
-            helper.setText(R.id.tv_wuliu_left3, "订单编号");
+//            helper.setText(R.id.tv_wuliu_right2, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.order_time+"000")));
+            helper.setText(R.id.tv_wuliu_left3, "订单编号:");
             helper.setText(R.id.tv_wuliu_right3, item.pushdata);
             helper.setText(R.id.tv_bottom_desc,"点击查看订单详情");
             helper.getView(R.id.iv_wuliu_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
-            if(item.status==1){
-                helper.setText(R.id.tv_wuliu_state,"待付款");
-            }else if(item.status==2){//待发货
-                helper.setText(R.id.tv_wuliu_state,"待发货");
-            }else if(item.status==9){
-                helper.setText(R.id.tv_wuliu_state,"已完成");
-            }else if(item.status==8){
-                helper.setText(R.id.tv_wuliu_state,"已取消");
-            }else if(item.status==7||item.status==3){
-                helper.setText(R.id.tv_wuliu_state,"待收货");
-            }
-        }else if(item.pushtype==5){//5.售后订单的各种状态的处理消息，根据status
+//            if(item.status.equals("1")){
+//                helper.setText(R.id.tv_wuliu_state,"待付款");
+//            }else if(item.status.equals("2")){//待发货
+//                helper.setText(R.id.tv_wuliu_state,"待发货");
+//            }else if(item.status.equals("9")){
+//                helper.setText(R.id.tv_wuliu_state,"已完成");
+//            }else if(item.status.equals("8")){
+//                helper.setText(R.id.tv_wuliu_state,"已取消");
+//            }else if(item.status.equals("7")||item.status.equals("3")){
+//                helper.setText(R.id.tv_wuliu_state,"待收货");
+//            }
+        }else if(item.pushtype==8){//5.售后订单的各种状态的处理消息，根据status
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
@@ -122,56 +142,65 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             GlideUtil.loadImg(context,item.img_url,iv_wuliu);
             helper.setText(R.id.tv_wuliu_num,item.count+"");
             helper.setText(R.id.tv_wuliu_name,"售后订单");
-            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+//            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_wuliu_left2, "下单时间");
-            helper.setText(R.id.tv_wuliu_right2, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.backtime+"000")));
-            helper.setText(R.id.tv_wuliu_left3, "订单编号");
+//            helper.setText(R.id.tv_wuliu_right2, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.backtime+"000")));
+            helper.setText(R.id.tv_wuliu_left3, "订单编号:");
             helper.setText(R.id.tv_wuliu_right3, item.pushdata);
             helper.setText(R.id.tv_bottom_desc,"点击查看订单详情");
             helper.getView(R.id.iv_wuliu_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
-            if(item.status==0||item.status==1){
-                helper.setText(R.id.tv_wuliu_state,"审核中");
-            }else if(item.status==6){
-                helper.setText(R.id.tv_wuliu_state,"已撤销");
-            }else if(item.status==7){
-                helper.setText(R.id.tv_wuliu_state,"处理中");
-            }else if(item.status==8){
-                helper.setText(R.id.tv_wuliu_state,"审核失败");
-            } else {
-                helper.setText(R.id.tv_wuliu_state,"已完成");
-            }
+//            if(item.status.equals("0")||item.status.equals("1")){
+//                helper.setText(R.id.tv_wuliu_state,"审核中");
+//            }else if(item.status.equals("6")){
+//                helper.setText(R.id.tv_wuliu_state,"已撤销");
+//            }else if(item.status.equals("7")){
+//                helper.setText(R.id.tv_wuliu_state,"处理中");
+//            }else if(item.status.equals("8")){
+//                helper.setText(R.id.tv_wuliu_state,"审核失败");
+//            } else {
+//                helper.setText(R.id.tv_wuliu_state,"已完成");
+//            }
         }
-        else if(item.pushtype==6){//6系统通知（门店审核的处理消息）点击查看门店详情
+        else if(item.pushtype==9){//6系统通知（门店审核的处理消息）点击查看门店详情
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
-            helper.setText(R.id.tv_system_notice_name,"系统通知");
+            helper.setText(R.id.tv_system_notice_name,item.content);
             helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
-            helper.setText(R.id.tv_system_notice_content,item.content);
-            helper.setText(R.id.tv_bootom_desc,"点击查看门店详情");
+            helper.setText(R.id.tv_system_notice_content,item.title);
+            helper.setText(R.id.tv_bootom_desc,item.content);
             helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.VISIBLE);
             helper.getView(R.id.iv_system_notice_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
-        } else if(item.pushtype==7){//7系统通知(无底部)
-//            helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
-//            helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
-//            helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
-//            helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
-//            helper.setText(R.id.tv_system_notice_name,"系统通知");
-//            helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
-//            helper.setText(R.id.tv_system_notice_content,item.content);
-//            helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
-//            helper.getView(R.id.iv_system_notice_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+            if (item.is_imgtext==1)
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image));
+            }
+            else
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+            }
+        } else if(item.pushtype==5){//7系统通知(无底部)
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
-            helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
-            helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
+            helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
+            helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
-            ImageView iv_youhui=helper.getView(R.id.iv_youhui);
-            GlideUtil.loadImg(context,item.banner,iv_youhui);
-            helper.setText(R.id.tv_youhui_name,item.activityname);
-            helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
-            helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");
-            helper.getView(R.id.iv_youhui_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+            helper.setText(R.id.tv_system_notice_name,"专区通知");
+            helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+            helper.setText(R.id.tv_system_notice_content,item.content);
+            helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
+            helper.getView(R.id.iv_system_notice_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+            if (item.is_imgtext==1)
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image),R.drawable.icon_image_loading_cc);
+            }
+            else
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+            }
+
         } else {//其他特殊情况暂不处理，只显示
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
@@ -182,6 +211,16 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_system_notice_content,item.content);
             helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
+            if (item.is_imgtext==1)
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image),R.drawable.icon_image_loading_cc);
+            }
+            else
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+            }
+
         }
 
         helper.getView(R.id.ll_type_wuliu).setOnClickListener(new View.OnClickListener() {
@@ -189,9 +228,9 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             public void onClick(View v) {
                 if(item.isread!=HAS_Read){
                     MessageIsReadNumManage.newInstance().refreshDate(1);
-                    if(listener!=null)listener.readMessage(item.itemid,helper.getLayoutPosition());
+                    if(listener!=null)listener.readMessage(item.itemid+"",helper.getLayoutPosition());
                 }
-                if(item.pushtype==4){//跳转订单详情
+                if(item.pushtype==7){//跳转订单详情
                     if(listener!=null)listener.goOrderDetail(item.pushdata);
                 }else {//跳转售后订单
                     if(listener!=null)listener.goBackOrderDetail(item.pushdata);
@@ -203,12 +242,19 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             public void onClick(View v) {
                 if(item.isread!=HAS_Read){
                     MessageIsReadNumManage.newInstance().refreshDate(2);
-                    if(listener!=null)listener.readMessage(item.itemid,helper.getLayoutPosition());
+                    if(listener!=null)listener.readMessage(item.itemid+"",helper.getLayoutPosition());
                 }
-                if(item.pushtype==6){//跳转门店
+                if(item.pushtype==9){//跳转门店
                     if(listener!=null)listener.goMenDianInfo(item.pushdata);
-                }else {//跳转活动专区
-//                    if(listener!=null)listener.goZoneActivity();
+                }
+                else if(item.pushtype==5){//专区
+                    if(listener!=null)listener.goZoneActivity(item.pushtype,item.pushdata);
+                }
+                else if(item.pushtype==4){//guanjianzisousuo
+                    if(listener!=null)listener.search(item.pushdata);
+                }
+                else {//跳转活动专区
+
                 }
             }
         });
@@ -217,12 +263,12 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             public void onClick(View v) {
                 if(item.isread!=HAS_Read){
                     MessageIsReadNumManage.newInstance().refreshDate(3);
-                    if(listener!=null)listener.readMessage(item.itemid,helper.getLayoutPosition());
+                    if(listener!=null)listener.readMessage(item.itemid+"",helper.getLayoutPosition());
                 }
                 if(item.pushtype==1){//跳转活动模块
                     if(listener!=null)listener.goWebActivity(item.weburl);
-                }else if(item.pushtype==7){//跳转特殊活动
-                    if(listener!=null)listener.godata7Activity(item.levelid,item.type);
+                }else if(item.pushtype==5){//跳转特殊活动
+//                    if(listener!=null)listener.godata7Activity(item.levelid,item.type);
                 } else {//跳转单品（商品详情）
                     if(listener!=null)listener.goProductDetail(item.pushdata);
                 }
@@ -233,7 +279,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             public void onClick(View v) {
                 if(item.isread!=HAS_Read){
                     MessageIsReadNumManage.newInstance().refreshDate(4);
-                    if(listener!=null)listener.readMessage(item.itemid,helper.getLayoutPosition());
+                    if(listener!=null)listener.readMessage(item.itemid+"",helper.getLayoutPosition());
                 }
                 if(listener!=null)listener.goProductDetail(item.pushdata);
             }

@@ -208,7 +208,7 @@ public class LoginActivity
             mTvLoginMember.setText("客户登录");
         }else {
             mLoginMember=0;
-            mLoginType=0;
+            mLoginType=1;
             mTvCut.setVisibility(View.VISIBLE);
             mTvRegister.setVisibility(View.VISIBLE);
             mTvLoginMember.setText("业务员登录");

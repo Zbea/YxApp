@@ -153,32 +153,7 @@ public class HomeDataPresenter {
     }
 
 
-    /**
-     * 添加商品到购物车
-     */
-    public void addCartProduct(final BaseActivity activity, final DrugModel item,int count ) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid",item.getItemid()+"");
-        urlMap.put("count", count+"");
-        HomeNet.getHomeApi().addShopcart(urlMap).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressSubscriber<BasisBean<AddShopCartModel>>(activity, false) {
-                    @Override
-                    public void onSuccess(BasisBean<AddShopCartModel> response) {
-                        if (response.getData()!=null) {
-                            activity.getShortToastByString("添加成功");
-                            mView.showAddResult(response.getData(),item,null);
-                        }else {
-                            activity.getShortToastByString(response.getAlertmsg());
-                        }
-                    }
 
-                    @Override
-                    public void onError(Throwable e) {
-                        super.onError(e);
-                    }
-                });
-    }
 
 
 
@@ -206,73 +181,6 @@ public class HomeDataPresenter {
 
                     @Override
                     public void onError(Throwable e) {
-                        super.onError(e);
-                    }
-                });
-    }
-
-
-    /**
-     * 秒杀专区商品秒杀价购买
-     */
-    public void miaoshaBuy(BaseActivity activity, String pid, int count) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid", pid);
-        urlMap.put("count", "" + count);
-        HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
-                    @Override
-                    public void onSuccess(BasisBean<AddShopCartModel> response) {
-                        if (TextUtils.equals(response.getCode(), "201")) {
-                            mView.ifFuGai();
-                        } else {
-                            if (!TextUtils.isEmpty(response.getAlertmsg()))
-                            {
-                                activity.getShortToastByString(response.getAlertmsg());
-                            }
-                            else
-                            {
-                                mView.compelete();
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        LogUtils.e("error=========" + e.toString());
-                        super.onError(e);
-                    }
-                });
-    }
-
-    /**
-     * 秒杀专区商品秒杀价购买
-     * confirm：是否覆盖购物车内的的秒杀活动商品 0 不覆盖  1覆盖
-     */
-    public void miaoshaBuy(BaseActivity activity, String pid, String confirm,String count) {
-        HashMap<String, String> urlMap = NetUtil.getUrlMap();
-        urlMap.put("pid", pid);
-        urlMap.put("confirm", confirm);
-        urlMap.put("count", count);
-        HomeNet.getHomeApi().miaoshaBuy(urlMap).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new ProgressNoCode<BasisBean<AddShopCartModel>>(activity, false) {
-                    @Override
-                    public void onSuccess(BasisBean<AddShopCartModel> response) {
-                        if (TextUtils.equals(response.getCode(), "200")) {
-                            mView.compelete();
-                        }
-                        else
-                        {
-                            if (!TextUtils.isEmpty(response.getAlertmsg()))
-                                activity.getShortToastByString(response.getAlertmsg());
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        LogUtils.e("error=========" + e.toString());
                         super.onError(e);
                     }
                 });

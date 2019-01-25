@@ -1,2 +1,2 @@
-# Referenced at D:\androidSpace\android\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:65
+# Referenced at D:\androidSpace\YxApp\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:36
 -keep class com.yx.Pharmacy.base.YxApp { <init>(...); }

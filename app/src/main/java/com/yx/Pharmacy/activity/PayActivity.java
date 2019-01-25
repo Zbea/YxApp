@@ -169,41 +169,41 @@ public class PayActivity extends BaseActivity implements IPayView {
 
     private void showPay() {
 
-        WXWebpageObject webpage = new WXWebpageObject();
-        webpage.webpageUrl = payWayModel.otherPayUrl;
-        final WXMediaMessage msg = new WXMediaMessage(webpage);
-        msg.title = payWayModel.shareTitle;
-        msg.description = payWayModel.shareContent;
-        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.logo);
-//        final Bitmap[] thumbBmp = {Bitmap.createScaledBitmap(bmp, 80, 80, true)};
-//        bmp.recycle();
-//        msg.
-//        msg.thumbData = WRKFileUtil.bmpToByteArray(thumbBmp[0], true);
-        msg.setThumbImage(bmp);
-        SendMessageToWX.Req req = new SendMessageToWX.Req();
-        req.transaction = buildTransaction("webpage");
-        req.message = msg;
-        req.scene = SendMessageToWX.Req.WXSceneSession;
-        wxapi.sendReq(req);
+//        WXWebpageObject webpage = new WXWebpageObject();
+//        webpage.webpageUrl = payWayModel.otherPayUrl;
+//        final WXMediaMessage msg = new WXMediaMessage(webpage);
+//        msg.title = payWayModel.shareTitle;
+//        msg.description = payWayModel.shareContent;
+////        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.logo);
+////        final Bitmap[] thumbBmp = {Bitmap.createScaledBitmap(bmp, 80, 80, true)};
+////        bmp.recycle();
+////        msg.
+////        msg.thumbData = WRKFileUtil.bmpToByteArray(thumbBmp[0], true);
+////        msg.setThumbImage(bmp);
+//        SendMessageToWX.Req req = new SendMessageToWX.Req();
+//        req.transaction = buildTransaction("webpage");
+//        req.message = msg;
+//        req.scene = SendMessageToWX.Req.WXSceneSession;
+//        wxapi.sendReq(req);
 
-//        if (payWayModel != null) {
-//            OnekeyShare oks = new OnekeyShare();
-//            //关闭sso授权
-//            oks.disableSSOWhenAuthorize();
-//            // title标题，微信、QQ和QQ空间等平台使用
-//            oks.setTitle(payWayModel.shareTitle);
-//            // text是分享文本，所有平台都需要这个字段
-////            oks.setText(payWayModel.shareContent);
-//            oks.setText(payWayModel.shareContent+payWayModel.otherPayUrl);
-//            // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
-////            oks.setImagePath(getResourcesUri(R.drawable.logo));//确保SDcard下面存在此张图片
-//            oks.setImageUrl("https://mmbiz.qlogo.cn/mmbiz_png/pwqpMKT1RTxAziaQUsnFUicyl8G1xGxFpbKJ9TOBhxEut1FJbW6CxcvE1axUFQEY43zEKKQ0BoLxtlFyFiaA9XItw/0?wx_fmt=png");
-//            // url在微信、微博，Facebook等平台中使用
-//            oks.setUrl(payWayModel.otherPayUrl);
-//            // 启动分享GUI
-//            oks.show(this);
-//
-//        }
+        if (payWayModel != null) {
+            OnekeyShare oks = new OnekeyShare();
+            //关闭sso授权
+            oks.disableSSOWhenAuthorize();
+            // title标题，微信、QQ和QQ空间等平台使用
+            oks.setTitle(payWayModel.shareTitle);
+            // text是分享文本，所有平台都需要这个字段
+//            oks.setText(payWayModel.shareContent);
+            oks.setText(payWayModel.shareContent+payWayModel.otherPayUrl);
+            // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+//            oks.setImagePath(getResourcesUri(R.drawable.logo));//确保SDcard下面存在此张图片
+            oks.setImageUrl("https://mmbiz.qlogo.cn/mmbiz_png/pwqpMKT1RTxAziaQUsnFUicyl8G1xGxFpbKJ9TOBhxEut1FJbW6CxcvE1axUFQEY43zEKKQ0BoLxtlFyFiaA9XItw/0?wx_fmt=png");
+            // url在微信、微博，Facebook等平台中使用
+            oks.setUrl(payWayModel.otherPayUrl);
+            // 启动分享GUI
+            oks.show(this);
+
+        }
 
 ////
 //        Intent intent=new Intent(Intent.ACTION_SEND);
@@ -299,13 +299,19 @@ public class PayActivity extends BaseActivity implements IPayView {
 
     @Override
     public void showPay(PayOrderModel data, String alertmsg) {
-        if (curPay == PAY_WECHAT) {//微信支付
-            payWechat(data);
-        } else if (curPay == PAY_ALIPAY) {//支付宝
-            payAliPay(data.pay_code);
-        } else {//对公转账
+        if (data!=null)
+        {
+            if (curPay == PAY_WECHAT) {//微信支付
+                payWechat(data);
+            } else if (curPay == PAY_ALIPAY) {//支付宝
+                payAliPay(data.pay_code);
+            } else {//对公转账
+                payBank();
+            }
+        }
+        else
+        {
             getShortToastByString(alertmsg);
-            payBank();
         }
     }
 

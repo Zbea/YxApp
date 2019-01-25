@@ -12,29 +12,29 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int jpush_ic_richpush_actionbar_back = 0x7f0800fa;
-        public static final int jpush_ic_richpush_actionbar_divider = 0x7f0800fb;
-        public static final int jpush_richpush_btn_selector = 0x7f0800fc;
-        public static final int jpush_richpush_progressbar = 0x7f0800fd;
+        public static final int jpush_ic_richpush_actionbar_back = 0x7f080103;
+        public static final int jpush_ic_richpush_actionbar_divider = 0x7f080104;
+        public static final int jpush_richpush_btn_selector = 0x7f080105;
+        public static final int jpush_richpush_progressbar = 0x7f080106;
     }
     public static final class id {
         private id() {}
 
         public static final int actionbarLayoutId = 0x7f090025;
         public static final int fullWebView = 0x7f0900ae;
-        public static final int imgRichpushBtnBack = 0x7f0900c2;
-        public static final int imgView = 0x7f0900c3;
-        public static final int popLayoutId = 0x7f0901f3;
-        public static final int pushPrograssBar = 0x7f0901fb;
-        public static final int rlRichpushTitleBar = 0x7f090212;
-        public static final int tvRichpushTitle = 0x7f0902a4;
-        public static final int wvPopwin = 0x7f0903bb;
+        public static final int imgRichpushBtnBack = 0x7f0900c3;
+        public static final int imgView = 0x7f0900c4;
+        public static final int popLayoutId = 0x7f0901f9;
+        public static final int pushPrograssBar = 0x7f090201;
+        public static final int rlRichpushTitleBar = 0x7f090218;
+        public static final int tvRichpushTitle = 0x7f0902b4;
+        public static final int wvPopwin = 0x7f0903cc;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int jpush_popwin_layout = 0x7f0b00aa;
-        public static final int jpush_webview_layout = 0x7f0b00ab;
+        public static final int jpush_popwin_layout = 0x7f0b00af;
+        public static final int jpush_webview_layout = 0x7f0b00b0;
     }
     public static final class style {
         private style() {}

@@ -19,17 +19,13 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.R;
-import com.yx.Pharmacy.adapter.ProductCategoryGridAdapter;
 import com.yx.Pharmacy.adapter.ProductItemAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBarUtil;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.constant.Constants;
-import com.yx.Pharmacy.dialog.AddCartDialog;
-import com.yx.Pharmacy.dialog.AddCartIDialog;
 import com.yx.Pharmacy.dialog.AddCartItemDialog;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.manage.CartCountManage;
-import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.net.NetUtil;
@@ -38,7 +34,6 @@ import com.yx.Pharmacy.util.DensityUtils;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.view.IProductItemView;
-import com.yx.Pharmacy.widget.AmountView;
 import com.yx.Pharmacy.widget.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -104,7 +99,6 @@ public class ProductItemActivity extends BaseActivity implements ProductItemAdap
     @BindView(R.id.ll_error)
     LinearLayout ll_error;
     private SelectStoreUtil mSelectStoreUtil;
-    private AddCartItemDialog addCartItemDialog;
     private int cartCount=1;
     private DrugModel itemModel;
 
@@ -225,70 +219,30 @@ public class ProductItemActivity extends BaseActivity implements ProductItemAdap
                 {
                     getShortToastByString("商品已达限购");
                 }
-//                        mPresenter.addCartProduct(this, mItemId);
             }
         }
-//        if (item.getType()==1||item.getType()==2)
-//        {
-//            showComfirmDialog(item,imgview);
-//        }
-//        else
-//        {
-//            mPresenter.addCartProduct(this,item.getItemid()+"",item,imgview);
-//        }
+
 
     }
 
-
     private void showAddDialog(int type,DrugModel item) {
         if (item == null) return;
-
-//        addCartItemDialog = new AddCartItemDialog(this, item, type);
-//        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
-//            @Override
-//            public void ok() {
-//                if (cartCount <= 0) {
-//                    getShortToastByString("起购量必须大于0");
-//                    return;
-//                }
-//                if (item != null && (item.getType()==1||item.getType()==2) && type == 1) { //特价商品特殊处理
-//                    mPresenter.miaoshaBuy(ProductItemActivity.this, String.valueOf(item.getItemid()), cartCount);
-//                } else {
-//                    mPresenter.addCartProduct(ProductItemActivity.this,item, cartCount);
-//                }
-//            }
-//
-//            @Override
-//            public void onAumountChangeListener(View view, int amount, boolean isEdit) {
-//                L.i("amount:" + amount);
-//                cartCount = amount;
-//                double i = (double) amount / Double.parseDouble(item.addmum);
-//                if (i % 1 != 0) {
-//                    NetUtil.getShortToastByString("输入商品的数量必须是起购量的倍数");
-//                    cartCount = (int) (DensityUtils.parseInt(item.addmum) * (int) i);
-//                    ((AmountView) view).setAmount(cartCount);
-//                }
-//            }
-//        });
-//        addCartItemDialog.builder().show();
-
-
-        AddCartIDialog addCartIDialog=new AddCartIDialog(this,item,type);
-        addCartIDialog.setDialogClickListener(new AddCartIDialog.DialogClickListener() {
+        AddCartItemDialog addCartItemDialog =new AddCartItemDialog(mContext,item,type);
+        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
             @Override
             public void ok(int count) {
                 L.i("count:"+count);
                 cartCount=count;
                 setRefreshMax();
+                mPresenter.getShopcarNum(ProductItemActivity.this);
             }
         });
-        addCartIDialog.builder().show();
+        addCartItemDialog.builder().show();
 
     }
 
-
     private void showComfirmDialog() {
-        ConfirmDialog confirmDialog = new ConfirmDialog(this);
+        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
         confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(""+itemModel.getType(), "1")?"秒杀购买":"特价购买").builder().show();
         ;
         confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
@@ -312,26 +266,6 @@ public class ProductItemActivity extends BaseActivity implements ProductItemAdap
                 } else {
                     getShortToastByString("购买已达上限");
                 }
-            }
-        });
-    }
-
-
-    //询问是否覆盖
-    private void showComfirmDialog2() {
-        ConfirmDialog confirmDialog = new ConfirmDialog(this);
-        confirmDialog.setTitle("温馨提示").setContent("购物车中已有秒杀商品，是否覆盖").setcancle("否").setOk("是").builder().show();
-        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
-            @Override
-            public void ok() {//覆盖
-                confirmDialog.cancle();
-                mPresenter.miaoshaBuy(ProductItemActivity.this, itemModel.getItemid()+"", "1", String.valueOf(cartCount));
-            }
-
-            @Override
-            public void cancle() {//不覆盖
-                confirmDialog.cancle();
-//                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"0",cartCount);
             }
         });
     }
@@ -379,26 +313,8 @@ public class ProductItemActivity extends BaseActivity implements ProductItemAdap
         page++;
     }
 
-    @Override
-    public void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview) {
-//        startAddAnim(item,imgview,data.count);
-        CartCountManage.newInstance().refresh(DensityUtils.parseInt(data.count));
-        tv_num.setVisibility(Integer.valueOf(data.count)==0?View.GONE:View.VISIBLE);
-        tv_num.setText(Integer.valueOf(data.count)>99?"99+":data.count+"");
-        setRefreshMax();
-    }
 
-    @Override
-    public void ifFuGai() {
-        showComfirmDialog2();
-    }
 
-    @Override
-    public void compelete() {
-        getShortToastByString("添加成功");
-        mPresenter.getShopcarNum(this);
-        setRefreshMax();
-    }
 
     /**
      * 添加成功后刷新商品数量变化

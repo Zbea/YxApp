@@ -353,7 +353,7 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                     String goodsid = jsonObject.optString("goodsid");
                     i = new Intent(MainActivity.this, ProductDetailActivity.class);
                     i.putExtra(Constants.KEY_ITEM_ID, goodsid);
-                } else if (TextUtils.equals(pushtype, "3")) {
+                } else if (TextUtils.equals(pushtype, "9")) {
                     //app跳转门店认证页
                     String storeid = jsonObject.optString("storeid");
                     i = new Intent(MainActivity.this, MyShopAddActivity.class);
@@ -372,22 +372,17 @@ public class MainActivity extends BaseActivity implements IMainView, ReceiverDia
                     i.putExtra("activityname", activityname);
                     i.putExtra("levelid", levelid);
                     i.putExtra("type", type);
-                } else if (TextUtils.equals(pushtype, "6")) {
+                } else if (TextUtils.equals(pushtype, "7")) {
                     //app跳转订单详情
                     String orderid = jsonObject.optString("orderid");
                     i = new Intent(MainActivity.this, OrderDetailActivity.class);
                     i.putExtra("orderid", orderid);
-                } else if (TextUtils.equals(pushtype, "7")) {
+                } else if (TextUtils.equals(pushtype, "8")) {
                     //app跳转售后订单详情
                     String orderid = jsonObject.optString("orderid");
                     i = new Intent(MainActivity.this, AfterOrderDetailActivity.class);
                     i.putExtra("orderbackid", orderid);
-                } else if (TextUtils.equals(pushtype, "8")) {
-                    //app跳转商品详情
-                    String goodsid = jsonObject.optString("goodsid");
-                    i = new Intent(MainActivity.this, ProductDetailActivity.class);
-                    i.putExtra(Constants.KEY_ITEM_ID, goodsid);
-                } else {
+                }  else {
                     comDialog.cancle();
                     return;
                 }

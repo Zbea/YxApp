@@ -207,7 +207,6 @@ android {
             storePassword 'yuanxin'
         }
         release {
-            storeFile file("jshare.jks") //签名文件路径
             keyAlias 'yuanxin'
             keyPassword 'yuanxin'
             storeFile file('yuanxin.jks')
@@ -222,7 +221,7 @@ android {
         applicationId "com.yx.Pharmacy"
         minSdkVersion 18
         targetSdkVersion 26
-        versionCode 20181228
+        versionCode 20190101
         versionName "1.0.5"
 
         if (cdvMinSdkVersion != null) {

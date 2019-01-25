@@ -18,11 +18,11 @@ import java.lang.Override;
 public class MyCouponActivity_ViewBinding implements Unbinder {
   private MyCouponActivity target;
 
-  private View view2131296482;
+  private View view2131296483;
 
-  private View view2131296791;
+  private View view2131296798;
 
-  private View view2131296813;
+  private View view2131296819;
 
   @UiThread
   public MyCouponActivity_ViewBinding(MyCouponActivity target) {
@@ -40,7 +40,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
     target.topic_viewpager_title = Utils.findRequiredViewAsType(source, R.id.topic_viewpager_title, "field 'topic_viewpager_title'", PagerSlidingTabStrip.class);
     view = Utils.findRequiredView(source, R.id.iv_goto, "field 'ivGoto' and method 'click'");
     target.ivGoto = Utils.castView(view, R.id.iv_goto, "field 'ivGoto'", ImageView.class);
-    view2131296482 = view;
+    view2131296483 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296791 = view;
+    view2131296798 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_more, "method 'click'");
-    view2131296813 = view;
+    view2131296819 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,11 +78,11 @@ public class MyCouponActivity_ViewBinding implements Unbinder {
     target.topic_viewpager_title = null;
     target.ivGoto = null;
 
-    view2131296482.setOnClickListener(null);
-    view2131296482 = null;
-    view2131296791.setOnClickListener(null);
-    view2131296791 = null;
-    view2131296813.setOnClickListener(null);
-    view2131296813 = null;
+    view2131296483.setOnClickListener(null);
+    view2131296483 = null;
+    view2131296798.setOnClickListener(null);
+    view2131296798 = null;
+    view2131296819.setOnClickListener(null);
+    view2131296819 = null;
   }
 }

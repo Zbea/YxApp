@@ -44,11 +44,11 @@ public class HomeNet {
                              public Response intercept(Chain chain) throws IOException
                              {
                                  Request request=chain.request();
-
                                  Request.Builder builder = chain.request().newBuilder();
-//                                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+
+                                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 //                                 builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
-//                                 builder.addHeader("version", "1.0.5");
+//                                 builder.addHeader("version", "1.0.6");
 //                                 builder.addHeader("platform","android");
 //                                 builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
 //                                 builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));
@@ -56,11 +56,13 @@ public class HomeNet {
 
 
                                  builder.addHeader("token", NetUtil.isStringNull(NetUtil.getToken().trim()));
-                                 builder.addHeader("version", "1.0.5");
+                                 builder.addHeader("version", "1.0.6");
                                  builder.addHeader("platform","android");
                                  builder.addHeader("storeid",NetUtil.isStringNull(NetUtil.getStoreid().trim()));
                                  builder.addHeader("itemid",NetUtil.isStringNull(NetUtil.getItemId().trim()));
                                  builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
+
+
 //                                 if (request.body()!=null)
 //                                 {
 //                                     if(request.body() instanceof FormBody){

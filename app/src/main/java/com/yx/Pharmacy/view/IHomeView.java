@@ -29,10 +29,4 @@ public interface IHomeView {
 
     void hideFlash();
 
-    void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview);
-
-    void ifFuGai();
-
-    void compelete();
-
 }

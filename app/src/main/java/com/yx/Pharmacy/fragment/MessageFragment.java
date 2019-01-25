@@ -18,6 +18,7 @@ import com.yx.Pharmacy.activity.MessageDetailActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.ProductItemActivity;
+import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.adapter.MessageAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBar;
 import com.yx.Pharmacy.base.BaseActivity;
@@ -353,7 +354,7 @@ public class MessageFragment
         }
 
         @Override
-        public void goZoneActivity(int type,int levelid) {
+        public void goZoneActivity(int type,String levelid) {
             ProductItemActivity.startActivity(mContext,2,""+levelid,"");
         }
 
@@ -377,6 +378,11 @@ public class MessageFragment
                 mAdapter.notifyDataSetChanged();
                 mPresenter.sendReadMessage((BaseActivity) mContext,itemid);
             }
+        }
+
+        @Override
+        public void search(String search) {
+            SearchActivity.startActivity(mContext,search);
         }
     };
 

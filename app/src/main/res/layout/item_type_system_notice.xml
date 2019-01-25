@@ -52,6 +52,15 @@
             android:background="@color/divider"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0_5"/>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_image_loading_cc"/>
+
         <TextView
             android:id="@+id/tv_system_notice_content"
             android:padding="@dimen/dp_15"

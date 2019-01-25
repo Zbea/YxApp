@@ -6,6 +6,7 @@ import android.text.TextUtils;
 
 import com.google.gson.JsonParseException;
 import com.yx.Pharmacy.base.BasisBean;
+import com.yx.Pharmacy.util.L;
 
 import org.json.JSONException;
 

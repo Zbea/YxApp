@@ -205,6 +205,7 @@ public class Constants {
     public static final int PAGESIZE = 20;
 //        public static final String WX_ID    = "wx2e654dca1ada96c7";
     public static final String WX_ID = "wx2fd55082c0d01ccf";
+
     public static final String QIYU_ID = "de70e4386f910414a1a14bfb65e24d8d";
     public static int type_used = 1;
     public static int type_useful = 2;

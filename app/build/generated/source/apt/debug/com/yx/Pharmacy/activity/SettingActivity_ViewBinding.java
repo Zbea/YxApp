@@ -15,17 +15,17 @@ import java.lang.Override;
 public class SettingActivity_ViewBinding implements Unbinder {
   private SettingActivity target;
 
-  private View view2131296795;
+  private View view2131296798;
 
-  private View view2131296800;
+  private View view2131296803;
 
-  private View view2131297047;
+  private View view2131297050;
 
-  private View view2131296835;
+  private View view2131296837;
 
-  private View view2131296808;
+  private View view2131296810;
 
-  private View view2131296790;
+  private View view2131296793;
 
   @UiThread
   public SettingActivity_ViewBinding(SettingActivity target) {
@@ -41,7 +41,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
     target.tv_more = Utils.findRequiredViewAsType(source, R.id.tv_more, "field 'tv_more'", TextView.class);
     target.tv_cache = Utils.findRequiredViewAsType(source, R.id.tv_cache, "field 'tv_cache'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296795 = view;
+    view2131296798 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -49,7 +49,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_clean_cache, "method 'click'");
-    view2131296800 = view;
+    view2131296803 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_login_out, "method 'click'");
-    view2131297047 = view;
+    view2131297050 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -65,7 +65,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_update, "method 'click'");
-    view2131296835 = view;
+    view2131296837 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -73,7 +73,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_evaluation, "method 'click'");
-    view2131296808 = view;
+    view2131296810 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,7 +81,7 @@ public class SettingActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_about, "method 'click'");
-    view2131296790 = view;
+    view2131296793 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -101,17 +101,17 @@ public class SettingActivity_ViewBinding implements Unbinder {
     target.tv_more = null;
     target.tv_cache = null;
 
-    view2131296795.setOnClickListener(null);
-    view2131296795 = null;
-    view2131296800.setOnClickListener(null);
-    view2131296800 = null;
-    view2131297047.setOnClickListener(null);
-    view2131297047 = null;
-    view2131296835.setOnClickListener(null);
-    view2131296835 = null;
-    view2131296808.setOnClickListener(null);
-    view2131296808 = null;
-    view2131296790.setOnClickListener(null);
-    view2131296790 = null;
+    view2131296798.setOnClickListener(null);
+    view2131296798 = null;
+    view2131296803.setOnClickListener(null);
+    view2131296803 = null;
+    view2131297050.setOnClickListener(null);
+    view2131297050 = null;
+    view2131296837.setOnClickListener(null);
+    view2131296837 = null;
+    view2131296810.setOnClickListener(null);
+    view2131296810 = null;
+    view2131296793.setOnClickListener(null);
+    view2131296793 = null;
   }
 }

@@ -51,6 +51,7 @@ public class OrderModel implements Serializable {
     public List<Goods> goodsList;
     public List<Goods> gift;
     public List<CouponModel> couponList;
+    public  String[]  payUrlNew;
     //详情
     public int itemid;
     public String discount;

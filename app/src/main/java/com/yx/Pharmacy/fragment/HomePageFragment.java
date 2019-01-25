@@ -1,8 +1,6 @@
 package com.yx.Pharmacy.fragment;
 
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
@@ -12,32 +10,24 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.style.ForegroundColorSpan;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.CaptureActivity;
 import com.yx.Pharmacy.activity.CommendMsActivity;
-import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.LoginActivity;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
 import com.yx.Pharmacy.adapter.BannerViewHolder;
-import com.yx.Pharmacy.adapter.GridDividerItemDecoration;
 import com.yx.Pharmacy.adapter.HomeAdvanceAdapter;
 import com.yx.Pharmacy.adapter.HomeProductAdapter;
-import com.yx.Pharmacy.adapter.HomeProductBottomAdapter;
 import com.yx.Pharmacy.adapter.HomeWebAdapter;
 import com.yx.Pharmacy.adapter.ProductItemAdapter;
 import com.yx.Pharmacy.barlibrary.ImmersionBar;
@@ -46,20 +36,15 @@ import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.dialog.AddCartItemDialog;
-import com.yx.Pharmacy.dialog.ChooseStoreDialog;
 import com.yx.Pharmacy.dialog.ChooseSupplierDialog;
 import com.yx.Pharmacy.dialog.ConfirmDialog;
 import com.yx.Pharmacy.dialog.HomeAdDialog;
-import com.yx.Pharmacy.manage.CartCountManage;
-import com.yx.Pharmacy.manage.LocalUrlManage;
 import com.yx.Pharmacy.manage.StoreManage;
-import com.yx.Pharmacy.model.AddShopCartModel;
 import com.yx.Pharmacy.model.DrugModel;
 import com.yx.Pharmacy.model.HomeAdvanceModel;
 import com.yx.Pharmacy.model.HomeDataModel;
 import com.yx.Pharmacy.model.MyShopModel;
 import com.yx.Pharmacy.model.SupplierListModel;
-import com.yx.Pharmacy.model.UrlBean;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.presenter.HomeDataPresenter;
 import com.yx.Pharmacy.util.ComMethodsUtil;
@@ -70,21 +55,16 @@ import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.SelectStoreUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IHomeView;
-import com.yx.Pharmacy.widget.AmountView;
 import com.yx.Pharmacy.widget.MarqueeView;
 import com.yx.Pharmacy.widget.SpacesItemDecoration;
 import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by KID on 2018/7/14.
@@ -153,10 +133,11 @@ public class HomePageFragment
     private List<HomeDataModel> homeDataModels;
     private HomeAdvanceModel homeAdvanceModel;
     private HomeAdvanceModel messageModel;
-    private AddCartItemDialog addCartItemDialog;
     private int cartCount=1;
     private DrugModel itemModel;
     private int type;
+
+    private long lastClickTime = 0;
 
     private Handler mHandler=new Handler()
     {
@@ -433,10 +414,9 @@ public class HomePageFragment
                         {
                             getShortToastByString("商品已达限购");
                         }
-//                        mPresenter.addCartProduct(this, mItemId);
                     }
-                }
 
+                }
 
             }
 
@@ -482,87 +462,7 @@ public class HomePageFragment
     }
 
 
-    private void showAddDialog(int type,DrugModel item) {
-        if (item == null) return;
 
-        addCartItemDialog = new AddCartItemDialog(mContext, item, type);
-        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
-            @Override
-            public void ok() {
-                if (cartCount <= 0) {
-                    getShortToastByString("起购量必须大于0");
-                    return;
-                }
-                if (item != null && (item.getType()==1||item.getType()==2) && type == 1) { //特价商品特殊处理
-                    mPresenter.miaoshaBuy((BaseActivity) mContext, String.valueOf(item.getItemid()), cartCount);
-                } else {
-                    mPresenter.addCartProduct((BaseActivity) mContext,item, cartCount);
-                }
-            }
-
-            @Override
-            public void onAumountChangeListener(View view, int amount, boolean isEdit) {
-                L.i("amount:" + amount);
-                cartCount = amount;
-                double i = (double) amount / Double.parseDouble(item.addmum);
-                if (i % 1 != 0) {
-                    NetUtil.getShortToastByString("输入商品的数量必须是起购量的倍数");
-                    cartCount = (int) (DensityUtils.parseInt(item.addmum) * (int) i);
-                    ((AmountView) view).setAmount(cartCount);
-                }
-            }
-        });
-        addCartItemDialog.builder().show();
-    }
-
-
-    private void showComfirmDialog() {
-        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
-        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(""+itemModel.getType(), "1")?"秒杀购买":"特价购买").builder().show();
-        ;
-        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
-            @Override
-            public void ok() {//第一次特价购买，不需要传是否覆盖
-                confirmDialog.cancle();
-                if (!itemModel.flashLimit) {
-                    type=1;
-                    showAddDialog(1,itemModel);
-                } else {
-                    getShortToastByString("购买已达上限");
-                }
-            }
-
-            @Override
-            public void cancle() {//原价购买(加入购物车)
-                confirmDialog.cancle();
-                if (!itemModel.productLimit) {
-                    type=0;
-                    showAddDialog(0,itemModel);
-                } else {
-                    getShortToastByString("购买已达上限");
-                }
-            }
-        });
-    }
-
-    //询问是否覆盖
-    private void showComfirmDialog2() {
-        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
-        confirmDialog.setTitle("温馨提示").setContent("购物车中已有秒杀商品，是否覆盖").setcancle("否").setOk("是").builder().show();
-        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
-            @Override
-            public void ok() {//覆盖
-                confirmDialog.cancle();
-                mPresenter.miaoshaBuy((BaseActivity) mContext, itemModel.getItemid()+"", "1", String.valueOf(cartCount));
-            }
-
-            @Override
-            public void cancle() {//不覆盖
-                confirmDialog.cancle();
-//                mPresenter.miaoshaBuy(ProductDetailActivity.this,mResultBean.itemid,"0",cartCount);
-            }
-        });
-    }
 
 
     @Override
@@ -631,21 +531,50 @@ public class HomePageFragment
         }
     }
 
-    @Override
-    public void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview) {
-        setRefreshMax();
+    private void showAddDialog(int type,DrugModel item) {
+        if (item == null) return;
+        AddCartItemDialog addCartItemDialog =new AddCartItemDialog(mContext,item,type);
+        addCartItemDialog.setDialogClickListener(new AddCartItemDialog.DialogClickListener() {
+            @Override
+            public void ok(int count) {
+                L.i("count:"+count);
+                cartCount=count;
+                setRefreshMax();
+            }
+        });
+        addCartItemDialog.builder().show();
+
     }
 
-    @Override
-    public void ifFuGai() {
-        showComfirmDialog2();
+    private void showComfirmDialog() {
+        ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
+        confirmDialog.setTitle("温馨提示").setContent("当前商品为限时抢购商品").setcancle("原价购买").setOk(TextUtils.equals(""+itemModel.getType(), "1")?"秒杀购买":"特价购买").builder().show();
+        ;
+        confirmDialog.setDialogClickListener(new ConfirmDialog.DialogClickListener() {
+            @Override
+            public void ok() {//第一次特价购买，不需要传是否覆盖
+                confirmDialog.cancle();
+                if (!itemModel.flashLimit) {
+                    type=1;
+                    showAddDialog(1,itemModel);
+                } else {
+                    getShortToastByString("购买已达上限");
+                }
+            }
+
+            @Override
+            public void cancle() {//原价购买(加入购物车)
+                confirmDialog.cancle();
+                if (!itemModel.productLimit) {
+                    type=0;
+                    showAddDialog(0,itemModel);
+                } else {
+                    getShortToastByString("购买已达上限");
+                }
+            }
+        });
     }
 
-    @Override
-    public void compelete() {
-        getShortToastByString("添加成功");
-        setRefreshMax();
-    }
 
     /**
      * 添加成功后刷新商品数量变化
@@ -777,25 +706,29 @@ public class HomePageFragment
                 });
                 break;
             case R.id.tv_factory_address:
-                ChooseSupplierDialog supplierDialog=new ChooseSupplierDialog(mContext);
-                supplierDialog.setDialogClickListener(new ChooseSupplierDialog.DialogClickListener() {
-                    @Override
-                    public void select(SupplierListModel model) {
-                        L.i(model.company);
-                        tvFactoryAddress.setText(model.company);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,model.storeid);
-                        SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY,model.company);
-                        MyShopModel myShopModel=StoreManage.newInstance().getStore();
-                        if (myShopModel!=null)
-                        {
-                            myShopModel.storeid=model.storeid;
-                            myShopModel.company=model.company;
-                            StoreManage.newInstance().saveStore(myShopModel);
+                long now = System.currentTimeMillis();
+                if(now - lastClickTime >1000){
+                    lastClickTime = now;
+                    ChooseSupplierDialog supplierDialog=new ChooseSupplierDialog(mContext);
+                    supplierDialog.setDialogClickListener(new ChooseSupplierDialog.DialogClickListener() {
+                        @Override
+                        public void select(SupplierListModel model) {
+                            L.i(model.company);
+                            L.i("storeid:"+model.storeid);
+                            tvFactoryAddress.setText(model.company);
+                            SPUtil.putString(UiUtil.getContext(), Constants.KEY_STORE_ID,model.storeid);
+                            SPUtil.putString(UiUtil.getContext(), Constants.KEY_COMPANY,model.company);
+                            MyShopModel myShopModel=StoreManage.newInstance().getStore();
+                            if (myShopModel!=null)
+                            {
+                                myShopModel.storeid=model.storeid;
+                                myShopModel.company=model.company;
+                                StoreManage.newInstance().saveStore(myShopModel);
+                            }
+
                         }
-
-                    }
-                });
-
+                    });
+                }
                 break;
             case R.id.iv_top:
                 mNsvHome.fling(0);

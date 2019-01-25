@@ -1393,6 +1393,7 @@ drawable ic_video_play
 drawable icon_add_address
 drawable icon_add_look
 drawable icon_add_takephoto
+drawable icon_arrow_right_red
 drawable icon_arrow_right_white
 drawable icon_audio
 drawable icon_bankcard_logo
@@ -1415,6 +1416,10 @@ drawable icon_function_guid_main_servier
 drawable icon_function_guid_my_coupon
 drawable icon_function_guid_my_jifen
 drawable icon_function_guid_my_yue
+drawable icon_function_guid_order_dikou
+drawable icon_function_guid_order_liebiao
+drawable icon_function_guid_order_queren
+drawable icon_home_commend
 drawable icon_home_flash_buy
 drawable icon_home_ggxz
 drawable icon_home_hdxz
@@ -1427,6 +1432,9 @@ drawable icon_home_store_bg
 drawable icon_home_top
 drawable icon_image_loading
 drawable icon_image_loading_cc
+drawable icon_indicate_bottom
+drawable icon_indicate_top
+drawable icon_login_member_bg
 drawable icon_logo
 drawable icon_message_clean
 drawable icon_message_dhtz_ma
@@ -1626,6 +1634,7 @@ drawable ssdk_oks_classic_check_default
 drawable ssdk_oks_classic_cmcc
 drawable ssdk_oks_classic_dingding
 drawable ssdk_oks_classic_douban
+drawable ssdk_oks_classic_douyin
 drawable ssdk_oks_classic_dropbox
 drawable ssdk_oks_classic_email
 drawable ssdk_oks_classic_evernote
@@ -2173,13 +2182,13 @@ id iv_banner
 id iv_banner_bg
 id iv_bg
 id iv_biao_state
+id iv_bottom
 id iv_business_state
 id iv_cancel
 id iv_cart
 id iv_category
 id iv_close
 id iv_code_type
-id iv_collect
 id iv_coupon_icon
 id iv_dot
 id iv_file_icon
@@ -2216,9 +2225,11 @@ id iv_play
 id iv_presale
 id iv_price
 id iv_product
+id iv_product_commend
 id iv_product_thumb
 id iv_product_type
 id iv_qrcode
+id iv_select
 id iv_select_alipay
 id iv_select_another_pay
 id iv_select_public_pay
@@ -2291,6 +2302,7 @@ id ll_go_product_detail
 id ll_gsp
 id ll_have_need
 id ll_home_page
+id ll_indicate
 id ll_info
 id ll_invoice
 id ll_invoice_content
@@ -2328,7 +2340,6 @@ id ll_remember
 id ll_root
 id ll_sale_record
 id ll_search
-id ll_search_result
 id ll_select_coupon
 id ll_shop_type
 id ll_shopping_car
@@ -2336,6 +2347,7 @@ id ll_single_coupon
 id ll_store
 id ll_store_logout
 id ll_time_bg
+id ll_title
 id ll_tixian
 id ll_toolbar
 id ll_tuijian
@@ -2502,7 +2514,6 @@ id rl_bottom
 id rl_cancle
 id rl_category
 id rl_clean_cache
-id rl_click
 id rl_close
 id rl_code
 id rl_collect
@@ -2544,6 +2555,7 @@ id rl_wuliu_info
 id rl_youhui
 id rotate_scroll_wheel
 id rv
+id rv_advence
 id rv_commend_product
 id rv_coupon
 id rv_good
@@ -2677,7 +2689,6 @@ id tv_buy
 id tv_cache
 id tv_can_write_num
 id tv_cancel
-id tv_cancel_collect
 id tv_cancle
 id tv_cancle_order
 id tv_card_num
@@ -2748,6 +2759,7 @@ id tv_limit_count
 id tv_location
 id tv_login
 id tv_login_hint_type
+id tv_login_member
 id tv_login_out
 id tv_login_type
 id tv_long_chart
@@ -2841,6 +2853,7 @@ id tv_sort
 id tv_specification
 id tv_state
 id tv_storename
+id tv_supplier
 id tv_system_notice_content
 id tv_system_notice_name
 id tv_system_notice_num
@@ -3195,6 +3208,7 @@ layout activity_picture_play_audio
 layout activity_product_cart
 layout activity_product_coupon
 layout activity_product_detail
+layout activity_product_item
 layout activity_qiye_zizhi
 layout activity_register
 layout activity_sale_record
@@ -3268,6 +3282,7 @@ layout item_drug_tag
 layout item_gifts_list
 layout item_goods_list
 layout item_goods_list_corder
+layout item_home_advance
 layout item_home_product
 layout item_home_product_detail
 layout item_home_product_minus
@@ -3279,6 +3294,7 @@ layout item_my_collect
 layout item_my_integral
 layout item_my_order
 layout item_my_store
+layout item_product
 layout item_product_detail_commend
 layout item_qianggou
 layout item_qiye_zizhi
@@ -3289,6 +3305,7 @@ layout item_shop_cart
 layout item_shop_cart_product
 layout item_sort_list
 layout item_store
+layout item_supplier_list
 layout item_title
 layout item_type_arrive_notice
 layout item_type_system_notice
@@ -3593,6 +3610,7 @@ string ssdk_cmcc_ver_code
 string ssdk_dingding
 string ssdk_dont_keep_activitys_client
 string ssdk_douban
+string ssdk_douyin
 string ssdk_dropbox
 string ssdk_email
 string ssdk_evernote

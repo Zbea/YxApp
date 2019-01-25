@@ -19,11 +19,8 @@ import java.util.List;
 public interface IProductItemView {
     void getProductListResult(List<DrugModel> data);
     void addProductListResult(List<DrugModel> data);
-    void showAddResult(AddShopCartModel data, DrugModel item, ImageView imgview);
     void getShopCarNum(String carnum);
     void noProductListData();
     void onErrorPage();
-    void ifFuGai();
 
-    void compelete();
 }

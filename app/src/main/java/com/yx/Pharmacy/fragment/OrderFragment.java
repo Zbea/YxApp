@@ -36,7 +36,9 @@ import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.view.IMyOrderListView;
 import com.yx.Pharmacy.widget.SpacesItemDecoration;
 
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -207,8 +209,13 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     }
     @Override
     public void upDateResult(String url) {
-        orderAdapter.getData().get(clickPosition).pay_url=url;
-        orderAdapter.notifyItemChanged(clickPosition);
+//        String[] strings=orderAdapter.getData().get(clickPosition).payUrlNew;
+//        int size=strings.length+1;
+//        List<String> imgs=Arrays.asList(strings);
+//        imgs.add(url);
+//        String[] arrs = (String[])imgs.toArray(new String[size]);
+//        orderAdapter.getData().get(clickPosition).payUrlNew=arrs;
+//        orderAdapter.notifyItemChanged(clickPosition);
     }
 
 
@@ -226,11 +233,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
         @Override
         public void checkTansfer(String orderid,int position) {//转账截图
             clickPosition=position;
-                    if(TextUtils.isEmpty(orderAdapter.getData().get(position).pay_url))
-                    {
-                        isUpload=false;
-                    }
-                    else
+                    if(orderAdapter.getData().get(position).payUrlNew.length<5&orderAdapter.getData().get(position).payUrlNew.length>0)
                     {
                         isUpload=true;
                     }
@@ -357,7 +360,11 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
             public void click(int position) {
                 if (position==0)
                 {
-                    showBigPhotoDialog(orderAdapter.getData().get(position).pay_url);
+                    List<String> ims=new ArrayList<>();
+                    for (int i = 0; i <orderAdapter.getData().get(position).payUrlNew.length ; i++) {
+                        ims.add(orderAdapter.getData().get(position).payUrlNew[i]);
+                    }
+                    showBigPhotoDialog(ims);
                 }
                 else
                 {
@@ -387,18 +394,13 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
     /**
      * 查看图片弹窗
      */
-    private void showBigPhotoDialog(String fileName) {
-        ArrayList<String> files = new ArrayList<>();
-        if(TextUtils.isEmpty(fileName)){
-            return;
-        }else {
-            files.add(fileName);
-        }
+    private void showBigPhotoDialog(List<String> fileName) {
+
         if(mPhotoDialog==null){
             mPhotoDialog = new Dialog(mContext, R.style.Dialog_Fullscreen);
             View view  = getLayoutInflater().inflate(R.layout.activity_big_pic, null);
             mViewpager = view.findViewById(R.id.viewpager);
-            mBigPicAdapter = new BigPicAdapter(files);
+            mBigPicAdapter = new BigPicAdapter((ArrayList<String>) fileName);
 
             mBigPicAdapter.setOnClick(new BigPicAdapter.OnClickFinishListener() {
                 @Override
@@ -411,7 +413,7 @@ public class OrderFragment extends BaseFragment  implements IMyOrderListView, Sw
             mPhotoDialog.setContentView(view);
             mPhotoDialog.show();
         }else {
-            mBigPicAdapter.setData(files);
+            mBigPicAdapter.setData(fileName);
             mPhotoDialog.show();
         }
     }

@@ -35,6 +35,7 @@ public class DrugModel {
     public int activityCount ;
     public int salesCount;
     public int sale;
+    public String validtime;
 
     public String          qprice;
     public String          elite;
@@ -54,6 +55,9 @@ public class DrugModel {
     public String minimum;
     public boolean productLimit;
     public boolean flashLimit ;
+
+
+
 
     public String getLevelnote() {
         return levelnote;

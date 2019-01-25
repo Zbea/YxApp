@@ -34,7 +34,7 @@ public class MessageData {
 //            "activityname": "何福林",
 //            "introduce": ""
 //    }
-        public String itemid;
+        public int itemid;
         public String content;
         public String addtime;
         public int isread;
@@ -46,10 +46,10 @@ public class MessageData {
         public String activityname;
         public String introduce;
         public String img_url;
-        public int count;
-        public int status;
-        public String order_time;
-        public String backtime;
+        public String count;
+        public String status;
+//        public String order_time;
+//        public String backtime;
         public String goodsid;
 
         public String thumb;
@@ -60,7 +60,7 @@ public class MessageData {
 
         public String levelid;
         public String type;
-
+        public int is_imgtext;
 
     }
 

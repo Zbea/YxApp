@@ -2,7 +2,7 @@ package com.yx.Pharmacy.base;
 
 import android.support.multidex.MultiDexApplication;
 
-//import com.mob.MobSDK;
+import com.mob.MobSDK;
 import com.luck.picture.lib.tools.Constant;
 import com.mob.MobSDK;
 import com.qiyukf.unicorn.api.StatusBarNotificationConfig;

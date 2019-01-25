@@ -57,13 +57,13 @@ public class ProductItemAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolde
         TextView tv_oldprice=helper.getView(R.id.tv_oldprice);
         TextView  time    = helper.getView(R.id.tv_validity_time);
         TextView  tv_cancel    = helper.getView(R.id.tv_has_sale);
-        if (TextUtils.isEmpty(item.validend))
+        if (TextUtils.isEmpty(item.validtime))
         {
             time.setVisibility(View.GONE);
         }
         else
         {
-            time.setText("有效期：" +DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validend)*1000) );
+            time.setText("有效期：" +DateUtil.formatyyyyMMdd(DensityUtils.parseLong(item.validtime)*1000) );
         }
         tv_oldprice.setText("折后约"+item.disprice);
 
