@@ -16,9 +16,9 @@ public class CommonDialogUtils {
      * 显示ProgressDialog
      */
     public void showProgress(Context context, String msg) {
-       /* if (context == null || context.isFinishing()) {
+       if (context == null ) {
             return;
-        }*/
+        }
         if(mProgressDialog==null){
             mProgressDialog= new CustomProgressDialog.Builder(context)
                     .setMessage(msg)

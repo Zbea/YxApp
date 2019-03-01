@@ -17,17 +17,17 @@ import java.lang.Override;
 public class MyWalletActivity_ViewBinding implements Unbinder {
   private MyWalletActivity target;
 
-  private View view2131297131;
+  private View view2131297135;
 
-  private View view2131296798;
+  private View view2131296801;
 
-  private View view2131296575;
+  private View view2131296577;
 
-  private View view2131296568;
+  private View view2131296570;
 
-  private View view2131296638;
+  private View view2131296641;
 
-  private View view2131297122;
+  private View view2131297126;
 
   @UiThread
   public MyWalletActivity_ViewBinding(MyWalletActivity target) {
@@ -44,7 +44,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
     target.tv_my_money = Utils.findRequiredViewAsType(source, R.id.tv_my_money, "field 'tv_my_money'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_select_ximing, "field 'tv_select_ximing' and method 'click'");
     target.tv_select_ximing = Utils.castView(view, R.id.tv_select_ximing, "field 'tv_select_ximing'", TextView.class);
-    view2131297131 = view;
+    view2131297135 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_charge_money, "method 'click'");
-    view2131296575 = view;
+    view2131296577 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,7 +71,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_bank_card, "method 'click'");
-    view2131296568 = view;
+    view2131296570 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,7 +79,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.ll_tixian, "method 'click'");
-    view2131296638 = view;
+    view2131296641 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -87,7 +87,7 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297122 = view;
+    view2131297126 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -111,17 +111,17 @@ public class MyWalletActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
-    view2131297131.setOnClickListener(null);
-    view2131297131 = null;
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
-    view2131296575.setOnClickListener(null);
-    view2131296575 = null;
-    view2131296568.setOnClickListener(null);
-    view2131296568 = null;
-    view2131296638.setOnClickListener(null);
-    view2131296638 = null;
-    view2131297122.setOnClickListener(null);
-    view2131297122 = null;
+    view2131297135.setOnClickListener(null);
+    view2131297135 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
+    view2131296577.setOnClickListener(null);
+    view2131296577 = null;
+    view2131296570.setOnClickListener(null);
+    view2131296570 = null;
+    view2131296641.setOnClickListener(null);
+    view2131296641 = null;
+    view2131297126.setOnClickListener(null);
+    view2131297126 = null;
   }
 }

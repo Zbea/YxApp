@@ -16,6 +16,29 @@ public class CreditData {
         public String addtime;
         public String note;
         public int type;
+        public int jumpType;
+        public String orderid;
+        public String couponInfo;
+        public List<CouponListBean> couponList;
+    }
+
+    public static class CouponListBean {
+
+
+        public String couponcontent;
+        public String    couponid;
+        public String    couponprice;
+        public String couponlimit;
+        public String    couponmodel;
+        public String    coupontype;
+        public String    couponstate;
+        public String couponscene;
+        public String couponovertime;
+        public String    discountprice;
+        public String    coupondiscount;
+        public String    credit;
+        public boolean     isSelectCoupon;
+        public boolean     couponEnable;
     }
 
 }

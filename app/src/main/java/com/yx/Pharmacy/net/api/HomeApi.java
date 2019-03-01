@@ -1,5 +1,6 @@
 package com.yx.Pharmacy.net.api;
 
+import com.google.gson.JsonArray;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.AddShopCartModel;
@@ -35,11 +36,15 @@ import com.yx.Pharmacy.model.WalletData;
 import com.yx.Pharmacy.model.WuliuData;
 import com.yx.Pharmacy.model.YaoType1;
 
+import org.json.JSONArray;
+
 import java.util.HashMap;
 import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
@@ -250,12 +255,17 @@ public interface HomeApi {
     @FormUrlEncoded
     @POST(Constants.SHOP_CART_DELETE)
     Observable<BasisBean<String>> deleteShopcart(@FieldMap HashMap<String, String> map);
+
+    @FormUrlEncoded
+    @POST(Constants.SHOP_CART_DELETE_DIS)
+    Observable<BasisBean<String>> deleteDisShopcart(@FieldMap HashMap<String, String> map);
+
     /**
      *  添加商品到购物车
      */
     @FormUrlEncoded
     @POST(Constants.SHOP_CART_ADD)
-    Observable<BasisBean<AddShopCartModel>> addShopcart(@FieldMap HashMap<String, String> map);
+    Observable<BasisBean<AddShopCartModel>> addShopcart(@FieldMap HashMap<String, String> urlMap);
     /**
      *  商品到货提醒通知申请
      */
@@ -401,6 +411,12 @@ public interface HomeApi {
     @FormUrlEncoded
     @POST(Constants.MESSAGE_LIST)
     Observable<BasisBean<MessageData>> getMessageData(@FieldMap HashMap<String, String> map);
+    /**
+     *  删除消息列表
+     */
+    @FormUrlEncoded
+    @POST(Constants.MESSAGE_DELETE)
+    Observable<BasisBean<String>> delMessage(@FieldMap HashMap<String, String> map);
     /**
      *  获取消息列表
      */

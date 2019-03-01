@@ -215,11 +215,17 @@ public class OrderDetailActivity extends BaseActivity implements IOrderDetailVie
             model = data;
             //1未支付，2已支付，3拣货中，，7.已发货，8已取消，9订单完成
             if (model.status == 1) {
+
                 tv_order_state.setText("待付款");
                 tv_detail_todo.setText("去支付");
                 tv_order_state_desc.setText("下单后" + model.limittime + "内未完成支付订单自动关闭");
                 rl_pay_time.setVisibility(View.GONE);
                 rl_paytype.setVisibility(View.GONE);
+                if(model.payment_type.equals("对公转账"))
+                {
+                    tv_order_state.setText("待审核");
+//                    tv_detail_todo.setVisibility(View.GONE);
+                }
             } else if (model.status == 2) {
                 tv_order_state.setText("待发货");
                 tv_detail_todo.setText("提醒发货");

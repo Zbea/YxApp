@@ -21,4 +21,5 @@ public interface IMessageView {
     void noMessageData();
 
     void onErrorPage();
+    void onDelete();
 }

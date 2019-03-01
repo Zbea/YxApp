@@ -108,6 +108,7 @@ public class OrderModel implements Serializable {
         public String starttime;
         public String endtime;
         public boolean isSelect;//应用内自扩展参数，用于申请售后订单的多选
+        public int is_price;
 
 
 

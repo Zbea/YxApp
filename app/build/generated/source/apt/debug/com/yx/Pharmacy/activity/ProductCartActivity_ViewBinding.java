@@ -22,17 +22,17 @@ import java.lang.Override;
 public class ProductCartActivity_ViewBinding implements Unbinder {
   private ProductCartActivity target;
 
-  private View view2131297058;
+  private View view2131297062;
 
-  private View view2131296577;
+  private View view2131296579;
 
-  private View view2131296975;
+  private View view2131296979;
 
-  private View view2131296534;
+  private View view2131296536;
 
   private View view2131296472;
 
-  private View view2131296798;
+  private View view2131296801;
 
   @UiThread
   public ProductCartActivity_ViewBinding(ProductCartActivity target) {
@@ -49,7 +49,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mTvNotice = Utils.findRequiredViewAsType(source, R.id.tv_notice, "field 'mTvNotice'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'mTvMore' and method 'onViewClicked'");
     target.mTvMore = Utils.castView(view, R.id.tv_more, "field 'mTvMore'", TextView.class);
-    view2131297058 = view;
+    view2131297062 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.ll_checkall, "field 'mLlCheckall' and method 'onViewClicked'");
     target.mLlCheckall = Utils.castView(view, R.id.ll_checkall, "field 'mLlCheckall'", LinearLayout.class);
-    view2131296577 = view;
+    view2131296579 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -68,7 +68,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.mCbCheckall = Utils.findRequiredViewAsType(source, R.id.cb_checkall, "field 'mCbCheckall'", CheckBox.class);
     view = Utils.findRequiredView(source, R.id.tv_buy, "field 'mTvBuy' and method 'onViewClicked'");
     target.mTvBuy = Utils.castView(view, R.id.tv_buy, "field 'mTvBuy'", TextView.class);
-    view2131296975 = view;
+    view2131296979 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -81,7 +81,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.llIndicate = Utils.findRequiredViewAsType(source, R.id.ll_indicate, "field 'llIndicate'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.iv_top, "field 'ivTop' and method 'onViewClicked'");
     target.ivTop = Utils.castView(view, R.id.iv_top, "field 'ivTop'", ImageView.class);
-    view2131296534 = view;
+    view2131296536 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -99,7 +99,7 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     });
     target.nestingScrollview = Utils.findRequiredViewAsType(source, R.id.nestedScrollView, "field 'nestingScrollview'", NestedScrollView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'onViewClicked'");
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -130,17 +130,17 @@ public class ProductCartActivity_ViewBinding implements Unbinder {
     target.ivBottom = null;
     target.nestingScrollview = null;
 
-    view2131297058.setOnClickListener(null);
-    view2131297058 = null;
-    view2131296577.setOnClickListener(null);
-    view2131296577 = null;
-    view2131296975.setOnClickListener(null);
-    view2131296975 = null;
-    view2131296534.setOnClickListener(null);
-    view2131296534 = null;
+    view2131297062.setOnClickListener(null);
+    view2131297062 = null;
+    view2131296579.setOnClickListener(null);
+    view2131296579 = null;
+    view2131296979.setOnClickListener(null);
+    view2131296979 = null;
+    view2131296536.setOnClickListener(null);
+    view2131296536 = null;
     view2131296472.setOnClickListener(null);
     view2131296472 = null;
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
   }
 }

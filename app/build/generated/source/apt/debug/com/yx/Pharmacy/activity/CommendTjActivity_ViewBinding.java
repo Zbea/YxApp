@@ -19,13 +19,13 @@ import java.lang.Override;
 public class CommendTjActivity_ViewBinding implements Unbinder {
   private CommendTjActivity target;
 
-  private View view2131296798;
+  private View view2131296801;
+
+  private View view2131296655;
+
+  private View view2131296624;
 
   private View view2131296652;
-
-  private View view2131296622;
-
-  private View view2131296649;
 
   @UiThread
   public CommendTjActivity_ViewBinding(CommendTjActivity target) {
@@ -40,7 +40,7 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onClick'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -52,7 +52,7 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvZonghe = Utils.findRequiredViewAsType(source, R.id.iv_zonghe, "field 'mIvZonghe'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_zonghe, "field 'mLlZonghe' and method 'onClick'");
     target.mLlZonghe = Utils.castView(view, R.id.ll_zonghe, "field 'mLlZonghe'", LinearLayout.class);
-    view2131296652 = view;
+    view2131296655 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvPrice = Utils.findRequiredViewAsType(source, R.id.iv_price, "field 'mIvPrice'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_price, "field 'mLlPrice' and method 'onClick'");
     target.mLlPrice = Utils.castView(view, R.id.ll_price, "field 'mLlPrice'", LinearLayout.class);
-    view2131296622 = view;
+    view2131296624 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +75,7 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mIvBanner = Utils.findRequiredViewAsType(source, R.id.iv_banner, "field 'mIvBanner'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.ll_xiaoliang, "field 'mLlXiaoliang' and method 'onClick'");
     target.mLlXiaoliang = Utils.castView(view, R.id.ll_xiaoliang, "field 'mLlXiaoliang'", LinearLayout.class);
-    view2131296649 = view;
+    view2131296652 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -107,13 +107,13 @@ public class CommendTjActivity_ViewBinding implements Unbinder {
     target.mLlXiaoliang = null;
     target.mRvProduct = null;
 
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
+    view2131296655.setOnClickListener(null);
+    view2131296655 = null;
+    view2131296624.setOnClickListener(null);
+    view2131296624 = null;
     view2131296652.setOnClickListener(null);
     view2131296652 = null;
-    view2131296622.setOnClickListener(null);
-    view2131296622 = null;
-    view2131296649.setOnClickListener(null);
-    view2131296649 = null;
   }
 }

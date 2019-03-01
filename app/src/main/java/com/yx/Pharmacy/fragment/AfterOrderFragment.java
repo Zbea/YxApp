@@ -205,11 +205,15 @@ public class AfterOrderFragment extends BaseFragment  implements IAfterOrderList
             tuihuoDialog.setDialogClickListener(new TuihuoDialog.DialogClickListener() {
                 @Override
                 public void commitTuihuo(String name,String num) {
-//                    getShortToastByString("点击退货");
                     mPresenter.tuihuo((BaseActivity) mContext,orderbackid,name,num);
                 }
             });
 
+        }
+
+        @Override
+        public void gotoDetails(String orderid, int layoutPosition) {
+            AfterOrderDetailActivity.startActivity(mContext,orderid);
         }
     };
     @OnClick({R.id.tv_reload})

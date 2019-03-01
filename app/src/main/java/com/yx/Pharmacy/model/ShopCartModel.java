@@ -37,6 +37,7 @@ public class ShopCartModel {
         public List<CouponListBean> couponList;
         public List<GoodsBean>      goods;
         public String alldiscount;
+        public boolean isJoin=true;
 
     }
 
@@ -69,6 +70,7 @@ public class ShopCartModel {
         public String    credit;
         public boolean     isSelectCoupon;
         public boolean     couponEnable;
+        public boolean isFrist;
     }
 
 
@@ -92,6 +94,7 @@ public class ShopCartModel {
         public String  thumb;
         public String  gg;
         public String  scqy;
+        public String  activityid;
         public String     cartcount;
         public String     minimum;
         public String     addmum;
@@ -113,7 +116,8 @@ public class ShopCartModel {
         public List<String>     info;
         public boolean     isSelect;
         public List<CouponListBean> couponList;
-
+        public int is_price;
+        public boolean isJoin=true;
 
         /**
          * limit : 10

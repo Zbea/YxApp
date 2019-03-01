@@ -30,9 +30,15 @@
         android:id="@+id/rv_coupon"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_10"
         android:layout_weight="1"/>
-    <View
-        android:background="@color/color_f6f6f6"
+    <TextView
+        android:id="@+id/tv_cancel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_10"/>
+        android:layout_height="@dimen/dp_45"
+        android:textColor="@color/white"
+        android:background="@color/color_main"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="取消使用"/>
 </LinearLayout>

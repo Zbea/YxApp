@@ -65,16 +65,23 @@ public class GoodsListAdapter extends BaseQuickAdapter<OrderModel.Goods,BaseView
             title.setText(spanString);
             title.append(item.title);
         }
-//        else if(type==2){
-//            // 特价
-//
-//            Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
-//            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
-//            SpannableString      spanString = new SpannableString("icon ");
-//            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
-//            title.setText(spanString);
-//            title.append(item.title);
-//        }
+        else if(type==2){
+            // 特价
+            Bitmap b=null;
+            if (item.is_price==0)
+            {
+                b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            }
+            else
+            {
+                b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_ykj);
+            }
+            CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
+            SpannableString      spanString = new SpannableString("icon ");
+            spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);
+            title.setText(spanString);
+            title.append(item.title);
+        }
         else if(type==3){
             // 满赠
             Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_mz);

@@ -12,9 +12,9 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int leak_canary_icon = 0x7f08010b;
-        public static final int leak_canary_notification = 0x7f08010c;
-        public static final int leak_canary_toast_background = 0x7f08010d;
+        public static final int leak_canary_icon = 0x7f08010e;
+        public static final int leak_canary_notification = 0x7f08010f;
+        public static final int leak_canary_toast_background = 0x7f080110;
     }
     public static final class id {
         private id() {}

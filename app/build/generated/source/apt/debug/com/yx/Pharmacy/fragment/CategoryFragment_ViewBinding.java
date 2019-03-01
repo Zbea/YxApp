@@ -16,9 +16,9 @@ import java.lang.Override;
 public class CategoryFragment_ViewBinding implements Unbinder {
   private CategoryFragment target;
 
-  private View view2131296629;
+  private View view2131296631;
 
-  private View view2131296829;
+  private View view2131296832;
 
   @UiThread
   public CategoryFragment_ViewBinding(final CategoryFragment target, View source) {
@@ -28,7 +28,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
     target.swipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.swipeRefreshLayout, "field 'swipeRefreshLayout'", SwipeRefreshLayout.class);
     target.rvSort = Utils.findRequiredViewAsType(source, R.id.rv_sort, "field 'rvSort'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.ll_search, "method 'click'");
-    view2131296629 = view;
+    view2131296631 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -36,7 +36,7 @@ public class CategoryFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.rl_scan, "method 'click'");
-    view2131296829 = view;
+    view2131296832 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,9 +55,9 @@ public class CategoryFragment_ViewBinding implements Unbinder {
     target.swipeRefreshLayout = null;
     target.rvSort = null;
 
-    view2131296629.setOnClickListener(null);
-    view2131296629 = null;
-    view2131296829.setOnClickListener(null);
-    view2131296829 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131296832.setOnClickListener(null);
+    view2131296832 = null;
   }
 }

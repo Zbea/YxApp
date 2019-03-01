@@ -131,11 +131,6 @@ public class HHActivity
         loadlayout.setStatus(LoadingLayout.Success);
         tv_h5_title.setVisibility(View.GONE);
         L.i("onCreate: " + url);
-        //        ConfigXmlParser parser = new ConfigXmlParser();
-        //        parser.parse(this);//这里会解析res/xml/config.xml配置文件
-        //        CordovaWebView cordovaWebView = new CordovaWebViewImpl(new SystemWebViewEngine(mWebview));//创建一个cordovawebview
-        //        cordovaWebView.init(new CordovaInterfaceImpl(this), parser.getPluginEntries(), parser.getPreferences());//初始化
-        // Set by <content src="index.html" /> in config.xml
         mWebview.getSettings().setJavaScriptEnabled(true);
         mWebview.getSettings().setDomStorageEnabled(true);
         mWebview.getSettings().setBlockNetworkImage(false); // 解决图片不显示

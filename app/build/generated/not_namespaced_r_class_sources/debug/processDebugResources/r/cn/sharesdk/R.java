@@ -42,38 +42,38 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int ssdk_auth_title_back = 0x7f080174;
-        public static final int ssdk_back_arr = 0x7f080175;
-        public static final int ssdk_checkboxed = 0x7f080176;
-        public static final int ssdk_country_back_arrow = 0x7f080177;
-        public static final int ssdk_country_cl_divider = 0x7f080178;
-        public static final int ssdk_country_clear_search = 0x7f080179;
-        public static final int ssdk_country_search_icon = 0x7f08017a;
-        public static final int ssdk_country_sharesdk_icon = 0x7f08017b;
-        public static final int ssdk_exception_icon = 0x7f08017c;
-        public static final int ssdk_identify_icon = 0x7f08017d;
-        public static final int ssdk_input_bg_focus = 0x7f08017e;
-        public static final int ssdk_left_back = 0x7f08017f;
-        public static final int ssdk_load_dot_white = 0x7f080180;
-        public static final int ssdk_loading = 0x7f080181;
-        public static final int ssdk_logo = 0x7f080182;
-        public static final int ssdk_mobile_logo = 0x7f080183;
-        public static final int ssdk_title_div = 0x7f0801bc;
-        public static final int ssdk_weibo_common_shadow_top = 0x7f0801bd;
-        public static final int ssdk_weibo_empty_failed = 0x7f0801be;
+        public static final int ssdk_auth_title_back = 0x7f080177;
+        public static final int ssdk_back_arr = 0x7f080178;
+        public static final int ssdk_checkboxed = 0x7f080179;
+        public static final int ssdk_country_back_arrow = 0x7f08017a;
+        public static final int ssdk_country_cl_divider = 0x7f08017b;
+        public static final int ssdk_country_clear_search = 0x7f08017c;
+        public static final int ssdk_country_search_icon = 0x7f08017d;
+        public static final int ssdk_country_sharesdk_icon = 0x7f08017e;
+        public static final int ssdk_exception_icon = 0x7f08017f;
+        public static final int ssdk_identify_icon = 0x7f080180;
+        public static final int ssdk_input_bg_focus = 0x7f080181;
+        public static final int ssdk_left_back = 0x7f080182;
+        public static final int ssdk_load_dot_white = 0x7f080183;
+        public static final int ssdk_loading = 0x7f080184;
+        public static final int ssdk_logo = 0x7f080185;
+        public static final int ssdk_mobile_logo = 0x7f080186;
+        public static final int ssdk_title_div = 0x7f0801bf;
+        public static final int ssdk_weibo_common_shadow_top = 0x7f0801c0;
+        public static final int ssdk_weibo_empty_failed = 0x7f0801c1;
     }
     public static final class id {
         private id() {}
 
-        public static final int ssdk_sina_web_title_id = 0x7f090281;
-        public static final int ssdk_sms_id_clCountry = 0x7f090282;
-        public static final int ssdk_sms_id_et_put_identify = 0x7f090283;
-        public static final int ssdk_sms_id_ivSearch = 0x7f090284;
-        public static final int ssdk_sms_id_iv_clear = 0x7f090285;
-        public static final int ssdk_sms_id_llSearch = 0x7f090286;
-        public static final int ssdk_sms_id_llTitle = 0x7f090287;
-        public static final int ssdk_sms_id_ll_back = 0x7f090288;
-        public static final int ssdk_sms_id_tv_title = 0x7f090289;
+        public static final int ssdk_sina_web_title_id = 0x7f090284;
+        public static final int ssdk_sms_id_clCountry = 0x7f090285;
+        public static final int ssdk_sms_id_et_put_identify = 0x7f090286;
+        public static final int ssdk_sms_id_ivSearch = 0x7f090287;
+        public static final int ssdk_sms_id_iv_clear = 0x7f090288;
+        public static final int ssdk_sms_id_llSearch = 0x7f090289;
+        public static final int ssdk_sms_id_llTitle = 0x7f09028a;
+        public static final int ssdk_sms_id_ll_back = 0x7f09028b;
+        public static final int ssdk_sms_id_tv_title = 0x7f09028c;
     }
     public static final class string {
         private string() {}

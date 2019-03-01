@@ -1,9 +1,15 @@
 package com.yx.Pharmacy.adapter;
 
+import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,6 +22,7 @@ import com.yx.Pharmacy.model.ShopCartModel;
 import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.util.UiUtil;
+import com.yx.Pharmacy.widget.CenterAlignImageSpan;
 import com.yx.Pharmacy.widget.WrapContentLinearLayoutManager;
 
 import java.util.ArrayList;
@@ -48,6 +55,9 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         LinearLayout ll_open = helper.getView(R.id.ll_open);
         LinearLayout ll_close = helper.getView(R.id.ll_close);
         TextView tv_clear = helper.getView(R.id.tv_clear);
+        LinearLayout ll_tips= helper.getView(R.id.ll_tips);
+        ImageView    iv_tips  = helper.getView(R.id.iv_tips);
+        TextView tv_tips = helper.getView(R.id.tv_tips);
         ll_type.setVisibility(View.VISIBLE);
         String type = item.type;
         if(TextUtils.equals(type, "1")){
@@ -62,7 +72,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         }else if(TextUtils.equals(type,"9")){
             // 控销
             ivType.setImageResource(R.drawable.icon_shopcar_full_accuse);
-        } else {
+        } else if (TextUtils.equals(type,"4")||TextUtils.equals(type,"0")){
             ll_type.setVisibility(View.GONE);
         }
 
@@ -84,6 +94,25 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
             tv_clear.setVisibility(View.GONE);
         }
 
+        if (!TextUtils.isEmpty(item.alldiscount)&&item.alldiscount.equals("0"))
+        {
+            ll_tips.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            if (!item.isJoin)
+            {
+                ll_tips.setVisibility(View.VISIBLE);
+                tv_tips.setTextColor(ColorStateList.valueOf(mContext.getResources().getColor(R.color.text_normal)));
+                tv_tips.setText("不可参与全场折扣");
+                iv_tips.setImageResource(R.drawable.icon_cart_join_tips_black);
+            }
+            else
+            {
+                ll_tips.setVisibility(View.GONE);
+            }
+        }
+
         helper.setText(R.id.tv_type,item.activityname);
         product.setNestedScrollingEnabled(false);
 
@@ -91,6 +120,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         {
             ll_type.setVisibility(View.GONE);
         }
+
 
         if (adapters.size()>helper.getAdapterPosition()&&adapters.get(helper.getAdapterPosition())!=null) {
             L.i("LLLLLLLLLLLLLLLLLLLL");
@@ -226,7 +256,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
         {
             if (!isOkCoupon)
             {
-                helper.setText(R.id.tv_coupon,item.couponList.get(0).couponcontent);
+                helper.setText(R.id.tv_coupon,"满"+item.couponList.get(0).couponlimit+"可用");
             }
         }
     }

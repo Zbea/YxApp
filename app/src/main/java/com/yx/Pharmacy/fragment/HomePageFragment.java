@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.yx.Pharmacy.MainActivity;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.CaptureActivity;
 import com.yx.Pharmacy.activity.CommendMsActivity;
@@ -139,13 +140,31 @@ public class HomePageFragment
 
     private long lastClickTime = 0;
 
+    private StoreManage.StoreManageListener storeManageListener=new StoreManage.StoreManageListener() {
+        @Override
+        public void onRefresh(MyShopModel data) {
+            mFirstLoadMore = true;
+            if (mContext!=null)
+            {
+                mBottomAdapter.getData().clear();
+                mWebAdapter.getData().clear();
+                mAdapter.getData().clear();
+                homeAdvanceAdapter.getData().clear();
+
+                mPresenter.loadProductList((BaseActivity) mContext);
+                mPresenter.getAdvanceData((BaseActivity) mContext);
+                mPresenter.getMessageData((BaseActivity) mContext);
+                mPresenter.getHomeData((BaseActivity) mContext);
+            }
+        }
+    };
+
     private Handler mHandler=new Handler()
     {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what==1)
             {
-                mAdapter.getData().clear();
                 if (homeDataModels!=null)
                 {
                     mAdapter.setNewData(homeDataModels);
@@ -157,7 +176,6 @@ public class HomePageFragment
             }
             if (msg.what==2)
             {
-                mWebAdapter.getData().clear();
                 if (homeAdvanceModel.guid != null && homeAdvanceModel.guid.size() > 0) {
                     mWebAdapter.setNewData(homeAdvanceModel.guid);
                 }
@@ -172,13 +190,25 @@ public class HomePageFragment
                     mIvAdvence.setVisibility(View.GONE);
                 }
                 //初始化banner数据
-                if (homeAdvanceModel.banner != null && homeAdvanceModel.banner.size() > 0) {
-                    initBanner(homeAdvanceModel.banner);
+                initBanner(homeAdvanceModel.banner);
+                if (homeAdvanceModel.banner.size()>0)
+                {
+                    iv_banner_bg.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    iv_banner_bg.setVisibility(View.GONE);
                 }
 
                 if (homeAdvanceModel.secondGold != null && homeAdvanceModel.secondGold.size() > 0) {
                     homeAdvanceAdapter.setNewData(homeAdvanceModel.secondGold);
+                    mRvAdvance.setVisibility(View.VISIBLE);
                 }
+                else
+                {
+                    mRvAdvance.setVisibility(View.GONE);
+                }
+
 
                 if (homeAdvanceModel.alert != null) {
                     if (!ComMethodsUtil.isSameDay(SPUtil.getLong(mContext, Constants.KEY_LAST_CLICK_SP_AD), System.currentTimeMillis())) {//不是同一天
@@ -246,22 +276,13 @@ public class HomePageFragment
 
     @Override
     protected void init() {
+        setRetainInstance(true);
         mImmersionBar = ImmersionBar.with(this);
         mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false)
                 .addViewSupportTransformColor(mMZBanner)
                 .init();
         mPresenter = new HomeDataPresenter(this);
-        StoreManage.newInstance().setStoreManageListener(new StoreManage.StoreManageListener() {
-            @Override
-            public void onRefresh(MyShopModel data) {
-//                tv_no_more.setVisibility(View.GONE);
-                mFirstLoadMore = true;
-                if (mView!=null)
-                {
-                    initData();
-                }
-            }
-        });
+        StoreManage.newInstance().setStoreManageListener(storeManageListener);
 
         if (mView!=null)
         {
@@ -282,6 +303,12 @@ public class HomePageFragment
     public void onPause() {
         super.onPause();
         mMZBanner.pause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        StoreManage.newInstance().clearStoreManageListener(storeManageListener);
     }
 
     private void initListener() {
@@ -405,7 +432,20 @@ public class HomePageFragment
                     cartCount=DensityUtils.parseInt(item.minimum);
 
                     if (item.getType()==1||item.getType()==2) { //特价商品特殊处理
-                        showComfirmDialog();
+                        if (item.is_price==0)
+                        {
+                            showComfirmDialog();
+                        }
+                        else
+                        {
+                            if (!item.flashLimit) {
+                                showAddDialog(1,item);
+                            }
+                            else
+                            {
+                                getShortToastByString("商品已达限购");
+                            }
+                        }
                     } else {
                         if (!item.productLimit) {
                             showAddDialog(0,item);
@@ -709,6 +749,8 @@ public class HomePageFragment
                 long now = System.currentTimeMillis();
                 if(now - lastClickTime >1000){
                     lastClickTime = now;
+                    if (mContext==null)
+                        return;
                     ChooseSupplierDialog supplierDialog=new ChooseSupplierDialog(mContext);
                     supplierDialog.setDialogClickListener(new ChooseSupplierDialog.DialogClickListener() {
                         @Override

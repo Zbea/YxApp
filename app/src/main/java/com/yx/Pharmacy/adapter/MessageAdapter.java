@@ -3,6 +3,7 @@ package com.yx.Pharmacy.adapter;
 import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -49,16 +50,54 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
     @Override
     protected void convert(final BaseViewHolder helper, final MessageData.MessageModel item) {
         if(item.pushtype==1){//优惠促销 活动类型消息  url广告
+
+//            if (item.is_imgtext==1)
+//            {
+//                helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
+//                helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
+//                helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
+//                helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
+//                ImageView iv_youhui=helper.getView(R.id.iv_youhui);
+//                GlideUtil.loadImgNoStyle(context,item.thumb,iv_youhui,R.drawable.icon_image_loading_cc);
+//                helper.setText(R.id.tv_youhui_name,item.content);
+//                helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+//                helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");
+//                helper.getView(R.id.iv_youhui_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+//            }
+//            else
+//            {
+//                helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
+//                helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
+//                helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
+//                helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
+//
+//                helper.setText(R.id.tv_system_notice_name,"系统通知");
+//                helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+//                helper.setText(R.id.tv_system_notice_content,item.content);
+//                helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
+//                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+//            }
+
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
-            helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
-            helper.getView(R.id.ll_type_youhui).setVisibility(View.VISIBLE);
+            helper.getView(R.id.ll_type_system_notice).setVisibility(View.VISIBLE);
+            helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
-            ImageView iv_youhui=helper.getView(R.id.iv_youhui);
-            GlideUtil.loadImgNoStyle(context,item.thumb,iv_youhui,R.drawable.icon_image_loading_cc);
-            helper.setText(R.id.tv_youhui_name,item.content);
-            helper.setText(R.id.tv_youhui_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
-            helper.setText(R.id.tv_youhui_bottom_desc,"点击查看活动详情");
-            helper.getView(R.id.iv_youhui_isread).setVisibility(item.isread==1?View.GONE:View.VISIBLE);
+
+            helper.setText(R.id.tv_system_notice_name,"系统通知");
+            helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
+            helper.setText(R.id.tv_system_notice_content,TextUtils.isEmpty(item.content)?item.title:item.content);
+            helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
+            if (item.is_imgtext==1)
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                helper.getView(R.id.iv_default).setVisibility(View.GONE);
+                GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image),R.drawable.icon_image_loading_cc);
+            }
+            else
+            {
+                helper.getView(R.id.iv_image).setVisibility(View.GONE);
+            }
+
         }else if(item.pushtype==2){//优惠促销 商品活动类型  单个商品的活动
             helper.getView(R.id.ll_type_wuliu).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_system_notice).setVisibility(View.GONE);
@@ -99,6 +138,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             if (item.is_imgtext==1)
             {
                 helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                helper.getView(R.id.iv_default).setVisibility(View.GONE);
                 GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image));
             }
             else
@@ -112,7 +152,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
             ImageView iv_wuliu=helper.getView(R.id.iv_wuliu);
-            GlideUtil.loadImg(context,item.img_url,iv_wuliu);
+            GlideUtil.loadImg(context,item.img_url,iv_wuliu,R.drawable.icon_logo);
             helper.setText(R.id.tv_wuliu_num,item.count+"");
             helper.setText(R.id.tv_wuliu_name,"订单通知");
 //            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
@@ -139,7 +179,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
             ImageView iv_wuliu=helper.getView(R.id.iv_wuliu);
-            GlideUtil.loadImg(context,item.img_url,iv_wuliu);
+            GlideUtil.loadImg(context,item.img_url,iv_wuliu,R.drawable.icon_logo);
             helper.setText(R.id.tv_wuliu_num,item.count+"");
             helper.setText(R.id.tv_wuliu_name,"售后订单");
 //            helper.setText(R.id.tv_wuliu_time, DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
@@ -175,6 +215,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             if (item.is_imgtext==1)
             {
                 helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                helper.getView(R.id.iv_default).setVisibility(View.GONE);
                 GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image));
             }
             else
@@ -194,6 +235,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             if (item.is_imgtext==1)
             {
                 helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                helper.getView(R.id.iv_default).setVisibility(View.GONE);
                 GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image),R.drawable.icon_image_loading_cc);
             }
             else
@@ -209,11 +251,12 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
 
             helper.setText(R.id.tv_system_notice_name,"系统通知");
             helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
-            helper.setText(R.id.tv_system_notice_content,item.content);
+            helper.setText(R.id.tv_system_notice_content,TextUtils.isEmpty(item.content)?item.title:item.content);
             helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
             if (item.is_imgtext==1)
             {
                 helper.getView(R.id.iv_image).setVisibility(View.VISIBLE);
+                helper.getView(R.id.iv_default).setVisibility(View.GONE);
                 GlideUtil.loadImgNoStyle(mContext,item.thumb,helper.getView(R.id.iv_image),R.drawable.icon_image_loading_cc);
             }
             else
@@ -253,7 +296,11 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
                 else if(item.pushtype==4){//guanjianzisousuo
                     if(listener!=null)listener.search(item.pushdata);
                 }
-                else {//跳转活动专区
+                else if(item.pushtype==1){//跳转活动专区
+                    if (item.is_imgtext==1)
+                        if(listener!=null)listener.goWebActivity(item.pushdata);
+                }
+                else {
 
                 }
             }
@@ -266,7 +313,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
                     if(listener!=null)listener.readMessage(item.itemid+"",helper.getLayoutPosition());
                 }
                 if(item.pushtype==1){//跳转活动模块
-                    if(listener!=null)listener.goWebActivity(item.weburl);
+                    if(listener!=null)listener.goWebActivity(item.pushdata);
                 }else if(item.pushtype==5){//跳转特殊活动
 //                    if(listener!=null)listener.godata7Activity(item.levelid,item.type);
                 } else {//跳转单品（商品详情）

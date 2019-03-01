@@ -96,7 +96,21 @@ public  class MyCollectActivity extends BaseActivity implements IMyCollectView, 
                     cartCount=DensityUtils.parseInt(item.minimum);
 
                     if (item.getType()==1||item.getType()==2) { //特价商品特殊处理
-                        showComfirmDialog();
+                        if (item.is_price==0)
+                        {
+                            showComfirmDialog();
+                        }
+                        else
+                        {
+                            if (!item.flashLimit) {
+                                type = 1;
+                                showAddDialog(1,item);
+                            }
+                            else
+                            {
+                                getShortToastByString("商品已达限购");
+                            }
+                        }
                     } else {
                         if (!item.productLimit) {
                             showAddDialog(0,item);

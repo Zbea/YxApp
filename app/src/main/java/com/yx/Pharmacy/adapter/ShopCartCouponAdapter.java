@@ -38,11 +38,11 @@ public class ShopCartCouponAdapter
         int coupontype = DensityUtils.parseInt(item.coupontype);
         int couponstate = DensityUtils.parseInt(item.couponstate);
         if(coupontype==1){
-            helper.setText(R.id.tv_coupon_use_type,"【单品券】");
+            helper.setText(R.id.tv_coupon_use_type,"[单品券]");
         }else if(coupontype==2){
-            helper.setText(R.id.tv_coupon_use_type,"【专区券】");
+            helper.setText(R.id.tv_coupon_use_type,"[专区券]");
         }else if(coupontype==3){
-            helper.setText(R.id.tv_coupon_use_type,"【通用券】");
+            helper.setText(R.id.tv_coupon_use_type,"[通用券]");
         }
         ImageView iv_bg=helper.getView(R.id.iv_bg);
         if(couponstate==0){//未领取

@@ -17,14 +17,10 @@ import java.util.List;
 
 public interface IProductDetailView {
     void showProductDetail(ProductDetailModel data);
-
-    void showAddResult(AddShopCartModel data);
     void getShopCarNum(String count);
     void showCollect();
     void showDisCollect();
-    void ifFuGai();
 
-    void compelete();
 
     void errorView();
 

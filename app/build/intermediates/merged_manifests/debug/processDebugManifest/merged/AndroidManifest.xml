@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:hardwareAccelerated="true" package="com.yx.Pharmacy" android:versionName="1.0.5" android:versionCode="20190101">
+<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:hardwareAccelerated="true" package="com.yx.Pharmacy" android:versionName="1.0.5" android:versionCode="20190301">
   <uses-sdk android:targetSdkVersion="26" android:minSdkVersion="18"/>
   <supports-screens android:normalScreens="true" android:smallScreens="true" android:largeScreens="true" android:anyDensity="true" android:xlargeScreens="true" android:resizeable="true"/>
   <uses-permission android:name="android.permission.INTERNET"/>
@@ -33,7 +33,7 @@
   <uses-feature android:name="android.hardware.microphone" android:required="false"/>
   <uses-feature android:name="android.hardware.camera" android:required="false"/>
   <permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
-  <application android:supportsRtl="true" android:hardwareAccelerated="true" android:debuggable="true" android:label="@string/app_name" android:name="com.yx.Pharmacy.base.YxApp" android:theme="@style/AppTheme" android:icon="@drawable/logo" android:allowBackup="true" android:testOnly="true">
+  <application android:supportsRtl="true" android:hardwareAccelerated="true" android:debuggable="true" android:label="@string/app_name" android:name="com.yx.Pharmacy.base.YxApp" android:theme="@style/AppTheme" android:icon="@drawable/logo" android:allowBackup="true">
     <provider android:name="com.yx.Pharmacy.widget.PictureProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.yx.Pharmacy.provider">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths_yx"/>
     </provider>

@@ -55,6 +55,7 @@ public class DrugModel {
     public String minimum;
     public boolean productLimit;
     public boolean flashLimit ;
+    public int is_price;
 
 
 

@@ -47,20 +47,20 @@ public class HomeNet {
                                  Request.Builder builder = chain.request().newBuilder();
 
                                  builder.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-//                                 builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
-//                                 builder.addHeader("version", "1.0.6");
-//                                 builder.addHeader("platform","android");
-//                                 builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
-//                                 builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));
-//                                 builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
-
-
-                                 builder.addHeader("token", NetUtil.isStringNull(NetUtil.getToken().trim()));
+                                 builder.addHeader("token", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getToken())));
                                  builder.addHeader("version", "1.0.6");
                                  builder.addHeader("platform","android");
-                                 builder.addHeader("storeid",NetUtil.isStringNull(NetUtil.getStoreid().trim()));
-                                 builder.addHeader("itemid",NetUtil.isStringNull(NetUtil.getItemId().trim()));
+                                 builder.addHeader("storeid",CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getStoreid())));
+                                 builder.addHeader("itemid", CustomEncryptHelper.Encrypt(NetUtil.isStringNull(NetUtil.getItemId())));
                                  builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
+
+
+//                                 builder.addHeader("token", NetUtil.isStringNull(NetUtil.getToken().trim()));
+//                                 builder.addHeader("version", "1.0.6");
+//                                 builder.addHeader("platform","android");
+//                                 builder.addHeader("storeid",NetUtil.isStringNull(NetUtil.getStoreid().trim()));
+//                                 builder.addHeader("itemid",NetUtil.isStringNull(NetUtil.getItemId().trim()));
+//                                 builder.addHeader("issalesman",SPUtil.getString(UiUtil.getContext(),Constants.KEY_MEMBER));
 
 
 //                                 if (request.body()!=null)

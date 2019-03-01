@@ -128,7 +128,14 @@ public class MyCollectAdapter extends BaseQuickAdapter<DrugModel,BaseViewHolder>
         }
         else if(type==2){
             // 特价
-            setTitleImage(item,tv_drug_name,R.drawable.icon_shopcar_label_tj);
+            if (item.is_price==0)
+            {
+                setTitleImage(item,tv_drug_name,R.drawable.icon_shopcar_label_tj);
+            }
+            else
+            {
+                setTitleImage(item,tv_drug_name,R.drawable.icon_shopcar_label_ykj);
+            }
             tv_oldprice.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG );
             tv_oldprice.setText(item.getOldprice());
         }

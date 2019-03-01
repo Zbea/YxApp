@@ -18,11 +18,11 @@ import java.lang.Override;
 public class MyOrderListActivity_ViewBinding implements Unbinder {
   private MyOrderListActivity target;
 
-  private View view2131297058;
+  private View view2131297062;
 
-  private View view2131296798;
+  private View view2131296801;
 
-  private View view2131297122;
+  private View view2131297126;
 
   @UiThread
   public MyOrderListActivity_ViewBinding(MyOrderListActivity target) {
@@ -37,7 +37,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
     target.tv_title = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tv_title'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_more, "field 'tv_more' and method 'click'");
     target.tv_more = Utils.castView(view, R.id.tv_more, "field 'tv_more'", TextView.class);
-    view2131297058 = view;
+    view2131297062 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -49,7 +49,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297122 = view;
+    view2131297126 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,11 +80,11 @@ public class MyOrderListActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
-    view2131297058.setOnClickListener(null);
-    view2131297058 = null;
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
-    view2131297122.setOnClickListener(null);
-    view2131297122 = null;
+    view2131297062.setOnClickListener(null);
+    view2131297062 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
+    view2131297126.setOnClickListener(null);
+    view2131297126 = null;
   }
 }

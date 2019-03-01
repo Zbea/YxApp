@@ -87,6 +87,13 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     private String mStoreid;
     private MyPresenter presenter;
 
+    private StoreManage.StoreManageListener storeManageListener=new StoreManage.StoreManageListener() {
+        @Override
+        public void onRefresh(MyShopModel data) {
+            initView();
+        }
+    };
+
     @Override
     protected int getLayoutId() {
         return R.layout.frag_my;
@@ -105,16 +112,17 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        StoreManage.newInstance().clearStoreManageListener(storeManageListener);
+    }
+
+    @Override
     protected void init() {
         mImmersionBar = ImmersionBar.with(this);
         mImmersionBar.keyboardEnable(true).navigationBarWithKitkatEnable(false).init();
 
-        StoreManage.newInstance().setStoreManageListener(new StoreManage.StoreManageListener() {
-            @Override
-            public void onRefresh(MyShopModel data) {
-                initView();
-            }
-        });
+        StoreManage.newInstance().setStoreManageListener(storeManageListener);
 
         initView();
     }
@@ -139,7 +147,8 @@ public class MyFragment extends BaseFragment implements IMyOrderNumView {
                 HHActivity.startActivity(mContext, StoreManage.newInstance().getStore().exchange,1);
                 break;
             case R.id.ll_youjiang_task:// 有奖任务
-                HHActivity.startActivity(mContext,StoreManage.newInstance().getStore().prizetask);
+                getShortToastByString("暂未开放，敬请期待.....");
+               // HHActivity.startActivity(mContext,StoreManage.newInstance().getStore().prizetask);
                 break;
             case R.id.rl_signin://签到---->改成消息按钮
                 ((MainActivity) mContext).showFragment(1);

@@ -1399,6 +1399,8 @@ drawable icon_audio
 drawable icon_bankcard_logo
 drawable icon_cart_clear_disable
 drawable icon_cart_disable_product
+drawable icon_cart_join_tips_black
+drawable icon_cart_join_tips_white
 drawable icon_code_bg_bottom
 drawable icon_coupon_goto
 drawable icon_detail_home
@@ -1474,6 +1476,7 @@ drawable icon_shopcar_label_mz
 drawable icon_shopcar_label_tj
 drawable icon_shopcar_label_xs
 drawable icon_shopcar_label_xs_n
+drawable icon_shopcar_label_ykj
 drawable icon_shopcar_lack
 drawable icon_shopcar_lose
 drawable icon_shopcar_n
@@ -2190,6 +2193,7 @@ id iv_category
 id iv_close
 id iv_code_type
 id iv_coupon_icon
+id iv_default
 id iv_dot
 id iv_file_icon
 id iv_gift_product
@@ -2243,6 +2247,7 @@ id iv_status
 id iv_stop_download
 id iv_system_notice
 id iv_system_notice_isread
+id iv_tips
 id iv_title
 id iv_top
 id iv_top_bg
@@ -2347,6 +2352,7 @@ id ll_single_coupon
 id ll_store
 id ll_store_logout
 id ll_time_bg
+id ll_tips
 id ll_title
 id ll_tixian
 id ll_toolbar
@@ -2666,6 +2672,7 @@ id tv_add_cart
 id tv_add_shop
 id tv_address
 id tv_after_num
+id tv_all_price
 id tv_all_read
 id tv_amount
 id tv_applyfor_time

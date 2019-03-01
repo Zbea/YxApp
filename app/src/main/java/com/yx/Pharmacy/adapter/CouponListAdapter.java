@@ -50,11 +50,11 @@ public class CouponListAdapter extends BaseQuickAdapter<CouponModel,BaseViewHold
          .setText(R.id.tv_coupon_discount,item.title);
 
         if(item.getCoupontype()==1){
-            helper.setText(R.id.tv_coupon_use_type,"【单品券】");
+            helper.setText(R.id.tv_coupon_use_type,"[单品券]");
         }else if(item.getCoupontype()==2){
-            helper.setText(R.id.tv_coupon_use_type,"【专区券】");
+            helper.setText(R.id.tv_coupon_use_type,"[专区券]");
         }else if(item.getCoupontype()==3){
-            helper.setText(R.id.tv_coupon_use_type,"【通用券】");
+            helper.setText(R.id.tv_coupon_use_type,"[通用券]");
         }
         ImageView iv_bg=helper.getView(R.id.iv_bg);
         if(type==Constants.type_useful){//可使用

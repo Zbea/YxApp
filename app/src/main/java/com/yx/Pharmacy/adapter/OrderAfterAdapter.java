@@ -31,6 +31,7 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
         void checkWuliu(String orderid);
         void cancelOrderBack(String orderbackid, int layoutPosition);
         void tuihuo(String orderbackid, int layoutPosition);
+        void gotoDetails(String orderid, int layoutPosition);
     }
     public void setListener(ClickListener listener) {
         this.listener = listener;
@@ -111,6 +112,13 @@ public class OrderAfterAdapter extends BaseQuickAdapter<OrderModel,BaseViewHolde
                 ll_many_products.addView(orderItemView);
             }
         }
+        helper.getView(R.id.ll_many_products).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener!=null)listener.gotoDetails(item.orderid,helper.getLayoutPosition());
+            }
+        });
+
         helper.getView(R.id.tv_cancle_order).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

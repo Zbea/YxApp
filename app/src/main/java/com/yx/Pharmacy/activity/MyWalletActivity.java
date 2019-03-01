@@ -18,6 +18,7 @@ import com.yx.Pharmacy.constant.Constants;
 import com.yx.Pharmacy.model.WalletData;
 import com.yx.Pharmacy.presenter.MyWalletPresenter;
 import com.yx.Pharmacy.util.DensityUtils;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.TimeUtils;
 import com.yx.Pharmacy.util.UiUtil;
@@ -85,7 +86,8 @@ public class MyWalletActivity extends BaseActivity implements IMyWalletView {
     private void initDate()
     {
         Calendar c = Calendar.getInstance();//
-        mOrganTime = c.get(Calendar.YEAR)+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        mOrganTime = c.get(Calendar.YEAR)+((c.get(Calendar.MONTH) + 1)<10?"0"+(c.get(Calendar.MONTH) + 1):""+(c.get(Calendar.MONTH) + 1));// 获取当前月份
+        L.i(mOrganTime);
         mTvTime= c.get(Calendar.YEAR)+"-"+String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
         tv_select_ximing.setText(mTvTime);
     }

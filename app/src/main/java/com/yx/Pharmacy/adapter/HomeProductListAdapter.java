@@ -102,7 +102,15 @@ public class HomeProductListAdapter extends BaseQuickAdapter<HomeDataModel.Goodl
 
             if(TextUtils.equals(item.type,"2"))
             {
-                Bitmap               b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+                Bitmap b=null;
+                if (item.is_price==0)
+                {
+                    b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+                }
+                else
+                {
+                    b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_ykj);
+                }
                 CenterAlignImageSpan imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
                 SpannableString      spanString = new SpannableString("icon ");
                 spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);

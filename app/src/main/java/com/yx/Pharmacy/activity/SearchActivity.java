@@ -210,9 +210,9 @@ public class SearchActivity extends BaseActivity implements OnTagSelectListener,
             popupWindow.dismiss();
         }
         isShowPop=false;
+        ProductItemActivity.startActivity(mContext,1,search+"",search);
         if(!TextUtils.isEmpty(search)){
             ComMethodsUtil.hideSoftKeyBoard(SearchActivity.this);
-            ProductItemActivity.startActivity(mContext,1,search+"",search);
             addSearchHistory(search);
         }
     }

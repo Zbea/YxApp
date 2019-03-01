@@ -99,4 +99,55 @@ public class MessagePresenter {
                     }
                 });
     }
+
+    /**
+     * 清空消息列表
+     * @param activity
+     */
+    public void deleteAllMessage(final BaseActivity activity) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("action","all");
+        HomeNet.getHomeApi().delMessage(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<String>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<String> response) {
+                        if(response.getData()==null){
+                            activity.getShortToastByString("清空成功");
+                            mView.onDelete();
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
+
+
+    /**
+     * 删除消息列表
+     * @param activity
+     */
+    public void deleteMessage(final BaseActivity activity,String sid) {
+        HashMap<String, String> urlMap = NetUtil.getUrlMap();
+        urlMap.put("action","single");
+        urlMap.put("msgid",sid);
+        HomeNet.getHomeApi().delMessage(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressNoCode<BasisBean<String>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<String> response) {
+                        if(response.getData()==null){
+                            activity.getShortToastByString("删除成功");
+                            mView.onDelete();
+                        }
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
+                });
+    }
+
 }

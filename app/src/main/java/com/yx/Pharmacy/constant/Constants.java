@@ -9,8 +9,8 @@ package com.yx.Pharmacy.constant;
 
 public class Constants {
     //     测试
-//    public static final String BASE_URL            = "https://api.dianyaobei.com/index.php/";
-    public static final String BASE_URL = "http://api.dianyaobei.com:8808/index.php/";
+    public static final String BASE_URL            = "https://api.dianyaobei.com/index.php/";
+//    public static final String BASE_URL = "http://api.dianyaobei.com:8808/index.php/";
     // H5连接
     public static final String H5_URL = "h5_url";
 
@@ -127,6 +127,8 @@ public class Constants {
     public static final String CHANGE_PHONE = "user/updatemobile";
     //获取消息列表
     public static final String MESSAGE_LIST = "message/list";
+    //删除消息列表
+    public static final String MESSAGE_DELETE = "message/delMsg";
     //根据消息类型获取消息列表
     public static final String MESSAGE_TYPE_LIST = "message/typelist";
     //消息已读
@@ -154,6 +156,8 @@ public class Constants {
     public static final String SHOP_CART_LIST = "cart/list";
     //删除购物车信息
     public static final String SHOP_CART_DELETE = "cart/del";
+    //删除购物车失效
+    public static final String SHOP_CART_DELETE_DIS = "cart/delUnvalid";
     //修改购物车数量
     public static final String SHOP_CART_UPDATE = "cart/update";
     //提交商品需求

@@ -2,6 +2,7 @@ package com.yx.Pharmacy.dialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Handler;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
@@ -43,7 +44,13 @@ public class ChooseSupplierDialog {
 
     public ChooseSupplierDialog(Context context) {
         this.context = context;
-        getStoreList((BaseActivity) context);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getStoreList((BaseActivity) context);
+            }
+        },100);
+
     }
 
     private void builder() {
@@ -78,7 +85,6 @@ public class ChooseSupplierDialog {
                 cancle();
             }
         });
-        alertDialog.show();
     }
     public void show() {
         alertDialog.show();

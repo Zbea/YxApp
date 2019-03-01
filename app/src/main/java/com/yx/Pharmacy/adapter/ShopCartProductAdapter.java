@@ -1,5 +1,6 @@
 package com.yx.Pharmacy.adapter;
 
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -61,6 +62,9 @@ public class ShopCartProductAdapter
         LinearLayout ll_item = helper.getView(R.id.ll_item);
         LinearLayout ll_gift = helper.getView(R.id.ll_gift);
         AmountView amountView = helper.getView(R.id.amount_view);
+        LinearLayout ll_tips= helper.getView(R.id.ll_tips);
+        ImageView    iv_tips  = helper.getView(R.id.iv_tips);
+        TextView tv_tips = helper.getView(R.id.tv_tips);
         GlideUtil.loadImg(UiUtil.getContext(), item.thumb, product);
 
         if (TextUtils.isEmpty(item.validtime))
@@ -100,7 +104,18 @@ public class ShopCartProductAdapter
 //        {
 //            cbSelect.setVisibility(View.VISIBLE);
 //        }
-
+        if (mType.equals("4")) {
+            {
+                if (!item.isJoin) {
+                    ll_tips.setVisibility(View.VISIBLE);
+                    tv_tips.setTextColor(ColorStateList.valueOf(mContext.getResources().getColor(R.color.text_normal)));
+                    tv_tips.setText("不可参与全场折扣");
+                    iv_tips.setImageResource(R.drawable.icon_cart_join_tips_black);
+                } else {
+                    ll_tips.setVisibility(View.GONE);
+                }
+            }
+        }
 
         if (TextUtils.equals(item.isvalid, "true")) {
             iv_state.setVisibility(View.VISIBLE);
@@ -185,7 +200,6 @@ public class ShopCartProductAdapter
             amountView.setGoods_storage(Integer.MAX_VALUE);
         } else {
             int i = (int) Math.floor(DensityUtils.parseDouble(item.max));
-            L.i("i:"+i);
             if (i <= (int) Math.floor(DensityUtils.parseDouble(item.cartcount))) {
                 item.cartcount=i+"";
                 amountView.setGoods_storage((int) Math.floor(DensityUtils.parseDouble(item.cartcount)));
@@ -279,7 +293,15 @@ public class ShopCartProductAdapter
         }
         else if(TextUtils.equals(mType,"2")){
             // 特价
-            Bitmap          b          = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            Bitmap b=null;
+            if (item.is_price==0)
+            {
+                b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_tj);
+            }
+            else
+            {
+                b = BitmapFactory.decodeResource(UiUtil.getContext().getResources(), R.drawable.icon_shopcar_label_ykj);
+            }
             CenterAlignImageSpan       imgSpan    = new CenterAlignImageSpan(UiUtil.getContext(), b);
             SpannableString spanString = new SpannableString("icon ");
             spanString.setSpan(imgSpan, 0, 4, ImageSpan.ALIGN_BASELINE);

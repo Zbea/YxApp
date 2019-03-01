@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yx.Pharmacy.R;
 import com.yx.Pharmacy.activity.MyShopAddActivity;
 import com.yx.Pharmacy.activity.AfterOrderDetailActivity;
@@ -16,6 +17,7 @@ import com.yx.Pharmacy.activity.CommendProductActivity;
 import com.yx.Pharmacy.activity.CommendTjActivity;
 import com.yx.Pharmacy.activity.MessageDetailActivity;
 import com.yx.Pharmacy.activity.OrderDetailActivity;
+import com.yx.Pharmacy.activity.ProductCartActivity;
 import com.yx.Pharmacy.activity.ProductDetailActivity;
 import com.yx.Pharmacy.activity.ProductItemActivity;
 import com.yx.Pharmacy.activity.SearchActivity;
@@ -24,6 +26,7 @@ import com.yx.Pharmacy.barlibrary.ImmersionBar;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BaseFragment;
 import com.yx.Pharmacy.base.HHActivity;
+import com.yx.Pharmacy.dialog.ComDialog;
 import com.yx.Pharmacy.manage.MessageIsReadNumManage;
 import com.yx.Pharmacy.model.MessageData;
 import com.yx.Pharmacy.net.NetUtil;
@@ -38,6 +41,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -137,6 +141,26 @@ public class MessageFragment
         tv_youhui_num=headView.findViewById(R.id.tv_youhui_num);
         tv_arrive_notice_num=headView.findViewById(R.id.tv_arrive_notice_num);
         mAdapter.setHeaderView(headView);
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                L.i("111111111111111111");
+                if (view.getId()==R.id.right)
+                {
+                    showDialogDelete(mAdapter.getData().get(position).goodsid);
+                }
+            }
+        });
+        mAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                L.i("111111111111111111");
+                if (view.getId()==R.id.right)
+                {
+                    showDialogDelete(mAdapter.getData().get(position).goodsid);
+                }
+            }
+        });
 
         //只适用于LinearLayoutManager
         mRecyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -180,12 +204,13 @@ public class MessageFragment
                 MessageDetailActivity.startActivity(mContext,4);
                 break;
             case R.id.tv_all_read://全部已读
-                for (int i = 0; i < mAdapter.getData().size(); i++) {
-                    mAdapter.getData().get(i).isread=1;
-                    mAdapter.notifyDataSetChanged();
-                }
-                mPresenter.sendReadAllMessage((BaseActivity) mContext);
-                mMessageIsReadManage.allRead();
+//                for (int i = 0; i < mAdapter.getData().size(); i++) {
+//                    mAdapter.getData().get(i).isread=1;
+//                    mAdapter.notifyDataSetChanged();
+//                }
+//                mPresenter.sendReadAllMessage((BaseActivity) mContext);
+//                mMessageIsReadManage.allRead();
+                showDialogDelete();
                 break;
             case R.id.tv_reload:
                 List<MessageData.MessageModel>models=new ArrayList<>();
@@ -195,6 +220,55 @@ public class MessageFragment
                 mPresenter.getMessageData((BaseActivity) mContext,page);
                 break;
         }
+    }
+
+
+    /**
+     * 删除确认按钮
+     */
+    public void showDialogDelete( )
+    {
+        ComDialog customDialog=new ComDialog(mContext);
+        customDialog.setTitleView(false);
+        customDialog.setContent("是否确定清空？");
+
+        customDialog.setDialogClickListener(new ComDialog.DialogClickListener() {
+            @Override
+            public void cancle() {
+
+            }
+
+            @Override
+            public void ok() {
+                mPresenter.deleteAllMessage((BaseActivity) mContext);
+            }
+        });
+        customDialog.builder();
+        customDialog.show();
+    }
+
+    /**
+     * 删除确认按钮
+     */
+    public void showDialogDelete(String sid )
+    {
+        ComDialog customDialog=new ComDialog(mContext);
+        customDialog.setTitleView(false);
+        customDialog.setContent("是否确定删除？");
+
+        customDialog.setDialogClickListener(new ComDialog.DialogClickListener() {
+            @Override
+            public void cancle() {
+
+            }
+
+            @Override
+            public void ok() {
+                mPresenter.deleteMessage((BaseActivity) mContext,sid);
+            }
+        });
+        customDialog.builder();
+        customDialog.show();
     }
 
     @Override
@@ -283,7 +357,7 @@ public class MessageFragment
             ll_error.setVisibility(View.GONE);
             mAdapter.setNewData(data);
         }else {
-            swipeRefreshLayout.setVisibility(View.GONE);
+//            swipeRefreshLayout.setVisibility(View.GONE);
             ll_error.setVisibility(View.GONE);
             ll_nodata.setVisibility(View.VISIBLE);
         }
@@ -315,6 +389,12 @@ public class MessageFragment
         ll_nodata.setVisibility(View.GONE);
         ll_error.setVisibility(View.GONE);
     }
+
+    @Override
+    public void onDelete() {
+        initData();
+    }
+
     private void showNornaml(){
         ll_nodata.setVisibility(View.GONE);
         ll_error.setVisibility(View.GONE);

@@ -79,6 +79,7 @@ public class ProductDetailModel {
     public String minimum;
     public boolean productLimit;
     public boolean flashLimit ;
+    public int is_price;
     /**
      * title : 汇仁 肾宝片 126片 男女肾虚亏阴阳虚 温阳补肾药品
      * price : 322.00

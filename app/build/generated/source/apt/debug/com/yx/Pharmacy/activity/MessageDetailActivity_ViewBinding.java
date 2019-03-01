@@ -18,9 +18,9 @@ import java.lang.Override;
 public class MessageDetailActivity_ViewBinding implements Unbinder {
   private MessageDetailActivity target;
 
-  private View view2131296798;
+  private View view2131296801;
 
-  private View view2131297122;
+  private View view2131297126;
 
   @UiThread
   public MessageDetailActivity_ViewBinding(MessageDetailActivity target) {
@@ -38,7 +38,7 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = Utils.findRequiredViewAsType(source, R.id.ll_nodata, "field 'll_nodata'", LinearLayout.class);
     target.ll_error = Utils.findRequiredViewAsType(source, R.id.ll_error, "field 'll_error'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -46,7 +46,7 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.tv_reload, "method 'click'");
-    view2131297122 = view;
+    view2131297126 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -68,9 +68,9 @@ public class MessageDetailActivity_ViewBinding implements Unbinder {
     target.ll_nodata = null;
     target.ll_error = null;
 
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
-    view2131297122.setOnClickListener(null);
-    view2131297122 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
+    view2131297126.setOnClickListener(null);
+    view2131297126 = null;
   }
 }

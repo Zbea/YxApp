@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="@color/transparent_background">
 
-    <include layout="@layout/item_type_wuliu"/>
-    <include layout="@layout/item_type_system_notice"/>
-    <include layout="@layout/item_type_youhui"/>
-    <include layout="@layout/item_type_arrive_notice"/>
+
+    <com.yx.Pharmacy.widget.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/item_type_wuliu"/>
+            <include layout="@layout/item_type_system_notice"/>
+            <include layout="@layout/item_type_youhui"/>
+            <include layout="@layout/item_type_arrive_notice"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:id="@+id/right"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:text="删除" />
+    </com.yx.Pharmacy.widget.EasySwipeMenuLayout>
+
+
 
 
 </RelativeLayout>

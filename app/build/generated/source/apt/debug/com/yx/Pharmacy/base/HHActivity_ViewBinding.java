@@ -19,9 +19,9 @@ import org.apache.cordova.engine.SystemWebView;
 public class HHActivity_ViewBinding implements Unbinder {
   private HHActivity target;
 
-  private View view2131296813;
+  private View view2131296816;
 
-  private View view2131296798;
+  private View view2131296801;
 
   @UiThread
   public HHActivity_ViewBinding(HHActivity target) {
@@ -38,7 +38,7 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.include_title = Utils.findRequiredViewAsType(source, R.id.include_title, "field 'include_title'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_h5_back, "field 'rl_h5_back' and method 'onViewClicked'");
     target.rl_h5_back = Utils.castView(view, R.id.rl_h5_back, "field 'rl_h5_back'", RelativeLayout.class);
-    view2131296813 = view;
+    view2131296816 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -51,7 +51,7 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.mIvBack = Utils.findRequiredViewAsType(source, R.id.iv_back, "field 'mIvBack'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "field 'mRlBack' and method 'onViewClicked'");
     target.mRlBack = Utils.castView(view, R.id.rl_back, "field 'mRlBack'", RelativeLayout.class);
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -85,9 +85,9 @@ public class HHActivity_ViewBinding implements Unbinder {
     target.mRlMore = null;
     target.rl_title = null;
 
-    view2131296813.setOnClickListener(null);
-    view2131296813 = null;
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
+    view2131296816.setOnClickListener(null);
+    view2131296816 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
   }
 }

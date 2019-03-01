@@ -20,7 +20,7 @@ import java.lang.Override;
 public class MyCollectActivity_ViewBinding implements Unbinder {
   private MyCollectActivity target;
 
-  private View view2131296798;
+  private View view2131296801;
 
   @UiThread
   public MyCollectActivity_ViewBinding(MyCollectActivity target) {
@@ -39,7 +39,7 @@ public class MyCollectActivity_ViewBinding implements Unbinder {
     target.recyclerview = Utils.findRequiredViewAsType(source, R.id.recyclerview, "field 'recyclerview'", RecyclerView.class);
     target.mLoadingLayout = Utils.findRequiredViewAsType(source, R.id.loadinglayout, "field 'mLoadingLayout'", LoadingLayout.class);
     view = Utils.findRequiredView(source, R.id.rl_back, "method 'click'");
-    view2131296798 = view;
+    view2131296801 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class MyCollectActivity_ViewBinding implements Unbinder {
     target.recyclerview = null;
     target.mLoadingLayout = null;
 
-    view2131296798.setOnClickListener(null);
-    view2131296798 = null;
+    view2131296801.setOnClickListener(null);
+    view2131296801 = null;
   }
 }

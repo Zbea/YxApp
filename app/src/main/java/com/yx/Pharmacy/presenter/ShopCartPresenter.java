@@ -3,6 +3,7 @@ package com.yx.Pharmacy.presenter;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.yx.Pharmacy.base.BaseActivity;
 import com.yx.Pharmacy.base.BasisBean;
 import com.yx.Pharmacy.constant.Constants;
@@ -20,8 +21,11 @@ import com.yx.Pharmacy.util.SPUtil;
 import com.yx.Pharmacy.util.UiUtil;
 import com.yx.Pharmacy.view.IShopCartView;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -157,5 +161,30 @@ public class ShopCartPresenter {
                });
     }
 
-    String s="{ \"discount \": \" \", \"couponid \": \"218234 \", \"product \":{ \"4 \":{ \"activityid \": \"4 \", \"couponid \": \" \", \"goodsList \":[{ \"pid \": \"3409 \", \"price \": \"13.80 \", \"count \": \"40 \"}]}, \"25 \":{ \"activityid \": \"25 \", \"couponid \": \" \", \"goodsList \":[{ \"pid \": \"6743 \", \"price \": \"2.50 \", \"count \": \"41 \"}]}, \"single \":{ \"activityid \": \"single \", \"couponid \": \" \", \"goodsList \":[{ \"couponid \": \" \", \"count \": \"3 \", \"price \": \"8.50 \", \"pid \": \"5757 \"}]}}, \"needpay \": \"572.08 \"}";
+    public void deleteDisShop(BaseActivity activity,JSONArray arrayList) {
+        L.i(arrayList.toString());
+            HashMap<String, String> urlMap = NetUtil.getUrlMap();
+            urlMap.put("pids", arrayList.toString());
+        HomeNet.getHomeApi().deleteDisShopcart(urlMap).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressSubscriber<BasisBean<String>>(activity, true) {
+                    @Override
+                    public void onSuccess(BasisBean<String> response) {
+                        activity.getShortToastByString(response.getAlertmsg());
+                        if (TextUtils.equals(response.getCode(), "200")) {
+                            if (!TextUtils.isEmpty(response.getExtention()))
+                            {
+                                mView.deleteSuccess();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.e("error========="+e.toString());
+                        super.onError(e);
+                    }
+                });
+    }
+
 }
