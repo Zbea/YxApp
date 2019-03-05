@@ -151,10 +151,7 @@ public class HomePageFragment
                 mAdapter.getData().clear();
                 homeAdvanceAdapter.getData().clear();
 
-                mPresenter.loadProductList((BaseActivity) mContext);
-                mPresenter.getAdvanceData((BaseActivity) mContext);
-                mPresenter.getMessageData((BaseActivity) mContext);
-                mPresenter.getHomeData((BaseActivity) mContext);
+                initData();
             }
         }
     };

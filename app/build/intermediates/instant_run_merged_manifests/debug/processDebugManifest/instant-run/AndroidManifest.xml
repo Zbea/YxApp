@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:hardwareAccelerated="true" package="com.yx.Pharmacy" android:versionName="1.0.5" android:versionCode="20190101">
+<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:hardwareAccelerated="true" package="com.yx.Pharmacy" android:versionName="1.4.1" android:versionCode="20190304">
   <uses-sdk android:targetSdkVersion="26" android:minSdkVersion="18"/>
   <supports-screens android:normalScreens="true" android:smallScreens="true" android:largeScreens="true" android:anyDensity="true" android:xlargeScreens="true" android:resizeable="true"/>
   <uses-permission android:name="android.permission.INTERNET"/>
@@ -210,7 +210,6 @@
     <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppKey" android:value="2976b7f999888" tools:node="merge"/>
     <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppSeret" android:value="989f7983a02547bbe882ea2653240542" tools:node="merge"/>
     <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>
-    <provider android:name="com.mob.MobProvider" android:exported="false" android:authorities="com.yx.Pharmacy.com.mob.MobProvider" android:multiprocess="true"/>
   </application>
   <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
   <uses-permission android:name="android.permission.BLUETOOTH"/>

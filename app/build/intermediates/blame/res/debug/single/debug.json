@@ -4,32 +4,32 @@
         "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\layout\\frag_coupon.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_search.xml.flat",
-        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\layout\\activity_search.xml"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_bkyyhqbj.png.flat",
+        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xxhdpi\\bkyyhqbj.png"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_product_coupon.xml.flat",
         "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\layout\\activity_product_coupon.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_bkyyhqbj.png.flat",
-        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xxhdpi\\bkyyhqbj.png"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_search.xml.flat",
+        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ysf_ic_action_album.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable-hdpi-v4\\ysf_ic_action_album.png"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\raw_music.wav.flat",
-        "source": "D:\\androidSpace\\YxApp\\picture_library\\build\\intermediates\\packaged_res\\debug\\raw\\music.wav"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_wallet_allow_right_white.png.flat",
+        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_wallet_allow_right_white.png"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ysf_message_input_keyboard.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable-xhdpi-v4\\ysf_message_input_keyboard.png"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_wallet_allow_right_white.png.flat",
-        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_wallet_allow_right_white.png"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\raw_music.wav.flat",
+        "source": "D:\\androidSpace\\YxApp\\picture_library\\build\\intermediates\\packaged_res\\debug\\raw\\music.wav"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_scan_after.xml.flat",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\BaseRecyclerViewAdapterHelper-2.9.30.aar\\dc4c005c64baa6772512d5487d43ab2d\\res\\drawable\\sample_footer_loading_progress.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ysf_dialog_item_top_selector.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable\\ysf_dialog_item_top_selector.xml"
-    },
-    {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_wdgyyxicon.png.flat",
         "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\wdgyyxicon.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ysf_dialog_item_top_selector.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable\\ysf_dialog_item_top_selector.xml"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -92,16 +92,16 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb03d090bb89dd081b2ea9aa4891bb8d\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ysf_view_pager_indicator_selector.xml.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable\\ysf_view_pager_indicator_selector.xml"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_dfzzzffs.png.flat",
+        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\dfzzzffs.png"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_check_bg_main_gary.xml.flat",
         "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable\\selector_check_bg_main_gary.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_dfzzzffs.png.flat",
-        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\dfzzzffs.png"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ysf_view_pager_indicator_selector.xml.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\unicorn-4.3.0.aar\\88430b2ef844031e660ad578ad262d52\\res\\drawable\\ysf_view_pager_indicator_selector.xml"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_white_edit.xml.flat",
@@ -144,20 +144,20 @@
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb03d090bb89dd081b2ea9aa4891bb8d\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ssdk_oks_classic_mingdao.png.flat",
-        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\OneKeyShare-3.5.0.aar\\373cde012d71c5591c8dd9e20bfc2dd5\\res\\drawable-xhdpi-v4\\ssdk_oks_classic_mingdao.png"
-    },
-    {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb03d090bb89dd081b2ea9aa4891bb8d\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_home_store_bg.png.flat",
-        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_store_bg.png"
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ssdk_oks_classic_mingdao.png.flat",
+        "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\OneKeyShare-3.5.0.aar\\373cde012d71c5591c8dd9e20bfc2dd5\\res\\drawable-xhdpi-v4\\ssdk_oks_classic_mingdao.png"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_search_auto.xml.flat",
         "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\layout\\item_search_auto.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_home_store_bg.png.flat",
+        "source": "D:\\androidSpace\\YxApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_home_store_bg.png"
     },
     {
         "merged": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon_wallet_ljczan.png.flat",

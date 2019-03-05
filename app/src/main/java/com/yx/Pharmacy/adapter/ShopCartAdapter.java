@@ -179,7 +179,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
                                 pos=position;
 //                                adapters.get(helper.getAdapterPosition()).notifyItemChanged(position);
                                 if (mOnShopCartListener!=null) {
-                                    mOnShopCartListener.modifySelect(helper.getAdapterPosition());
+                                    mOnShopCartListener.modifySelect(helper.getAdapterPosition(),position);
                                 }
                             }
                             break;
@@ -298,7 +298,7 @@ public class ShopCartAdapter extends BaseQuickAdapter<ShopCartModel.ShopCartList
 
     public  interface OnClickShopCartListener{
 
-        void modifySelect(int position);// 修改了选项
+        void modifySelect(int adPosition,int position);// 修改了选项
 
         void removeShop(BaseQuickAdapter adapter, int cartposition, int position, String activityid);
 

@@ -147,7 +147,7 @@ public class MessageFragment
                 L.i("111111111111111111");
                 if (view.getId()==R.id.right)
                 {
-                    showDialogDelete(mAdapter.getData().get(position).goodsid);
+                    showDialogDelete(mAdapter.getData().get(position).itemid+"");
                 }
             }
         });
@@ -157,7 +157,7 @@ public class MessageFragment
                 L.i("111111111111111111");
                 if (view.getId()==R.id.right)
                 {
-                    showDialogDelete(mAdapter.getData().get(position).goodsid);
+                    showDialogDelete(mAdapter.getData().get(position).itemid+"");
                 }
             }
         });

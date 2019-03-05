@@ -341,7 +341,7 @@ public class ShopCartProductAdapter
                     }
                 }
                 if (!isSelectCoupon) {
-                    helper.setText(R.id.tv_single_coupon, "去领券");
+                    helper.setText(R.id.tv_single_coupon, "满"+item.couponList.get(0).couponlimit+"可用");
                 }
             } else {
                 helper.setText(R.id.tv_single_coupon, "暂无可用优惠券");

@@ -49,6 +49,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
     // 4.订单的各种状态的处理消息 5售后订单的处理消息 6.门店审核的处理消息
     @Override
     protected void convert(final BaseViewHolder helper, final MessageData.MessageModel item) {
+        helper.addOnClickListener(R.id.right);
         if(item.pushtype==1){//优惠促销 活动类型消息  url广告
 
 //            if (item.is_imgtext==1)
@@ -83,7 +84,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
 
-            helper.setText(R.id.tv_system_notice_name,"系统通知");
+            helper.setText(R.id.tv_system_notice_name,item.title);
             helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_system_notice_content,TextUtils.isEmpty(item.content)?item.title:item.content);
             helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);
@@ -249,7 +250,7 @@ public class MessageAdapter extends BaseQuickAdapter<MessageData.MessageModel,Ba
             helper.getView(R.id.ll_type_youhui).setVisibility(View.GONE);
             helper.getView(R.id.ll_type_arrive_notice).setVisibility(View.GONE);
 
-            helper.setText(R.id.tv_system_notice_name,"系统通知");
+            helper.setText(R.id.tv_system_notice_name,item.title);
             helper.setText(R.id.tv_system_notice_time,DateUtil.formatyyyyMMddHHmmss(Long.valueOf(item.addtime+"000")));
             helper.setText(R.id.tv_system_notice_content,TextUtils.isEmpty(item.content)?item.title:item.content);
             helper.getView(R.id.rl_system_notice_bottom).setVisibility(View.GONE);

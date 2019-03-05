@@ -38,7 +38,7 @@ public class ShopCartModel {
         public List<GoodsBean>      goods;
         public String alldiscount;
         public boolean isJoin=true;
-
+        public boolean isSelectCoupon;
     }
 
 
@@ -118,7 +118,7 @@ public class ShopCartModel {
         public List<CouponListBean> couponList;
         public int is_price;
         public boolean isJoin=true;
-
+        public boolean isSelectCoupon;
         /**
          * limit : 10
          * give : 1

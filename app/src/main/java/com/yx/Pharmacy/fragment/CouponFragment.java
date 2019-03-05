@@ -86,7 +86,7 @@ public class CouponFragment extends BaseFragment  {
                         // 秒杀
                         CommendMsActivity.startActivity(mContext,""+couponModel.levelid);
                     } else  {
-                        ProductItemActivity.startActivity(mContext,2,""+couponModel.levelid,couponModel.title);
+                        ProductItemActivity.startActivity(mContext,2,""+couponModel.levelid,couponModel.activityname);
                     }
                 }
                 if(couponModel.getCoupontype()==3)
