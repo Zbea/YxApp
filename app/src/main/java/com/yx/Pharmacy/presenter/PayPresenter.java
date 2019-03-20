@@ -11,6 +11,7 @@ import com.yx.Pharmacy.model.PayWayModel;
 import com.yx.Pharmacy.net.HomeNet;
 import com.yx.Pharmacy.net.NetUtil;
 import com.yx.Pharmacy.net.ProgressSubscriber;
+import com.yx.Pharmacy.util.L;
 import com.yx.Pharmacy.util.LogUtils;
 import com.yx.Pharmacy.view.IPayView;
 

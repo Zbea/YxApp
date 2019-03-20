@@ -4,7 +4,7 @@
             "outputFile": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\leakcanary-android-1.4-beta2.aar\\47cff82cabbab1ec14dbaccad4b538ff\\res\\values-v14\\values-v14.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\leakcanary-android-1.4-beta2.aar\\1c39a22e47433a438db6ec51e65b8685\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

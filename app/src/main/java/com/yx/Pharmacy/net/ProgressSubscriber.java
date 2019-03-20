@@ -16,6 +16,7 @@ import java.net.UnknownHostException;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import okhttp3.ResponseBody;
 import retrofit2.HttpException;
 
 import static com.yx.Pharmacy.net.ProgressSubscriber.ExceptionReason.CONNECT_ERROR;
@@ -93,6 +94,7 @@ public abstract class ProgressSubscriber<T extends BasisBean> implements Observe
 
     @Override
     public void onError(Throwable e) {
+        L.i(""+((Exception) e).getMessage());
         dismissProgress();
         if (e instanceof HttpException) {     //   HTTP错误
             onException(ExceptionReason.BAD_NETWORK);

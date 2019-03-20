@@ -4,7 +4,7 @@
             "outputFile": "D:\\androidSpace\\YxApp\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\eb03d090bb89dd081b2ea9aa4891bb8d\\res\\values-es\\values-es.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bfd4cea7a3be33bab71f6fdb7da4cedc\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\2a4227e08e4a6f077a0971604914872a\\res\\values-es\\values-es.xml",
+                    "source": "C:\\Users\\xiaof\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\5ae50e823be7eef83761be830f2313f8\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

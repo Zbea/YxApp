@@ -17,52 +17,52 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
-MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\deb193b22225694e2e3b54a907ef4279\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:2:1-17:12
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:2:1-133:12
-MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\97d1bd79937184e3c4f9ea72a43d0340\AndroidManifest.xml:2:1-14:12
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:2:1-139:12
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:2:1-46:12
-MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\a110e72003b1f0586a184a52a7144e8c\AndroidManifest.xml:2:1-9:12
-MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\730081ac17c81a959f2d2306519c1ebe\AndroidManifest.xml:2:1-11:12
-MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\373cde012d71c5591c8dd9e20bfc2dd5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\4b602155a128f1da0e95c5c0ea5358c6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:2:1-17:12
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:2:1-133:12
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\de6a2ca0e8fb9c37d611a0c802b850f5\AndroidManifest.xml:2:1-14:12
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:2:1-139:12
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:2:1-46:12
+MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\dd9f1f62bb77af61b3c03a75613c73f8\AndroidManifest.xml:2:1-9:12
+MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\1b32a8d577801f27a5646997bc1c74a8\AndroidManifest.xml:2:1-11:12
+MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\6d78253758a38aef9fc238ed41a0394f\AndroidManifest.xml:2:1-11:12
 MERGED from [:CordovaLib] D:\androidSpace\YxApp\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:20:1-27:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\9e8a6a650305a43cefb81f611475481f\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\e075346bf62e60fd9851e197f31eca5e\AndroidManifest.xml:2:1-11:12
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-72:12
 MERGED from [:ucrop] D:\androidSpace\YxApp\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a3268143e1a4b81057262970ca7fb851\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\eb03d090bb89dd081b2ea9aa4891bb8d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6e654941f3f0876d0425060713ce9e25\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\0be133d89350ccd8ff4203d6877905a8\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\fa9ae9d6e0137133c8695a190551b200\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\dc4c005c64baa6772512d5487d43ab2d\AndroidManifest.xml:2:1-11:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\1dca55602302b11b770db2f01a7db259\AndroidManifest.xml:2:1-7:12
-MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\d0e218c4984547cb7c1c7c4945434a0a\AndroidManifest.xml:2:1-11:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\3655f01f4e08c6d506e64d7704390056\AndroidManifest.xml:15:1-21:12
-MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\6115cad7d770c47ec7de97922dcb4125\AndroidManifest.xml:2:1-14:12
-MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\fc30547871be410c4b98dd6b59a48421\AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\e87ce935260acd92411c30ad4a0031ef\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\17ca7e0982457b7a656e4b258bd1b406\AndroidManifest.xml:2:1-12:12
-MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\064cc2b6433d37c1acf0c61bf2d2047c\AndroidManifest.xml:2:1-12:12
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\7e783032d3d0440375177b823d3d0141\AndroidManifest.xml:2:1-12:12
-MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\67e7b89cb0475605b928c8d0f79d313b\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\1ddf43430bd54978fd3b0d73f82362fd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\65c2978d2b3b9b361c0698070417e4e5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be5021421eadefe1ef8e4adb1de8af01\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\344916111d7c064e5f8a75e4e2792441\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\54416b6f14aa1c280856c4b094164cf3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b92220d8e5b8a2bb75997bf3950066d8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\0a929579741c3ee4f6dbf3a23103c379\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3ace6dfcde30d20b8ae72daa20b8e1a3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\4eda9712717845b1e8dd5514508654a1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\2a4227e08e4a6f077a0971604914872a\AndroidManifest.xml:17:1-22:12
-MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\e7950db31b2873b6a35a7edf9882e908\AndroidManifest.xml:15:1-21:12
-MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\2ab2dc234520c1c993e074bb741851eb\AndroidManifest.xml:2:1-10:12
-MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\5ffb462e5943e46c4d429579364b5cc7\AndroidManifest.xml:2:1-12:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\18a515e193e20dd03fecad822d8a6d2b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f80e34a087f73ca7dbca36acc586834b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1fd5979df87532543debaacf48dfa0bb\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\984189d572b0ff0983c56fe83adc08ca\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\b536f0cd5f719821ec449231f53dc6e4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bfd4cea7a3be33bab71f6fdb7da4cedc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\81d3eff8a2e8a481b6c6efefc31d2667\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\479e5959a8f3a45ae4e151660b41d99e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\519f1cdfec52ed660db8fd74de94bed3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\ddd487fafff6e57bdf9f8fa89f783306\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\03c9b63ee51a50f62fa200042c3b303d\AndroidManifest.xml:2:1-7:12
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\57bbfc8a5befa8c8bca9d6e3be3dc843\AndroidManifest.xml:2:1-11:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\ca90eb814275b3f7475487c3bebe5cee\AndroidManifest.xml:15:1-21:12
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\75cf297b549894c4accc17cb40a26f2e\AndroidManifest.xml:2:1-14:12
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\ba317dd7de75aa46fd16bf3d1fb3b4b0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\21b77542edec0632f8534afeef6527ac\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\c29d324188368eceb38485a2419c5b3e\AndroidManifest.xml:2:1-12:12
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\59f1c8d2405ca498bc8b02f26d4408a4\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1d42e41082ad4ae85cddb25902475638\AndroidManifest.xml:2:1-12:12
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\e7c38e67dc30ef0c8e1d96af01190869\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6e446cb483925bdafaed968747e4688f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\e055b0d880ff26f1a5a02bd1a41a461c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6a653e2e8ee97a6699cf82d61c2cd687\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\c8e18238bd4d3853a7161cd9e30332cd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\ae2660d43ef5f2acd612521779759927\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\24aed6f48853ed1e673c0c25e9e3eac3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1c5204caf9b617fd129686c9bfc7860b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\d903a2556ddadc434dfff3aab010cec4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\e694fd936d4c1ae61f2bb761cedd8a5c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\5ae50e823be7eef83761be830f2313f8\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\09898a3dcc958e4537bb48edb0bbb148\AndroidManifest.xml:15:1-21:12
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\64dc7e131816b648b5b87318104ade4d\AndroidManifest.xml:2:1-10:12
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\245e2a0a019980a1dc66d3984a4180c1\AndroidManifest.xml:2:1-12:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\5bc28ea68e2bf250752ff593acbafff8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\04d7c3224961a09ffb579a4abdc8244f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b16c265220f622d4d112189a0d1330c5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a0c4bad0c23c8e86b6ff99b2e212931d\AndroidManifest.xml:17:1-22:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:2:1-229:12
@@ -100,108 +100,108 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:8:5-14:40
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:9:9-34
 uses-permission#android.permission.INTERNET
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:16:5-67
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:18:5-67
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:18:5-67
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:12:5-67
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:12:5-67
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:12:5-67
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:12:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:18:5-67
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:12:5-67
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:12:5-67
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:12:5-67
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:15:5-67
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:15:5-67
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:16:22-64
 uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:17:5-83
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:32:5-83
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:32:5-83
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:17:5-83
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:17:5-83
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:32:5-83
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:32:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:17:5-83
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:17:5-83
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:17:22-80
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:18:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:26:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:26:5-79
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:13:5-79
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:13:5-79
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:13:5-79
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:13:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:26:5-79
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:13:5-79
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:13:5-79
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:13:5-79
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:21:5-79
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:21:5-79
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:18:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:19:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:27:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:27:5-76
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:14:5-76
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:14:5-76
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:14:5-76
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:14:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:27:5-76
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:14:5-76
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:14:5-76
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:14:5-76
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:17:5-76
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:17:5-76
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:19:22-73
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:20:5-75
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:20:5-75
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:20:5-75
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:17:5-75
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:17:5-75
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:11:5-75
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:11:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:20:5-75
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:17:5-75
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:17:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:11:5-75
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:11:5-75
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:20:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:21:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:21:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:21:5-81
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:25:5-81
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:25:5-81
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:16:5-81
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:16:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:21:5-81
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:25:5-81
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:25:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:16:5-81
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:16:5-81
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:12:5-81
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:12:5-81
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:21:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:23:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:33:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:33:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:33:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:33:5-79
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:25:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:31:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:25:22-78
 uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:27:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:32:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:32:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:32:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:32:5-76
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:27:22-73
 uses-permission#android.permission.CHANGE_NETWORK_STATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:29:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:35:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:35:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:35:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:35:5-79
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:29:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:30:5-80
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:22:5-80
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:22:5-80
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:24:5-80
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:24:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:22:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:24:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:24:5-80
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:11:5-80
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:11:5-80
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:30:22-77
 uses-permission#android.permission.CAMERA
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:31:5-65
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:28:5-65
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:28:5-65
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:28:5-65
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:28:5-65
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:13:5-65
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:13:5-65
 	android:name
@@ -212,44 +212,44 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:32:5-68
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:32:22-65
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:33:5-80
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:21:5-80
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:21:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:21:5-80
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:21:5-80
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:33:22-77
 uses-permission#android.permission.READ_LOGS
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:34:5-68
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:15:5-68
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:15:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:15:5-68
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:15:5-68
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:34:22-65
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:35:5-71
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:29:5-71
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:29:5-71
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:29:5-71
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:29:5-71
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:22:5-71
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:22:5-71
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:35:22-68
 uses-permission#android.permission.VIBRATE
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:36:5-66
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:24:5-66
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:24:5-66
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:18:5-66
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:18:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:24:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:24:5-66
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:18:5-66
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:18:5-66
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:36:22-63
 uses-permission#android.permission.WAKE_LOCK
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:37:5-68
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:19:5-68
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:19:5-68
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:19:5-68
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:19:5-68
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:19:5-68
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:19:5-68
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:37:22-65
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:38:5-84
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:25:5-84
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:25:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:25:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:25:5-84
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:14:5-84
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:14:5-84
 	android:name
@@ -260,8 +260,8 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:39:5-69
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:39:22-66
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:40:5-78
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:30:5-78
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:30:5-78
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:30:5-78
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:30:5-78
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:40:22-75
 uses-permission#android.permission.SYSTEM_OVERLAY_WINDOW
@@ -270,38 +270,38 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:41:5-80
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:41:22-77
 uses-permission#android.permission.RECEIVE_USER_PRESENT
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:43:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:17:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:17:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:17:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:17:5-79
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:43:22-76
 uses-permission#android.permission.WRITE_SETTINGS
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:45:5-73
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:23:5-73
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:23:5-73
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:23:5-73
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:23:5-73
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:16:5-73
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:16:5-73
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:45:22-70
 application
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:47:5-227:19
-MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:11:5-15:19
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:37:5-131:19
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:37:5-131:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\97d1bd79937184e3c4f9ea72a43d0340\AndroidManifest.xml:11:5-12:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\97d1bd79937184e3c4f9ea72a43d0340\AndroidManifest.xml:11:5-12:19
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:41:5-137:19
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:41:5-137:19
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:20:5-44:19
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:20:5-44:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\9e8a6a650305a43cefb81f611475481f\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\9e8a6a650305a43cefb81f611475481f\AndroidManifest.xml:9:5-20
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:11:5-15:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\de6a2ca0e8fb9c37d611a0c802b850f5\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\de6a2ca0e8fb9c37d611a0c802b850f5\AndroidManifest.xml:11:5-12:19
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:41:5-137:19
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:41:5-137:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:20:5-44:19
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:20:5-44:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\e075346bf62e60fd9851e197f31eca5e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\e075346bf62e60fd9851e197f31eca5e\AndroidManifest.xml:9:5-20
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:24:5-70:19
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:24:5-70:19
-MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\6115cad7d770c47ec7de97922dcb4125\AndroidManifest.xml:9:5-12:19
-MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\6115cad7d770c47ec7de97922dcb4125\AndroidManifest.xml:9:5-12:19
-MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\2ab2dc234520c1c993e074bb741851eb\AndroidManifest.xml:8:5-20
-MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\2ab2dc234520c1c993e074bb741851eb\AndroidManifest.xml:8:5-20
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\75cf297b549894c4accc17cb40a26f2e\AndroidManifest.xml:9:5-12:19
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\75cf297b549894c4accc17cb40a26f2e\AndroidManifest.xml:9:5-12:19
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\64dc7e131816b648b5b87318104ade4d\AndroidManifest.xml:8:5-20
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\64dc7e131816b648b5b87318104ade4d\AndroidManifest.xml:8:5-20
 	android:supportsRtl
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:52:9-35
 	android:label
@@ -309,7 +309,7 @@ MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\
 	android:hardwareAccelerated
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:49:9-43
 	android:allowBackup
-		ADDED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:12:9-35
+		ADDED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:12:9-35
 	android:icon
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:50:9-38
 	android:theme
@@ -394,14 +394,14 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:104:9-106:55
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:105:13-51
 activity#com.tencent.bugly.beta.ui.BetaActivity
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:108:9-111:64
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:23:9-27:56
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:23:9-27:56
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:23:9-27:56
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:23:9-27:56
 	android:configChanges
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:110:13-81
 	android:theme
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:111:13-61
 	tools:replace
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:27:13-53
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:27:13-53
 	android:name
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:109:13-66
 activity#com.yx.Pharmacy.activity.SettingActivity
@@ -538,7 +538,7 @@ ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:151:17-60
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:151:27-57
 service#cn.jpush.android.service.PushService
 ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:159:9-161:50
-REJECTED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:60:9-71:19
+REJECTED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:60:9-71:19
 	tools:node
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml:161:18-38
 	android:process
@@ -711,98 +711,98 @@ uses-sdk
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
-MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\deb193b22225694e2e3b54a907ef4279\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\deb193b22225694e2e3b54a907ef4279\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\ed4f3a8807e3527f0b8876bf8d5fd5d5\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\97d1bd79937184e3c4f9ea72a43d0340\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\97d1bd79937184e3c4f9ea72a43d0340\AndroidManifest.xml:7:5-9:41
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:7:5-9:41
-MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:7:5-9:41
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:6:5-8:41
-MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:6:5-8:41
-MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\a110e72003b1f0586a184a52a7144e8c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\a110e72003b1f0586a184a52a7144e8c\AndroidManifest.xml:5:5-7:41
-MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\730081ac17c81a959f2d2306519c1ebe\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\730081ac17c81a959f2d2306519c1ebe\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\373cde012d71c5591c8dd9e20bfc2dd5\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\373cde012d71c5591c8dd9e20bfc2dd5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\4b602155a128f1da0e95c5c0ea5358c6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.1.0-beta.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\android-pdf-viewer-3.1.0-beta.1.aar\4b602155a128f1da0e95c5c0ea5358c6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pinguo-zhouwei:MZBannerView:v2.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\MZBannerView-v2.0.2.aar\3267e3067e9397c57fd67a2fd29604ee\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\de6a2ca0e8fb9c37d611a0c802b850f5\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jcore-1.2.3.aar\de6a2ca0e8fb9c37d611a0c802b850f5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:7:5-9:41
+MERGED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\dd9f1f62bb77af61b3c03a75613c73f8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.bugly:nativecrashreport:3.6.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\nativecrashreport-3.6.0.1.aar\dd9f1f62bb77af61b3c03a75613c73f8\AndroidManifest.xml:5:5-7:41
+MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\1b32a8d577801f27a5646997bc1c74a8\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.sharesdk:ShareSDK:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\ShareSDK-3.5.0.aar\1b32a8d577801f27a5646997bc1c74a8\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\6d78253758a38aef9fc238ed41a0394f\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.sharesdk:OneKeyShare:3.5.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\OneKeyShare-3.5.0.aar\6d78253758a38aef9fc238ed41a0394f\AndroidManifest.xml:7:5-9:41
 MERGED from [:CordovaLib] D:\androidSpace\YxApp\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] D:\androidSpace\YxApp\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\9e8a6a650305a43cefb81f611475481f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\9e8a6a650305a43cefb81f611475481f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\e075346bf62e60fd9851e197f31eca5e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\e075346bf62e60fd9851e197f31eca5e\AndroidManifest.xml:5:5-7:41
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
 MERGED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
 MERGED from [:ucrop] D:\androidSpace\YxApp\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
 MERGED from [:ucrop] D:\androidSpace\YxApp\ucrop\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a3268143e1a4b81057262970ca7fb851\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a3268143e1a4b81057262970ca7fb851\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\eb03d090bb89dd081b2ea9aa4891bb8d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\eb03d090bb89dd081b2ea9aa4891bb8d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6e654941f3f0876d0425060713ce9e25\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6e654941f3f0876d0425060713ce9e25\AndroidManifest.xml:20:5-44
-MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\0be133d89350ccd8ff4203d6877905a8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\0be133d89350ccd8ff4203d6877905a8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\fa9ae9d6e0137133c8695a190551b200\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\fa9ae9d6e0137133c8695a190551b200\AndroidManifest.xml:20:5-44
-MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\dc4c005c64baa6772512d5487d43ab2d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\dc4c005c64baa6772512d5487d43ab2d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\1dca55602302b11b770db2f01a7db259\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\1dca55602302b11b770db2f01a7db259\AndroidManifest.xml:5:5-43
-MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\d0e218c4984547cb7c1c7c4945434a0a\AndroidManifest.xml:7:5-9:41
-MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\d0e218c4984547cb7c1c7c4945434a0a\AndroidManifest.xml:7:5-9:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\3655f01f4e08c6d506e64d7704390056\AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\3655f01f4e08c6d506e64d7704390056\AndroidManifest.xml:19:5-43
-MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\6115cad7d770c47ec7de97922dcb4125\AndroidManifest.xml:5:5-7:41
-MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\6115cad7d770c47ec7de97922dcb4125\AndroidManifest.xml:5:5-7:41
-MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\fc30547871be410c4b98dd6b59a48421\AndroidManifest.xml:8:5-10:41
-MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\fc30547871be410c4b98dd6b59a48421\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\e87ce935260acd92411c30ad4a0031ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\e87ce935260acd92411c30ad4a0031ef\AndroidManifest.xml:20:5-44
-MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\17ca7e0982457b7a656e4b258bd1b406\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\17ca7e0982457b7a656e4b258bd1b406\AndroidManifest.xml:8:5-10:41
-MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\064cc2b6433d37c1acf0c61bf2d2047c\AndroidManifest.xml:8:5-10:41
-MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\064cc2b6433d37c1acf0c61bf2d2047c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\7e783032d3d0440375177b823d3d0141\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\7e783032d3d0440375177b823d3d0141\AndroidManifest.xml:8:5-10:41
-MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\67e7b89cb0475605b928c8d0f79d313b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\67e7b89cb0475605b928c8d0f79d313b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\1ddf43430bd54978fd3b0d73f82362fd\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\1ddf43430bd54978fd3b0d73f82362fd\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\65c2978d2b3b9b361c0698070417e4e5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\65c2978d2b3b9b361c0698070417e4e5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be5021421eadefe1ef8e4adb1de8af01\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be5021421eadefe1ef8e4adb1de8af01\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\344916111d7c064e5f8a75e4e2792441\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\344916111d7c064e5f8a75e4e2792441\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\54416b6f14aa1c280856c4b094164cf3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\54416b6f14aa1c280856c4b094164cf3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b92220d8e5b8a2bb75997bf3950066d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b92220d8e5b8a2bb75997bf3950066d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\0a929579741c3ee4f6dbf3a23103c379\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\0a929579741c3ee4f6dbf3a23103c379\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3ace6dfcde30d20b8ae72daa20b8e1a3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\3ace6dfcde30d20b8ae72daa20b8e1a3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\4eda9712717845b1e8dd5514508654a1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\4eda9712717845b1e8dd5514508654a1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\2a4227e08e4a6f077a0971604914872a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\2a4227e08e4a6f077a0971604914872a\AndroidManifest.xml:20:5-44
-MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\e7950db31b2873b6a35a7edf9882e908\AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\e7950db31b2873b6a35a7edf9882e908\AndroidManifest.xml:19:5-43
-MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\2ab2dc234520c1c993e074bb741851eb\AndroidManifest.xml:6:5-43
-MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\2ab2dc234520c1c993e074bb741851eb\AndroidManifest.xml:6:5-43
-MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\5ffb462e5943e46c4d429579364b5cc7\AndroidManifest.xml:8:5-10:41
-MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\5ffb462e5943e46c4d429579364b5cc7\AndroidManifest.xml:8:5-10:41
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\18a515e193e20dd03fecad822d8a6d2b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\18a515e193e20dd03fecad822d8a6d2b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f80e34a087f73ca7dbca36acc586834b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f80e34a087f73ca7dbca36acc586834b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1fd5979df87532543debaacf48dfa0bb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1fd5979df87532543debaacf48dfa0bb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\984189d572b0ff0983c56fe83adc08ca\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\984189d572b0ff0983c56fe83adc08ca\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\b536f0cd5f719821ec449231f53dc6e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\b536f0cd5f719821ec449231f53dc6e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bfd4cea7a3be33bab71f6fdb7da4cedc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bfd4cea7a3be33bab71f6fdb7da4cedc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\81d3eff8a2e8a481b6c6efefc31d2667\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\81d3eff8a2e8a481b6c6efefc31d2667\AndroidManifest.xml:20:5-44
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\479e5959a8f3a45ae4e151660b41d99e\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.9.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\pdfium-android-1.9.0.aar\479e5959a8f3a45ae4e151660b41d99e\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\519f1cdfec52ed660db8fd74de94bed3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\519f1cdfec52ed660db8fd74de94bed3\AndroidManifest.xml:20:5-44
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\ddd487fafff6e57bdf9f8fa89f783306\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\BaseRecyclerViewAdapterHelper-2.9.30.aar\ddd487fafff6e57bdf9f8fa89f783306\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\03c9b63ee51a50f62fa200042c3b303d\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\03c9b63ee51a50f62fa200042c3b303d\AndroidManifest.xml:5:5-43
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\57bbfc8a5befa8c8bca9d6e3be3dc843\AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\banner-1.4.5.aar\57bbfc8a5befa8c8bca9d6e3be3dc843\AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\ca90eb814275b3f7475487c3bebe5cee\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\ca90eb814275b3f7475487c3bebe5cee\AndroidManifest.xml:19:5-43
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\75cf297b549894c4accc17cb40a26f2e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.hwangjr.rxbus:rxbus:1.0.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxbus-1.0.6.aar\75cf297b549894c4accc17cb40a26f2e\AndroidManifest.xml:5:5-7:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\ba317dd7de75aa46fd16bf3d1fb3b4b0\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\ba317dd7de75aa46fd16bf3d1fb3b4b0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\21b77542edec0632f8534afeef6527ac\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\21b77542edec0632f8534afeef6527ac\AndroidManifest.xml:20:5-44
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\c29d324188368eceb38485a2419c5b3e\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.iwgang:countdownview:2.1.6] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\countdownview-2.1.6.aar\c29d324188368eceb38485a2419c5b3e\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\59f1c8d2405ca498bc8b02f26d4408a4\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:WheelPicker:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\WheelPicker-1.5.5.aar\59f1c8d2405ca498bc8b02f26d4408a4\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1d42e41082ad4ae85cddb25902475638\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.chrisbanes:PhotoView:2.1.3] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\PhotoView-2.1.3.aar\1d42e41082ad4ae85cddb25902475638\AndroidManifest.xml:8:5-10:41
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\e7c38e67dc30ef0c8e1d96af01190869\AndroidManifest.xml:20:5-22:41
+MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\leakcanary-android-no-op-1.4-beta2.aar\e7c38e67dc30ef0c8e1d96af01190869\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6e446cb483925bdafaed968747e4688f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6e446cb483925bdafaed968747e4688f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\e055b0d880ff26f1a5a02bd1a41a461c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\e055b0d880ff26f1a5a02bd1a41a461c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6a653e2e8ee97a6699cf82d61c2cd687\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\6a653e2e8ee97a6699cf82d61c2cd687\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\c8e18238bd4d3853a7161cd9e30332cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\c8e18238bd4d3853a7161cd9e30332cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\ae2660d43ef5f2acd612521779759927\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\ae2660d43ef5f2acd612521779759927\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\24aed6f48853ed1e673c0c25e9e3eac3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\24aed6f48853ed1e673c0c25e9e3eac3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1c5204caf9b617fd129686c9bfc7860b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\1c5204caf9b617fd129686c9bfc7860b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\d903a2556ddadc434dfff3aab010cec4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\d903a2556ddadc434dfff3aab010cec4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\e694fd936d4c1ae61f2bb761cedd8a5c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\e694fd936d4c1ae61f2bb761cedd8a5c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\5ae50e823be7eef83761be830f2313f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\5ae50e823be7eef83761be830f2313f8\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\09898a3dcc958e4537bb48edb0bbb148\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\09898a3dcc958e4537bb48edb0bbb148\AndroidManifest.xml:19:5-43
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\64dc7e131816b648b5b87318104ade4d\AndroidManifest.xml:6:5-43
+MERGED from [com.jakewharton.timber:timber:4.5.1] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\timber-4.5.1.aar\64dc7e131816b648b5b87318104ade4d\AndroidManifest.xml:6:5-43
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\245e2a0a019980a1dc66d3984a4180c1\AndroidManifest.xml:8:5-10:41
+MERGED from [cn.qqtheme.framework:Common:1.5.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\Common-1.5.5.aar\245e2a0a019980a1dc66d3984a4180c1\AndroidManifest.xml:8:5-10:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\5bc28ea68e2bf250752ff593acbafff8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\5bc28ea68e2bf250752ff593acbafff8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\04d7c3224961a09ffb579a4abdc8244f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\04d7c3224961a09ffb579a4abdc8244f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b16c265220f622d4d112189a0d1330c5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b16c265220f622d4d112189a0d1330c5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a0c4bad0c23c8e86b6ff99b2e212931d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a0c4bad0c23c8e86b6ff99b2e212931d\AndroidManifest.xml:20:5-44
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -814,349 +814,349 @@ INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 		ADDED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\androidSpace\YxApp\app\src\main\AndroidManifest.xml
 permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:11:5-13:47
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:11:5-13:47
 	android:protectionLevel
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:13:9-44
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:13:9-44
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:12:9-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:12:9-65
 permission#com.yx.Pharmacy.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:11:5-13:47
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:11:5-13:47
 	android:protectionLevel
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:13:9-44
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:13:9-44
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:12:9-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:12:9-65
 uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:16:5-81
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:16:22-78
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:16:22-78
 uses-permission#com.yx.Pharmacy.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:16:5-81
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:16:22-78
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:34:5-89
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:34:5-89
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:34:22-86
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:34:22-86
 activity#cn.jpush.android.ui.PopWinActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:40:9-43:52
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:40:9-43:52
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:42:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:42:13-37
 	android:theme
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:43:13-49
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:41:13-62
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:41:13-62
 activity#cn.jpush.android.ui.PushActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:46:9-57:20
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:46:9-57:20
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:49:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:49:13-37
 	android:configChanges
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:48:13-63
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:48:13-63
 	android:theme
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:50:13-60
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:50:13-60
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:47:13-60
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:47:13-60
 intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:${JPUSH_PKGNAME}+category:name:android.intent.category.DEFAULT
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:51:13-56:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:51:13-56:29
 intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:android.intent.category.DEFAULT+category:name:com.yx.Pharmacy
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:51:13-56:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:51:13-56:29
 action#cn.jpush.android.ui.PushActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:52:17-75
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:52:17-75
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:52:25-72
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:52:25-72
 category#android.intent.category.DEFAULT
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:54:17-76
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:54:17-76
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:54:27-73
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:54:27-73
 category#${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:55:17-61
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:55:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:55:27-58
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:55:27-58
 service#cn.jpush.android.service.DaemonService
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:75:9-84:19
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:75:9-84:19
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:77:13-35
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:77:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:78:13-36
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:78:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:76:13-66
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:76:13-66
 intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:79:13-83:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:79:13-83:29
 intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:com.yx.Pharmacy
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:79:13-83:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:79:13-83:29
 action#cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:80:17-80
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:80:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:80:25-77
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:80:25-77
 receiver#cn.jpush.android.service.PushReceiver
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:87:9-106:20
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:87:9-106:20
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:89:13-35
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:89:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:90:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:90:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:88:13-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:88:13-65
 intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:91:13-94:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:91:13-94:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:91:28-51
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:91:28-51
 intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:com.yx.Pharmacy
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:91:13-94:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:91:13-94:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:91:28-51
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:91:28-51
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:92:17-94
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:92:17-94
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:92:25-91
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:92:25-91
 intent-filter#action:name:android.intent.action.USER_PRESENT+action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:95:13-98:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:95:13-98:29
 action#android.intent.action.USER_PRESENT
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:96:17-77
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:96:17-77
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:96:25-74
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:96:25-74
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:97:17-79
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:97:17-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:97:25-76
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:97:25-76
 intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:100:13-105:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:100:13-105:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:101:17-78
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:101:17-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:101:25-75
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:101:25-75
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:102:17-80
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:102:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:102:25-77
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:102:25-77
 receiver#cn.jpush.android.service.AlarmReceiver
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:109:9-111:40
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:109:9-111:40
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:111:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:111:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:110:13-66
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:110:13-66
 provider#cn.jpush.android.service.DataProvider
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:113:9-116:40
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:113:9-116:40
 	android:authorities
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:115:13-64
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:115:13-64
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:116:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:116:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:114:13-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:114:13-65
 provider#cn.jpush.android.service.DownloadProvider
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:118:9-121:39
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:118:9-121:39
 	android:authorities
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:120:13-68
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:120:13-68
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:121:13-36
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:121:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:119:13-69
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:119:13-69
 meta-data#JPUSH_CHANNEL
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:124:9-126:48
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:124:9-126:48
 	android:value
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:126:13-45
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:126:13-45
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:125:13-41
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:125:13-41
 meta-data#JPUSH_APPKEY
-ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:127:9-129:47
+ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:127:9-129:47
 	android:value
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:129:13-44
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:129:13-44
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\1196887712ca54a9bb468d0c104bee31\AndroidManifest.xml:128:13-40
+		ADDED from [cn.jiguang.sdk:jpush:3.1.5] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\jpush-3.1.5.aar\9c3361b60e2df63e283d3e11b2c89511\AndroidManifest.xml:128:13-40
 uses-permission#android.permission.CHANGE_CONFIGURATION
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:20:5-79
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:20:22-76
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:20:22-76
 uses-feature#android.hardware.microphone
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:34:5-36:36
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:34:5-36:36
 	android:required
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:36:9-33
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:36:9-33
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:35:9-51
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:35:9-51
 uses-feature#android.hardware.camera
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:37:5-39:36
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:37:5-39:36
 	android:required
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:39:9-33
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:39:9-33
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:38:9-47
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:38:9-47
 service#com.qiyukf.nimlib.service.NimService
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:44:9-46:39
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:44:9-46:39
 	android:process
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:46:13-36
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:46:13-36
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:45:13-64
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:45:13-64
 service#com.qiyukf.nimlib.service.NimService$Aux
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:47:9-49:39
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:47:9-49:39
 	android:process
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:49:13-36
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:48:13-68
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:48:13-68
 service#com.qiyukf.unicorn.analytics.AnalyticsService
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:50:9-52:39
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:50:9-52:39
 	android:process
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:52:13-36
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:51:13-73
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:51:13-73
 receiver#com.qiyukf.nimlib.service.NimReceiver
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:55:9-63:20
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:55:9-63:20
 	android:process
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:58:13-36
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:58:13-36
 	android:exported
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:57:13-37
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:56:13-65
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:56:13-65
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:59:13-62:29
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:59:13-62:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:60:17-79
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:60:17-79
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:60:25-76
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:60:25-76
 service#com.qiyukf.nimlib.service.WakeupService
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:66:9-75
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:66:9-75
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:66:18-72
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:66:18-72
 provider#com.qiyukf.nim.uikit.provider.UnicornProvider
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:69:9-77:20
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:69:9-77:20
 	android:grantUriPermissions
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:73:13-47
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:73:13-47
 	android:authorities
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:71:13-72
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:71:13-72
 	android:exported
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:72:13-37
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:70:13-73
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:70:13-73
 activity#com.qiyukf.unicorn.ui.activity.ServiceMessageActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:79:9-85:70
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:79:9-85:70
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:83:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:83:13-49
 	android:windowSoftInputMode
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:85:13-67
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:85:13-67
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:81:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:81:13-74
 	android:icon
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:82:13-69
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:82:13-69
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:84:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:84:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:80:13-81
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:80:13-81
 activity#com.qiyukf.nim.uikit.session.activity.WatchMessagePictureActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:86:9-91:70
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:86:9-91:70
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:89:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:89:13-49
 	android:windowSoftInputMode
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:91:13-67
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:91:13-67
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:88:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:88:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:90:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:90:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:87:13-93
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:87:13-93
 activity#com.qiyukf.nim.uikit.session.activity.PickImageActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:92:9-97:70
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:92:9-97:70
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:95:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:95:13-49
 	android:windowSoftInputMode
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:97:13-67
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:97:13-67
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:94:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:94:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:96:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:96:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:93:13-83
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:93:13-83
 activity#com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:98:9-102:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:98:9-102:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:101:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:101:13-49
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:100:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:100:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:102:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:102:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:99:13-97
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:99:13-97
 activity#com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:103:9-107:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:103:9-107:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:106:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:106:13-49
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:105:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:105:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:107:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:107:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:104:13-104
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:104:13-104
 activity#com.qiyukf.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:108:9-114:70
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:108:9-114:70
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:112:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:112:13-49
 	android:label
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:111:13-57
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:111:13-57
 	android:windowSoftInputMode
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:114:13-67
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:114:13-67
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:110:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:110:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:113:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:113:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:109:13-108
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:109:13-108
 activity#com.qiyukf.unicorn.ui.activity.FileDownloadActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:115:9-120:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:115:9-120:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:119:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:119:13-49
 	android:label
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:118:13-63
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:118:13-63
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:117:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:117:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:120:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:120:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:116:13-79
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:116:13-79
 activity#com.qiyukf.unicorn.ui.activity.UrlImagePreviewActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:121:9-125:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:121:9-125:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:124:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:124:13-49
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:123:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:123:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:125:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:125:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:122:13-82
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:122:13-82
 activity#com.qiyukf.unicorn.ui.activity.CardPopupActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:126:9-130:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:126:9-130:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:129:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:129:13-49
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:128:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:128:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:130:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:130:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:127:13-76
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:127:13-76
 activity#com.qiyukf.unicorn.ui.activity.LeaveMessageDetailActivity
-ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:131:9-136:55
+ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:131:9-136:55
 	android:screenOrientation
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:135:13-49
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:135:13-49
 	android:label
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:134:13-70
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:134:13-70
 	android:configChanges
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:133:13-74
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:133:13-74
 	android:theme
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:136:13-52
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:136:13-52
 	android:name
-		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\88430b2ef844031e660ad578ad262d52\AndroidManifest.xml:132:13-85
+		ADDED from [com.qiyukf.unicorn:unicorn:4.3.0] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\unicorn-4.3.0.aar\3f6c329c1e45512fba2e1015bb652953\AndroidManifest.xml:132:13-85
 provider#com.tencent.bugly.beta.utils.BuglyFileProvider
-ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:29:9-39:20
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:29:9-39:20
 	android:grantUriPermissions
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:33:13-47
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:33:13-47
 	android:authorities
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:31:13-64
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:31:13-64
 	android:exported
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:32:13-37
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:32:13-37
 	tools:replace
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:34:13-74
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:34:13-74
 	android:name
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:30:13-74
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:30:13-74
 service#com.tencent.bugly.beta.tinker.TinkerResultService
-ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:41:9-43:40
+ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:41:9-43:40
 	android:exported
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:43:13-37
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\143c2f611168af5343d6d092c1f43b62\AndroidManifest.xml:42:13-77
+		ADDED from [com.tencent.bugly:crashreport_upgrade:1.3.7] C:\Users\xiaof\.gradle\caches\transforms-1\files-1.1\crashreport_upgrade-1.3.7.aar\97373fd5d5194600f715031031098df5\AndroidManifest.xml:42:13-77
 permission#android.permission.WRITE_MEDIA_STORAGE
 ADDED from [:picture_library] D:\androidSpace\YxApp\picture_library\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:19:5-73
 	android:name
