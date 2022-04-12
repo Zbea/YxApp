@@ -30,7 +30,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.3.1'
     }
 }
 
@@ -141,21 +141,21 @@ cdvBuildRelease.dependsOn {
     return computeBuildTargetName(false)
 }
 
-task cdvPrintProps << {
-    println('cdvCompileSdkVersion=' + cdvCompileSdkVersion)
-    println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
-    println('cdvVersionCode=' + cdvVersionCode)
-    println('cdvVersionCodeForceAbiDigit=' + cdvVersionCodeForceAbiDigit)
-    println('cdvMinSdkVersion=' + cdvMinSdkVersion)
-    println('cdvBuildMultipleApks=' + cdvBuildMultipleApks)
-    println('cdvReleaseSigningPropertiesFile=' + cdvReleaseSigningPropertiesFile)
-    println('cdvDebugSigningPropertiesFile=' + cdvDebugSigningPropertiesFile)
-    println('cdvBuildArch=' + cdvBuildArch)
-    println('computedVersionCode=' + android.defaultConfig.versionCode)
-    android.productFlavors.each { flavor ->
-        println('computed' + flavor.name.capitalize() + 'VersionCode=' + flavor.versionCode)
-    }
-}
+//task cdvPrintProps <<{
+//    println('cdvCompileSdkVersion=' + cdvCompileSdkVersion)
+//    println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
+//    println('cdvVersionCode=' + cdvVersionCode)
+//    println('cdvVersionCodeForceAbiDigit=' + cdvVersionCodeForceAbiDigit)
+//    println('cdvMinSdkVersion=' + cdvMinSdkVersion)
+//    println('cdvBuildMultipleApks=' + cdvBuildMultipleApks)
+//    println('cdvReleaseSigningPropertiesFile=' + cdvReleaseSigningPropertiesFile)
+//    println('cdvDebugSigningPropertiesFile=' + cdvDebugSigningPropertiesFile)
+//    println('cdvBuildArch=' + cdvBuildArch)
+//    println('computedVersionCode=' + android.defaultConfig.versionCode)
+//    android.productFlavors.each { flavor ->
+//        println('computed' + flavor.name.capitalize() + 'VersionCode=' + flavor.versionCode)
+//    }
+//}
 
 android {
     signingConfigs {

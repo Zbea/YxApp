@@ -758,6 +758,7 @@ public class MyShopAddActivity
             mDataPicker.setTextSize(18);
             mDataPicker.setContentPadding(0, 10);
             mDataPicker.setTopPadding(20);
+
             mDataPicker.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
                 @Override
                 public void onDatePicked(String year, String month, String day) {
@@ -782,9 +783,9 @@ public class MyShopAddActivity
     @Override
     public void pickPhoto() {
         PictureSelector.create(this)
-                .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
-                //                .theme()//主题样式(不设置为默认样式) 也可参考demo values/styles下 例如：R.style.picture.white.style
-                .maxSelectNum(1)// 最大图片选择数量 int
+            .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
+            //                .theme()//主题样式(不设置为默认样式) 也可参考demo values/styles下 例如：R.style.picture.white.style
+            .maxSelectNum(1)// 最大图片选择数量 int
                 .minSelectNum(0)// 最小选择数量 int
                 .imageSpanCount(3)// 每行显示个数 int
                 .selectionMode(PictureConfig.SINGLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
@@ -804,7 +805,7 @@ public class MyShopAddActivity
                 .minimumCompressSize(100)// 小于100kb的图片不压缩
                 .synOrAsy(true)//同步true或异步false 压缩 默认同步
                 .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
-    }
+}
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
